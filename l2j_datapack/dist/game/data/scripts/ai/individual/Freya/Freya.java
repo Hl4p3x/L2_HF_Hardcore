@@ -213,14 +213,16 @@ public final class Freya extends AbstractNpcAI {
     // Statuses
     private static final int ALIVE = 0;
     private static final int NPC_BATTLE = 1;
-    private static final int GLAKIAS_BATTLE = 2;
-    private static final int KNIGHT_SLAUGHTER = 3;
+    private static final int KNIGHT_SLAUGHTER = 2;
+    private static final int GLAKIAS_BATTLE = 3;
     private static final int FREYA_FIGHT = 4;
     private static final int DEAD = 5;
 
     private static final long CHECK_ACTIVITY_DELAY = 60000;
-    //TODO RESTORE private static final long CHECK_ACTIVITY_THRESHOLD = 60000 * 5;
-    private static final long CHECK_ACTIVITY_THRESHOLD = 60000 * 1;
+
+    private static final long CHECK_ACTIVITY_THRESHOLD = Config.FREYA_RESET_TIMEOUT * 60000;
+
+    private static final long STAGE_DELAY = Config.FREYA_STAGE_DELAY * 6000;
 
     private final FreyaState state;
 
@@ -235,9 +237,6 @@ public final class Freya extends AbstractNpcAI {
         addKillId(GLAKIAS, FREYA_STAND, KNIGHT, GLACIER, BREATH);
         addSpawnId(GLAKIAS, FREYA_STAND, KNIGHT, GLACIER, BREATH);
         addSpellFinishedId(GLACIER, BREATH);
-
-        //TODO REMOVE
-        Config.FREYA_CONTEST_TIME = 1;
 
         state = new FreyaState();
         GrandBossManager.getInstance().addBoss(fakeFreyaInstance);
@@ -374,9 +373,9 @@ public final class Freya extends AbstractNpcAI {
                     true, state.getInstanceId());
                 state.freya.setIsInvul(true);
                 state.freya.disableCoreAI(true);
-                manageTimer(60);
+                manageTimer(Config.FREYA_STAGE_DELAY * 6);
                 state.setStatus(GLAKIAS_BATTLE);
-                startQuestTimer("STAGE_2_START", 60000, state.controller, null);
+                startQuestTimer("STAGE_2_START", STAGE_DELAY, state.controller, null);
                 break;
             }
             case "STAGE_2_START": {
@@ -631,6 +630,12 @@ public final class Freya extends AbstractNpcAI {
                 state.setStatus(DEAD);
                 state.setRespawn(respawnDelay);
                 startQuestTimer("RESPAWN", respawnDelay, state.controller, null);
+                startQuestTimer("EXIT", 5 * 60000, state.controller, null);
+
+                break;
+            }
+            case "EXIT": {
+                resetState();
                 break;
             }
             case "LEADER_RANGEBUFF": {
@@ -1016,8 +1021,7 @@ public final class Freya extends AbstractNpcAI {
     }
 
     private long getRespawnDelay() {
-        return 60000;
-        //TODO restore (Config.FREYA_SPAWN_INTERVAL + getRandom(-Config.FREYA_SPAWN_RANDOM, Config.FREYA_SPAWN_RANDOM)) * 3600000;
+        return (Config.FREYA_SPAWN_INTERVAL + getRandom(-Config.FREYA_SPAWN_RANDOM, Config.FREYA_SPAWN_RANDOM)) * 3600000;
     }
 
     @Override
@@ -1025,8 +1029,8 @@ public final class Freya extends AbstractNpcAI {
         switch (npc.getId()) {
             case GLAKIAS: {
                 manageDespawnMinions();
-                manageTimer(60);
-                startQuestTimer("STAGE_3_MOVIE", 60000, state.controller, null);
+                manageTimer(Config.FREYA_STAGE_DELAY * 6);
+                startQuestTimer("STAGE_3_MOVIE", STAGE_DELAY, state.controller, null);
                 break;
             }
             case FREYA_STAND: {

@@ -1090,6 +1090,8 @@ public final class Config
 	public static int FREYA_CONTEST_TIME;
 	public static int FREYA_SPAWN_INTERVAL;
 	public static int FREYA_SPAWN_RANDOM;
+	public static int FREYA_RESET_TIMEOUT;
+	public static int FREYA_STAGE_DELAY;
 
 	// Valakas
 	public static int VALAKAS_WAIT_TIME;
@@ -2722,6 +2724,8 @@ public final class Config
 			FREYA_CONTEST_TIME = GrandBossSettings.getInt("FreyaWaitTime", 5);
 			FREYA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFreyaSpawn", 52);
 			FREYA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfFreyaSpawn", 8);
+			FREYA_RESET_TIMEOUT = GrandBossSettings.getInt("FreyaResetDelay", 6);
+			FREYA_STAGE_DELAY = GrandBossSettings.getInt("FreyaStagePause", 30);
 
 			VALAKAS_WAIT_TIME = GrandBossSettings.getInt("ValakasWaitTime", 30);
 			VALAKAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfValakasSpawn", 264);
