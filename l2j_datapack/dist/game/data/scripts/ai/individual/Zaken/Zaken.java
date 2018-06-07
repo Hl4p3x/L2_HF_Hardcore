@@ -18,6 +18,9 @@
  */
 package ai.individual.Zaken;
 
+import ai.IdleBossManager;
+import ai.SpawnManager;
+import ai.individual.helper.Helper;
 import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
@@ -30,6 +33,7 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2NoRestartZone;
 import com.l2jserver.gameserver.network.NpcStringId;
 import java.util.ArrayList;
@@ -73,6 +77,13 @@ public final class Zaken extends AbstractNpcAI {
 
         public boolean allBlueFound() {
             return blueFound.get() == 4;
+        }
+
+        public void reset() {
+            zakenRoom = 0;
+            resetCandles();
+            candles = new ArrayList<>();
+            zaken = null;
         }
 
     }
@@ -144,6 +155,8 @@ public final class Zaken extends AbstractNpcAI {
         new Location(57215, 218079, -2954),
     };
 
+    private static final Location EXIT_LOCATION = new Location(53238, 214973, -3749);
+
     private static final int MAX_PEOPLE = 100;
 
     private static final int ALIVE = 0;
@@ -175,12 +188,19 @@ public final class Zaken extends AbstractNpcAI {
 
     private ZakenState state;
 
+    private final SpawnManager spawnManager;
+    private final IdleBossManager idleBossManager;
+
     public Zaken() {
         super(Zaken.class.getSimpleName(), "ai/individual");
         addStartNpc(PATHFINDER);
         addTalkId(PATHFINDER);
+        addAttackId(ZAKEN_83);
         addKillId(ZAKEN_83);
         addFirstTalkId(CANDLE);
+
+        spawnManager = new SpawnManager();
+        idleBossManager = new IdleBossManager(this, Config.ZAKEN_INACTIVITY_TIMEOUT, this::resetZaken);
 
         state = new ZakenState(getRoom());
         switch (getStatus()) {
@@ -196,6 +216,7 @@ public final class Zaken extends AbstractNpcAI {
                 spawnCandles(state.zakenRoom);
                 setBlueCandlesBurning();
                 showZaken();
+                idleBossManager.startCheckTimer();
                 break;
             }
             case DEAD: {
@@ -211,9 +232,21 @@ public final class Zaken extends AbstractNpcAI {
         }
     }
 
+    private void resetZaken() {
+        idleBossManager.cancelCheckTimer();
+        teleportPlayersOut();
+        state.reset();
+        spawnManager.decayAll();
+        startQuestTimer("RESPAWN", Helper.MINUTE_IN_MILLIS, null, null);
+    }
+
     private void freshSpawnZaken() {
-        state.resetCandles();
+        state.reset();
         firstSpawnAllNpcs(state);
+    }
+
+    private void teleportPlayersOut() {
+        zone.getPlayersInside().forEach(player -> player.teleToLocation(EXIT_LOCATION, true));
     }
 
     private void teleportPlayerInside(L2PcInstance player) {
@@ -222,6 +255,10 @@ public final class Zaken extends AbstractNpcAI {
 
     @Override
     public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+        if (event.equals(idleBossManager.getCheckActivityTimerName())) {
+            idleBossManager.handleCheck();
+        }
+
         switch (event) {
             case "enter": {
                 if (player.isGM() && player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS)) {
@@ -229,7 +266,11 @@ public final class Zaken extends AbstractNpcAI {
                     break;
                 }
 
-                if (zone.getPlayersInside().size() >= MAX_PEOPLE) {
+                if (getStatus() == DEAD) {
+                    return "32713-2.html";
+                } else if (getStatus() == FIGHTING) {
+                    return "32713-3.html";
+                } else if (zone.getPlayersInside().size() >= MAX_PEOPLE) {
                     return "32713-1.html";
                 } else {
                     teleportPlayerInside(player);
@@ -261,6 +302,7 @@ public final class Zaken extends AbstractNpcAI {
                 setStatus(FIGHTING);
                 showZaken();
                 spawnZakenGuardsOn(player);
+                idleBossManager.startCheckTimer();
                 break;
             }
         }
@@ -279,7 +321,8 @@ public final class Zaken extends AbstractNpcAI {
     }
 
     private void setBlueCandlesBurning() {
-        state.candles.stream().filter(candle -> candle.getVariables().getBoolean("isBlue", false)).forEach(candle -> candle.setRHandId(BLUE));
+        state.candles.stream().filter(candle -> candle.getVariables().getBoolean("isBlue", false))
+            .forEach(candle -> candle.setRHandId(BLUE));
     }
 
     private void burnBlueTwice(L2Npc npc) {
@@ -326,17 +369,32 @@ public final class Zaken extends AbstractNpcAI {
     }
 
     @Override
+    public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon) {
+        idleBossManager.updateLastActionTime();
+        return super.onAttack(npc, attacker, damage, isSummon);
+    }
+
+    @Override
+    public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill) {
+        idleBossManager.updateLastActionTime();
+        return super.onAttack(npc, attacker, damage, isSummon, skill);
+    }
+
+    @Override
     public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon) {
-        long respawnTime =
-            (Config.ZAKEN_SPAWN_INTERVAL + getRandom(-Config.ZAKEN_SPAWN_RANDOM, Config.ZAKEN_SPAWN_RANDOM)) * 3600000;
-        setRespawn(respawnTime);
-        setStatus(DEAD);
+        if (npc.getId() == ZAKEN_83) {
+            idleBossManager.cancelCheckTimer();
+            spawnManager.decayAll();
+            state.reset();
 
-        startQuestTimer("RESPAWN", respawnTime, null, null);
+            long respawnTime =
+                (Config.ZAKEN_SPAWN_INTERVAL + getRandom(-Config.ZAKEN_SPAWN_RANDOM, Config.ZAKEN_SPAWN_RANDOM))
+                    * 3600000;
+            setRespawn(respawnTime);
+            setStatus(DEAD);
 
-        setRoom(-1);
-        despawnNpcs();
-        state.resetCandles();
+            startQuestTimer("RESPAWN", respawnTime, null, null);
+        }
 
         return super.onKill(npc, killer, isSummon);
     }
@@ -355,10 +413,6 @@ public final class Zaken extends AbstractNpcAI {
             npc.setScriptValue(1);
         }
         return null;
-    }
-
-    private void despawnNpcs() {
-        state.candles.forEach(L2Npc::deleteMe);
     }
 
     private int getRoomByCandle(L2Npc npc) {
@@ -382,12 +436,15 @@ public final class Zaken extends AbstractNpcAI {
     }
 
     private L2Attackable spawnNpc(int npcId, int roomId) {
-        return (L2Attackable) addSpawn(npcId, SHIP.findRoom(roomId).getRoomCenter());
+        L2Attackable attackable = (L2Attackable) addSpawn(npcId, SHIP.findRoom(roomId).getRoomCenter());
+        spawnManager.registerSpawn(attackable);
+        return attackable;
     }
 
     private L2Attackable spawnNpcAggroedOnPlayer(int npcId, int roomId, L2PcInstance player) {
         final L2Attackable mob = (L2Attackable) addSpawn(npcId, SHIP.findRoom(roomId).getRoomCenter(), true, 0, false);
         addAttackPlayerDesire(mob, player);
+        spawnManager.registerSpawn(mob);
         return mob;
     }
 
@@ -404,6 +461,7 @@ public final class Zaken extends AbstractNpcAI {
         List<L2Npc> candles = new ArrayList<>();
         for (int i = 0; i < 36; i++) {
             final L2Npc candle = addSpawn(CANDLE, CANDLE_LOC[i], false, 0, false);
+            spawnManager.registerSpawn(candle);
             candle.getVariables().set("candleId", i + 1);
             candles.add(candle);
         }

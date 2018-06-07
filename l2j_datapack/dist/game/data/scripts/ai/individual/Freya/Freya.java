@@ -37,7 +37,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2QuestGuardInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.QuestTimer;
 import com.l2jserver.gameserver.model.quest.State;
@@ -218,10 +217,7 @@ public final class Freya extends AbstractNpcAI {
     private static final int FREYA_FIGHT = 4;
     private static final int DEAD = 5;
 
-    private static final long CHECK_ACTIVITY_DELAY = 60000;
-
     private static final long CHECK_ACTIVITY_THRESHOLD = Config.FREYA_RESET_TIMEOUT * 60000;
-
     private static final long STAGE_DELAY = Config.FREYA_STAGE_DELAY * 6000;
 
     private final FreyaState state;
@@ -353,7 +349,7 @@ public final class Freya extends AbstractNpcAI {
                 manageScreenMsg(NpcStringId.BEGIN_STAGE_1);
                 startQuestTimer("CAST_BLIZZARD", 50000, state.controller, null);
                 startQuestTimer("STAGE_1_SPAWN", 2000, state.freya, null);
-                startQuestTimer("CHECK_ACTIVITY", CHECK_ACTIVITY_DELAY, state.controller, null);
+                startQuestTimer("CHECK_ACTIVITY", Config.CHECK_ACTIVITY_DELAY, state.controller, null);
                 break;
             }
             case "STAGE_1_SPAWN": {
@@ -722,7 +718,7 @@ public final class Freya extends AbstractNpcAI {
                     cancelQuestTimer("CHECK_ACTIVITY", state.controller, null);
                     resetState();
                 } else {
-                    startQuestTimer("CHECK_ACTIVITY", CHECK_ACTIVITY_DELAY, state.controller, null);
+                    startQuestTimer("CHECK_ACTIVITY", Config.CHECK_ACTIVITY_DELAY, state.controller, null);
                 }
             }
         }
