@@ -379,6 +379,12 @@
 					<item id="2415" min="1" max="1" chance="6.8887" /> <!-- Avadon Circlet -->
 				</group>
 
+				<group chance="20">
+					<item id="856" min="1" max="1" chance="14.2777"/> <!-- Adamantite Earring -->
+					<item id="918" min="1" max="1" chance="12.2083"/> <!-- Adamantite Necklace -->
+					<item id="887" min="1" max="1" chance="16.4165"/> <!-- Adamantite Ring -->
+				</group>
+
 				<group chance="100">
 					<item id="57" min="100000" max="150000" chance="100"/> <!-- Adena -->
 				</group>
@@ -862,6 +868,18 @@
 					<item id="110" min="1" max="1" chance="10.2537"/> <!-- Doom Shield -->
 					<item id="2416" min="1" max="1" chance="10.1776"/> <!-- Blue Wolf Helmet -->
 					<item id="2417" min="1" max="1" chance="10.1776"/> <!-- Doom Helmet -->
+				</group>
+
+				<group chance="15">
+					<item id="864" min="1" max="1" chance="12.2845"/> <!-- Earring of Black Ore -->
+					<item id="926" min="1" max="1" chance="10.2134"/> <!-- Necklace of Black Ore -->
+					<item id="895" min="1" max="1" chance="14.4267"/> <!-- Ring of Black Ore -->
+				</group>
+
+				<group chance="20">
+					<item id="856" min="1" max="1" chance="14.2777"/> <!-- Adamantite Earring -->
+					<item id="918" min="1" max="1" chance="12.2083"/> <!-- Adamantite Necklace -->
+					<item id="887" min="1" max="1" chance="16.4165"/> <!-- Adamantite Ring -->
 				</group>
 
 				<group chance="20">
