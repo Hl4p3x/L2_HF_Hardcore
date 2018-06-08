@@ -3601,7 +3601,7 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="15">
+				<group chance="20">
 					<item id="15560" min="1" max="1" chance="9.1"/> <!-- Vigwik Axe -->
 					<item id="15561" min="1" max="1" chance="9.09"/> <!-- Devilish Maul -->
 					<item id="15562" min="1" max="1" chance="9.09"/> <!-- Feather Eye Blade -->
@@ -3654,7 +3654,7 @@
 				<group chance="1">
 					<item id="16027" min="1" max="1" chance="100"/> <!-- Bottle of Freya's Soul -->
 				</group>
-				<group chance="2.8">
+				<group chance="4">
 					<item id="21894" min="1" max="1" chance="50"/> <!-- Ice Queen's Tiara -->
 					<item id="21714" min="1" max="1" chance="50"/> <!-- Sealed Cloak of Freya -->
 				</group>
@@ -3857,6 +3857,9 @@
 					<item id="15700" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Gaiter -->
 					<item id="15701" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Leather Legging -->
 					<item id="15702" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Stockings -->
+					<item id="15766" min="1" max="1" chance="10"/> <!-- Sealed Moirai Ring -->
+					<item id="15767" min="1" max="1" chance="8"/> <!-- Sealed Moirai Earring -->
+					<item id="15768" min="1" max="1" chance="6"/> <!-- Sealed Moirai Necklace -->
 				</group>
 				<group chance="70">
 					<item id="14162" min="1" max="1" chance="33.4"/> <!-- Sealed Vesper Ring -->

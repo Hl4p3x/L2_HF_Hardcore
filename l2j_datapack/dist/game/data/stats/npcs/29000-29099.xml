@@ -1780,6 +1780,32 @@
 					<item id="15559" min="1" max="1" chance="9.09"/> <!-- Skull Edge -->
 				</group>
 				<group chance="50">
+					<item id="15726" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Helmet -->
+					<item id="15727" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Leather Helmet -->
+					<item id="15728" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Circlet -->
+					<item id="15735" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Gauntlet -->
+					<item id="15736" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Leather Gloves -->
+					<item id="15737" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Gloves -->
+					<item id="15738" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Boots -->
+					<item id="15739" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Leather Boots -->
+					<item id="15740" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Shoes -->
+					<item id="15741" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Shield -->
+					<item id="15742" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Sigil -->
+				</group>
+				<group chance="50">
+					<item id="15729" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Breastplate -->
+					<item id="15730" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Leather Breastplate -->
+					<item id="15731" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Tunic -->
+					<item id="15732" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Gaiter -->
+					<item id="15733" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Leather Legging -->
+					<item id="15734" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Stockings -->
+				</group>
+				<group chance="50">
+					<item id="15760" min="1" max="1" chance="10.5"/> <!-- Sealed Elegia Ring -->
+					<item id="15761" min="1" max="1" chance="10.3"/> <!-- Sealed Elegia Earring -->
+					<item id="15762" min="1" max="1" chance="10.3"/> <!-- Sealed Elegia Necklace -->
+				</group>
+				<group chance="50">
 					<item id="15544" min="1" max="1" chance="9.09"/> <!-- Eternal Core Sword -->
 					<item id="15545" min="1" max="1" chance="9.09"/> <!-- Mamba Edge -->
 					<item id="15546" min="1" max="1" chance="9.09"/> <!-- Eversor Mace -->
@@ -4335,6 +4361,32 @@
 					<item id="15552" min="1" max="1" chance="9.09"/> <!-- Cyclic Cane -->
 					<item id="15553" min="1" max="1" chance="9.09"/> <!-- Archangel Sword -->
 					<item id="15554" min="1" max="1" chance="9.09"/> <!-- Recurve Thorne Bow -->
+				</group>
+				<group chance="50">
+					<item id="15726" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Helmet -->
+					<item id="15727" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Leather Helmet -->
+					<item id="15728" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Circlet -->
+					<item id="15735" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Gauntlet -->
+					<item id="15736" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Leather Gloves -->
+					<item id="15737" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Gloves -->
+					<item id="15738" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Boots -->
+					<item id="15739" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Leather Boots -->
+					<item id="15740" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Shoes -->
+					<item id="15741" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Shield -->
+					<item id="15742" min="1" max="1" chance="2.09"/> <!-- Sealed Elegia Sigil -->
+				</group>
+				<group chance="50">
+					<item id="15729" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Breastplate -->
+					<item id="15730" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Leather Breastplate -->
+					<item id="15731" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Tunic -->
+					<item id="15732" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Gaiter -->
+					<item id="15733" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Leather Legging -->
+					<item id="15734" min="1" max="1" chance="5.66"/> <!-- Sealed Elegia Stockings -->
+				</group>
+				<group chance="50">
+					<item id="15760" min="1" max="1" chance="10.5"/> <!-- Sealed Elegia Ring -->
+					<item id="15761" min="1" max="1" chance="10.3"/> <!-- Sealed Elegia Earring -->
+					<item id="15762" min="1" max="1" chance="10.3"/> <!-- Sealed Elegia Necklace -->
 				</group>
 				<group chance="100">
 					<item id="15743" min="1" max="1" chance="9.1"/> <!-- Sealed Vorpal Helmet -->
