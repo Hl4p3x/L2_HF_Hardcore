@@ -345,6 +345,40 @@
 					<item id="107" min="1" max="1" chance="20"/> <!-- Composite Shield -->
 					<item id="951" min="1" max="1" chance="20"/> <!-- Scroll: Enchant Weapon (C-Grade) -->
 				</group>
+
+				<group chance="20">
+					<item id="554" min="1" max="1" chance="15.2384"/> <!-- Sealed Zubei's Boots -->
+					<item id="600" min="1" max="1" chance="15.2384"/> <!-- Sealed Avadon Boots -->
+					<item id="612" min="1" max="1" chance="15.2384"/> <!-- Sealed Zubei's Gauntlets -->
+					<item id="2464" min="1" max="1" chance="15.2384"/> <!-- Sealed Avadon Gloves -->
+				</group>
+
+				<group chance="15">
+					<item id="357" min="1" max="1" chance="7.3723"/> <!-- Zubei's Breastplate -->
+					<item id="383" min="1" max="1" chance="7.7949"/> <!-- Zubei's Gaiters -->
+					<item id="2376" min="1" max="1" chance="7.3723"/> <!-- Avadon Breastplate -->
+					<item id="2379" min="1" max="1" chance="7.7949"/> <!-- Avadon Gaiters -->
+				</group>
+
+				<group chance="15">
+					<item id="2397" min="1" max="1" chance="7.6807" /> <!-- Tunic of Zubei -->
+					<item id="2402" min="1" max="1" chance="8.0869" /> <!-- Stockings of Zubei -->
+					<item id="2406" min="1" max="1" chance="6.4942" /> <!-- Avadon Robe -->
+				</group>
+
+				<group chance="15">
+					<item id="2384" min="1" max="1" chance="7.6807" /> <!-- Zubei's Leather Shirt -->
+					<item id="2388" min="1" max="1" chance="9.0869" /> <!-- Zubei's Leather Gaiters -->
+					<item id="2390" min="1" max="1" chance="6.4942" /> <!-- Avadon Leather Armor -->
+				</group>
+
+				<group chance="15">
+					<item id="503" min="1" max="1" chance="6.8887" /> <!-- Zubei's Helmet -->
+					<item id="633" min="1" max="1" chance="9.8414" /> <!-- Zubei's Shield -->
+					<item id="673" min="1" max="1" chance="9.8414" /> <!-- Avadon Shield -->
+					<item id="2415" min="1" max="1" chance="6.8887" /> <!-- Avadon Circlet -->
+				</group>
+
 				<group chance="100">
 					<item id="57" min="100000" max="150000" chance="100"/> <!-- Adena -->
 				</group>
@@ -798,6 +832,71 @@
 					<item id="103" min="1" max="2" chance="20"/> <!-- Tower Shield -->
 					<item id="951" min="1" max="2" chance="20"/> <!-- Scroll: Enchant Weapon (C-Grade) -->
 				</group>
+
+				<group chance="15">
+					<item id="601" min="1" max="1" chance="10.7283" /> <!-- Sealed Doom Boots -->
+					<item id="2439" min="1" max="1" chance="10.7283" /> <!-- Sealed Blue Wolf Boots -->
+					<item id="2475" min="1" max="1" chance="10.7283" /> <!-- Sealed Doom Gloves -->
+					<item id="2487" min="1" max="1" chance="10.7283" /> <!-- Sealed Blue Wolf Gloves -->
+				</group>
+
+				<group chance="10">
+					<item id="358" min="1" max="1" chance="5.1784"/> <!-- Blue Wolf Breastplate -->
+					<item id="2381" min="1" max="1" chance="5.1098"/> <!-- Doom Plate Armor -->
+					<item id="2380" min="1" max="1" chance="5.2854"/> <!-- Blue Wolf Gaiters -->
+				</group>
+
+				<group chance="10">
+					<item id="2398" min="1" max="1" chance="5.1309"/> <!-- Blue Wolf Tunic -->
+					<item id="2399" min="1" max="1" chance="5.1309"/> <!-- Tunic of Doom -->
+					<item id="2403" min="1" max="1" chance="5.2096"/> <!-- Blue Wolf Stockings -->
+					<item id="2404" min="1" max="1" chance="5.2096"/> <!-- Stockings of Doom -->
+				</group>
+
+				<group chance="10">
+					<item id="2391" min="1" max="1" chance="5.2916"/> <!-- Blue Wolf Leather Armor -->
+					<item id="2392" min="1" max="1" chance="5.2916"/> <!-- Leather Armor of Doom -->
+				</group>
+
+				<group chance="10">
+					<item id="110" min="1" max="1" chance="10.2537"/> <!-- Doom Shield -->
+					<item id="2416" min="1" max="1" chance="10.1776"/> <!-- Blue Wolf Helmet -->
+					<item id="2417" min="1" max="1" chance="10.1776"/> <!-- Doom Helmet -->
+				</group>
+
+				<group chance="20">
+					<item id="554" min="1" max="1" chance="15.2384"/> <!-- Sealed Zubei's Boots -->
+					<item id="600" min="1" max="1" chance="15.2384"/> <!-- Sealed Avadon Boots -->
+					<item id="612" min="1" max="1" chance="15.2384"/> <!-- Sealed Zubei's Gauntlets -->
+					<item id="2464" min="1" max="1" chance="15.2384"/> <!-- Sealed Avadon Gloves -->
+				</group>
+
+				<group chance="15">
+					<item id="357" min="1" max="1" chance="7.3723"/> <!-- Zubei's Breastplate -->
+					<item id="383" min="1" max="1" chance="7.7949"/> <!-- Zubei's Gaiters -->
+					<item id="2376" min="1" max="1" chance="7.3723"/> <!-- Avadon Breastplate -->
+					<item id="2379" min="1" max="1" chance="7.7949"/> <!-- Avadon Gaiters -->
+				</group>
+
+				<group chance="15">
+					<item id="2397" min="1" max="1" chance="7.6807" /> <!-- Tunic of Zubei -->
+					<item id="2402" min="1" max="1" chance="8.0869" /> <!-- Stockings of Zubei -->
+					<item id="2406" min="1" max="1" chance="6.4942" /> <!-- Avadon Robe -->
+				</group>
+
+				<group chance="15">
+					<item id="2384" min="1" max="1" chance="7.6807" /> <!-- Zubei's Leather Shirt -->
+					<item id="2388" min="1" max="1" chance="9.0869" /> <!-- Zubei's Leather Gaiters -->
+					<item id="2390" min="1" max="1" chance="6.4942" /> <!-- Avadon Leather Armor -->
+				</group>
+
+				<group chance="15">
+					<item id="503" min="1" max="1" chance="6.8887" /> <!-- Zubei's Helmet -->
+					<item id="633" min="1" max="1" chance="9.8414" /> <!-- Zubei's Shield -->
+					<item id="673" min="1" max="1" chance="9.8414" /> <!-- Avadon Shield -->
+					<item id="2415" min="1" max="1" chance="6.8887" /> <!-- Avadon Circlet -->
+				</group>
+
 				<group chance="100">
 					<item id="57" min="110000" max="150000" chance="100"/> <!-- Adena -->
 				</group>
