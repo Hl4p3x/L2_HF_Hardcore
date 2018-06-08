@@ -42,8 +42,7 @@ public interface IGroupedItemDropCalculationStrategy
 	/**
 	 * The default strategy used in L2J to calculate drops. When the group's chance raises over 100% and group has precise calculation, the dropped item's amount increases.
 	 */
-	public static final IGroupedItemDropCalculationStrategy DEFAULT_STRATEGY = new IGroupedItemDropCalculationStrategy()
-	{
+	public static final IGroupedItemDropCalculationStrategy DEFAULT_STRATEGY = new IGroupedItemDropCalculationStrategy() {
 		private final Map<GroupedGeneralDropItem, GeneralDropItem> singleItemCache = new ConcurrentHashMap<>();
 
 		private GeneralDropItem getSingleItem(GroupedGeneralDropItem dropItem)
@@ -62,6 +61,7 @@ public interface IGroupedItemDropCalculationStrategy
 			}
 
 			GroupedGeneralDropItem normalized = dropItem.normalizeMe(victim, killer);
+
 			double random = (Rnd.nextDouble() * 100);
 			if (normalized.getChance() >= 100 || normalized.getChance() > random) {
 

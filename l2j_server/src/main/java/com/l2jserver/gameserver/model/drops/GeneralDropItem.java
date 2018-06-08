@@ -248,4 +248,15 @@ public final class GeneralDropItem implements IDropItem
 	{
 		return _chanceStrategy.getChanceMultiplier(this, victim);
 	}
+
+	@Override
+	public String toString() {
+		return "GeneralDropItem{" +
+			"_itemId=" + _itemId +
+			", _min=" + _min +
+			", _max=" + _max +
+			", _chance=" + _chance +
+			'}';
+	}
+
 }

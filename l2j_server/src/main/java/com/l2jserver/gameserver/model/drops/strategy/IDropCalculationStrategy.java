@@ -93,7 +93,7 @@ public interface IDropCalculationStrategy
 		List<ItemHolder> results = new ArrayList<>();
 		for(long i = 0; i < iterations; i++) {
 			double random = Rnd.nextDouble() * 100;
-			if (random < dropChance) {
+			if (dropChance > random) {
 				results.add(new ItemHolder(item.getItemId(), 1));
 			}
 		}

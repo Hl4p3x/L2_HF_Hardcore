@@ -22,7 +22,7 @@ import instances.CrystalCaverns.CrystalCaverns;
 import instances.DarkCloudMansion.DarkCloudMansion;
 import instances.DisciplesNecropolisPast.DisciplesNecropolisPast;
 import instances.ElcadiasTent.ElcadiasTent;
-import instances.FinalEmperialTomb.FinalEmperialTomb;
+import ai.individual.Frintezza.FinalEmperialTomb;
 import instances.HideoutOfTheDawn.HideoutOfTheDawn;
 import instances.IceQueensCastle.IceQueensCastle;
 import instances.JiniaGuildHideout1.JiniaGuildHideout1;

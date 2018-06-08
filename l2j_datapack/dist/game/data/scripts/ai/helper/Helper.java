@@ -1,4 +1,4 @@
-package ai.individual.helper;
+package ai.helper;
 
 public class Helper {
 

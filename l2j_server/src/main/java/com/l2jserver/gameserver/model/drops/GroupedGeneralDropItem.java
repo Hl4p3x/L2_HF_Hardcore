@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model.drops;
 
+import com.google.common.base.Joiner;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -205,8 +206,7 @@ public final class GroupedGeneralDropItem implements IDropItem
 	 * @param chanceModifier an additional chance modifier
 	 * @return a new normalized group with all drop modifiers applied
 	 */
-	private final GroupedGeneralDropItem normalizeMe(L2Character victim, L2Character killer, boolean applyKillerModifier, double chanceModifier)
-	{
+	private final GroupedGeneralDropItem normalizeMe(L2Character victim, L2Character killer, boolean applyKillerModifier, double chanceModifier) {
 		if (applyKillerModifier)
 		{
 			chanceModifier *= (getKillerChanceModifier(victim, killer));

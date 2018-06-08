@@ -20,7 +20,7 @@ package ai.individual.Zaken;
 
 import ai.IdleBossManager;
 import ai.SpawnManager;
-import ai.individual.helper.Helper;
+import ai.helper.Helper;
 import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
