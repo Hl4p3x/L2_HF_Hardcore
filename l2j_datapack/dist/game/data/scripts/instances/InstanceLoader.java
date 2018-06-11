@@ -22,7 +22,7 @@ import instances.CrystalCaverns.CrystalCaverns;
 import instances.DarkCloudMansion.DarkCloudMansion;
 import instances.DisciplesNecropolisPast.DisciplesNecropolisPast;
 import instances.ElcadiasTent.ElcadiasTent;
-import ai.individual.Frintezza.FinalEmperialTomb;
+import ai.individual.Frintezza.Frintezza;
 import instances.HideoutOfTheDawn.HideoutOfTheDawn;
 import instances.IceQueensCastle.IceQueensCastle;
 import instances.JiniaGuildHideout1.JiniaGuildHideout1;
@@ -52,7 +52,6 @@ public final class InstanceLoader
 		DarkCloudMansion.class,
 		DisciplesNecropolisPast.class,
 		ElcadiasTent.class,
-		FinalEmperialTomb.class,
 		HideoutOfTheDawn.class,
 		IceQueensCastle.class,
 		JiniaGuildHideout1.class,
