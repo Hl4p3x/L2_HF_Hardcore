@@ -157,6 +157,15 @@
 		<node X="176428" Y="-74051" />
 		<node X="172057" Y="-74108" />
 	</zone>
+
+	<zone id="29045" name="frintezza_no_respawn" type="NoRestartZone" shape="NPoly" minZ="-9200" maxZ="-9140">
+		<stat name="restartTime" val="1800" />
+		<node X="-89550" Y="-139800" />
+		<node X="-85900" Y="-139800" />
+		<node X="-85900" Y="-155000" />
+		<node X="-89550" Y="-155000" />
+	</zone>
+
 	<zone name="23_14_ice_fairy_no_restart01" type="NoRestartZone" shape="NPoly" minZ="-5136" maxZ="864">
 		<stat name="restartTime" val="1800" />
 		<node X="101450" Y="-130042" />

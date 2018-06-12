@@ -20,37 +20,20 @@ package ai.individual.Frintezza;
 
 import ai.GrandBossStatusManager;
 import ai.npc.AbstractNpcAI;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.logging.Level;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.InstanceType;
+import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
+import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2CommandChannel;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Territory;
-import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.PcCondOverride;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -60,6 +43,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.model.zone.type.L2NoRestartZone;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo.NpcInfo;
@@ -72,6 +56,21 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 public final class Frintezza extends AbstractNpcAI {
 
@@ -101,6 +100,20 @@ public final class Frintezza extends AbstractNpcAI {
 
         public int getInstanceId() {
             return 0;
+        }
+
+        private void setRespawn(long respawnTime) {
+            StatsSet statsSet = GrandBossManager.getInstance().getStatsSet(FRINTEZZA);
+            statsSet.set("respawn_time", (System.currentTimeMillis() + respawnTime));
+            GrandBossManager.getInstance().setStatsSet(FRINTEZZA, statsSet);
+        }
+
+        private long getRespawnDelay() {
+            return (Config.FRINTEZZA_SPAWN_INTERVAL + getRandom(-Config.FRINTEZZA_SPAWN_RANDOM, Config.FRINTEZZA_SPAWN_RANDOM)) * 3600000;
+        }
+
+        private int getRespawn() {
+            return GrandBossManager.getInstance().getStatsSet(FRINTEZZA).getInt("respawn_time");
         }
 
     }
@@ -175,14 +188,16 @@ public final class Frintezza extends AbstractNpcAI {
             new FrintezzaSong(new SkillHolder(5007, 4), new SkillHolder(5008, 4), NpcStringId.FUGUE_OF_JUBILATION, 90),
             new FrintezzaSong(new SkillHolder(5007, 5), new SkillHolder(5008, 5), NpcStringId.HYPNOTIC_MAZURKA, 100),
         };
+
+    private static final L2NoRestartZone zone = ZoneManager.getInstance().getZoneById(FRINTEZZA, L2NoRestartZone.class);
+
     // Locations
     private static final Location ENTER_TELEPORT = new Location(-88015, -141153, -9168);
+    private static final Location ALARM_SPAWN_LOCATION = new Location(-87905, -141200, -9168);
     private static final Location EXIT_LOCATION = new Location(-87534, -153048, -9165);
     protected static final Location MOVE_TO_CENTER = new Location(-87904, -141296, -9168, 0);
-    // Misc
-    private static final int TEMPLATE_ID = 136; // this is the client number
-    private static final int MIN_PLAYERS = 36;
-    private static final int MAX_PLAYERS = 45;
+
+    private static final int MAX_PLAYERS = 100;
     private static final int TIME_BETWEEN_DEMON_SPAWNS = 20000;
     private static final int MAX_DEMONS = 24;
     private static final boolean debug = false;
@@ -249,6 +264,30 @@ public final class Frintezza extends AbstractNpcAI {
         addKillId(DEMONS);
         addKillId(_mustKillMobsId);
         addSpellFinishedId(HALL_KEEPER_SUICIDAL_SOLDIER);
+
+        if (!grandBossStatusManager.getStatus().equals(FrintezzaStatuses.DEAD)) {
+            grandBossStatusManager.setStatus(FrintezzaStatuses.ALIVE);
+            addSpawn(HALL_ALARM, ALARM_SPAWN_LOCATION);
+        } else {
+            final long remain = state.getRespawn() - System.currentTimeMillis();
+            if (remain > 0) {
+                startQuestTimer("RESPAWN", remain, null, null);
+            } else {
+                grandBossStatusManager.setStatus(FrintezzaStatuses.ALIVE);
+                addSpawn(HALL_ALARM, ALARM_SPAWN_LOCATION);
+            }
+        }
+    }
+
+    @Override
+    public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
+        switch (event) {
+            case "RESPAWN": {
+                grandBossStatusManager.setStatus(FrintezzaStatuses.ALIVE);
+                addSpawn(HALL_ALARM, ALARM_SPAWN_LOCATION);
+                break;
+            }
+        }
     }
 
     private void load() {
@@ -423,55 +462,16 @@ public final class Frintezza extends AbstractNpcAI {
         }
     }
 
+    public List<L2PcInstance> getPlayersInside() {
+        return zone.getPlayersInside();
+    }
+
     protected boolean checkConditions(L2PcInstance player) {
         if (debug || player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS)) {
             return true;
         }
 
-        final L2Party party = player.getParty();
-        if (party == null) {
-            player.sendPacket(SystemMessageId.NOT_IN_PARTY_CANT_ENTER);
-            return false;
-        }
-
-        final L2CommandChannel channel = player.getParty().getCommandChannel();
-        if (channel == null) {
-            player.sendPacket(SystemMessageId.NOT_IN_COMMAND_CHANNEL_CANT_ENTER);
-            return false;
-        } else if (channel.getLeader() != player) {
-            player.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_ENTER);
-            return false;
-        } else if (player.getInventory().getItemByItemId(8073) == null) {
-            SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ITEM_REQUIREMENT_NOT_SUFFICIENT);
-            sm.addPcName(player);
-            player.sendPacket(sm);
-            return false;
-        } else if ((channel.getMemberCount() < MIN_PLAYERS) || (channel.getMemberCount() > MAX_PLAYERS)) {
-            player.sendPacket(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER);
-            return false;
-        }
-        for (L2PcInstance channelMember : channel.getMembers()) {
-            if (channelMember.getLevel() < 80) {
-                party.broadcastPacket(SystemMessage
-                    .getSystemMessage(SystemMessageId.C1_S_LEVEL_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED)
-                    .addPcName(channelMember));
-                return false;
-            }
-            if (!Util.checkIfInRange(1000, player, channelMember, true)) {
-                party.broadcastPacket(SystemMessage.getSystemMessage(
-                    SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED)
-                    .addPcName(channelMember));
-                return false;
-            }
-            final Long reentertime = InstanceManager.getInstance()
-                .getInstanceTime(channelMember.getObjectId(), TEMPLATE_ID);
-            if (System.currentTimeMillis() < reentertime) {
-                party.broadcastPacket(
-                    SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addPcName(channelMember));
-                return false;
-            }
-        }
-        return true;
+        return zone.getPlayersInside().size() <= MAX_PLAYERS;
     }
 
     public void enterZone(L2PcInstance player) {
@@ -574,6 +574,9 @@ public final class Frintezza extends AbstractNpcAI {
                         }
                         state.songTask = null;
                         state.songEffectTask = null;
+
+                        setRespawn(Config.Frin)
+
                         ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(state, 33), 500);
                         break;
                     case DEAD: // open doors
@@ -685,7 +688,8 @@ public final class Frintezza extends AbstractNpcAI {
                             for (FrintezzaSong element : FRINTEZZASONGLIST) {
                                 if (rnd < element.chance) {
                                     state.OnSong = element;
-                                    broadCastPacket(new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null,
+                                    broadCastPacket(
+                                        new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null,
                                             element.songName, null));
                                     broadCastPacket(new MagicSkillUse(state.frintezza, state.frintezza,
                                         element.skill.getSkillId(), element.skill.getSkillLvl(),
@@ -716,8 +720,7 @@ public final class Frintezza extends AbstractNpcAI {
                         && !state.activeScarlet.isDead()) {
                         final List<L2Character> targetList = new ArrayList<>();
                         if (skill.hasEffectType(L2EffectType.STUN) || skill.isDebuff()) {
-                            for (int objId : state.getAllowed()) {
-                                L2PcInstance player = L2World.getInstance().getPlayer(objId);
+                            for (L2PcInstance player : getPlayersInside()) {
                                 if ((player != null) && player.isOnline() && (player.getInstanceId() == _world
                                     .getInstanceId())) {
                                     if (!player.isDead()) {
@@ -923,7 +926,7 @@ public final class Frintezza extends AbstractNpcAI {
                     state.activeScarlet.setIsInvul(true);
                     state.activeScarlet.setIsImmobilized(true);
                     state.activeScarlet.disableAllSkills();
-                    updateKnownList(state, state.activeScarlet);
+                    updateKnownList(state.activeScarlet);
                     broadCastPacket(new SocialAction(state.activeScarlet.getObjectId(), 3));
                     broadCastPacket(
                         new SpecialCamera(state.scarletDummy, 800, 180, 10, 1000, 10000, 0, 0, 1, 0, 0));
@@ -1083,9 +1086,8 @@ public final class Frintezza extends AbstractNpcAI {
         }
 
         private void stopPc() {
-            for (int objId : state.getAllowed()) {
-                L2PcInstance player = L2World.getInstance().getPlayer(objId);
-                if ((player != null) && player.isOnline() && (player.getInstanceId() == state.getInstanceId())) {
+            for (L2PcInstance player : getPlayersInside()) {
+                if ((player != null) && player.isOnline()) {
                     player.abortAttack();
                     player.abortCast();
                     player.disableAllSkills();
@@ -1098,9 +1100,8 @@ public final class Frintezza extends AbstractNpcAI {
         }
 
         private void startPc() {
-            for (int objId : state.getAllowed()) {
-                L2PcInstance player = L2World.getInstance().getPlayer(objId);
-                if ((player != null) && player.isOnline() && (player.getInstanceId() == state.getInstanceId())) {
+            for (L2PcInstance player : getPlayersInside()) {
+                if ((player != null) && player.isOnline()) {
                     player.enableAllSkills();
                     player.setIsImmobilized(false);
                 }
@@ -1108,9 +1109,8 @@ public final class Frintezza extends AbstractNpcAI {
         }
 
         private void sendPacketX(L2GameServerPacket packet1, L2GameServerPacket packet2, int x) {
-            for (int objId : state.getAllowed()) {
-                L2PcInstance player = L2World.getInstance().getPlayer(objId);
-                if ((player != null) && player.isOnline() && (player.getInstanceId() == state.getInstanceId())) {
+            for (L2PcInstance player : getPlayersInside()) {
+                if ((player != null) && player.isOnline()) {
                     if (player.getX() < x) {
                         player.sendPacket(packet1);
                     } else {
@@ -1151,18 +1151,16 @@ public final class Frintezza extends AbstractNpcAI {
                     addAggroToMobs();
                     break;
                 case 4:
-                    controlStatus(_world);
+                    controlStatus();
                     break;
             }
         }
 
         private void addAggroToMobs() {
-            L2PcInstance target = L2World.getInstance()
-                .getPlayer(state.getAllowed().get(getRandom(state.getAllowed().size())));
-            if ((target == null) || (target.getInstanceId() != state.getInstanceId()) || target.isDead() || target
-                .isFakeDeath()) {
-                for (int objId : state.getAllowed()) {
-                    target = L2World.getInstance().getPlayer(objId);
+            L2PcInstance target = getPlayersInside().get(getRandom(getPlayersInside().size()));
+            if ((target == null) || target.isDead() || target.isFakeDeath()) {
+                for (L2PcInstance player : getPlayersInside()) {
+                    target = player;
                     if ((target != null) && (target.getInstanceId() == state.getInstanceId()) && !target.isDead()
                         && !target.isFakeDeath()) {
                         break;
@@ -1183,9 +1181,8 @@ public final class Frintezza extends AbstractNpcAI {
     }
 
     protected void broadCastPacket(L2GameServerPacket packet) {
-        for (int objId : state.getAllowed()) {
-            L2PcInstance player = L2World.getInstance().getPlayer(objId);
-            if ((player != null) && player.isOnline() && (player.getInstanceId() == state.getInstanceId())) {
+        for (L2PcInstance player : getPlayersInside()) {
+            if ((player != null) && player.isOnline()) {
                 player.sendPacket(packet);
             }
         }
@@ -1193,9 +1190,8 @@ public final class Frintezza extends AbstractNpcAI {
 
     protected void updateKnownList(L2Npc npc) {
         Map<Integer, L2PcInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
-        for (int objId : state.getAllowed()) {
-            L2PcInstance player = L2World.getInstance().getPlayer(objId);
-            if ((player != null) && player.isOnline() && (player.getInstanceId() == state.getInstanceId())) {
+        for (L2PcInstance player : getPlayersInside()) {
+            if ((player != null) && player.isOnline()) {
                 npcKnownPlayers.put(player.getObjectId(), player);
             }
         }
@@ -1203,9 +1199,11 @@ public final class Frintezza extends AbstractNpcAI {
 
     @Override
     public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill) {
-        if ((npc.getId() == SCARLET1) && grandBossStatusManager.isStatus(FrintezzaStatuses.REGULAR_HALISHA) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.80))) {
+        if ((npc.getId() == SCARLET1) && grandBossStatusManager.isStatus(FrintezzaStatuses.REGULAR_HALISHA) && (
+            npc.getCurrentHp() < (npc.getMaxHp() * 0.80))) {
             controlStatus();
-        } else if ((npc.getId() == SCARLET1) && (grandBossStatusManager.isStatus(FrintezzaStatuses.FOUR_LEG_HALISHA)) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.20))) {
+        } else if ((npc.getId() == SCARLET1) && (grandBossStatusManager.isStatus(FrintezzaStatuses.FOUR_LEG_HALISHA))
+            && (npc.getCurrentHp() < (npc.getMaxHp() * 0.20))) {
             controlStatus();
         }
         if (skill != null) {
@@ -1279,4 +1277,9 @@ public final class Frintezza extends AbstractNpcAI {
         }
         return "";
     }
+
+    public static void main(String[] args) {
+        new Frintezza();
+    }
+
 }
