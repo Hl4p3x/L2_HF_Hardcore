@@ -2510,7 +2510,7 @@
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-669" />
-		<set name="effectRange" val="800" />
+		<set name="effectRange" val="250" />
 		<set name="fanRange" val="0,0,600,60" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
