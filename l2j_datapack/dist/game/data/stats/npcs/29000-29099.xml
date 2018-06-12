@@ -385,6 +385,15 @@
 					<item id="887" min="1" max="1" chance="16.4165"/> <!-- Adamantite Ring -->
 				</group>
 
+				<group chance="20">
+					<item id="264" min="1" max="1" chance="2" /> <!-- Pata -->
+					<item id="229" min="1" max="1" chance="2" /> <!-- Kris -->
+					<item id="277" min="1" max="1" chance="2" /> <!-- Dark Elven Bow -->
+					<item id="300" min="1" max="1" chance="2" /> <!-- Great Axe -->
+					<item id="91" min="1" max="1" chance="2" /> <!-- Heavy War Axe -->
+					<item id="92" min="1" max="1" chance="2" /> <!-- Sprite's Staff -->
+				</group>
+
 				<group chance="100">
 					<item id="57" min="100000" max="150000" chance="100"/> <!-- Adena -->
 				</group>
@@ -913,6 +922,27 @@
 					<item id="633" min="1" max="1" chance="9.8414" /> <!-- Zubei's Shield -->
 					<item id="673" min="1" max="1" chance="9.8414" /> <!-- Avadon Shield -->
 					<item id="2415" min="1" max="1" chance="6.8887" /> <!-- Avadon Circlet -->
+				</group>
+
+				<group chance="20">
+					<item id="264" min="1" max="1" chance="2" /> <!-- Pata -->
+					<item id="229" min="1" max="1" chance="2" /> <!-- Kris -->
+					<item id="277" min="1" max="1" chance="2" /> <!-- Dark Elven Bow -->
+					<item id="300" min="1" max="1" chance="2" /> <!-- Great Axe -->
+					<item id="91" min="1" max="1" chance="2" /> <!-- Heavy War Axe -->
+					<item id="92" min="1" max="1" chance="2" /> <!-- Sprite's Staff -->
+				</group>
+
+				<group chance="10">
+					<item id="267" min="1" max="1" chance="1" /> <!-- Arthro Nail -->
+					<item id="234" min="1" max="1" chance="1" /> <!-- Demon's Dagger -->
+					<item id="287" min="1" max="1" chance="1" /> <!-- Bow of Peril -->
+					<item id="97" min="1" max="1" chance="1" /> <!-- Lance -->
+					<item id="175" min="1" max="1" chance="1" /> <!-- Art of Battle Axe -->
+					<item id="210" min="1" max="1" chance="1" /> <!-- Staff Of Evil Spirits -->
+					<item id="142" min="1" max="1" chance="1" /> <!-- Keshanberk -->
+					<item id="148" min="1" max="1" chance="1" /> <!-- Sword of Valhalla -->
+					<item id="78" min="1" max="1" chance="1" /> <!-- Great Sword -->
 				</group>
 
 				<group chance="100">
