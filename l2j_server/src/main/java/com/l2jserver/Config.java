@@ -567,7 +567,7 @@ public final class Config
 	public static int[][] ALT_OLY_CLASSED_REWARD;
 	public static int[][] ALT_OLY_NONCLASSED_REWARD;
 	public static int[][] ALT_OLY_TEAM_REWARD;
-	private static int OLYPMIAD_CYCLE_IN_WEEKS;
+    public static int OLYPMIAD_CYCLE_IN_WEEKS;
 	public static int ALT_OLY_COMP_RITEM;
 	public static int ALT_OLY_MIN_MATCHES;
 	public static int ALT_OLY_GP_PER_POINT;
