@@ -1462,7 +1462,7 @@ public class Siege implements Siegable
 			cal.set(Calendar.SECOND, 0);
 			if (cal.before(Calendar.getInstance()))
 			{
-				cal.add(Calendar.WEEK_OF_YEAR, 2);
+				cal.add(Calendar.WEEK_OF_YEAR, Config.WEEKS_BETWEEN_SIEGES);
 			}
 			
 			if (CastleManager.getInstance().getSiegeDates(cal.getTimeInMillis()) < holder.getMaxConcurrent())

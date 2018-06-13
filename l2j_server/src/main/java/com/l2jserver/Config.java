@@ -1038,6 +1038,8 @@ public final class Config
 	public static IdFactoryType IDFACTORY_TYPE;
 	public static boolean BAD_ID_CHECKING;
 
+	public static int WEEKS_BETWEEN_SIEGES;
+
 	public static double ENCHANT_CHANCE_ELEMENT_STONE;
 	public static double ENCHANT_CHANCE_ELEMENT_CRYSTAL;
 	public static double ENCHANT_CHANCE_ELEMENT_JEWEL;
@@ -1094,6 +1096,11 @@ public final class Config
 	public static int FREYA_SPAWN_RANDOM;
 	public static int FREYA_RESET_TIMEOUT;
 	public static int FREYA_STAGE_DELAY;
+
+	// FRINTEZZA
+	public static int FRINTEZZA_RESET_TIMEOUT;
+	public static int FRINTEZZA_SPAWN_INTERVAL;
+	public static int FRINTEZZA_SPAWN_RANDOM;
 
 	// Valakas
 	public static int VALAKAS_WAIT_TIME;
@@ -1772,6 +1779,10 @@ public final class Config
 
 			IDFACTORY_TYPE = IdFactory.getEnum("IDFactory", IdFactoryType.class, IdFactoryType.BitSet);
 			BAD_ID_CHECKING = IdFactory.getBoolean("BadIdChecking", true);
+
+
+            final PropertiesParser siege = new PropertiesParser(SIEGE_CONFIGURATION_FILE);
+            WEEKS_BETWEEN_SIEGES = siege.getInt("WeeksBetweenSieges", 1);
 
 			// Load General L2Properties file (if exists)
 			final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
@@ -2720,15 +2731,19 @@ public final class Config
 			ANTHARAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAntharasSpawn", 264);
 			ANTHARAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAntharasSpawn", 72);
 
-			ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 40);
-			ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 8);
+			ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 86);
+			ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 24);
 			ZAKEN_INACTIVITY_TIMEOUT = GrandBossSettings.getInt("ZakenInactivityTimeout", 15);
 
 			FREYA_CONTEST_TIME = GrandBossSettings.getInt("FreyaWaitTime", 5);
-			FREYA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFreyaSpawn", 52);
-			FREYA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfFreyaSpawn", 8);
-			FREYA_RESET_TIMEOUT = GrandBossSettings.getInt("FreyaResetDelay", 6);
+			FREYA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFreyaSpawn", 86);
+			FREYA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfFreyaSpawn", 24);
+			FREYA_RESET_TIMEOUT = GrandBossSettings.getInt("FreyaResetDelay", 10);
 			FREYA_STAGE_DELAY = GrandBossSettings.getInt("FreyaStagePause", 30);
+
+			FRINTEZZA_RESET_TIMEOUT = GrandBossSettings.getInt("FrintezzaResetDelay", 10);
+			FRINTEZZA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFrintezzaSpawn", 86);
+			FRINTEZZA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfFrintezzaSpawn", 24);
 
 			VALAKAS_WAIT_TIME = GrandBossSettings.getInt("ValakasWaitTime", 30);
 			VALAKAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfValakasSpawn", 264);

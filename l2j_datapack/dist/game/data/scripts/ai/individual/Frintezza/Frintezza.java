@@ -19,6 +19,8 @@
 package ai.individual.Frintezza;
 
 import ai.GrandBossStatusManager;
+import ai.IdleBossManager;
+import ai.SpawnManager;
 import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -249,11 +251,16 @@ public final class Frintezza extends AbstractNpcAI {
 
     private final FrintezzaStatus state;
     private final GrandBossStatusManager grandBossStatusManager;
+    private final IdleBossManager idleBossManager;
+    private final SpawnManager spawnManager;
 
     public Frintezza() {
         super(Frintezza.class.getSimpleName(), "ai/individual");
         state = new FrintezzaStatus();
         grandBossStatusManager = new GrandBossStatusManager(FRINTEZZA, FrintezzaStatuses.asList());
+        idleBossManager = new IdleBossManager(this, Config.FRINTEZZA_RESET_TIMEOUT, this::clearDungeon);
+        spawnManager = new SpawnManager();
+
         load();
         addAttackId(SCARLET1, FRINTEZZA);
         addAttackId(PORTRAITS);
@@ -279,6 +286,10 @@ public final class Frintezza extends AbstractNpcAI {
         }
     }
 
+    private void clearDungeon() {
+
+    }
+
     @Override
     public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
         switch (event) {
@@ -288,6 +299,8 @@ public final class Frintezza extends AbstractNpcAI {
                 break;
             }
         }
+
+        return super.onAdvEvent(event, npc, player);
     }
 
     private void load() {
@@ -575,7 +588,10 @@ public final class Frintezza extends AbstractNpcAI {
                         state.songTask = null;
                         state.songEffectTask = null;
 
-                        setRespawn(Config.Frin)
+
+                        long respawnDelay = state.getRespawnDelay();
+                        state.setRespawn(respawnDelay);
+                        startQuestTimer("RESPAWN", respawnDelay, null, null);
 
                         ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(state, 33), 500);
                         break;
