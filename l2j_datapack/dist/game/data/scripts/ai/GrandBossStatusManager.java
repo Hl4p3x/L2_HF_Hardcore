@@ -28,13 +28,17 @@ public class GrandBossStatusManager {
     }
 
     public Status transitionToNextStatus() {
-        int currentStatusIndex = availableStatuses.indexOf(getStatus());
-        if ((availableStatuses.size() - 1) < currentStatusIndex) {
+        Status currentStatus = getStatus();
+        int currentStatusIndex = availableStatuses.indexOf(currentStatus);
+        if (currentStatusIndex == -1) {
+            throw throwInvalidStatus(currentStatus.getId());
+        }
+        if ((availableStatuses.size() - 1) > currentStatusIndex) {
             Status nextStatus = availableStatuses.get(currentStatusIndex + 1);
             setStatus(nextStatus);
             return nextStatus;
         } else {
-            return getStatus();
+            throw new IllegalStateException("Last status activated, nowhere to proceed");
         }
     }
 
@@ -52,19 +56,23 @@ public class GrandBossStatusManager {
         GrandBossManager.getInstance().setBossStatus(npcId, availableStatus.getId());
     }
 
+    private IllegalStateException throwInvalidStatus(int statusId) {
+        return new IllegalStateException(
+            String.format("Status [%s] is not available for grand boss %s [%s], available statuses are: %s",
+                statusId,
+                npcInstance.getTemplate().getName(),
+                npcId,
+                availableStatuses.stream().map(Object::toString).collect(Collectors.joining(",")))
+        );
+    }
+
     private Status findStatus(int statusId) {
         Optional<Status> matchingStatus = availableStatuses.stream().filter(status -> status.getId() == statusId)
             .findFirst();
         if (matchingStatus.isPresent()) {
             return matchingStatus.get();
         } else {
-            throw new IllegalStateException(
-                String.format("Status [%s] is not available for grand boss %s [%s], available statuses are: %s",
-                    statusId,
-                    npcInstance.getTemplate().getName(),
-                    npcId,
-                    availableStatuses.stream().map(Object::toString).collect(Collectors.joining(",")))
-            );
+            throw throwInvalidStatus(statusId);
         }
     }
 

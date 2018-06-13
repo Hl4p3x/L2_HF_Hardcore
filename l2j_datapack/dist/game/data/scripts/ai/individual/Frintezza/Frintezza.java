@@ -28,10 +28,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2CommandChannel;
-import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.PcCondOverride;
@@ -47,7 +44,6 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2NoRestartZone;
 import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo.NpcInfo;
 import com.l2jserver.gameserver.network.serverpackets.Earthquake;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -56,7 +52,6 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillCanceld;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 import java.io.File;
 import java.util.ArrayList;
@@ -273,17 +268,20 @@ public final class Frintezza extends AbstractNpcAI {
         addSpellFinishedId(HALL_KEEPER_SUICIDAL_SOLDIER);
 
         if (!grandBossStatusManager.getStatus().equals(FrintezzaStatuses.DEAD)) {
-            grandBossStatusManager.setStatus(FrintezzaStatuses.ALIVE);
-            addSpawn(HALL_ALARM, ALARM_SPAWN_LOCATION);
+            startDungeon();
         } else {
             final long remain = state.getRespawn() - System.currentTimeMillis();
             if (remain > 0) {
                 startQuestTimer("RESPAWN", remain, null, null);
             } else {
-                grandBossStatusManager.setStatus(FrintezzaStatuses.ALIVE);
-                addSpawn(HALL_ALARM, ALARM_SPAWN_LOCATION);
+                startDungeon();
             }
         }
+    }
+
+    private void startDungeon() {
+        grandBossStatusManager.setStatus(FrintezzaStatuses.ALIVE);
+        controlStatus();
     }
 
     private void clearDungeon() {
@@ -294,8 +292,7 @@ public final class Frintezza extends AbstractNpcAI {
     public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
         switch (event) {
             case "RESPAWN": {
-                grandBossStatusManager.setStatus(FrintezzaStatuses.ALIVE);
-                addSpawn(HALL_ALARM, ALARM_SPAWN_LOCATION);
+                startDungeon();
                 break;
             }
         }
@@ -502,7 +499,7 @@ public final class Frintezza extends AbstractNpcAI {
         return state.npcList.isEmpty();
     }
 
-    private void spawnFlaggedNPCs(FrintezzaStatus world, int flag) {
+    private void spawnFlaggedNPCs(int flag) {
         if (state.lock.tryLock()) {
             try {
                 for (FETSpawn spw : _spawnList.get(flag)) {
@@ -511,7 +508,7 @@ public final class Frintezza extends AbstractNpcAI {
                             if (_spawnZoneList.containsKey(spw.zone)) {
                                 final Location location = _spawnZoneList.get(spw.zone).getRandomPoint();
                                 if (location != null) {
-                                    spawn(world, spw.npcId, location.getX(), location.getY(),
+                                    spawn(spw.npcId, location.getX(), location.getY(),
                                         GeoData.getInstance().getSpawnHeight(location), getRandom(65535),
                                         spw.isNeededNextFlag);
                                 }
@@ -520,7 +517,7 @@ public final class Frintezza extends AbstractNpcAI {
                             }
                         }
                     } else {
-                        spawn(world, spw.npcId, spw.x, spw.y, spw.z, spw.h, spw.isNeededNextFlag);
+                        spawn(spw.npcId, spw.x, spw.y, spw.z, spw.h, spw.isNeededNextFlag);
                     }
                 }
             } finally {
@@ -540,19 +537,20 @@ public final class Frintezza extends AbstractNpcAI {
                 FrintezzaStatuses bossStatus = (FrintezzaStatuses) grandBossStatusManager.getStatus();
                 switch (bossStatus) {
                     case ALIVE:
-                        spawnFlaggedNPCs(state, 0);
+                        spawnFlaggedNPCs(0);
                         break;
                     case FIRST_ROOM:
                         for (int doorId : FIRST_ROUTE_DOORS) {
                             openDoor(doorId, state.getInstanceId());
                         }
-                        spawnFlaggedNPCs(state, grandBossStatusManager.getStatus().getId());
+                        spawnFlaggedNPCs(grandBossStatusManager.getStatus().getId());
                         break;
                     case SECOND_ROOM:
                         for (int doorId : SECOND_ROUTE_DOORS) {
                             openDoor(doorId, state.getInstanceId());
                         }
-                        ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(state, 0), 600000);
+                        ThreadPoolManager.getInstance()
+                            .scheduleGeneral(new IntroTask(state, 0), Config.FRINTEZZA_FIGHT_DELAY * 60000);
                         break;
                     case REGULAR_HALISHA: // first morph
                         if (state.songEffectTask != null) {
@@ -596,7 +594,6 @@ public final class Frintezza extends AbstractNpcAI {
                         ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(state, 33), 500);
                         break;
                     case DEAD: // open doors
-                        InstanceManager.getInstance().getInstance(state.getInstanceId()).setDuration(300000);
                         for (int doorId : FIRST_ROOM_DOORS) {
                             openDoor(doorId, state.getInstanceId());
                         }
@@ -609,6 +606,8 @@ public final class Frintezza extends AbstractNpcAI {
                         for (int doorId : SECOND_ROOM_DOORS) {
                             closeDoor(doorId, state.getInstanceId());
                         }
+
+                        //TODO teleport out in 10 minutes
                         break;
                 }
                 grandBossStatusManager.transitionToNextStatus();
@@ -620,7 +619,7 @@ public final class Frintezza extends AbstractNpcAI {
         return false;
     }
 
-    protected void spawn(FrintezzaStatus world, int npcId, int x, int y, int z, int h, boolean addToKillTable) {
+    protected void spawn(int npcId, int x, int y, int z, int h, boolean addToKillTable) {
         final L2Npc npc = addSpawn(npcId, x, y, z, h, false, 0, false, state.getInstanceId());
         if (addToKillTable) {
             state.npcList.add(npc);
@@ -795,7 +794,7 @@ public final class Frintezza extends AbstractNpcAI {
                     for (int doorId : SECOND_ROUTE_DOORS) {
                         closeDoor(doorId, state.getInstanceId());
                     }
-                    addSpawn(29061, -87904, -141296, -9168, 0, false, 0, false, state.getInstanceId());
+                    addSpawn(CUBE, -87904, -141296, -9168, 0, false, 0, false, state.getInstanceId());
                     break;
                 case 2:
                     state.frintezzaDummy = addSpawn(29052, -87784, -155083, -9087, 16048, false, 0, false,
@@ -1272,7 +1271,7 @@ public final class Frintezza extends AbstractNpcAI {
             }
         } else if (state.demons.contains(npc)) {
             state.demons.remove(npc);
-        } else {
+        } else if (state.portraits.containsKey(npc)) {
             state.portraits.remove(npc);
         }
 

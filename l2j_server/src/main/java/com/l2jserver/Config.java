@@ -18,6 +18,16 @@
  */
 package com.l2jserver;
 
+import com.l2jserver.gameserver.GameServer;
+import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+import com.l2jserver.gameserver.util.FloodProtectorConfig;
+import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.PropertiesParser;
+import com.l2jserver.util.StringUtil;
+import com.l2jserver.util.data.xml.IXmlReader;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -51,23 +61,11 @@ import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
-import com.l2jserver.gameserver.GameServer;
-import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.util.FloodProtectorConfig;
-import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.PropertiesParser;
-import com.l2jserver.util.StringUtil;
-import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * This class loads all the game server related configurations from files.<br>
@@ -1102,6 +1100,7 @@ public final class Config
 	public static int FRINTEZZA_RESET_TIMEOUT;
 	public static int FRINTEZZA_SPAWN_INTERVAL;
 	public static int FRINTEZZA_SPAWN_RANDOM;
+	public static int FRINTEZZA_FIGHT_DELAY;
 
 	// Valakas
 	public static int VALAKAS_WAIT_TIME;
@@ -2743,9 +2742,10 @@ public final class Config
 			FREYA_RESET_TIMEOUT = GrandBossSettings.getInt("FreyaResetDelay", 10);
 			FREYA_STAGE_DELAY = GrandBossSettings.getInt("FreyaStagePause", 30);
 
-			FRINTEZZA_RESET_TIMEOUT = GrandBossSettings.getInt("FrintezzaResetDelay", 10);
+			FRINTEZZA_RESET_TIMEOUT = GrandBossSettings.getInt("FrintezzaResetDelay", 15);
 			FRINTEZZA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFrintezzaSpawn", 86);
 			FRINTEZZA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfFrintezzaSpawn", 24);
+			FRINTEZZA_FIGHT_DELAY = GrandBossSettings.getInt("FrintezzaWaitTime", 10);
 
 			VALAKAS_WAIT_TIME = GrandBossSettings.getInt("ValakasWaitTime", 30);
 			VALAKAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfValakasSpawn", 264);
