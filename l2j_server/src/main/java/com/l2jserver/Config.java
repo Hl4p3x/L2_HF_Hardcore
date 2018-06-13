@@ -567,6 +567,7 @@ public final class Config
 	public static int[][] ALT_OLY_CLASSED_REWARD;
 	public static int[][] ALT_OLY_NONCLASSED_REWARD;
 	public static int[][] ALT_OLY_TEAM_REWARD;
+	private static int OLYPMIAD_CYCLE_IN_WEEKS;
 	public static int ALT_OLY_COMP_RITEM;
 	public static int ALT_OLY_MIN_MATCHES;
 	public static int ALT_OLY_GP_PER_POINT;
@@ -2670,6 +2671,7 @@ public final class Config
 			ALT_OLY_NONCLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyNonClassedReward", "13722,40"));
 			ALT_OLY_TEAM_REWARD = parseItemsList(Olympiad.getString("AltOlyTeamReward", "13722,85"));
 			ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 13722);
+            OLYPMIAD_CYCLE_IN_WEEKS = Olympiad.getInt("OlympiadCycleInWeeks", 2);
 			ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 15);
 			ALT_OLY_GP_PER_POINT = Olympiad.getInt("AltOlyGPPerPoint", 1000);
 			ALT_OLY_HERO_POINTS = Olympiad.getInt("AltOlyHeroPoints", 200);

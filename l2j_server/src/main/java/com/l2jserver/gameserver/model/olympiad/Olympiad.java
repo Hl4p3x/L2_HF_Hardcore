@@ -583,7 +583,7 @@ public class Olympiad extends ListenersContainer
 		Broadcast.toAllOnlinePlayers(sm);
 		
 		Calendar currentTime = Calendar.getInstance();
-		currentTime.add(Calendar.MONTH, 1);
+		currentTime.add(Calendar.WEEK_OF_YEAR, Config.OLYPMIAD_CYCLE_IN_WEEKS);
 		currentTime.set(Calendar.DAY_OF_MONTH, 1);
 		currentTime.set(Calendar.AM_PM, Calendar.AM);
 		currentTime.set(Calendar.HOUR, 12);
