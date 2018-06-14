@@ -1,12 +1,12 @@
 package ai;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class SpawnManager {
 
-    private List<L2Npc> npcs = new ArrayList<>();
+    private List<L2Npc> npcs = new CopyOnWriteArrayList<>();
 
     public SpawnManager registerSpawn(L2Npc spawn) {
         npcs.add(spawn);

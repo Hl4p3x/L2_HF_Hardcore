@@ -252,6 +252,7 @@ public final class Freya extends AbstractNpcAI {
     }
 
     private void resetState() {
+        teleportPlayersOut();
         getQuestTimers().values().forEach(timers -> timers.forEach(QuestTimer::cancel));
 
         closeDoor(DOOR_ID, state.getInstanceId());
@@ -272,8 +273,6 @@ public final class Freya extends AbstractNpcAI {
 
         state.isSupportActive = false;
         state.canSpawnMobs = true;
-        state.setStatus(ALIVE);
-        teleportPlayersOut();
     }
 
     private void teleportPlayersOut() {
@@ -622,16 +621,17 @@ public final class Freya extends AbstractNpcAI {
                     }
                 }
 
-                long respawnDelay = getRespawnDelay();
+
                 state.setStatus(DEAD);
-                state.setRespawn(respawnDelay);
-                startQuestTimer("RESPAWN", respawnDelay, state.controller, null);
                 startQuestTimer("EXIT", 5 * 60000, state.controller, null);
 
                 break;
             }
             case "EXIT": {
                 resetState();
+                long respawnDelay = getRespawnDelay();
+                state.setRespawn(respawnDelay);
+                startQuestTimer("RESPAWN", respawnDelay, state.controller, null);
                 break;
             }
             case "LEADER_RANGEBUFF": {
@@ -717,6 +717,7 @@ public final class Freya extends AbstractNpcAI {
                 if (System.currentTimeMillis() - state.getLastAttackTime() > CHECK_ACTIVITY_THRESHOLD) {
                     cancelQuestTimer("CHECK_ACTIVITY", state.controller, null);
                     resetState();
+                    state.setStatus(ALIVE);
                 } else {
                     startQuestTimer("CHECK_ACTIVITY", Config.CHECK_ACTIVITY_DELAY, state.controller, null);
                 }
