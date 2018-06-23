@@ -18,10 +18,6 @@
  */
 package com.l2jserver.gameserver.model.stats;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.SevenSignsFestival;
@@ -38,6 +34,8 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2CubicInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
@@ -77,13 +75,14 @@ import com.l2jserver.gameserver.model.zone.type.L2CastleZone;
 import com.l2jserver.gameserver.model.zone.type.L2ClanHallZone;
 import com.l2jserver.gameserver.model.zone.type.L2FortZone;
 import com.l2jserver.gameserver.model.zone.type.L2MotherTreeZone;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
 import com.l2jserver.gameserver.network.Debug;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Global calculations.
@@ -1534,8 +1533,14 @@ public final class Formulas
 			return true;
 		}
 
-		// FIXME: Fix this LevelMod Formula.
-		int lvlDifference = (target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel()));
+		int lvlDifference;
+		if (Config.ALT_MAGIC_SKILL_SUCCESS) {
+			lvlDifference = target.getLevel() - attacker.getLevel();
+		} else {
+			lvlDifference = (target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel()
+				: attacker.getLevel()));
+		}
+
 		double lvlModifier = Math.pow(1.3, lvlDifference);
 		float targetModifier = 1;
 		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3))
