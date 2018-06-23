@@ -14,7 +14,8 @@
 		<item id="9031" count="1" /> <!-- Shadow Item: Bronze Gaiters -->
 		<item id="10479" count="1" /> <!-- Shadow Item - Long Sword -->
 		<item id="5789" count="5000" /> <!-- Soulshots -->
-		<item id="20393" count="4" />  <!-- Sweet Fruit Cocktail -->
+		<item id="20393" count="40"/>  <!-- Sweet Fruit Cocktail -->
+		<item id="20394" count="40"/> <!-- Fresh Fruit Cocktail -->
 	</equipment>
 	<!-- Human Mystic -->
 	<equipment classId="10">
@@ -29,7 +30,8 @@
 		<item id="9035" count="1" /> <!-- Shadow Item: Stockings of Magic -->
 		<item id="10474" count="1" /> <!-- Shadow Item - Apprentice's Staff -->
 		<item id="5790" count="5000" /> <!-- Spiritshots -->
-		<item id="20394" count="4" /> <!-- Fresh Fruit Cocktail -->
+		<item id="20393" count="40"/>  <!-- Sweet Fruit Cocktail -->
+		<item id="20394" count="40"/> <!-- Fresh Fruit Cocktail -->
 	</equipment>
 	<!-- Elven Fighter -->
 	<equipment classId="18">
@@ -60,7 +62,8 @@
 		<item id="9035" count="1" /> <!-- Shadow Item: Stockings of Magic -->
 		<item id="10474" count="1" /> <!-- Shadow Item - Apprentice's Staff -->
 		<item id="5790" count="5000" /> <!-- Spiritshots -->
-		<item id="20394" count="4" /> <!-- Fresh Fruit Cocktail -->
+		<item id="20393" count="40"/>  <!-- Sweet Fruit Cocktail -->
+		<item id="20394" count="40"/> <!-- Fresh Fruit Cocktail -->
 	</equipment>
 	<!-- Dark Fighter -->
 	<equipment classId="31">
@@ -76,7 +79,8 @@
 		<item id="9031" count="1" /> <!-- Shadow Item: Bronze Gaiters -->
 		<item id="10479" count="1" /> <!-- Shadow Item - Long Sword -->
 		<item id="5789" count="5000" /> <!-- Soulshots -->
-		<item id="20393" count="4" />  <!-- Sweet Fruit Cocktail -->
+		<item id="20393" count="40"/>  <!-- Sweet Fruit Cocktail -->
+		<item id="20394" count="40"/> <!-- Fresh Fruit Cocktail -->
 	</equipment>
 	<!-- Dark Mystic -->
 	<equipment classId="38">
@@ -91,7 +95,8 @@
 		<item id="9035" count="1" /> <!-- Shadow Item: Stockings of Magic -->
 		<item id="10474" count="1" /> <!-- Shadow Item - Apprentice's Staff -->
 		<item id="5790" count="5000" /> <!-- Spiritshots -->
-		<item id="20394" count="4" /> <!-- Fresh Fruit Cocktail -->
+		<item id="20393" count="40"/>  <!-- Sweet Fruit Cocktail -->
+		<item id="20394" count="40"/> <!-- Fresh Fruit Cocktail -->
 	</equipment>
 	<!-- Orc Fighter -->
 	<equipment classId="44">
@@ -107,7 +112,8 @@
 		<item id="9031" count="1" /> <!-- Shadow Item: Bronze Gaiters -->
 		<item id="10477" count="1" /> <!-- Shadow Item - Cestus -->
 		<item id="5789" count="5000" /> <!-- Soulshots -->
-		<item id="20393" count="4" />  <!-- Sweet Fruit Cocktail -->
+		<item id="20393" count="40"/>  <!-- Sweet Fruit Cocktail -->
+		<item id="20394" count="40"/> <!-- Fresh Fruit Cocktail -->
 	</equipment>
 	<!-- Orc Mystic -->
 	<equipment classId="49">
@@ -123,7 +129,8 @@
 		<item id="10477" count="1" /> <!-- Shadow Item - Cestus -->
 		<item id="5789" count="5000" /> <!-- Soulshots -->
 		<item id="5790" count="5000" /> <!-- Spiritshots -->
-		<item id="20394" count="4" /> <!-- Fresh Fruit Cocktail -->
+		<item id="20393" count="40"/>  <!-- Sweet Fruit Cocktail -->
+		<item id="20394" count="40"/> <!-- Fresh Fruit Cocktail -->
 	</equipment>
 	<!-- Dwarf Fighter -->
 	<equipment classId="53">
@@ -139,7 +146,8 @@
 		<item id="9031" count="1" /> <!-- Shadow Item: Bronze Gaiters -->
 		<item id="10475" count="1" /> <!-- Shadow Item - Bone Club -->
 		<item id="5789" count="5000" /> <!-- Soulshots -->
-		<item id="20393" count="4" />  <!-- Sweet Fruit Cocktail -->
+		<item id="20393" count="40"/>  <!-- Sweet Fruit Cocktail -->
+		<item id="20394" count="40"/> <!-- Fresh Fruit Cocktail -->
 	</equipment>
 	<!-- Male Kamael Soldier -->
 	<equipment classId="123">
@@ -156,7 +164,8 @@
 		<item id="9033" count="1" /> <!-- Shadow Item: Hard Leather Gaiters -->
 		<item id="5789" count="5000" /> <!-- Soulshots -->
 		<item id="5790" count="5000" /> <!-- Spiritshots -->
-		<item id="20393" count="4" />  <!-- Sweet Fruit Cocktail -->
+		<item id="20393" count="40"/>  <!-- Sweet Fruit Cocktail -->
+		<item id="20394" count="40"/> <!-- Fresh Fruit Cocktail -->
 	</equipment>
 	<!-- Female Kamael Soldier -->
 	<equipment classId="124">
@@ -173,6 +182,7 @@
 		<item id="9033" count="1" /> <!-- Shadow Item: Hard Leather Gaiters -->
 		<item id="5789" count="5000" /> <!-- Soulshots -->
 		<item id="5790" count="5000" /> <!-- Spiritshots -->
-		<item id="20393" count="4" />  <!-- Sweet Fruit Cocktail -->
+		<item id="20393" count="40"/>  <!-- Sweet Fruit Cocktail -->
+		<item id="20394" count="40"/> <!-- Fresh Fruit Cocktail -->
 	</equipment>
 </list>
