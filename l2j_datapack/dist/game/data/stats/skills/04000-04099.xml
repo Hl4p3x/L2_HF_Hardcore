@@ -1829,7 +1829,9 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DispelAll" />
+			<effect name="DispelByCategory">
+				<param slot="buff" rate="25" max="3"/>
+			</effect>
 		</for>
 	</skill>
 	<skill id="4095" levels="1" name="Damage Shield">

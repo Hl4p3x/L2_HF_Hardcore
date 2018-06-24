@@ -1746,7 +1746,9 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="DispelAll" />
+			<effect name="DispelByCategory">
+				<param slot="buff" rate="30" max="4"/>
+			</effect>
 		</for>
 	</skill>
 	<skill id="4178" levels="12" name="BOSS Flame Strike">
