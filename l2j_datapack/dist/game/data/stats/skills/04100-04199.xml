@@ -1747,7 +1747,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="DispelByCategory">
-				<param slot="buff" rate="30" max="4"/>
+				<param slot="buff" rate="60" max="4"/>
 			</effect>
 		</for>
 	</skill>
