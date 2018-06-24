@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.model.L2SiegeClan;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2CubicInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -1533,19 +1534,28 @@ public final class Formulas
 			return true;
 		}
 
+        int targetLevel;
+        if (target instanceof L2Npc) {
+            L2Npc npcTarget = (L2Npc) target;
+            targetLevel = npcTarget.getOriginalLevel();
+        } else {
+            targetLevel = target.getLevel();
+        }
+
 		int lvlDifference;
 		if (Config.ALT_MAGIC_SKILL_SUCCESS) {
-			lvlDifference = target.getLevel() - attacker.getLevel();
+            lvlDifference = targetLevel - attacker.getLevel();
 		} else {
-			lvlDifference = (target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel()
+            lvlDifference = (targetLevel - (skill.getMagicLevel() > 0 ? skill.getMagicLevel()
 				: attacker.getLevel()));
 		}
 
 		double lvlModifier = Math.pow(1.3, lvlDifference);
 		float targetModifier = 1;
-		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3))
-		{
-			int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
+        if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel()
+            >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && (
+            (targetLevel - attacker.getActingPlayer().getLevel()) >= 3)) {
+            int lvlDiff = targetLevel - attacker.getActingPlayer().getLevel() - 2;
 			if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size())
 			{
 				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);

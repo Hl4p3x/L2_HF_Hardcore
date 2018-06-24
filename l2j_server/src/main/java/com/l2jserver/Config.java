@@ -1536,7 +1536,7 @@ public final class Config
 			ALT_PERFECT_SHLD_BLOCK = character.getInt("AltPerfectShieldBlockRate", 10);
 			EFFECT_TICK_RATIO = character.getLong("EffectTickRatio", 666);
 			ALLOW_CLASS_MASTERS = character.getBoolean("AllowClassMasters", false);
-			ALT_MAGIC_SKILL_SUCCESS = character.getBoolean("AltMagicSkillSuccess", true);
+			ALT_MAGIC_SKILL_SUCCESS = character.getBoolean("AltMagicSkillSuccess", false);
 			ALLOW_ENTIRE_TREE = character.getBoolean("AllowEntireTree", false);
 			ALTERNATE_CLASS_MASTER = character.getBoolean("AlternateClassMaster", false);
 			if (ALLOW_CLASS_MASTERS || ALTERNATE_CLASS_MASTER)
