@@ -5171,8 +5171,7 @@ public final class L2PcInstance extends L2Playable
 			boolean isKarmaDrop = (getKarma() > 0) && (getPkKills() >= pkLimit);
 			boolean isKillerNpc = (killer instanceof L2Npc);
 			final boolean isSiegeKill = isInsideZone(ZoneId.SIEGE);
-			boolean isWarKill = _clan.isAtWarWith(pk.getClanId());
-
+			boolean isWarKill = _clan != null && _clan.isAtWarWith(pk.getClanId());
 
 			int dropEquip = Config.PLAYER_RATE_DROP_EQUIP;
 			int dropEquipWeapon = Config.PLAYER_RATE_DROP_EQUIP_WEAPON;
