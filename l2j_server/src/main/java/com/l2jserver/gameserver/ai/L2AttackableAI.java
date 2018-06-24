@@ -22,15 +22,6 @@ import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.GeoData;
@@ -66,6 +57,13 @@ import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class manages AI of L2Attackable.
@@ -749,16 +747,33 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	}
 
 	private void returnToSpawn(L2Attackable npc) {
-		npc.returnHome();
-		npc.teleToLocation(npc.getSpawn().getLocation(npc));
+		if (npc != null && npc.getSpawn() != null && npc.getSpawn().getLocation() != null) {
+			npc.returnHome();
+			npc.teleToLocation(npc.getSpawn().getLocation());
+		}
 	}
 
 	private boolean monsterDriftLimitExeeded(L2Attackable npc) {
-		if (npc instanceof L2MonsterInstance && npc.getLeader() == null && npc.calculateDistance(npc.getSpawn().getLocation(npc), false, false) > Config.MONSTER_MAX_DRIFT_FROM_SPAWN) {
-			return true;
-		} else {
+		if (npc == null) {
 			return false;
 		}
+
+		// If has leader, do not adjust
+		if (npc instanceof L2MonsterInstance && npc.getLeader() != null) {
+			return false;
+		}
+
+		// If has no spawn point, there is no place to return to
+		if (npc.getSpawn() == null) {
+			return false;
+		}
+
+		if (npc.getSpawn().getLocation() == null) {
+			return false;
+		}
+
+		return npc.calculateDistance(npc.getSpawn().getLocation(), false, false)
+			> Config.MONSTER_MAX_DRIFT_FROM_SPAWN;
 	}
 
 	/**
