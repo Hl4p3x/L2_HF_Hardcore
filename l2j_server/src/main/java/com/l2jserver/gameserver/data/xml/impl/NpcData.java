@@ -18,6 +18,24 @@
  */
 package com.l2jserver.gameserver.data.xml.impl;
 
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.enums.AISkillScope;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.base.ClassId;
+import com.l2jserver.gameserver.model.drops.DropListScope;
+import com.l2jserver.gameserver.model.drops.GeneralDropItem;
+import com.l2jserver.gameserver.model.drops.GroupedGeneralDropItem;
+import com.l2jserver.gameserver.model.drops.IDropItem;
+import com.l2jserver.gameserver.model.drops.strategy.IDropCalculationStrategy;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.holders.MinionHolder;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.data.xml.IXmlReader;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,29 +48,9 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.model.drops.strategy.IDropCalculationStrategy;
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.enums.AISkillScope;
-import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jserver.gameserver.model.base.ClassId;
-import com.l2jserver.gameserver.model.drops.DropListScope;
-import com.l2jserver.gameserver.model.drops.GeneralDropItem;
-import com.l2jserver.gameserver.model.drops.GroupedGeneralDropItem;
-import com.l2jserver.gameserver.model.drops.IDropItem;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.holders.MinionHolder;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * NPC data parser.
@@ -376,7 +374,7 @@ public class NpcData implements IXmlReader
 									for (Node aiNode = npcNode.getFirstChild(); aiNode != null; aiNode = aiNode.getNextSibling())
 									{
 										attrs = aiNode.getAttributes();
-										switch (aiNode.getNodeName().toLowerCase())
+										switch (aiNode.getNodeName())
 										{
 											case "skill":
 											{
@@ -393,8 +391,7 @@ public class NpcData implements IXmlReader
 											{
 												for (Node clanListNode = aiNode.getFirstChild(); clanListNode != null; clanListNode = clanListNode.getNextSibling())
 												{
-													attrs = clanListNode.getAttributes();
-													switch (clanListNode.getNodeName().toLowerCase())
+													switch (clanListNode.getNodeName())
 													{
 														case "clan":
 														{
@@ -402,7 +399,11 @@ public class NpcData implements IXmlReader
 															{
 																clans = new HashSet<>(1);
 															}
-															clans.add(getOrCreateClanId(clanListNode.getTextContent()));
+															int clanId = getOrCreateClanId(
+																clanListNode.getTextContent());
+															clans.add(clanId);
+															LOG.debug("Adding clan {} for {} [{}]", clanId,
+																set.getString("name"), npcId);
 															break;
 														}
 														case "ignoreNpcId":
@@ -706,6 +707,7 @@ public class NpcData implements IXmlReader
 		{
 			id = _clans.size();
 			_clans.put(clanName.toUpperCase(), id);
+			LOG.debug("Creating new clan {} [{}]", clanName.toUpperCase(), id);
 		}
 		return id;
 	}

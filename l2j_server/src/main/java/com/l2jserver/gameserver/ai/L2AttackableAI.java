@@ -840,66 +840,69 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		// Handle all L2Object of its Faction inside the Faction Range
 
 		Set<Integer> clans = getActiveChar().getTemplate().getClans();
-		if ((clans != null) && !clans.isEmpty())
-		{
-			LOG.debug("{}: Analyzing nearby clan mates to assist", getActor());
+		if ((clans != null) && !clans.isEmpty()) {
+			LOG.debug("{}: Analyzing nearby clan mates to call for assistance", getActor());
 			final int factionRange = npc.getTemplate().getClanHelpRange() + collision;
 			// Go through all L2Object that belong to its faction
-			try
-			{
-				for (L2Object obj : npc.getKnownList().getKnownCharactersInRadius(factionRange))
-				{
-					if (obj instanceof L2Npc)
-					{
+			try {
+				for (L2Object obj : npc.getKnownList().getKnownCharactersInRadius(factionRange)) {
+					if (obj instanceof L2Npc) {
 						L2Npc called = (L2Npc) obj;
 
-						if (!getActiveChar().getTemplate().isClan(called.getTemplate().getClans()))
-						{
+						if (!getActiveChar().getTemplate().isClan(called.getTemplate().getClans())) {
 							LOG.debug("{}: Discards {}, because they do not share the same clan", getActor(), called);
 							continue;
 						}
 
 						// Check if the L2Object is inside the Faction Range of the actor
-						if (called.hasAI())
-						{
-							if ((Math.abs(originalAttackTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().contains(originalAttackTarget) && ((called.getAI()._intention == CtrlIntention.AI_INTENTION_IDLE) || (called.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE))
-								&& (called.getInstanceId() == npc.getInstanceId()))
-							{
-								if (originalAttackTarget.isPlayable())
-								{
-									if (originalAttackTarget.isInParty() && originalAttackTarget.getParty().isInDimensionalRift())
-									{
+						if (called.hasAI()) {
+							if ((Math.abs(originalAttackTarget.getZ() - called.getZ()) < 600)
+								&& npc.getAttackByList().contains(originalAttackTarget)
+								&&
+								((called.getAI()._intention == CtrlIntention.AI_INTENTION_IDLE)
+									|| (called.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE))
+								&& (called.getInstanceId() == npc.getInstanceId())) {
+								if (originalAttackTarget.isPlayable()) {
+									if (originalAttackTarget.isInParty() && originalAttackTarget.getParty()
+										.isInDimensionalRift()) {
 										byte riftType = originalAttackTarget.getParty().getDimensionalRift().getType();
-										byte riftRoom = originalAttackTarget.getParty().getDimensionalRift().getCurrentRoom();
+										byte riftRoom = originalAttackTarget.getParty().getDimensionalRift()
+											.getCurrentRoom();
 
-										if ((npc instanceof L2RiftInvaderInstance) && !DimensionalRiftManager.getInstance().getRoom(riftType, riftRoom).checkIfInZone(npc.getX(), npc.getY(), npc.getZ()))
-										{
+										if ((npc instanceof L2RiftInvaderInstance) && !DimensionalRiftManager
+											.getInstance().getRoom(riftType, riftRoom)
+											.checkIfInZone(npc.getX(), npc.getY(), npc.getZ())) {
 											continue;
 										}
 									}
 
 									// By default, when a faction member calls for help, attack the caller's attacker.
 									// Notify the AI with EVT_AGGRESSION
-									LOG.debug("{}: Is helping {} with original attack target {}", getActor(), called,
+									LOG.debug("{}: Is calling {} for help with original attack target {}", getActor(),
+										called,
 										originalAttackTarget);
 									called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, originalAttackTarget, 1);
-									EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), originalAttackTarget.getActingPlayer(), originalAttackTarget.isSummon()), called);
-								}
-								else if ((called instanceof L2Attackable) && (getAttackTarget() != null) && (called.getAI()._intention != CtrlIntention.AI_INTENTION_ATTACK))
-								{
-									LOG.debug("{}: Is helping {} with {}", getActor(), called, getAttackTarget());
-									((L2Attackable) called).addDamageHate(getAttackTarget(), 0, npc.getHating(getAttackTarget()));
+									EventDispatcher.getInstance().notifyEventAsync(
+										new OnAttackableFactionCall(called, getActiveChar(),
+											originalAttackTarget.getActingPlayer(), originalAttackTarget.isSummon()),
+										called);
+								} else if ((called instanceof L2Attackable) && (getAttackTarget() != null) && (
+									called.getAI()._intention != CtrlIntention.AI_INTENTION_ATTACK)) {
+									LOG.debug("{}: Is calling for help {} with {}", getActor(), called,
+										getAttackTarget());
+									((L2Attackable) called)
+										.addDamageHate(getAttackTarget(), 0, npc.getHating(getAttackTarget()));
 									called.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getAttackTarget());
 								}
 							}
 						}
 					}
 				}
-			}
-			catch (NullPointerException e)
-			{
+			} catch (NullPointerException e) {
 				LOG.warn("{}: There has been a problem trying to think the attack!", getClass().getSimpleName(), e);
 			}
+		} else {
+			LOG.debug("Skipping clan check, NPC {} has no clans", this);
 		}
 
 		// Initialize data
