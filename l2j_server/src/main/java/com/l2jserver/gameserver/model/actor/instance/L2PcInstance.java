@@ -5222,16 +5222,20 @@ public final class L2PcInstance extends L2Playable
 
 					// NOTE: Each time an item is dropped, the chance of another item being dropped gets lesser (dropCount * 2)
                     if (Rnd.get(100) < itemDropPercent) {
-                        getInventory().unEquipItemInSlot(itemDrop.getLocationSlot());
+						LOG.debug("Handling drop for {}", itemDrop);
+						if (itemDrop.isEquipped()) {
+							int slot = getInventory().getSlotFromItem(itemDrop);
+							LOG.debug("Slot for {} in body {}", itemDrop, slot);
+							getInventory().unEquipItemInBodySlot(slot);
+						}
 
-						if (Config.ALT_PLAYER_DROP_CAN_BE_CRYSTALIZED &&
+						if (Config.ALT_PLAYER_DROP_CAN_BE_CRYSTALLIZED &&
 								itemDrop.getCrystalCount() > 0 &&
-								Rnd.get(100) < Config.ALT_PLAYER_DROP_CRYSTALIZATION_CHANCE) {
+							Rnd.get(100) < Config.ALT_PLAYER_DROP_CRYSTALLIZATION_CHANCE) {
 
 							// Remove the actual item from inventory
                             L2ItemInstance removedItem = getInventory()
                                 .destroyItem("Crystallize", itemDrop.getObjectId(), itemDrop.getCount(), this, null);
-
                             sendPacket(new InventoryUpdate(removedItem));
 
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CRYSTALLIZED);
@@ -5243,20 +5247,20 @@ public final class L2PcInstance extends L2Playable
 							int crystalAmount = itemDrop.getCrystalCount();
                             itemDrop = getInventory().addItem("Crystallize", crystalId, crystalAmount, this, this);
 
-                            sendPacket(new InventoryUpdate(itemDrop));
-                            broadcastUserInfo();
-
 							L2World.getInstance().removeObject(removedItem);
+							LOG.debug("Crystallized drop {} into {} crystals", itemDrop, crystalAmount);
 						}
 						dropItem("DieDrop", itemDrop, killer, true);
+						sendPacket(new InventoryUpdate(itemDrop));
 
 						if (isKarmaDrop)
 						{
-							LOG.debug("{} has karma and dropped id = {}, count = {}", this, itemDrop.getId(), itemDrop.getCount());
+							LOG.debug("{} has karma and dropped id = {}, count = {}", this, itemDrop,
+								itemDrop.getCount());
 						}
 						else
 						{
-							LOG.debug("{} dropped id = {}, count = {}", this, itemDrop.getId(), itemDrop.getCount());
+							LOG.debug("{} dropped id = {}, count = {}", this, itemDrop, itemDrop.getCount());
 						}
 
 						if (++dropCount >= dropLimit)
@@ -5264,6 +5268,10 @@ public final class L2PcInstance extends L2Playable
 							break;
 						}
 					}
+				}
+
+				if (dropCount > 0) {
+					broadcastUserInfo();
 				}
 			}
 		}

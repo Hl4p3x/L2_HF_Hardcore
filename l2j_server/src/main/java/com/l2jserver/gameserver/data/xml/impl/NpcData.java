@@ -402,8 +402,6 @@ public class NpcData implements IXmlReader
 															int clanId = getOrCreateClanId(
 																clanListNode.getTextContent());
 															clans.add(clanId);
-															LOG.debug("Adding clan {} for {} [{}]", clanId,
-																set.getString("name"), npcId);
 															break;
 														}
 														case "ignoreNpcId":

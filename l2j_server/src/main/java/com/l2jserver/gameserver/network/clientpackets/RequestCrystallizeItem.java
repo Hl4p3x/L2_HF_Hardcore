@@ -206,7 +206,8 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 		}
 		
 		// remove from inventory
-		L2ItemInstance removedItem = activeChar.getInventory().destroyItem("Crystalize", _objectId, _count, activeChar, null);
+		L2ItemInstance removedItem = activeChar.getInventory()
+			.destroyItem("Crystallize", _objectId, _count, activeChar, null);
 		
 		InventoryUpdate iu = new InventoryUpdate();
 		iu.addRemovedItem(removedItem);
@@ -215,14 +216,15 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 		// add crystals
 		int crystalId = itemToRemove.getItem().getCrystalItemId();
 		int crystalAmount = itemToRemove.getCrystalCount();
-		L2ItemInstance createditem = activeChar.getInventory().addItem("Crystalize", crystalId, crystalAmount, activeChar, activeChar);
+		L2ItemInstance createdItem = activeChar.getInventory()
+			.addItem("Crystallize", crystalId, crystalAmount, activeChar, activeChar);
 		
 		sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CRYSTALLIZED);
 		sm.addItemName(removedItem);
 		activeChar.sendPacket(sm);
 		
 		sm = SystemMessage.getSystemMessage(SystemMessageId.EARNED_S2_S1_S);
-		sm.addItemName(createditem);
+		sm.addItemName(createdItem);
 		sm.addLong(crystalAmount);
 		activeChar.sendPacket(sm);
 		
