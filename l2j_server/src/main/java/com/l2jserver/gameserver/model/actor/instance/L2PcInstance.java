@@ -3585,7 +3585,7 @@ public final class L2PcInstance extends L2Playable
 
 		if ((Config.AUTODESTROY_ITEM_AFTER > 0) && Config.DESTROY_DROPPED_PLAYER_ITEM && !Config.LIST_PROTECTED_ITEMS.contains(item.getId()))
 		{
-			if ((item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM) || !item.isEquipable())
+			if (!item.isEquipable() || (item.isEquipable() && Config.DESTROY_EQUIPABLE_PLAYER_ITEM))
 			{
 				ItemsAutoDestroy.getInstance().addItem(item);
 			}
@@ -5213,40 +5213,38 @@ public final class L2PcInstance extends L2Playable
 						continue;
 					}
 
-					if (itemDrop.isEquipped())
-					{
+					if (itemDrop.isEquipped()) {
 						// Set proper chance according to Item type of equipped Item
 						itemDropPercent = itemDrop.getItem().getType2() == L2Item.TYPE2_WEAPON ? dropEquipWeapon : dropEquip;
-						getInventory().unEquipItemInSlot(itemDrop.getLocationSlot());
-					}
-					else
-					{
+					} else {
 						itemDropPercent = dropItem; // Item in inventory
 					}
 
 					// NOTE: Each time an item is dropped, the chance of another item being dropped gets lesser (dropCount * 2)
-					if (Rnd.get(100) < itemDropPercent)
-					{
+					if (Rnd.get(100) < itemDropPercent) {
+						getInventory().unEquipItemInSlot(itemDrop.getLocationSlot());
+
 						if (Config.ALT_PLAYER_DROP_CAN_BE_CRYSTALIZED &&
 								itemDrop.getCrystalCount() > 0 &&
 								Rnd.get(100) < Config.ALT_PLAYER_DROP_CRYSTALIZATION_CHANCE) {
 
 							// Remove the actual item from inventory
-							L2ItemInstance removedItem = this.getInventory().destroyItem("Crystallize", itemDrop.getObjectId(), itemDrop.getCount(), this, null);
+							L2ItemInstance removedItem = getInventory()
+								.destroyItem("Crystallize", itemDrop.getObjectId(), itemDrop.getCount(), this, null);
 
-							this.sendPacket( new InventoryUpdate(removedItem));
+							sendPacket(new InventoryUpdate(removedItem));
 
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CRYSTALLIZED);
 							sm.addItemName(removedItem);
-							this.sendPacket(sm);
+							sendPacket(sm);
 
 							// Replace with crystals
 							int crystalId = itemDrop.getItem().getCrystalItemId();
 							int crystalAmount = itemDrop.getCrystalCount();
-							itemDrop = this.getInventory().addItem("Crystallize", crystalId, crystalAmount, this, this);
+							itemDrop = getInventory().addItem("Crystallize", crystalId, crystalAmount, this, this);
 
-							this.sendPacket(new InventoryUpdate(itemDrop));
-							this.broadcastUserInfo();
+							sendPacket(new InventoryUpdate(itemDrop));
+							broadcastUserInfo();
 
 							L2World.getInstance().removeObject(removedItem);
 						}
