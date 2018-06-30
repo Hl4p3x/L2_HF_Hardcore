@@ -5516,7 +5516,7 @@ public final class L2PcInstance extends L2Playable
 		setExpBeforeDeath(getExp());
 
         getStat().changeKarma(lostExp);
-        if (!Config.ALT_GAME_DELEVEL) {
+		if (Config.ALT_GAME_DELEVEL) {
             getStat().removeExp(lostExp);
         }
 	}
