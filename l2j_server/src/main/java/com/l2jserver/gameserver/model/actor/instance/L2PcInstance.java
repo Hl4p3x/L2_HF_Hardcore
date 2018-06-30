@@ -5469,12 +5469,7 @@ public final class L2PcInstance extends L2Playable
 	 * @param killer
 	 * @param atWar
 	 */
-	public void calculateDeathExpPenalty(L2Character killer, boolean atWar)
-	{
-		if (!Config.ALT_GAME_DELEVEL) {
-			return;
-		}
-
+    public void calculateDeathExpPenalty(L2Character killer, boolean atWar) {
 		final int lvl = getLevel();
 		double percentLost = PlayerXpPercentLostData.getInstance().getXpPercent(getLevel());
 
@@ -5520,7 +5515,10 @@ public final class L2PcInstance extends L2Playable
 
 		setExpBeforeDeath(getExp());
 
-		getStat().removeExp(lostExp);
+        getStat().changeKarma(lostExp);
+        if (!Config.ALT_GAME_DELEVEL) {
+            getStat().removeExp(lostExp);
+        }
 	}
 
 	public boolean isPartyWaiting()

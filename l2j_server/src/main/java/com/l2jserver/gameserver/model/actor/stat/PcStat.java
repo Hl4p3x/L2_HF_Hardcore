@@ -18,8 +18,6 @@
  */
 package com.l2jserver.gameserver.model.actor.stat;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
 import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
@@ -48,6 +46,7 @@ import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.Util;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class PcStat extends PlayableStat
 {
@@ -120,7 +119,6 @@ public class PcStat extends PlayableStat
 		{
 			return false;
 		}
-		changeKarma(exp);
 		return true;
 	}
 	
