@@ -18,12 +18,6 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import java.util.List;
-import java.util.Map;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -40,6 +34,10 @@ import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
+import java.util.List;
+import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class L2NpcInstance extends L2Npc
 {

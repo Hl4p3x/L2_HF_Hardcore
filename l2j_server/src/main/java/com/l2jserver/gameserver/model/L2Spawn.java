@@ -18,22 +18,13 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.lang.reflect.Constructor;
-import java.util.Deque;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.TerritoryTable;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.NpcPersonalAIData;
+import com.l2jserver.gameserver.enums.Team;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
@@ -43,6 +34,15 @@ import com.l2jserver.gameserver.model.interfaces.INamable;
 import com.l2jserver.gameserver.model.interfaces.IPositionable;
 import com.l2jserver.gameserver.model.zone.type.NpcSpawnTerritory;
 import com.l2jserver.util.Rnd;
+import java.lang.reflect.Constructor;
+import java.util.Deque;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * This class manages the spawn and respawn of a group of L2NpcInstance that are in the same are and have the same type.<br>
@@ -660,9 +660,10 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 				(mob.getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL) && //
 				(Config.L2JMOD_CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
 			{
-				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY)
-				{
+				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY) {
 					((L2Attackable) mob).setChampion(true);
+					mob.setTeam(Team.RED);
+					_log.finest("Mob " + mob + " is going to be a champion");
 				}
 			}
 		}

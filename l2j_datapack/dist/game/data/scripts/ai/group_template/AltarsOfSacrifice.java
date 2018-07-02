@@ -207,11 +207,10 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 		)
 	};
 	// @formatter:on
-	
-/*	public static void main(String[] args)
-	{
+
+	public static void main(String[] args) {
 		new AltarsOfSacrifice();
-	}*/
+	}
 	
 	private AltarsOfSacrifice()
 	{
