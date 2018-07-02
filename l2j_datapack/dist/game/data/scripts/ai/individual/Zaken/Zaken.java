@@ -102,7 +102,7 @@ public final class Zaken extends AbstractNpcAI {
     private static final int RED = 15281; // Transparent 1HS (for NPC)
     private static final int BLUE = 15302; // Transparent Bow (for NPC)
 
-    private static final L2NoRestartZone zone = ZoneManager.getInstance().getZoneById(70049, L2NoRestartZone.class);
+    private static final L2NoRestartZone zone = ZoneManager.getInstance().getZoneById(70048, L2NoRestartZone.class);
 
     // Locations
     private static final Location[] ENTER_LOC = {
