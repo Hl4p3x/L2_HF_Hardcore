@@ -27,12 +27,10 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.TutorialCloseHtml;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.util.StringUtil;
 
 /**
@@ -93,41 +91,6 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 				html.setFile(player.getHtmlPrefix(), "data/html/classmaster/ok.htm");
 				html.replace("%name%", ClassListData.getInstance().getClass(val).getClientCode());
 				player.sendPacket(html);
-			}
-		}
-		else if (command.startsWith("become_noble"))
-		{
-			if (!player.isNoble())
-			{
-				player.setNoble(true);
-				player.sendPacket(new UserInfo(player));
-				player.sendPacket(new ExBrExtraUserInfo(player));
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/classmaster/nobleok.htm");
-				player.sendPacket(html);
-			}
-		}
-		else if (command.startsWith("learn_skills"))
-		{
-			player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
-		}
-		else if (command.startsWith("increase_clan_level"))
-		{
-			if (!player.isClanLeader())
-			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/classmaster/noclanleader.htm");
-				player.sendPacket(html);
-			}
-			else if (player.getClan().getLevel() >= 5)
-			{
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/classmaster/noclanlevel.htm");
-				player.sendPacket(html);
-			}
-			else
-			{
-				player.getClan().changeLevel(5);
 			}
 		}
 		else
