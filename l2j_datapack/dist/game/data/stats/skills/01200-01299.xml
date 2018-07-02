@@ -2814,12 +2814,14 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic">
-				<param cubicId="6" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="12" cubicPower="#cubicPower" />
+				<param cubicId="6" cubicDelay="30" cubicDuration="900" cubicMaxCount="15"
+					cubicSkillChance="20" cubicPower="#cubicPower"/>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="SummonCubic">
-				<param cubicId="6" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="12" cubicPower="#ench1Power" />
+				<param cubicId="6" cubicDelay="30" cubicDuration="900" cubicMaxCount="15"
+					cubicSkillChance="20" cubicPower="#ench1Power"/>
 			</effect>
 		</enchant1for>
 	</skill>
@@ -2847,12 +2849,14 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic">
-				<param cubicId="7" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="30" cubicPower="#cubicPower" />
+				<param cubicId="7" cubicDelay="30" cubicDuration="900" cubicMaxCount="30"
+					cubicSkillChance="30" cubicPower="#cubicPower"/>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="SummonCubic">
-				<param cubicId="7" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="30" cubicPower="#ench1Power" />
+				<param cubicId="7" cubicDelay="30" cubicDuration="900" cubicMaxCount="30"
+					cubicSkillChance="30" cubicPower="#ench1Power"/>
 			</effect>
 		</enchant1for>
 	</skill>
@@ -2880,12 +2884,14 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic">
-				<param cubicId="8" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="12" cubicPower="#cubicPower" />
+				<param cubicId="8" cubicDelay="30" cubicDuration="900" cubicMaxCount="15"
+					cubicSkillChance="25" cubicPower="#cubicPower"/>
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="SummonCubic">
-				<param cubicId="8" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="12" cubicPower="#ench1Power" />
+				<param cubicId="8" cubicDelay="30" cubicDuration="900" cubicMaxCount="15"
+					cubicSkillChance="25" cubicPower="#ench1Power"/>
 			</effect>
 		</enchant1for>
 	</skill>
