@@ -1745,6 +1745,41 @@
 		<id>134</id> <!-- Trickster -->
 		<id>136</id> <!-- Judicator -->
 	</category>
+	<category name="NOVICE_FIGHTER">
+		<id>0</id> <!-- Human Fighter -->
+		<id>1</id> <!-- Warrior -->
+		<id>4</id> <!-- Human Knight -->
+		<id>7</id> <!-- Rogue -->
+		<id>18</id> <!-- Elven Fighter -->
+		<id>19</id> <!-- Elven Knight -->
+		<id>22</id> <!-- Elven Scout -->
+		<id>31</id> <!-- Dark Fighter -->
+		<id>32</id> <!-- Palus Knight -->
+		<id>35</id> <!-- Assassin -->
+		<id>44</id> <!-- Orc Fighter -->
+		<id>45</id> <!-- Orc Raider -->
+		<id>47</id> <!-- Monk -->
+		<id>49</id> <!-- Orc Mystic -->
+		<id>50</id> <!-- Orc Shaman -->
+		<id>53</id> <!-- Dwarf Fighter -->
+		<id>54</id> <!-- Scavenger -->
+		<id>55</id> <!-- Bounty Hunter -->
+		<id>123</id> <!-- Male Kamael Soldier -->
+		<id>124</id> <!-- Female Kamael Soldier -->
+		<id>125</id> <!-- Trooper -->
+		<id>126</id> <!-- Warder -->
+	</category>
+	<category name="NOVICE_MAGE">
+		<id>10</id> <!-- Human Mystic -->
+		<id>11</id> <!-- Human Wizard -->
+		<id>15</id> <!-- Cleric -->
+		<id>25</id> <!-- Elven Mystic -->
+		<id>26</id> <!-- Elven Wizard -->
+		<id>29</id> <!-- Elven Oracle -->
+		<id>38</id> <!-- Dark Mystic -->
+		<id>39</id> <!-- Dark Wizard -->
+		<id>42</id> <!-- Shillien Oracle -->
+	</category>
 	<category name="BEGINNER_FIGHTER">
 		<id>0</id> <!-- Human Fighter -->
 		<id>1</id> <!-- Warrior -->
