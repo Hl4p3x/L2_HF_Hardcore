@@ -3618,7 +3618,7 @@ public final class L2PcInstance extends L2Playable
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
 			InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addItem(item);
+			playerIU.addRemovedItem(item);
 			sendPacket(playerIU);
 		}
 		else
@@ -5224,9 +5224,8 @@ public final class L2PcInstance extends L2Playable
                     if (Rnd.get(100) < itemDropPercent) {
 						LOG.debug("Handling drop for {}", itemDrop);
 						if (itemDrop.isEquipped()) {
-							int slot = getInventory().getSlotFromItem(itemDrop);
-							LOG.debug("Slot for {} in body {}", itemDrop, slot);
-							getInventory().unEquipItemInBodySlot(slot);
+							LOG.debug("Unequip for {} in slot {}", itemDrop, itemDrop.getLocationSlot());
+							getInventory().unEquipItemInSlot(itemDrop.getLocationSlot());
 						}
 
 						if (Config.ALT_PLAYER_DROP_CAN_BE_CRYSTALLIZED &&
@@ -5236,7 +5235,10 @@ public final class L2PcInstance extends L2Playable
 							// Remove the actual item from inventory
                             L2ItemInstance removedItem = getInventory()
                                 .destroyItem("Crystallize", itemDrop.getObjectId(), itemDrop.getCount(), this, null);
-                            sendPacket(new InventoryUpdate(removedItem));
+
+							InventoryUpdate crysallizedItemDrop = new InventoryUpdate();
+							crysallizedItemDrop.addRemovedItem(removedItem);
+							sendPacket(crysallizedItemDrop);
 
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CRYSTALLIZED);
 							sm.addItemName(removedItem);
@@ -5251,7 +5253,6 @@ public final class L2PcInstance extends L2Playable
 							LOG.debug("Crystallized drop {} into {} crystals", itemDrop, crystalAmount);
 						}
 						dropItem("DieDrop", itemDrop, killer, true);
-						sendPacket(new InventoryUpdate(itemDrop));
 
 						if (isKarmaDrop)
 						{
@@ -5271,6 +5272,7 @@ public final class L2PcInstance extends L2Playable
 				}
 
 				if (dropCount > 0) {
+					sendPacket(new ItemList(this, false));
 					broadcastUserInfo();
 				}
 			}

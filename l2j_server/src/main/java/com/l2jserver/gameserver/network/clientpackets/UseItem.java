@@ -18,9 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlEvent;
@@ -48,6 +45,8 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
 public final class UseItem extends L2GameClientPacket
 {
@@ -92,12 +91,9 @@ public final class UseItem extends L2GameClientPacket
 		{
 			return;
 		}
-		
-		if (Config.DEBUG)
-		{
-			_log.log(Level.INFO, activeChar + ": use item " + _objectId);
-		}
-		
+
+		_log.log(Level.FINEST, activeChar + ": use item " + _objectId);
+
 		// Flood protect UseItem
 		if (!getClient().getFloodProtectors().getUseItem().tryPerformAction("use item"))
 		{
