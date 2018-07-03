@@ -40,7 +40,7 @@ public class Q00044_HelpTheSon extends Quest
 	private static final int MAILLE_SCOUT = 20920;
 	private static final int MAILLE_LIZARDMAN = 20919;
 	// Items
-	private static final int WORK_HAMMER = 168;
+	private static final int SKULL_BREAKER = 169;
 	private static final int GEMSTONE_FRAGMENT = 7552;
 	private static final int GEMSTONE = 7553;
 	private static final int PET_TICKET = 7585;
@@ -70,9 +70,9 @@ public class Q00044_HelpTheSon extends Quest
 				st.startQuest();
 				break;
 			case "30827-03.html":
-				if (st.hasQuestItems(WORK_HAMMER))
+				if (st.hasQuestItems(SKULL_BREAKER))
 				{
-					st.takeItems(WORK_HAMMER, 1);
+					st.takeItems(SKULL_BREAKER, 1);
 					st.setCond(2, true);
 				}
 				else
@@ -153,7 +153,7 @@ public class Q00044_HelpTheSon extends Quest
 						switch (st.getCond())
 						{
 							case 1:
-								htmltext = (st.hasQuestItems(WORK_HAMMER)) ? "30827-02.html" : "30827-02a.html";
+								htmltext = (st.hasQuestItems(SKULL_BREAKER)) ? "30827-02.html" : "30827-02a.html";
 								break;
 							case 2:
 								htmltext = "30827-04.html";
