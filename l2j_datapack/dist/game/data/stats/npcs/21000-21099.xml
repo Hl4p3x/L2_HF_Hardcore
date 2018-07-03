@@ -2120,6 +2120,9 @@
 				<group chance="0.01640000008046627">
 					<item id="220" min="1" max="1" chance="100"/> <!-- Crafted Dagger -->
 				</group>
+				<group chance="0.01640000008046627">
+					<item id="168" min="1" max="1" chance="100"/> <!-- Work Hammer  -->
+				</group>
 				<group chance="21.193099975585938">
 					<item id="1864" min="1" max="1" chance="48.8929"/> <!-- Stem -->
 					<item id="1869" min="1" max="1" chance="24.4465"/> <!-- Iron Ore -->
@@ -6257,6 +6260,9 @@
 				<group chance="0.030400000512599945">
 					<item id="176" min="1" max="1" chance="50"/> <!-- Apprentice's Staff -->
 					<item id="2501" min="1" max="1" chance="50"/> <!-- Bone Club -->
+				</group>
+				<group chance="0.01640000008046627">
+					<item id="168" min="1" max="1" chance="100"/> <!-- Work Hammer  -->
 				</group>
 				<group chance="9.445099830627441">
 					<item id="1865" min="1" max="1" chance="42.2535"/> <!-- Varnish -->

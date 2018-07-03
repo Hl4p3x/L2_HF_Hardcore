@@ -1,18 +1,18 @@
 /*
  * Copyright (C) 2004-2016 L2J DataPack
- * 
+ *
  * This file is part of L2J DataPack.
- * 
+ *
  * L2J DataPack is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * L2J DataPack is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
@@ -40,11 +40,11 @@ public class Q00044_HelpTheSon extends Quest
 	private static final int MAILLE_SCOUT = 20920;
 	private static final int MAILLE_LIZARDMAN = 20919;
 	// Items
-	private static final int SKULL_BREAKER = 169;
+    private static final int WORK_HAMMER = 168;
 	private static final int GEMSTONE_FRAGMENT = 7552;
 	private static final int GEMSTONE = 7553;
 	private static final int PET_TICKET = 7585;
-	
+
 	public Q00044_HelpTheSon()
 	{
 		super(44, Q00044_HelpTheSon.class.getSimpleName(), "Help The Son!");
@@ -53,7 +53,7 @@ public class Q00044_HelpTheSon extends Quest
 		addKillId(MAILLE_GUARD, MAILLE_LIZARDMAN, MAILLE_SCOUT);
 		registerQuestItems(GEMSTONE, GEMSTONE_FRAGMENT);
 	}
-	
+
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -62,7 +62,7 @@ public class Q00044_HelpTheSon extends Quest
 		{
 			return getNoQuestMsg(player);
 		}
-		
+
 		String htmltext = event;
 		switch (event)
 		{
@@ -70,9 +70,9 @@ public class Q00044_HelpTheSon extends Quest
 				st.startQuest();
 				break;
 			case "30827-03.html":
-				if (st.hasQuestItems(SKULL_BREAKER))
+                if (st.hasQuestItems(WORK_HAMMER))
 				{
-					st.takeItems(SKULL_BREAKER, 1);
+                    st.takeItems(WORK_HAMMER, 1);
 					st.setCond(2, true);
 				}
 				else
@@ -108,11 +108,11 @@ public class Q00044_HelpTheSon extends Quest
 				st.exitQuest(false, true);
 				break;
 		}
-		
-		return htmltext;
-	}
-	
-	@Override
+
+        return htmltext;
+    }
+
+    @Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = getQuestState(player, false);
@@ -130,8 +130,8 @@ public class Q00044_HelpTheSon extends Quest
 		}
 		return super.onKill(npc, player, isSummon);
 	}
-	
-	@Override
+
+    @Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -140,8 +140,8 @@ public class Q00044_HelpTheSon extends Quest
 		{
 			return htmltext;
 		}
-		
-		switch (npc.getId())
+
+        switch (npc.getId())
 		{
 			case LUNDY:
 				switch (st.getState())
@@ -153,7 +153,7 @@ public class Q00044_HelpTheSon extends Quest
 						switch (st.getCond())
 						{
 							case 1:
-								htmltext = (st.hasQuestItems(SKULL_BREAKER)) ? "30827-02.html" : "30827-02a.html";
+                                htmltext = (st.hasQuestItems(WORK_HAMMER)) ? "30827-02.html" : "30827-02a.html";
 								break;
 							case 2:
 								htmltext = "30827-04.html";
