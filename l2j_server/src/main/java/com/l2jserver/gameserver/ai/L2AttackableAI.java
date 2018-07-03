@@ -55,6 +55,8 @@ import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
+import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 import java.util.Collection;
@@ -748,6 +750,29 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 
 	private void returnToSpawn(L2Attackable npc) {
 		if (npc != null && npc.getSpawn() != null && npc.getSpawn().getLocation() != null) {
+			int delay = GameTimeController.MILLIS_IN_TICK * 8;
+			MagicSkillUse msk = new MagicSkillUse(npc, 1050, 1, delay, 0);
+			Broadcast.toSelfAndKnownPlayersInRadius(npc, msk, 900);
+
+			npc.setSkillCast(
+				ThreadPoolManager.getInstance().scheduleGeneral(new ReturnFinalizer(npc), delay + 4));
+		}
+	}
+
+	private static class ReturnFinalizer implements Runnable {
+
+		private final L2Attackable npc;
+
+		protected ReturnFinalizer(L2Attackable npc) {
+			this.npc = npc;
+		}
+
+		@Override
+		public void run() {
+			if (npc.isDead()) {
+				return;
+			}
+
 			npc.returnHome();
 			npc.teleToLocation(npc.getSpawn().getLocation());
 		}
