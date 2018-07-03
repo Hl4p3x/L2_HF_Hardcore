@@ -18,17 +18,15 @@
  */
 package ai.group_template;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import ai.npc.AbstractNpcAI;
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.MinionHolder;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Minion Spawn Manager.
@@ -427,17 +425,14 @@ public final class MinionSpawnManager extends AbstractNpcAI
 		}
 		return super.onSpawn(npc);
 	}
-	
+
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
-	{
-		if (npc.isMonster())
-		{
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon) {
+		if (npc.isMonster() && npc.getScriptValue() == 0) {
 			final L2MonsterInstance monster = (L2MonsterInstance) npc;
-			if (!monster.isTeleporting())
-			{
-				if (getRandom(1, 100) <= npc.getTemplate().getParameters().getInt("SummonPrivateRate", 0))
-				{
+			if (!monster.isTeleporting()) {
+				if (getRandom(1, 100) <= npc.getTemplate().getParameters().getInt("SummonPrivateRate", 0)) {
+					npc.setScriptValue(1);
 					for (MinionHolder is : npc.getTemplate().getParameters().getMinionList("Privates"))
 					{
 						addMinion((L2MonsterInstance) npc, is.getId());
