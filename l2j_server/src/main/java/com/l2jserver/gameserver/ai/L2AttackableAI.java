@@ -751,6 +751,12 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	private void returnToSpawn(L2Attackable npc) {
 		if (npc != null && npc.getSpawn() != null && npc.getSpawn().getLocation() != null) {
 			int delay = GameTimeController.MILLIS_IN_TICK * 8;
+
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			// SoE Animation section
+			npc.setTarget(npc);
+			npc.disableAllSkills();
+
 			MagicSkillUse msk = new MagicSkillUse(npc, 1050, 1, delay, 0);
 			Broadcast.toSelfAndKnownPlayersInRadius(npc, msk, 900);
 
@@ -775,6 +781,8 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 
 			npc.returnHome();
 			npc.teleToLocation(npc.getSpawn().getLocation());
+			npc.enableAllSkills();
+			npc.setIsCastingNow(false);
 		}
 	}
 
