@@ -2,16 +2,16 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/initialEquipment.xsd">
 	<!-- Human Fighter -->
 	<equipment classId="0">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
-		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
-		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
-		<item id="1" count="1" equipped="true"/> <!-- Short Sword -->
+		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
+		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
+		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
 
-		<item id="11" count="1"/> <!-- Bone Dagger -->
-		<item id="13" count="1"/> <!-- Short Bow -->
+		<item id="3" count="1" equipped="true"/> <!-- Broadsword -->
+		<item id="215" count="1"/> <!-- Doom Dagger -->
+		<item id="14" count="1"/> <!-- Bow -->
 		<item id="17" count="1000"/> <!-- Wooden Arrow -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
@@ -33,14 +33,14 @@
 	</equipment>
 	<!-- Human Mystic -->
 	<equipment classId="10">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="1100" count="1" equipped="true"/> <!-- Cotton Tunic -->
-		<item id="1103" count="1" equipped="true"/> <!-- Cotton Stockings -->
-		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
+		<item id="44" count="1" equipped="true"/> <!-- Leather Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="1101" count="1" equipped="true"/> <!-- Tunic of Devotion -->
+		<item id="1104" count="1" equipped="true"/> <!-- Stockings of Devotion -->
+		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
 
-		<item id="7" count="1" equipped="true"/> <!-- Apprentice's Rod -->
+		<item id="99" count="1" equipped="true"/> <!-- Apprentice's Spellbook -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
 		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
@@ -61,16 +61,16 @@
 	</equipment>
 	<!-- Elven Fighter -->
 	<equipment classId="18">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
-		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
-		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
-		<item id="1" count="1" equipped="true"/> <!-- Short Sword -->
+		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
+		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
+		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
 
-		<item id="11" count="1"/> <!-- Bone Dagger -->
-		<item id="13" count="1"/> <!-- Short Bow -->
+		<item id="3" count="1" equipped="true"/> <!-- Broadsword -->
+		<item id="215" count="1"/> <!-- Doom Dagger -->
+		<item id="14" count="1"/> <!-- Bow -->
 		<item id="17" count="1000"/> <!-- Wooden Arrow -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
@@ -92,14 +92,14 @@
 	</equipment>
 	<!-- Elven Mystic -->
 	<equipment classId="25">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="1100" count="1" equipped="true"/> <!-- Cotton Tunic -->
-		<item id="1103" count="1" equipped="true"/> <!-- Cotton Stockings -->
-		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
+		<item id="44" count="1" equipped="true"/> <!-- Leather Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="1101" count="1" equipped="true"/> <!-- Tunic of Devotion -->
+		<item id="1104" count="1" equipped="true"/> <!-- Stockings of Devotion -->
+		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
 
-		<item id="7" count="1" equipped="true"/> <!-- Apprentice's Rod -->
+		<item id="99" count="1" equipped="true"/> <!-- Apprentice's Spellbook -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
 		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
@@ -120,16 +120,16 @@
 	</equipment>
 	<!-- Dark Fighter -->
 	<equipment classId="31">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
-		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
-		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
-		<item id="1" count="1" equipped="true"/> <!-- Short Sword -->
+		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
+		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
+		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
 
-		<item id="11" count="1"/> <!-- Bone Dagger -->
-		<item id="13" count="1"/> <!-- Short Bow -->
+		<item id="3" count="1" equipped="true"/> <!-- Broadsword -->
+		<item id="215" count="1"/> <!-- Doom Dagger -->
+		<item id="14" count="1"/> <!-- Bow -->
 		<item id="17" count="1000"/> <!-- Wooden Arrow -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
@@ -151,14 +151,14 @@
 	</equipment>
 	<!-- Dark Mystic -->
 	<equipment classId="38">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="1100" count="1" equipped="true"/> <!-- Cotton Tunic -->
-		<item id="1103" count="1" equipped="true"/> <!-- Cotton Stockings -->
-		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
+		<item id="44" count="1" equipped="true"/> <!-- Leather Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="1101" count="1" equipped="true"/> <!-- Tunic of Devotion -->
+		<item id="1104" count="1" equipped="true"/> <!-- Stockings of Devotion -->
+		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
 
-		<item id="7" count="1" equipped="true"/> <!-- Apprentice's Rod -->
+		<item id="99" count="1" equipped="true"/> <!-- Apprentice's Spellbook -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
 		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
@@ -179,15 +179,16 @@
 	</equipment>
 	<!-- Orc Fighter -->
 	<equipment classId="44">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
-		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
-		<item id="253" count="1" equipped="true"/> <!-- Spiked Gloves -->
+		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
+		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 
-		<item id="18" count="1"/> <!-- Leather Shield -->
-		<item id="4" count="1"/> <!-- Club -->
+		<item id="254" count="1" equipped="true"/> <!-- Iron Gloves -->
+
+		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
+		<item id="5" count="1"/> <!-- Mace -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
 		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
@@ -208,12 +209,13 @@
 	</equipment>
 	<!-- Orc Mystic -->
 	<equipment classId="49">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
-		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
-		<item id="253" count="1" equipped="true"/> <!-- Spiked Gloves -->
+		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
+		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
+
+		<item id="254" count="1" equipped="true"/> <!-- Iron Gloves -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
 		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
@@ -236,15 +238,16 @@
 	</equipment>
 	<!-- Dwarf Fighter -->
 	<equipment classId="53">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
-		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
-		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
-		<item id="1" count="1" equipped="true"/> <!-- Club -->
+		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
+		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
+		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
 
-		<item id="11" count="1"/> <!-- Bone Dagger -->
+		<item id="5" count="1"/> <!-- Mace -->
+
+		<item id="215" count="1"/> <!-- Doom Dagger -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
 		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
@@ -265,12 +268,13 @@
 	</equipment>
 	<!-- Male Kamael Soldier -->
 	<equipment classId="123">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
-		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
-		<item id="1" count="1" equipped="true"/> <!-- Short Sword -->
+		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
+		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
+
+		<item id="3" count="1" equipped="true"/> <!-- Broadsword -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
 		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
@@ -292,12 +296,13 @@
 	</equipment>
 	<!-- Female Kamael Soldier -->
 	<equipment classId="124">
-		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
-		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
-		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
-		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
-		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
-		<item id="1" count="1" equipped="true"/> <!-- Short Sword -->
+		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
+		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
+		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
+		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
+
+		<item id="3" count="1" equipped="true"/> <!-- Broadsword -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
 		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->

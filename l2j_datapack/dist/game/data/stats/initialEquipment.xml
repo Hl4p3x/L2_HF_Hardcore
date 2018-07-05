@@ -2,109 +2,319 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/initialEquipment.xsd">
 	<!-- Human Fighter -->
 	<equipment classId="0">
-		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
+		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
+		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
+		<item id="1" count="1" equipped="true"/> <!-- Short Sword -->
+
+		<item id="11" count="1"/> <!-- Bone Dagger -->
+		<item id="13" count="1"/> <!-- Short Bow -->
+		<item id="17" count="1000"/> <!-- Wooden Arrow -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="735" count="10"/> <!-- Alacrity potion -->
+
+		<item id="5789" count="5000"/> <!-- Soulshots -->
 	</equipment>
 	<!-- Human Mystic -->
 	<equipment classId="10">
-		<item id="6" count="1" equipped="true" /> <!-- Apprentice's Wand -->
-		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
-		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="1100" count="1" equipped="true"/> <!-- Cotton Tunic -->
+		<item id="1103" count="1" equipped="true"/> <!-- Cotton Stockings -->
+		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
+
+		<item id="7" count="1" equipped="true"/> <!-- Apprentice's Rod -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="6035" count="10"/> <!-- Magic Haste potion -->
+
+		<item id="5790" count="5000"/> <!-- Spiritshots -->
 	</equipment>
 	<!-- Elven Fighter -->
 	<equipment classId="18">
-		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
+		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
+		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
+		<item id="1" count="1" equipped="true"/> <!-- Short Sword -->
+
+		<item id="11" count="1"/> <!-- Bone Dagger -->
+		<item id="13" count="1"/> <!-- Short Bow -->
+		<item id="17" count="1000"/> <!-- Wooden Arrow -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="735" count="10"/> <!-- Alacrity potion -->
+
+		<item id="5789" count="5000"/> <!-- Soulshots -->
 	</equipment>
 	<!-- Elven Mystic -->
 	<equipment classId="25">
-		<item id="6" count="1" equipped="true" /> <!-- Apprentice's Wand -->
-		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
-		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="1100" count="1" equipped="true"/> <!-- Cotton Tunic -->
+		<item id="1103" count="1" equipped="true"/> <!-- Cotton Stockings -->
+		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
+
+		<item id="7" count="1" equipped="true"/> <!-- Apprentice's Rod -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="6035" count="10"/> <!-- Magic Haste potion -->
+
+		<item id="5790" count="5000"/> <!-- Spiritshots -->
 	</equipment>
 	<!-- Dark Fighter -->
 	<equipment classId="31">
-		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
+		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
+		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
+		<item id="1" count="1" equipped="true"/> <!-- Short Sword -->
+
+		<item id="11" count="1"/> <!-- Bone Dagger -->
+		<item id="13" count="1"/> <!-- Short Bow -->
+		<item id="17" count="1000"/> <!-- Wooden Arrow -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="735" count="10"/> <!-- Alacrity potion -->
+
+		<item id="5789" count="5000"/> <!-- Soulshots -->
 	</equipment>
 	<!-- Dark Mystic -->
 	<equipment classId="38">
-		<item id="6" count="1" equipped="true" /> <!-- Apprentice's Wand -->
-		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
-		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="1100" count="1" equipped="true"/> <!-- Cotton Tunic -->
+		<item id="1103" count="1" equipped="true"/> <!-- Cotton Stockings -->
+		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
+
+		<item id="7" count="1" equipped="true"/> <!-- Apprentice's Rod -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="6035" count="10"/> <!-- Magic Haste potion -->
+
+		<item id="5790" count="5000"/> <!-- Spiritshots -->
 	</equipment>
 	<!-- Orc Fighter -->
 	<equipment classId="44">
-		<item id="2369" count="1" /> <!-- Squire's Sword -->
-		<item id="2368" count="1" equipped="true" /> <!-- Training Gloves -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
+		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
+		<item id="253" count="1" equipped="true"/> <!-- Spiked Gloves -->
+
+		<item id="18" count="1"/> <!-- Leather Shield -->
+		<item id="4" count="1"/> <!-- Club -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="735" count="10"/> <!-- Alacrity potion -->
+
+		<item id="5789" count="5000"/> <!-- Soulshots -->
 	</equipment>
 	<!-- Orc Mystic -->
-	<!-- NOTE: This is orc_mage (orc_shaman is retail typo) -->
 	<equipment classId="49">
-		<item id="2368" count="1" equipped="true" /> <!-- Training Gloves -->
-		<item id="425" count="1" equipped="true" /> <!-- Apprentice's Tunic -->
-		<item id="461" count="1" equipped="true" /> <!-- Apprentice's Stockings -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
+		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
+		<item id="253" count="1" equipped="true"/> <!-- Spiked Gloves -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="735" count="10"/> <!-- Alacrity potion -->
+		<item id="6035" count="10"/> <!-- Magic Haste potion -->
+
+		<item id="5789" count="5000"/> <!-- Soulshots -->
+		<item id="5790" count="5000"/> <!-- Spiritshots -->
 	</equipment>
 	<!-- Dwarf Fighter -->
 	<equipment classId="53">
-		<item id="2370" count="1" equipped="true" /> <!-- Guild Member's Club -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
+		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
+		<item id="18" count="1" equipped="true"/> <!-- Leather Shield -->
+		<item id="1" count="1" equipped="true"/> <!-- Club -->
+
+		<item id="11" count="1"/> <!-- Bone Dagger -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="735" count="10"/> <!-- Alacrity potion -->
+
+		<item id="5789" count="5000"/> <!-- Soulshots -->
 	</equipment>
 	<!-- Male Kamael Soldier -->
 	<equipment classId="123">
-		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
+		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
+		<item id="1" count="1" equipped="true"/> <!-- Short Sword -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="735" count="10"/> <!-- Alacrity potion -->
+
+		<item id="5789" count="5000"/> <!-- Soulshots -->
+		<item id="5790" count="5000"/> <!-- Spiritshots -->
 	</equipment>
 	<!-- Female Kamael Soldier -->
 	<equipment classId="124">
-		<item id="2369" count="1" equipped="true" /> <!-- Squire's Sword -->
-		<item id="10" count="1" /> <!-- Dagger -->
-		<item id="1146" count="1" equipped="true" /> <!-- Squire's Shirt -->
-		<item id="1147" count="1" equipped="true" /> <!-- Squire's Pants -->
-		<item id="5588" count="1" /> <!-- Tutorial Guide -->
-		<item id="10650" count="5" /> <!-- Adventurer's Scroll of Escape -->
-		<item id="12753" count="10" /> <!-- Kamael Village Teleportation Scroll -->
+		<item id="42" count="1" equipped="true"/> <!-- Leather Cap -->
+		<item id="1119" count="1" equipped="true"/> <!--Short Leather Gloves -->
+		<item id="36" count="1" equipped="true"/> <!-- Leather Sandals -->
+		<item id="22" count="1" equipped="true"/> <!-- Leather Shirt -->
+		<item id="29" count="1" equipped="true"/> <!-- Leather Pants -->
+		<item id="1" count="1" equipped="true"/> <!-- Short Sword -->
+
+		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+		<item id="116" count="1" equipped="true"/> <!-- Magic Ring -->
+
+		<item id="5588" count="1"/> <!-- Tutorial Guide -->
+		<item id="10650" count="10"/> <!-- Adventurer's Scroll of Escape -->
+		<item id="12753" count="10"/> <!-- Kamael Village Teleportation Scroll -->
+		<item id="737" count="5"/> <!-- Scroll of Resurrection -->
+
+		<item id="1061" count="60"/>  <!-- Greater healing potion -->
+		<item id="734" count="10"/> <!-- Haste potion -->
+		<item id="735" count="10"/> <!-- Alacrity potion -->
+
+		<item id="5789" count="5000"/> <!-- Soulshots -->
+		<item id="5790" count="5000"/> <!-- Spiritshots -->
 	</equipment>
 </list>
