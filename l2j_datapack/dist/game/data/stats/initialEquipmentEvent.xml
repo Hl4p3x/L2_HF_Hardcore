@@ -3,8 +3,8 @@
 	<!-- Human Fighter -->
 	<equipment classId="0">
 		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
 		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
@@ -34,8 +34,8 @@
 	<!-- Human Mystic -->
 	<equipment classId="10">
 		<item id="44" count="1" equipped="true"/> <!-- Leather Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="1101" count="1" equipped="true"/> <!-- Tunic of Devotion -->
 		<item id="1104" count="1" equipped="true"/> <!-- Stockings of Devotion -->
 		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
@@ -62,8 +62,8 @@
 	<!-- Elven Fighter -->
 	<equipment classId="18">
 		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
 		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
@@ -93,8 +93,8 @@
 	<!-- Elven Mystic -->
 	<equipment classId="25">
 		<item id="44" count="1" equipped="true"/> <!-- Leather Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="1101" count="1" equipped="true"/> <!-- Tunic of Devotion -->
 		<item id="1104" count="1" equipped="true"/> <!-- Stockings of Devotion -->
 		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
@@ -121,8 +121,8 @@
 	<!-- Dark Fighter -->
 	<equipment classId="31">
 		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
 		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
@@ -152,8 +152,8 @@
 	<!-- Dark Mystic -->
 	<equipment classId="38">
 		<item id="44" count="1" equipped="true"/> <!-- Leather Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="1101" count="1" equipped="true"/> <!-- Tunic of Devotion -->
 		<item id="1104" count="1" equipped="true"/> <!-- Stockings of Devotion -->
 		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
@@ -180,8 +180,8 @@
 	<!-- Orc Fighter -->
 	<equipment classId="44">
 		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
 		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 
@@ -210,8 +210,8 @@
 	<!-- Orc Mystic -->
 	<equipment classId="49">
 		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
 		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 
@@ -239,8 +239,8 @@
 	<!-- Dwarf Fighter -->
 	<equipment classId="53">
 		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
 		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
@@ -269,8 +269,8 @@
 	<!-- Male Kamael Soldier -->
 	<equipment classId="123">
 		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
 		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 
@@ -297,8 +297,8 @@
 	<!-- Female Kamael Soldier -->
 	<equipment classId="124">
 		<item id="43" count="1" equipped="true"/> <!-- Wooden Helmet -->
-		<item id="50" count="1" equipped="true"/> <!-- Leather Gloves -->
-		<item id="37" count="1" equipped="true"/> <!-- Leather Shoes -->
+		<item id="49" count="1" equipped="true"/> <!-- Gloves -->
+		<item id="1122" count="1" equipped="true"/> <!-- Cotton Shoes -->
 		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
 		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 
