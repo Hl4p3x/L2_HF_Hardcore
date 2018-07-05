@@ -38,6 +38,7 @@ public class SupportMagic implements IBypassHandler {
 		new SkillHolder(4323, 1), // Shield
 		new SkillHolder(5637, 1), // Magic Barrier
 		new SkillHolder(4324, 1), // Bless the Body
+		new SkillHolder(4328, 1), // Bless the Soul
 		new SkillHolder(4325, 1), // Vampiric Rage
 		new SkillHolder(4326, 1), // Regeneration
 	};
@@ -45,10 +46,12 @@ public class SupportMagic implements IBypassHandler {
 		new SkillHolder(4322, 1), // Wind Walk
 		new SkillHolder(4323, 1), // Shield
 		new SkillHolder(5637, 1), // Magic Barrier
+		new SkillHolder(4324, 1), // Bless the Body
 		new SkillHolder(4328, 1), // Bless the Soul
 		new SkillHolder(4329, 1), // Acumen
 		new SkillHolder(4330, 1), // Concentration
 		new SkillHolder(4331, 1), // Empower
+		new SkillHolder(4326, 1), // Regeneration
 	};
 	private static final SkillHolder[] SUMMON_BUFFS = {
 		new SkillHolder(4327, 1), // Haste
