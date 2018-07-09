@@ -80,7 +80,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
@@ -157,7 +157,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
@@ -1971,7 +1971,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2044,7 +2044,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2120,7 +2120,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2196,7 +2196,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3260,7 +3260,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DDMagicSlow" id="4247" level="2"/> <!-- NPC Windstrike - Slow -->
 		</parameters>
 		<race>UNDEAD</race>

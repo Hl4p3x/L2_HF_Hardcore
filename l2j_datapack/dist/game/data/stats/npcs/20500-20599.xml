@@ -2965,7 +2965,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3042,7 +3042,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3117,7 +3117,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfRangeDDMagic" id="4033" level="3"/> <!-- NPC Burn -->
 		</parameters>
 		<race>HUMANOID</race>
@@ -3201,7 +3201,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="Buff" id="4029" level="2"/> <!-- NPC Shield -->
 		</parameters>
 		<race>BEAST</race>
@@ -3285,7 +3285,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3367,7 +3367,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="Buff" id="4074" level="2"/> <!-- NPC Haste -->
 		</parameters>
 		<race>UNDEAD</race>
@@ -3444,7 +3444,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3520,7 +3520,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfBuff1" id="4089" level="1"/> <!-- NPC Bear Spirit Totem -->
 			<skill name="SelfBuff2" id="4090" level="1"/> <!-- NPC Wolf Spirit Totem -->
 			<skill name="SelfBuff3" id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
@@ -3603,7 +3603,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DeBuff" id="4076" level="3"/> <!-- Decrease Speed -->
 		</parameters>
 		<race>PLANT</race>
@@ -3766,7 +3766,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -3839,7 +3839,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DeBuff" id="4076" level="3"/> <!-- Decrease Speed -->
 		</parameters>
 		<race>PLANT</race>
@@ -3921,7 +3921,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DDMagicSlow" id="4250" level="4"/> <!-- NPC Twister - Slow -->
 		</parameters>
 		<race>CONSTRUCT</race>
@@ -4003,7 +4003,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -4086,7 +4086,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DeBuff" id="4035" level="4"/> <!-- Poison -->
 		</parameters>
 		<race>BUG</race>
@@ -4174,7 +4174,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DDMagicSlow" id="4250" level="4"/> <!-- NPC Twister - Slow -->
 		</parameters>
 		<race>UNDEAD</race>
@@ -4265,7 +4265,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4073" level="4"/> <!-- Stun -->
 		</parameters>
 		<race>CONSTRUCT</race>
@@ -4447,7 +4447,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DDMagicSlow" id="4254" level="4"/> <!-- NPC Prominence - Slow -->
 		</parameters>
 		<race>CONSTRUCT</race>
@@ -4530,7 +4530,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DDMagicSlow" id="4252" level="4"/> <!-- NPC Flamestrike - Slow -->
 		</parameters>
 		<race>CONSTRUCT</race>
@@ -4618,7 +4618,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4073" level="4"/> <!-- Stun -->
 		</parameters>
 		<race>CONSTRUCT</race>
@@ -4706,7 +4706,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
@@ -4801,7 +4801,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="Buff" id="4028" level="2"/> <!-- NPC Might -->
 		</parameters>
 		<race>GIANT</race>
@@ -4890,7 +4890,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
@@ -4974,7 +4974,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="Buff" id="4074" level="2"/> <!-- NPC Haste -->
 		</parameters>
 		<race>GIANT</race>
@@ -5066,7 +5066,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="4"/> <!-- NPC Strike -->
 		</parameters>
 		<race>GIANT</race>
@@ -5152,7 +5152,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -5234,7 +5234,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -5324,7 +5324,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -5506,7 +5506,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -5662,7 +5662,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -5754,7 +5754,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -5919,7 +5919,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -6002,7 +6002,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -6158,7 +6158,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="4"/> <!-- NPC Strike -->
 		</parameters>
 		<race>HUMANOID</race>
@@ -6246,7 +6246,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="Buff" id="4074" level="2"/> <!-- NPC Haste -->
 		</parameters>
 		<race>HUMANOID</race>
@@ -6432,7 +6432,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfBuff1" id="4089" level="1"/> <!-- NPC Bear Spirit Totem -->
 			<skill name="SelfBuff2" id="4090" level="1"/> <!-- NPC Wolf Spirit Totem -->
 			<skill name="SelfBuff3" id="4091" level="1"/> <!-- NPC Ogre Spirit Totem -->

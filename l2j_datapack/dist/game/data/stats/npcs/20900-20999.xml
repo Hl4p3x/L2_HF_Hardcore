@@ -164,7 +164,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -243,7 +243,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -405,7 +405,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="3"/> <!-- NPC Strike -->
 		</parameters>
 		<race>HUMANOID</race>
@@ -487,7 +487,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="Buff" id="4031" level="2"/> <!-- NPC Clan Aegis -->
 		</parameters>
 		<race>BUG</race>
@@ -568,7 +568,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DeBuff" id="4036" level="2"/> <!-- Poison -->
 		</parameters>
 		<race>BUG</race>
@@ -649,7 +649,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4067" level="2"/> <!-- NPC Mortal Blow -->
 		</parameters>
 		<race>BUG</race>
@@ -728,7 +728,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DeBuff" id="4035" level="3"/> <!-- Poison -->
 		</parameters>
 		<race>BUG</race>
@@ -812,7 +812,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="Buff" id="4030" level="2"/> <!-- NPC Clan Might -->
 		</parameters>
 		<race>ANIMAL</race>
@@ -891,7 +891,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="3"/> <!-- NPC Strike -->
 		</parameters>
 		<race>ANIMAL</race>
@@ -975,7 +975,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="Buff" id="4576" level="3"/> <!-- NPC Clan Buff - Damage Shield -->
 		</parameters>
 		<race>BEAST</race>
@@ -1055,7 +1055,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="3"/> <!-- NPC Strike -->
 		</parameters>
 		<race>ANIMAL</race>
@@ -1139,7 +1139,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4073" level="4"/> <!-- Stun -->
 		</parameters>
 		<race>ANIMAL</race>
@@ -1219,7 +1219,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="Buff" id="4030" level="2"/> <!-- NPC Clan Might -->
 		</parameters>
 		<race>BUG</race>
@@ -1293,7 +1293,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="10"/>
+			<param name="LongRangeGuardRate" value="5"/>
 			<skill name="DDMagic" id="4039" level="3"/> <!-- NPC MP Drain -->
 		</parameters>
 		<race>BUG</race>
