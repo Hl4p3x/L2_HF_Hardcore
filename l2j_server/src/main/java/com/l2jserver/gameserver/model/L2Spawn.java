@@ -664,8 +664,10 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 					((L2Attackable) mob).setChampion(true);
 					mob.setTeam(Team.RED);
 					_log.finest("Mob " + mob + " is going to be a champion");
-				}
-			}
+                } else {
+                    mob.setTeam(Team.NONE);
+                }
+            }
 		}
 		
 		// Reset summoner
