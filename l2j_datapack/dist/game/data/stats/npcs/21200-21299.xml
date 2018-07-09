@@ -4841,7 +4841,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -4892,7 +4892,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4073" level="5"/> <!-- Stun -->
 		</parameters>
 		<race>BEAST</race>
@@ -5035,7 +5035,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="5"/> <!-- NPC Strike -->
 		</parameters>
 		<race>HUMANOID</race>
@@ -5123,7 +5123,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="5"/> <!-- NPC Strike -->
 		</parameters>
 		<race>HUMANOID</race>
@@ -5209,7 +5209,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="5"/> <!-- NPC Strike -->
 		</parameters>
 		<race>HUMANOID</race>
@@ -5295,7 +5295,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="6"/> <!-- NPC Strike -->
 		</parameters>
 		<race>DIVINE</race>
@@ -5384,7 +5384,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -5474,7 +5474,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -5538,7 +5538,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -5691,7 +5691,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Fury" id="4317" level="1"/> <!-- Increase Rage Might -->
 		</parameters>
 		<race>BUG</race>
@@ -5768,7 +5768,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="3"/> <!-- NPC Strike -->
 		</parameters>
 		<race>BUG</race>
@@ -5858,7 +5858,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Fury" id="4317" level="1"/> <!-- Increase Rage Might -->
 		</parameters>
 		<race>BUG</race>
@@ -5939,7 +5939,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="3"/> <!-- NPC Strike -->
 		</parameters>
 		<race>BUG</race>
@@ -6020,7 +6020,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfRangeDDMagic" id="4072" level="3"/> <!-- Stun -->
 			<skill name="SelfBuff" id="4091" level="1"/> <!-- NPC Ogre Spirit Totem -->
 			<skill name="PhysicalSpecial" id="4032" level="3"/> <!-- NPC Strike -->
@@ -6104,7 +6104,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4067" level="6"/> <!-- NPC Mortal Blow -->
 		</parameters>
 		<race>BEAST</race>
@@ -6189,7 +6189,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="6"/> <!-- NPC Strike -->
 		</parameters>
 		<race>BEAST</race>
@@ -6274,7 +6274,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4244" level="6"/> <!-- NPC Wild Sweep -->
 		</parameters>
 		<race>BEAST</race>
@@ -6359,7 +6359,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="6"/> <!-- NPC Strike -->
 		</parameters>
 		<race>ANIMAL</race>
@@ -6443,7 +6443,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4067" level="6"/> <!-- NPC Mortal Blow -->
 		</parameters>
 		<race>ANIMAL</race>
@@ -6527,7 +6527,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4232" level="6"/> <!-- NPC AE Strike -->
 		</parameters>
 		<race>ANIMAL</race>
@@ -6611,7 +6611,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="6"/> <!-- NPC Strike -->
 		</parameters>
 		<race>BEAST</race>
@@ -6695,7 +6695,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4073" level="6"/> <!-- Stun -->
 		</parameters>
 		<race>BEAST</race>
@@ -6779,7 +6779,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfRangeDDMagic" id="4072" level="6"/> <!-- Stun -->
 		</parameters>
 		<race>BEAST</race>
@@ -6863,7 +6863,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="7"/> <!-- NPC Strike -->
 		</parameters>
 		<race>BEAST</race>
@@ -6948,7 +6948,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfRangeDDMagic" id="4072" level="7"/> <!-- Stun -->
 		</parameters>
 		<race>BEAST</race>
@@ -7033,7 +7033,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4244" level="7"/> <!-- NPC Wild Sweep -->
 		</parameters>
 		<race>BEAST</race>
@@ -7118,7 +7118,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="7"/> <!-- NPC Strike -->
 		</parameters>
 		<race>ANIMAL</race>
@@ -7203,7 +7203,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfRangeDDMagic" id="4072" level="7"/> <!-- Stun -->
 		</parameters>
 		<race>ANIMAL</race>
@@ -7288,7 +7288,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4232" level="7"/> <!-- NPC AE Strike -->
 		</parameters>
 		<race>ANIMAL</race>

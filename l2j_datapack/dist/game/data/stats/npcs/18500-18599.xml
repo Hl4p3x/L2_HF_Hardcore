@@ -4115,7 +4115,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5728" level="2"/> <!-- Shobel Attack -->
 			<skill name="Skill02_ID" id="5729" level="2"/> <!-- Shobel Whirlwind -->
 		</parameters>
@@ -4173,7 +4173,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5720" level="2"/> <!-- Blade Cut -->
 			<skill name="Skill02_ID" id="5721" level="2"/> <!-- Blade Strike -->
 		</parameters>
@@ -4228,7 +4228,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5726" level="2"/> <!-- Scissors Attack -->
 			<skill name="Skill02_ID" id="5727" level="2"/> <!-- Scissors Strike -->
 		</parameters>
@@ -4285,7 +4285,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5720" level="2"/> <!-- Blade Cut -->
 			<skill name="Skill02_ID" id="5721" level="2"/> <!-- Blade Strike -->
 		</parameters>
@@ -4341,7 +4341,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5724" level="2"/> <!-- Broom Strike -->
 			<skill name="Skill02_ID" id="5725" level="2"/> <!-- Broom Trusting -->
 		</parameters>
@@ -4397,7 +4397,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5722" level="3"/> <!-- Hammer Assault -->
 			<skill name="Skill02_ID" id="5723" level="3"/> <!-- Hammer Swing -->
 		</parameters>
@@ -4454,7 +4454,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5720" level="3"/> <!-- Blade Cut -->
 			<skill name="Skill02_ID" id="5721" level="3"/> <!-- Blade Strike -->
 		</parameters>
@@ -4509,7 +4509,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5726" level="3"/> <!-- Scissors Attack -->
 			<skill name="Skill02_ID" id="5727" level="3"/> <!-- Scissors Strike -->
 		</parameters>
@@ -4567,7 +4567,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5730" level="3"/> <!-- Made Fireball -->
 			<skill name="Skill02_ID" id="5732" level="3"/> <!-- Flame Strike -->
 		</parameters>
@@ -4624,7 +4624,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5728" level="3"/> <!-- Shobel Attack -->
 			<skill name="Skill02_ID" id="5729" level="3"/> <!-- Shobel Whirlwind -->
 		</parameters>
@@ -4680,7 +4680,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5726" level="3"/> <!-- Scissors Attack -->
 			<skill name="Skill02_ID" id="5727" level="3"/> <!-- Scissors Strike -->
 		</parameters>
@@ -4737,7 +4737,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5728" level="3"/> <!-- Shobel Attack -->
 			<skill name="Skill02_ID" id="5729" level="3"/> <!-- Shobel Whirlwind -->
 		</parameters>
@@ -4794,7 +4794,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5722" level="3"/> <!-- Hammer Assault -->
 			<skill name="Skill02_ID" id="5723" level="3"/> <!-- Hammer Swing -->
 		</parameters>
@@ -4853,7 +4853,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5736" level="4"/> <!-- Katar Trusting -->
 			<skill name="Skill02_ID" id="5737" level="4"/> <!-- Power Stamp -->
 			<skill name="Skill03_ID" id="5738" level="4"/> <!-- Power Roar -->
@@ -4910,7 +4910,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5724" level="4"/> <!-- Broom Strike -->
 			<skill name="Skill02_ID" id="5725" level="4"/> <!-- Broom Trusting -->
 		</parameters>
@@ -4967,7 +4967,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5724" level="4"/> <!-- Broom Strike -->
 			<skill name="Skill02_ID" id="5725" level="4"/> <!-- Broom Trusting -->
 		</parameters>
@@ -5026,7 +5026,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5728" level="4"/> <!-- Shobel Attack -->
 			<skill name="Skill02_ID" id="5729" level="4"/> <!-- Shobel Whirlwind -->
 		</parameters>
@@ -5084,7 +5084,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5726" level="4"/> <!-- Scissors Attack -->
 			<skill name="Skill02_ID" id="5727" level="4"/> <!-- Scissors Strike -->
 		</parameters>
@@ -5144,7 +5144,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5730" level="4"/> <!-- Made Fireball -->
 			<skill name="Skill02_ID" id="5732" level="4"/> <!-- Flame Strike -->
 		</parameters>
@@ -5204,7 +5204,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5730" level="5"/> <!-- Made Fireball -->
 			<skill name="Skill02_ID" id="5731" level="5"/> <!-- Incense of Death -->
 			<skill name="Skill03_ID" id="5732" level="5"/> <!-- Flame Strike -->
@@ -5264,7 +5264,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Skill01_ID" id="5734" level="5"/> <!-- Gust of Wind -->
 			<skill name="Skill02_ID" id="5733" level="5"/> <!-- Fear of Steward -->
 			<skill name="Skill03_ID" id="5735" level="5"/> <!-- Curse of Steward -->

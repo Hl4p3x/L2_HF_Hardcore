@@ -3492,7 +3492,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4032" level="3"/> <!-- NPC Strike -->
 		</parameters>
 		<race>ANIMAL</race>
@@ -3714,7 +3714,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfRangeDDMagic" id="4599" level="3"/> <!-- Decrease Speed -->
 			<skill name="SelfBuff" id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
 			<skill name="PhysicalSpecial" id="4032" level="3"/> <!-- NPC Strike -->
@@ -3975,7 +3975,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="DDMagic" id="4565" level="3"/> <!-- NPC Eruption -->
 		</parameters>
 		<race>BEAST</race>
@@ -4147,7 +4147,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="Buff" id="4575" level="2"/> <!-- NPC Clan Buff - Haste -->
 		</parameters>
 		<race>BUG</race>
@@ -4228,7 +4228,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="DDMagic1" id="4001" level="7"/> <!-- NPC Windstrike -->
 			<skill name="DDMagic2" id="4002" level="7"/> <!-- NPC HP Drain -->
 			<skill name="DeBuff" id="4035" level="7"/> <!-- Poison -->
@@ -4312,7 +4312,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4067" level="7"/> <!-- NPC Mortal Blow -->
 		</parameters>
 		<race>BUG</race>
@@ -4393,7 +4393,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfRangeDDMagic" id="4232" level="7"/> <!-- NPC AE Strike -->
 			<skill name="SelfBuff" id="4091" level="1"/> <!-- NPC Ogre Spirit Totem -->
 			<skill name="PhysicalSpecial" id="4067" level="7"/> <!-- NPC Mortal Blow -->
@@ -4476,7 +4476,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="W_MiddleRangeDDMagic" id="4630" level="8"/> <!-- NPC MR - Twister -->
 			<skill name="W_ShortRangeDDMagic" id="4160" level="8"/> <!-- NPC Aura Burn - Magic -->
 			<skill name="W_SelfRangeDDMagic" id="4571" level="8"/> <!-- NPC Blazing Circle -->
@@ -4564,7 +4564,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfRangeDDMagic" id="4033" level="8"/> <!-- NPC Burn -->
 		</parameters>
 		<race>UNDEAD</race>
@@ -5147,7 +5147,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4641" level="6"/> <!-- NPC Super Strike -->
 			<skill name="SelfBuff" id="4103" level="2"/> <!-- NPC Ultimate Evasion -->
 			<skill name="TeleportEffect" id="4671" level="1"/> <!-- AV - Teleport -->

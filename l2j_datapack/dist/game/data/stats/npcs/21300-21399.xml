@@ -1299,7 +1299,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="DDMagic" id="4002" level="7"/> <!-- NPC HP Drain -->
 			<skill name="PhysicalSpecial" id="4073" level="7"/> <!-- Stun -->
 			<skill name="Buff1" id="4074" level="2"/> <!-- NPC Haste -->
@@ -1390,7 +1390,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfBuff" id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
 			<skill name="SelfRangeDDMagic" id="4072" level="7"/> <!-- Stun -->
 			<skill name="PhysicalSpecial" id="4073" level="7"/> <!-- Stun -->
@@ -1482,7 +1482,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4073" level="7"/> <!-- Stun -->
 			<skill name="Buff1" id="4099" level="2"/> <!-- NPC Berserk -->
 			<skill name="Buff2" id="4074" level="2"/> <!-- NPC Haste -->
@@ -1574,7 +1574,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="DDMagic" id="4002" level="7"/> <!-- NPC HP Drain -->
 			<skill name="PhysicalSpecial" id="4073" level="7"/> <!-- Stun -->
 			<skill name="Buff1" id="4074" level="2"/> <!-- NPC Haste -->
@@ -1666,7 +1666,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfBuff" id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
 			<skill name="SelfRangeDDMagic" id="4033" level="7"/> <!-- NPC Burn -->
 			<skill name="PhysicalSpecial" id="4073" level="7"/> <!-- Stun -->
@@ -1761,7 +1761,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="PhysicalSpecial" id="4073" level="8"/> <!-- Stun -->
 			<skill name="RangePhysicalSpecial" id="4072" level="8"/> <!-- Stun -->
 			<skill name="Buff1" id="4074" level="2"/> <!-- NPC Haste -->
@@ -1856,7 +1856,7 @@
 			<param name="SoulShotRate" value="5"/>
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="10"/>
-			<param name="LongRangeGuardRate" value="5"/>
+      <param name="LongRangeGuardRate" value="5"/>
 			<skill name="SelfBuff" id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
 			<skill name="SelfRangeDDMagic" id="4072" level="8"/> <!-- Stun -->
 			<skill name="PhysicalSpecial" id="4073" level="8"/> <!-- Stun -->
