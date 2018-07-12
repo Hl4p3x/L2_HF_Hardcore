@@ -827,6 +827,24 @@ public final class Config
 	public static double MONSTER_PATTACK_MULTIPLIER;
 	public static double MONSTER_MATTACK_MULTIPLIER;
 
+    public static double S_PLUS_MONSTER_HP_REGEN_MULTIPLIER;
+    public static double S_PLUS_MONSTER_MP_REGEN_MULTIPLIER;
+    public static double S_PLUS_MONSTER_HP_MULTIPLIER;
+    public static double S_PLUS_MONSTER_MP_MULTIPLIER;
+    public static double S_PLUS_MONSTER_PDEFENCE_MULTIPLIER;
+    public static double S_PLUS_MONSTER_MDEFENCE_MULTIPLIER;
+    public static double S_PLUS_MONSTER_PATTACK_MULTIPLIER;
+    public static double S_PLUS_MONSTER_MATTACK_MULTIPLIER;
+
+    public static double S_MONSTER_HP_REGEN_MULTIPLIER;
+    public static double S_MONSTER_MP_REGEN_MULTIPLIER;
+    public static double S_MONSTER_HP_MULTIPLIER;
+    public static double S_MONSTER_MP_MULTIPLIER;
+    public static double S_MONSTER_PDEFENCE_MULTIPLIER;
+    public static double S_MONSTER_MDEFENCE_MULTIPLIER;
+    public static double S_MONSTER_PATTACK_MULTIPLIER;
+    public static double S_MONSTER_MATTACK_MULTIPLIER;
+
 	public static double RAID_HP_REGEN_MULTIPLIER;
 	public static double RAID_MP_REGEN_MULTIPLIER;
 	public static double RAID_PDEFENCE_MULTIPLIER;
@@ -2086,6 +2104,24 @@ public final class Config
 			MONSTER_MDEFENCE_MULTIPLIER = NPC.getDouble("MonsterMDefenceMultiplier", 100D) / 100;
 			MONSTER_PATTACK_MULTIPLIER = NPC.getDouble("MonsterPAttackMultiplier", 100D) / 100;
 			MONSTER_MATTACK_MULTIPLIER = NPC.getDouble("MonsterMAttackMultiplier", 100D) / 100;
+
+            S_PLUS_MONSTER_HP_REGEN_MULTIPLIER = NPC.getDouble("SPlusMonsterHpRegenMultiplier", 100D) / 100;
+            S_PLUS_MONSTER_MP_REGEN_MULTIPLIER = NPC.getDouble("SPlusMonsterMpRegenMultiplier", 100D) / 100;
+            S_PLUS_MONSTER_HP_MULTIPLIER = NPC.getDouble("SPlusMonsterHpMultiplier", 100D) / 100;
+            S_PLUS_MONSTER_MP_MULTIPLIER = NPC.getDouble("SPlusMonsterMpMultiplier", 100D) / 100;
+            S_PLUS_MONSTER_PDEFENCE_MULTIPLIER = NPC.getDouble("SPlusMonsterPDefenceMultiplier", 100D) / 100;
+            S_PLUS_MONSTER_MDEFENCE_MULTIPLIER = NPC.getDouble("SPlusMonsterMDefenceMultiplier", 100D) / 100;
+            S_PLUS_MONSTER_PATTACK_MULTIPLIER = NPC.getDouble("SPlusMonsterPAttackMultiplier", 100D) / 100;
+            S_PLUS_MONSTER_MATTACK_MULTIPLIER = NPC.getDouble("SPlusMonsterMAttackMultiplier", 100D) / 100;
+
+            S_MONSTER_HP_REGEN_MULTIPLIER = NPC.getDouble("SMonsterHpRegenMultiplier", 100D) / 100;
+            S_MONSTER_MP_REGEN_MULTIPLIER = NPC.getDouble("SMonsterMpRegenMultiplier", 100D) / 100;
+            S_MONSTER_HP_MULTIPLIER = NPC.getDouble("SMonsterHpMultiplier", 100D) / 100;
+            S_MONSTER_MP_MULTIPLIER = NPC.getDouble("SMonsterMpMultiplier", 100D) / 100;
+            S_MONSTER_PDEFENCE_MULTIPLIER = NPC.getDouble("SMonsterPDefenceMultiplier", 100D) / 100;
+            S_MONSTER_MDEFENCE_MULTIPLIER = NPC.getDouble("SMonsterMDefenceMultiplier", 100D) / 100;
+            S_MONSTER_PATTACK_MULTIPLIER = NPC.getDouble("SMonsterPAttackMultiplier", 100D) / 100;
+            S_MONSTER_MATTACK_MULTIPLIER = NPC.getDouble("SMonsterMAttackMultiplier", 100D) / 100;
 
 			RAID_HP_REGEN_MULTIPLIER = NPC.getDouble("RaidHpRegenMultiplier", 100) / 100;
 			RAID_MP_REGEN_MULTIPLIER = NPC.getDouble("RaidMpRegenMultiplier", 100) / 100;

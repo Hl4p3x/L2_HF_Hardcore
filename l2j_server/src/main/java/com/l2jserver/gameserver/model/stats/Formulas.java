@@ -80,6 +80,8 @@ import com.l2jserver.gameserver.network.Debug;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.Grade;
+import com.l2jserver.util.GradeMapper;
 import com.l2jserver.util.Rnd;
 import java.util.ArrayList;
 import java.util.List;
@@ -246,14 +248,23 @@ public final class Formulas
 		}
 	}
 
-	public static double calculateMultipliers(L2Character cha, double baseValue, double raidMultiplier, double monsterMultiplier, double guardMultiplier) {
-		double value = 0;
+	public static double calculateMultipliers(L2Character cha, double baseValue, double raidMultiplier,
+		double sPlusMonsterMultiplier, double sMonsterMultiplier, double monsterMultiplier, double guardMultiplier) {
+		double value;
 		if (cha == null) {
 			return baseValue;
 		}
 
 		if (L2MonsterInstance.class.isAssignableFrom(cha.getClass()) && !cha.isRaid()) {
-			value = baseValue * monsterMultiplier;
+			L2MonsterInstance monster = (L2MonsterInstance) cha;
+			Grade grade = GradeMapper.resolveGrade(monster.getOriginalLevel());
+			if (Grade.S_PLUS.equals(grade)) {
+				value = baseValue * sPlusMonsterMultiplier;
+			} else if (Grade.S.equals(grade)) {
+				value = baseValue * sMonsterMultiplier;
+			} else {
+				value = baseValue * monsterMultiplier;
+			}
 		} else if (L2GuardInstance.class.isAssignableFrom(cha.getClass())) {
 			value = baseValue * guardMultiplier;
 		} else if (cha.isRaid()) {
@@ -269,10 +280,12 @@ public final class Formulas
 	 * @param cha
 	 * @return
 	 */
-	public static final double calcHpRegen(L2Character cha)
+	public static double calcHpRegen(L2Character cha)
 	{
 		double init = cha.isPlayer() ? cha.getActingPlayer().getTemplate().getBaseHpRegen(cha.getLevel()) : cha.getTemplate().getBaseHpReg();
-		double hpRegenMultiplier = calculateMultipliers(cha, Config.HP_REGEN_MULTIPLIER, Config.RAID_HP_REGEN_MULTIPLIER, Config.MONSTER_HP_REGEN_MULTIPLIER, Config.GUARD_HP_REGEN_MULTIPLIER);
+		double hpRegenMultiplier = calculateMultipliers(cha, Config.HP_REGEN_MULTIPLIER,
+			Config.RAID_HP_REGEN_MULTIPLIER, Config.S_PLUS_MONSTER_HP_REGEN_MULTIPLIER,
+			Config.S_MONSTER_HP_REGEN_MULTIPLIER, Config.MONSTER_HP_REGEN_MULTIPLIER, Config.GUARD_HP_REGEN_MULTIPLIER);
 		double hpRegenBonus = 0;
 
 		if (Config.L2JMOD_CHAMPION_ENABLE && cha.isChampion())
@@ -393,7 +406,9 @@ public final class Formulas
 	public static final double calcMpRegen(L2Character cha)
 	{
 		double init = cha.isPlayer() ? cha.getActingPlayer().getTemplate().getBaseMpRegen(cha.getLevel()) : cha.getTemplate().getBaseMpReg();
-		double mpRegenMultiplier = calculateMultipliers(cha, Config.MP_REGEN_MULTIPLIER, Config.RAID_MP_REGEN_MULTIPLIER, Config.MONSTER_MP_REGEN_MULTIPLIER, Config.GUARD_MP_REGEN_MULTIPLIER);
+		double mpRegenMultiplier = calculateMultipliers(cha, Config.MP_REGEN_MULTIPLIER,
+			Config.RAID_MP_REGEN_MULTIPLIER, Config.S_PLUS_MONSTER_MP_REGEN_MULTIPLIER,
+			Config.S_MONSTER_MP_REGEN_MULTIPLIER, Config.MONSTER_MP_REGEN_MULTIPLIER, Config.GUARD_MP_REGEN_MULTIPLIER);
 		double mpRegenBonus = 0;
 
 		if (cha.isPlayer())

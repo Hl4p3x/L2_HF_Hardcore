@@ -115,7 +115,8 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 
 			if (Config.SHOW_NPC_LVL_AS_GRADES && _npc instanceof L2MonsterInstance) {
 				String t =
-					"Grade: " + GradeMapper.resolveGrade(cha.getTemplate().getOriginalLevel()) + (cha.isAggressive()
+					"Grade: " + GradeMapper.resolveGradeString(cha.getTemplate().getOriginalLevel()) + (
+						cha.isAggressive()
 						? " [*]" : "");
 				if (_title != null) {
 					t += " " + _title;
