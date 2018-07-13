@@ -907,6 +907,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			if ((target == null) || isAttackingDisabled())
 			{
+				LOG.debug("{} cannot attack, attacking disabled", this);
 				return;
 			}
 			
@@ -969,6 +970,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						sendPacket(SystemMessageId.THAT_WEAPON_CANT_ATTACK);
 					}
 					sendPacket(ActionFailed.STATIC_PACKET);
+					LOG.debug("{} could not attack with weapon {}", this, wpn);
 					return;
 				}
 			}
@@ -1016,6 +1018,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			
 			if (!GeoData.getInstance().canSeeTarget(this, target))
 			{
+				LOG.debug("{} can not see his target, stopped attacking", this);
 				sendPacket(SystemMessageId.CANT_SEE_TARGET);
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);

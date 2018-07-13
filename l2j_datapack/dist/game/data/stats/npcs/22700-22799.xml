@@ -5879,8 +5879,8 @@
 	<npc id="22772" level="85" originalLevel="83" type="L2Monster" name="Tanta Lizardman Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
-			<skill name="Skill01_ID" id="6423" level="1"/> <!-- Shock -->
-			<skill name="Skill02_ID" id="6424" level="1"/> <!-- Double Shot -->
+      <skill name="Skill01_ID" id="6423" level="1"/>  <!-- Shock -->
+      <skill name="Skill02_ID" id="6424" level="1"/>  <!-- Double Shot -->
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
