@@ -824,11 +824,13 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		final L2Attackable npc = getActiveChar();
 		if (npc.isCastingNow())
 		{
+			LOG.debug("{} is currently casting", this);
 			return;
 		}
 
 		if (npc.isCoreAIDisabled())
 		{
+			LOG.debug("{} AI disabled", this);
 			return;
 		}
 
@@ -836,6 +838,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		if (mostHate == null)
 		{
 			setIntention(AI_INTENTION_ACTIVE);
+			LOG.debug("{} has not hate, going back to ACTIVE state", this);
 			return;
 		}
 
@@ -846,11 +849,13 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		if (npc.isMovementDisabled())
 		{
 			movementDisable();
+			LOG.debug("{} is immobilized", this);
 			return;
 		}
 
 		if (monsterDriftLimitExeeded(npc)) {
 			returnToSpawn(npc);
+			LOG.debug("{} returning to spawn", this);
 			return;
 		}
 
@@ -865,6 +870,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			setIntention(AI_INTENTION_ACTIVE);
 
 			npc.setWalking();
+			LOG.debug("{} stopping attack because he is dead or attacked timedout", this);
 			return;
 		}
 
@@ -1032,6 +1038,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					{
 						setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ, 0));
 					}
+					LOG.debug("{} is dodging", this);
 					return;
 				}
 			}
@@ -1123,6 +1130,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 							if (!Util.checkIfInRange((healSkill.getCastRange() + collision + leader.getTemplate().getCollisionRadius()), npc, leader, false) && !isParty(healSkill) && !npc.isMovementDisabled())
 							{
 								moveToPawn(leader, healSkill.getCastRange() + collision + leader.getTemplate().getCollisionRadius());
+								LOG.debug("{} is going towards {} to cast resurrection", this, leader);
 								return;
 							}
 
@@ -1202,6 +1210,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					{
 						clientStopMoving(null);
 						npc.doCast(sk);
+						LOG.debug("{} is using party heal {}", this, sk);
 						return;
 					}
 				}
@@ -1231,6 +1240,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 							if (!Util.checkIfInRange((sk.getCastRange() + collision + leader.getTemplate().getCollisionRadius()), npc, leader, false) && !isParty(sk) && !npc.isMovementDisabled())
 							{
 								moveToPawn(leader, sk.getCastRange() + collision + leader.getTemplate().getCollisionRadius());
+								LOG.debug("{} is going towards {} to cast resurrection", this, leader);
 								return;
 							}
 
@@ -1359,6 +1369,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		}
 
 		// Attacks target
+		LOG.debug("{} is doing a basic attack", this);
 		_actor.doAttack(getAttackTarget());
 	}
 

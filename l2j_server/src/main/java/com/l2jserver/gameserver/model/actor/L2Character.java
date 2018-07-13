@@ -901,72 +901,61 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		final long stamp = _attackLock.tryWriteLock();
 		if (stamp == 0)
 		{
+			LOG.debug("{} cannot attack, lock not available", this);
 			return;
 		}
-		try
-		{
-			if ((target == null) || isAttackingDisabled())
-			{
-				LOG.debug("{} cannot attack, attacking disabled", this);
+		try {
+			if (target == null || isAttackingDisabled()) {
+				LOG.debug("{} cannot attack {}, attacking disabled", this, target);
 				return;
 			}
-			
+
 			// Notify to scripts
 			final TerminateReturn attackReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureAttack(this, target), this, TerminateReturn.class);
-			if ((attackReturn != null) && attackReturn.terminate())
-			{
+			if ((attackReturn != null) && attackReturn.terminate()) {
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);
+				LOG.debug("{} attack return", this);
 				return;
 			}
-			
+
 			// Notify to scripts
 			final TerminateReturn attackedReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, target), target, TerminateReturn.class);
-			if ((attackedReturn != null) && attackedReturn.terminate())
-			{
+			if ((attackedReturn != null) && attackedReturn.terminate()) {
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);
+				LOG.debug("{} attacked return", this);
 				return;
 			}
-			
-			if (!isAlikeDead())
-			{
-				if ((isNpc() && target.isAlikeDead()) || !getKnownList().knowsObject(target))
-				{
+
+			if (!isAlikeDead()) {
+				if ((isNpc() && target.isAlikeDead()) || !getKnownList().knowsObject(target)) {
 					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
+					LOG.debug("NPC {} cannot attack dead or unknown object {}", this, target);
 					return;
-				}
-				else if (isPlayer())
-				{
-					if (target.isDead())
-					{
+				} else if (isPlayer()) {
+					if (target.isDead()) {
 						getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 						sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
-					
+
 					final L2PcInstance actor = getActingPlayer();
-					if (actor.isTransformed() && !actor.getTransformation().canAttack())
-					{
+					if (actor.isTransformed() && !actor.getTransformation().canAttack()) {
 						sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
 				}
 			}
-			
+
 			// Check if attacker's weapon can attack
-			if (getActiveWeaponItem() != null)
-			{
+			if (getActiveWeaponItem() != null) {
 				L2Weapon wpn = getActiveWeaponItem();
-				if (!wpn.isAttackWeapon() && !isGM())
-				{
-					if (wpn.getItemType() == WeaponType.FISHINGROD)
-					{
+				if (!wpn.isAttackWeapon() && !isGM()) {
+					if (wpn.getItemType() == WeaponType.FISHINGROD) {
 						sendPacket(SystemMessageId.CANNOT_ATTACK_WITH_FISHING_POLE);
-					}
-					else
-					{
+					} else {
 						sendPacket(SystemMessageId.THAT_WEAPON_CANT_ATTACK);
 					}
 					sendPacket(ActionFailed.STATIC_PACKET);
@@ -974,100 +963,82 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					return;
 				}
 			}
-			
-			if (getActingPlayer() != null)
-			{
-				if (getActingPlayer().inObserverMode())
-				{
+
+			if (getActingPlayer() != null) {
+				if (getActingPlayer().inObserverMode()) {
 					sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
-				}
-				
-				else if ((target.getActingPlayer() != null) && (getActingPlayer().getSiegeState() > 0) && isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeState() == getActingPlayer().getSiegeState()) && (target.getActingPlayer() != this)
-					&& (target.getActingPlayer().getSiegeSide() == getActingPlayer().getSiegeSide()))
-				{
-					if (TerritoryWarManager.getInstance().isTWInProgress())
-					{
+				} else if ((target.getActingPlayer() != null) && (getActingPlayer().getSiegeState() > 0)
+					&& isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeState() == getActingPlayer()
+					.getSiegeState()) && (target.getActingPlayer() != this)
+					&& (target.getActingPlayer().getSiegeSide() == getActingPlayer().getSiegeSide())) {
+					if (TerritoryWarManager.getInstance().isTWInProgress()) {
 						sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_A_MEMBER_OF_THE_SAME_TERRITORY);
-					}
-					else
-					{
+					} else {
 						sendPacket(SystemMessageId.FORCED_ATTACK_IS_IMPOSSIBLE_AGAINST_SIEGE_SIDE_TEMPORARY_ALLIED_MEMBERS);
 					}
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
-				
+
 				// Checking if target has moved to peace zone
-				else if (target.isInsidePeaceZone(getActingPlayer()))
-				{
+				else if (target.isInsidePeaceZone(getActingPlayer())) {
 					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
-			}
-			else if (isInsidePeaceZone(this, target))
-			{
+			} else if (isInsidePeaceZone(this, target)) {
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			
+
 			stopEffectsOnAction();
-			
-			if (!GeoData.getInstance().canSeeTarget(this, target))
-			{
+
+			if (!GeoData.getInstance().canSeeTarget(this, target)) {
 				LOG.debug("{} can not see his target, stopped attacking", this);
 				sendPacket(SystemMessageId.CANT_SEE_TARGET);
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			
+
 			target.getKnownList().addKnownObject(this);
-			
+
 			L2Weapon weaponItem = getActiveWeaponItem();
 			final int timeAtk = calculateTimeBetweenAttacks();
 			final int timeToHit = timeAtk / 2;
-			
+
 			Attack attack = new Attack(this, target, isChargedShot(ShotType.SOULSHOTS), (weaponItem != null) ? weaponItem.getItemGradeSPlus().getId() : 0);
 			setHeading(Util.calculateHeadingFrom(this, target));
 			int reuse = calculateReuseTime(weaponItem);
-			
+
 			boolean hitted = false;
-			switch (getAttackType())
-			{
-				case BOW:
-				{
-					if (!canUseRangeWeapon())
-					{
+			switch (getAttackType()) {
+				case BOW: {
+					if (!canUseRangeWeapon()) {
 						return;
 					}
 					_attackEndTime = System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeToHit + (reuse / 2), TimeUnit.MILLISECONDS);
 					hitted = doAttackHitByBow(attack, target, timeAtk, reuse);
 					break;
 				}
-				case CROSSBOW:
-				{
-					if (!canUseRangeWeapon())
-					{
+				case CROSSBOW: {
+					if (!canUseRangeWeapon()) {
 						return;
 					}
 					_attackEndTime = System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeToHit + (reuse / 2), TimeUnit.MILLISECONDS);
 					hitted = doAttackHitByCrossBow(attack, target, timeAtk, reuse);
 					break;
 				}
-				case POLE:
-				{
+				case POLE: {
 					_attackEndTime = System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeAtk, TimeUnit.MILLISECONDS);
 					hitted = doAttackHitByPole(attack, target, timeToHit);
 					break;
 				}
-				case FIST:
-				{
-					if (!isPlayer())
-					{
+				case FIST: {
+					if (!isPlayer()) {
 						hitted = doAttackHitSimple(attack, target, timeToHit);
 						_attackEndTime =
 							System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeAtk, TimeUnit.MILLISECONDS);
@@ -1076,76 +1047,65 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 				case DUAL:
 				case DUALFIST:
-				case DUALDAGGER:
-				{
+				case DUALDAGGER: {
 					_attackEndTime = System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeAtk, TimeUnit.MILLISECONDS);
 					hitted = doAttackHitByDual(attack, target, timeToHit);
 					break;
 				}
-				default:
-				{
+				default: {
 					_attackEndTime = System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeAtk, TimeUnit.MILLISECONDS);
 					hitted = doAttackHitSimple(attack, target, timeToHit);
 					break;
 				}
 			}
-			
+
 			// Flag the attacker if it's a L2PcInstance outside a PvP area
 			final L2PcInstance player = getActingPlayer();
-			if (player != null)
-			{
+			if (player != null) {
 				AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
-				if (player.getSummon() != target)
-				{
+				if (player.getSummon() != target) {
 					player.updatePvPStatus(target);
 				}
 			}
-			
+
 			// Check if hit isn't missed
-			if (!hitted)
-			{
+			if (!hitted) {
 				abortAttack(); // Abort the attack of the L2Character and send Server->Client ActionFailed packet
-			}
-			else
-			{
+			} else {
 				// If we didn't miss the hit, discharge the shoulshots, if any
 				setChargedShot(ShotType.SOULSHOTS, false);
-				
-				if (player != null)
-				{
-					if (player.isCursedWeaponEquipped())
-					{
+
+				if (player != null) {
+					if (player.isCursedWeaponEquipped()) {
 						// If hit by a cursed weapon, CP is reduced to 0
-						if (!target.isInvul())
-						{
+						if (!target.isInvul()) {
 							target.setCurrentCp(0);
 						}
-					}
-					else if (player.isHero())
-					{
+					} else if (player.isHero()) {
 						// If a cursed weapon is hit by a Hero, CP is reduced to 0
-						if (target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
-						{
+						if (target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped()) {
 							target.setCurrentCp(0);
 						}
 					}
 				}
 			}
-			
+
 			// If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack
 			// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
-			if (attack.hasHits())
-			{
+			if (attack.hasHits()) {
 				broadcastPacket(attack);
 			}
-			
+
 			// Notify AI with EVT_READY_TO_ACT
 			ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), timeAtk + reuse);
+		} catch (Exception e) {
+			LOG.error("{} something went wrong", this, e);
 		}
 		finally
 		{
 			_attackLock.unlockWrite(stamp);
 		}
+		LOG.debug("NPC {} successfully attacked {}", this, target);
 	}
 	
 	/**
@@ -2680,6 +2640,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public boolean isAttackingDisabled()
 	{
+		LOG.debug(
+			"Attacking disabled checks flying {}, stunned {}, sleeping {}, attacking {}, dead {}, paralyzed {}, physicalMuted {}, AI Disabled {}",
+			isFlying(), isStunned(), isSleeping(), isAttackingNow(), isAlikeDead(), isParalyzed(),
+			isPhysicalAttackMuted(), isCoreAIDisabled());
 		return isFlying() || isStunned() || isSleeping() || isAttackingNow() || isAlikeDead() || isParalyzed() || isPhysicalAttackMuted() || isCoreAIDisabled();
 	}
 	
