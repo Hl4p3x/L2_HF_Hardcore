@@ -265,6 +265,7 @@ public final class Config
 	public static boolean ALT_VALIDATE_TRIGGER_SKILLS;
 	public static boolean ALT_DROPPABLE_AUGMENTED_ITEMS;
 	public static boolean ALT_DISABLE_DEATH_PENALTY;
+    public static boolean ALT_AUTO_LEARN_SKILLS_ON_SP;
 
 	// --------------------------------------------------
 	// ClanHall Settings
@@ -1779,6 +1780,7 @@ public final class Config
 			ALT_DROPPABLE_AUGMENTED_ITEMS = character.getBoolean("AltDroppableAugmentedItems", true);
 			ALT_DISABLE_DEATH_PENALTY = character.getBoolean("AltDisableDeathPenalty", false);
 			PLAYER_MOVEMENT_BLOCK_TIME = character.getInt("NpcTalkBlockingTime", 0) * 1000;
+            ALT_AUTO_LEARN_SKILLS_ON_SP = character.getBoolean("AltAutoLearnSkillsOnSp", false);
 
 			// Load Telnet L2Properties file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);

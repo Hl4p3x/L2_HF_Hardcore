@@ -122,6 +122,7 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.L2Vehicle;
 import com.l2jserver.gameserver.model.actor.appearance.PcAppearance;
+import com.l2jserver.gameserver.model.actor.instance.helpers.SpAutoLearnSkillsHelper;
 import com.l2jserver.gameserver.model.actor.knownlist.PcKnownList;
 import com.l2jserver.gameserver.model.actor.stat.PcStat;
 import com.l2jserver.gameserver.model.actor.status.PcStatus;
@@ -9607,12 +9608,18 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public void addExpAndSp(long addToExp, int addToSp)
 	{
-		getStat().addExpAndSp(addToExp, addToSp, false);
+		boolean result = getStat().addExpAndSp(addToExp, addToSp, false);
+		if (result) {
+			SpAutoLearnSkillsHelper.tryAutoLearnNextSkill(this);
+		}
 	}
 
 	public void addExpAndSp(long addToExp, int addToSp, boolean useVitality)
 	{
-		getStat().addExpAndSp(addToExp, addToSp, useVitality);
+		boolean result = getStat().addExpAndSp(addToExp, addToSp, useVitality);
+		if (result) {
+			SpAutoLearnSkillsHelper.tryAutoLearnNextSkill(this);
+		}
 	}
 
 	public void removeExpAndSp(long removeExp, int removeSp)
