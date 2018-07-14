@@ -12,9 +12,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillDone;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,20 +38,30 @@ public class SpAutoLearnSkillsHelper {
         }
 
         Comparator<L2SkillLearn> comparatorByLevel = Comparator.comparing(L2SkillLearn::getGetLevel);
-        Comparator<L2SkillLearn> comparatorByLevelAndSp = comparatorByLevel.thenComparing(L2SkillLearn::getLevelUpSp);
+        Comparator<L2SkillLearn> comparatorByLevelAndSkillLevel = comparatorByLevel
+            .thenComparing(L2SkillLearn::getSkillLevel);
 
         List<L2SkillLearn> skillLearns = SkillTreesData.getInstance()
-            .getAvailableSkills(pcInstance, classInfo.getClassId(), false, false);
+            .getAllAvailableNonFsSkillsWithAllLevels(pcInstance, classInfo.getClassId());
 
-        Optional<L2SkillLearn> affordableSkillLearnsSorted = skillLearns.stream()
+        Iterator<L2SkillLearn> affordableSkillLearnsSorted = skillLearns.stream()
             .filter(skill -> skill.getGetLevel() <= pcInstance.getLevel())
-            .filter(skill -> skill.getLevelUpSp() < pcInstance.getSp())
             .filter(skill -> skill.getRequiredItems().isEmpty())
             .filter(skill -> skill.getPreReqSkills().isEmpty())
-            .min(comparatorByLevelAndSp);
+            .sorted(comparatorByLevelAndSkillLevel)
+            .iterator();
 
-        if (affordableSkillLearnsSorted.isPresent()) {
-            L2SkillLearn skillLearn = affordableSkillLearnsSorted.get();
+        if (!affordableSkillLearnsSorted.hasNext()) {
+            LOG.debug("{} There is no new skill to learn for {}", LOG_MARKER, pcInstance);
+            return false;
+        }
+
+        List<Skill> addedSkills = new ArrayList<>();
+        while (affordableSkillLearnsSorted.hasNext()) {
+            L2SkillLearn skillLearn = affordableSkillLearnsSorted.next();
+            if (skillLearn.getLevelUpSp() >= pcInstance.getSp()) {
+                break;
+            }
 
             final Skill skill = SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
             if (skill == null) {
@@ -61,24 +72,26 @@ public class SpAutoLearnSkillsHelper {
 
             int levelUpSp = skillLearn.getLevelUpSp();
             pcInstance.setSp(pcInstance.getSp() - levelUpSp);
-            final StatusUpdate su = new StatusUpdate(pcInstance);
-            su.addAttribute(StatusUpdate.SP, pcInstance.getSp());
-            pcInstance.sendPacket(su);
+            pcInstance.addSkill(skill, true);
+            addedSkills.add(skill);
 
+        }
+
+        addedSkills.forEach(skill -> {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.LEARNED_SKILL_S1);
             sm.addSkillName(skill);
             pcInstance.sendPacket(sm);
-
-            pcInstance.sendPacket(new AcquireSkillDone());
-            pcInstance.addSkill(skill, true);
-            pcInstance.sendSkillList();
             pcInstance.updateShortCuts(skill.getId(), skill.getLevel());
+        });
 
-            return true;
-        } else {
-            LOG.debug("{} There is no new skill to learn for {}", LOG_MARKER, pcInstance);
-            return false;
-        }
+        final StatusUpdate su = new StatusUpdate(pcInstance);
+        su.addAttribute(StatusUpdate.SP, pcInstance.getSp());
+        pcInstance.sendPacket(su);
+
+        pcInstance.sendPacket(new AcquireSkillDone());
+        pcInstance.sendSkillList();
+
+        return true;
     }
 
 }

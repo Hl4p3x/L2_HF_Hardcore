@@ -18,21 +18,6 @@
  */
 package com.l2jserver.gameserver.data.xml.impl;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.Race;
@@ -52,6 +37,19 @@ import com.l2jserver.gameserver.model.interfaces.ISkillsHolder;
 import com.l2jserver.gameserver.model.skills.CommonSkill;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.util.data.xml.IXmlReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * This class loads and manage the characters and pledges skills trees.<br>
@@ -499,7 +497,36 @@ public final class SkillTreesData implements IXmlReader
 	{
 		return getAvailableSkills(player, classId, includeByFs, includeAutoGet, player);
 	}
-	
+
+	public List<L2SkillLearn> getAllAvailableNonFsSkillsWithAllLevels(L2PcInstance player, ClassId classId) {
+		final List<L2SkillLearn> result = new ArrayList<>();
+		final Map<Integer, L2SkillLearn> skills = getCompleteClassSkillTree(classId);
+
+		if (skills.isEmpty()) {
+			// The Skill Tree for this class is undefined.
+			LOG.warn("{}: Skilltree for class {} is not defined!", getClass().getSimpleName(), classId);
+			return result;
+		}
+
+		for (L2SkillLearn skill : skills.values()) {
+			if (skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) {
+				continue;
+			}
+
+			if (player.getLevel() >= skill.getGetLevel() && skill.isLearnedByNpc() && !skill.isLearnedByFS()) {
+				final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
+				if (oldSkill != null) {
+					if (oldSkill.getLevel() < skill.getSkillLevel()) {
+						result.add(skill);
+					}
+				} else if (skill.getSkillLevel() == 1) {
+					result.add(skill);
+				}
+			}
+		}
+		return result;
+	}
+
 	/**
 	 * Gets the available skills.
 	 * @param player the learning skill player
