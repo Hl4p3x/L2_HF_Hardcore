@@ -376,7 +376,7 @@ public final class Formulas
 			// Calculate Movement bonus
 			if (player.isSitting())
 			{
-				hpRegenMultiplier *= 1.5; // Sitting
+				hpRegenMultiplier *= 2; // Sitting
 			}
 			else if (!player.isMoving())
 			{
@@ -384,7 +384,7 @@ public final class Formulas
 			}
 			else if (player.isRunning())
 			{
-				hpRegenMultiplier *= 0.7; // Running
+				hpRegenMultiplier *= 0.8; // Running
 			}
 
 			// Add CON bonus
@@ -486,7 +486,7 @@ public final class Formulas
 			// Calculate Movement bonus
 			if (player.isSitting())
 			{
-				mpRegenMultiplier *= 1.5; // Sitting
+				mpRegenMultiplier *= 2; // Sitting
 			}
 			else if (!player.isMoving())
 			{
@@ -494,7 +494,7 @@ public final class Formulas
 			}
 			else if (player.isRunning())
 			{
-				mpRegenMultiplier *= 0.7; // Running
+				mpRegenMultiplier *= 0.8; // Running
 			}
 
 			// Add MEN bonus
@@ -520,7 +520,7 @@ public final class Formulas
 		double cpRegenMultiplier = Config.CP_REGEN_MULTIPLIER;
 		if (player.isSitting())
 		{
-			cpRegenMultiplier *= 1.5; // Sitting
+			cpRegenMultiplier *= 2; // Sitting
 		}
 		else if (!player.isMoving())
 		{
@@ -528,7 +528,7 @@ public final class Formulas
 		}
 		else if (player.isRunning())
 		{
-			cpRegenMultiplier *= 0.7; // Running
+			cpRegenMultiplier *= 0.8; // Running
 		}
 		return player.calcStat(Stats.REGENERATE_CP_RATE, Math.max(1, init), null, null) * cpRegenMultiplier;
 	}
