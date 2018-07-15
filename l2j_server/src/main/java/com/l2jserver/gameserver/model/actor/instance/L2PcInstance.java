@@ -6598,7 +6598,6 @@ public final class L2PcInstance extends L2Playable
 			DAOFactory.getInstance().getPlayerDAO().updateOnlineStatus(this);
             if (isOnline) {
                 DAOFactory.getInstance().getMaxOnlineDao().updateMaxOnline();
-                SpAutoLearnSkillsHelper.tryAutoLearnNextSkill(this);
             }
 		}
 	}
