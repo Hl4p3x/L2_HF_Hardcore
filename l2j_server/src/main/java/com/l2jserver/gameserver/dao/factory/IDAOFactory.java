@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.dao.FriendDAO;
 import com.l2jserver.gameserver.dao.HennaDAO;
 import com.l2jserver.gameserver.dao.ItemDAO;
 import com.l2jserver.gameserver.dao.ItemReuseDAO;
+import com.l2jserver.gameserver.dao.MaxOnlineDao;
 import com.l2jserver.gameserver.dao.PetDAO;
 import com.l2jserver.gameserver.dao.PetSkillSaveDAO;
 import com.l2jserver.gameserver.dao.PlayerDAO;
@@ -75,4 +76,6 @@ public interface IDAOFactory
 	SubclassDAO getSubclassDAO();
 	
 	TeleportBookmarkDAO getTeleportBookmarkDAO();
+
+	MaxOnlineDao getMaxOnlineDao();
 }

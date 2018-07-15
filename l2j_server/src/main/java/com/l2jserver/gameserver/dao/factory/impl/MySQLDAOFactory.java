@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.dao.FriendDAO;
 import com.l2jserver.gameserver.dao.HennaDAO;
 import com.l2jserver.gameserver.dao.ItemDAO;
 import com.l2jserver.gameserver.dao.ItemReuseDAO;
+import com.l2jserver.gameserver.dao.MaxOnlineDao;
 import com.l2jserver.gameserver.dao.PetDAO;
 import com.l2jserver.gameserver.dao.PetSkillSaveDAO;
 import com.l2jserver.gameserver.dao.PlayerDAO;
@@ -79,6 +80,7 @@ enum MySQLDAOFactory implements IDAOFactory
 	private final SkillDAO skillDAO = new SkillDAOMySQLImpl();
 	private final SubclassDAO subclassDAO = new SubclassDAOMySQLImpl();
 	private final TeleportBookmarkDAO teleportBookmarkDAO = new TeleportBookmarkDAOMySQLImpl();
+	private final MaxOnlineDao maxOnlineDao = new MaxOnlineDao();
 	
 	@Override
 	public FriendDAO getFriendDAO()
@@ -181,4 +183,10 @@ enum MySQLDAOFactory implements IDAOFactory
 	{
 		return teleportBookmarkDAO;
 	}
+
+	@Override
+	public MaxOnlineDao getMaxOnlineDao() {
+		return maxOnlineDao;
+	}
+
 }
