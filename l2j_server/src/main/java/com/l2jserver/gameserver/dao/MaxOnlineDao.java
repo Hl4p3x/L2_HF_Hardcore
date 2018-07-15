@@ -13,7 +13,7 @@ public class MaxOnlineDao {
 
     private static final String SELECT_GREATEST_ONLINE = "SELECT GREATEST((SELECT count(*) FROM characters WHERE online > 0), (SELECT value FROM global_variables WHERE var = 'MaxOnline')) as MAX_ONLINE from DUAL";
 
-    private static final String UPDATE_MAX_ONLINE = "UPDATE global_variable SET value=? WHERE var = 'MaxOnline'";
+    private static final String UPDATE_MAX_ONLINE = "UPDATE global_variables SET value=? WHERE var = 'MaxOnline'";
 
     public boolean updateMaxOnline() {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
@@ -25,15 +25,15 @@ public class MaxOnlineDao {
                 int maxOnline = resultSet.getInt("MAX_ONLINE");
                 updateMaxOnline.setInt(1, maxOnline);
                 updateMaxOnline.execute();
+                return true;
             } else {
                 LOG.warn("Could not query max online value");
+                return false;
             }
-
         } catch (Exception e) {
             LOG.error("Could not update max online", e);
             return false;
         }
-        return true;
     }
 
 }
