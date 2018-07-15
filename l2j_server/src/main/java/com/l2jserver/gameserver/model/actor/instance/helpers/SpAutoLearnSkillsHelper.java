@@ -74,7 +74,6 @@ public class SpAutoLearnSkillsHelper {
             pcInstance.setSp(pcInstance.getSp() - levelUpSp);
             pcInstance.addSkill(skill, true);
             addedSkills.add(skill);
-
         }
 
         addedSkills.forEach(skill -> {

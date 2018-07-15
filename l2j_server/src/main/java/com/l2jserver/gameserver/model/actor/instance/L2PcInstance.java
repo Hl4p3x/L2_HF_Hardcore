@@ -6598,6 +6598,7 @@ public final class L2PcInstance extends L2Playable
 			DAOFactory.getInstance().getPlayerDAO().updateOnlineStatus(this);
             if (isOnline) {
                 DAOFactory.getInstance().getMaxOnlineDao().updateMaxOnline();
+                SpAutoLearnSkillsHelper.tryAutoLearnNextSkill(this);
             }
 		}
 	}
@@ -8938,6 +8939,10 @@ public final class L2PcInstance extends L2Playable
 		}
 		// Set the template of the L2PcInstance
 		setTemplate(pcTemplate);
+
+        if (Config.ALT_AUTO_LEARN_SKILLS_ON_SP) {
+            SpAutoLearnSkillsHelper.tryAutoLearnNextSkill(this);
+        }
 
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionChange(this, pcTemplate, isSubClassActive()), this);
