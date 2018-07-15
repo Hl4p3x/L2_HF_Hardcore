@@ -376,7 +376,7 @@ public final class Formulas
 			// Calculate Movement bonus
 			if (player.isSitting())
 			{
-				hpRegenMultiplier *= 2; // Sitting
+				hpRegenMultiplier *= 3; // Sitting
 			}
 			else if (!player.isMoving())
 			{
@@ -486,7 +486,7 @@ public final class Formulas
 			// Calculate Movement bonus
 			if (player.isSitting())
 			{
-				mpRegenMultiplier *= 2; // Sitting
+				mpRegenMultiplier *= 3; // Sitting
 			}
 			else if (!player.isMoving())
 			{
@@ -520,7 +520,7 @@ public final class Formulas
 		double cpRegenMultiplier = Config.CP_REGEN_MULTIPLIER;
 		if (player.isSitting())
 		{
-			cpRegenMultiplier *= 2; // Sitting
+			cpRegenMultiplier *= 3; // Sitting
 		}
 		else if (!player.isMoving())
 		{
