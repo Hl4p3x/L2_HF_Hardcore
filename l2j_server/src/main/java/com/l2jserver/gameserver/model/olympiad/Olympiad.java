@@ -542,12 +542,13 @@ public class Olympiad extends ListenersContainer
 			} , getMillisToCompEnd());
 		} , getMillisToCompBegin());
 	}
-	
-	private long getMillisToOlympiadEnd()
-	{
-		// if (_olympiadEnd > Calendar.getInstance().getTimeInMillis())
-		return (_olympiadEnd - Calendar.getInstance().getTimeInMillis());
-		// return 10L;
+
+	private long getMillisToOlympiadEnd() {
+		if (_olympiadEnd > Calendar.getInstance().getTimeInMillis()) {
+			return (_olympiadEnd - Calendar.getInstance().getTimeInMillis());
+		} else {
+			return 10L;
+		}
 	}
 	
 	public void manualSelectHeroes()
@@ -583,7 +584,6 @@ public class Olympiad extends ListenersContainer
 		
 		Calendar currentTime = Calendar.getInstance();
 		currentTime.add(Calendar.WEEK_OF_YEAR, Config.OLYPMIAD_CYCLE_IN_WEEKS);
-		currentTime.set(Calendar.DAY_OF_MONTH, 1);
 		currentTime.set(Calendar.AM_PM, Calendar.AM);
 		currentTime.set(Calendar.HOUR, 12);
 		currentTime.set(Calendar.MINUTE, 0);
