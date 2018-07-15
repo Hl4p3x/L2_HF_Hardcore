@@ -23,7 +23,7 @@ public class MaxOnlineDao {
         ) {
             if (resultSet.next()) {
                 int maxOnline = resultSet.getInt("MAX_ONLINE");
-                updateMaxOnline.setInt(0, maxOnline);
+                updateMaxOnline.setInt(1, maxOnline);
                 updateMaxOnline.execute();
             } else {
                 LOG.warn("Could not query max online value");
