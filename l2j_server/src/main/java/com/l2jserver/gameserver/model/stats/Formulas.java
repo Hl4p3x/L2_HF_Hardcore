@@ -637,11 +637,11 @@ public final class Formulas
 		double weaponMod = attacker.getRandomDamageMultiplier();
 
 		double penaltyMod = 1;
-		if ((target instanceof L2Attackable) &&
-			!target.isRaid() && !target.isRaidMinion() &&
-			(target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) &&
-			(attacker.getActingPlayer() != null) &&
-			((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2)) {
+        if ((target instanceof L2Attackable) &&
+            !target.isRaid() && !target.isRaidMinion() &&
+            (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) &&
+            (attacker.getActingPlayer() != null) &&
+            ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2)) {
 
 			int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
 			if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.size())
@@ -2160,15 +2160,15 @@ public final class Formulas
 	 */
 	public static boolean calcProbability(double baseChance, L2Character attacker, L2Character target, Skill skill)
 	{
-		int targetLevel = target.getLevel();
-		if (target instanceof L2Npc) {
-			L2Npc npc = (L2Npc) target;
-			targetLevel = npc.getOriginalLevel();
-		}
+        int targetLevel = target.getLevel();
+        if (target instanceof L2Npc) {
+            L2Npc npc = (L2Npc) target;
+            targetLevel = npc.getOriginalLevel();
+        }
 
-		return Rnd.get(100) < (
-			(((((skill.getMagicLevel() + baseChance) - targetLevel) + 30) - target.getINT()) * calcAttributeBonus(
-				attacker, target, skill)) * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
+        return Rnd.get(100) < (
+            (((((skill.getMagicLevel() + baseChance) - targetLevel) + 30) - target.getINT()) * calcAttributeBonus(
+                attacker, target, skill)) * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
 	}
 
 	/**
