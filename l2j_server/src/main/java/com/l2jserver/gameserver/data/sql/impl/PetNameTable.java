@@ -18,15 +18,14 @@
  */
 package com.l2jserver.gameserver.data.sql.impl;
 
+import com.l2jserver.Config;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 
 public class PetNameTable
 {
@@ -42,6 +41,7 @@ public class PetNameTable
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT name FROM pets WHERE name=?"))
 		{
+			ps.setString(1, name);
 			try (ResultSet rs = ps.executeQuery())
 			{
 				return rs.next();
