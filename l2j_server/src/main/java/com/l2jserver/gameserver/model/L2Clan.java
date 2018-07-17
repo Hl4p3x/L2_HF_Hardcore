@@ -18,23 +18,6 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.communitybbs.BB.Forum;
@@ -79,6 +62,22 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.EnumIntBitmask;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class L2Clan implements IIdentifiable, INamable
 {
@@ -2247,7 +2246,7 @@ public class L2Clan implements IIdentifiable, INamable
 			activeChar.sendPacket(sm);
 			return false;
 		}
-		if (((target.getLevel() > 40) || (target.getClassId().level() >= 2)) && (pledgeType == -1))
+		if ((target.getClassId().level() > 1) && (pledgeType == -1))
 		{
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DOESNOT_MEET_REQUIREMENTS_TO_JOIN_ACADEMY);
 			sm.addString(target.getName());

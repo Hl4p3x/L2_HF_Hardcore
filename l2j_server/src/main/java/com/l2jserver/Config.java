@@ -397,6 +397,8 @@ public final class Config
 	public static int REPUTATION_SCORE_PER_KILL;
 	public static int JOIN_ACADEMY_MIN_REP_SCORE;
 	public static int JOIN_ACADEMY_MAX_REP_SCORE;
+    public static boolean ALT_FIXED_ACADEMY_REP_SCORE;
+    public static int ALT_FIXED_ACADEMY_REP_SCORE_AMOUNT;
 	public static int RAID_RANKING_1ST;
 	public static int RAID_RANKING_2ND;
 	public static int RAID_RANKING_3RD;
@@ -1433,6 +1435,10 @@ public final class Config
 			REPUTATION_SCORE_PER_KILL = Feature.getInt("ReputationScorePerKill", 1);
 			JOIN_ACADEMY_MIN_REP_SCORE = Feature.getInt("CompleteAcademyMinPoints", 190);
 			JOIN_ACADEMY_MAX_REP_SCORE = Feature.getInt("CompleteAcademyMaxPoints", 650);
+
+            ALT_FIXED_ACADEMY_REP_SCORE = Feature.getBoolean("AltFixedAcademyRepScore", true);
+            ALT_FIXED_ACADEMY_REP_SCORE_AMOUNT = Feature.getInt("AltFixedAcademyRepScoreAmount", 400);
+
 			RAID_RANKING_1ST = Feature.getInt("1stRaidRankingPoints", 1250);
 			RAID_RANKING_2ND = Feature.getInt("2ndRaidRankingPoints", 900);
 			RAID_RANKING_3RD = Feature.getInt("3rdRaidRankingPoints", 700);
