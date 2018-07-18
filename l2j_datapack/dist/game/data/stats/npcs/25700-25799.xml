@@ -131,7 +131,7 @@
 					<item id="14110" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Boots -->
 					<item id="14114" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Leather Boots -->
 					<item id="14117" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Shoes -->
-					<item id="15484" min="1" max="1" chance="79.546" /> <!-- High-level Angel Circlet -->
+					<item id="15484" min="1" max="1" chance="9.546" /> <!-- High-level Angel Circlet -->
 				</group>
 				<group chance="6.9475998878479">
 					<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
