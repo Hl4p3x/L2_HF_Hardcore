@@ -24,6 +24,9 @@ __pycache__/
 
 .idea/
 
+.project
+.settings
+
 *result.txt
 
 # Mobile Tools for Java (J2ME)
