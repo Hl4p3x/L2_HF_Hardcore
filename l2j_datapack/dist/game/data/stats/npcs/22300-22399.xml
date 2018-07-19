@@ -15,7 +15,7 @@
 		<acquire expRate="5.12351746976006" sp="3767"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="10982.0141560175" hpRegen="112.558039826218" mp="1743.0" mpRegen="3"/>
-			<attack physical="6734.49667710476" magical="4598.788195986" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2693.798670841904" magical="1999.4731286895653" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<defence fire="30" water="30" wind="30" earth="30" holy="30" dark="30" default="30"/>
@@ -93,7 +93,7 @@
 		<acquire expRate="28.3033021514971" sp="20810"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65802.611803692" hpRegen="112.40520021868" mp="1743.0" mpRegen="3"/>
-			<attack physical="5571.87244121247" magical="3804.86656104545" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2321.613517171863" magical="1654.2898091501959" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<defence fire="30" water="120" wind="60" earth="60" holy="60" dark="60" default="50"/>
@@ -185,7 +185,7 @@
 		<acquire expRate="27.1115841661709" sp="19934"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56403.1943232691" hpRegen="192.697893809876" mp="1743.0" mpRegen="3"/>
-			<attack physical="9266.3177391536" magical="6327.69376573446" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3860.965724647333" magical="2751.1712024932435" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<defence fire="60" water="60" wind="60" earth="60" holy="30" dark="120" default="50"/>
@@ -269,7 +269,7 @@
 		<acquire expRate="28.2742159689173" sp="20789"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56403.1943232691" hpRegen="192.697893809876" mp="1743.0" mpRegen="3"/>
-			<attack physical="9266.3177391536" magical="6327.69376573446" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3860.965724647333" magical="2751.1712024932435" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<defence fire="60" water="60" wind="60" earth="60" holy="30" dark="120" default="50"/>
@@ -347,7 +347,7 @@
 		<acquire expRate="28.3940945345033" sp="20877"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56403.1943232691" hpRegen="192.697893809876" mp="1743.0" mpRegen="3"/>
-			<attack physical="9266.3177391536" magical="6327.69376573446" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3860.965724647333" magical="2751.1712024932435" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<defence fire="60" water="60" wind="60" earth="60" holy="30" dark="120" default="50"/>
@@ -431,7 +431,7 @@
 		<acquire expRate="5.15323793046467" sp="3789"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="10982.0141560175" hpRegen="112.558039826218" mp="1743.0" mpRegen="3"/>
-			<attack physical="6734.49667710476" magical="4598.788195986" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2693.798670841904" magical="1999.4731286895653" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<attack type="FIRE" value="80"/>
@@ -520,7 +520,7 @@
 		<acquire expRate="13.098024499306" sp="9156"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="10982.0141560175" hpRegen="112.558039826218" mp="1743.0" mpRegen="3"/>
-			<attack physical="6734.49667710476" magical="4598.788195986" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2693.798670841904" magical="1999.4731286895653" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<attack type="FIRE" value="80"/>
@@ -606,7 +606,7 @@
 		<acquire expRate="28.3946382014674" sp="19906"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="32946.0424680524" hpRegen="112.558039826218" mp="1743.0" mpRegen="3"/>
-			<attack physical="5793.32235492338" magical="3956.08814418738" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="2413.8843145514084" magical="1720.0383235597305" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<attack type="FIRE" value="80"/>
@@ -961,7 +961,7 @@
 		<acquire expRate="26.1630310930469" sp="18511"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="32829.2831947712" hpRegen="111.50705124295" mp="1777.4" mpRegen="3"/>
-			<attack physical="5815.28895362847" magical="3971.08850697278" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2423.0370640118626" magical="1726.560220422948" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="566.178304" magical="621.45708"/>
 			<attribute>
 				<attack type="WATER" value="80"/>
@@ -1052,7 +1052,7 @@
 		<acquire expRate="27.7149385977646" sp="20619"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65569.2570829001" hpRegen="111.355378460862" mp="1777.4" mpRegen="3"/>
-			<attack physical="5589.57218651355" magical="3816.95321518099" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2328.9884110473126" magical="1659.544876165648" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="566.178304" magical="621.45708"/>
 			<attribute>
 				<attack type="WATER" value="80"/>
@@ -1143,7 +1143,7 @@
 		<acquire expRate="8.84433126562475" sp="6262"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="10943.0943982571" hpRegen="111.50705124295" mp="1777.4" mpRegen="3"/>
-			<attack physical="6774.50811945968" magical="4626.11085160169" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2709.803247783872" magical="2011.352544174648" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="566.178304" magical="621.45708"/>
 			<attribute>
 				<attack type="WATER" value="80"/>
@@ -1232,7 +1232,7 @@
 		<acquire expRate="8.65361405783777" sp="6120"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="10943.0943982571" hpRegen="111.50705124295" mp="1777.4" mpRegen="3"/>
-			<attack physical="6774.50811945968" magical="4626.11085160169" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="2709.803247783872" magical="2011.352544174648" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="566.178304" magical="621.45708"/>
 			<attribute>
 				<attack type="WATER" value="80"/>
@@ -1319,7 +1319,7 @@
 		<acquire expRate="5.06547771810132" sp="3768"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="10943.0943982571" hpRegen="111.50705124295" mp="1777.4" mpRegen="3"/>
-			<attack physical="6774.50811945968" magical="4626.11085160169" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120"/>
+			<attack physical="2709.803247783872" magical="2011.352544174648" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120"/>
 			<defence physical="566.178304" magical="621.45708"/>
 			<attribute>
 				<attack type="WATER" value="60"/>
@@ -1404,7 +1404,7 @@
 		<acquire expRate="14.6586966661828" sp="10905"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="32829.2831947712" hpRegen="111.50705124295" mp="1777.4" mpRegen="3"/>
-			<attack physical="5815.28895362847" magical="3971.08850697278" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2423.0370640118626" magical="1726.560220422948" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="566.178304" magical="621.45708"/>
 			<attribute>
 				<attack type="WATER" value="60"/>
@@ -1498,7 +1498,7 @@
 		<acquire expRate="2.17639881292237" sp="1556"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="10943.0943982571" hpRegen="111.50705124295" mp="1777.4" mpRegen="3"/>
-			<attack physical="6774.50811945968" magical="4626.11085160169" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2709.803247783872" magical="2011.352544174648" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="566.178304" magical="621.45708"/>
 			<attribute>
 				<attack type="WATER" value="60"/>
@@ -1598,7 +1598,7 @@
 		<acquire expRate="24.8737348778133" sp="17624"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="33003.982801143" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="5883.7041177888" magical="4065.07551523469" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2451.5433824120005" magical="1767.424137058561" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="572.839225223529" magical="628.768339764706"/>
 			<attribute>
 				<attack type="DARK" value="100"/>
@@ -1703,7 +1703,7 @@
 		<acquire expRate="23.720782441701" sp="16807"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="33003.982801143" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="5883.7041177888" magical="4065.07551523469" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2451.5433824120005" magical="1767.424137058561" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="572.839225223529" magical="628.768339764706"/>
 			<attribute>
 				<attack type="DARK" value="100"/>
@@ -2174,7 +2174,7 @@
 		<acquire expRate="400.80136563786" sp="267913"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="338766.60216791" hpRegen="194.030406814438" mp="1708.8" mpRegen="3"/>
-			<attack physical="7957.47325738098" magical="5529.81543471775" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3386.158832928076" magical="2404.267580312065" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="DARK" value="180"/>
@@ -2265,7 +2265,7 @@
 		<acquire expRate="48.8327866280547" sp="34601"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65918.4456223521" hpRegen="113.26544062045" mp="1708.8" mpRegen="3"/>
-			<attack physical="5655.33185929606" magical="3907.29217709046" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2356.388274706692" magical="1698.8226856915044" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="572.839225223529" magical="628.768339764706"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -2365,7 +2365,7 @@
 		<acquire expRate="20.5724657013667" sp="13992"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65918.4456223521" hpRegen="113.26544062045" mp="1708.8" mpRegen="3"/>
-			<attack physical="5655.33185929606" magical="3907.29217709046" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2356.388274706692" magical="1698.8226856915044" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="572.839225223529" magical="628.768339764706"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -2455,7 +2455,7 @@
 		<acquire expRate="50.4498560585277" sp="35747"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65918.4456223521" hpRegen="113.26544062045" mp="1708.8" mpRegen="3"/>
-			<attack physical="5655.33185929606" magical="3907.29217709046" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="2356.388274706692" magical="1698.8226856915044" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="572.839225223529" magical="628.768339764706"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -2620,7 +2620,7 @@
 		<acquire expRate="22.5428912360921" sp="15780"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="33003.982801143" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="5940.3994655008" magical="4128.10845732292" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2475.1664439586666" magical="1794.8297640534436" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="EARTH" value="80"/>
@@ -2710,7 +2710,7 @@
 		<acquire expRate="23.1117861758878" sp="16178"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="33003.982801143" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="5940.3994655008" magical="4128.10845732292" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2475.1664439586666" magical="1794.8297640534436" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="EARTH" value="80"/>
@@ -2796,7 +2796,7 @@
 		<acquire expRate="7.66958899049942" sp="5368"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="11001.327600381" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="6935.07781353704" magical="4819.33134977166" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2774.031125414816" magical="2095.361456422461" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="EARTH" value="80"/>
@@ -2900,7 +2900,7 @@
 		<acquire expRate="7.18616183508612" sp="5030"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="11001.327600381" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="6935.07781353704" magical="4819.33134977166" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2774.031125414816" magical="2095.361456422461" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="EARTH" value="80"/>
@@ -3080,7 +3080,7 @@
 		<acquire expRate="22.3826391403749" sp="15668"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="33003.982801143" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="5940.3994655008" magical="4128.10845732292" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="2475.1664439586666" magical="1794.8297640534436" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="EARTH" value="80"/>
@@ -3171,7 +3171,7 @@
 		<acquire expRate="68.5077709190672" sp="47956"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="197755.336867056" hpRegen="113.26544062045" mp="1708.8" mpRegen="3"/>
-			<attack physical="4590.3720965471" magical="3189.94606070952" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2086.5327711577725" magical="1386.9330698737047" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -3435,7 +3435,7 @@
 		<acquire expRate="10.8170164609053" sp="7317"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="33003.982801143" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="5940.3994655008" magical="4128.10845732292" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2475.1664439586666" magical="1794.8297640534436" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="DARK" value="80"/>
@@ -3532,7 +3532,7 @@
 		<acquire expRate="3.41260653355688" sp="2303"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="11001.327600381" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="6935.07781353704" magical="4819.33134977166" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="2774.031125414816" magical="2095.361456422461" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="DARK" value="80"/>
@@ -3624,7 +3624,7 @@
 		<acquire expRate="41.885319189148" sp="29320"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65918.4456223521" hpRegen="113.26544062045" mp="1708.8" mpRegen="3"/>
-			<attack physical="5706.31759667062" magical="3965.44004621088" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2377.632331946092" magical="1724.1043679177742" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="DARK" value="100"/>
@@ -3715,7 +3715,7 @@
 		<acquire expRate="22.9229176345069" sp="16046"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="33003.982801143" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="5940.3994655008" magical="4128.10845732292" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2475.1664439586666" magical="1794.8297640534436" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="DARK" value="100"/>
@@ -3802,7 +3802,7 @@
 		<acquire expRate="42.9956372809023" sp="30097"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65918.4456223521" hpRegen="113.26544062045" mp="1708.8" mpRegen="3"/>
-			<attack physical="5706.31759667062" magical="3965.44004621088" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2377.632331946092" magical="1724.1043679177742" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="EARTH" value="100"/>
@@ -3895,7 +3895,7 @@
 		<acquire expRate="44.6599697607072" sp="31262"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65918.4456223521" hpRegen="113.26544062045" mp="1708.8" mpRegen="3"/>
-			<attack physical="5706.31759667062" magical="3965.44004621088" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2377.632331946092" magical="1724.1043679177742" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="DARK" value="100"/>
@@ -3988,7 +3988,7 @@
 		<acquire expRate="44.6599697607072" sp="31262"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65918.4456223521" hpRegen="113.26544062045" mp="1708.8" mpRegen="3"/>
-			<attack physical="5706.31759667062" magical="3965.44004621088" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2377.632331946092" magical="1724.1043679177742" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="WIND" value="100"/>
@@ -4086,7 +4086,7 @@
 		<acquire expRate="43.1536000609663" sp="30208"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65918.4456223521" hpRegen="113.26544062045" mp="1708.8" mpRegen="3"/>
-			<attack physical="5706.31759667062" magical="3965.44004621088" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2377.632331946092" magical="1724.1043679177742" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="FIRE" value="100"/>
@@ -4180,7 +4180,7 @@
 		<acquire expRate="166.103014197531" sp="116275"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="338766.60216791" hpRegen="194.030406814438" mp="1708.8" mpRegen="3"/>
-			<attack physical="7957.47325738098" magical="5529.81543471775" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3386.158832928076" magical="2404.267580312065" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="582.692054494118" magical="639.583141129412"/>
 			<attribute>
 				<attack type="DARK" value="40"/>
@@ -4263,7 +4263,7 @@
 		<acquire expRate="12.4836798303104" sp="8636"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="18835.2867837617" hpRegen="194.184225975005" mp="1708.8" mpRegen="3"/>
-			<attack physical="10570.6861102648" magical="7388.25320204968" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="4228.27444410592" magical="3212.2840008911653" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="592.481283388235" magical="650.328136094118"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -4350,7 +4350,7 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="112922.200722637" hpRegen="194.030406814438" mp="1708.8" mpRegen="3"/>
-			<attack physical="9311.83314853711" magical="6508.39315054715" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3879.93047855713" magical="2829.7361524118046" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="592.481283388235" magical="650.328136094118"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -4404,7 +4404,7 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65918.4456223521" hpRegen="113.26544062045" mp="1708.8" mpRegen="3"/>
-			<attack physical="5756.1195067038" magical="4023.17010770831" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2398.38312779325" magical="1749.204394655787" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="592.481283388235" magical="650.328136094118"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -4465,7 +4465,7 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56505.8603512852" hpRegen="194.184225975005" mp="1708.8" mpRegen="3"/>
-			<attack physical="9551.66561529499" magical="6676.02115236235" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3979.8606730395795" magical="2902.617892331457" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="592.481283388235" magical="650.328136094118"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -4525,7 +4525,7 @@
 		<acquire expRate="7.54438931057257" sp="5219"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="11001.327600381" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="7014.97246843154" magical="4903.03015921084" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2985.094667417676" magical="2131.752243135148" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="592.481283388235" magical="650.328136094118"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -4614,7 +4614,7 @@
 		<acquire expRate="21.9414409388813" sp="15178"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="33003.982801143" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="5995.95197346168" magical="4190.79810952351" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2498.3133222757" magical="1822.0861345754392" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="592.481283388235" magical="650.328136094118"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -4707,7 +4707,7 @@
 		<acquire expRate="84.2142795305594" sp="58258"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="112922.200722637" hpRegen="194.030406814438" mp="1708.8" mpRegen="3"/>
-			<attack physical="9311.83314853711" magical="6508.39315054715" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3879.93047855713" magical="2829.7361524118046" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="592.481283388235" magical="650.328136094118"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -4798,7 +4798,7 @@
 		<acquire expRate="157.654214980404" sp="114515"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="336949.124088359" hpRegen="190.745373183435" mp="1777.4" mpRegen="3"/>
-			<attack physical="7996.03660225228" magical="5523.74780111493" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3402.5687669158638" magical="2401.629478745622" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -4894,7 +4894,7 @@
 		<acquire expRate="45.6028585426042" sp="33124"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9440.59973604737" magical="6521.66749943455" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="3933.583223353071" magical="2835.5076084498046" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -4996,7 +4996,7 @@
 		<acquire expRate="15.4408151787874" sp="11215"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="18734.280667127" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="10447.7711554943" magical="7217.43231271078" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="4179.10846219772" magical="3138.0140490046874" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -5088,7 +5088,7 @@
 		<acquire expRate="37.4688173900421" sp="27216"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9440.59973604737" magical="6521.66749943455" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="3933.583223353071" magical="2835.5076084498046" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -5174,7 +5174,7 @@
 		<acquire expRate="37.4688173900421" sp="27216"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9440.59973604737" magical="6521.66749943455" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="3933.583223353071" magical="2835.5076084498046" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -5268,7 +5268,7 @@
 		<acquire expRate="12.7294681279334" sp="9246"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="18734.280667127" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="10447.7711554943" magical="7217.43231271078" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="4179.10846219772" magical="3138.0140490046874" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -5365,7 +5365,7 @@
 		<acquire expRate="142.064821483524" sp="98149"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="112316.37469612" hpRegen="190.745373183435" mp="1777.4" mpRegen="3"/>
-			<attack physical="9203.55601890295" magical="6357.91515855911" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3834.815007876229" magical="2764.310938503961" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -5466,7 +5466,7 @@
 		<acquire expRate="14.8250395703295" sp="10259"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9440.59973604737" magical="6521.66749943455" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="3933.583223353071" magical="2835.5076084498046" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -5561,7 +5561,7 @@
 		<acquire expRate="39.3587004354768" sp="28589"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9440.59973604737" magical="6521.66749943455" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="3933.583223353071" magical="2835.5076084498046" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -5654,7 +5654,7 @@
 		<acquire expRate="12.8055534910727" sp="9301"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="18734.280667127" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="10447.7711554943" magical="7217.43231271078" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="4179.10846219772" magical="3138.0140490046874" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -5754,7 +5754,7 @@
 		<acquire expRate="37.4204580490637" sp="27181"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9440.59973604737" magical="6521.66749943455" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="3933.583223353071" magical="2835.5076084498046" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -5848,7 +5848,7 @@
 		<acquire expRate="13.3458885276044" sp="9694"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="18734.280667127" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="10447.7711554943" magical="7217.43231271078" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="4179.10846219772" magical="3138.0140490046874" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -5956,7 +5956,7 @@
 		<acquire expRate="37.2985925097982" sp="27092"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9440.59973604737" magical="6521.66749943455" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3933.583223353071" magical="2835.5076084498046" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -6067,7 +6067,7 @@
 		<acquire expRate="77.5075883292205" sp="56299"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="112316.37469612" hpRegen="190.745373183435" mp="1777.4" mpRegen="3"/>
-			<attack physical="9203.55601890295" magical="6357.91515855911" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="3834.815007876229" magical="2764.310938503961" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -6166,7 +6166,7 @@
 		<acquire expRate="157.654214980404" sp="114515"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="336949.124088359" hpRegen="190.745373183435" mp="1777.4" mpRegen="3"/>
-			<attack physical="7996.03660225228" magical="5523.74780111493" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3402.5687669158638" magical="2401.629478745622" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="585.591966139535" magical="642.766181023256"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -6257,7 +6257,7 @@
 		<acquire expRate="204.805022673828" sp="147054"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="336949.124088359" hpRegen="190.745373183435" mp="1777.4" mpRegen="3"/>
-			<attack physical="8128.04753400089" magical="5647.21214385793" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3458.74363148974" magical="2455.3096277643176" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<attack type="DARK" value="170"/>
@@ -6336,7 +6336,7 @@
 		<acquire expRate="45.4023593361397" sp="32599"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="65569.2570829001" hpRegen="111.355378460862" mp="1777.4" mpRegen="3"/>
-			<attack physical="5738.72922428878" magical="3987.15942914322" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2391.137176786992" magical="1733.5475778883567" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<attack type="DARK" value="170"/>
@@ -6430,7 +6430,7 @@
 		<acquire expRate="23.7785579910001" sp="17073"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="32829.2831947712" hpRegen="111.50705124295" mp="1777.4" mpRegen="3"/>
-			<attack physical="5981.54451308138" magical="4155.86285291724" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="2492.3102137839082" magical="1806.8968925727133" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<attack type="DARK" value="170"/>
@@ -6534,7 +6534,7 @@
 		<acquire expRate="191.244181680941" sp="137317"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="336949.124088359" hpRegen="190.745373183435" mp="1777.4" mpRegen="3"/>
-			<attack physical="8128.04753400089" magical="5647.21214385793" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="3458.74363148974" magical="2455.3096277643176" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<attack type="DARK" value="170"/>
@@ -6626,7 +6626,7 @@
 		<acquire expRate="43.1682847752456" sp="30995"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9516.11506242799" magical="6611.6149441907" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="3965.0479426783295" magical="2874.6151931263917" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<attack type="DARK" value="170"/>
@@ -6709,7 +6709,7 @@
 		<acquire expRate="42.4619909735327" sp="30488"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9516.11506242799" magical="6611.6149441907" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="3965.0479426783295" magical="2874.6151931263917" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<attack type="DARK" value="170"/>
@@ -6812,7 +6812,7 @@
 		<acquire expRate="9.79394071708521" sp="6768"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9516.11506242799" magical="6611.6149441907" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="3965.0479426783295" magical="2874.6151931263917" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" default="120"/>
@@ -6903,7 +6903,7 @@
 		<acquire expRate="7.39254179126143" sp="5124"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9516.11506242799" magical="6611.6149441907" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="3965.0479426783295" magical="2874.6151931263917" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" default="120"/>
@@ -6988,7 +6988,7 @@
 		<acquire expRate="69.1988549475008" sp="49686"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="112316.37469612" hpRegen="190.745373183435" mp="1777.4" mpRegen="3"/>
-			<attack physical="9273.2997736354" magical="6442.91152041669" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="3863.8749056814163" magical="2801.2658784420396" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<attack type="DARK" value="170"/>
@@ -7083,7 +7083,7 @@
 		<acquire expRate="42.2736459597426" sp="30353"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9516.11506242799" magical="6611.6149441907" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="3965.0479426783295" magical="2874.6151931263917" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -7179,7 +7179,7 @@
 		<acquire expRate="42.2736459597426" sp="30353"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="56202.8420013809" hpRegen="190.897045965523" mp="1777.4" mpRegen="3"/>
-			<attack physical="9516.11506242799" magical="6611.6149441907" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+			<attack physical="3965.0479426783295" magical="2874.6151931263917" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<attack type="DARK" value="150"/>
@@ -7269,7 +7269,7 @@
 		<acquire expRate="92.903420254512" sp="66706"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="112316.37469612" hpRegen="190.745373183435" mp="1777.4" mpRegen="3"/>
-			<attack physical="9273.2997736354" magical="6442.91152041669" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="3863.8749056814163" magical="2801.2658784420396" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="595.195674418605" magical="653.307558139535"/>
 			<attribute>
 				<attack type="DARK" value="170"/>

@@ -34,13 +34,13 @@ for item in files_to_process:
                 if breaks_treshold(p_attack, p_attack_treshold):
                     print_treshold_break('physical', npc, p_attack, p_attack_treshold)
                     physical_breaks.add(float(p_attack))
-                    #attack.set("physical", str(an.normalize_p_attack(float(p_attack))))
+                    attack.set("physical", str(an.normalize_p_attack(float(p_attack))))
 
                 m_attack = attack.get('magical')
                 if breaks_treshold(m_attack, m_attack_treshold):
                     print_treshold_break('magical', npc, m_attack, m_attack_treshold)
                     magical_breaks.add(float(m_attack))
-                    #attack.set("magical", str(an.normalize_m_attack(float(m_attack))))
+                    attack.set("magical", str(an.normalize_m_attack(float(m_attack))))
 
             vitals = stats.find('vitals')
             if vitals is not None:
@@ -52,7 +52,7 @@ for item in files_to_process:
                 if breaks_treshold(mp, mp_treshold):
                     print_treshold_break('mp', npc, mp, mp_treshold)
 
-    #if magical_breaks or physical_breaks:
-    with open(item, 'wb') as f:
-        print("Overriding file", item)
-        f.write(ET.tostring(dom))
+    if magical_breaks or physical_breaks:
+        with open(item, 'wb') as f:
+            print("Overriding file", item)
+            f.write(ET.tostring(dom))

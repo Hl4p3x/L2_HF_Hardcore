@@ -4689,7 +4689,7 @@
 		<acquire expRate="50.6339612813087" sp="34962"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="33003.982801143" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="5770.14557436436" magical="3940.26143244462" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2404.227322651817" magical="1713.1571445411391" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="552.978032" magical="606.967992"/>
 			<attribute>
 				<attack type="WATER" value="150"/>
@@ -4774,7 +4774,7 @@
 		<acquire expRate="51.8670043286084" sp="35858"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="33003.982801143" hpRegen="113.419259781018" mp="1708.8" mpRegen="3"/>
-			<attack physical="5770.14557436436" magical="3940.26143244462" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<attack physical="2404.227322651817" magical="1713.1571445411391" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
 			<defence physical="552.978032" magical="606.967992"/>
 			<attribute>
 				<attack type="WATER" value="150"/>
@@ -4854,7 +4854,7 @@
 		<acquire expRate="48.6821146341463" sp="34009"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="32946.0424680524" hpRegen="112.558039826218" mp="1743.0" mpRegen="3"/>
-			<attack physical="5793.32235492338" magical="3956.08814418738" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0"/>
+			<attack physical="2413.8843145514084" magical="1720.0383235597305" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<attack type="WATER" value="150"/>
@@ -4931,7 +4931,7 @@
 		<acquire expRate="48.6821146341463" sp="34009"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="32946.0424680524" hpRegen="112.558039826218" mp="1743.0" mpRegen="3"/>
-			<attack physical="5793.32235492338" magical="3956.08814418738" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0"/>
+			<attack physical="2413.8843145514084" magical="1720.0383235597305" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<attack type="WATER" value="150"/>
@@ -5015,7 +5015,7 @@
 		<acquire expRate="49.716169199881" sp="34769"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="32946.0424680524" hpRegen="112.558039826218" mp="1743.0" mpRegen="3"/>
-			<attack physical="5793.32235492338" magical="3956.08814418738" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="2413.8843145514084" magical="1720.0383235597305" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<attack type="WATER" value="150"/>
@@ -5094,7 +5094,7 @@
 		<acquire expRate="49.1409695518541" sp="34346"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="32946.0424680524" hpRegen="112.558039826218" mp="1743.0" mpRegen="3"/>
-			<attack physical="5793.32235492338" magical="3956.08814418738" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+			<attack physical="2413.8843145514084" magical="1720.0383235597305" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
 			<defence physical="559.639632" magical="614.28"/>
 			<attribute>
 				<attack type="WATER" value="150"/>
