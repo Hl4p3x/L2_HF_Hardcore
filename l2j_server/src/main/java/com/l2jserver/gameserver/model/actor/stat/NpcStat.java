@@ -21,120 +21,97 @@ package com.l2jserver.gameserver.model.actor.stat;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.model.stats.Stats;
-import com.l2jserver.util.Grade;
-import com.l2jserver.util.GradeMapper;
 
-public class NpcStat extends CharStat {
-
-	public NpcStat(L2Npc activeChar) {
+public class NpcStat extends CharStat
+{
+	
+	public NpcStat(L2Npc activeChar)
+	{
 		super(activeChar);
 	}
-
+	
 	@Override
-	public byte getLevel() {
+	public byte getLevel()
+	{
 		return getActiveChar().getTemplate().getLevel();
 	}
-
+	
 	@Override
-	public L2Npc getActiveChar() {
+	public L2Npc getActiveChar()
+	{
 		return (L2Npc) super.getActiveChar();
 	}
-
+	
 	@Override
-	public double getPDef(L2Character target) {
-		if (getActiveChar() == null) {
+	public double getPDef(L2Character target)
+	{
+		if (getActiveChar() == null)
+		{
 			return 1;
 		}
-
-		double pdef = Formulas.calculateMultipliers(getActiveChar(), getActiveChar().getTemplate().getBasePDef(),
-			Config.RAID_PDEFENCE_MULTIPLIER, Config.S_PLUS_MONSTER_PDEFENCE_MULTIPLIER,
-			Config.S_MONSTER_PDEFENCE_MULTIPLIER, Config.MONSTER_PDEFENCE_MULTIPLIER, Config.GUARD_PDEFENCE_MULTIPLIER);
+		
+		double pdef = Formulas.calculateMultipliers(getActiveChar(), getActiveChar().getTemplate().getBasePDef(), Config.RAID_PDEFENCE_MULTIPLIER, Config.S_PLUS_MONSTER_PDEFENCE_MULTIPLIER, Config.S_MONSTER_PDEFENCE_MULTIPLIER, Config.MONSTER_PDEFENCE_MULTIPLIER, Config.GUARD_PDEFENCE_MULTIPLIER);
 		return (int) calcStat(Stats.POWER_DEFENCE, pdef, target, null);
 	}
-
+	
 	@Override
-	public double getMDef(L2Character target, Skill skill) {
-		if (getActiveChar() == null) {
+	public double getMDef(L2Character target, Skill skill)
+	{
+		if (getActiveChar() == null)
+		{
 			return 1;
 		}
-
-		double defence = Formulas.calculateMultipliers(getActiveChar(), getActiveChar().getTemplate().getBaseMDef(),
-			Config.RAID_MDEFENCE_MULTIPLIER, Config.S_PLUS_MONSTER_MDEFENCE_MULTIPLIER,
-			Config.S_MONSTER_MDEFENCE_MULTIPLIER, Config.MONSTER_MDEFENCE_MULTIPLIER, Config.GUARD_MDEFENCE_MULTIPLIER);
+		
+		double defence = Formulas.calculateMultipliers(getActiveChar(), getActiveChar().getTemplate().getBaseMDef(), Config.RAID_MDEFENCE_MULTIPLIER, Config.S_PLUS_MONSTER_MDEFENCE_MULTIPLIER, Config.S_MONSTER_MDEFENCE_MULTIPLIER, Config.MONSTER_MDEFENCE_MULTIPLIER, Config.GUARD_MDEFENCE_MULTIPLIER);
 		return (int) calcStat(Stats.MAGIC_DEFENCE, defence, target, skill);
 	}
-
+	
 	@Override
-	public double getPAtk(L2Character target) {
-    if (getActiveChar() == null) {
-    	return 1;
+	public double getPAtk(L2Character target)
+	{
+		if (getActiveChar() == null)
+		{
+			return 1;
 		}
-    double bonusAtk = 1;
-		if (Config.L2JMOD_CHAMPION_ENABLE && getActiveChar().isChampion()) {
+		double bonusAtk = 1;
+		if (Config.L2JMOD_CHAMPION_ENABLE && getActiveChar().isChampion())
+		{
 			bonusAtk = Config.L2JMOD_CHAMPION_ATK;
 		}
-
-		bonusAtk *= Formulas.calculateMultipliers(getActiveChar(), bonusAtk, Config.RAID_PATTACK_MULTIPLIER,
-			Config.S_PLUS_MONSTER_PATTACK_MULTIPLIER, Config.S_MONSTER_PATTACK_MULTIPLIER,
-			Config.MONSTER_PATTACK_MULTIPLIER, Config.GUARD_PATTACK_MULTIPLIER);
+		
+		bonusAtk *= Formulas.calculateMultipliers(getActiveChar(), bonusAtk, Config.RAID_PATTACK_MULTIPLIER, Config.S_PLUS_MONSTER_PATTACK_MULTIPLIER, Config.S_MONSTER_PATTACK_MULTIPLIER, Config.MONSTER_PATTACK_MULTIPLIER, Config.GUARD_PATTACK_MULTIPLIER);
 		return calcStat(Stats.POWER_ATTACK, getActiveChar().getTemplate().getBasePAtk() * bonusAtk, target, null);
 	}
-
+	
 	@Override
-	public double getMAtk(L2Character target, Skill skill) {
+	public double getMAtk(L2Character target, Skill skill)
+	{
 		float bonusAtk = 1;
-		if (Config.L2JMOD_CHAMPION_ENABLE && getActiveChar().isChampion()) {
+		if (Config.L2JMOD_CHAMPION_ENABLE && getActiveChar().isChampion())
+		{
 			bonusAtk = Config.L2JMOD_CHAMPION_ATK;
 		}
-
-		bonusAtk *= Formulas.calculateMultipliers(getActiveChar(), bonusAtk, Config.RAID_MATTACK_MULTIPLIER,
-			Config.S_PLUS_MONSTER_MATTACK_MULTIPLIER, Config.S_MONSTER_MATTACK_MULTIPLIER,
-			Config.MONSTER_MATTACK_MULTIPLIER, Config.GUARD_MATTACK_MULTIPLIER);
+		
+		bonusAtk *= Formulas.calculateMultipliers(getActiveChar(), bonusAtk, Config.RAID_MATTACK_MULTIPLIER, Config.S_PLUS_MONSTER_MATTACK_MULTIPLIER, Config.S_MONSTER_MATTACK_MULTIPLIER, Config.MONSTER_MATTACK_MULTIPLIER, Config.GUARD_MATTACK_MULTIPLIER);
 		return calcStat(Stats.MAGIC_ATTACK, getActiveChar().getTemplate().getBaseMAtk() * bonusAtk, target, skill);
 	}
-
+	
 	@Override
-	public int getMaxHp()	{
-		double maxHp = getActiveChar().getTemplate().getBaseHpMax();
-		if (L2MonsterInstance.class.isAssignableFrom(getActiveChar().getClass()) && !getActiveChar().isRaid()) {
-			L2MonsterInstance monster = (L2MonsterInstance) getActiveChar();
-			Grade grade = GradeMapper.resolveGrade(monster.getOriginalLevel());
-			if (Grade.S_PLUS.equals(grade)) {
-				maxHp *= Config.S_PLUS_MONSTER_HP_MULTIPLIER;
-			} else if (Grade.S.equals(grade)) {
-				maxHp *= Config.S_MONSTER_HP_MULTIPLIER;
-			} else {
-				maxHp *= Config.MONSTER_HP_MULTIPLIER;
-			}
-		} else if (L2GuardInstance.class.isAssignableFrom(getActiveChar().getClass())) {
-			maxHp *= Config.GUARD_HP_MULTIPLIER;
-		}
-
+	public int getMaxHp()
+	{
+		double maxHp = Formulas.calculateMultipliers(getActiveChar(), getActiveChar().getTemplate().getBaseHpMax(), Config.RAID_HP_MULTIPLIER, Config.S_PLUS_MONSTER_HP_MULTIPLIER, Config.S_MONSTER_HP_MULTIPLIER, Config.MONSTER_HP_MULTIPLIER, Config.GUARD_HP_MULTIPLIER);
+		
 		return (int) calcStat(Stats.MAX_HP, maxHp);
 	}
-
+	
 	@Override
-	public int getMaxMp() {
-		double maxMp = getActiveChar().getTemplate().getBaseMpMax();
-		if (L2MonsterInstance.class.isAssignableFrom(getActiveChar().getClass()) && !getActiveChar().isRaid()) {
-			L2MonsterInstance monster = (L2MonsterInstance) getActiveChar();
-			Grade grade = GradeMapper.resolveGrade(monster.getOriginalLevel());
-			if (Grade.S_PLUS.equals(grade)) {
-				maxMp *= Config.S_PLUS_MONSTER_MP_MULTIPLIER;
-			} else if (Grade.S.equals(grade)) {
-				maxMp *= Config.S_MONSTER_MP_MULTIPLIER;
-			} else {
-				maxMp *= Config.MONSTER_MP_MULTIPLIER;
-			}
-		} else if (L2GuardInstance.class.isAssignableFrom(getActiveChar().getClass())) {
-			maxMp *= Config.GUARD_MP_MULTIPLIER;
-		}
+	public int getMaxMp()
+	{
+		double maxMp = Formulas.calculateMultipliers(getActiveChar(), getActiveChar().getTemplate().getBaseMpMax(), Config.RAID_MP_MULTIPLIER, Config.S_PLUS_MONSTER_MP_MULTIPLIER, Config.S_MONSTER_MP_MULTIPLIER, Config.MONSTER_MP_MULTIPLIER, Config.GUARD_MP_MULTIPLIER);
 		return (int) calcStat(Stats.MAX_MP, maxMp);
 	}
-
+	
 }

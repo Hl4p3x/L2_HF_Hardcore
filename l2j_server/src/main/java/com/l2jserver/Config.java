@@ -18,16 +18,6 @@
  */
 package com.l2jserver;
 
-import com.l2jserver.gameserver.GameServer;
-import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.util.FloodProtectorConfig;
-import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.PropertiesParser;
-import com.l2jserver.util.StringUtil;
-import com.l2jserver.util.data.xml.IXmlReader;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -61,11 +51,23 @@ import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
+import com.l2jserver.gameserver.GameServer;
+import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+import com.l2jserver.gameserver.util.FloodProtectorConfig;
+import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.PropertiesParser;
+import com.l2jserver.util.StringUtil;
+import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * This class loads all the game server related configurations from files.<br>
@@ -74,15 +76,15 @@ import org.w3c.dom.Node;
  */
 public final class Config
 {
-
-    private static final Logger LOG = LoggerFactory.getLogger(Config.class);
-
+	
+	private static final Logger LOG = LoggerFactory.getLogger(Config.class);
+	
 	// --------------------------------------------------
 	// Constants
 	// --------------------------------------------------
 	public static final String EOL = System.lineSeparator();
 	public static final long CHECK_ACTIVITY_DELAY = 60000;
-
+	
 	// --------------------------------------------------
 	// L2J Property File Definitions
 	// --------------------------------------------------
@@ -265,8 +267,8 @@ public final class Config
 	public static boolean ALT_VALIDATE_TRIGGER_SKILLS;
 	public static boolean ALT_DROPPABLE_AUGMENTED_ITEMS;
 	public static boolean ALT_DISABLE_DEATH_PENALTY;
-    public static boolean ALT_AUTO_LEARN_SKILLS_ON_SP;
-
+	public static boolean ALT_AUTO_LEARN_SKILLS_ON_SP;
+	
 	// --------------------------------------------------
 	// ClanHall Settings
 	// --------------------------------------------------
@@ -353,7 +355,7 @@ public final class Config
 	public static int TRAP_UPGRADE_PRICE2;
 	public static int TRAP_UPGRADE_PRICE3;
 	public static int TRAP_UPGRADE_PRICE4;
-
+	
 	// --------------------------------------------------
 	// Fortress Settings
 	// --------------------------------------------------
@@ -397,8 +399,8 @@ public final class Config
 	public static int REPUTATION_SCORE_PER_KILL;
 	public static int JOIN_ACADEMY_MIN_REP_SCORE;
 	public static int JOIN_ACADEMY_MAX_REP_SCORE;
-    public static boolean ALT_FIXED_ACADEMY_REP_SCORE;
-    public static int ALT_FIXED_ACADEMY_REP_SCORE_AMOUNT;
+	public static boolean ALT_FIXED_ACADEMY_REP_SCORE;
+	public static int ALT_FIXED_ACADEMY_REP_SCORE_AMOUNT;
 	public static int RAID_RANKING_1ST;
 	public static int RAID_RANKING_2ND;
 	public static int RAID_RANKING_3RD;
@@ -425,7 +427,7 @@ public final class Config
 	public static int CLAN_LEVEL_11_REQUIREMENT;
 	public static boolean ALLOW_WYVERN_ALWAYS;
 	public static boolean ALLOW_WYVERN_DURING_SIEGE;
-
+	
 	// --------------------------------------------------
 	// General Settings
 	// --------------------------------------------------
@@ -569,7 +571,7 @@ public final class Config
 	public static int[][] ALT_OLY_CLASSED_REWARD;
 	public static int[][] ALT_OLY_NONCLASSED_REWARD;
 	public static int[][] ALT_OLY_TEAM_REWARD;
-    public static int OLYPMIAD_CYCLE_IN_WEEKS;
+	public static int OLYPMIAD_CYCLE_IN_WEEKS;
 	public static int ALT_OLY_COMP_RITEM;
 	public static int ALT_OLY_MIN_MATCHES;
 	public static int ALT_OLY_GP_PER_POINT;
@@ -654,7 +656,7 @@ public final class Config
 	public static String[] BOTREPORT_RESETPOINT_HOUR;
 	public static long BOTREPORT_REPORT_DELAY;
 	public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
-
+	
 	// --------------------------------------------------
 	// FloodProtector Settings
 	// --------------------------------------------------
@@ -811,7 +813,7 @@ public final class Config
 	public static boolean GUARD_ATTACK_AGGRO_MOB;
 	public static boolean ALLOW_WYVERN_UPGRADER;
 	public static List<Integer> LIST_PET_RENT_NPC;
-
+	
 	public static double GUARD_HP_REGEN_MULTIPLIER;
 	public static double GUARD_MP_REGEN_MULTIPLIER;
 	public static double GUARD_HP_MULTIPLIER;
@@ -820,7 +822,7 @@ public final class Config
 	public static double GUARD_MDEFENCE_MULTIPLIER;
 	public static double GUARD_PATTACK_MULTIPLIER;
 	public static double GUARD_MATTACK_MULTIPLIER;
-
+	
 	public static double MONSTER_HP_REGEN_MULTIPLIER;
 	public static double MONSTER_MP_REGEN_MULTIPLIER;
 	public static double MONSTER_HP_MULTIPLIER;
@@ -829,25 +831,27 @@ public final class Config
 	public static double MONSTER_MDEFENCE_MULTIPLIER;
 	public static double MONSTER_PATTACK_MULTIPLIER;
 	public static double MONSTER_MATTACK_MULTIPLIER;
-
-    public static double S_PLUS_MONSTER_HP_REGEN_MULTIPLIER;
-    public static double S_PLUS_MONSTER_MP_REGEN_MULTIPLIER;
-    public static double S_PLUS_MONSTER_HP_MULTIPLIER;
-    public static double S_PLUS_MONSTER_MP_MULTIPLIER;
-    public static double S_PLUS_MONSTER_PDEFENCE_MULTIPLIER;
-    public static double S_PLUS_MONSTER_MDEFENCE_MULTIPLIER;
-    public static double S_PLUS_MONSTER_PATTACK_MULTIPLIER;
-    public static double S_PLUS_MONSTER_MATTACK_MULTIPLIER;
-
-    public static double S_MONSTER_HP_REGEN_MULTIPLIER;
-    public static double S_MONSTER_MP_REGEN_MULTIPLIER;
-    public static double S_MONSTER_HP_MULTIPLIER;
-    public static double S_MONSTER_MP_MULTIPLIER;
-    public static double S_MONSTER_PDEFENCE_MULTIPLIER;
-    public static double S_MONSTER_MDEFENCE_MULTIPLIER;
-    public static double S_MONSTER_PATTACK_MULTIPLIER;
-    public static double S_MONSTER_MATTACK_MULTIPLIER;
-
+	
+	public static double S_PLUS_MONSTER_HP_REGEN_MULTIPLIER;
+	public static double S_PLUS_MONSTER_MP_REGEN_MULTIPLIER;
+	public static double S_PLUS_MONSTER_HP_MULTIPLIER;
+	public static double S_PLUS_MONSTER_MP_MULTIPLIER;
+	public static double S_PLUS_MONSTER_PDEFENCE_MULTIPLIER;
+	public static double S_PLUS_MONSTER_MDEFENCE_MULTIPLIER;
+	public static double S_PLUS_MONSTER_PATTACK_MULTIPLIER;
+	public static double S_PLUS_MONSTER_MATTACK_MULTIPLIER;
+	
+	public static double S_MONSTER_HP_REGEN_MULTIPLIER;
+	public static double S_MONSTER_MP_REGEN_MULTIPLIER;
+	public static double S_MONSTER_HP_MULTIPLIER;
+	public static double S_MONSTER_MP_MULTIPLIER;
+	public static double S_MONSTER_PDEFENCE_MULTIPLIER;
+	public static double S_MONSTER_MDEFENCE_MULTIPLIER;
+	public static double S_MONSTER_PATTACK_MULTIPLIER;
+	public static double S_MONSTER_MATTACK_MULTIPLIER;
+	
+	public static double RAID_HP_MULTIPLIER;
+	public static double RAID_MP_MULTIPLIER;
 	public static double RAID_HP_REGEN_MULTIPLIER;
 	public static double RAID_MP_REGEN_MULTIPLIER;
 	public static double RAID_PDEFENCE_MULTIPLIER;
@@ -872,11 +876,15 @@ public final class Config
 	public static int DROP_ITEM_MAX_LEVEL_DIFFERENCE;
 	public static double DROP_ITEM_MIN_LEVEL_GAP_CHANCE;
 	public static float AGGRO_RANGE_MODIFIER;
-
+	
 	public static float MONSTER_RESPAWN_MODIFIER;
 	public static int MONSTER_RESPAWN_RANDOM_DEFAULT;
 	public static int MONSTER_MAX_DRIFT_FROM_SPAWN;
-
+	
+	public static long NPC_DELAY_BETWEEN_CASTS;
+	public static int NPC_DEFAULT_MIN_SKILL_CHANCE;
+	public static int NPC_DEFAULT_MAX_SKILL_CHANCE;
+	
 	// --------------------------------------------------
 	// PvP Settings
 	// --------------------------------------------------
@@ -887,7 +895,7 @@ public final class Config
 	public static String KARMA_NONDROPPABLE_ITEMS;
 	public static int[] KARMA_LIST_NONDROPPABLE_PET_ITEMS;
 	public static int[] KARMA_LIST_NONDROPPABLE_ITEMS;
-
+	
 	// --------------------------------------------------
 	// Rate Settings
 	// --------------------------------------------------
@@ -942,14 +950,14 @@ public final class Config
 	public static int KARMA_RATE_DROP_ITEM;
 	public static int KARMA_RATE_DROP_EQUIP;
 	public static int KARMA_RATE_DROP_EQUIP_WEAPON;
-
+	
 	public static boolean VALUABLE_ITEMS_DETAILED_CALCULATION;
 	public static boolean VALUABLE_ITEMS_LIMIT_LOG;
-  public static int VALUABLE_ITEMS_WARNING_LIMIT;
-
+	public static int VALUABLE_ITEMS_WARNING_LIMIT;
+	
 	public static boolean SKIP_CATEGORY_DROP_CHANCE;
 	public static boolean ALL_CATEGORY_ITEMS_DROP_CHANCE;
-
+	
 	// --------------------------------------------------
 	// Seven Signs Settings
 	// --------------------------------------------------
@@ -977,7 +985,7 @@ public final class Config
 	public static int SSQ_DAWN_TICKET_BUNDLE;
 	public static int SSQ_MANORS_AGREEMENT_ID;
 	public static int SSQ_JOIN_DAWN_ADENA_FEE;
-
+	
 	// --------------------------------------------------
 	// Server Settings
 	// --------------------------------------------------
@@ -1008,7 +1016,7 @@ public final class Config
 	public static List<Integer> PROTOCOL_LIST;
 	public static boolean LOGIN_SERVER_SCHEDULE_RESTART;
 	public static long LOGIN_SERVER_SCHEDULE_RESTART_TIME;
-
+	
 	// --------------------------------------------------
 	// MMO Settings
 	// --------------------------------------------------
@@ -1017,7 +1025,7 @@ public final class Config
 	public static int MMO_MAX_READ_PER_PASS;
 	public static int MMO_HELPER_BUFFER_COUNT;
 	public static boolean MMO_TCP_NODELAY;
-
+	
 	// --------------------------------------------------
 	// Vitality Settings
 	// --------------------------------------------------
@@ -1034,7 +1042,7 @@ public final class Config
 	public static float RATE_VITALITY_GAIN;
 	public static float RATE_RECOVERY_ON_RECONNECT;
 	public static int STARTING_VITALITY_POINTS;
-
+	
 	// --------------------------------------------------
 	// No classification assigned to the following yet
 	// --------------------------------------------------
@@ -1048,19 +1056,19 @@ public final class Config
 	public static int PVP_PVP_TIME;
 	public static boolean ALT_PLAYER_DROP_CAN_BE_CRYSTALLIZED;
 	public static float ALT_PLAYER_DROP_CRYSTALLIZATION_CHANCE;
-
+	
 	public static enum IdFactoryType
 	{
 		Compaction,
 		BitSet,
 		Stack
 	}
-
+	
 	public static IdFactoryType IDFACTORY_TYPE;
 	public static boolean BAD_ID_CHECKING;
-
+	
 	public static int WEEKS_BETWEEN_SIEGES;
-
+	
 	public static double ENCHANT_CHANCE_ELEMENT_STONE;
 	public static double ENCHANT_CHANCE_ELEMENT_CRYSTAL;
 	public static double ENCHANT_CHANCE_ELEMENT_JEWEL;
@@ -1098,65 +1106,65 @@ public final class Config
 	public static int NORMAL_CONNECTION_TIME;
 	public static int FAST_CONNECTION_TIME;
 	public static int MAX_CONNECTION_PER_IP;
-
+	
 	// GrandBoss Settings
-
+	
 	// Antharas
 	public static int ANTHARAS_WAIT_TIME;
 	public static int ANTHARAS_SPAWN_INTERVAL;
 	public static int ANTHARAS_SPAWN_RANDOM;
-
+	
 	// Zaken
 	public static int ZAKEN_SPAWN_INTERVAL;
 	public static int ZAKEN_SPAWN_RANDOM;
 	public static int ZAKEN_INACTIVITY_TIMEOUT;
-
+	
 	// FREYA
 	public static int FREYA_CONTEST_TIME;
 	public static int FREYA_SPAWN_INTERVAL;
 	public static int FREYA_SPAWN_RANDOM;
 	public static int FREYA_RESET_TIMEOUT;
 	public static int FREYA_STAGE_DELAY;
-
+	
 	// FRINTEZZA
 	public static int FRINTEZZA_RESET_TIMEOUT;
 	public static int FRINTEZZA_SPAWN_INTERVAL;
 	public static int FRINTEZZA_SPAWN_RANDOM;
 	public static int FRINTEZZA_FIGHT_DELAY;
-
+	
 	// Valakas
 	public static int VALAKAS_WAIT_TIME;
 	public static int VALAKAS_SPAWN_INTERVAL;
 	public static int VALAKAS_SPAWN_RANDOM;
-
+	
 	// Baium
 	public static int BAIUM_SPAWN_INTERVAL;
 	public static int BAIUM_SPAWN_RANDOM;
-
+	
 	// Core
 	public static int CORE_SPAWN_INTERVAL;
 	public static int CORE_SPAWN_RANDOM;
-
+	
 	// Offen
 	public static int ORFEN_SPAWN_INTERVAL;
 	public static int ORFEN_SPAWN_RANDOM;
-
+	
 	// Queen Ant
 	public static int QUEEN_ANT_SPAWN_INTERVAL;
 	public static int QUEEN_ANT_SPAWN_RANDOM;
-
+	
 	// Beleth
 	public static int BELETH_MIN_PLAYERS;
 	public static int BELETH_SPAWN_INTERVAL;
 	public static int BELETH_SPAWN_RANDOM;
-
+	
 	// Gracia Seeds Settings
 	public static int SOD_TIAT_KILL_COUNT;
 	public static long SOD_STAGE_2_LENGTH;
-
+	
 	// chatfilter
 	public static List<String> FILTER_LIST;
-
+	
 	// Email
 	public static String EMAIL_SERVERINFO_NAME;
 	public static String EMAIL_SERVERINFO_ADDRESS;
@@ -1171,7 +1179,7 @@ public final class Config
 	public static String EMAIL_SYS_ADDRESS;
 	public static String EMAIL_SYS_SELECTQUERY;
 	public static String EMAIL_SYS_DBFIELD;
-
+	
 	// Conquerable Halls Settings
 	public static int CHS_CLAN_MINLEVEL;
 	public static int CHS_MAX_ATTACKERS;
@@ -1179,7 +1187,7 @@ public final class Config
 	public static boolean CHS_ENABLE_FAME;
 	public static int CHS_FAME_AMOUNT;
 	public static int CHS_FAME_FREQUENCY;
-
+	
 	// GeoData Settings
 	public static int PATHFINDING;
 	public static File PATHNODE_DIR;
@@ -1196,7 +1204,7 @@ public final class Config
 	public static Path GEODATA_PATH;
 	public static boolean TRY_LOAD_UNSPECIFIED_REGIONS;
 	public static Map<String, Boolean> GEODATA_REGIONS;
-
+	
 	/**
 	 * This class initializes all global variables for configuration.<br>
 	 * If the key doesn't appear in properties file, a default value is set by this class. {@link #CONFIGURATION_FILE} (properties file) for configuring your server.
@@ -1221,19 +1229,19 @@ public final class Config
 			FLOOD_PROTECTOR_SENDMAIL = new FloodProtectorConfig("SendMailFloodProtector");
 			FLOOD_PROTECTOR_CHARACTER_SELECT = new FloodProtectorConfig("CharacterSelectFloodProtector");
 			FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
-
+			
 			final PropertiesParser serverSettings = new PropertiesParser(CONFIGURATION_FILE);
-
+			
 			ENABLE_UPNP = serverSettings.getBoolean("EnableUPnP", true);
 			GAMESERVER_HOSTNAME = serverSettings.getString("GameserverHostname", "*");
 			PORT_GAME = serverSettings.getInt("GameserverPort", 7777);
-
+			
 			GAME_SERVER_LOGIN_PORT = serverSettings.getInt("LoginPort", 9014);
 			GAME_SERVER_LOGIN_HOST = serverSettings.getString("LoginHost", "127.0.0.1");
-
+			
 			REQUEST_ID = serverSettings.getInt("RequestServerID", 0);
 			ACCEPT_ALTERNATE_ID = serverSettings.getBoolean("AcceptAlternateID", true);
-
+			
 			DATABASE_ENGINE = serverSettings.getString("Database", "MySQL");
 			DATABASE_DRIVER = serverSettings.getString("Driver", "com.mysql.jdbc.Driver");
 			DATABASE_URL = serverSettings.getString("URL", "jdbc:mysql://localhost/l2jgs");
@@ -1242,7 +1250,7 @@ public final class Config
 			DATABASE_CONNECTION_POOL = serverSettings.getString("ConnectionPool", "C3P0");
 			DATABASE_MAX_CONNECTIONS = serverSettings.getInt("MaximumDbConnections", 10);
 			DATABASE_MAX_IDLE_TIME = serverSettings.getInt("MaximumDbIdleTime", 0);
-
+			
 			try
 			{
 				DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
@@ -1252,14 +1260,14 @@ public final class Config
 				LOG.warn("Error setting datapack root!", e);
 				DATAPACK_ROOT = new File(".");
 			}
-
+			
 			PLAYER_NAME_TEMPLATE = Pattern.compile(serverSettings.getString("PlayerNameTemplate", "[a-zA-Z0-9]*"));
 			PET_NAME_TEMPLATE = Pattern.compile(serverSettings.getString("PetNameTemplate", "[a-zA-Z0-9]*"));
 			CLAN_NAME_TEMPLATE = Pattern.compile(serverSettings.getString("ClanNameTemplate", "[a-zA-Z0-9]*"));
-
+			
 			MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getInt("CharMaxNumber", 7);
 			MAXIMUM_ONLINE_USERS = serverSettings.getInt("MaximumOnlineUsers", 100);
-
+			
 			String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "267;268;271;273").split(";");
 			PROTOCOL_LIST = new ArrayList<>(protocols.length);
 			for (String protocol : protocols)
@@ -1273,15 +1281,15 @@ public final class Config
 					LOG.warn("Wrong config protocol version: {}, skipped.", protocol);
 				}
 			}
-
+			
 			// Hosts and Subnets
 			IPConfigData ipcd = new IPConfigData();
 			GAME_SERVER_SUBNETS = ipcd.getSubnets();
 			GAME_SERVER_HOSTS = ipcd.getHosts();
-
+			
 			// Load Feature L2Properties file (if exists)
 			final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
-
+			
 			CH_TELE_FEE_RATIO = Feature.getLong("ClanHallTeleportFunctionFeeRatio", 604800000);
 			CH_TELE1_FEE = Feature.getInt("ClanHallTeleportFunctionFeeLvl1", 7000);
 			CH_TELE2_FEE = Feature.getInt("ClanHallTeleportFunctionFeeLvl2", 14000);
@@ -1356,7 +1364,7 @@ public final class Config
 			CS_EXPREG_FEE_RATIO = Feature.getLong("CastleExpRegenerationFunctionFeeRatio", 604800000);
 			CS_EXPREG1_FEE = Feature.getInt("CastleExpRegenerationFeeLvl1", 63000);
 			CS_EXPREG2_FEE = Feature.getInt("CastleExpRegenerationFeeLvl2", 70000);
-
+			
 			OUTER_DOOR_UPGRADE_PRICE2 = Feature.getInt("OuterDoorUpgradePriceLvl2", 3000000);
 			OUTER_DOOR_UPGRADE_PRICE3 = Feature.getInt("OuterDoorUpgradePriceLvl3", 4000000);
 			OUTER_DOOR_UPGRADE_PRICE5 = Feature.getInt("OuterDoorUpgradePriceLvl5", 5000000);
@@ -1370,7 +1378,7 @@ public final class Config
 			TRAP_UPGRADE_PRICE2 = Feature.getInt("TrapUpgradePriceLvl2", 4000000);
 			TRAP_UPGRADE_PRICE3 = Feature.getInt("TrapUpgradePriceLvl3", 5000000);
 			TRAP_UPGRADE_PRICE4 = Feature.getInt("TrapUpgradePriceLvl4", 6000000);
-
+			
 			FS_TELE_FEE_RATIO = Feature.getLong("FortressTeleportFunctionFeeRatio", 604800000);
 			FS_TELE1_FEE = Feature.getInt("FortressTeleportFunctionFeeLvl1", 1000);
 			FS_TELE2_FEE = Feature.getInt("FortressTeleportFunctionFeeLvl2", 10000);
@@ -1391,7 +1399,7 @@ public final class Config
 			FS_MAX_SUPPLY_LEVEL = Feature.getInt("FortressMaxSupplyLevel", 6);
 			FS_FEE_FOR_CASTLE = Feature.getInt("FortressFeeForCastle", 25000);
 			FS_MAX_OWN_TIME = Feature.getInt("FortressMaximumOwnTime", 168);
-
+			
 			ALT_GAME_CASTLE_DAWN = Feature.getBoolean("AltCastleForDawn", true);
 			ALT_GAME_CASTLE_DUSK = Feature.getBoolean("AltCastleForDusk", true);
 			ALT_GAME_REQUIRE_CLAN_CASTLE = Feature.getBoolean("AltRequireClanCastle", false);
@@ -1411,13 +1419,13 @@ public final class Config
 			ALT_SIEGE_DUSK_GATES_MDEF_MULT = Feature.getDouble("AltDuskGatesMdefMult", 0.8);
 			ALT_STRICT_SEVENSIGNS = Feature.getBoolean("StrictSevenSigns", true);
 			ALT_SEVENSIGNS_LAZY_UPDATE = Feature.getBoolean("AltSevenSignsLazyUpdate", true);
-
+			
 			SSQ_DAWN_TICKET_QUANTITY = Feature.getInt("SevenSignsDawnTicketQuantity", 300);
 			SSQ_DAWN_TICKET_PRICE = Feature.getInt("SevenSignsDawnTicketPrice", 1000);
 			SSQ_DAWN_TICKET_BUNDLE = Feature.getInt("SevenSignsDawnTicketBundle", 10);
 			SSQ_MANORS_AGREEMENT_ID = Feature.getInt("SevenSignsManorsAgreementId", 6388);
 			SSQ_JOIN_DAWN_ADENA_FEE = Feature.getInt("SevenSignsJoinDawnFee", 50000);
-
+			
 			TAKE_FORT_POINTS = Feature.getInt("TakeFortPoints", 200);
 			LOOSE_FORT_POINTS = Feature.getInt("LooseFortPoints", 0);
 			TAKE_CASTLE_POINTS = Feature.getInt("TakeCastlePoints", 1500);
@@ -1435,10 +1443,10 @@ public final class Config
 			REPUTATION_SCORE_PER_KILL = Feature.getInt("ReputationScorePerKill", 1);
 			JOIN_ACADEMY_MIN_REP_SCORE = Feature.getInt("CompleteAcademyMinPoints", 190);
 			JOIN_ACADEMY_MAX_REP_SCORE = Feature.getInt("CompleteAcademyMaxPoints", 650);
-
-            ALT_FIXED_ACADEMY_REP_SCORE = Feature.getBoolean("AltFixedAcademyRepScore", true);
-            ALT_FIXED_ACADEMY_REP_SCORE_AMOUNT = Feature.getInt("AltFixedAcademyRepScoreAmount", 400);
-
+			
+			ALT_FIXED_ACADEMY_REP_SCORE = Feature.getBoolean("AltFixedAcademyRepScore", true);
+			ALT_FIXED_ACADEMY_REP_SCORE_AMOUNT = Feature.getInt("AltFixedAcademyRepScoreAmount", 400);
+			
 			RAID_RANKING_1ST = Feature.getInt("1stRaidRankingPoints", 1250);
 			RAID_RANKING_2ND = Feature.getInt("2ndRaidRankingPoints", 900);
 			RAID_RANKING_3RD = Feature.getInt("3rdRaidRankingPoints", 700);
@@ -1465,10 +1473,10 @@ public final class Config
 			CLAN_LEVEL_11_REQUIREMENT = Feature.getInt("ClanLevel11Requirement", 170);
 			ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
 			ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
-
+			
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser character = new PropertiesParser(CHARACTER_CONFIG_FILE);
-
+			
 			ALT_GAME_DELEVEL = character.getBoolean("Delevel", true);
 			DECREASE_SKILL_LEVEL = character.getBoolean("DecreaseSkillOnDelevel", true);
 			ALT_WEIGHT_LIMIT = character.getDouble("AltWeightLimit", 1);
@@ -1481,7 +1489,7 @@ public final class Config
 			MP_REGEN_MULTIPLIER = character.getDouble("MpRegenMultiplier", 100) / 100;
 			CP_REGEN_MULTIPLIER = character.getDouble("CpRegenMultiplier", 100) / 100;
 			ENABLE_MODIFY_SKILL_DURATION = character.getBoolean("EnableModifySkillDuration", false);
-
+			
 			// Create Map only if enabled
 			if (ENABLE_MODIFY_SKILL_DURATION)
 			{
@@ -1539,7 +1547,7 @@ public final class Config
 					}
 				}
 			}
-
+			
 			AUTO_LEARN_SKILLS = character.getBoolean("AutoLearnSkills", false);
 			AUTO_LEARN_FS_SKILLS = character.getBoolean("AutoLearnForgottenScrollSkills", false);
 			AUTO_LOOT_HERBS = character.getBoolean("AutoLootHerbs", false);
@@ -1620,7 +1628,7 @@ public final class Config
 				ENCHANT_BLACKLIST[i] = Integer.parseInt(notenchantable[i]);
 			}
 			Arrays.sort(ENCHANT_BLACKLIST);
-
+			
 			AUGMENTATION_NG_SKILL_CHANCE = character.getInt("AugmentationNGSkillChance", 15);
 			AUGMENTATION_NG_GLOW_CHANCE = character.getInt("AugmentationNGGlowChance", 0);
 			AUGMENTATION_MID_SKILL_CHANCE = character.getInt("AugmentationMidSkillChance", 30);
@@ -1631,7 +1639,7 @@ public final class Config
 			AUGMENTATION_TOP_GLOW_CHANCE = character.getInt("AugmentationTopGlowChance", 100);
 			AUGMENTATION_BASESTAT_CHANCE = character.getInt("AugmentationBaseStatChance", 1);
 			AUGMENTATION_ACC_SKILL_CHANCE = character.getInt("AugmentationAccSkillChance", 0);
-
+			
 			RETAIL_LIKE_AUGMENTATION = character.getBoolean("RetailLikeAugmentation", true);
 			String[] array = character.getString("RetailLikeAugmentationNoGradeChance", "55,35,7,3").split(",");
 			RETAIL_LIKE_AUGMENTATION_NG_CHANCE = new int[array.length];
@@ -1658,15 +1666,15 @@ public final class Config
 				RETAIL_LIKE_AUGMENTATION_TOP_CHANCE[i] = Integer.parseInt(array[i]);
 			}
 			RETAIL_LIKE_AUGMENTATION_ACCESSORY = character.getBoolean("RetailLikeAugmentationAccessory", true);
-
+			
 			array = character.getString("AugmentationBlackList", "6656,6657,6658,6659,6660,6661,6662,8191,10170,10314,13740,13741,13742,13743,13744,13745,13746,13747,13748,14592,14593,14594,14595,14596,14597,14598,14599,14600,14664,14665,14666,14667,14668,14669,14670,14671,14672,14801,14802,14803,14804,14805,14806,14807,14808,14809,15282,15283,15284,15285,15286,15287,15288,15289,15290,15291,15292,15293,15294,15295,15296,15297,15298,15299,16025,16026,21712,22173,22174,22175").split(",");
 			AUGMENTATION_BLACKLIST = new int[array.length];
-
+			
 			for (int i = 0; i < array.length; i++)
 			{
 				AUGMENTATION_BLACKLIST[i] = Integer.parseInt(array[i]);
 			}
-
+			
 			Arrays.sort(AUGMENTATION_BLACKLIST);
 			ALT_ALLOW_AUGMENT_PVP_ITEMS = character.getBoolean("AltAllowAugmentPvPItems", false);
 			ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE = character.getBoolean("AltKarmaPlayerCanBeKilledInPeaceZone", false);
@@ -1745,7 +1753,7 @@ public final class Config
 					LOG.warn("Player Spawn Protection: Wrong Item ID passed: {}", item, nfe);
 				}
 			}
-
+			
 			PLAYER_TELEPORT_PROTECTION = character.getInt("PlayerTeleportProtection", 0);
 			RANDOM_RESPAWN_IN_TOWN_ENABLED = character.getBoolean("RandomRespawnInTownEnabled", true);
 			OFFSET_ON_TELEPORT_ENABLED = character.getBoolean("OffsetOnTeleportEnabled", true);
@@ -1786,32 +1794,31 @@ public final class Config
 			ALT_DROPPABLE_AUGMENTED_ITEMS = character.getBoolean("AltDroppableAugmentedItems", true);
 			ALT_DISABLE_DEATH_PENALTY = character.getBoolean("AltDisableDeathPenalty", false);
 			PLAYER_MOVEMENT_BLOCK_TIME = character.getInt("NpcTalkBlockingTime", 0) * 1000;
-            ALT_AUTO_LEARN_SKILLS_ON_SP = character.getBoolean("AltAutoLearnSkillsOnSp", false);
-
+			ALT_AUTO_LEARN_SKILLS_ON_SP = character.getBoolean("AltAutoLearnSkillsOnSp", false);
+			
 			// Load Telnet L2Properties file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);
-
+			
 			IS_TELNET_ENABLED = telnetSettings.getBoolean("EnableTelnet", false);
-
+			
 			// MMO
 			final PropertiesParser mmoSettings = new PropertiesParser(MMO_CONFIG_FILE);
-
+			
 			MMO_SELECTOR_SLEEP_TIME = mmoSettings.getInt("SleepTime", 20);
 			MMO_MAX_SEND_PER_PASS = mmoSettings.getInt("MaxSendPerPass", 12);
 			MMO_MAX_READ_PER_PASS = mmoSettings.getInt("MaxReadPerPass", 12);
 			MMO_HELPER_BUFFER_COUNT = mmoSettings.getInt("HelperBufferCount", 20);
 			MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
-
+			
 			// Load IdFactory L2Properties file (if exists)
 			final PropertiesParser IdFactory = new PropertiesParser(ID_CONFIG_FILE);
-
+			
 			IDFACTORY_TYPE = IdFactory.getEnum("IDFactory", IdFactoryType.class, IdFactoryType.BitSet);
 			BAD_ID_CHECKING = IdFactory.getBoolean("BadIdChecking", true);
-
-
-            final PropertiesParser siege = new PropertiesParser(SIEGE_CONFIGURATION_FILE);
-            WEEKS_BETWEEN_SIEGES = siege.getInt("WeeksBetweenSieges", 1);
-
+			
+			final PropertiesParser siege = new PropertiesParser(SIEGE_CONFIGURATION_FILE);
+			WEEKS_BETWEEN_SIEGES = siege.getInt("WeeksBetweenSieges", 1);
+			
 			// Load General L2Properties file (if exists)
 			final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 			EVERYBODY_HAS_ADMIN_RIGHTS = General.getBoolean("EverybodyHasAdminRights", false);
@@ -2047,24 +2054,24 @@ public final class Config
 			}
 			HBCE_FAIR_PLAY = General.getBoolean("HBCEFairPlay", false);
 			HELLBOUND_WITHOUT_QUEST = General.getBoolean("HellboundWithoutQuest", false);
-
+			
 			NORMAL_ENCHANT_COST_MULTIPLIER = General.getInt("NormalEnchantCostMultipiler", 1);
 			SAFE_ENCHANT_COST_MULTIPLIER = General.getInt("SafeEnchantCostMultipiler", 5);
-
+			
 			BOTREPORT_ENABLE = General.getBoolean("EnableBotReportButton", false);
 			BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
 			BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000;
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
 			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
-
+			
 			// Load FloodProtector L2Properties file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_FILE);
-
+			
 			loadFloodProtectorConfigs(FloodProtectors);
-
+			
 			// Load NPC L2Properties file (if exists)
 			final PropertiesParser NPC = new PropertiesParser(NPC_CONFIG_FILE);
-
+			
 			ANNOUNCE_MAMMON_SPAWN = NPC.getBoolean("AnnounceMammonSpawn", false);
 			ALT_MOB_AGRO_IN_PEACEZONE = NPC.getBoolean("AltMobAgroInPeaceZone", true);
 			ALT_ATTACKABLE_NPCS = NPC.getBoolean("AltAttackableNpcs", true);
@@ -2094,7 +2101,7 @@ public final class Config
 			{
 				LIST_PET_RENT_NPC.add(Integer.valueOf(id));
 			}
-
+			
 			GUARD_HP_REGEN_MULTIPLIER = NPC.getDouble("GuardHpRegenMultiplier", 100D) / 100;
 			GUARD_MP_REGEN_MULTIPLIER = NPC.getDouble("GuardMpRegenMultiplier", 100D) / 100;
 			GUARD_HP_MULTIPLIER = NPC.getDouble("MonsterHpMultiplier", 100D) / 100;
@@ -2103,7 +2110,7 @@ public final class Config
 			GUARD_MDEFENCE_MULTIPLIER = NPC.getDouble("GuardMDefenceMultiplier", 100D) / 100;
 			GUARD_PATTACK_MULTIPLIER = NPC.getDouble("GuardPAttackMultiplier", 100D) / 100;
 			GUARD_MATTACK_MULTIPLIER = NPC.getDouble("GuardMAttackMultiplier", 100D) / 100;
-
+			
 			MONSTER_HP_REGEN_MULTIPLIER = NPC.getDouble("MonsterHpRegenMultiplier", 100D) / 100;
 			MONSTER_MP_REGEN_MULTIPLIER = NPC.getDouble("MonsterMpRegenMultiplier", 100D) / 100;
 			MONSTER_HP_MULTIPLIER = NPC.getDouble("MonsterHpMultiplier", 100D) / 100;
@@ -2112,25 +2119,27 @@ public final class Config
 			MONSTER_MDEFENCE_MULTIPLIER = NPC.getDouble("MonsterMDefenceMultiplier", 100D) / 100;
 			MONSTER_PATTACK_MULTIPLIER = NPC.getDouble("MonsterPAttackMultiplier", 100D) / 100;
 			MONSTER_MATTACK_MULTIPLIER = NPC.getDouble("MonsterMAttackMultiplier", 100D) / 100;
-
-            S_PLUS_MONSTER_HP_REGEN_MULTIPLIER = NPC.getDouble("SPlusMonsterHpRegenMultiplier", 100D) / 100;
-            S_PLUS_MONSTER_MP_REGEN_MULTIPLIER = NPC.getDouble("SPlusMonsterMpRegenMultiplier", 100D) / 100;
-            S_PLUS_MONSTER_HP_MULTIPLIER = NPC.getDouble("SPlusMonsterHpMultiplier", 100D) / 100;
-            S_PLUS_MONSTER_MP_MULTIPLIER = NPC.getDouble("SPlusMonsterMpMultiplier", 100D) / 100;
-            S_PLUS_MONSTER_PDEFENCE_MULTIPLIER = NPC.getDouble("SPlusMonsterPDefenceMultiplier", 100D) / 100;
-            S_PLUS_MONSTER_MDEFENCE_MULTIPLIER = NPC.getDouble("SPlusMonsterMDefenceMultiplier", 100D) / 100;
-            S_PLUS_MONSTER_PATTACK_MULTIPLIER = NPC.getDouble("SPlusMonsterPAttackMultiplier", 100D) / 100;
-            S_PLUS_MONSTER_MATTACK_MULTIPLIER = NPC.getDouble("SPlusMonsterMAttackMultiplier", 100D) / 100;
-
-            S_MONSTER_HP_REGEN_MULTIPLIER = NPC.getDouble("SMonsterHpRegenMultiplier", 100D) / 100;
-            S_MONSTER_MP_REGEN_MULTIPLIER = NPC.getDouble("SMonsterMpRegenMultiplier", 100D) / 100;
-            S_MONSTER_HP_MULTIPLIER = NPC.getDouble("SMonsterHpMultiplier", 100D) / 100;
-            S_MONSTER_MP_MULTIPLIER = NPC.getDouble("SMonsterMpMultiplier", 100D) / 100;
-            S_MONSTER_PDEFENCE_MULTIPLIER = NPC.getDouble("SMonsterPDefenceMultiplier", 100D) / 100;
-            S_MONSTER_MDEFENCE_MULTIPLIER = NPC.getDouble("SMonsterMDefenceMultiplier", 100D) / 100;
-            S_MONSTER_PATTACK_MULTIPLIER = NPC.getDouble("SMonsterPAttackMultiplier", 100D) / 100;
-            S_MONSTER_MATTACK_MULTIPLIER = NPC.getDouble("SMonsterMAttackMultiplier", 100D) / 100;
-
+			
+			S_PLUS_MONSTER_HP_REGEN_MULTIPLIER = NPC.getDouble("SPlusMonsterHpRegenMultiplier", 100D) / 100;
+			S_PLUS_MONSTER_MP_REGEN_MULTIPLIER = NPC.getDouble("SPlusMonsterMpRegenMultiplier", 100D) / 100;
+			S_PLUS_MONSTER_HP_MULTIPLIER = NPC.getDouble("SPlusMonsterHpMultiplier", 100D) / 100;
+			S_PLUS_MONSTER_MP_MULTIPLIER = NPC.getDouble("SPlusMonsterMpMultiplier", 100D) / 100;
+			S_PLUS_MONSTER_PDEFENCE_MULTIPLIER = NPC.getDouble("SPlusMonsterPDefenceMultiplier", 100D) / 100;
+			S_PLUS_MONSTER_MDEFENCE_MULTIPLIER = NPC.getDouble("SPlusMonsterMDefenceMultiplier", 100D) / 100;
+			S_PLUS_MONSTER_PATTACK_MULTIPLIER = NPC.getDouble("SPlusMonsterPAttackMultiplier", 100D) / 100;
+			S_PLUS_MONSTER_MATTACK_MULTIPLIER = NPC.getDouble("SPlusMonsterMAttackMultiplier", 100D) / 100;
+			
+			S_MONSTER_HP_REGEN_MULTIPLIER = NPC.getDouble("SMonsterHpRegenMultiplier", 100D) / 100;
+			S_MONSTER_MP_REGEN_MULTIPLIER = NPC.getDouble("SMonsterMpRegenMultiplier", 100D) / 100;
+			S_MONSTER_HP_MULTIPLIER = NPC.getDouble("SMonsterHpMultiplier", 100D) / 100;
+			S_MONSTER_MP_MULTIPLIER = NPC.getDouble("SMonsterMpMultiplier", 100D) / 100;
+			S_MONSTER_PDEFENCE_MULTIPLIER = NPC.getDouble("SMonsterPDefenceMultiplier", 100D) / 100;
+			S_MONSTER_MDEFENCE_MULTIPLIER = NPC.getDouble("SMonsterMDefenceMultiplier", 100D) / 100;
+			S_MONSTER_PATTACK_MULTIPLIER = NPC.getDouble("SMonsterPAttackMultiplier", 100D) / 100;
+			S_MONSTER_MATTACK_MULTIPLIER = NPC.getDouble("SMonsterMAttackMultiplier", 100D) / 100;
+			
+			RAID_HP_MULTIPLIER = NPC.getDouble("RaidHpMultiplier", 100) / 100;
+			RAID_MP_MULTIPLIER = NPC.getDouble("RaidMpMultiplier", 100) / 100;
 			RAID_HP_REGEN_MULTIPLIER = NPC.getDouble("RaidHpRegenMultiplier", 100) / 100;
 			RAID_MP_REGEN_MULTIPLIER = NPC.getDouble("RaidMpRegenMultiplier", 100) / 100;
 			RAID_PDEFENCE_MULTIPLIER = NPC.getDouble("RaidPDefenceMultiplier", 100) / 100;
@@ -2149,7 +2158,7 @@ public final class Config
 				{
 					LOG.warn("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime {}", prop);
 				}
-
+				
 				try
 				{
 					MINIONS_RESPAWN_TIME.put(Integer.valueOf(propSplit[0]), Integer.valueOf(propSplit[1]));
@@ -2162,7 +2171,7 @@ public final class Config
 					}
 				}
 			}
-
+			
 			RAID_DISABLE_CURSE = NPC.getBoolean("DisableRaidCurse", false);
 			RAID_CHAOS_TIME = NPC.getInt("RaidChaosTime", 10);
 			GRAND_CHAOS_TIME = NPC.getInt("GrandChaosTime", 10);
@@ -2170,24 +2179,28 @@ public final class Config
 			INVENTORY_MAXIMUM_PET = NPC.getInt("MaximumSlotsForPet", 12);
 			PET_HP_REGEN_MULTIPLIER = NPC.getDouble("PetHpRegenMultiplier", 100) / 100;
 			PET_MP_REGEN_MULTIPLIER = NPC.getDouble("PetMpRegenMultiplier", 100) / 100;
-
+			
 			DROP_ADENA_MIN_LEVEL_DIFFERENCE = NPC.getInt("DropAdenaMinLevelDifference", 8);
 			DROP_ADENA_MAX_LEVEL_DIFFERENCE = NPC.getInt("DropAdenaMaxLevelDifference", 15);
 			DROP_ADENA_MIN_LEVEL_GAP_CHANCE = NPC.getDouble("DropAdenaMinLevelGapChance", 10);
-
+			
 			DROP_ITEM_MIN_LEVEL_DIFFERENCE = NPC.getInt("DropItemMinLevelDifference", 5);
 			DROP_ITEM_MAX_LEVEL_DIFFERENCE = NPC.getInt("DropItemMaxLevelDifference", 10);
 			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = NPC.getDouble("DropItemMinLevelGapChance", 10);
-
-			AGGRO_RANGE_MODIFIER = NPC.getFloat("AggroRangeModifier",  100) / 100;
-
-			MONSTER_RESPAWN_MODIFIER = NPC.getFloat("MonsterRespawnModifier",  100) / 100;
-			MONSTER_RESPAWN_RANDOM_DEFAULT = NPC.getInt("MonsterRespawnRandomDefault",  0);
-			MONSTER_MAX_DRIFT_FROM_SPAWN = NPC.getInt("MonsterMaxDriftFromSpawn",  400);
-
+			
+			AGGRO_RANGE_MODIFIER = NPC.getFloat("AggroRangeModifier", 100) / 100;
+			
+			MONSTER_RESPAWN_MODIFIER = NPC.getFloat("MonsterRespawnModifier", 100) / 100;
+			MONSTER_RESPAWN_RANDOM_DEFAULT = NPC.getInt("MonsterRespawnRandomDefault", 0);
+			MONSTER_MAX_DRIFT_FROM_SPAWN = NPC.getInt("MonsterMaxDriftFromSpawn", 400);
+			
+			NPC_DELAY_BETWEEN_CASTS = NPC.getLong("NpcDelayBetweenCasts", 8000);
+			NPC_DEFAULT_MIN_SKILL_CHANCE = NPC.getInt("NpcDefaultMinSkillChance", 0);
+			NPC_DEFAULT_MAX_SKILL_CHANCE = NPC.getInt("NpcDefaultMaxSkillChance", 9);
+			
 			// Load Rates L2Properties file (if exists)
 			final PropertiesParser RatesSettings = new PropertiesParser(RATES_CONFIG_FILE);
-
+			
 			RATE_XP = RatesSettings.getFloat("RateXp", 1);
 			RATE_SP = RatesSettings.getFloat("RateSp", 1);
 			RATE_PARTY_XP = RatesSettings.getFloat("RatePartyXp", 1);
@@ -2206,7 +2219,7 @@ public final class Config
 			RATE_QUEST_REWARD_MATERIAL = RatesSettings.getFloat("RateQuestRewardMaterial", 1);
 			RATE_HB_TRUST_INCREASE = RatesSettings.getFloat("RateHellboundTrustIncrease", 1);
 			RATE_HB_TRUST_DECREASE = RatesSettings.getFloat("RateHellboundTrustDecrease", 1);
-
+			
 			RATE_VITALITY_LEVEL_1 = RatesSettings.getFloat("RateVitalityLevel1", 1.5f);
 			RATE_VITALITY_LEVEL_2 = RatesSettings.getFloat("RateVitalityLevel2", 2);
 			RATE_VITALITY_LEVEL_3 = RatesSettings.getFloat("RateVitalityLevel3", 2.5f);
@@ -2238,14 +2251,14 @@ public final class Config
 			KARMA_RATE_DROP_ITEM = RatesSettings.getInt("KarmaRateDropItem", 50);
 			KARMA_RATE_DROP_EQUIP = RatesSettings.getInt("KarmaRateDropEquip", 40);
 			KARMA_RATE_DROP_EQUIP_WEAPON = RatesSettings.getInt("KarmaRateDropEquipWeapon", 10);
-
+			
 			VALUABLE_ITEMS_DETAILED_CALCULATION = RatesSettings.getBoolean("ValuableItemsDetailedCalculation", false);
 			VALUABLE_ITEMS_LIMIT_LOG = RatesSettings.getBoolean("ValuableItemsLimitLog", false);
 			VALUABLE_ITEMS_WARNING_LIMIT = RatesSettings.getInt("ValuableItemsWarningLimit", 50);
-
+			
 			SKIP_CATEGORY_DROP_CHANCE = RatesSettings.getBoolean("SkipCategoryDropChance", false);
 			ALL_CATEGORY_ITEMS_DROP_CHANCE = RatesSettings.getBoolean("AllCategoryItemsDropChance", false);
-
+			
 			RATE_DEATH_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("DeathDropAmountMultiplier", 1);
 			RATE_CORPSE_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("CorpseDropAmountMultiplier", 1);
 			RATE_HERB_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("HerbDropAmountMultiplier", 1);
@@ -2281,7 +2294,7 @@ public final class Config
 					}
 				}
 			}
-
+			
 			String[] dropChanceMultiplier = RatesSettings.getString("DropChanceMultiplierByItemId", "").split(";");
 			RATE_DROP_CHANCE_MULTIPLIER = new HashMap<>(dropChanceMultiplier.length);
 			if (!dropChanceMultiplier[0].isEmpty())
@@ -2309,10 +2322,10 @@ public final class Config
 					}
 				}
 			}
-
+			
 			// Load L2JMod L2Properties file (if exists)
 			final PropertiesParser L2JModSettings = new PropertiesParser(L2JMOD_CONFIG_FILE);
-
+			
 			L2JMOD_CHAMPION_ENABLE = L2JModSettings.getBoolean("ChampionEnable", false);
 			L2JMOD_CHAMPION_PASSIVE = L2JModSettings.getBoolean("ChampionPassive", false);
 			L2JMOD_CHAMPION_FREQUENCY = L2JModSettings.getInt("ChampionFrequency", -1);
@@ -2334,7 +2347,7 @@ public final class Config
 			L2JMOD_CHAMPION_REWARD_QTY = L2JModSettings.getInt("ChampionRewardItemQty", 1);
 			L2JMOD_CHAMPION_ENABLE_VITALITY = L2JModSettings.getBoolean("ChampionEnableVitality", false);
 			L2JMOD_CHAMPION_ENABLE_IN_INSTANCES = L2JModSettings.getBoolean("ChampionEnableInInstances", false);
-
+			
 			TVT_EVENT_ENABLED = L2JModSettings.getBoolean("TvTEventEnabled", false);
 			TVT_EVENT_IN_INSTANCE = L2JModSettings.getBoolean("TvTEventInInstance", false);
 			TVT_EVENT_INSTANCE_FILE = L2JModSettings.getString("TvTEventInstanceFile", "coliseum.xml");
@@ -2342,7 +2355,7 @@ public final class Config
 			TVT_EVENT_PARTICIPATION_TIME = L2JModSettings.getInt("TvTEventParticipationTime", 3600);
 			TVT_EVENT_RUNNING_TIME = L2JModSettings.getInt("TvTEventRunningTime", 1800);
 			TVT_EVENT_PARTICIPATION_NPC_ID = L2JModSettings.getInt("TvTEventParticipationNpcId", 0);
-
+			
 			L2JMOD_ALLOW_WEDDING = L2JModSettings.getBoolean("AllowWedding", false);
 			L2JMOD_WEDDING_PRICE = L2JModSettings.getInt("WeddingPrice", 250000000);
 			L2JMOD_WEDDING_PUNISH_INFIDELITY = L2JModSettings.getBoolean("WeddingPunishInfidelity", true);
@@ -2352,10 +2365,10 @@ public final class Config
 			L2JMOD_WEDDING_SAMESEX = L2JModSettings.getBoolean("WeddingAllowSameSex", false);
 			L2JMOD_WEDDING_FORMALWEAR = L2JModSettings.getBoolean("WeddingFormalWear", true);
 			L2JMOD_WEDDING_DIVORCE_COSTS = L2JModSettings.getInt("WeddingDivorceCosts", 20);
-
+			
 			L2JMOD_ENABLE_WAREHOUSESORTING_CLAN = L2JModSettings.getBoolean("EnableWarehouseSortingClan", false);
 			L2JMOD_ENABLE_WAREHOUSESORTING_PRIVATE = L2JModSettings.getBoolean("EnableWarehouseSortingPrivate", false);
-
+			
 			if (TVT_EVENT_PARTICIPATION_NPC_ID == 0)
 			{
 				TVT_EVENT_ENABLED = false;
@@ -2457,7 +2470,7 @@ public final class Config
 									}
 								}
 							}
-
+							
 							TVT_EVENT_TARGET_TEAM_MEMBERS_ALLOWED = L2JModSettings.getBoolean("TvTEventTargetTeamMembersAllowed", true);
 							TVT_EVENT_SCROLL_ALLOWED = L2JModSettings.getBoolean("TvTEventScrollsAllowed", false);
 							TVT_EVENT_POTIONS_ALLOWED = L2JModSettings.getBoolean("TvTEventPotionsAllowed", false);
@@ -2478,7 +2491,7 @@ public final class Config
 									}
 								}
 							}
-
+							
 							tvtNpcCoords = L2JModSettings.getString("TvTDoorsToClose", "").split(";");
 							for (String door : tvtNpcCoords)
 							{
@@ -2494,7 +2507,7 @@ public final class Config
 									}
 								}
 							}
-
+							
 							tvtNpcCoords = L2JModSettings.getString("TvTEventFighterBuffs", "").split(";");
 							if (!tvtNpcCoords[0].isEmpty())
 							{
@@ -2522,7 +2535,7 @@ public final class Config
 									}
 								}
 							}
-
+							
 							tvtNpcCoords = L2JModSettings.getString("TvTEventMageBuffs", "").split(";");
 							if (!tvtNpcCoords[0].isEmpty())
 							{
@@ -2554,11 +2567,11 @@ public final class Config
 					}
 				}
 			}
-
+			
 			BANKING_SYSTEM_ENABLED = L2JModSettings.getBoolean("BankingEnabled", false);
 			BANKING_SYSTEM_GOLDBARS = L2JModSettings.getInt("BankingGoldbarCount", 1);
 			BANKING_SYSTEM_ADENA = L2JModSettings.getInt("BankingAdenaCount", 500000000);
-
+			
 			OFFLINE_TRADE_ENABLE = L2JModSettings.getBoolean("OfflineTradeEnable", false);
 			OFFLINE_CRAFT_ENABLE = L2JModSettings.getBoolean("OfflineCraftEnable", false);
 			OFFLINE_MODE_IN_PEACE_ZONE = L2JModSettings.getBoolean("OfflineModeInPeaceZone", false);
@@ -2569,15 +2582,15 @@ public final class Config
 			RESTORE_OFFLINERS = L2JModSettings.getBoolean("RestoreOffliners", false);
 			OFFLINE_MAX_DAYS = L2JModSettings.getInt("OfflineMaxDays", 10);
 			OFFLINE_DISCONNECT_FINISHED = L2JModSettings.getBoolean("OfflineDisconnectFinished", true);
-
+			
 			L2JMOD_ENABLE_MANA_POTIONS_SUPPORT = L2JModSettings.getBoolean("EnableManaPotionSupport", false);
-
+			
 			L2JMOD_DISPLAY_SERVER_TIME = L2JModSettings.getBoolean("DisplayServerTime", false);
-
+			
 			WELCOME_MESSAGE_ENABLED = L2JModSettings.getBoolean("ScreenWelcomeMessageEnable", false);
 			WELCOME_MESSAGE_TEXT = L2JModSettings.getString("ScreenWelcomeMessageText", "Welcome to L2J server!");
 			WELCOME_MESSAGE_TIME = L2JModSettings.getInt("ScreenWelcomeMessageTime", 10) * 1000;
-
+			
 			L2JMOD_ANTIFEED_ENABLE = L2JModSettings.getBoolean("AntiFeedEnable", false);
 			L2JMOD_ANTIFEED_DUALBOX = L2JModSettings.getBoolean("AntiFeedDualbox", true);
 			L2JMOD_ANTIFEED_DISCONNECTED_AS_DUALBOX = L2JModSettings.getBoolean("AntiFeedDisconnectedAsDualbox", true);
@@ -2586,9 +2599,9 @@ public final class Config
 			ANNOUNCE_PK_PVP_NORMAL_MESSAGE = L2JModSettings.getBoolean("AnnouncePkPvPNormalMessage", true);
 			ANNOUNCE_PK_MSG = L2JModSettings.getString("AnnouncePkMsg", "$killer has slaughtered $target");
 			ANNOUNCE_PVP_MSG = L2JModSettings.getString("AnnouncePvpMsg", "$killer has defeated $target");
-
+			
 			L2JMOD_CHAT_ADMIN = L2JModSettings.getBoolean("ChatAdmin", false);
-
+			
 			L2JMOD_MULTILANG_DEFAULT = L2JModSettings.getString("MultiLangDefault", "en");
 			L2JMOD_MULTILANG_ENABLE = L2JModSettings.getBoolean("MultiLangEnable", false);
 			String[] allowed = L2JModSettings.getString("MultiLangAllowed", L2JMOD_MULTILANG_DEFAULT).split(";");
@@ -2597,12 +2610,12 @@ public final class Config
 			{
 				L2JMOD_MULTILANG_ALLOWED.add(lang);
 			}
-
+			
 			if (!L2JMOD_MULTILANG_ALLOWED.contains(L2JMOD_MULTILANG_DEFAULT))
 			{
 				LOG.warn("MultiLang[Config.load()]: default language: {} is not in allowed list !", L2JMOD_MULTILANG_DEFAULT);
 			}
-
+			
 			L2JMOD_HELLBOUND_STATUS = L2JModSettings.getBoolean("HellboundStatus", false);
 			L2JMOD_MULTILANG_VOICED_ALLOW = L2JModSettings.getBoolean("MultiLangVoiceCommand", true);
 			L2JMOD_MULTILANG_SM_ENABLE = L2JModSettings.getBoolean("MultiLangSystemMessageEnable", false);
@@ -2625,10 +2638,10 @@ public final class Config
 					L2JMOD_MULTILANG_NS_ALLOWED.add(lang);
 				}
 			}
-
+			
 			L2WALKER_PROTECTION = L2JModSettings.getBoolean("L2WalkerProtection", false);
 			L2JMOD_DEBUG_VOICE_COMMAND = L2JModSettings.getBoolean("DebugVoiceCommand", false);
-
+			
 			L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP = L2JModSettings.getInt("DualboxCheckMaxPlayersPerIP", 0);
 			L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP = L2JModSettings.getInt("DualboxCheckMaxOlympiadParticipantsPerIP", 0);
 			L2JMOD_DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP = L2JModSettings.getInt("DualboxCheckMaxL2EventParticipantsPerIP", 0);
@@ -2660,45 +2673,45 @@ public final class Config
 				}
 			}
 			L2JMOD_ALLOW_CHANGE_PASSWORD = L2JModSettings.getBoolean("AllowChangePassword", false);
-
+			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
-
+			
 			KARMA_DROP_GM = PVPSettings.getBoolean("CanGMDropEquipment", false);
 			KARMA_AWARD_PK_KILL = PVPSettings.getBoolean("AwardPKKillPVPPoint", false);
 			KARMA_PK_LIMIT = PVPSettings.getInt("MinimumPKRequiredToDrop", 5);
 			KARMA_NONDROPPABLE_PET_ITEMS = PVPSettings.getString("ListOfPetItems", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650,9882");
 			KARMA_NONDROPPABLE_ITEMS = PVPSettings.getString("ListOfNonDroppableItems", "57,1147,425,1146,461,10,2368,7,6,2370,2369,6842,6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,7694,8181,5575,7694,9388,9389,9390");
-
+			
 			String[] karma = KARMA_NONDROPPABLE_PET_ITEMS.split(",");
 			KARMA_LIST_NONDROPPABLE_PET_ITEMS = new int[karma.length];
-
+			
 			for (int i = 0; i < karma.length; i++)
 			{
 				KARMA_LIST_NONDROPPABLE_PET_ITEMS[i] = Integer.parseInt(karma[i]);
 			}
-
+			
 			karma = KARMA_NONDROPPABLE_ITEMS.split(",");
 			KARMA_LIST_NONDROPPABLE_ITEMS = new int[karma.length];
-
+			
 			for (int i = 0; i < karma.length; i++)
 			{
 				KARMA_LIST_NONDROPPABLE_ITEMS[i] = Integer.parseInt(karma[i]);
 			}
-
+			
 			// sorting so binarySearch can be used later
 			Arrays.sort(KARMA_LIST_NONDROPPABLE_PET_ITEMS);
 			Arrays.sort(KARMA_LIST_NONDROPPABLE_ITEMS);
-
+			
 			PVP_NORMAL_TIME = PVPSettings.getInt("PvPVsNormalTime", 120000);
 			PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
-
+			
 			ALT_PLAYER_DROP_CAN_BE_CRYSTALLIZED = PVPSettings.getBoolean("AltPlayerDropCanBeCrystallized", false);
 			ALT_PLAYER_DROP_CRYSTALLIZATION_CHANCE = PVPSettings.getFloat("AltPlayerDropCrystallizationChance", 10);
-
+			
 			// Load Olympiad L2Properties file (if exists)
 			final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
-
+			
 			ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 18);
 			ALT_OLY_MIN = Olympiad.getInt("AltOlyMin", 0);
 			ALT_OLY_MAX_BUFFS = Olympiad.getInt("AltOlyMaxBuffs", 5);
@@ -2716,7 +2729,7 @@ public final class Config
 			ALT_OLY_NONCLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyNonClassedReward", "13722,40"));
 			ALT_OLY_TEAM_REWARD = parseItemsList(Olympiad.getString("AltOlyTeamReward", "13722,85"));
 			ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 13722);
-            OLYPMIAD_CYCLE_IN_WEEKS = Olympiad.getInt("OlympiadCycleInWeeks", 2);
+			OLYPMIAD_CYCLE_IN_WEEKS = Olympiad.getInt("OlympiadCycleInWeeks", 2);
 			ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 15);
 			ALT_OLY_GP_PER_POINT = Olympiad.getInt("AltOlyGPPerPoint", 1000);
 			ALT_OLY_HERO_POINTS = Olympiad.getInt("AltOlyHeroPoints", 200);
@@ -2743,12 +2756,12 @@ public final class Config
 			}
 			ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
 			ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 120);
-
+			
 			final File hexIdFile = new File(HEXID_FILE);
 			if (hexIdFile.exists())
 			{
 				final PropertiesParser hexId = new PropertiesParser(hexIdFile);
-
+				
 				if (hexId.containskey("ServerID") && hexId.containskey("HexID"))
 				{
 					SERVER_ID = hexId.getInt("ServerID", 1);
@@ -2770,56 +2783,56 @@ public final class Config
 			{
 				LOG.warn("Could not load HexID file ({}). Hopefully login will give us one.", HEXID_FILE);
 			}
-
+			
 			// Grand bosses
 			final PropertiesParser GrandBossSettings = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
-
+			
 			ANTHARAS_WAIT_TIME = GrandBossSettings.getInt("AntharasWaitTime", 30);
 			ANTHARAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAntharasSpawn", 264);
 			ANTHARAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAntharasSpawn", 72);
-
+			
 			ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 86);
 			ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 24);
 			ZAKEN_INACTIVITY_TIMEOUT = GrandBossSettings.getInt("ZakenInactivityTimeout", 15);
-
+			
 			FREYA_CONTEST_TIME = GrandBossSettings.getInt("FreyaWaitTime", 5);
 			FREYA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFreyaSpawn", 86);
 			FREYA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfFreyaSpawn", 24);
 			FREYA_RESET_TIMEOUT = GrandBossSettings.getInt("FreyaResetDelay", 10);
 			FREYA_STAGE_DELAY = GrandBossSettings.getInt("FreyaStagePause", 30);
-
+			
 			FRINTEZZA_RESET_TIMEOUT = GrandBossSettings.getInt("FrintezzaResetDelay", 15);
 			FRINTEZZA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFrintezzaSpawn", 86);
 			FRINTEZZA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfFrintezzaSpawn", 24);
 			FRINTEZZA_FIGHT_DELAY = GrandBossSettings.getInt("FrintezzaWaitTime", 10);
-
+			
 			VALAKAS_WAIT_TIME = GrandBossSettings.getInt("ValakasWaitTime", 30);
 			VALAKAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfValakasSpawn", 264);
 			VALAKAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfValakasSpawn", 72);
-
+			
 			BAIUM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBaiumSpawn", 168);
 			BAIUM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBaiumSpawn", 48);
-
+			
 			CORE_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfCoreSpawn", 60);
 			CORE_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfCoreSpawn", 24);
-
+			
 			ORFEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfOrfenSpawn", 48);
 			ORFEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfOrfenSpawn", 20);
-
+			
 			QUEEN_ANT_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfQueenAntSpawn", 36);
 			QUEEN_ANT_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfQueenAntSpawn", 17);
-
+			
 			BELETH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBelethSpawn", 192);
 			BELETH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBelethSpawn", 148);
 			BELETH_MIN_PLAYERS = GrandBossSettings.getInt("BelethMinPlayers", 36);
-
+			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
-
+			
 			// Seed of Destruction
 			SOD_TIAT_KILL_COUNT = GraciaSeedsSettings.getInt("TiatKillCountForNextState", 10);
 			SOD_STAGE_2_LENGTH = GraciaSeedsSettings.getLong("Stage2Length", 720) * 60000;
-
+			
 			try
 			{
 				//@formatter:off
@@ -2834,18 +2847,18 @@ public final class Config
 			{
 				LOG.warn("Error while loading chat filter words!", ioe);
 			}
-
+			
 			final PropertiesParser ClanHallSiege = new PropertiesParser(CH_SIEGE_FILE);
-
+			
 			CHS_MAX_ATTACKERS = ClanHallSiege.getInt("MaxAttackers", 500);
 			CHS_CLAN_MINLEVEL = ClanHallSiege.getInt("MinClanLevel", 4);
 			CHS_MAX_FLAGS_PER_CLAN = ClanHallSiege.getInt("MaxFlagsPerClan", 1);
 			CHS_ENABLE_FAME = ClanHallSiege.getBoolean("EnableFame", false);
 			CHS_FAME_AMOUNT = ClanHallSiege.getInt("FameAmount", 0);
 			CHS_FAME_FREQUENCY = ClanHallSiege.getInt("FameFrequency", 0);
-
+			
 			final PropertiesParser geoData = new PropertiesParser(GEODATA_FILE);
-
+			
 			try
 			{
 				PATHNODE_DIR = new File(geoData.getString("PathnodeDirectory", "data/pathnode").replaceAll("\\\\", "/")).getCanonicalFile();
@@ -2855,7 +2868,7 @@ public final class Config
 				LOG.warn("Error setting pathnode directory!", e);
 				PATHNODE_DIR = new File("data/pathnode");
 			}
-
+			
 			PATHFINDING = geoData.getInt("PathFinding", 0);
 			PATHFIND_BUFFERS = geoData.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
 			LOW_WEIGHT = geoData.getFloat("LowWeight", 0.5f);
@@ -2885,14 +2898,14 @@ public final class Config
 		else if (Server.serverMode == Server.MODE_LOGINSERVER)
 		{
 			final PropertiesParser ServerSettings = new PropertiesParser(LOGIN_CONFIGURATION_FILE);
-
+			
 			ENABLE_UPNP = ServerSettings.getBoolean("EnableUPnP", true);
 			GAME_SERVER_LOGIN_HOST = ServerSettings.getString("LoginHostname", "127.0.0.1");
 			GAME_SERVER_LOGIN_PORT = ServerSettings.getInt("LoginPort", 9013);
-
+			
 			LOGIN_BIND_ADDRESS = ServerSettings.getString("LoginserverHostname", "*");
 			PORT_LOGIN = ServerSettings.getInt("LoginserverPort", 2106);
-
+			
 			try
 			{
 				DATAPACK_ROOT = new File(ServerSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
@@ -2902,17 +2915,17 @@ public final class Config
 				LOG.warn("Error setting datapack root!", e);
 				DATAPACK_ROOT = new File(".");
 			}
-
+			
 			DEBUG = ServerSettings.getBoolean("Debug", false);
-
+			
 			ACCEPT_NEW_GAMESERVER = ServerSettings.getBoolean("AcceptNewGameServer", true);
-
+			
 			LOGIN_TRY_BEFORE_BAN = ServerSettings.getInt("LoginTryBeforeBan", 5);
 			LOGIN_BLOCK_AFTER_BAN = ServerSettings.getInt("LoginBlockAfterBan", 900);
-
+			
 			LOGIN_SERVER_SCHEDULE_RESTART = ServerSettings.getBoolean("LoginRestartSchedule", false);
 			LOGIN_SERVER_SCHEDULE_RESTART_TIME = ServerSettings.getLong("LoginRestartTime", 24);
-
+			
 			DATABASE_DRIVER = ServerSettings.getString("Driver", "com.mysql.jdbc.Driver");
 			DATABASE_URL = ServerSettings.getString("URL", "jdbc:mysql://localhost/l2jls");
 			DATABASE_LOGIN = ServerSettings.getString("Login", "root");
@@ -2921,37 +2934,37 @@ public final class Config
 			DATABASE_MAX_CONNECTIONS = ServerSettings.getInt("MaximumDbConnections", 10);
 			DATABASE_MAX_IDLE_TIME = ServerSettings.getInt("MaximumDbIdleTime", 0);
 			CONNECTION_CLOSE_TIME = ServerSettings.getLong("ConnectionCloseTime", 60000);
-
+			
 			SHOW_LICENCE = ServerSettings.getBoolean("ShowLicence", true);
-
+			
 			AUTO_CREATE_ACCOUNTS = ServerSettings.getBoolean("AutoCreateAccounts", true);
-
+			
 			FLOOD_PROTECTION = ServerSettings.getBoolean("EnableFloodProtection", true);
 			FAST_CONNECTION_LIMIT = ServerSettings.getInt("FastConnectionLimit", 15);
 			NORMAL_CONNECTION_TIME = ServerSettings.getInt("NormalConnectionTime", 700);
 			FAST_CONNECTION_TIME = ServerSettings.getInt("FastConnectionTime", 350);
 			MAX_CONNECTION_PER_IP = ServerSettings.getInt("MaxConnectionPerIP", 50);
-
+			
 			// MMO
 			final PropertiesParser mmoSettings = new PropertiesParser(MMO_CONFIG_FILE);
-
+			
 			MMO_SELECTOR_SLEEP_TIME = mmoSettings.getInt("SleepTime", 20);
 			MMO_MAX_SEND_PER_PASS = mmoSettings.getInt("MaxSendPerPass", 12);
 			MMO_MAX_READ_PER_PASS = mmoSettings.getInt("MaxReadPerPass", 12);
 			MMO_HELPER_BUFFER_COUNT = mmoSettings.getInt("HelperBufferCount", 20);
 			MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
-
+			
 			// Load Telnet L2Properties file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);
-
+			
 			IS_TELNET_ENABLED = telnetSettings.getBoolean("EnableTelnet", false);
-
+			
 			// Email
 			final PropertiesParser emailSettings = new PropertiesParser(EMAIL_CONFIG_FILE);
-
+			
 			EMAIL_SERVERINFO_NAME = emailSettings.getString("ServerInfoName", "Unconfigured L2J Server");
 			EMAIL_SERVERINFO_ADDRESS = emailSettings.getString("ServerInfoAddress", "info@myl2jserver.com");
-
+			
 			EMAIL_SYS_ENABLED = emailSettings.getBoolean("EmailSystemEnabled", false);
 			EMAIL_SYS_HOST = emailSettings.getString("SmtpServerHost", "smtp.gmail.com");
 			EMAIL_SYS_PORT = emailSettings.getInt("SmtpServerPort", 465);
@@ -2969,7 +2982,7 @@ public final class Config
 			LOG.error("Could not Load Config: server mode was not set!");
 		}
 	}
-
+	
 	/**
 	 * Set a new value to a config parameter.
 	 * @param pName the name of the parameter whose value to change
@@ -3764,7 +3777,7 @@ public final class Config
 					{
 						throw new SecurityException("Cannot modify non public, non static or final config!");
 					}
-
+					
 					if (clazField.getType() == int.class)
 					{
 						clazField.setInt(clazField, Integer.parseInt(pValue));
@@ -3814,7 +3827,7 @@ public final class Config
 		}
 		return true;
 	}
-
+	
 	/**
 	 * Save hexadecimal ID of the server in the L2Properties file.<br>
 	 * Check {@link #HEXID_FILE}.
@@ -3825,7 +3838,7 @@ public final class Config
 	{
 		Config.saveHexid(serverId, hexId, HEXID_FILE);
 	}
-
+	
 	/**
 	 * Save hexadecimal ID of the server in the L2Properties file.
 	 * @param serverId the ID of the server whose hexId to save
@@ -3852,7 +3865,7 @@ public final class Config
 			LOG.warn("Failed to save hex id to {} file.", fileName, e);
 		}
 	}
-
+	
 	/**
 	 * Loads flood protector configurations.
 	 * @param properties the properties object containing the actual values of the flood protector configs
@@ -3876,7 +3889,7 @@ public final class Config
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_CHARACTER_SELECT, "CharacterSelect", 30);
 		loadFloodProtectorConfig(properties, FLOOD_PROTECTOR_ITEM_AUCTION, "ItemAuction", 9);
 	}
-
+	
 	/**
 	 * Loads single flood protector configuration.
 	 * @param properties properties file reader
@@ -3892,7 +3905,7 @@ public final class Config
 		config.PUNISHMENT_TYPE = properties.getString(StringUtil.concat("FloodProtector", configString, "PunishmentType"), "none");
 		config.PUNISHMENT_TIME = properties.getInt(StringUtil.concat("FloodProtector", configString, "PunishmentTime"), 0) * 60000;
 	}
-
+	
 	public static int getServerTypeId(String[] serverTypes)
 	{
 		int tType = 0;
@@ -3927,40 +3940,40 @@ public final class Config
 		}
 		return tType;
 	}
-
+	
 	public static final class ClassMasterSettings
 	{
 		private final Map<Integer, List<ItemHolder>> _claimItems = new HashMap<>(3);
 		private final Map<Integer, List<ItemHolder>> _rewardItems = new HashMap<>(3);
 		private final Map<Integer, Boolean> _allowedClassChange = new HashMap<>(3);
-
+		
 		public ClassMasterSettings(String configLine)
 		{
 			parseConfigLine(configLine.trim());
 		}
-
+		
 		private void parseConfigLine(String configLine)
 		{
 			if (configLine.isEmpty())
 			{
 				return;
 			}
-
+			
 			final StringTokenizer st = new StringTokenizer(configLine, ";");
-
+			
 			while (st.hasMoreTokens())
 			{
 				// get allowed class change
 				final int job = Integer.parseInt(st.nextToken());
-
+				
 				_allowedClassChange.put(job, true);
-
+				
 				final List<ItemHolder> requiredItems = new ArrayList<>();
 				// parse items needed for class change
 				if (st.hasMoreTokens())
 				{
 					final StringTokenizer st2 = new StringTokenizer(st.nextToken(), "[],");
-
+					
 					while (st2.hasMoreTokens())
 					{
 						final StringTokenizer st3 = new StringTokenizer(st2.nextToken(), "()");
@@ -3969,15 +3982,15 @@ public final class Config
 						requiredItems.add(new ItemHolder(itemId, quantity));
 					}
 				}
-
+				
 				_claimItems.put(job, requiredItems);
-
+				
 				final List<ItemHolder> rewardItems = new ArrayList<>();
 				// parse gifts after class change
 				if (st.hasMoreTokens())
 				{
 					final StringTokenizer st2 = new StringTokenizer(st.nextToken(), "[],");
-
+					
 					while (st2.hasMoreTokens())
 					{
 						final StringTokenizer st3 = new StringTokenizer(st2.nextToken(), "()");
@@ -3986,11 +3999,11 @@ public final class Config
 						rewardItems.add(new ItemHolder(itemId, quantity));
 					}
 				}
-
+				
 				_rewardItems.put(job, rewardItems);
 			}
 		}
-
+		
 		public boolean isAllowed(int job)
 		{
 			if ((_allowedClassChange == null) || !_allowedClassChange.containsKey(job))
@@ -3999,18 +4012,18 @@ public final class Config
 			}
 			return _allowedClassChange.get(job);
 		}
-
+		
 		public List<ItemHolder> getRewardItems(int job)
 		{
 			return _rewardItems.get(job);
 		}
-
+		
 		public List<ItemHolder> getRequireItems(int job)
 		{
 			return _claimItems.get(job);
 		}
 	}
-
+	
 	/**
 	 * @param line the string line to parse
 	 * @return a parsed float map
@@ -4026,7 +4039,7 @@ public final class Config
 		}
 		return ret;
 	}
-
+	
 	/**
 	 * Parse a config value from its string representation to a two-dimensional int array.<br>
 	 * The format of the value to be parsed should be as follows: "item1Id,item1Amount;item2Id,item2Amount;...itemNId,itemNAmount".
@@ -4041,7 +4054,7 @@ public final class Config
 			// nothing to do here
 			return null;
 		}
-
+		
 		int i = 0;
 		String[] valueSplit;
 		final int[][] result = new int[propertySplit.length][];
@@ -4054,7 +4067,7 @@ public final class Config
 				LOG.warn("parseItemsList[Config.load()]: invalid entry -> {}, should be itemId,itemNumber. Skipping to the next entry in the list.", valueSplit[0]);
 				continue;
 			}
-
+			
 			tmp = new int[2];
 			try
 			{
@@ -4078,17 +4091,17 @@ public final class Config
 		}
 		return result;
 	}
-
+	
 	private static class IPConfigData implements IXmlReader
 	{
 		private static final List<String> _subnets = new ArrayList<>(5);
 		private static final List<String> _hosts = new ArrayList<>(5);
-
+		
 		public IPConfigData()
 		{
 			load();
 		}
-
+		
 		@Override
 		public void load()
 		{
@@ -4106,7 +4119,7 @@ public final class Config
 				autoIpConfig();
 			}
 		}
-
+		
 		@Override
 		public void parseDocument(Document doc)
 		{
@@ -4122,14 +4135,14 @@ public final class Config
 							attrs = d.getAttributes();
 							_subnets.add(attrs.getNamedItem("subnet").getNodeValue());
 							_hosts.add(attrs.getNamedItem("address").getNodeValue());
-
+							
 							if (_hosts.size() != _subnets.size())
 							{
 								LOG.warn("Failed to load {} file - subnets does not match server addresses.", IP_CONFIG_FILE);
 							}
 						}
 					}
-
+					
 					Node att = n.getAttributes().getNamedItem("address");
 					if (att == null)
 					{
@@ -4144,7 +4157,7 @@ public final class Config
 				}
 			}
 		}
-
+		
 		protected void autoIpConfig()
 		{
 			String externalIp = "127.0.0.1";
@@ -4161,32 +4174,32 @@ public final class Config
 				LOG.warn("Failed to connect to api.externalip.net please check your internet connection using 127.0.0.1!");
 				externalIp = "127.0.0.1";
 			}
-
+			
 			try
 			{
 				Enumeration<NetworkInterface> niList = NetworkInterface.getNetworkInterfaces();
-
+				
 				while (niList.hasMoreElements())
 				{
 					NetworkInterface ni = niList.nextElement();
-
+					
 					if (!ni.isUp() || ni.isVirtual())
 					{
 						continue;
 					}
-
+					
 					if (!ni.isLoopback() && ((ni.getHardwareAddress() == null) || (ni.getHardwareAddress().length != 6)))
 					{
 						continue;
 					}
-
+					
 					for (InterfaceAddress ia : ni.getInterfaceAddresses())
 					{
 						if (ia.getAddress() instanceof Inet6Address)
 						{
 							continue;
 						}
-
+						
 						final String hostAddress = ia.getAddress().getHostAddress();
 						final int subnetPrefixLength = ia.getNetworkPrefixLength();
 						final int subnetMaskInt = IntStream.rangeClosed(1, subnetPrefixLength).reduce((r, e) -> (r << 1) + 1).orElse(0) << (32 - subnetPrefixLength);
@@ -4202,7 +4215,7 @@ public final class Config
 						}
 					}
 				}
-
+				
 				// External host and subnet
 				_hosts.add(externalIp);
 				_subnets.add("0.0.0.0/0");
@@ -4214,7 +4227,7 @@ public final class Config
 				System.exit(0);
 			}
 		}
-
+		
 		protected List<String> getSubnets()
 		{
 			if (_subnets.isEmpty())
@@ -4223,7 +4236,7 @@ public final class Config
 			}
 			return _subnets;
 		}
-
+		
 		protected List<String> getHosts()
 		{
 			if (_hosts.isEmpty())
