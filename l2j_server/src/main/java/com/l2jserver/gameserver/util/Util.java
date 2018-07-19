@@ -681,17 +681,11 @@ public final class Util
 				activeChar.sendPacket(new ShowBoard(html.substring(16250), "102"));
 				activeChar.sendPacket(new ShowBoard(null, "103"));
 			}
-			else if (html.length() < (16250 * 3))
+			else
 			{
 				activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
 				activeChar.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
 				activeChar.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
-			}
-			else
-			{
-				activeChar.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
-				activeChar.sendPacket(new ShowBoard(null, "102"));
-				activeChar.sendPacket(new ShowBoard(null, "103"));
 			}
 		}
 	}
