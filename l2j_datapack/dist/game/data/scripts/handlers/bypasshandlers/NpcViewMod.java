@@ -154,13 +154,16 @@ public class NpcViewMod implements IBypassHandler
 		StringBuilder stringBuilder = new StringBuilder();
 		stringBuilder.append("<html>");
 		stringBuilder.append("<head>");
-		stringBuilder.append("<title>Aggro List</title>");
+		stringBuilder.append("<title>Aggression</title>");
 		stringBuilder.append("</head>");
 		stringBuilder.append("<body>");
 		stringBuilder.append("<center>");
 
-		stringBuilder.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
-		stringBuilder.append("<tr><td>Name</td><td>Aggro</td></tr>");
+		stringBuilder.append("<table width=360 cellpadding=2 cellspacing=2 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
+		stringBuilder.append("<tr>");
+		stringBuilder.append("<td><font color=\"LEVEL\"><b>Name</b></font></td>");
+		stringBuilder.append("<td><font color=\"LEVEL\"><b>Aggro</b></font></td>");
+		stringBuilder.append("</tr>");
 
 		npc.getAggroList().forEach((character, aggro) -> {
 			stringBuilder.append("<tr>");
@@ -175,7 +178,9 @@ public class NpcViewMod implements IBypassHandler
 		stringBuilder.append("</body>");
 		stringBuilder.append("</html>");
 
-		Util.sendCBHtml(activeChar, stringBuilder.toString());
+		final NpcHtmlMessage html = new NpcHtmlMessage();
+		html.setHtml(stringBuilder.toString());
+		activeChar.sendPacket(html);
 	}
 
 	@Override
@@ -288,7 +293,7 @@ public class NpcViewMod implements IBypassHandler
 			final Map<L2Character, AggroInfo> aggroList = attackable.getAggroList();
 			if ((aggroList != null) && !aggroList.isEmpty()) {
 				sb.append("<table width=275 cellpadding=0 cellspacing=0><tr>");
-				sb.append("<td align=center><button value=\"Show Aggro\" width=100 height=25 action=\"bypass NpcViewMod aggroList ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+				sb.append("<td align=center><button value=\"Show Aggression\" width=100 height=25 action=\"bypass NpcViewMod aggroList ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
 				sb.append("</tr></table>");
 			}
 		}
