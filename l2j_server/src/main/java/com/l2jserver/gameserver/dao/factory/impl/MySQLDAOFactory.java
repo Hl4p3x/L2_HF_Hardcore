@@ -54,6 +54,7 @@ import com.l2jserver.gameserver.dao.impl.mysql.ShortcutDAOMySQLImpl;
 import com.l2jserver.gameserver.dao.impl.mysql.SkillDAOMySQLImpl;
 import com.l2jserver.gameserver.dao.impl.mysql.SubclassDAOMySQLImpl;
 import com.l2jserver.gameserver.dao.impl.mysql.TeleportBookmarkDAOMySQLImpl;
+import com.l2jserver.gameserver.loginbonus.LoginBonusDao;
 
 /**
  * MySQL DAO Factory implementation.
@@ -81,6 +82,7 @@ enum MySQLDAOFactory implements IDAOFactory
 	private final SubclassDAO subclassDAO = new SubclassDAOMySQLImpl();
 	private final TeleportBookmarkDAO teleportBookmarkDAO = new TeleportBookmarkDAOMySQLImpl();
 	private final MaxOnlineDao maxOnlineDao = new MaxOnlineDao();
+	private final LoginBonusDao loginBonusDao = new LoginBonusDao();
 	
 	@Override
 	public FriendDAO getFriendDAO()
@@ -189,4 +191,8 @@ enum MySQLDAOFactory implements IDAOFactory
 		return maxOnlineDao;
 	}
 
+	@Override
+	public LoginBonusDao getLoginBonusDao() {
+		return loginBonusDao;
+	}
 }
