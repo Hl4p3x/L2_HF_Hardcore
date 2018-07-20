@@ -159,7 +159,7 @@ public class NpcViewMod implements IBypassHandler
 		stringBuilder.append("<body>");
 		stringBuilder.append("<center>");
 
-		stringBuilder.append("<table width=320 cellpadding=2 cellspacing=2 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
+		stringBuilder.append("<table width=300 cellpadding=2 cellspacing=2 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
 		stringBuilder.append("<tr>");
 		stringBuilder.append("<td><font color=\"LEVEL\"><b>Name</b></font></td>");
 		stringBuilder.append("<td><font color=\"LEVEL\"><b>Aggression</b></font></td>");
