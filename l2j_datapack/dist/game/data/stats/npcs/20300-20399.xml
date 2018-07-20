@@ -1098,10 +1098,10 @@
 				<group chance="70">
 					<item id="57" min="30" max="42" chance="100"/> <!-- Adena -->
 				</group>
-				<group chance="33.52899932861328">
-					<item id="112" min="1" max="1" chance="30.627"/> <!-- Apprentice's Earring -->
-					<item id="118" min="1" max="1" chance="22.8201"/> <!-- Necklace of Magic -->
-					<item id="116" min="1" max="1" chance="46.5529"/> <!-- Magic Ring -->
+				<group chance="13.52899932861328">
+					<item id="112" min="1" max="1" chance="10.627"/> <!-- Apprentice's Earring -->
+					<item id="118" min="1" max="1" chance="12.8201"/> <!-- Necklace of Magic -->
+					<item id="116" min="1" max="1" chance="16.5529"/> <!-- Magic Ring -->
 				</group>
 				<group chance="6.698800086975098">
 					<item id="1864" min="1" max="1" chance="29.1262"/> <!-- Stem -->
