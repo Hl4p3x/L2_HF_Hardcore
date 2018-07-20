@@ -1328,18 +1328,19 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		int range = npc.getPhysicalAttackRange() + combinedCollision;
 		if (mostHate.isMoving())
 		{
-			range = range + 50;
+			range = range + 25;
 			if (npc.isMoving())
 			{
-				range = range + 50;
+				range = range + 25;
 			}
 		}
 		
 		long timeSinceLastCast = System.currentTimeMillis() - lastCastTime;
 		boolean canCastSkill = timeSinceLastCast >= Config.NPC_DELAY_BETWEEN_CASTS;
+		boolean canSeeTarget = GeoData.getInstance().canSeeTarget(npc, npc.getTarget());
 		
 		// Long/Short Range skill usage.
-		if (canCastSkill && !npc.getShortRangeSkills().isEmpty() && npc.hasSkillChance())
+		if (canSeeTarget && canCastSkill && !npc.getShortRangeSkills().isEmpty() && npc.hasSkillChance())
 		{
 			final Skill shortRangeSkill = npc.getShortRangeSkills().get(Rnd.get(npc.getShortRangeSkills().size()));
 			int random = Rnd.get(100);
@@ -1354,7 +1355,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			LOG.debug("{} could not use short range skill {} on {} because of random {} is less than {} or conditions", this, shortRangeSkill, npc.getTarget(), random, npc.getShortRangeSkillChance());
 		}
 		
-		if (canCastSkill && !npc.getLongRangeSkills().isEmpty() && npc.hasSkillChance())
+		if (canSeeTarget && canCastSkill && !npc.getLongRangeSkills().isEmpty() && npc.hasSkillChance())
 		{
 			final Skill longRangeSkill = npc.getLongRangeSkills().get(Rnd.get(npc.getLongRangeSkills().size()));
 			int random = Rnd.get(100);
@@ -1370,7 +1371,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		}
 		
 		// Starts melee attack
-		if ((dist2 > range) || !GeoData.getInstance().canSeeTarget(npc, mostHate))
+		if ((dist2 > range) || !canSeeTarget)
 		{
 			LOG.debug("{}: target {} is out of reach, reconsidering", npc, mostHate);
 			if (npc.isMovementDisabled())
