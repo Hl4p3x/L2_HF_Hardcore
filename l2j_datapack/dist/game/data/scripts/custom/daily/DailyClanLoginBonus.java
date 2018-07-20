@@ -55,19 +55,19 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
         }
 
         LoginBonusDao loginBonusDao = DAOFactory.getInstance().getLoginBonusDao();
-        Optional<LoginBonusRecord> loginBonusRecord = loginBonusDao.findPlayerBonusRecord(player.getId(), LoginBonusType.CLAN);
+        Optional<LoginBonusRecord> loginBonusRecord = loginBonusDao.findPlayerBonusRecord(player.getObjectId(), LoginBonusType.CLAN);
         if (loginBonusRecord.isPresent()) {
             long timeSinceLastBonus = System.currentTimeMillis() - loginBonusRecord.get().getLastBonusTimeInMs();
             if (timeSinceLastBonus >= DAY_IN_MS) {
                 rewardPlayerWithRandomItem(player);
-                boolean updated = loginBonusDao.updateLoginBonusRecordTime(player.getId(), LoginBonusType.CLAN);
+                boolean updated = loginBonusDao.updateLoginBonusRecordTime(player.getObjectId(), LoginBonusType.CLAN);
                 if (!updated) {
                     LOG.warn("Could not update login bonus reward for player {}", player);
                 }
             }
         } else {
             rewardPlayerWithRandomItem(player);
-            boolean updated = loginBonusDao.createLoginBonusRecordNow(player.getId(), LoginBonusType.CLAN);
+            boolean updated = loginBonusDao.createLoginBonusRecordNow(player.getObjectId(), LoginBonusType.CLAN);
             if (!updated) {
                 LOG.warn("Could not create login bonus reward for player {}", player);
             }
