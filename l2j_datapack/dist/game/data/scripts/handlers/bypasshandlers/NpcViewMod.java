@@ -173,7 +173,9 @@ public class NpcViewMod implements IBypassHandler
 		});
 
 		stringBuilder.append("</table>");
-
+		stringBuilder.append("<button value=\"Refresh\" width=100 height=25 action=\"bypass NpcViewMod aggroList ")
+				.append(npc.getObjectId())
+				.append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\">");
 		stringBuilder.append("</center>");
 		stringBuilder.append("</body>");
 		stringBuilder.append("</html>");
@@ -271,15 +273,15 @@ public class NpcViewMod implements IBypassHandler
 		final Map<DropListScope, List<IDropItem>> dropLists = npc.getTemplate().getDropLists();
 		if ((dropLists != null) && !dropLists.isEmpty() && (dropLists.containsKey(DropListScope.DEATH) || dropLists.containsKey(DropListScope.CORPSE)))
 		{
-			sb.append("<table width=275 cellpadding=0 cellspacing=0><tr>");
+			sb.append("<table width=295 cellpadding=0 cellspacing=0><tr>");
 			if (dropLists.containsKey(DropListScope.DEATH))
 			{
-				sb.append("<td align=center><button value=\"Show Drop\" width=100 height=25 action=\"bypass NpcViewMod dropList DEATH ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+				sb.append("<td align=center><button value=\"Show Drop\" width=110 height=25 action=\"bypass NpcViewMod dropList DEATH ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
 			}
 
 			if (dropLists.containsKey(DropListScope.CORPSE))
 			{
-				sb.append("<td align=center><button value=\"Show Spoil\" width=100 height=25 action=\"bypass NpcViewMod dropList CORPSE ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+				sb.append("<td align=center><button value=\"Show Spoil\" width=110 height=25 action=\"bypass NpcViewMod dropList CORPSE ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
 			}
 			sb.append("</tr></table>");
 		}
@@ -292,8 +294,8 @@ public class NpcViewMod implements IBypassHandler
 			L2Attackable attackable = (L2Attackable) npc;
 			final Map<L2Character, AggroInfo> aggroList = attackable.getAggroList();
 			if ((aggroList != null) && !aggroList.isEmpty()) {
-				sb.append("<table width=275 cellpadding=0 cellspacing=0><tr>");
-				sb.append("<td align=center><button value=\"Show Aggression\" width=100 height=25 action=\"bypass NpcViewMod aggroList ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+				sb.append("<table width=295 cellpadding=0 cellspacing=0><tr>");
+				sb.append("<td align=center><button value=\"Show Aggression\" width=110 height=25 action=\"bypass NpcViewMod aggroList ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
 				sb.append("</tr></table>");
 			}
 		}
