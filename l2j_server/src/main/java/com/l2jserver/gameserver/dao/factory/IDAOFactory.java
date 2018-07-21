@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.dao.factory;
 
+import com.l2jserver.gameserver.clanbonus.ClanBonusesDao;
 import com.l2jserver.gameserver.dao.*;
 import com.l2jserver.gameserver.loginbonus.LoginBonusDao;
 
@@ -66,5 +67,7 @@ public interface IDAOFactory
 	LoginBonusDao getLoginBonusDao();
 
 	CustomVariablesDao getCustomVariablesDao();
+
+	ClanBonusesDao getClanBonusesDao();
 
 }

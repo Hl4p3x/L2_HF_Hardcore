@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.dao.factory.impl;
 
+import com.l2jserver.gameserver.clanbonus.ClanBonusesDao;
 import com.l2jserver.gameserver.dao.*;
 import com.l2jserver.gameserver.dao.factory.IDAOFactory;
 import com.l2jserver.gameserver.dao.impl.mysql.*;
@@ -51,6 +52,7 @@ enum MySQLDAOFactory implements IDAOFactory
 	private final MaxOnlineDao maxOnlineDao = new MaxOnlineDao();
 	private final LoginBonusDao loginBonusDao = new LoginBonusDao();
 	private final CustomVariablesDao customVariablesDao = new CustomVariablesDao();
+	private final ClanBonusesDao clanBonusesDao = new ClanBonusesDao();
 	
 	@Override
 	public FriendDAO getFriendDAO()
@@ -169,4 +171,8 @@ enum MySQLDAOFactory implements IDAOFactory
 		return customVariablesDao;
 	}
 
+	@Override
+	public ClanBonusesDao getClanBonusesDao() {
+		return clanBonusesDao;
+	}
 }
