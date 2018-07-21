@@ -2,7 +2,9 @@ package custom.clan;
 
 import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
+import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.entity.Message;
 import com.l2jserver.gameserver.model.events.Containers;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.impl.character.player.clan.OnPlayerClanJoin;
@@ -60,11 +62,25 @@ public class FirstClanBonus extends AbstractNpcAI {
             // Mithril Robe Set
             new Reward(437, 1),
             new Reward(470, 1),
-            new Reward(2450, 1)
+            new Reward(2450, 1),
 
-            //TODO Crystals
-            //TODO Weapons
-            //TODO Jewelry
+            new Reward(128, 1), // Knight's Sword
+            new Reward(124, 1), // Two-Handed Sword
+            new Reward(221, 1), // Assassin Knife
+            new Reward(276, 1), // Elven Bow
+            new Reward(277, 1), // Dark Elven Bow
+            new Reward(259, 1), // Single-Edged Jamadhr
+            new Reward(292, 1), // Pike
+            new Reward(180, 1), // Mace of Judgment
+            new Reward(186, 1), // Staff of Magic
+
+            new Reward(1458, 2000), // Crystal (D-Grade)
+            new Reward(1459, 1000), // Crystal (C-Grade)
+            new Reward(1460, 500), // Crystal (B-Grade)
+
+            new Reward(847, 6), // Red Crescent Earring
+            new Reward(910, 3), // Necklace of Devotion
+            new Reward(890, 6) // Ring of Devotion
     );
 
     private FirstClanBonus() {
@@ -94,6 +110,8 @@ public class FirstClanBonus extends AbstractNpcAI {
             LOG.warn("{} Skipping clan bonus check, clan was null", LOG_TAG);
             return;
         }
+
+        //TODO check clan already received a reward
         if (clan.getMembersCount() >= REQUIRED_MEMBERS_COUNT && clan.getLevel() >= REQUIRED_CLAN_LEVEL) {
             Optional<String> clanBonusCounter = DAOFactory.getInstance().getCustomVariablesDao().findVariable(CLAN_COUNTER_VARIABLE_NAME);
             if (clanBonusCounter.isPresent()) {
@@ -103,8 +121,12 @@ public class FirstClanBonus extends AbstractNpcAI {
                     REWARDS.forEach(reward ->
                             clan.getWarehouse().addItem("ClanBonus", reward.getItemId(), reward.getAmount(), null, null)
                     );
-                    clan.getLeaderId();
-                    //TODO Email about reward
+
+                    Message rewardMessage = new Message(clan.getLeaderId(),
+                            "Clan Reward",
+                            "Your clan is one of the top 10 clans on server! Check your clan warehouse for rewards!",
+                            Message.SendBySystem.NONE);
+                    MailManager.getInstance().sendMessage(rewardMessage);
                 }
             } else {
                 LOG.warn("{} Could not find clan bonuses counter", LOG_TAG);
