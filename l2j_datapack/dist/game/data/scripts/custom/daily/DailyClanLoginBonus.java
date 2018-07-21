@@ -11,6 +11,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Message;
 import com.l2jserver.gameserver.model.itemcontainer.Mail;
 import com.l2jserver.util.RndCollection;
+import custom.Reward;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,18 +27,18 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
     private static final long HOUR_IN_MS = MINUTE_IN_MS * 60;
     private static final long DAY_IN_MS = HOUR_IN_MS * 24;
 
-    private static final List<LoginReward> REWARDS = Arrays.asList(
-            new LoginReward(1463, 1600), // Soulshot D Grade
-            new LoginReward(1464, 1200), // Soulshot C Grade
-            new LoginReward(1465, 900), // Soulshot B Grade
-            new LoginReward(1466, 700), // Soulshot A Grade
-            new LoginReward(1467, 500), // Soulshot S Grade
+    private static final List<Reward> REWARDS = Arrays.asList(
+            new Reward(1463, 1600), // Soulshot D Grade
+            new Reward(1464, 1200), // Soulshot C Grade
+            new Reward(1465, 900), // Soulshot B Grade
+            new Reward(1466, 700), // Soulshot A Grade
+            new Reward(1467, 500), // Soulshot S Grade
 
-            new LoginReward(3948, 1600), // Blessed Spiritshot D Grade
-            new LoginReward(3949, 1200), // Blessed Spiritshot C Grade
-            new LoginReward(3950, 900), // Blessed Spiritshot B Grade
-            new LoginReward(3951, 700), // Blessed Spiritshot A Grade
-            new LoginReward(3952, 500) // Blessed Spiritshot S Grade
+            new Reward(3948, 1600), // Blessed Spiritshot D Grade
+            new Reward(3949, 1200), // Blessed Spiritshot C Grade
+            new Reward(3950, 900), // Blessed Spiritshot B Grade
+            new Reward(3951, 700), // Blessed Spiritshot A Grade
+            new Reward(3952, 500) // Blessed Spiritshot S Grade
     );
 
     private DailyClanLoginBonus() {
@@ -77,7 +78,7 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
     }
 
     private void rewardPlayerWithRandomItem(L2PcInstance player) {
-        LoginReward reward = RndCollection.random(REWARDS);
+        Reward reward = RndCollection.random(REWARDS);
         Message rewardMessage = new Message(player.getObjectId(), "Clan Daily Login Bonus", "Congratulations with your reward!", Message.SendBySystem.PLAYER);
         Mail attachments = rewardMessage.createAttachments();
         attachments.addItem("ClanLoginBonus", reward.getItemId(), reward.getAmount(), null, null);

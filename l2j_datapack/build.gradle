@@ -7,7 +7,7 @@ defaultTasks('zip')
 sourceCompatibility = JavaVersion.VERSION_1_8
 
 sourceSets {
-	mainSource {
+	main {
 		java {
 			srcDir('dist/game/data/scripts')
 		}
@@ -25,7 +25,7 @@ configurations.all {
 dependencies {
 	compile 'org.slf4j:slf4j-api:1.7.23'
 	compile files('../l2j_server/dist/libs/mmocore.jar')
-	implementation project(':L2J_Server')
+	implementation project(':l2j_server')
 	testCompile 'org.testng:testng:6.10'
 	testCompile 'com.beust:jcommander:1.48'
 	testCompile 'org.mockito:mockito-core:2.7.9'

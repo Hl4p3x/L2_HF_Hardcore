@@ -1,11 +1,11 @@
-package custom.daily;
+package custom;
 
-public class LoginReward {
+public class Reward {
 
     private final int itemId;
     private final long amount;
 
-    public LoginReward(int itemId, long amount) {
+    public Reward(int itemId, long amount) {
         this.itemId = itemId;
         this.amount = amount;
     }
@@ -20,7 +20,7 @@ public class LoginReward {
 
     @Override
     public String toString() {
-        return "LoginReward{" +
+        return "Reward{" +
                 "itemId=" + itemId +
                 ", amount=" + amount +
                 '}';

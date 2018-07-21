@@ -64,4 +64,7 @@ public interface IDAOFactory
 	MaxOnlineDao getMaxOnlineDao();
 
 	LoginBonusDao getLoginBonusDao();
+
+	CustomVariablesDao getCustomVariablesDao();
+
 }
