@@ -34,7 +34,7 @@ public class LoginBonusDao {
 
     public boolean updateLoginBonusRecordTime(int playerId, LoginBonusType bonusType) {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
-             PreparedStatement findBonusStatement = con.prepareStatement("UPDATE login_bonuses SET(last_bonus_time=?) WHERE bonus_owner=? AND bonus_type=?")) {
+             PreparedStatement findBonusStatement = con.prepareStatement("UPDATE login_bonuses SET last_bonus_time=? WHERE bonus_owner=? AND bonus_type=?")) {
             findBonusStatement.setLong(1, System.currentTimeMillis());
             findBonusStatement.setInt(2, playerId);
             findBonusStatement.setString(3, bonusType.toString());
