@@ -1,5 +1,6 @@
 package com.l2jserver.gameserver.model.conditions;
 
+import com.l2jserver.gameserver.engines.ConditionParsingHelper;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
@@ -63,17 +64,56 @@ class CompositeUsingTest {
     }
 
     @Test
-    void testMixedNegative() {
+    void testWeaponPositive() {
         int weaponMask = 0;
         weaponMask |= WeaponType.DAGGER.mask();
         weaponMask |= WeaponType.DUALDAGGER.mask();
 
         ConditionUsingItemType weaponCondition = new ConditionUsingItemType(weaponMask);
-        ConditionUsingItemType armorCondition = new ConditionUsingItemType(ArmorType.LIGHT.mask());
 
         ConditionLogicAnd both = new ConditionLogicAnd();
         both.add(weaponCondition);
-        both.add(armorCondition);
+
+        L2Character effector = mock(L2Character.class);
+        when(effector.isPlayer()).thenReturn(true);
+
+        Inventory inventory = mock(PcInventory.class);
+        when(inventory.getWearedMask()).thenReturn(WeaponType.DAGGER.mask());
+        when(effector.getInventory()).thenReturn(inventory);
+
+        assertTrue(both.test(effector, null, null, null));
+
+        when(inventory.getWearedMask()).thenReturn(WeaponType.DUALDAGGER.mask());
+        assertTrue(both.test(effector, null, null, null));
+    }
+
+    @Test
+    void testWeaponNegative() {
+        int weaponMask = 0;
+        weaponMask |= WeaponType.DAGGER.mask();
+        weaponMask |= WeaponType.DUALDAGGER.mask();
+
+        ConditionUsingItemType weaponCondition = new ConditionUsingItemType(weaponMask);
+
+        ConditionLogicAnd both = new ConditionLogicAnd();
+        both.add(weaponCondition);
+
+        L2Character effector = mock(L2Character.class);
+        when(effector.isPlayer()).thenReturn(true);
+
+        Inventory inventory = mock(PcInventory.class);
+        when(inventory.getWearedMask()).thenReturn(WeaponType.BLUNT.mask());
+        when(effector.getInventory()).thenReturn(inventory);
+
+        assertFalse(both.test(effector, null, null, null));
+    }
+
+    @Test
+    void testMixedNegative() {
+        Condition condition = null;
+        condition = ConditionParsingHelper.handleUsingKind("LIGHT", condition, ConditionUsingItemType::new);
+        condition = ConditionParsingHelper.handleUsingKind("DAGGER,DUALDAGGER", condition, ConditionUsingItemType::new);
+
 
         L2Character effector = mock(L2Character.class);
         when(effector.isPlayer()).thenReturn(true);
@@ -95,10 +135,10 @@ class CompositeUsingTest {
         when(inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST)).thenReturn(chestArmor);
         when(inventory.getPaperdollItem(Inventory.PAPERDOLL_LEGS)).thenReturn(legArmor);
 
-        when(inventory.getWearedMask()).thenReturn(weaponMask);
+        when(inventory.getWearedMask()).thenReturn(WeaponType.BLUNT.mask());
 
         when(effector.getInventory()).thenReturn(inventory);
 
-        assertFalse(both.test(effector, null, null, null));
+        assertFalse(condition.test(effector, null, null, null));
     }
 }

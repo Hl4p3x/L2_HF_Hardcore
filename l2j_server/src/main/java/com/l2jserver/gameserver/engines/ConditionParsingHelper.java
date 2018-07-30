@@ -13,15 +13,15 @@ import java.util.function.Function;
 public class ConditionParsingHelper {
 
     public static Condition parseTargetUsingKind(Node node, Condition condition) {
-        return handleUsingKind(node, condition, ConditionTargetUsesWeaponKind::new);
+        return handleUsingKind(node.getNodeValue(), condition, ConditionTargetUsesWeaponKind::new);
     }
 
     public static Condition parseSelfUsingKind(Node node, Condition condition) {
-        return handleUsingKind(node, condition, ConditionUsingItemType::new);
+        return handleUsingKind(node.getNodeValue(), condition, ConditionUsingItemType::new);
     }
 
-    public static Condition handleUsingKind(Node node, Condition condition, Function<Integer, Condition> conditionProvider) {
-        StringTokenizer st = new StringTokenizer(node.getNodeValue(), ",");
+    public static Condition handleUsingKind(String tokenString, Condition condition, Function<Integer, Condition> conditionProvider) {
+        StringTokenizer st = new StringTokenizer(tokenString, ",");
 
         int mask = 0;
         while (st.hasMoreTokens()) {
