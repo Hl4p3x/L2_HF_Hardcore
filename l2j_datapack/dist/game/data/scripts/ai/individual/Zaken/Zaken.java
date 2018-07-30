@@ -36,6 +36,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2NoRestartZone;
 import com.l2jserver.gameserver.network.NpcStringId;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -102,7 +103,7 @@ public final class Zaken extends AbstractNpcAI {
     private static final int RED = 15281; // Transparent 1HS (for NPC)
     private static final int BLUE = 15302; // Transparent Bow (for NPC)
 
-    private static final L2NoRestartZone zone = ZoneManager.getInstance().getZoneById(70048, L2NoRestartZone.class);
+    private static final L2NoRestartZone zone = ZoneManager.getInstance().getZoneById(70055, L2NoRestartZone.class);
 
     // Locations
     private static final Location[] ENTER_LOC = {

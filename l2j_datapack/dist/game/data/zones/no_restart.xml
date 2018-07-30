@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
 	<!-- No Restart Zones -->
-	<zone name="zaken_no_restart" id="70048" type="NoRestartZone" shape="NPoly" minZ="-3500"
-		maxZ="-2900">
+	<zone name="zaken_no_restart" id="70055" type="NoRestartZone" shape="NPoly" minZ="-3500"
+		  maxZ="-2900">
 		<stat name="restartTime" val="1800" />
 		<stat name="restartAllowedTime" val="600" />
 		<node X="52400" Y="217000" />
