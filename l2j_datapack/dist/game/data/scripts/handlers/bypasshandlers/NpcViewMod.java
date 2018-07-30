@@ -36,10 +36,12 @@ import com.l2jserver.gameserver.util.HtmlUtil;
 import com.l2jserver.gameserver.util.Util;
 
 import java.text.DecimalFormat;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 /**
  * @author NosBit
@@ -139,22 +141,39 @@ public class NpcViewMod implements IBypassHandler
 					if (npc == null) {
 						return false;
 					}
-					sendAggroList(activeChar, npc);
+                    sendAggroList(activeChar, npc, "Aggression", (aggroInfo -> aggroInfo.getHate()));
 				} catch (NumberFormatException e) {
 					return false;
 				}
 				break;
 			}
+            case "dmglist": {
+                if (st.countTokens() < 1) {
+                    _log.warning("Bypass[NpcViewMod] used without enough parameters.");
+                    return false;
+                }
+                try {
+                    final L2Object target = L2World.getInstance().findObject(Integer.parseInt(st.nextToken()));
+                    final L2Attackable npc = target instanceof L2Attackable ? (L2Attackable) target : null;
+                    if (npc == null) {
+                        return false;
+                    }
+                    sendAggroList(activeChar, npc, "Damage", (aggroInfo -> (long) aggroInfo.getDamage()));
+                } catch (NumberFormatException e) {
+                    return false;
+                }
+                break;
+            }
 		}
 		
 		return true;
 	}
 
-	private void sendAggroList(L2PcInstance activeChar, L2Attackable npc) {
+    private void sendAggroList(L2PcInstance activeChar, L2Attackable npc, String statName, Function<AggroInfo, Long> extractInfo) {
 		StringBuilder stringBuilder = new StringBuilder();
 		stringBuilder.append("<html>");
 		stringBuilder.append("<head>");
-		stringBuilder.append("<title>Aggression</title>");
+        stringBuilder.append("<title>").append(statName).append("</title>");
 		stringBuilder.append("</head>");
 		stringBuilder.append("<body>");
 		stringBuilder.append("<center>");
@@ -162,20 +181,34 @@ public class NpcViewMod implements IBypassHandler
 		stringBuilder.append("<table width=300 cellpadding=2 cellspacing=2 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
 		stringBuilder.append("<tr>");
 		stringBuilder.append("<td><font color=\"LEVEL\"><b>Name</b></font></td>");
-		stringBuilder.append("<td><font color=\"LEVEL\"><b>Aggression</b></font></td>");
+        stringBuilder.append("<td><font color=\"LEVEL\"><b>").append(statName).append("</b></font></td>");
 		stringBuilder.append("</tr>");
 
-		npc.getAggroList().forEach((character, aggro) -> {
+
+        npc.getAggroList().values().stream().sorted(Comparator.comparing(extractInfo).reversed()).limit(30).forEach(aggro -> {
 			stringBuilder.append("<tr>");
-			stringBuilder.append("<td>").append(character.getName()).append("</td>");
-			stringBuilder.append("<td>").append(aggro.getHate()).append("</td>");
+            stringBuilder.append("<td>").append(aggro.getAttacker().getName()).append("</td>");
+            stringBuilder.append("<td>").append(extractInfo.apply(aggro)).append("</td>");
 			stringBuilder.append("</tr>");
 		});
 
 		stringBuilder.append("</table>");
-		stringBuilder.append("<button value=\"Refresh\" width=100 height=25 action=\"bypass NpcViewMod aggroList ")
+
+        stringBuilder.append("<table>");
+        stringBuilder.append("<tr>");
+        stringBuilder.append("<td>");
+        stringBuilder.append("<button value=\"Show Aggression\" width=110 height=25 action=\"bypass NpcViewMod aggroList ")
 				.append(npc.getObjectId())
 				.append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\">");
+        stringBuilder.append("</td>");
+        stringBuilder.append("<td>");
+        stringBuilder.append("<button value=\"Show Damage\" width=110 height=25 action=\"bypass NpcViewMod dmgList ")
+                .append(npc.getObjectId())
+                .append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\">");
+        stringBuilder.append("</td>");
+        stringBuilder.append("</tr>");
+        stringBuilder.append("</table>");
+
 		stringBuilder.append("</center>");
 		stringBuilder.append("</body>");
 		stringBuilder.append("</html>");
@@ -262,7 +295,7 @@ public class NpcViewMod implements IBypassHandler
 		html.replace("%attributeholy%", npc.getStat().getDefenseElementValue(Elementals.HOLY));
 		
 		html.replace("%dropListButtons%", getDropListButtons(npc));
-		html.replace("%aggroListButtons%", getAggroListButton(npc));
+        html.replace("%aggroListButtons%", getAggroAndDmgListButton(npc));
 		
 		activeChar.sendPacket(html);
 	}
@@ -288,7 +321,7 @@ public class NpcViewMod implements IBypassHandler
 		return sb.toString();
 	}
 
-	public static String getAggroListButton(L2Npc npc) {
+    public static String getAggroAndDmgListButton(L2Npc npc) {
 		final StringBuilder sb = new StringBuilder();
 		if (npc instanceof L2Attackable) {
 			L2Attackable attackable = (L2Attackable) npc;
@@ -296,6 +329,7 @@ public class NpcViewMod implements IBypassHandler
 			if ((aggroList != null) && !aggroList.isEmpty()) {
 				sb.append("<table width=295 cellpadding=0 cellspacing=0><tr>");
 				sb.append("<td align=center><button value=\"Show Aggression\" width=110 height=25 action=\"bypass NpcViewMod aggroList ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
+                sb.append("<td align=center><button value=\"Show Damage\" width=110 height=25 action=\"bypass NpcViewMod dmgList ").append(npc.getObjectId()).append("\" back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\"></td>");
 				sb.append("</tr></table>");
 			}
 		}
