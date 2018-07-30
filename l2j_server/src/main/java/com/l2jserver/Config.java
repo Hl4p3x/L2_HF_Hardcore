@@ -18,46 +18,6 @@
  */
 package com.l2jserver;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-import java.math.BigInteger;
-import java.net.Inet6Address;
-import java.net.InetAddress;
-import java.net.InterfaceAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.net.URL;
-import java.net.UnknownHostException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import java.util.StringTokenizer;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import com.l2jserver.gameserver.GameServer;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.L2World;
@@ -68,6 +28,25 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.PropertiesParser;
 import com.l2jserver.util.StringUtil;
 import com.l2jserver.util.data.xml.IXmlReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
+import java.io.*;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.math.BigInteger;
+import java.net.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * This class loads all the game server related configurations from files.<br>
@@ -935,23 +914,32 @@ public final class Config
 	public static float RATE_DROP_HP_HERBS;
 	public static float RATE_DROP_MP_HERBS;
 	public static float RATE_DROP_SPECIAL_HERBS;
-	public static int PLAYER_DROP_LIMIT;
-	public static int PLAYER_RATE_PVP_DROP;
-	public static int PLAYER_RATE_NPC_DROP;
-	public static int PLAYER_RATE_WAR_DROP;
-	public static int PLAYER_RATE_SIEGE_DROP;
-	public static int PLAYER_RATE_DROP_ITEM;
-	public static int PLAYER_RATE_DROP_EQUIP;
-	public static int PLAYER_RATE_DROP_EQUIP_WEAPON;
+
 	public static float PET_XP_RATE;
 	public static int PET_FOOD_RATE;
 	public static float SINEATER_XP_RATE;
-	public static int KARMA_DROP_LIMIT;
-	public static int KARMA_RATE_DROP;
-	public static int KARMA_RATE_DROP_ITEM;
-	public static int KARMA_RATE_DROP_EQUIP;
-	public static int KARMA_RATE_DROP_EQUIP_WEAPON;
-	
+
+	public static int PLAYER_WEAPON_DROP_COUNT;
+	public static int PLAYER_ARMOR_DROP_COUNT;
+	public static int PLAYER_BAG_DROP_COUNT;
+
+	public static double PLAYER_WEAPON_DROP_CHANCE;
+	public static double PLAYER_ARMOR_DROP_CHANCE;
+	public static double PLAYER_BAG_DROP_CHANCE;
+
+	public static double PLAYER_SIEGE_DROP_MODIFIER;
+	public static double PLAYER_WAR_DROP_MODIFIER;
+	public static double PLAYER_NPC_DROP_MODIFIER;
+	public static double PLAYER_PVP_DROP_MODIFIER;
+
+	public static int PK_WEAPON_DROP_COUNT;
+	public static int PK_ARMOR_DROP_COUNT;
+	public static int PK_BAG_DROP_COUNT;
+
+	public static double PK_WEAPON_DROP_CHANCE;
+	public static double PK_ARMOR_DROP_CHANCE;
+	public static double PK_BAG_DROP_CHANCE;
+
 	public static boolean VALUABLE_ITEMS_DETAILED_CALCULATION;
 	public static boolean VALUABLE_ITEMS_LIMIT_LOG;
 	public static int VALUABLE_ITEMS_WARNING_LIMIT;
@@ -2236,23 +2224,32 @@ public final class Config
 			}
 			RATE_KARMA_EXP_LOST = RatesSettings.getFloat("RateKarmaExpLost", 1);
 			RATE_SIEGE_GUARDS_PRICE = RatesSettings.getFloat("RateSiegeGuardsPrice", 1);
-			PLAYER_DROP_LIMIT = RatesSettings.getInt("PlayerDropLimit", 3);
-			PLAYER_RATE_PVP_DROP = RatesSettings.getInt("PlayerRatePvpDeathDrop", 5);
-			PLAYER_RATE_NPC_DROP = RatesSettings.getInt("PlayerRateNpcDeathDrop", 5);
-			PLAYER_RATE_WAR_DROP = RatesSettings.getInt("PlayerRateClanWarDeathDrop", 5);
-			PLAYER_RATE_SIEGE_DROP = RatesSettings.getInt("PlayerRateSiegeDeathDrop", 5);
-			PLAYER_RATE_DROP_ITEM = RatesSettings.getInt("PlayerRateDropItem", 70);
-			PLAYER_RATE_DROP_EQUIP = RatesSettings.getInt("PlayerRateDropEquip", 25);
-			PLAYER_RATE_DROP_EQUIP_WEAPON = RatesSettings.getInt("PlayerRateDropEquipWeapon", 5);
+
+			PLAYER_WEAPON_DROP_COUNT = RatesSettings.getInt("PlayerWeaponDropCount", 2);
+			PLAYER_ARMOR_DROP_COUNT = RatesSettings.getInt("PlayerArmorDropCount", 5);
+			PLAYER_BAG_DROP_COUNT = RatesSettings.getInt("PlayerBagDropCount", 20);
+
+			PLAYER_WEAPON_DROP_CHANCE = RatesSettings.getDouble("PlayerWeaponDropChance", 1d);
+			PLAYER_ARMOR_DROP_CHANCE = RatesSettings.getDouble("PlayerArmorDropChance", 2d);
+			PLAYER_BAG_DROP_CHANCE = RatesSettings.getDouble("PlayerBagDropChance", 3d);
+
+			PLAYER_SIEGE_DROP_MODIFIER = RatesSettings.getDouble("PlayerSiegeDropChance", 1.5d);
+			PLAYER_WAR_DROP_MODIFIER = RatesSettings.getDouble("PlayerWarDropChance", 2d);
+			PLAYER_NPC_DROP_MODIFIER = RatesSettings.getDouble("PlayerNpcDropChance", 1.2d);
+			PLAYER_PVP_DROP_MODIFIER = RatesSettings.getDouble("PlayerPvpDropChance", 1.5d);
+
+			PK_WEAPON_DROP_COUNT = RatesSettings.getInt("PkWeaponDropCount", 5);
+			PK_ARMOR_DROP_COUNT = RatesSettings.getInt("PkArmorDropCount", 10);
+			PK_BAG_DROP_COUNT = RatesSettings.getInt("PkBagDropCount", 30);
+
+			PK_WEAPON_DROP_CHANCE = RatesSettings.getDouble("PkWeaponDropChance", 2d);
+			PK_ARMOR_DROP_CHANCE = RatesSettings.getDouble("PkArmorDropChance", 5d);
+			PK_BAG_DROP_CHANCE = RatesSettings.getDouble("PkBagDropChance", 7d);
+
 			PET_XP_RATE = RatesSettings.getFloat("PetXpRate", 1);
 			PET_FOOD_RATE = RatesSettings.getInt("PetFoodRate", 1);
 			SINEATER_XP_RATE = RatesSettings.getFloat("SinEaterXpRate", 1);
-			KARMA_DROP_LIMIT = RatesSettings.getInt("KarmaDropLimit", 10);
-			KARMA_RATE_DROP = RatesSettings.getInt("KarmaRateDrop", 70);
-			KARMA_RATE_DROP_ITEM = RatesSettings.getInt("KarmaRateDropItem", 50);
-			KARMA_RATE_DROP_EQUIP = RatesSettings.getInt("KarmaRateDropEquip", 40);
-			KARMA_RATE_DROP_EQUIP_WEAPON = RatesSettings.getInt("KarmaRateDropEquipWeapon", 10);
-			
+
 			VALUABLE_ITEMS_DETAILED_CALCULATION = RatesSettings.getBoolean("ValuableItemsDetailedCalculation", false);
 			VALUABLE_ITEMS_LIMIT_LOG = RatesSettings.getBoolean("ValuableItemsLimitLog", false);
 			VALUABLE_ITEMS_WARNING_LIMIT = RatesSettings.getInt("ValuableItemsWarningLimit", 50);
@@ -3096,21 +3093,6 @@ public final class Config
 			case "ratevitalityherbs":
 				RATE_DROP_VITALITY_HERBS = Float.parseFloat(pValue);
 				break;
-			case "playerdroplimit":
-				PLAYER_DROP_LIMIT = Integer.parseInt(pValue);
-				break;
-			case "playerratedrop":
-				PLAYER_RATE_PVP_DROP = Integer.parseInt(pValue);
-				break;
-			case "playerratedropitem":
-				PLAYER_RATE_DROP_ITEM = Integer.parseInt(pValue);
-				break;
-			case "playerratedropequip":
-				PLAYER_RATE_DROP_EQUIP = Integer.parseInt(pValue);
-				break;
-			case "playerratedropequipweapon":
-				PLAYER_RATE_DROP_EQUIP_WEAPON = Integer.parseInt(pValue);
-				break;
 			case "petxprate":
 				PET_XP_RATE = Float.parseFloat(pValue);
 				break;
@@ -3119,21 +3101,6 @@ public final class Config
 				break;
 			case "sineaterxprate":
 				SINEATER_XP_RATE = Float.parseFloat(pValue);
-				break;
-			case "karmadroplimit":
-				KARMA_DROP_LIMIT = Integer.parseInt(pValue);
-				break;
-			case "karmaratedrop":
-				KARMA_RATE_DROP = Integer.parseInt(pValue);
-				break;
-			case "karmaratedropitem":
-				KARMA_RATE_DROP_ITEM = Integer.parseInt(pValue);
-				break;
-			case "karmaratedropequip":
-				KARMA_RATE_DROP_EQUIP = Integer.parseInt(pValue);
-				break;
-			case "karmaratedropequipweapon":
-				KARMA_RATE_DROP_EQUIP_WEAPON = Integer.parseInt(pValue);
 				break;
 			case "autodestroydroppeditemafter":
 				AUTODESTROY_ITEM_AFTER = Integer.parseInt(pValue);

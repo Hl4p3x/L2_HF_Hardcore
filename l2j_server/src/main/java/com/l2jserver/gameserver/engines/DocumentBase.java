@@ -191,7 +191,9 @@ public abstract class DocumentBase
 			}
 			applyCond = LogicHelper.joinAnd(applyCond, parseCondition(conditionNode, template));
 		}
-		_log.finest("Applying function condition " + applyCond + " to template " + template);
+		if (applyCond != null) {
+			_log.finest("Applying function condition " + applyCond + " to template " + template);
+		}
 		final FuncTemplate ft = new FuncTemplate(attachCond, applyCond, functionName, order, stat, value);
 		if (template instanceof L2Item)
 		{

@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,6 +37,8 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author Advi
@@ -82,7 +85,14 @@ public abstract class ItemContainer
 	{
 		return _items.toArray(new L2ItemInstance[0]);
 	}
-	
+
+	public ItemsByCategory getCategorizedItems() {
+		List<L2ItemInstance> weapons = Stream.of(getItems()).filter(L2ItemInstance::isWeapon).collect(Collectors.toList());
+		List<L2ItemInstance> armor = Stream.of(getItems()).filter(L2ItemInstance::isArmor).collect(Collectors.toList());
+		List<L2ItemInstance> others = Stream.of(getItems()).filter(itemInstance -> !itemInstance.isArmor() && !itemInstance.isWeapon()).collect(Collectors.toList());
+		return new ItemsByCategory(weapons, armor, others);
+	}
+
 	/**
 	 * @param itemId the item Id
 	 * @return the item from inventory by itemId
