@@ -18,11 +18,11 @@
  */
 package com.l2jserver.commons.database.pool.impl;
 
-import javax.sql.DataSource;
-
 import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.IConnectionFactory;
 import com.zaxxer.hikari.HikariDataSource;
+
+import javax.sql.DataSource;
 
 /**
  * HikariCP Connection Factory implementation.<br>
@@ -44,6 +44,7 @@ enum HikariCPConnectionFactory implements IConnectionFactory
 		_dataSource.setPassword(Config.DATABASE_PASSWORD);
 		_dataSource.setMaximumPoolSize(Config.DATABASE_MAX_CONNECTIONS);
 		_dataSource.setIdleTimeout(Config.DATABASE_MAX_IDLE_TIME);
+		_dataSource.setDriverClassName(Config.DATABASE_DRIVER);
 	}
 	
 	@Override
