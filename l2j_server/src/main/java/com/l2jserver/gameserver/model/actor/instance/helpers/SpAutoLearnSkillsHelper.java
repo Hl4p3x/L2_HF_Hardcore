@@ -10,14 +10,16 @@ import com.l2jserver.gameserver.model.base.ClassInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillDone;
+import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class SpAutoLearnSkillsHelper {
 
@@ -89,6 +91,8 @@ public class SpAutoLearnSkillsHelper {
 
         pcInstance.sendPacket(new AcquireSkillDone());
         pcInstance.sendSkillList();
+
+        pcInstance.broadcastPacket(new SocialAction(pcInstance.getObjectId(), SocialAction.LEVEL_UP));
 
         return true;
     }
