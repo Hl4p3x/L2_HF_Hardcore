@@ -61,4 +61,44 @@ class CompositeUsingTest {
         both.add(heavyArmorCondition);
         assertFalse(both.test(effector, null, null, null));
     }
+
+    @Test
+    void testMixedNegative() {
+        int weaponMask = 0;
+        weaponMask |= WeaponType.DAGGER.mask();
+        weaponMask |= WeaponType.DUALDAGGER.mask();
+
+        ConditionUsingItemType weaponCondition = new ConditionUsingItemType(weaponMask);
+        ConditionUsingItemType armorCondition = new ConditionUsingItemType(ArmorType.LIGHT.mask());
+
+        ConditionLogicAnd both = new ConditionLogicAnd();
+        both.add(weaponCondition);
+        both.add(armorCondition);
+
+        L2Character effector = mock(L2Character.class);
+        when(effector.isPlayer()).thenReturn(true);
+
+        L2Armor chestArmorItem = mock(L2Armor.class);
+        when(chestArmorItem.getItemType()).thenReturn(ArmorType.LIGHT);
+        when(chestArmorItem.getBodyPart()).thenReturn(L2Item.SLOT_CHEST);
+
+        L2ItemInstance chestArmor = mock(L2ItemInstance.class);
+        when(chestArmor.getItem()).thenReturn(chestArmorItem);
+
+        L2Armor legArmorItem = mock(L2Armor.class);
+        when(legArmorItem.getItemType()).thenReturn(ArmorType.LIGHT);
+
+        L2ItemInstance legArmor = mock(L2ItemInstance.class);
+        when(legArmor.getItem()).thenReturn(legArmorItem);
+
+        Inventory inventory = mock(PcInventory.class);
+        when(inventory.getPaperdollItem(Inventory.PAPERDOLL_CHEST)).thenReturn(chestArmor);
+        when(inventory.getPaperdollItem(Inventory.PAPERDOLL_LEGS)).thenReturn(legArmor);
+
+        when(inventory.getWearedMask()).thenReturn(weaponMask);
+
+        when(effector.getInventory()).thenReturn(inventory);
+
+        assertFalse(both.test(effector, null, null, null));
+    }
 }

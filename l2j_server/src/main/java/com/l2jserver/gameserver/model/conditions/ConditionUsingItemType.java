@@ -97,4 +97,5 @@ public final class ConditionUsingItemType extends Condition
 		}
 		return (_mask & inv.getWearedMask()) != 0;
 	}
+
 }
