@@ -92,7 +92,9 @@ public class SpAutoLearnSkillsHelper {
         pcInstance.sendPacket(new AcquireSkillDone());
         pcInstance.sendSkillList();
 
-        pcInstance.broadcastPacket(new SocialAction(pcInstance.getObjectId(), SocialAction.LEVEL_UP));
+        if (!addedSkills.isEmpty()) {
+            pcInstance.broadcastPacket(new SocialAction(pcInstance.getObjectId(), SocialAction.LEVEL_UP));
+        }
 
         return true;
     }
