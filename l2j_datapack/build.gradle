@@ -23,7 +23,7 @@ configurations.all {
 }
 
 dependencies {
-	compile 'org.slf4j:slf4j-api:1.7.23'
+	compile 'org.slf4j:slf4j-api:1.7.25'
 	compile files('../l2j_server/dist/libs/mmocore.jar')
 	implementation project(':l2j_server')
 	testCompile 'org.testng:testng:6.10'
