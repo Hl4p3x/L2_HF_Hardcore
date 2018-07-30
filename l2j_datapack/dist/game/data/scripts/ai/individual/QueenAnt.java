@@ -18,9 +18,7 @@
  */
 package ai.individual;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-
+import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.audio.Music;
@@ -39,7 +37,8 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
-import ai.npc.AbstractNpcAI;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Queen Ant's AI
@@ -238,6 +237,7 @@ public final class QueenAnt extends AbstractNpcAI
 			case NURSE:
 				mob.disableCoreAI(true);
 				mob.setIsRaidMinion(true);
+                mob.getSpawn().setRespawnDelay(3);
 				_nurses.add(mob);
 				break;
 			case ROYAL:
