@@ -19,7 +19,6 @@
 package ai.individual;
 
 import ai.npc.AbstractNpcAI;
-
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -55,13 +54,6 @@ public final class QueenShyeed extends AbstractNpcAI
 			case "respawn":
 				spawnShyeed();
 				break;
-			case "despawn":
-				if (!npc.isDead())
-				{
-					npc.deleteMe();
-					startRespawn();
-				}
-				break;
 		}
 		return null;
 	}
@@ -92,7 +84,6 @@ public final class QueenShyeed extends AbstractNpcAI
 			return;
 		}
 		final L2Npc npc = addSpawn(SHYEED, SHYEED_LOC, false, 0);
-		startQuestTimer("despawn", 10800000, npc, null);
 		PC_BUFF_ZONE.setEnabled(false);
 		MOB_BUFF_ZONE.setEnabled(true);
 		MOB_BUFF_DISPLAY_ZONE.setEnabled(true);
