@@ -75,7 +75,7 @@ public class DieDropHelper {
                 continue;
             }
 
-            int roll = Rnd.get(100);
+            double roll = Rnd.get(100) + Rnd.nextDouble();
             if (roll < itemDropChance) {
                 LOG.debug("Handling drop for {} rolled {} against {}", itemDrop, roll, itemDropChance);
                 if (itemDrop.isEquipped()) {
