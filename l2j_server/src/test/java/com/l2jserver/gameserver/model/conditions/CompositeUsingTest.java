@@ -114,7 +114,6 @@ class CompositeUsingTest {
         condition = ConditionParsingHelper.handleUsingKind("LIGHT", condition, ConditionUsingItemType::new);
         condition = ConditionParsingHelper.handleUsingKind("DAGGER,DUALDAGGER", condition, ConditionUsingItemType::new);
 
-
         L2Character effector = mock(L2Character.class);
         when(effector.isPlayer()).thenReturn(true);
 

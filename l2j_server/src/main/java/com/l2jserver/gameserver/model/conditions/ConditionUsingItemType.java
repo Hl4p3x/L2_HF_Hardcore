@@ -58,7 +58,6 @@ public final class ConditionUsingItemType extends Condition
 		
 		final Inventory inv = effector.getInventory();
 		// If ConditionUsingItemType is one between Light, Heavy or Magic
-		LOG.debug("Testing using item condition for {} by skill {} with valid armor {}", effector, skill, _armor);
 		if (_armor)
 		{
 			// Get the itemMask of the weared chest (if exists)
@@ -95,7 +94,12 @@ public final class ConditionUsingItemType extends Condition
 			LOG.debug("Testing using item condition for {} by skill {} with mask {} against leg {}", effector, skill, _mask, legMask);
 			return (_mask & legMask) != 0;
 		}
-		return (_mask & inv.getWearedMask()) != 0;
-	}
+        LOG.debug("Testing using wear condition for {} by skill {} with wear mask {} against mask {} results in {}", effector, skill, inv.getWearedMask(), _mask, _mask & inv.getWearedMask());
+        return (_mask & inv.getWearedMask()) != 0;
+    }
 
+    @Override
+    public String toString() {
+        return "Condition Using Item mask " + _mask + " and armor " + _armor;
+    }
 }

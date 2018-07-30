@@ -37,6 +37,7 @@ import com.l2jserver.gameserver.model.stats.functions.FuncTemplate;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
@@ -180,9 +181,18 @@ public abstract class DocumentBase
 		{
 			value = Double.parseDouble(valueString);
 		}
-		
-		final Condition applayCond = parseCondition(n.getFirstChild(), template);
-		final FuncTemplate ft = new FuncTemplate(attachCond, applayCond, functionName, order, stat, value);
+
+		Condition applyCond = null;
+		NodeList conditionNodes = n.getChildNodes();
+		for (int i = 0; i < conditionNodes.getLength(); i++) {
+			Node conditionNode = conditionNodes.item(i);
+			if (conditionNode == null) {
+				continue;
+			}
+			applyCond = LogicHelper.joinAnd(applyCond, parseCondition(conditionNode, template));
+		}
+		_log.finest("Applying function condition " + applyCond + " to template " + template);
+		final FuncTemplate ft = new FuncTemplate(attachCond, applyCond, functionName, order, stat, value);
 		if (template instanceof L2Item)
 		{
 			((L2Item) template).attach(ft);
@@ -314,6 +324,7 @@ public abstract class DocumentBase
 				case "using":
 				{
 					condition = parseUsingCondition(n);
+
 					break;
 				}
 				case "game":
@@ -322,6 +333,9 @@ public abstract class DocumentBase
 					break;
 				}
 			}
+		}
+		if (condition != null) {
+			_log.finest("Parsed condition " + condition + " for template " + template);
 		}
 		return condition;
 	}

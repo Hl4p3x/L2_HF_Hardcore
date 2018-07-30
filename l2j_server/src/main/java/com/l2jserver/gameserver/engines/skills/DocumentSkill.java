@@ -18,27 +18,30 @@
  */
 package com.l2jserver.gameserver.engines.skills;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import com.l2jserver.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jserver.gameserver.engines.DocumentBase;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.skills.EffectScope;
 import com.l2jserver.gameserver.model.skills.Skill;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
 
 /**
  * @author mkizub
  */
 public class DocumentSkill extends DocumentBase
 {
+	private static final Logger LOG = LoggerFactory.getLogger(DocumentSkill.class);
+
 	public static class SkillInfo
 	{
 		public int id;

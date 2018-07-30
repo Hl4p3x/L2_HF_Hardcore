@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model.conditions;
 
+import com.google.common.base.Joiner;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.skills.Skill;
@@ -83,5 +84,10 @@ public class ConditionLogicAnd extends Condition
 			}
 		}
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return Joiner.on(" AND ").join(conditions);
 	}
 }
