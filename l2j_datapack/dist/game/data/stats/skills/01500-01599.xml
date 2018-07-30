@@ -1857,12 +1857,10 @@
 		<for>
 			<effect name="Buff">
 				<mul stat="critRate" val="#rCrit">
-					<using kind="DAGGER,DUALDAGGER" />
-                    <using kind="LIGHT"/>
+                    <using kind="DAGGER,DUALDAGGER,LIGHT"/>
 				</mul>
 				<add stat="critDmgAdd" val="#cAtkAdd">
-					<using kind="DAGGER,DUALDAGGER" />
-                    <using kind="LIGHT"/>
+                    <using kind="DAGGER,DUALDAGGER,LIGHT"/>
 				</add>
 			</effect>
 		</for>

@@ -27,7 +27,7 @@ import com.l2jserver.util.StringUtil;
 /**
  * This class is dedicated to the management of armors.
  */
-public final class L2Armor extends L2Item
+public class L2Armor extends L2Item
 {
 	/**
 	 * Skill that activates when armor is enchanted +4.

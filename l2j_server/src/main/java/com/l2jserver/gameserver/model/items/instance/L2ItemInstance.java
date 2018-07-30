@@ -18,21 +18,6 @@
  */
 package com.l2jserver.gameserver.model.items.instance;
 
-import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
-import static com.l2jserver.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.GeoData;
@@ -46,13 +31,7 @@ import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jserver.gameserver.instancemanager.MercTicketManager;
-import com.l2jserver.gameserver.model.DropProtection;
-import com.l2jserver.gameserver.model.Elementals;
-import com.l2jserver.gameserver.model.L2Augmentation;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.L2WorldRegion;
-import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.*;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.knownlist.NullKnownList;
@@ -76,19 +55,29 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.DropItem;
-import com.l2jserver.gameserver.network.serverpackets.GetItem;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SpawnItem;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.GMAudit;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
+
+import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
+import static com.l2jserver.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
 /**
  * This class manages items.
  * @version $Revision: 1.4.2.1.2.11 $ $Date: 2005/03/31 16:07:50 $
  */
-public final class L2ItemInstance extends L2Object
+public class L2ItemInstance extends L2Object
 {
 	private static final Logger _log = Logger.getLogger(L2ItemInstance.class.getName());
 	private static final Logger _logItems = Logger.getLogger("item");

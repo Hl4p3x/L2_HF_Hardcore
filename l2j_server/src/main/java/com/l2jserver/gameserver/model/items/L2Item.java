@@ -18,12 +18,6 @@
  */
 package com.l2jserver.gameserver.model.items;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.Elementals;
@@ -38,17 +32,19 @@ import com.l2jserver.gameserver.model.events.ListenersContainer;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.type.ActionType;
-import com.l2jserver.gameserver.model.items.type.CrystalType;
-import com.l2jserver.gameserver.model.items.type.EtcItemType;
-import com.l2jserver.gameserver.model.items.type.ItemType;
-import com.l2jserver.gameserver.model.items.type.MaterialType;
+import com.l2jserver.gameserver.model.items.type.*;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jserver.gameserver.model.stats.functions.FuncTemplate;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * This class contains all informations concerning the item (weapon, armor, etc).<BR>
@@ -534,7 +530,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return the part of the body used with the item.
 	 */
-	public final int getBodyPart()
+    public int getBodyPart()
 	{
 		return _bodyPart;
 	}

@@ -24,6 +24,8 @@ import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.type.ArmorType;
 import com.l2jserver.gameserver.model.skills.Skill;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * The Class ConditionUsingItemType.
@@ -31,6 +33,8 @@ import com.l2jserver.gameserver.model.skills.Skill;
  */
 public final class ConditionUsingItemType extends Condition
 {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ConditionUsingItemType.class);
 	private final boolean _armor;
 	private final int _mask;
 	
@@ -54,6 +58,7 @@ public final class ConditionUsingItemType extends Condition
 		
 		final Inventory inv = effector.getInventory();
 		// If ConditionUsingItemType is one between Light, Heavy or Magic
+		LOG.debug("Testing using item condition for {} by skill {} with valid armor {}", effector, skill, _armor);
 		if (_armor)
 		{
 			// Get the itemMask of the weared chest (if exists)
@@ -65,6 +70,7 @@ public final class ConditionUsingItemType extends Condition
 			int chestMask = chest.getItem().getItemMask();
 			
 			// If chest armor is different from the condition one return false
+			LOG.debug("Testing using item condition for {} by skill {} with mask {} against chest {}", effector, skill, _mask, chestMask);
 			if ((_mask & chestMask) == 0)
 			{
 				return false;
@@ -86,6 +92,7 @@ public final class ConditionUsingItemType extends Condition
 			}
 			int legMask = legs.getItem().getItemMask();
 			// return true if legs armor matches too
+			LOG.debug("Testing using item condition for {} by skill {} with mask {} against leg {}", effector, skill, _mask, legMask);
 			return (_mask & legMask) != 0;
 		}
 		return (_mask & inv.getWearedMask()) != 0;

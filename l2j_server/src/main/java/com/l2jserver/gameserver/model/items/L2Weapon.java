@@ -18,8 +18,6 @@
  */
 package com.l2jserver.gameserver.model.items;
 
-import java.util.Objects;
-
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -37,10 +35,12 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.StringUtil;
 
+import java.util.Objects;
+
 /**
  * This class is dedicated to the management of weapons.
  */
-public final class L2Weapon extends L2Item
+public class L2Weapon extends L2Item
 {
 	private final WeaponType _type;
 	private final boolean _isMagicWeapon;

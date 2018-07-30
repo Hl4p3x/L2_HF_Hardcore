@@ -22,6 +22,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.skills.Skill;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * The Class ConditionTargetUsesWeaponKind.
@@ -29,6 +31,9 @@ import com.l2jserver.gameserver.model.skills.Skill;
  */
 public class ConditionTargetUsesWeaponKind extends Condition
 {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ConditionTargetUsesWeaponKind.class);
+
 	private final int _weaponMask;
 	
 	/**
@@ -43,6 +48,8 @@ public class ConditionTargetUsesWeaponKind extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
+		LOG.debug("Uses Weapon effector {} effected {} mask {}", effector, effected, _weaponMask);
+
 		if (effected == null)
 		{
 			return false;
@@ -53,7 +60,8 @@ public class ConditionTargetUsesWeaponKind extends Condition
 		{
 			return false;
 		}
-		
+
+		LOG.debug("Target {} has active weapon mask {} against weapon mask {}", effected, weapon.getItemType().mask(), _weaponMask);
 		return (weapon.getItemType().mask() & _weaponMask) != 0;
 	}
 }
