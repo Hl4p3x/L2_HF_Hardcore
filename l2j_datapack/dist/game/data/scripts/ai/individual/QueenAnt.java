@@ -237,7 +237,6 @@ public final class QueenAnt extends AbstractNpcAI
 			case NURSE:
 				mob.disableCoreAI(true);
 				mob.setIsRaidMinion(true);
-                mob.getSpawn().setRespawnDelay(3);
 				_nurses.add(mob);
 				break;
 			case ROYAL:
