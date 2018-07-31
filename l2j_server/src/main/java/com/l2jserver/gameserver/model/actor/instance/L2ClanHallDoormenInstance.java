@@ -18,9 +18,6 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import java.util.Arrays;
-import java.util.StringTokenizer;
-
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;
@@ -30,6 +27,9 @@ import com.l2jserver.gameserver.model.entity.ClanHall;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.Evolve;
+
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class L2ClanHallDoormenInstance extends L2DoormenInstance
 {
@@ -83,19 +83,24 @@ public class L2ClanHallDoormenInstance extends L2DoormenInstance
 				switch (Integer.parseInt(st.nextToken()))
 				{
 					case 1:
-						ok = Evolve.doEvolve(player, this, 9882, 10307, 55);
+						// Snow Great Wolf
+						ok = Evolve.doEvolve(player, this, 9882, 10307, 85, 20000000);
 						break;
 					case 2:
-						ok = Evolve.doEvolve(player, this, 4422, 10308, 55);
+						// Red Strider
+						ok = Evolve.doEvolve(player, this, 4422, 10308, 85, 15000000);
 						break;
 					case 3:
-						ok = Evolve.doEvolve(player, this, 4423, 10309, 55);
+						// Red Strider
+						ok = Evolve.doEvolve(player, this, 4423, 10309, 85, 15000000);
 						break;
 					case 4:
-						ok = Evolve.doEvolve(player, this, 4424, 10310, 55);
+						// Red Strider
+						ok = Evolve.doEvolve(player, this, 4424, 10310, 85, 15000000);
 						break;
 					case 5:
-						ok = Evolve.doEvolve(player, this, 10426, 10611, 70);
+						// Snow Fenrir
+						ok = Evolve.doEvolve(player, this, 10426, 10611, 85, 30000000);
 						break;
 				}
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());

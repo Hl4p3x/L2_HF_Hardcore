@@ -101,22 +101,27 @@ public class L2PetManagerInstance extends L2MerchantInstance
 			boolean ok = false;
 			switch (val)
 			{
-			// Info evolve(player, "curent pet summon item", "new pet summon item", "lvl required to evolve")
+				// Info evolve(player, "current pet summon item", "new pet summon item", "lvl required to evolve")
 			// To ignore evolve just put value 0 where do you like example: evolve(player, 0, 9882, 55);
 				case 1:
-                    ok = Evolve.doEvolve(player, this, 2375, 9882, 55);
+					// Wolf to Great Wolf
+					ok = Evolve.doEvolve(player, this, 2375, 9882, 85, 30000000);
 					break;
 				case 2:
-                    ok = Evolve.doEvolve(player, this, 9882, 10426, 70);
+					// Great Wolf to Fenrir
+					ok = Evolve.doEvolve(player, this, 9882, 10426, 85, 60000000);
 					break;
 				case 3:
-                    ok = Evolve.doEvolve(player, this, 6648, 10311, 55);
+					// Baby Buffalo to Improved
+					ok = Evolve.doEvolve(player, this, 6648, 10311, 85, 10000000);
 					break;
 				case 4:
-                    ok = Evolve.doEvolve(player, this, 6650, 10313, 55);
+					// Baby Kookaburra to Improved
+					ok = Evolve.doEvolve(player, this, 6650, 10313, 85, 10000000);
 					break;
 				case 5:
-                    ok = Evolve.doEvolve(player, this, 6649, 10312, 55);
+					// Baby Cougar Chime to Improved
+					ok = Evolve.doEvolve(player, this, 6649, 10312, 85, 10000000);
 					break;
 			}
 			if (!ok)
@@ -134,21 +139,21 @@ public class L2PetManagerInstance extends L2MerchantInstance
 			boolean ok = false;
 			switch (val)
 			{
-			// Info evolve(player, "curent pet summon item", "new pet summon item", "lvl required to evolve")
+				// Info evolve(player, "current pet summon item", "new pet summon item", "lvl required to evolve")
 				case 1:
-					ok = Evolve.doRestore(player, this, 10307, 9882, 55);
+					ok = Evolve.doRestore(player, this, 10307, 9882, 85);
 					break;
 				case 2:
-					ok = Evolve.doRestore(player, this, 10611, 10426, 70);
+					ok = Evolve.doRestore(player, this, 10611, 10426, 85);
 					break;
 				case 3:
-					ok = Evolve.doRestore(player, this, 10308, 4422, 55);
+					ok = Evolve.doRestore(player, this, 10308, 4422, 85);
 					break;
 				case 4:
-					ok = Evolve.doRestore(player, this, 10309, 4423, 55);
+					ok = Evolve.doRestore(player, this, 10309, 4423, 85);
 					break;
 				case 5:
-					ok = Evolve.doRestore(player, this, 10310, 4424, 55);
+					ok = Evolve.doRestore(player, this, 10310, 4424, 85);
 					break;
 			}
 			if (!ok)

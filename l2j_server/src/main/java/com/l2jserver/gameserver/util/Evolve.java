@@ -18,11 +18,6 @@
  */
 package com.l2jserver.gameserver.util;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -36,11 +31,12 @@ import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.*;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * UnAfraid: TODO: MOVE IT TO DP AI
@@ -48,8 +44,8 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 public final class Evolve
 {
 	protected static final Logger _log = Logger.getLogger(Evolve.class.getName());
-	
-	public static final boolean doEvolve(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
+
+	public static final boolean doEvolve(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl, long price)
 	{
 		if ((itemIdtake == 0) || (itemIdgive == 0) || (petminlvl == 0))
 		{
@@ -100,6 +96,10 @@ public final class Evolve
 		
 		if (npcID == 0)
 		{
+			return false;
+		}
+
+		if (!player.reduceAdena("PetEvolve", price, currentPet, true)) {
 			return false;
 		}
 		
