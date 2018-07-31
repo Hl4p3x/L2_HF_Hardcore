@@ -5,6 +5,10 @@ public class Reward {
     private final int itemId;
     private final long amount;
 
+    public Reward(int itemId) {
+        this(itemId, 1);
+    }
+
     public Reward(int itemId, long amount) {
         this.itemId = itemId;
         this.amount = amount;

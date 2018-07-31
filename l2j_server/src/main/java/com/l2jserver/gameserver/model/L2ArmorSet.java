@@ -18,19 +18,20 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Luno
  */
 public final class L2ArmorSet
 {
+	private String setName;
 	private int _chestId;
 	private final List<Integer> _legs;
 	private final List<Integer> _head;
@@ -51,6 +52,7 @@ public final class L2ArmorSet
 	
 	public L2ArmorSet()
 	{
+		setName = "Unknown";
 		_legs = new ArrayList<>();
 		_head = new ArrayList<>();
 		_gloves = new ArrayList<>();
@@ -331,5 +333,33 @@ public final class L2ArmorSet
 	public int getINT()
 	{
 		return _int;
+	}
+
+	public List<Integer> getLegs() {
+		return _legs;
+	}
+
+	public List<Integer> getHead() {
+		return _head;
+	}
+
+	public List<Integer> getGloves() {
+		return _gloves;
+	}
+
+	public List<Integer> getFeet() {
+		return _feet;
+	}
+
+	public List<Integer> getShield() {
+		return _shield;
+	}
+
+	public String getSetName() {
+		return setName;
+	}
+
+	public void setSetName(String setName) {
+		this.setName = setName;
 	}
 }

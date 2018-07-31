@@ -18,16 +18,16 @@
  */
 package com.l2jserver.gameserver.data.xml.impl;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import com.l2jserver.gameserver.model.L2ArmorSet;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.util.data.xml.IXmlReader;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Loads armor set bonuses.
@@ -73,6 +73,10 @@ public final class ArmorSetsData implements IXmlReader
 								case "chest":
 								{
 									set.addChest(parseInteger(attrs, "id"));
+									Node nextNode = a.getNextSibling();
+									if (nextNode.getNodeType() == Element.COMMENT_NODE) {
+										set.setSetName(nextNode.getTextContent());
+									}
 									break;
 								}
 								case "feet":

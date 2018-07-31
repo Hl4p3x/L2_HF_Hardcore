@@ -11,10 +11,13 @@ import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.impl.character.player.clan.OnPlayerClanJoin;
 import com.l2jserver.gameserver.model.events.impl.character.player.clan.OnPlayerClanLvlUp;
 import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
+import com.l2jserver.util.Rnd;
 import custom.Reward;
+import custom.SetReward;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
@@ -31,7 +34,46 @@ public class FirstClanBonus extends AbstractNpcAI {
 
     private static final String CLAN_BONUS_TYPE = "FirstClanBonuses";
 
-    private static final List<Reward> REWARDS = Arrays.asList(
+    private static final SetReward CHAIN_MAIL_SET = new SetReward(354);
+    private static final SetReward DEMON_SET = new SetReward(441);
+    private static final SetReward THECA_SET = new SetReward(400);
+
+    private static final List<Reward> LOW_B_GRADE_WEAPONS = Arrays.asList(
+            new Reward(142), // Keshanberk
+            new Reward(148), // Sword of Valhalla
+            new Reward(78), // Great Sword
+            new Reward(243), // Hell Knife
+            new Reward(277), // Dark Elven Bow
+            new Reward(264), // Pata
+            new Reward(300), // Great Axe
+            new Reward(91), // Heavy War Axe
+            new Reward(92) // Sprite's Staff
+    );
+
+    private static final List<Reward> LOW_C_GRADE_WEAPONS = Arrays.asList(
+            new Reward(145), // Sword of Whispering Death
+            new Reward(72), // Stormbringer
+            new Reward(71), // Flamberge
+            new Reward(230), // Wolverine Needle
+            new Reward(281), // Crystallized Ice Bow
+            new Reward(263), // Chakram
+            new Reward(96), // Scythe
+            new Reward(173) // Skull Graver
+    );
+
+    private static final List<Reward> LOW_D_GRADE_WEAPONS = Arrays.asList(
+            new Reward(128, 1), // Knight's Sword
+            new Reward(124, 1), // Two-Handed Sword
+            new Reward(221, 1), // Assassin Knife
+            new Reward(276, 1), // Elven Bow
+            new Reward(277, 1), // Dark Elven Bow
+            new Reward(259, 1), // Single-Edged Jamadhr
+            new Reward(292, 1), // Pike
+            new Reward(180, 1), // Mace of Judgment
+            new Reward(186, 1) // Staff of Magic
+    );
+
+    private static final List<Reward> STATIC_REWARDS = Arrays.asList(
             // Mithril Heavy Set
             new Reward(58, 1),
             new Reward(59, 1),
@@ -64,16 +106,6 @@ public class FirstClanBonus extends AbstractNpcAI {
             new Reward(470, 1),
             new Reward(2450, 1),
 
-            new Reward(128, 1), // Knight's Sword
-            new Reward(124, 1), // Two-Handed Sword
-            new Reward(221, 1), // Assassin Knife
-            new Reward(276, 1), // Elven Bow
-            new Reward(277, 1), // Dark Elven Bow
-            new Reward(259, 1), // Single-Edged Jamadhr
-            new Reward(292, 1), // Pike
-            new Reward(180, 1), // Mace of Judgment
-            new Reward(186, 1), // Staff of Magic
-
             new Reward(1458, 2000), // Crystal (D-Grade)
             new Reward(1459, 1000), // Crystal (C-Grade)
             new Reward(1460, 500), // Crystal (B-Grade)
@@ -88,6 +120,7 @@ public class FirstClanBonus extends AbstractNpcAI {
 
         Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_CLAN_JOIN, (Consumer<OnPlayerClanJoin>) this::onPlayerClanJoin, this));
         Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_CLAN_LVLUP, (Consumer<OnPlayerClanLvlUp>) this::onPlayerClanLevelUp, this));
+
         LOG.info("{} Loaded!", LOG_TAG);
     }
 
@@ -114,9 +147,13 @@ public class FirstClanBonus extends AbstractNpcAI {
                     return;
                 }
                 DAOFactory.getInstance().getClanBonusesDao().createClanBonusRecord(clan.getId(), CLAN_BONUS_TYPE);
-                REWARDS.forEach(reward ->
-                        clan.getWarehouse().addItem(CLAN_BONUS_TYPE, reward.getItemId(), reward.getAmount(), null, null)
-                );
+                STATIC_REWARDS.forEach(reward -> giveReward(clan, reward));
+                THECA_SET.getSetRewards().forEach(reward -> giveReward(clan, reward));
+                DEMON_SET.getSetRewards().forEach(reward -> giveReward(clan, reward));
+                CHAIN_MAIL_SET.getSetRewards().forEach(reward -> giveReward(clan, reward));
+                getFewRandom(6, LOW_D_GRADE_WEAPONS).forEach(reward -> giveReward(clan, reward));
+                getFewRandom(3, LOW_C_GRADE_WEAPONS).forEach(reward -> giveReward(clan, reward));
+                getFewRandom(1, LOW_B_GRADE_WEAPONS).forEach(reward -> giveReward(clan, reward));
 
                 Message rewardMessage = new Message(clan.getLeaderId(),
                         "Clan Reward!",
@@ -127,6 +164,19 @@ public class FirstClanBonus extends AbstractNpcAI {
         } else {
             LOG.warn("{} Could not find clan bonuses counter", LOG_TAG);
         }
+    }
+
+    private List<Reward> getFewRandom(int count, List<Reward> rewards) {
+        List<Reward> result = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            int randomRewardIndex = Rnd.get(rewards.size());
+            result.add(rewards.get(randomRewardIndex));
+        }
+        return result;
+    }
+
+    private void giveReward(L2Clan clan, Reward reward) {
+        clan.getWarehouse().addItem(CLAN_BONUS_TYPE, reward.getItemId(), reward.getAmount(), null, null);
     }
 
     public static void main(String[] args) {
