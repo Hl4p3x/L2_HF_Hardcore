@@ -140,7 +140,7 @@ public class FirstClanBonus extends AbstractNpcAI {
 
         if (clan.getMembersCount() >= REQUIRED_MEMBERS_COUNT && clan.getLevel() >= REQUIRED_CLAN_LEVEL) {
             int clanCounter = DAOFactory.getInstance().getClanBonusesDao().bonusCount(CLAN_BONUS_TYPE);
-            if (clanCounter < MAX_CLANS_TO_EARN_BONUSES) {
+            if (clanCounter <= MAX_CLANS_TO_EARN_BONUSES) {
                 List<ClanBonus> clanBonuses = DAOFactory.getInstance().getClanBonusesDao().findClanBonuses(clan.getId(), CLAN_BONUS_TYPE);
                 if (!clanBonuses.isEmpty()) {
                     LOG.debug("{} Clan {} has already obtained a bonus", LOG_TAG, clan);
