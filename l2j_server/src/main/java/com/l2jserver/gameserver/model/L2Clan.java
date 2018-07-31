@@ -44,35 +44,16 @@ import com.l2jserver.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExSubPledgeSkillAdd;
-import com.l2jserver.gameserver.network.serverpackets.ItemList;
-import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jserver.gameserver.network.serverpackets.PledgeReceiveSubPledgeCreated;
-import com.l2jserver.gameserver.network.serverpackets.PledgeShowInfoUpdate;
-import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListAll;
-import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
-import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
-import com.l2jserver.gameserver.network.serverpackets.PledgeSkillList;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
-import com.l2jserver.gameserver.network.serverpackets.PledgeSkillListAdd;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.EnumIntBitmask;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -2520,20 +2501,16 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 		
 		boolean increaseClanLevel = false;
-		
+
 		switch (getLevel())
 		{
 			case 0:
 			{
 				// Upgrade to 1
-				if ((player.getSp() >= 20000) && (player.getAdena() >= 650000))
+				if (player.getAdena() >= 1000000)
 				{
-					if (player.reduceAdena("ClanLvl", 650000, player.getTarget(), true))
+					if (player.reduceAdena("ClanLvl", 1000000, player.getTarget(), true))
 					{
-						player.setSp(player.getSp() - 20000);
-						SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.SP_DECREASED_S1);
-						sp.addInt(20000);
-						player.sendPacket(sp);
 						increaseClanLevel = true;
 					}
 				}
@@ -2542,14 +2519,10 @@ public class L2Clan implements IIdentifiable, INamable
 			case 1:
 			{
 				// Upgrade to 2
-				if ((player.getSp() >= 100000) && (player.getAdena() >= 2500000))
+				if (player.getAdena() >= 3500000)
 				{
 					if (player.reduceAdena("ClanLvl", 2500000, player.getTarget(), true))
 					{
-						player.setSp(player.getSp() - 100000);
-						SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.SP_DECREASED_S1);
-						sp.addInt(100000);
-						player.sendPacket(sp);
 						increaseClanLevel = true;
 					}
 				}
@@ -2558,16 +2531,11 @@ public class L2Clan implements IIdentifiable, INamable
 			case 2:
 			{
 				// Upgrade to 3
-				if ((player.getSp() >= 350000) && (player.getInventory().getItemByItemId(1419) != null))
+				if ((player.getAdena() >= 5550000) && (player.getInventory().getItemByItemId(1419) != null))
 				{
-					// TODO unhardcode these item IDs
 					// itemId 1419 == Blood Mark
-					if (player.destroyItemByItemId("ClanLvl", 1419, 1, player.getTarget(), false))
-					{
-						player.setSp(player.getSp() - 350000);
-						SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.SP_DECREASED_S1);
-						sp.addInt(350000);
-						player.sendPacket(sp);
+					if (player.reduceAdena("ClanLvl", 5550000, player.getTarget(), true) &&
+							player.destroyItemByItemId("ClanLvl", 1419, 1, player.getTarget(), false)) {
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(1419);
 						player.sendPacket(sm);
@@ -2579,15 +2547,12 @@ public class L2Clan implements IIdentifiable, INamable
 			case 3:
 			{
 				// Upgrade to 4
-				if ((player.getSp() >= 1000000) && (player.getInventory().getItemByItemId(3874) != null))
+				if ((player.getAdena() >= 7000000) && (player.getInventory().getItemByItemId(3874) != null))
 				{
 					// itemId 3874 == Alliance Manifesto
-					if (player.destroyItemByItemId("ClanLvl", 3874, 1, player.getTarget(), false))
+					if (player.reduceAdena("ClanLvl", 7000000, player.getTarget(), true) &&
+							player.destroyItemByItemId("ClanLvl", 3874, 1, player.getTarget(), false))
 					{
-						player.setSp(player.getSp() - 1000000);
-						SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.SP_DECREASED_S1);
-						sp.addInt(1000000);
-						player.sendPacket(sp);
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(3874);
 						player.sendPacket(sm);
@@ -2599,15 +2564,11 @@ public class L2Clan implements IIdentifiable, INamable
 			case 4:
 			{
 				// Upgrade to 5
-				if ((player.getSp() >= 2500000) && (player.getInventory().getItemByItemId(3870) != null))
+				if ((player.getAdena() >= 10500000) && (player.getInventory().getItemByItemId(3870) != null))
 				{
 					// itemId 3870 == Seal of Aspiration
-					if (player.destroyItemByItemId("ClanLvl", 3870, 1, player.getTarget(), false))
-					{
-						player.setSp(player.getSp() - 2500000);
-						SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.SP_DECREASED_S1);
-						sp.addInt(2500000);
-						player.sendPacket(sp);
+					if (player.reduceAdena("ClanLvl", 10500000, player.getTarget(), true) &&
+							player.destroyItemByItemId("ClanLvl", 3870, 1, player.getTarget(), false)) {
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(3870);
 						player.sendPacket(sm);
@@ -2717,12 +2678,7 @@ public class L2Clan implements IIdentifiable, INamable
 			player.sendPacket(SystemMessageId.FAILED_TO_INCREASE_CLAN_LEVEL);
 			return false;
 		}
-		
-		// the player should know that he has less sp now :p
-		StatusUpdate su = new StatusUpdate(player);
-		su.addAttribute(StatusUpdate.SP, player.getSp());
-		player.sendPacket(su);
-		
+
 		player.sendPacket(new ItemList(player, false));
 		
 		changeLevel(getLevel() + 1);
