@@ -1,7 +1,10 @@
 package custom;
 
 import com.l2jserver.gameserver.data.xml.impl.ArmorSetsData;
+import com.l2jserver.gameserver.data.xml.impl.RecipeData;
+import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.L2ArmorSet;
+import com.l2jserver.gameserver.model.L2RecipeList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,7 +47,22 @@ public class SetReward {
         setReward.addAll(idsToSingularReward(armorSet.getLegs()));
         setReward.addAll(idsToSingularReward(armorSet.getFeet()));
         setReward.addAll(idsToSingularReward(armorSet.getShield()));
-        return setReward;
+
+        return setReward.stream()
+                .filter(reward -> {
+                    L2RecipeList recipeList = RecipeData.getInstance().getRecipeByItemId(reward.getItemId());
+                    if (recipeList == null) {
+                        LOG.debug("Skipping uncraftable Item {}", ItemTable.getInstance().getTemplate(reward.getItemId()));
+                        return false;
+                    }
+
+                    boolean result = RecipeData.getInstance().getRecipeByItemId(reward.getItemId()).getRareItemId() != reward.getItemId();
+                    if (!result) {
+                        LOG.debug("Skipping rate item {}", ItemTable.getInstance().getTemplate(reward.getItemId()));
+                    }
+                    return result;
+                })
+                .collect(Collectors.toList());
     }
 
     public List<Reward> getSetRewards() {

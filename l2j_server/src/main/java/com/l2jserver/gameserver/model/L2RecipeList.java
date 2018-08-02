@@ -209,6 +209,10 @@ public class L2RecipeList
 	{
 		return _rarity;
 	}
+
+	public boolean isRare() {
+		return _rareItemId > 0;
+	}
 	
 	/**
 	 * @return {@code true} if this a Dwarven recipe or {@code false} if its a Common recipe

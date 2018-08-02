@@ -8,36 +8,36 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Optional;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LoginBonusDao {
 
     private static final Logger LOG = LoggerFactory.getLogger(LoginBonusDao.class);
 
-    public Optional<LoginBonusRecord> findPlayerBonusRecord(int playerId, LoginBonusType bonusType) {
+    public List<LoginBonusRecord> findPlayerBonusRecords(int playerId, LoginBonusType bonusType) {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
              PreparedStatement findBonusStatement = con.prepareStatement("SELECT * FROM login_bonuses WHERE bonus_owner=? AND bonus_type=?")) {
             findBonusStatement.setInt(1, playerId);
             findBonusStatement.setString(2, bonusType.toString());
+            List<LoginBonusRecord> results = new ArrayList<>();
             try (ResultSet resultSet = findBonusStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    return Optional.of(convert(resultSet));
-                } else {
-                    return Optional.empty();
+                while (resultSet.next()) {
+                    results.add(convert(resultSet));
                 }
             }
+            return results;
         } catch(Exception e){
             LOG.error("Could not find query bonus type for {} of type {}", playerId, bonusType, e);
             throw new IllegalStateException(e);
         }
     }
 
-    public boolean updateLoginBonusRecordTime(int playerId, LoginBonusType bonusType) {
+    public boolean deleteLoginBonusRecords(int playerId, LoginBonusType bonusType) {
         try (Connection con = ConnectionFactory.getInstance().getConnection();
-             PreparedStatement findBonusStatement = con.prepareStatement("UPDATE login_bonuses SET last_bonus_time=? WHERE bonus_owner=? AND bonus_type=?")) {
-            findBonusStatement.setLong(1, System.currentTimeMillis());
-            findBonusStatement.setInt(2, playerId);
-            findBonusStatement.setString(3, bonusType.toString());
+             PreparedStatement findBonusStatement = con.prepareStatement("DELETE FROM login_bonuses WHERE bonus_owner=? AND bonus_type=?")) {
+            findBonusStatement.setInt(1, playerId);
+            findBonusStatement.setString(2, bonusType.toString());
             int updatedRows = findBonusStatement.executeUpdate();
             return updatedRows >= 1;
         } catch(Exception e){
