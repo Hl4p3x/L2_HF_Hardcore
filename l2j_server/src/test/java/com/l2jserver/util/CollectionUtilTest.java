@@ -21,9 +21,7 @@ class CollectionUtilTest {
 
     @Test
     void textConsecutiveMap() {
-        List<Integer> iterationResults = new ArrayList<>();
-        CollectionUtil.consecutiveMap(Lists.newArrayList(1, 2, 3, 4, 5), (left, right) -> left + right);
-
+        List<Integer> iterationResults = CollectionUtil.consecutiveMap(Lists.newArrayList(1, 2, 3, 4, 5), (left, right) -> left + right);
 
         List<Integer> expected = Arrays.asList(3, 5, 7, 9);
         Assertions.assertIterableEquals(expected, iterationResults);
