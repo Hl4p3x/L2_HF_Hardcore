@@ -13,7 +13,6 @@ import com.l2jserver.gameserver.model.events.impl.character.player.clan.OnPlayer
 import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jserver.util.Rnd;
 import custom.Reward;
-import custom.SetReward;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,9 +33,23 @@ public class FirstClanBonus extends AbstractNpcAI {
 
     private static final String CLAN_BONUS_TYPE = "FirstClanBonuses";
 
-    private static final SetReward CHAIN_MAIL_SET = new SetReward(354);
-    private static final SetReward DEMON_SET = new SetReward(441);
-    private static final SetReward THECA_SET = new SetReward(400);
+    private static final List<Reward> CHAIN_MAIL_SET = Arrays.asList(
+            new Reward(354), // Chain Mail Shirt
+            new Reward(2413), // Chain Hood
+            new Reward(381), // Chain Gaiters
+            new Reward(2495) // Chain Shield
+    );
+    private static final List<Reward> DEMON_SET = Arrays.asList(
+            new Reward(441), // Demon's Tunic
+            new Reward(2459), // Demon's Gloves
+            new Reward(472) // Demon's Stockings
+    );
+    private static final List<Reward> THECA_SET = Arrays.asList(
+            new Reward(400), // Theca Leather Armor
+            new Reward(420), // Theca Leather Gaiters
+            new Reward(2436) // Theca Leather Boots
+    );
+
 
     private static final List<Reward> LOW_B_GRADE_WEAPONS = Arrays.asList(
             new Reward(142), // Keshanberk
@@ -148,9 +161,9 @@ public class FirstClanBonus extends AbstractNpcAI {
                 }
                 DAOFactory.getInstance().getClanBonusesDao().createClanBonusRecord(clan.getId(), CLAN_BONUS_TYPE);
                 STATIC_REWARDS.forEach(reward -> giveReward(clan, reward));
-                THECA_SET.getSetRewards().forEach(reward -> giveReward(clan, reward));
-                DEMON_SET.getSetRewards().forEach(reward -> giveReward(clan, reward));
-                CHAIN_MAIL_SET.getSetRewards().forEach(reward -> giveReward(clan, reward));
+                THECA_SET.forEach(reward -> giveReward(clan, reward));
+                DEMON_SET.forEach(reward -> giveReward(clan, reward));
+                CHAIN_MAIL_SET.forEach(reward -> giveReward(clan, reward));
                 getFewRandom(6, LOW_D_GRADE_WEAPONS).forEach(reward -> giveReward(clan, reward));
                 getFewRandom(3, LOW_C_GRADE_WEAPONS).forEach(reward -> giveReward(clan, reward));
                 getFewRandom(1, LOW_B_GRADE_WEAPONS).forEach(reward -> giveReward(clan, reward));

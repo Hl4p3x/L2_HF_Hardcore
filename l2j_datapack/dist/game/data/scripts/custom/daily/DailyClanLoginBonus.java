@@ -14,7 +14,6 @@ import com.l2jserver.util.Rnd;
 import com.l2jserver.util.RndCollection;
 import custom.ChancedReward;
 import custom.Reward;
-import custom.SetReward;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,7 +28,7 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
 
     private static final long MINUTE_IN_MS = 60000;
     private static final long HOUR_IN_MS = MINUTE_IN_MS * 60;
-    private static final long DAY_IN_MS = MINUTE_IN_MS / 2; //HOUR_IN_MS * 24;
+    private static final long DAY_IN_MS = HOUR_IN_MS * 24;
     private static final long TWO_DAYS_IN_MS = DAY_IN_MS * 2;
 
     private static final Map<Integer, List<Reward>> STATIC_REWARDS_MAP = createStaticDailyRewards();
@@ -95,40 +94,176 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
             new Reward(8558) // Eva's Mark (Event)
     );
 
-    private static final List<SetReward> SET_REWARDS = Arrays.asList(
-            new SetReward(357), // Zubei's Breastplate
-            new SetReward(2376), // Avadon Breastplate
-            new SetReward(2384), // Zubei's Leather Shirt
-            new SetReward(2390), // Avadon Leather Armor
-            new SetReward(2397), // Tunic of Zubei
-            new SetReward(2406), // Avadon Robe
-            new SetReward(358), // Blue Wolf Breastplate
-            new SetReward(2381), // Doom Plate Armor
-            new SetReward(2391), // Blue Wolf Leather Armor
-            new SetReward(2392), // Leather Armor of Doom
-            new SetReward(2398), // Blue Wolf Tunic
-            new SetReward(2399), // Tunic of Doom
+    private static final List<Reward> SET_REWARDS = Arrays.asList(
+            new Reward(357), // Zubei's Breastplate
+            new Reward(503), // Zubei's Helmet
+            new Reward(5710), // Zubei's Gauntlets - Heavy Armor
+            new Reward(383), // Zubei's Gaiters
+            new Reward(5726), // Zubei's Boots - Heavy Armor
 
-            new SetReward(365), // Dark Crystal Breastplate
-            new SetReward(2382), // Tallum Plate Armor
-            new SetReward(2385), // Dark Crystal Leather Armor
-            new SetReward(2393), // Tallum Leather Armor
-            new SetReward(2400), // Tallum Tunic
-            new SetReward(2407), // Dark Crystal Robe
-            new SetReward(374), // Armor of Nightmare
-            new SetReward(2383), // Majestic Plate Armor
-            new SetReward(2394), // Leather Armor of Nightmare
-            new SetReward(2395), // Majestic Leather Armor
-            new SetReward(2408), // Robe of Nightmare
-            new SetReward(2409), // Majestic Robe
+            new Reward(2376), // Avadon Breastplate
+            new Reward(2415), // Avadon Circlet
+            new Reward(5714), // Avadon Gloves - Heavy Armor
+            new Reward(2379), // Avadon Gaiters
+            new Reward(5730), // Avadon Boots - Heavy Armor
+            new Reward(673), // Avadon Shield
 
-            new SetReward(6373), // Imperial Crusader Breastplate
-            new SetReward(6379), // Draconic Leather Armor
-            new SetReward(6383), // Major Arcana Robe
+            new Reward(2384), // Zubei's Leather Shirt
+            new Reward(503), // Zubei's Helmet
+            new Reward(5711), // Zubei's Gauntlets - Light Armor
+            new Reward(2388), // Zubei's Leather Gaiters
+            new Reward(5727), // Zubei's Boots - Light Armor
 
-            new SetReward(9416), // Dynasty Breast Plate
-            new SetReward(9425), // Dynasty Leather Armor
-            new SetReward(9432) // Dynasty Tunic
+            new Reward(2390), // Avadon Leather Armor
+            new Reward(2415), // Avadon Circlet
+            new Reward(5715), // Avadon Gloves - Light Armor
+            new Reward(5731), // Avadon Boots - Light Armor
+
+            new Reward(2397), // Tunic of Zubei
+            new Reward(503), // Zubei's Helmet
+            new Reward(5712), // Zubei's Gauntlets - Robe
+            new Reward(2402), // Stockings of Zubei
+            new Reward(5728), // Zubei's Boots - Robe
+
+            new Reward(2406), // Avadon Robe
+            new Reward(2415), // Avadon Circlet
+            new Reward(5716), // Avadon Gloves - Robe
+            new Reward(5732), // Avadon Boots - Robe
+
+            new Reward(358), // Blue Wolf Breastplate
+            new Reward(2416), // Blue Wolf Helmet
+            new Reward(5718), // Blue Wolf Gloves - Heavy Armor
+            new Reward(2380), // Blue Wolf Gaiters
+            new Reward(5734), // Blue Wolf Boots - Heavy Armor
+
+            new Reward(2381), // Doom Plate Armor
+            new Reward(2417), // Doom Helmet
+            new Reward(5722), // Doom Gloves - Heavy Armor
+            new Reward(5738), // Doom Boots - Heavy Armor
+            new Reward(110), // Doom Shield
+
+            new Reward(2391), // Blue Wolf Leather Armor
+            new Reward(2416), // Blue Wolf Helmet
+            new Reward(5719), // Blue Wolf Gloves - Light Armor
+            new Reward(5735), // Blue Wolf Boots - Light Armor
+
+            new Reward(2392), // Leather Armor of Doom
+            new Reward(2417), // Doom Helmet
+            new Reward(5723), // Doom Gloves - Light Armor
+            new Reward(5739), // Doom Boots - Light Armor
+
+            new Reward(2398), // Blue Wolf Tunic
+            new Reward(2416), // Blue Wolf Helmet
+            new Reward(5720), // Blue Wolf Gloves - Robe
+            new Reward(2403), // Blue Wolf Stockings
+            new Reward(5736), // Blue Wolf Boots - Robe
+
+            new Reward(2399), // Tunic of Doom
+            new Reward(2417), // Doom Helmet
+            new Reward(5724), // Doom Gloves - Robe
+            new Reward(2404), // Stockings of Doom
+            new Reward(5740), // Doom Boots - Robe
+
+            new Reward(365), // Dark Crystal Breastplate
+            new Reward(512), // Dark Crystal Helmet
+            new Reward(5765), // Dark Crystal Gloves - Heavy Armor
+            new Reward(388), // Dark Crystal Gaiters
+            new Reward(5777), // Dark Crystal Boots - Heavy Armor
+            new Reward(641), // Dark Crystal Shield
+
+            new Reward(2382), // Tallum Plate Armor
+            new Reward(547), // Tallum Helm
+            new Reward(5768), // Tallum Gloves - Heavy Armor
+            new Reward(5780), // Tallum Boots - Heavy Armor
+
+            new Reward(2385), // Dark Crystal Leather Armor
+            new Reward(512), // Dark Crystal Helmet
+            new Reward(5766), // Dark Crystal Gloves - Light Armor
+            new Reward(2389), // Dark Crystal Leggings
+            new Reward(5778), // Dark Crystal Boots - Light Armor
+
+            new Reward(2393), // Tallum Leather Armor
+            new Reward(547), // Tallum Helm
+            new Reward(5769), // Tallum Gloves - Light Armor
+            new Reward(5781), // Tallum Boots - Light Armor
+
+            new Reward(2400), // Tallum Tunic
+            new Reward(547), // Tallum Helm
+            new Reward(5770), // Tallum Gloves - Robe
+            new Reward(2405), // Tallum Stockings
+            new Reward(5782), // Tallum Boots - Robe
+
+            new Reward(2407), // Dark Crystal Robe
+            new Reward(512), // Dark Crystal Helmet
+            new Reward(5767), // Dark Crystal Gloves - Robe
+            new Reward(5779), // Dark Crystal Boots - Robe
+
+            new Reward(374), // Armor of Nightmare
+            new Reward(2418), // Helm of Nightmare
+            new Reward(5771), // Gauntlets of Nightmare - Heavy Armor
+            new Reward(5783), // Boots of Nightmare - Heavy Armor
+            new Reward(2498), // Shield of Nightmare
+
+            new Reward(2383), // Majestic Plate Armor
+            new Reward(2419), // Majestic Circlet
+            new Reward(5774), // Majestic Gauntlets - Heavy Armor
+            new Reward(5786), // Majestic Boots - Heavy Armor
+
+            new Reward(2394), // Leather Armor of Nightmare
+            new Reward(2418), // Helm of Nightmare
+            new Reward(5772), // Gauntlets of Nightmare - Light Armor
+            new Reward(5784), // Boots of Nightmare - Light Armor
+
+            new Reward(2395), // Majestic Leather Armor
+            new Reward(2419), // Majestic Circlet
+            new Reward(5775), // Majestic Gauntlets - Light Armor
+            new Reward(5787), // Majestic Boots - Light Armor
+
+            new Reward(2408), // Robe of Nightmare
+            new Reward(2418), // Helm of Nightmare
+            new Reward(5773), // Gauntlets of Nightmare - Robe
+            new Reward(5785), // Boots of Nightmare - Robe
+
+            new Reward(2409), // Majestic Robe
+            new Reward(2419), // Majestic Circlet
+            new Reward(5776), // Majestic Gauntlets - Robe
+            new Reward(5788), // Majestic Boots - Robe
+
+            new Reward(6373), // Imperial Crusader Breastplate
+            new Reward(6378), // Imperial Crusader Helmet
+            new Reward(6375), // Imperial Crusader Gauntlets
+            new Reward(6374), // Imperial Crusader Gaiters
+            new Reward(6376), // Imperial Crusader Boots
+            new Reward(6377), // Imperial Crusader Shield
+
+            new Reward(6379), // Draconic Leather Armor
+            new Reward(6382), // Draconic Leather Helmet
+            new Reward(6380), // Draconic Leather Gloves
+            new Reward(6381), // Draconic Leather Boots
+
+            new Reward(6383), // Major Arcana Robe
+            new Reward(6386), // Major Arcana Circlet
+            new Reward(6384), // Major Arcana Gloves
+            new Reward(6385), // Major Arcana Boots
+
+            new Reward(9416), // Dynasty Breast Plate
+            new Reward(9422), // Dynasty Helmet
+            new Reward(9423), // Dynasty Gauntlet - Heavy Armor
+            new Reward(9421), // Dynasty Gaiters
+            new Reward(9424), // Dynasty Boots - Heavy Armor
+            new Reward(9441), // Dynasty Shield
+
+            new Reward(9425), // Dynasty Leather Armor
+            new Reward(9429), // Dynasty Leather Helmet
+            new Reward(9430), // Dynasty Leather Gloves - Light Armor
+            new Reward(9428), // Dynasty Leather Leggings
+            new Reward(9431), // Dynasty Leather Boots - Light Armor
+
+            new Reward(9432), // Dynasty Tunic
+            new Reward(9438), // Dynasty Circlet
+            new Reward(9439), // Dynasty Gloves - Robe
+            new Reward(9437), // Dynasty Stockings
+            new Reward(9440) // Dynasty Shoes - Robe
     );
 
     private DailyClanLoginBonus() {
@@ -136,18 +271,17 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
         loginBonusDao = DAOFactory.getInstance().getLoginBonusDao();
         setOnEnterWorld(Config.DAILY_CLAN_LOGIN_BONUS);
         if (Config.DAILY_CLAN_LOGIN_BONUS) {
-            LOG.info("[Daily Clan Member ogin Bonuses] loaded!");
+            LOG.info("[Daily Clan Member Login Bonuses] loaded!");
         }
     }
 
     @Override
     public String onEnterWorld(L2PcInstance player) {
-        if (player.getClan() == null) {
+        if (player.getClan() == null || player.getClan().getLevel() < 3) {
             return super.onEnterWorld(player);
         }
 
         List<LoginBonusRecord> loginBonusRecord = loginBonusDao.findPlayerBonusRecords(player.getObjectId(), LoginBonusType.CLAN);
-
         List<LoginBonusRecord> sortedPlayerBonuses = loginBonusRecord.stream().sorted(Comparator.comparingLong(LoginBonusRecord::getLastBonusTimeInMs).reversed()).collect(Collectors.toList());
         Optional<LoginBonusRecord> headBonus = sortedPlayerBonuses.stream().findFirst();
 
@@ -156,10 +290,13 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
             if (timeSinceLastBonus > TWO_DAYS_IN_MS) {
                 LOG.debug("Resetting Login bonuses for {}, too much time passed since last login {}", player, timeSinceLastBonus);
                 loginBonusDao.deleteLoginBonusRecords(player.getObjectId(), LoginBonusType.CLAN);
+                // Registering this login
+                handleReward(player, 0);
+                return super.onEnterWorld(player);
             }
 
             if (timeSinceLastBonus > DAY_IN_MS) {
-                int consecutiveLogins = countPreviousConsecutiveLoginDays(sortedPlayerBonuses);
+                int consecutiveLogins = sortedPlayerBonuses.size();
                 if (consecutiveLogins > 4) {
                     LOG.debug("Resetting Login bonuses for {} after hitting {} days in a row", player, consecutiveLogins);
                     loginBonusDao.deleteLoginBonusRecords(player.getObjectId(), LoginBonusType.CLAN);
@@ -175,29 +312,6 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
         return super.onEnterWorld(player);
     }
 
-    private int countPreviousConsecutiveLoginDays(List<LoginBonusRecord> sortedPreviousBonuses) {
-        Iterator<LoginBonusRecord> iterator = sortedPreviousBonuses.iterator();
-        if (!iterator.hasNext()) {
-            return 0;
-        }
-
-        int counter = 0;
-        LoginBonusRecord current = iterator.next();
-        while (iterator.hasNext()) {
-            LoginBonusRecord next = iterator.next();
-            long distance = Math.abs(current.getLastBonusTimeInMs() - next.getLastBonusTimeInMs());
-            boolean check = DAY_IN_MS < distance && distance < TWO_DAYS_IN_MS;
-            LOG.debug("Distance check {} < {} < {} is {}", DAY_IN_MS, distance, TWO_DAYS_IN_MS, check);
-            if (!check) {
-                break;
-            }
-            counter++;
-            current = next;
-        }
-
-        return counter;
-    }
-
     private boolean handleReward(L2PcInstance player, int consecutiveLogins) {
         boolean updated = loginBonusDao.createLoginBonusRecordNow(player.getObjectId(), LoginBonusType.CLAN);
         if (updated) {
@@ -209,7 +323,7 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
     }
 
     private void rewardPlayer(L2PcInstance player, int consecutiveLogins) {
-        LOG.debug("Trying to reward {} times {}", player, consecutiveLogins);
+        LOG.debug("Trying to reward {} {} time", player, consecutiveLogins);
 
         Message rewardMessage = new Message(player.getObjectId(), "Clan Daily Login Bonus", "Congratulations with your reward!", Message.SendBySystem.PLAYER);
         Mail attachments = rewardMessage.createAttachments();
@@ -229,19 +343,19 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
             }
         });
 
-        if (consecutiveLogins == 3 && (Rnd.get(100) + Rnd.get()) < 20) {
+        if (consecutiveLogins == 3 && (Rnd.get(100) + Rnd.get()) < 15) {
             Reward reward = RndCollection.random(ACCESSORY_REWARDS);
             attachments.addItem("ClanLoginBonus", reward.getItemId(), reward.getAmount(), null, null);
         }
 
         if (consecutiveLogins == 4 && (Rnd.get(100) + Rnd.get()) < 10) {
-            Reward reward = RndCollection.random(SET_REWARDS.stream().flatMap(set -> set.getSetRewards().stream()).collect(Collectors.toList()));
+            Reward reward = RndCollection.random(SET_REWARDS);
             attachments.addItem("ClanLoginBonus", reward.getItemId(), reward.getAmount(), null, null);
         }
 
         if (attachments.getSize() > 0) {
             MailManager.getInstance().sendMessage(rewardMessage);
-            LOG.debug("Player {} earned daily login bonus {}", player, attachments);
+            LOG.debug("Player {} earned daily login bonus {}", player, attachments.getItems());
         } else {
             LOG.debug("Player {} could not earn login bonus, no attachments specified", player);
         }

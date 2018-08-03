@@ -1,10 +1,8 @@
 package custom;
 
 import com.l2jserver.gameserver.data.xml.impl.ArmorSetsData;
-import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.L2ArmorSet;
-import com.l2jserver.gameserver.model.L2RecipeList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,6 +37,9 @@ public class SetReward {
         return ids.stream().map(Reward::new).collect(Collectors.toList());
     }
 
+    /**
+     * Loads every item from the set, with masterwork, items are unsealed
+     **/
     private List<Reward> loadFromSet(L2ArmorSet armorSet) {
         List<Reward> setReward = new ArrayList<>();
         setReward.add(new Reward(armorSet.getChestId()));
@@ -48,21 +49,9 @@ public class SetReward {
         setReward.addAll(idsToSingularReward(armorSet.getFeet()));
         setReward.addAll(idsToSingularReward(armorSet.getShield()));
 
-        return setReward.stream()
-                .filter(reward -> {
-                    L2RecipeList recipeList = RecipeData.getInstance().getRecipeByItemId(reward.getItemId());
-                    if (recipeList == null) {
-                        LOG.debug("Skipping uncraftable Item {}", ItemTable.getInstance().getTemplate(reward.getItemId()));
-                        return false;
-                    }
-
-                    boolean result = RecipeData.getInstance().getRecipeByItemId(reward.getItemId()).getRareItemId() != reward.getItemId();
-                    if (!result) {
-                        LOG.debug("Skipping rate item {}", ItemTable.getInstance().getTemplate(reward.getItemId()));
-                    }
-                    return result;
-                })
-                .collect(Collectors.toList());
+        LOG.debug("Loaded Set Reward {}", armorSet.getSetName());
+        setReward.forEach(reward -> LOG.debug("new Reward(" + reward.getItemId() + "), // " + ItemTable.getInstance().getTemplate(reward.getItemId()).getName()));
+        return setReward;
     }
 
     public List<Reward> getSetRewards() {

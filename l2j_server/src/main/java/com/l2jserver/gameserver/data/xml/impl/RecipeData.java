@@ -18,21 +18,20 @@
  */
 package com.l2jserver.gameserver.data.xml.impl;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import com.l2jserver.gameserver.model.L2RecipeInstance;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.L2RecipeStatInstance;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.util.data.xml.IXmlReader;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * The Class RecipeData.
@@ -227,6 +226,22 @@ public class RecipeData implements IXmlReader
 			}
 		}
 		return null;
+	}
+
+	public L2RecipeList getRecipeByProductionItem(int itemId) {
+		return _recipes.values()
+				.stream()
+				.filter(recipe -> recipe.getItemId() == itemId)
+				.findFirst()
+				.orElse(null);
+	}
+
+	public L2RecipeList getRecipeByRareItemId(int itemId) {
+		return _recipes.values()
+				.stream()
+				.filter(recipe -> recipe.getRareItemId() == itemId)
+				.findFirst()
+				.orElse(null);
 	}
 	
 	/**
