@@ -46,17 +46,20 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
                 new Reward(1061, 100), // Greater healing potion
                 new Reward(734, 5), // Greater Haste Potion
                 new Reward(1375, 5), //  Greater Swift Attack Potion
-                new Reward(6036, 5) // Greater Magic Haste potion
+                new Reward(6036, 5), // Greater Magic Haste potion
+
+                new Reward(1465, 1200), // Soulshot B Grade
+                new Reward(3950, 1200) // Blessed Spiritshot B Grade
         ));
 
         results.put(3, Arrays.asList(
-                new Reward(1466, 700), // Soulshot A Grade
-                new Reward(3951, 700) // Blessed Spiritshot A Grade
+                new Reward(1466, 1000), // Soulshot A Grade
+                new Reward(3951, 1000) // Blessed Spiritshot A Grade
         ));
 
         results.put(4, Arrays.asList(
-                new Reward(1467, 500), // Soulshot S Grade
-                new Reward(3952, 500) // Blessed Spiritshot S Grade
+                new Reward(1467, 800), // Soulshot S Grade
+                new Reward(3952, 800) // Blessed Spiritshot S Grade
         ));
 
         return results;
@@ -68,12 +71,12 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
         Map<Integer, List<ChancedReward>> results = new HashMap<>();
 
         results.put(2, Arrays.asList(
-                new ChancedReward(new Reward(947), 15), // Scroll: Enchant Weapon (B-Grade)
+                new ChancedReward(new Reward(947), 20), // Scroll: Enchant Weapon (B-Grade)
                 new ChancedReward(new Reward(948, 2), 30) // Scroll: Enchant Armor (B-Grade)
         ));
 
         results.put(3, Arrays.asList(
-                new ChancedReward(new Reward(729), 12.5), // Scroll: Enchant Weapon (A-Grade)
+                new ChancedReward(new Reward(729), 15), // Scroll: Enchant Weapon (A-Grade)
                 new ChancedReward(new Reward(730, 2), 25) // Scroll: Enchant Armor (A-Grade)
         ));
 
