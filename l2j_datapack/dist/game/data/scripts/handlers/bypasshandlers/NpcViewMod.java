@@ -42,6 +42,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * @author NosBit
@@ -185,10 +186,14 @@ public class NpcViewMod implements IBypassHandler
 		stringBuilder.append("</tr>");
 
 
-        npc.getAggroList().values().stream().sorted(Comparator.comparing(extractInfo).reversed()).limit(30).forEach(aggro -> {
+		List<AggroInfo> aggroInfos = npc.getAggroList().values().stream().sorted(Comparator.comparing(extractInfo).reversed()).collect(Collectors.toList());
+		long totalValue = aggroInfos.stream().mapToLong(extractInfo::apply).sum();
+
+		aggroInfos.stream().limit(30).forEach(aggro -> {
 			stringBuilder.append("<tr>");
             stringBuilder.append("<td>").append(aggro.getAttacker().getName()).append("</td>");
-            stringBuilder.append("<td>").append(extractInfo.apply(aggro)).append("</td>");
+			long aggroPercentage = extractInfo.apply(aggro) * 100 / totalValue;
+			stringBuilder.append("<td>").append(aggroPercentage).append("% (").append(extractInfo.apply(aggro)).append(")</td>");
 			stringBuilder.append("</tr>");
 		});
 

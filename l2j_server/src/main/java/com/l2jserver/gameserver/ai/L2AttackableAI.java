@@ -101,12 +101,13 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	private int _globalAggro;
 	/** The flag used to indicate that a thinking action is in progress, to prevent recursive thinking. */
 	private boolean _thinking;
-	private int _chaosTime = 0;
+
 	private int _lastBuffTick;
 	private long lastCastTime = 0;
 	// Fear parameters
 	private int _fearTime;
 	private Future<?> _fearTask = null;
+	private final RaidChaos raidChaos;
 	
 	/**
 	 * Constructor of L2AttackableAI.
@@ -117,6 +118,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		super(creature);
 		_attackTimeout = Integer.MAX_VALUE;
 		_globalAggro = -10; // 10 seconds timeout of ATTACK after respawn
+		this.raidChaos = new RaidChaos(this, getActiveChar());
 	}
 	
 	@Override
@@ -1045,61 +1047,8 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		}
 		
 		// BOSS/Raid Minion Target Reconsider
-		if (npc.isRaid() || npc.isRaidMinion())
-		{
-			_chaosTime++;
-			if (npc instanceof L2RaidBossInstance)
-			{
-				if (!((L2MonsterInstance) npc).hasMinions())
-				{
-					if (_chaosTime > Config.RAID_CHAOS_TIME)
-					{
-						if (Rnd.get(100) <= (100 - ((npc.getCurrentHp() * 100) / npc.getMaxHp())))
-						{
-							aggroReconsider();
-							_chaosTime = 0;
-							return;
-						}
-					}
-				}
-				else
-				{
-					if (_chaosTime > Config.RAID_CHAOS_TIME)
-					{
-						if (Rnd.get(100) <= (100 - ((npc.getCurrentHp() * 200) / npc.getMaxHp())))
-						{
-							aggroReconsider();
-							_chaosTime = 0;
-							return;
-						}
-					}
-				}
-			}
-			else if (npc instanceof L2GrandBossInstance)
-			{
-				if (_chaosTime > Config.GRAND_CHAOS_TIME)
-				{
-					double chaosRate = 100 - ((npc.getCurrentHp() * 300) / npc.getMaxHp());
-					if (((chaosRate <= 10) && (Rnd.get(100) <= 10)) || ((chaosRate > 10) && (Rnd.get(100) <= chaosRate)))
-					{
-						aggroReconsider();
-						_chaosTime = 0;
-						return;
-					}
-				}
-			}
-			else
-			{
-				if (_chaosTime > Config.MINION_CHAOS_TIME)
-				{
-					if (Rnd.get(100) <= (100 - ((npc.getCurrentHp() * 200) / npc.getMaxHp())))
-					{
-						aggroReconsider();
-						_chaosTime = 0;
-						return;
-					}
-				}
-			}
+		if (npc.isRaid() || npc.isRaidMinion()) {
+			raidChaos.handleRaidChaos();
 		}
 		
 		final List<Skill> generalSkills = npc.getTemplate().getAISkills(AISkillScope.GENERAL);
@@ -2363,121 +2312,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 		}
 	}
-	
-	private void aggroReconsider()
-	{
-		L2Attackable actor = getActiveChar();
-		L2Character MostHate = actor.getMostHated();
-		if (actor.getHateList() != null)
-		{
-			
-			int rand = Rnd.get(actor.getHateList().size());
-			int count = 0;
-			for (L2Character obj : actor.getHateList())
-			{
-				if (count < rand)
-				{
-					count++;
-					continue;
-				}
-				
-				if ((obj == null) || !GeoData.getInstance().canSeeTarget(actor, obj) || obj.isDead() || (obj == getAttackTarget()) || (obj == actor))
-				{
-					continue;
-				}
-				
-				try
-				{
-					actor.setTarget(getAttackTarget());
-				}
-				catch (NullPointerException e)
-				{
-					continue;
-				}
-				if (MostHate != null)
-				{
-					actor.addDamageHate(obj, 0, actor.getHating(MostHate));
-				}
-				else
-				{
-					actor.addDamageHate(obj, 0, 2000);
-				}
-				actor.setTarget(obj);
-				setAttackTarget(obj);
-				return;
-			}
-		}
-		
-		if (!(actor instanceof L2GuardInstance))
-		{
-			Collection<L2Object> objs = actor.getKnownList().getKnownObjects().values();
-			for (L2Object target : objs)
-			{
-				L2Character obj = null;
-				if (target instanceof L2Character)
-				{
-					obj = (L2Character) target;
-				}
-				else
-				{
-					continue;
-				}
-				
-				if (!GeoData.getInstance().canSeeTarget(actor, obj) || obj.isDead() || (obj != MostHate) || (obj == actor))
-				{
-					continue;
-				}
-				if (obj instanceof L2PcInstance)
-				{
-					if ((MostHate != null) && !MostHate.isDead())
-					{
-						actor.addDamageHate(obj, 0, actor.getHating(MostHate));
-					}
-					else
-					{
-						actor.addDamageHate(obj, 0, 2000);
-					}
-					actor.setTarget(obj);
-					setAttackTarget(obj);
-				}
-				else if (obj instanceof L2Attackable)
-				{
-					if (actor.isChaos())
-					{
-						if (((L2Attackable) obj).isInMyClan(actor))
-						{
-							continue;
-						}
-						
-						if (MostHate != null)
-						{
-							actor.addDamageHate(obj, 0, actor.getHating(MostHate));
-						}
-						else
-						{
-							actor.addDamageHate(obj, 0, 2000);
-						}
-						actor.setTarget(obj);
-						setAttackTarget(obj);
-					}
-				}
-				else if (obj instanceof L2Summon)
-				{
-					if (MostHate != null)
-					{
-						actor.addDamageHate(obj, 0, actor.getHating(MostHate));
-					}
-					else
-					{
-						actor.addDamageHate(obj, 0, 2000);
-					}
-					actor.setTarget(obj);
-					setAttackTarget(obj);
-				}
-			}
-		}
-	}
-	
+
 	/**
 	 * Manage AI thinking actions of a L2Attackable.
 	 */

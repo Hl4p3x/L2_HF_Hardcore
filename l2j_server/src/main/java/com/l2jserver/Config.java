@@ -846,6 +846,12 @@ public final class Config
 	public static int RAID_CHAOS_TIME;
 	public static int GRAND_CHAOS_TIME;
 	public static int MINION_CHAOS_TIME;
+
+	public static int RAID_CHAOS_SOLO_BOSS_TRESHOLD;
+	public static int RAID_CHAOS_GROUP_BOSS_TRESHOLD;
+	public static int RAID_CHAOS_MINION_THRESHOLD;
+	public static int RAID_CHAOS_GRAND_BOSS_THRESHOLD;
+
 	public static int INVENTORY_MAXIMUM_PET;
 	public static double PET_HP_REGEN_MULTIPLIER;
 	public static double PET_MP_REGEN_MULTIPLIER;
@@ -2165,6 +2171,12 @@ public final class Config
 			RAID_CHAOS_TIME = NPC.getInt("RaidChaosTime", 10);
 			GRAND_CHAOS_TIME = NPC.getInt("GrandChaosTime", 10);
 			MINION_CHAOS_TIME = NPC.getInt("MinionChaosTime", 10);
+
+			RAID_CHAOS_SOLO_BOSS_TRESHOLD = NPC.getInt("RaidSoloChaosThreshold", 150);
+			RAID_CHAOS_GROUP_BOSS_TRESHOLD = NPC.getInt("RaidGroupChaosThreshold", 150);
+			RAID_CHAOS_MINION_THRESHOLD = NPC.getInt("RaidMinionChaosThreshold", 150);
+			RAID_CHAOS_GRAND_BOSS_THRESHOLD = NPC.getInt("GrandChaosThreshold", 150);
+
 			INVENTORY_MAXIMUM_PET = NPC.getInt("MaximumSlotsForPet", 12);
 			PET_HP_REGEN_MULTIPLIER = NPC.getDouble("PetHpRegenMultiplier", 100) / 100;
 			PET_MP_REGEN_MULTIPLIER = NPC.getDouble("PetMpRegenMultiplier", 100) / 100;
