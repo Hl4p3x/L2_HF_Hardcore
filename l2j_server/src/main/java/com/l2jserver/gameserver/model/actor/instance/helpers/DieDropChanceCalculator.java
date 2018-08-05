@@ -17,7 +17,7 @@ public class DieDropChanceCalculator {
         this.isKarmaDeath = (pcInstance.getKarma() > 0) && (pcInstance.getPkKills() >= Config.KARMA_PK_LIMIT);
         this.isKillerNpc = (killer instanceof L2Npc);
         this.isSiegeKill = pcInstance.isInsideZone(ZoneId.SIEGE);
-        this.isWarKill = pcInstance.getClan() != null && pcInstance.getClan().isAtWarWith(killer.getActingPlayer().getClanId());
+        this.isWarKill = pcInstance.getClan() != null && killer.getActingPlayer() != null && pcInstance.getClan().isAtWarWith(killer.getActingPlayer().getClanId());
     }
 
     public int calculateWeaponDropCount() {
