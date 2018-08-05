@@ -2173,9 +2173,9 @@ public final class Config
 			MINION_CHAOS_TIME = NPC.getInt("MinionChaosTime", 10);
 
 			RAID_CHAOS_SOLO_BOSS_TRESHOLD = NPC.getInt("RaidSoloChaosThreshold", 150);
-			RAID_CHAOS_GROUP_BOSS_TRESHOLD = NPC.getInt("RaidGroupChaosThreshold", 150);
-			RAID_CHAOS_MINION_THRESHOLD = NPC.getInt("RaidMinionChaosThreshold", 150);
-			RAID_CHAOS_GRAND_BOSS_THRESHOLD = NPC.getInt("GrandChaosThreshold", 150);
+			RAID_CHAOS_GROUP_BOSS_TRESHOLD = NPC.getInt("RaidGroupChaosThreshold", 200);
+			RAID_CHAOS_MINION_THRESHOLD = NPC.getInt("RaidMinionChaosThreshold", 200);
+			RAID_CHAOS_GRAND_BOSS_THRESHOLD = NPC.getInt("GrandChaosThreshold", 300);
 
 			INVENTORY_MAXIMUM_PET = NPC.getInt("MaximumSlotsForPet", 12);
 			PET_HP_REGEN_MULTIPLIER = NPC.getDouble("PetHpRegenMultiplier", 100) / 100;
