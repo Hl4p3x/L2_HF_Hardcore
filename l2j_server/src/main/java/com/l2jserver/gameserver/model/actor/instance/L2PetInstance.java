@@ -245,9 +245,6 @@ public class L2PetInstance extends L2Summon
 		if (pet != null)
 		{
 			pet.setTitle(owner.getName());
-			if (pet.getName() == null) {
-				pet.setName(pet.getTemplate().getName());
-			}
 			if (data.isSynchLevel() && (pet.getLevel() != owner.getLevel()))
 			{
 				pet.getStat().setLevel((byte) owner.getLevel());
