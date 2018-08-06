@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.drops.DropListScope;
 import com.l2jserver.gameserver.model.drops.GeneralDropItem;
 import com.l2jserver.gameserver.model.drops.GroupedGeneralDropItem;
@@ -191,7 +192,17 @@ public class NpcViewMod implements IBypassHandler
 
 		aggroInfos.stream().limit(30).forEach(aggro -> {
 			stringBuilder.append("<tr>");
-            stringBuilder.append("<td>").append(aggro.getAttacker().getName()).append("</td>");
+			String attackerName = aggro.getAttacker().getName();
+			if (attackerName == null) {
+				if (aggro.getAttacker() instanceof L2PetInstance) {
+					L2PetInstance attackerPet = (L2PetInstance) aggro.getAttacker();
+					attackerName = attackerPet.getTemplate().getName() + " [" + attackerPet.getOwner().getName() + "]";
+				} else {
+					attackerName = "Unknown";
+				}
+			}
+
+			stringBuilder.append("<td>").append(attackerName).append("</td>");
 			long aggroPercentage = extractInfo.apply(aggro) * 100 / totalValue;
 			stringBuilder.append("<td>").append(aggroPercentage).append("% (").append(extractInfo.apply(aggro)).append(")</td>");
 			stringBuilder.append("</tr>");
