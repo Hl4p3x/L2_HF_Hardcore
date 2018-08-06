@@ -18,6 +18,7 @@
  */
 package ai.npc.Teleports.OracleTeleport;
 
+import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.enums.audio.Sound;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -27,8 +28,6 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
-
-import ai.npc.AbstractNpcAI;
 
 /**
  * Oracle teleport AI.
@@ -168,13 +167,12 @@ public final class OracleTeleport extends AbstractNpcAI
 		final int npcId = npc.getId();
 		if (event.equalsIgnoreCase("Return"))
 		{
-			if (Util.contains(TEMPLE_PRIEST, npcId) && (st.getState() == State.STARTED))
+			if (Util.contains(TEMPLE_PRIEST, npcId))
 			{
 				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
 				player.setIsIn7sDungeon(false);
 				st.exitQuest(true);
-			}
-			else if (Util.contains(RIFT_POSTERS, npcId) && (st.getState() == State.STARTED))
+			} else if (Util.contains(RIFT_POSTERS, npcId))
 			{
 				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
 				htmltext = "rift_back.htm";
