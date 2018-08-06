@@ -203,7 +203,12 @@ public class NpcViewMod implements IBypassHandler
 			}
 
 			stringBuilder.append("<td>").append(attackerName).append("</td>");
-			long aggroPercentage = extractInfo.apply(aggro) * 100 / totalValue;
+
+			long aggroPercentage = 0L;
+			if (totalValue != 0) {
+				aggroPercentage = extractInfo.apply(aggro) * 100 / totalValue;
+			}
+
 			stringBuilder.append("<td>").append(aggroPercentage).append("% (").append(extractInfo.apply(aggro)).append(")</td>");
 			stringBuilder.append("</tr>");
 		});
