@@ -167,12 +167,12 @@ public final class OracleTeleport extends AbstractNpcAI
 		final int npcId = npc.getId();
 		if (event.equalsIgnoreCase("Return"))
 		{
-			if (Util.contains(TEMPLE_PRIEST, npcId))
+            if (Util.contains(TEMPLE_PRIEST, npcId))
 			{
 				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
 				player.setIsIn7sDungeon(false);
 				st.exitQuest(true);
-			} else if (Util.contains(RIFT_POSTERS, npcId))
+            } else if (Util.contains(RIFT_POSTERS, npcId))
 			{
 				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
 				htmltext = "rift_back.htm";
