@@ -196,11 +196,16 @@ public class NpcViewMod implements IBypassHandler
 			if (attackerName == null) {
 				if (aggro.getAttacker() instanceof L2PetInstance) {
 					L2PetInstance attackerPet = (L2PetInstance) aggro.getAttacker();
-					attackerName = attackerPet.getTemplate().getName() + " (" + attackerPet.getOwner().getName() + ")";
+                    attackerName = attackerPet.getTemplate().getName();
 				} else {
 					attackerName = "Unknown";
 				}
 			}
+
+            if (aggro.getAttacker() instanceof L2PetInstance) {
+                L2PetInstance attackerPet = (L2PetInstance) aggro.getAttacker();
+                attackerName += " (" + attackerPet.getOwner().getName() + ")";
+            }
 
 			stringBuilder.append("<td>").append(attackerName).append("</td>");
 
