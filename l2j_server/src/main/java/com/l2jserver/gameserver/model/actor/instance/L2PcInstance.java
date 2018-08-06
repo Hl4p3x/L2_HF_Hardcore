@@ -8008,14 +8008,16 @@ public final class L2PcInstance extends L2Playable {
     public void addExpAndSp(long addToExp, int addToSp) {
         boolean result = getStat().addExpAndSp(addToExp, addToSp, false);
         if (result) {
-            SpAutoLearnSkillsHelper.tryAutoLearnNextSkill(this);
+            ThreadPoolManager.getInstance()
+                    .scheduleGeneral(() -> SpAutoLearnSkillsHelper.tryAutoLearnNextSkill(this), 10L);
         }
     }
 
     public void addExpAndSp(long addToExp, int addToSp, boolean useVitality) {
         boolean result = getStat().addExpAndSp(addToExp, addToSp, useVitality);
         if (result) {
-            SpAutoLearnSkillsHelper.tryAutoLearnNextSkill(this);
+            ThreadPoolManager.getInstance()
+                    .scheduleGeneral(() -> SpAutoLearnSkillsHelper.tryAutoLearnNextSkill(this), 10L);
         }
     }
 
