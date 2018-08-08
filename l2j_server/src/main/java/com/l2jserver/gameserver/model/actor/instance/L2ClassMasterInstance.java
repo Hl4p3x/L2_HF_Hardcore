@@ -33,6 +33,11 @@ import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import com.l2jserver.util.StringUtil;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 /**
  * This class ...
  * @version $Revision: 1.4.2.1.2.7 $ $Date: 2005/03/27 15:29:32 $
@@ -433,10 +438,17 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		{
 			return "<tr><td>none</td></tr>";
 		}
+
+		DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance(Locale.US);
+		DecimalFormatSymbols symbols = formatter.getDecimalFormatSymbols();
+		symbols.setGroupingSeparator('.');
+		symbols.setDecimalSeparator(',');
+		formatter.setDecimalFormatSymbols(symbols);
+
 		final StringBuilder sb = new StringBuilder();
 		for (ItemHolder holder : Config.CLASS_MASTER_SETTINGS.getRequireItems(level))
 		{
-			sb.append("<tr><td><font color=\"LEVEL\">" + holder.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(holder.getId()).getName() + "</td></tr>");
+			sb.append("<tr><td><font color=\"LEVEL\">" + formatter.format(holder.getCount()) + "</font></td><td>" + ItemTable.getInstance().getTemplate(holder.getId()).getName() + "</td></tr>");
 		}
 		return sb.toString();
 	}
