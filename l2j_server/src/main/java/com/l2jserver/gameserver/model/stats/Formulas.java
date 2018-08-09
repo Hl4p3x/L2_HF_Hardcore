@@ -24,23 +24,13 @@ import com.l2jserver.gameserver.SevenSignsFestival;
 import com.l2jserver.gameserver.data.xml.impl.HitConditionBonusData;
 import com.l2jserver.gameserver.data.xml.impl.KarmaData;
 import com.l2jserver.gameserver.enums.ShotType;
-import com.l2jserver.gameserver.instancemanager.CastleManager;
-import com.l2jserver.gameserver.instancemanager.ClanHallManager;
-import com.l2jserver.gameserver.instancemanager.FortManager;
-import com.l2jserver.gameserver.instancemanager.SiegeManager;
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
+import com.l2jserver.gameserver.instancemanager.*;
 import com.l2jserver.gameserver.model.L2SiegeClan;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2CubicInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2StaticObjectInstance;
+import com.l2jserver.gameserver.model.actor.instance.*;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.ClanHall;
@@ -53,24 +43,7 @@ import com.l2jserver.gameserver.model.items.type.ArmorType;
 import com.l2jserver.gameserver.model.items.type.WeaponType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncArmorSet;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncAtkAccuracy;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncAtkCritical;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncAtkEvasion;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncGatesMDefMod;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncGatesPDefMod;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncHenna;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncMAtkCritical;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncMAtkMod;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncMAtkSpeed;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncMDefMod;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncMaxCpMul;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncMaxHpMul;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncMaxMpMul;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncMoveSpeed;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncPAtkMod;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncPAtkSpeed;
-import com.l2jserver.gameserver.model.stats.functions.formulas.FuncPDefMod;
+import com.l2jserver.gameserver.model.stats.functions.formulas.*;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.model.zone.type.L2CastleZone;
 import com.l2jserver.gameserver.model.zone.type.L2ClanHallZone;
@@ -83,6 +56,7 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Grade;
 import com.l2jserver.util.GradeMapper;
 import com.l2jserver.util.Rnd;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -1407,10 +1381,20 @@ public final class Formulas
 			return true;
 		}
 
-		int magicLevel = skill.getMagicLevel();
-		if (magicLevel <= -1)
-		{
-			magicLevel = target.getLevel() + 3;
+		int targetLevel = target.getLevel();
+		if (target instanceof L2Npc) {
+			L2Npc npc = (L2Npc) target;
+			targetLevel = npc.getOriginalLevel();
+		}
+
+		int magicLevel;
+		if (Config.ALT_MAGIC_SKILL_SUCCESS) {
+			magicLevel = targetLevel + 3;
+		} else {
+			magicLevel = skill.getMagicLevel();
+			if (magicLevel <= -1) {
+				magicLevel = target.getLevel() + 3;
+			}
 		}
 
 		int targetBaseStat = 0;
@@ -1436,7 +1420,7 @@ public final class Formulas
 				break;
 		}
 
-		final double baseMod = ((((((magicLevel - target.getLevel()) + 3) * skill.getLvlBonusRate()) + activateRate) + 30.0) - targetBaseStat);
+		final double baseMod = ((((((magicLevel - targetLevel) + 3) * skill.getLvlBonusRate()) + activateRate) + 30.0) - targetBaseStat);
 		final double elementMod = calcAttributeBonus(attacker, target, skill);
 		final double traitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
 		final double buffDebuffMod = 1 + (target.calcStat(skill.isDebuff() ? Stats.DEBUFF_VULN : Stats.BUFF_VULN, 1, null, null) / 100);
@@ -1569,11 +1553,11 @@ public final class Formulas
 				: attacker.getLevel()));
 		}
 
-		double lvlModifier = Math.pow(1.3, lvlDifference);
+		double lvlModifier = lvlDifference;
 		float targetModifier = 1;
         if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel()
-            >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && (
-            (targetLevel - attacker.getActingPlayer().getLevel()) >= 3)) {
+				>= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null)
+				&& ((targetLevel - attacker.getActingPlayer().getLevel()) >= 3)) {
             int lvlDiff = targetLevel - attacker.getActingPlayer().getLevel() - 2;
 			if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size())
 			{
@@ -1629,7 +1613,8 @@ public final class Formulas
 		if (target.isAttackable())
 		{
 			damage *= attacker.calcStat(Stats.PVE_MAGICAL_DMG, 1, null, null);
-			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
+			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null)
+					&& ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 			{
 				int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
 				if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.size())
@@ -2166,9 +2151,16 @@ public final class Formulas
             targetLevel = npc.getOriginalLevel();
         }
 
+		double levelMod;
+		if (Config.ALT_MAGIC_SKILL_SUCCESS) {
+			levelMod = baseChance + 30;
+		} else {
+			levelMod = (((skill.getMagicLevel() + baseChance) - targetLevel) + 30);
+		}
+
         return Rnd.get(100) < (
-            (((((skill.getMagicLevel() + baseChance) - targetLevel) + 30) - target.getINT()) * calcAttributeBonus(
-                attacker, target, skill)) * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
+				((levelMod - target.getINT()) * calcAttributeBonus(attacker, target, skill))
+						* calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
 	}
 
 	/**
