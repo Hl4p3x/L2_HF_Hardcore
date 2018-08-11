@@ -695,6 +695,7 @@
 	<item id="14854" type="EtcItem" name="Recipe - Spiteful Soul Energy">
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE"/>
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
@@ -704,6 +705,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="Recipes"/>
 	</item>
 	<item id="14855" type="EtcItem" name="Spiteful Soul Energy">
 		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
