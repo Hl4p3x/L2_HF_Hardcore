@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.*;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.drops.DropListScope;
@@ -182,15 +183,15 @@ public class NpcViewMod implements IBypassHandler
 
 		stringBuilder.append("<table width=300 cellpadding=2 cellspacing=2 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
 		stringBuilder.append("<tr>");
-		stringBuilder.append("<td><font color=\"LEVEL\"><b>Name</b></font></td>");
-        stringBuilder.append("<td><font color=\"LEVEL\"><b>").append(statName).append("</b></font></td>");
+		stringBuilder.append("<td width=\"200\"><font color=\"LEVEL\"><b>Name</b></font></td>");
+		stringBuilder.append("<td width=\"100\"><font color=\"LEVEL\"><b>").append(statName).append("</b></font></td>");
 		stringBuilder.append("</tr>");
 
 
 		List<AggroInfo> aggroInfos = npc.getAggroList().values().stream().sorted(Comparator.comparing(extractInfo).reversed()).collect(Collectors.toList());
 		long totalValue = aggroInfos.stream().mapToLong(extractInfo::apply).sum();
 
-		aggroInfos.stream().limit(30).forEach(aggro -> {
+		aggroInfos.stream().limit(24).forEach(aggro -> {
 			stringBuilder.append("<tr>");
 			String attackerName = aggro.getAttacker().getName();
 			if (attackerName == null) {
@@ -202,7 +203,7 @@ public class NpcViewMod implements IBypassHandler
 				}
 			}
 
-            if (aggro.getAttacker() instanceof L2PetInstance) {
+			if (aggro.getAttacker() instanceof L2Summon) {
                 L2PetInstance attackerPet = (L2PetInstance) aggro.getAttacker();
                 attackerName += " (" + attackerPet.getOwner().getName() + ")";
             }
