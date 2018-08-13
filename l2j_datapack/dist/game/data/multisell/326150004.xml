@@ -4,30 +4,6 @@
 		<npc>32615</npc> <!-- Ishuma (Maestro) -->
 	</npcs>
 	<item>
-		<!-- Sealed Tateossian Earring -->
-		<ingredient count="1" id="6724"/>
-		<!-- Adena -->
-		<ingredient count="731441" id="57"/>
-		<!-- Tateossian Earring -->
-		<production count="1" id="858"/>
-	</item>
-	<item>
-		<!-- Sealed Tateossian Ring -->
-		<ingredient count="1" id="6725"/>
-		<!-- Adena -->
-		<ingredient count="487627" id="57"/>
-		<!-- Tateossian Ring -->
-		<production count="1" id="889"/>
-	</item>
-	<item>
-		<!-- Sealed Tateossian Necklace -->
-		<ingredient count="1" id="6726"/>
-		<!-- Adena -->
-		<ingredient count="975255" id="57"/>
-		<!-- Tateossian Necklace -->
-		<production count="1" id="920"/>
-	</item>
-	<item>
 		<!-- Sealed Imperial Crusader Breastplate -->
 		<ingredient count="1" id="6674"/>
 		<!-- Adena -->
