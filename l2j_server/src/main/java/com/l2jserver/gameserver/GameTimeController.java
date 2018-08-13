@@ -18,15 +18,14 @@
  */
 package com.l2jserver.gameserver;
 
-import java.util.Calendar;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-
+import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
-import com.l2jserver.gameserver.model.actor.L2Character;
+import java.util.Calendar;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Game Time controller class.
@@ -40,6 +39,7 @@ public final class GameTimeController extends Thread
 	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
 	public static final int IG_DAYS_PER_DAY = 6;
 	public static final int MILLIS_PER_IG_DAY = (3600000 * 24) / IG_DAYS_PER_DAY;
+	public static final int MILLIS_6_AM_IG = (3600000 * 6) / IG_DAYS_PER_DAY;
 	public static final int SECONDS_PER_IG_DAY = MILLIS_PER_IG_DAY / 1000;
 	public static final int MINUTES_PER_IG_DAY = SECONDS_PER_IG_DAY / 60;
 	public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;

@@ -18,17 +18,17 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
+import com.l2jserver.gameserver.GameTimeController;
+import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.gameserver.GameTimeController;
-import com.l2jserver.gameserver.model.L2Spawn;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
 
 /**
  * @author godson
@@ -246,15 +246,15 @@ public final class DayNightSpawnManager
 		{
 			return _bosses.get(spawnDat);
 		}
-		
-		if (GameTimeController.getInstance().isNight())
-		{
-			L2RaidBossInstance raidboss = (L2RaidBossInstance) spawnDat.doSpawn();
-			_bosses.put(spawnDat, raidboss);
-			
-			return raidboss;
+
+		L2RaidBossInstance raidboss = (L2RaidBossInstance) spawnDat.doSpawn();
+		_bosses.put(spawnDat, raidboss);
+		if (!GameTimeController.getInstance().isNight()) {
+			_log.info("It is not night yet, removing " + raidboss + " from world");
+			raidboss.deleteMe();
 		}
-		return null;
+
+		return raidboss;
 	}
 	
 	private static class SingletonHolder
