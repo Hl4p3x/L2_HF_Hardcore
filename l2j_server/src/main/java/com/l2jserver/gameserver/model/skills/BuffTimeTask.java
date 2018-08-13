@@ -18,14 +18,19 @@
  */
 package com.l2jserver.gameserver.model.skills;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Effect time task finish the effect when the abnormal time is reached.
  * @author Zoey76
  */
-public class BuffTimeTask implements Runnable
-{
+public class BuffTimeTask implements Runnable {
+
+	private static final Logger LOG = LoggerFactory.getLogger(BuffTimeTask.class);
+
 	private final AtomicInteger _time = new AtomicInteger();
 	private final BuffInfo _info;
 	
@@ -55,4 +60,5 @@ public class BuffTimeTask implements Runnable
 			_info.getEffected().getEffectList().stopSkillEffects(false, _info.getSkill().getId());
 		}
 	}
+
 }

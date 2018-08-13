@@ -2585,10 +2585,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public boolean isAttackingDisabled()
 	{
-		LOG.debug(
-			"Attacking disabled checks flying {}, stunned {}, sleeping {}, attacking {}, dead {}, paralyzed {}, physicalMuted {}, AI Disabled {}",
-			isFlying(), isStunned(), isSleeping(), isAttackingNow(), isAlikeDead(), isParalyzed(),
-			isPhysicalAttackMuted(), isCoreAIDisabled());
 		return isFlying() || isStunned() || isSleeping() || isAttackingNow() || isAlikeDead() || isParalyzed() || isPhysicalAttackMuted() || isCoreAIDisabled();
 	}
 	

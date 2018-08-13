@@ -18,12 +18,6 @@
  */
 package com.l2jserver.gameserver.model.skills;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ScheduledFuture;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -36,6 +30,14 @@ import com.l2jserver.gameserver.model.effects.EffectTickTask;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
 
 /**
  * Buff Info.<br>
@@ -44,6 +46,8 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public final class BuffInfo
 {
+
+	private static final Logger LOG = LoggerFactory.getLogger(BuffInfo.class);
 	// Data
 	/** Data. */
 	private final L2Character _effector;
@@ -319,6 +323,7 @@ public final class BuffInfo
 			{
 				task.getScheduledFuture().cancel(true); // Don't allow to finish current run.
 				_effected.getEffectList().stopSkillEffects(true, getSkill()); // Remove the buff from the effect list.
+				LOG.debug("Effected {} stopped for {}", getSkill(), _effected);
 			}
 		}
 	}

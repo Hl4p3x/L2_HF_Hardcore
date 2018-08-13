@@ -18,20 +18,6 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Queue;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
@@ -49,6 +35,14 @@ import com.l2jserver.gameserver.network.serverpackets.AbnormalStatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ExOlympiadSpelledInfo;
 import com.l2jserver.gameserver.network.serverpackets.PartySpelled;
 import com.l2jserver.gameserver.network.serverpackets.ShortBuffStatusUpdate;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.logging.Logger;
 
 /**
  * Effect lists.<br>
@@ -79,7 +73,7 @@ public final class CharEffectList
 	/** Set containing all abnormal types that shouldn't be added to this creature effect list. */
 	private volatile Set<AbnormalType> _blockedBuffSlots = null;
 	/** Short buff skill ID. */
-	private BuffInfo _shortBuff = null;
+	private volatile BuffInfo _shortBuff = null;
 	/** If {@code true} this effect list has buffs removed on any action. */
 	private volatile boolean _hasBuffsRemovedOnAnyAction = false;
 	/** If {@code true} this effect list has buffs removed on damage. */
@@ -87,9 +81,9 @@ public final class CharEffectList
 	/** If {@code true} this effect list has debuffs removed on damage. */
 	private volatile boolean _hasDebuffsRemovedOnDamage = false;
 	/** Effect flags. */
-	private int _effectFlags;
+	private AtomicInteger _effectFlags = new AtomicInteger();
 	/** If {@code true} only party icons need to be updated. */
-	private boolean _partyOnly = false;
+	private volatile boolean _partyOnly = false;
 	/** The owner of this effect list. */
 	private final L2Character _owner;
 	/** Hidden buffs count, prevents iterations. */
@@ -598,7 +592,7 @@ public final class CharEffectList
 	{
 		stopAndRemove(true, info, getEffectList(info.getSkill()));
 	}
-	
+
 	/**
 	 * Auxiliary method to stop all effects from a buff info and remove it from an effect list and stacked effects.
 	 * @param info the buff info
@@ -608,7 +602,7 @@ public final class CharEffectList
 	{
 		stopAndRemove(true, info, effects);
 	}
-	
+
 	/**
 	 * Auxiliary method to stop all effects from a buff info and remove it from an effect list and stacked effects.
 	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
@@ -621,9 +615,12 @@ public final class CharEffectList
 		{
 			return;
 		}
-		
+
 		// Removes the buff from the given effect list.
 		buffs.remove(info);
+		computeEffectFlags();
+
+
 		// Stop the buff effects.
 		info.stopAllEffects(removed);
 		// If it's a hidden buff that ends, then decrease hidden buff count.
@@ -1708,7 +1705,8 @@ public final class CharEffectList
 				}
 			}
 		}
-		_effectFlags = flags;
+
+		_effectFlags.set(flags);
 	}
 	
 	/**
@@ -1718,6 +1716,6 @@ public final class CharEffectList
 	 */
 	public boolean isAffected(EffectFlag flag)
 	{
-		return (_effectFlags & flag.getMask()) != 0;
+		return (_effectFlags.get() & flag.getMask()) != 0;
 	}
 }

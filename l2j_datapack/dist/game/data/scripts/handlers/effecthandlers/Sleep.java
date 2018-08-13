@@ -25,6 +25,8 @@ import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Sleep effect implementation.
@@ -32,6 +34,9 @@ import com.l2jserver.gameserver.model.skills.BuffInfo;
  */
 public final class Sleep extends AbstractEffect
 {
+
+	private static final Logger LOG = LoggerFactory.getLogger(Sleep.class);
+
 	public Sleep(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
@@ -54,6 +59,7 @@ public final class Sleep extends AbstractEffect
 	{
 		if (!info.getEffected().isPlayer())
 		{
+			LOG.debug("Pet {} sleep exit", info.getEffected());
 			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
 	}

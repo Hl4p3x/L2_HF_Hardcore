@@ -18,12 +18,6 @@
  */
 package com.l2jserver.gameserver.ai;
 
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
-
-import java.util.concurrent.Future;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -33,9 +27,17 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.pathfinding.PathFinding;
 import com.l2jserver.util.Rnd;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.concurrent.Future;
+
+import static com.l2jserver.gameserver.ai.CtrlIntention.*;
 
 public class L2SummonAI extends L2PlayableAI implements Runnable
 {
+
+	private static final Logger LOG = LoggerFactory.getLogger(L2SummonAI.class);
 	private static final int AVOID_RADIUS = 70;
 	
 	private volatile boolean _thinking; // to prevent recursive thinking
@@ -57,7 +59,8 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 		{
 			return;
 		}
-		
+		LOG.debug("{} Intention attack", getActor());
+
 		super.onIntentionAttack(target);
 	}
 	
@@ -103,14 +106,18 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	{
 		if (checkTargetLostOrDead(getAttackTarget()))
 		{
+			LOG.debug("{} Target [{}] is lost or dead, setting attack target to null", getActor(), getAttackTarget());
 			setAttackTarget(null);
 			return;
 		}
 		if (maybeMoveToPawn(getAttackTarget(), _actor.getPhysicalAttackRange()))
 		{
+			LOG.debug("{} Target is too far away, moving to {}", getActor(), getAttackTarget());
 			return;
 		}
+		LOG.debug("{} Stopping movement", getActor());
 		clientStopMoving(null);
+		LOG.debug("{} Auto attacking {}", getActor(), getAttackTarget());
 		_actor.doAttack(getAttackTarget());
 	}
 	
@@ -166,13 +173,13 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	{
 		if (_thinking || _actor.isCastingNow() || _actor.isAllSkillsDisabled())
 		{
+			LOG.debug("{} is skipping think: {} all skills disabled {}", getActor(), _thinking, _actor.isAllSkillsDisabled());
 			return;
 		}
 		_thinking = true;
-		try
-		{
-			switch (getIntention())
-			{
+		LOG.debug("{} is thinking {}", getActor(), getIntention());
+		try {
+			switch (getIntention()) {
 				case AI_INTENTION_ATTACK:
 					thinkAttack();
 					break;
@@ -186,6 +193,8 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 					thinkInteract();
 					break;
 			}
+		} catch (Exception e) {
+			LOG.warn("{}: {} - onEvtThink() for {} failed!", getClass().getSimpleName(), this, getIntention(), e);
 		}
 		finally
 		{

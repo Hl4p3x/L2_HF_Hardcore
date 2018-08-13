@@ -18,15 +18,6 @@
  */
 package com.l2jserver.gameserver.ai;
 
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
-
-import java.util.concurrent.Future;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -35,15 +26,14 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.AutoAttackStart;
-import com.l2jserver.gameserver.network.serverpackets.AutoAttackStop;
-import com.l2jserver.gameserver.network.serverpackets.Die;
-import com.l2jserver.gameserver.network.serverpackets.MoveToLocation;
-import com.l2jserver.gameserver.network.serverpackets.MoveToPawn;
-import com.l2jserver.gameserver.network.serverpackets.StopMove;
-import com.l2jserver.gameserver.network.serverpackets.StopRotation;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.concurrent.Future;
+
+import static com.l2jserver.gameserver.ai.CtrlIntention.*;
 
 /**
  * Mother class of all objects AI in the world.<br>
@@ -338,7 +328,7 @@ public abstract class AbstractAI implements Ctrl
 		{
 			return;
 		}
-		
+
 		switch (evt)
 		{
 			case EVT_THINK:
