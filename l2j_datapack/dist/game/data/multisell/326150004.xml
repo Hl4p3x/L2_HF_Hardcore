@@ -4,9 +4,33 @@
 		<npc>32615</npc> <!-- Ishuma (Maestro) -->
 	</npcs>
 	<item>
+		<!-- Sealed Tateossian Earring -->
+		<ingredient count="1" id="6724"/>
+		<!-- Adena -->
+		<ingredient count="731441" id="57"/>
+		<!-- Tateossian Earring -->
+		<production count="1" id="858"/>
+	</item>
+	<item>
+		<!-- Sealed Tateossian Ring -->
+		<ingredient count="1" id="6725"/>
+		<!-- Adena -->
+		<ingredient count="487627" id="57"/>
+		<!-- Tateossian Ring -->
+		<production count="1" id="889"/>
+	</item>
+	<item>
+		<!-- Sealed Tateossian Necklace -->
+		<ingredient count="1" id="6726"/>
+		<!-- Adena -->
+		<ingredient count="975255" id="57"/>
+		<!-- Tateossian Necklace -->
+		<production count="1" id="920"/>
+	</item>
+	<item>
 		<!-- Sealed Imperial Crusader Breastplate -->
 		<ingredient count="1" id="6674"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="1072500" id="57"/>
 		<!-- Imperial Crusader Breastplate -->
 		<production count="1" id="6373"/>
@@ -14,7 +38,7 @@
 	<item>
 		<!-- Sealed Imperial Crusader Gaiters -->
 		<ingredient count="1" id="6675"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="672000" id="57"/>
 		<!-- Imperial Crusader Gaiters -->
 		<production count="1" id="6374"/>
@@ -22,7 +46,7 @@
 	<item>
 		<!-- Sealed Imperial Crusader Gauntlet -->
 		<ingredient count="1" id="6676"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="268500" id="57"/>
 		<!-- Imperial Crusader Gauntlets -->
 		<production count="1" id="6375"/>
@@ -30,7 +54,7 @@
 	<item>
 		<!-- Sealed Imperial Crusader Boots -->
 		<ingredient count="1" id="6677"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="268500" id="57"/>
 		<!-- Imperial Crusader Boots -->
 		<production count="1" id="6376"/>
@@ -38,7 +62,7 @@
 	<item>
 		<!-- Sealed Imperial Crusader Shield -->
 		<ingredient count="1" id="6678"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="282000" id="57"/>
 		<!-- Imperial Crusader Shield -->
 		<production count="1" id="6377"/>
@@ -46,7 +70,7 @@
 	<item>
 		<!-- Sealed Arcana Sigil -->
 		<ingredient count="1" id="13885"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="282000" id="57"/>
 		<!-- Arcana Sigil -->
 		<production count="1" id="12811"/>
@@ -54,7 +78,7 @@
 	<item>
 		<!-- Sealed Imperial Crusader Helmet -->
 		<ingredient count="1" id="6679"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="402750" id="57"/>
 		<!-- Imperial Crusader Helmet -->
 		<production count="1" id="6378"/>
@@ -62,7 +86,7 @@
 	<item>
 		<!-- Sealed Draconic Leather Armor -->
 		<ingredient count="1" id="6680"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="1305000" id="57"/>
 		<!-- Draconic Leather Armor -->
 		<production count="1" id="6379"/>
@@ -70,7 +94,7 @@
 	<item>
 		<!-- Sealed Draconic Leather Glove -->
 		<ingredient count="1" id="6681"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="268500" id="57"/>
 		<!-- Draconic Leather Gloves -->
 		<production count="1" id="6380"/>
@@ -78,7 +102,7 @@
 	<item>
 		<!-- Sealed Draconic Leather Boots -->
 		<ingredient count="1" id="6682"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="268500" id="57"/>
 		<!-- Draconic Leather Boots -->
 		<production count="1" id="6381"/>
@@ -86,7 +110,7 @@
 	<item>
 		<!-- Sealed Draconic Leather Helmet -->
 		<ingredient count="1" id="6683"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="402750" id="57"/>
 		<!-- Draconic Leather Helmet -->
 		<production count="1" id="6382"/>
@@ -94,7 +118,7 @@
 	<item>
 		<!-- Sealed Major Arcana Robe -->
 		<ingredient count="1" id="6684"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="1305000" id="57"/>
 		<!-- Major Arcana Robe -->
 		<production count="1" id="6383"/>
@@ -102,7 +126,7 @@
 	<item>
 		<!-- Sealed Major Arcana Glove -->
 		<ingredient count="1" id="6685"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="268500" id="57"/>
 		<!-- Major Arcana Gloves -->
 		<production count="1" id="6384"/>
@@ -110,7 +134,7 @@
 	<item>
 		<!-- Sealed Major Arcana Boots -->
 		<ingredient count="1" id="6686"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="268500" id="57"/>
 		<!-- Major Arcana Boots -->
 		<production count="1" id="6385"/>
@@ -118,7 +142,7 @@
 	<item>
 		<!-- Sealed Major Arcana Circlet -->
 		<ingredient count="1" id="6687"/>
-		<!-- Ancient Adena -->
+		<!-- Adena -->
 		<ingredient count="402750" id="57"/>
 		<!-- Major Arcana Circlet -->
 		<production count="1" id="6386"/>
