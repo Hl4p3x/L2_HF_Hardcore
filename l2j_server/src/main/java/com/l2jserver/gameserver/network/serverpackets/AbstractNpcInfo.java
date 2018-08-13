@@ -113,18 +113,21 @@ public abstract class AbstractNpcInfo extends L2GameServerPacket
 				_title = cha.getTitle(); // On every subclass
 			}
 
+
+			String aggroSign = "";
+			if (cha.isAggressive() || (!Config.L2JMOD_CHAMPION_PASSIVE && cha.isChampion())) {
+				aggroSign = "[*]";
+			}
+
 			if (Config.SHOW_NPC_LVL_AS_GRADES && _npc instanceof L2MonsterInstance) {
 				String t =
-					"Grade: " + GradeMapper.resolveGradeString(cha.getTemplate().getOriginalLevel()) + (
-						cha.isAggressive()
-						? " [*]" : "");
+						"Grade: " + GradeMapper.resolveGradeString(cha.getTemplate().getOriginalLevel()) + aggroSign;
 				if (_title != null) {
 					t += " " + _title;
 				}
-
 				_title = t;
-			}	else if (Config.SHOW_NPC_LVL && _npc instanceof L2MonsterInstance) {
-				String t = "Lv " + cha.getTemplate().getOriginalLevel() + (cha.isAggressive() ? "[*]" : "");
+			} else if (Config.SHOW_NPC_LVL && _npc instanceof L2MonsterInstance) {
+				String t = "Lv " + cha.getTemplate().getOriginalLevel() + aggroSign;
 				if (_title != null) {
 					t += " " + _title;
 				}
