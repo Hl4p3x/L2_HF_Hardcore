@@ -574,7 +574,7 @@ public final class Q00234_FatesWhisper extends Quest
 					{
 						if (qs.isMemoState(7))
 						{
-							return "30183-02.html";
+							return "30833-02.html";
 						}
 						break;
 					}
