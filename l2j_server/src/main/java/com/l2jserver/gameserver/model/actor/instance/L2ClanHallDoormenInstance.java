@@ -84,23 +84,23 @@ public class L2ClanHallDoormenInstance extends L2DoormenInstance
 				{
 					case 1:
 						// Snow Great Wolf
-						ok = Evolve.doEvolve(player, this, 9882, 10307, 85, 20000000);
+						ok = Evolve.doEvolve(player, this, 9882, 10307, 55, 20000000);
 						break;
 					case 2:
 						// Red Strider
-						ok = Evolve.doEvolve(player, this, 4422, 10308, 85, 15000000);
+						ok = Evolve.doEvolve(player, this, 4422, 10308, 55, 15000000);
 						break;
 					case 3:
 						// Red Strider
-						ok = Evolve.doEvolve(player, this, 4423, 10309, 85, 15000000);
+						ok = Evolve.doEvolve(player, this, 4423, 10309, 55, 15000000);
 						break;
 					case 4:
 						// Red Strider
-						ok = Evolve.doEvolve(player, this, 4424, 10310, 85, 15000000);
+						ok = Evolve.doEvolve(player, this, 4424, 10310, 55, 15000000);
 						break;
 					case 5:
 						// Snow Fenrir
-						ok = Evolve.doEvolve(player, this, 10426, 10611, 85, 30000000);
+						ok = Evolve.doEvolve(player, this, 10426, 10611, 70, 30000000);
 						break;
 				}
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());

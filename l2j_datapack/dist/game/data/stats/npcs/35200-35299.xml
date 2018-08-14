@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35200" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35200" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -43,7 +43,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35201" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35201" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -87,7 +87,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35202" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35202" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -131,7 +131,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35203" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35203" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -175,7 +175,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35204" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35204" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -219,7 +219,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35205" level="85" originalLevel="79" type="L2Defender" name="Royal Knight" title="Oren">
+	<npc id="35205" level="79" type="L2Defender" name="Royal Knight" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -263,7 +263,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35206" level="85" originalLevel="77" type="L2Defender" name="Court Sorcerer" title="Oren">
+	<npc id="35206" level="77" type="L2Defender" name="Court Sorcerer" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1"/> <!-- Gludio Flame -->
@@ -311,7 +311,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="35207" level="85" originalLevel="77" type="L2Defender" name="Court Sorcerer" title="Oren">
+	<npc id="35207" level="77" type="L2Defender" name="Court Sorcerer" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1"/> <!-- Gludio Heal -->
@@ -359,7 +359,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="35208" level="85" originalLevel="77" type="L2Defender" name="Court Guard" title="Oren">
+	<npc id="35208" level="77" type="L2Defender" name="Court Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -403,7 +403,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35209" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35209" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -447,7 +447,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35210" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35210" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -491,7 +491,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35211" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35211" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -535,7 +535,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35212" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35212" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -579,7 +579,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35213" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35213" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -623,7 +623,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35214" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35214" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -667,7 +667,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35215" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35215" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -711,7 +711,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35216" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35216" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -755,7 +755,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35217" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Oren">
+	<npc id="35217" level="75" type="L2Defender" name="Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -799,7 +799,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35218" level="85" originalLevel="75" type="L2CastleDoormen" name="Gatekeeper" title="Oren">
+	<npc id="35218" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -863,7 +863,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35219" level="85" originalLevel="75" type="L2CastleDoormen" name="Gatekeeper" title="Oren">
+	<npc id="35219" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -927,7 +927,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35220" level="85" originalLevel="75" type="L2CastleDoormen" name="Gatekeeper" title="Oren">
+	<npc id="35220" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -991,7 +991,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35221" level="85" originalLevel="75" type="L2Npc" name="Mass Gatekeeper" title="Oren">
+	<npc id="35221" level="75" type="L2Npc" name="Mass Gatekeeper" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1035,7 +1035,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35222" level="85" originalLevel="75" type="L2CastleDoormen" name="Outer Doorman" title="Oren">
+	<npc id="35222" level="75" type="L2CastleDoormen" name="Outer Doorman" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1085,7 +1085,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35223" level="85" originalLevel="75" type="L2CastleDoormen" name="Inner Doorman" title="Oren">
+	<npc id="35223" level="75" type="L2CastleDoormen" name="Inner Doorman" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1135,7 +1135,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35224" level="85" originalLevel="75" type="L2Npc" name="Blacksmith" title="Oren">
+	<npc id="35224" level="75" type="L2Npc" name="Blacksmith" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1176,7 +1176,7 @@
 			<height normal="16.5"/>
 		</collision>
 	</npc>
-	<npc id="35225" level="85" originalLevel="75" type="L2Warehouse" name="Warehouse Keeper" title="Oren">
+	<npc id="35225" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1216,7 +1216,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="35226" level="85" originalLevel="75" type="L2Merchant" name="Brasseur" title="Chamberlain">
+	<npc id="35226" level="75" type="L2Merchant" name="Brasseur" title="Chamberlain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff"/>
@@ -1273,7 +1273,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="35227" level="85" originalLevel="75" type="L2Npc" name="Finrod" title="Wyvern Manager">
+	<npc id="35227" level="75" type="L2Npc" name="Finrod" title="Wyvern Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1313,7 +1313,7 @@
 			<height normal="24.5"/>
 		</collision>
 	</npc>
-	<npc id="35228" level="85" originalLevel="75" type="L2Merchant" name="Morrison" title="Mercenary Manager">
+	<npc id="35228" level="75" type="L2Merchant" name="Morrison" title="Mercenary Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1354,7 +1354,7 @@
 			<height normal="21.5"/>
 		</collision>
 	</npc>
-	<npc id="35229" level="85" originalLevel="75" type="L2Merchant" name="Manor Manager" title="Oren">
+	<npc id="35229" level="75" type="L2Merchant" name="Manor Manager" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1395,7 +1395,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="35230" level="85" originalLevel="75" type="L2Merchant" name="Manor Manager" title="Oren">
+	<npc id="35230" level="75" type="L2Merchant" name="Manor Manager" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1436,7 +1436,7 @@
 			<height normal="24.5"/>
 		</collision>
 	</npc>
-	<npc id="35231" level="85" originalLevel="75" type="L2Merchant" name="Manor Manager" title="Oren">
+	<npc id="35231" level="75" type="L2Merchant" name="Manor Manager" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1477,7 +1477,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="35232" level="85" originalLevel="75" type="L2Npc" name="Sherwood" title="Messenger">
+	<npc id="35232" level="75" type="L2Npc" name="Sherwood" title="Messenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1519,7 +1519,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35233" level="85" originalLevel="20" type="L2Artefact" name="Aden Holy Artifact">
+	<npc id="35233" level="20" type="L2Artefact" name="Aden Holy Artifact">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1557,7 +1557,7 @@
 			<height normal="98"/>
 		</collision>
 	</npc>
-	<npc id="35234" level="85" originalLevel="85" type="L2Defender" name="Amadeo Cadmus" title="King">
+	<npc id="35234" level="85" type="L2Defender" name="Amadeo Cadmus" title="King">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1601,7 +1601,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="35235" level="85" originalLevel="81" type="L2Defender" name="Royal Knight" title="Aden">
+	<npc id="35235" level="81" type="L2Defender" name="Royal Knight" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1645,7 +1645,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35236" level="85" originalLevel="79" type="L2Defender" name="Court Sorcerer" title="Aden">
+	<npc id="35236" level="79" type="L2Defender" name="Court Sorcerer" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1"/> <!-- Aden Flame -->
@@ -1692,7 +1692,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35237" level="85" originalLevel="79" type="L2Defender" name="Court Sorcerer" title="Aden">
+	<npc id="35237" level="79" type="L2Defender" name="Court Sorcerer" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1"/> <!-- Aden Heal -->
@@ -1739,7 +1739,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35238" level="85" originalLevel="79" type="L2Defender" name="Court Guard" title="Aden">
+	<npc id="35238" level="79" type="L2Defender" name="Court Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1782,7 +1782,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35239" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35239" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1825,7 +1825,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35240" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35240" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1868,7 +1868,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35241" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35241" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -1911,7 +1911,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35242" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35242" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -1954,7 +1954,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35243" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35243" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -1997,7 +1997,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35244" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35244" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -2040,7 +2040,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35245" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35245" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2083,7 +2083,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35246" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35246" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2126,7 +2126,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35247" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35247" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2169,7 +2169,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35248" level="85" originalLevel="81" type="L2Defender" name="Royal Knight" title="Aden">
+	<npc id="35248" level="81" type="L2Defender" name="Royal Knight" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2213,7 +2213,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35249" level="85" originalLevel="79" type="L2Defender" name="Court Sorcerer" title="Aden">
+	<npc id="35249" level="79" type="L2Defender" name="Court Sorcerer" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1"/> <!-- Aden Flame -->
@@ -2260,7 +2260,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="35250" level="85" originalLevel="79" type="L2Defender" name="Court Sorcerer" title="Aden">
+	<npc id="35250" level="79" type="L2Defender" name="Court Sorcerer" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1"/> <!-- Aden Heal -->
@@ -2307,7 +2307,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="35251" level="85" originalLevel="79" type="L2Defender" name="Court Guard" title="Aden">
+	<npc id="35251" level="79" type="L2Defender" name="Court Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2350,7 +2350,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35252" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35252" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2393,7 +2393,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35253" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35253" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2436,7 +2436,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35254" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35254" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2479,7 +2479,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35255" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35255" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -2522,7 +2522,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35256" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35256" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -2565,7 +2565,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35257" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35257" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -2608,7 +2608,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35258" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35258" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2651,7 +2651,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35259" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35259" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2694,7 +2694,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35260" level="85" originalLevel="78" type="L2Defender" name="Guard" title="Aden">
+	<npc id="35260" level="78" type="L2Defender" name="Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -2737,7 +2737,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35261" level="85" originalLevel="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+	<npc id="35261" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2819,7 +2819,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35262" level="85" originalLevel="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+	<npc id="35262" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2901,7 +2901,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35263" level="85" originalLevel="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+	<npc id="35263" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2983,7 +2983,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35264" level="85" originalLevel="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+	<npc id="35264" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3065,7 +3065,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35265" level="85" originalLevel="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+	<npc id="35265" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3147,7 +3147,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35266" level="85" originalLevel="75" type="L2Npc" name="Mass Gatekeeper" title="Aden">
+	<npc id="35266" level="75" type="L2Npc" name="Mass Gatekeeper" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3191,7 +3191,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35267" level="85" originalLevel="75" type="L2CastleDoormen" name="Outer Doorman" title="Aden">
+	<npc id="35267" level="75" type="L2CastleDoormen" name="Outer Doorman" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3241,7 +3241,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35268" level="85" originalLevel="75" type="L2CastleDoormen" name="Inner Doorman" title="Aden">
+	<npc id="35268" level="75" type="L2CastleDoormen" name="Inner Doorman" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3291,7 +3291,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35269" level="85" originalLevel="75" type="L2CastleDoormen" name="Hall Doorman" title="Aden">
+	<npc id="35269" level="75" type="L2CastleDoormen" name="Hall Doorman" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3341,7 +3341,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35270" level="85" originalLevel="75" type="L2CastleDoormen" name="Inner Doorman" title="Aden">
+	<npc id="35270" level="75" type="L2CastleDoormen" name="Inner Doorman" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3391,7 +3391,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35271" level="85" originalLevel="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
+	<npc id="35271" level="75" type="L2CastleDoormen" name="Gatekeeper" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3439,7 +3439,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35272" level="85" originalLevel="75" type="L2Npc" name="Blacksmith" title="Aden">
+	<npc id="35272" level="75" type="L2Npc" name="Blacksmith" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3480,7 +3480,7 @@
 			<height normal="16.5"/>
 		</collision>
 	</npc>
-	<npc id="35273" level="85" originalLevel="75" type="L2Warehouse" name="Warehouse Keeper" title="Aden">
+	<npc id="35273" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3520,7 +3520,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="35274" level="85" originalLevel="75" type="L2Merchant" name="Logan" title="Chamberlain">
+	<npc id="35274" level="75" type="L2Merchant" name="Logan" title="Chamberlain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff"/>
@@ -3585,7 +3585,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="35275" level="85" originalLevel="75" type="L2Npc" name="Kruger" title="Wyvern Manager">
+	<npc id="35275" level="75" type="L2Npc" name="Kruger" title="Wyvern Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3625,7 +3625,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="35276" level="85" originalLevel="75" type="L2Merchant" name="Eldon" title="Mercenary Manager">
+	<npc id="35276" level="75" type="L2Merchant" name="Eldon" title="Mercenary Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3666,7 +3666,7 @@
 			<height normal="21.5"/>
 		</collision>
 	</npc>
-	<npc id="35277" level="85" originalLevel="75" type="L2Merchant" name="Manor Manager" title="Aden">
+	<npc id="35277" level="75" type="L2Merchant" name="Manor Manager" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3707,7 +3707,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="35278" level="85" originalLevel="75" type="L2Npc" name="Messenger Ruford" title="Messenger">
+	<npc id="35278" level="75" type="L2Npc" name="Messenger Ruford" title="Messenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3749,7 +3749,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35279" level="85" originalLevel="20" type="L2Artefact" name="Innadril Holy Artifact">
+	<npc id="35279" level="20" type="L2Artefact" name="Innadril Holy Artifact">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3787,7 +3787,7 @@
 			<height normal="98"/>
 		</collision>
 	</npc>
-	<npc id="35280" level="85" originalLevel="83" type="L2Defender" name="Baron Lionel Hunter">
+	<npc id="35280" level="83" type="L2Defender" name="Baron Lionel Hunter">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3831,7 +3831,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="35281" level="85" originalLevel="81" type="L2Defender" name="Schaht" title="Sir">
+	<npc id="35281" level="81" type="L2Defender" name="Schaht" title="Sir">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3875,7 +3875,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35282" level="85" originalLevel="79" type="L2Defender" name="Royal Knight" title="Innadril">
+	<npc id="35282" level="79" type="L2Defender" name="Royal Knight" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -3919,7 +3919,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35283" level="85" originalLevel="77" type="L2Defender" name="Court Sorcerer" title="Innadril">
+	<npc id="35283" level="77" type="L2Defender" name="Court Sorcerer" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1"/> <!-- Gludio Flame -->
@@ -3967,7 +3967,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="35284" level="85" originalLevel="77" type="L2Defender" name="Court Sorcerer" title="Innadril">
+	<npc id="35284" level="77" type="L2Defender" name="Court Sorcerer" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1"/> <!-- Gludio Heal -->
@@ -4015,7 +4015,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="35285" level="85" originalLevel="77" type="L2Defender" name="Court Guard" title="Innadril">
+	<npc id="35285" level="77" type="L2Defender" name="Court Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4059,7 +4059,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35286" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35286" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4103,7 +4103,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35287" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35287" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4147,7 +4147,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35288" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35288" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4191,7 +4191,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35289" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35289" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -4235,7 +4235,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35290" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35290" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -4279,7 +4279,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35291" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35291" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
@@ -4323,7 +4323,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="35292" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35292" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4367,7 +4367,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35293" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35293" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4411,7 +4411,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35294" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35294" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4455,7 +4455,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35295" level="85" originalLevel="79" type="L2Defender" name="Royal Knight" title="Innadril">
+	<npc id="35295" level="79" type="L2Defender" name="Royal Knight" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4499,7 +4499,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35296" level="85" originalLevel="77" type="L2Defender" name="Court Sorcerer" title="Innadril">
+	<npc id="35296" level="77" type="L2Defender" name="Court Sorcerer" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1"/> <!-- Gludio Flame -->
@@ -4547,7 +4547,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="35297" level="85" originalLevel="77" type="L2Defender" name="Court Sorcerer" title="Innadril">
+	<npc id="35297" level="77" type="L2Defender" name="Court Sorcerer" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1"/> <!-- Gludio Heal -->
@@ -4595,7 +4595,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="35298" level="85" originalLevel="77" type="L2Defender" name="Court Guard" title="Innadril">
+	<npc id="35298" level="77" type="L2Defender" name="Court Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4639,7 +4639,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35299" level="85" originalLevel="75" type="L2Defender" name="Guard" title="Innadril">
+	<npc id="35299" level="75" type="L2Defender" name="Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>

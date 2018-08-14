@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="31400" level="85" originalLevel="80" type="L2Guard" name="Dummy - Sword Guard" title="For Test">
+	<npc id="31400" level="80" type="L2Guard" name="Dummy - Sword Guard" title="For Test">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -36,7 +36,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="31401" level="85" originalLevel="80" type="L2Guard" name="Dummy - Bow Guard" title="For Test">
+	<npc id="31401" level="80" type="L2Guard" name="Dummy - Bow Guard" title="For Test">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -73,7 +73,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="31404" level="85" originalLevel="70" type="L2Npc" name="Monster Race Guide" title="Town of Gludio">
+	<npc id="31404" level="70" type="L2Npc" name="Monster Race Guide" title="Town of Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -113,7 +113,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="31405" level="85" originalLevel="70" type="L2Npc" name="Monster Race Guide" title="Town of Dion">
+	<npc id="31405" level="70" type="L2Npc" name="Monster Race Guide" title="Town of Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -153,7 +153,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="31406" level="85" originalLevel="70" type="L2Npc" name="Monster Race Guide" title="Town of Giran">
+	<npc id="31406" level="70" type="L2Npc" name="Monster Race Guide" title="Town of Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -193,7 +193,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="31407" level="85" originalLevel="70" type="L2Npc" name="Monster Race Guide" title="Heine">
+	<npc id="31407" level="70" type="L2Npc" name="Monster Race Guide" title="Heine">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -233,7 +233,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="31408" level="85" originalLevel="70" type="L2Npc" name="Monster Race Guide" title="Town of Oren">
+	<npc id="31408" level="70" type="L2Npc" name="Monster Race Guide" title="Town of Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -273,7 +273,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="31409" level="85" originalLevel="70" type="L2Npc" name="Monster Race Guide" title="Hunters Village">
+	<npc id="31409" level="70" type="L2Npc" name="Monster Race Guide" title="Hunters Village">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -313,7 +313,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="31410" level="85" originalLevel="70" type="L2Npc" name="Monster Race Guide" title="Town of Aden">
+	<npc id="31410" level="70" type="L2Npc" name="Monster Race Guide" title="Town of Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -353,7 +353,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="31411" level="85" originalLevel="70" type="L2Npc" name="Monster Race Guide" title="Town of Goddard">
+	<npc id="31411" level="70" type="L2Npc" name="Monster Race Guide" title="Town of Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -393,7 +393,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="31412" level="85" originalLevel="70" type="L2Npc" name="Monster Race Guide" title="Rune Township">
+	<npc id="31412" level="70" type="L2Npc" name="Monster Race Guide" title="Rune Township">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -433,7 +433,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="31413" level="85" originalLevel="70" type="L2Merchant" name="Antonio" title="Spellbook Seller">
+	<npc id="31413" level="70" type="L2Merchant" name="Antonio" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -473,7 +473,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="31414" level="85" originalLevel="70" type="L2Merchant" name="Lynn" title="Spellbook Seller">
+	<npc id="31414" level="70" type="L2Merchant" name="Lynn" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -513,7 +513,7 @@
 			<height normal="25.5"/>
 		</collision>
 	</npc>
-	<npc id="31415" level="85" originalLevel="70" type="L2Merchant" name="Triya" title="Spellbook Seller">
+	<npc id="31415" level="70" type="L2Merchant" name="Triya" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -553,7 +553,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="31416" level="85" originalLevel="70" type="L2Merchant" name="Aren" title="Spellbook Seller">
+	<npc id="31416" level="70" type="L2Merchant" name="Aren" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -593,7 +593,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="31417" level="85" originalLevel="70" type="L2Merchant" name="Berynel" title="Spellbook Seller">
+	<npc id="31417" level="70" type="L2Merchant" name="Berynel" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -633,7 +633,7 @@
 			<height normal="21"/>
 		</collision>
 	</npc>
-	<npc id="31418" level="85" originalLevel="70" type="L2Merchant" name="Rouke" title="Spellbook Seller">
+	<npc id="31418" level="70" type="L2Merchant" name="Rouke" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -673,7 +673,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="31419" level="85" originalLevel="70" type="L2Merchant" name="Lorel" title="Spellbook Seller">
+	<npc id="31419" level="70" type="L2Merchant" name="Lorel" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -713,7 +713,7 @@
 			<height normal="21"/>
 		</collision>
 	</npc>
-	<npc id="31420" level="85" originalLevel="70" type="L2Merchant" name="Tomanel" title="Spellbook Seller">
+	<npc id="31420" level="70" type="L2Merchant" name="Tomanel" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -753,7 +753,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="31421" level="85" originalLevel="70" type="L2Merchant" name="Ratriya" title="Spellbook Seller">
+	<npc id="31421" level="70" type="L2Merchant" name="Ratriya" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -793,7 +793,7 @@
 			<height normal="25.5"/>
 		</collision>
 	</npc>
-	<npc id="31422" level="85" originalLevel="70" type="L2Merchant" name="Migel" title="Spellbook Seller">
+	<npc id="31422" level="70" type="L2Merchant" name="Migel" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -833,7 +833,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="31423" level="85" originalLevel="70" type="L2Merchant" name="Romas" title="Spellbook Seller">
+	<npc id="31423" level="70" type="L2Merchant" name="Romas" title="Spellbook Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -873,7 +873,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="31424" level="85" originalLevel="70" type="L2Merchant" name="Shantra" title="Amulet Seller">
+	<npc id="31424" level="70" type="L2Merchant" name="Shantra" title="Amulet Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -913,7 +913,7 @@
 			<height normal="28"/>
 		</collision>
 	</npc>
-	<npc id="31425" level="85" originalLevel="70" type="L2Merchant" name="Koram" title="Amulet Seller">
+	<npc id="31425" level="70" type="L2Merchant" name="Koram" title="Amulet Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -953,7 +953,7 @@
 			<height normal="29"/>
 		</collision>
 	</npc>
-	<npc id="31426" level="85" originalLevel="70" type="L2Merchant" name="Jaka" title="Amulet Seller">
+	<npc id="31426" level="70" type="L2Merchant" name="Jaka" title="Amulet Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -993,7 +993,7 @@
 			<height normal="29"/>
 		</collision>
 	</npc>
-	<npc id="31427" level="85" originalLevel="70" type="L2Merchant" name="Urgal" title="Amulet Seller">
+	<npc id="31427" level="70" type="L2Merchant" name="Urgal" title="Amulet Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1033,7 +1033,7 @@
 			<height normal="29"/>
 		</collision>
 	</npc>
-	<npc id="31428" level="85" originalLevel="70" type="L2Merchant" name="Shafa" title="Amulet Seller">
+	<npc id="31428" level="70" type="L2Merchant" name="Shafa" title="Amulet Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1073,7 +1073,7 @@
 			<height normal="28"/>
 		</collision>
 	</npc>
-	<npc id="31429" level="85" originalLevel="70" type="L2Merchant" name="Shitara" title="Amulet Seller">
+	<npc id="31429" level="70" type="L2Merchant" name="Shitara" title="Amulet Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1113,7 +1113,7 @@
 			<height normal="28"/>
 		</collision>
 	</npc>
-	<npc id="31430" level="85" originalLevel="70" type="L2Merchant" name="Donai" title="Amulet Seller">
+	<npc id="31430" level="70" type="L2Merchant" name="Donai" title="Amulet Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1153,7 +1153,7 @@
 			<height normal="29"/>
 		</collision>
 	</npc>
-	<npc id="31431" level="85" originalLevel="70" type="L2Merchant" name="Karai" title="Amulet Seller">
+	<npc id="31431" level="70" type="L2Merchant" name="Karai" title="Amulet Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1193,7 +1193,7 @@
 			<height normal="29"/>
 		</collision>
 	</npc>
-	<npc id="31432" level="85" originalLevel="70" type="L2Merchant" name="Reeya" title="Blueprint Seller">
+	<npc id="31432" level="70" type="L2Merchant" name="Reeya" title="Blueprint Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1233,7 +1233,7 @@
 			<height normal="18.5"/>
 		</collision>
 	</npc>
-	<npc id="31433" level="85" originalLevel="70" type="L2Merchant" name="Ronaldo" title="Blueprint Seller">
+	<npc id="31433" level="70" type="L2Merchant" name="Ronaldo" title="Blueprint Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1273,7 +1273,7 @@
 			<height normal="19.7"/>
 		</collision>
 	</npc>
-	<npc id="31434" level="85" originalLevel="70" type="L2Merchant" name="Shaling" title="Blueprint Seller">
+	<npc id="31434" level="70" type="L2Merchant" name="Shaling" title="Blueprint Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1313,7 +1313,7 @@
 			<height normal="18.5"/>
 		</collision>
 	</npc>
-	<npc id="31435" level="85" originalLevel="70" type="L2Merchant" name="Daeger" title="Blueprint Seller">
+	<npc id="31435" level="70" type="L2Merchant" name="Daeger" title="Blueprint Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1353,7 +1353,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="31436" level="85" originalLevel="70" type="L2Merchant" name="Dani" title="Blueprint Seller">
+	<npc id="31436" level="70" type="L2Merchant" name="Dani" title="Blueprint Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1393,7 +1393,7 @@
 			<height normal="18.5"/>
 		</collision>
 	</npc>
-	<npc id="31437" level="85" originalLevel="70" type="L2Merchant" name="Luka" title="Blueprint Seller">
+	<npc id="31437" level="70" type="L2Merchant" name="Luka" title="Blueprint Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1433,7 +1433,7 @@
 			<height normal="19.7"/>
 		</collision>
 	</npc>
-	<npc id="31438" level="85" originalLevel="70" type="L2Merchant" name="Lara" title="Blueprint Seller">
+	<npc id="31438" level="70" type="L2Merchant" name="Lara" title="Blueprint Seller">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1473,7 +1473,7 @@
 			<height normal="18.5"/>
 		</collision>
 	</npc>
-	<npc id="31439" level="85" originalLevel="70" type="L2Merchant" name="Rogen" title="Mineral Trader">
+	<npc id="31439" level="70" type="L2Merchant" name="Rogen" title="Mineral Trader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1513,7 +1513,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="31440" level="85" originalLevel="70" type="L2Merchant" name="Lanna" title="Mineral Trader">
+	<npc id="31440" level="70" type="L2Merchant" name="Lanna" title="Mineral Trader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1553,7 +1553,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="31441" level="85" originalLevel="70" type="L2Merchant" name="Gordo" title="Mineral Trader">
+	<npc id="31441" level="70" type="L2Merchant" name="Gordo" title="Mineral Trader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1593,7 +1593,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="31442" level="85" originalLevel="70" type="L2Merchant" name="Kiki" title="Mineral Trader">
+	<npc id="31442" level="70" type="L2Merchant" name="Kiki" title="Mineral Trader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1633,7 +1633,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="31443" level="85" originalLevel="70" type="L2Merchant" name="Raban" title="Mineral Trader">
+	<npc id="31443" level="70" type="L2Merchant" name="Raban" title="Mineral Trader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1673,7 +1673,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="31444" level="85" originalLevel="70" type="L2Merchant" name="Cona" title="Mineral Trader">
+	<npc id="31444" level="70" type="L2Merchant" name="Cona" title="Mineral Trader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1713,7 +1713,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="31445" level="85" originalLevel="70" type="L2Merchant" name="Shutner" title="Mineral Trader">
+	<npc id="31445" level="70" type="L2Merchant" name="Shutner" title="Mineral Trader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1753,7 +1753,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="31452" level="85" originalLevel="70" type="L2SepulcherNpc" name="Ghost of Wigoth">
+	<npc id="31452" level="70" type="L2SepulcherNpc" name="Ghost of Wigoth">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1793,7 +1793,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="31453" level="85" originalLevel="70" type="L2SepulcherNpc" name="Nameless Spirit">
+	<npc id="31453" level="70" type="L2SepulcherNpc" name="Nameless Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1833,7 +1833,7 @@
 			<height normal="21"/>
 		</collision>
 	</npc>
-	<npc id="31454" level="85" originalLevel="70" type="L2SepulcherNpc" name="Ghost of Wigoth">
+	<npc id="31454" level="70" type="L2SepulcherNpc" name="Ghost of Wigoth">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1873,7 +1873,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="31455" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31455" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1911,7 +1911,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31456" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31456" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1949,7 +1949,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31457" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31457" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1987,7 +1987,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31458" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31458" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2025,7 +2025,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31459" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31459" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2063,7 +2063,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31460" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31460" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2101,7 +2101,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31461" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31461" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2139,7 +2139,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31462" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31462" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2177,7 +2177,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31463" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31463" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2215,7 +2215,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31464" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31464" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2253,7 +2253,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31465" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31465" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2291,7 +2291,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31466" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31466" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2329,7 +2329,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31467" level="85" originalLevel="70" type="L2SepulcherNpc" name="Key Box">
+	<npc id="31467" level="70" type="L2SepulcherNpc" name="Key Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2367,7 +2367,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31468" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31468" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="1"/>
@@ -2411,7 +2411,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31469" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31469" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="2"/>
@@ -2454,7 +2454,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31470" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31470" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="3"/>
@@ -2497,7 +2497,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31471" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31471" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="4"/>
@@ -2541,7 +2541,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31472" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31472" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="5"/>
@@ -2584,7 +2584,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31473" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31473" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="1"/>
@@ -2628,7 +2628,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31474" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31474" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="2"/>
@@ -2671,7 +2671,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31475" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31475" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="3"/>
@@ -2714,7 +2714,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31476" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31476" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="4"/>
@@ -2758,7 +2758,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31477" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31477" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="5"/>
@@ -2801,7 +2801,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31478" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31478" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="1"/>
@@ -2845,7 +2845,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31479" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31479" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="2"/>
@@ -2888,7 +2888,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31480" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31480" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="3"/>
@@ -2931,7 +2931,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31481" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31481" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="4"/>
@@ -2975,7 +2975,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31482" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31482" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="5"/>
@@ -3018,7 +3018,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31483" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31483" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="1"/>
@@ -3062,7 +3062,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31484" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31484" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="2"/>
@@ -3105,7 +3105,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31485" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31485" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="3"/>
@@ -3148,7 +3148,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31486" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31486" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="4"/>
@@ -3192,7 +3192,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31487" level="85" originalLevel="70" type="L2SepulcherNpc" name="Mysterious Box">
+	<npc id="31487" level="70" type="L2SepulcherNpc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIDX" value="5"/>
@@ -3235,7 +3235,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="31488" level="85" originalLevel="70" type="L2Npc" name="Rift Post Recruit">
+	<npc id="31488" level="70" type="L2Npc" name="Rift Post Recruit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3276,7 +3276,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="31489" level="85" originalLevel="70" type="L2Npc" name="Rift Post Private">
+	<npc id="31489" level="70" type="L2Npc" name="Rift Post Private">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3317,7 +3317,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="31490" level="85" originalLevel="70" type="L2Npc" name="Rift Post Officer">
+	<npc id="31490" level="70" type="L2Npc" name="Rift Post Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3358,7 +3358,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="31491" level="85" originalLevel="70" type="L2Npc" name="Rift Post Captain">
+	<npc id="31491" level="70" type="L2Npc" name="Rift Post Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3399,7 +3399,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="31492" level="85" originalLevel="70" type="L2Npc" name="Rift Post Commander">
+	<npc id="31492" level="70" type="L2Npc" name="Rift Post Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3440,7 +3440,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="31493" level="85" originalLevel="70" type="L2Npc" name="Rift Post Hero">
+	<npc id="31493" level="70" type="L2Npc" name="Rift Post Hero">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3481,7 +3481,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="31494" level="85" originalLevel="70" type="L2Npc" name="Dimensional Gate Keeper">
+	<npc id="31494" level="70" type="L2Npc" name="Dimensional Gate Keeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3522,7 +3522,7 @@
 			<height normal="120.5"/>
 		</collision>
 	</npc>
-	<npc id="31495" level="85" originalLevel="70" type="L2Npc" name="Dimensional Gate Keeper">
+	<npc id="31495" level="70" type="L2Npc" name="Dimensional Gate Keeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3563,7 +3563,7 @@
 			<height normal="120.5"/>
 		</collision>
 	</npc>
-	<npc id="31496" level="85" originalLevel="70" type="L2Npc" name="Dimensional Gate Keeper">
+	<npc id="31496" level="70" type="L2Npc" name="Dimensional Gate Keeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3604,7 +3604,7 @@
 			<height normal="120.5"/>
 		</collision>
 	</npc>
-	<npc id="31497" level="85" originalLevel="70" type="L2Npc" name="Dimensional Gate Keeper">
+	<npc id="31497" level="70" type="L2Npc" name="Dimensional Gate Keeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3645,7 +3645,7 @@
 			<height normal="120.5"/>
 		</collision>
 	</npc>
-	<npc id="31498" level="85" originalLevel="70" type="L2Npc" name="Dimensional Gate Keeper">
+	<npc id="31498" level="70" type="L2Npc" name="Dimensional Gate Keeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3686,7 +3686,7 @@
 			<height normal="120.5"/>
 		</collision>
 	</npc>
-	<npc id="31499" level="85" originalLevel="70" type="L2Npc" name="Dimensional Gate Keeper">
+	<npc id="31499" level="70" type="L2Npc" name="Dimensional Gate Keeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>

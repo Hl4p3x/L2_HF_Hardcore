@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="1501" level="85" originalLevel="55" type="L2Npc" name="Majo Agathion">
+	<npc id="1501" level="55" type="L2Npc" name="Majo Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -34,7 +34,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1502" level="85" originalLevel="55" type="L2Npc" name="Gold Crown Agathion">
+	<npc id="1502" level="55" type="L2Npc" name="Gold Crown Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -69,7 +69,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1503" level="85" originalLevel="55" type="L2Npc" name="Black Crown Agathion">
+	<npc id="1503" level="55" type="L2Npc" name="Black Crown Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -104,7 +104,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1504" level="85" originalLevel="55" type="L2Npc" name="Plaipitak Agathion">
+	<npc id="1504" level="55" type="L2Npc" name="Plaipitak Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -139,7 +139,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1505" level="85" originalLevel="55" type="L2Npc" name="Baby Panda Agathion">
+	<npc id="1505" level="55" type="L2Npc" name="Baby Panda Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -174,7 +174,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1506" level="85" originalLevel="55" type="L2Npc" name="Bamboo Panda Agathion">
+	<npc id="1506" level="55" type="L2Npc" name="Bamboo Panda Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -209,7 +209,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1507" level="85" originalLevel="55" type="L2Npc" name="Sexy Panda Agathion">
+	<npc id="1507" level="55" type="L2Npc" name="Sexy Panda Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -244,7 +244,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1508" level="85" originalLevel="55" type="L2Npc" name="White Cupid Agathion">
+	<npc id="1508" level="55" type="L2Npc" name="White Cupid Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -279,7 +279,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1509" level="85" originalLevel="55" type="L2Npc" name="Dark Cupid Agathion">
+	<npc id="1509" level="55" type="L2Npc" name="Dark Cupid Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -314,7 +314,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1510" level="85" originalLevel="55" type="L2Npc" name="White Maneki Neko Agathion">
+	<npc id="1510" level="55" type="L2Npc" name="White Maneki Neko Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -349,7 +349,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1511" level="85" originalLevel="55" type="L2Npc" name="Black Maneki Neko Agathion">
+	<npc id="1511" level="55" type="L2Npc" name="Black Maneki Neko Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -384,7 +384,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1512" level="85" originalLevel="55" type="L2Npc" name="Brown Maneki Neko Agathion">
+	<npc id="1512" level="55" type="L2Npc" name="Brown Maneki Neko Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -419,7 +419,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1513" level="85" originalLevel="55" type="L2Npc" name="One-eyed Bat Drove Agathion">
+	<npc id="1513" level="55" type="L2Npc" name="One-eyed Bat Drove Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -454,7 +454,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1514" level="85" originalLevel="55" type="L2Npc" name="Pegasus Agathion">
+	<npc id="1514" level="55" type="L2Npc" name="Pegasus Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -489,7 +489,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1515" level="85" originalLevel="55" type="L2Npc" name="Yellow-robed Tojigong Agathion">
+	<npc id="1515" level="55" type="L2Npc" name="Yellow-robed Tojigong Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -524,7 +524,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1516" level="85" originalLevel="55" type="L2Npc" name="Blue-robed Tojigong Agathion">
+	<npc id="1516" level="55" type="L2Npc" name="Blue-robed Tojigong Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -559,7 +559,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1517" level="85" originalLevel="55" type="L2Npc" name="Green-robed Tojigong Agathion">
+	<npc id="1517" level="55" type="L2Npc" name="Green-robed Tojigong Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -594,7 +594,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1518" level="85" originalLevel="55" type="L2Npc" name="Bugbear Agathion">
+	<npc id="1518" level="55" type="L2Npc" name="Bugbear Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -629,7 +629,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1519" level="85" originalLevel="55" type="L2Npc" name="Red Sumo Wrestler Agathion">
+	<npc id="1519" level="55" type="L2Npc" name="Red Sumo Wrestler Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -664,7 +664,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1520" level="85" originalLevel="55" type="L2Npc" name="Blue Sumo Wrestler Agathion">
+	<npc id="1520" level="55" type="L2Npc" name="Blue Sumo Wrestler Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -699,7 +699,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1521" level="85" originalLevel="55" type="L2Npc" name="Great Sumo Match Agathion">
+	<npc id="1521" level="55" type="L2Npc" name="Great Sumo Match Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -734,7 +734,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1522" level="85" originalLevel="55" type="L2Npc" name="Button-Eyed Bear Doll">
+	<npc id="1522" level="55" type="L2Npc" name="Button-Eyed Bear Doll">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -769,7 +769,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1523" level="85" originalLevel="55" type="L2Npc" name="God of Fortune">
+	<npc id="1523" level="55" type="L2Npc" name="God of Fortune">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -804,7 +804,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1524" level="85" originalLevel="55" type="L2Npc" name="Dryad Agathion">
+	<npc id="1524" level="55" type="L2Npc" name="Dryad Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -839,7 +839,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1525" level="85" originalLevel="55" type="L2Npc" name="Wonboso Agathion">
+	<npc id="1525" level="55" type="L2Npc" name="Wonboso Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -874,7 +874,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1526" level="85" originalLevel="55" type="L2Npc" name="Daewoonso Agathion">
+	<npc id="1526" level="55" type="L2Npc" name="Daewoonso Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -909,7 +909,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1527" level="85" originalLevel="55" type="L2Npc" name="Pomona Agathion">
+	<npc id="1527" level="55" type="L2Npc" name="Pomona Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -944,7 +944,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1528" level="85" originalLevel="55" type="L2Npc" name="Weaver Agathion">
+	<npc id="1528" level="55" type="L2Npc" name="Weaver Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -979,7 +979,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1529" level="85" originalLevel="55" type="L2Npc" name="Slow Agathion">
+	<npc id="1529" level="55" type="L2Npc" name="Slow Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1014,7 +1014,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1530" level="85" originalLevel="55" type="L2Npc" name="Noisy Agathion">
+	<npc id="1530" level="55" type="L2Npc" name="Noisy Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1049,7 +1049,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1531" level="85" originalLevel="55" type="L2Npc" name="Dancing Child of Fortune Agathion">
+	<npc id="1531" level="55" type="L2Npc" name="Dancing Child of Fortune Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1084,7 +1084,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1532" level="85" originalLevel="55" type="L2Npc" name="Son-o-gong Agathion">
+	<npc id="1532" level="55" type="L2Npc" name="Son-o-gong Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1119,7 +1119,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1533" level="85" originalLevel="55" type="L2Npc" name="Wutangka Agathion">
+	<npc id="1533" level="55" type="L2Npc" name="Wutangka Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1154,7 +1154,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1534" level="85" originalLevel="55" type="L2Npc" name="Bonus B Agathion">
+	<npc id="1534" level="55" type="L2Npc" name="Bonus B Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1189,7 +1189,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1535" level="85" originalLevel="55" type="L2Npc" name="Frozen Corpse Agathion">
+	<npc id="1535" level="55" type="L2Npc" name="Frozen Corpse Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1224,7 +1224,7 @@
 			<height normal="6"/>
 		</collision>
 	</npc>
-	<npc id="1536" level="85" originalLevel="55" type="L2Npc" name="Bluebird Agathion">
+	<npc id="1536" level="55" type="L2Npc" name="Bluebird Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1259,7 +1259,7 @@
 			<height normal="5"/>
 		</collision>
 	</npc>
-	<npc id="1537" level="85" originalLevel="55" type="L2Npc" name="Hatbird Agathion">
+	<npc id="1537" level="55" type="L2Npc" name="Hatbird Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1294,7 +1294,7 @@
 			<height normal="5"/>
 		</collision>
 	</npc>
-	<npc id="1538" level="85" originalLevel="55" type="L2Pet" name="Baby Rudolph">
+	<npc id="1538" level="55" type="L2Pet" name="Baby Rudolph">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -1331,7 +1331,7 @@
 			<height normal="27"/>
 		</collision>
 	</npc>
-	<npc id="1539" level="85" originalLevel="55" type="L2Npc" name="Iken Agathion">
+	<npc id="1539" level="55" type="L2Npc" name="Iken Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1366,7 +1366,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1540" level="85" originalLevel="55" type="L2Npc" name="Lana Agathion">
+	<npc id="1540" level="55" type="L2Npc" name="Lana Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1401,7 +1401,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1541" level="85" originalLevel="55" type="L2Npc" name="Gnosian Agathion">
+	<npc id="1541" level="55" type="L2Npc" name="Gnosian Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1436,7 +1436,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1542" level="85" originalLevel="55" type="L2Npc" name="Orodriel Agathion">
+	<npc id="1542" level="55" type="L2Npc" name="Orodriel Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1471,7 +1471,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1543" level="85" originalLevel="55" type="L2Npc" name="Lakinos Agathion">
+	<npc id="1543" level="55" type="L2Npc" name="Lakinos Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1506,7 +1506,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1544" level="85" originalLevel="55" type="L2Npc" name="Mortia Agathion">
+	<npc id="1544" level="55" type="L2Npc" name="Mortia Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1541,7 +1541,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1545" level="85" originalLevel="55" type="L2Npc" name="Heintz Agathion">
+	<npc id="1545" level="55" type="L2Npc" name="Heintz Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1576,7 +1576,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1546" level="85" originalLevel="55" type="L2Npc" name="Meruril Agathion">
+	<npc id="1546" level="55" type="L2Npc" name="Meruril Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1611,7 +1611,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1547" level="85" originalLevel="55" type="L2Npc" name="Taman Zu Rapatui Agathion">
+	<npc id="1547" level="55" type="L2Npc" name="Taman Zu Rapatui Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1646,7 +1646,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1548" level="85" originalLevel="55" type="L2Npc" name="Kaurin Agathion">
+	<npc id="1548" level="55" type="L2Npc" name="Kaurin Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1681,7 +1681,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1549" level="85" originalLevel="55" type="L2Npc" name="Ahertbein Agathion">
+	<npc id="1549" level="55" type="L2Npc" name="Ahertbein Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1716,7 +1716,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1550" level="85" originalLevel="55" type="L2Npc" name="Naonin Agathion">
+	<npc id="1550" level="55" type="L2Npc" name="Naonin Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1751,7 +1751,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1551" level="85" originalLevel="55" type="L2Npc" name="Guangong Agathion">
+	<npc id="1551" level="55" type="L2Npc" name="Guangong Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1786,7 +1786,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1552" level="85" originalLevel="55" type="L2Npc" name="Gwanseum Nyang Nyang Agathion">
+	<npc id="1552" level="55" type="L2Npc" name="Gwanseum Nyang Nyang Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1821,7 +1821,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1553" level="85" originalLevel="55" type="L2Npc" name="Blue Opera Agathion">
+	<npc id="1553" level="55" type="L2Npc" name="Blue Opera Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1856,7 +1856,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1554" level="85" originalLevel="55" type="L2Npc" name="Red Opera Agathion">
+	<npc id="1554" level="55" type="L2Npc" name="Red Opera Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1891,7 +1891,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1555" level="85" originalLevel="55" type="L2Npc" name="Opera Agathion">
+	<npc id="1555" level="55" type="L2Npc" name="Opera Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1926,7 +1926,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1556" level="85" originalLevel="55" type="L2Npc" name="Mandarin Dress Agathion">
+	<npc id="1556" level="55" type="L2Npc" name="Mandarin Dress Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1961,7 +1961,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1557" level="85" originalLevel="55" type="L2Npc" name="Nepal Snow Agathion">
+	<npc id="1557" level="55" type="L2Npc" name="Nepal Snow Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1996,7 +1996,7 @@
 			<height normal="12.5"/>
 		</collision>
 	</npc>
-	<npc id="1558" level="85" originalLevel="55" type="L2Npc" name="Round Ball Snow Agathion">
+	<npc id="1558" level="55" type="L2Npc" name="Round Ball Snow Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2031,7 +2031,7 @@
 			<height normal="20.5"/>
 		</collision>
 	</npc>
-	<npc id="1559" level="85" originalLevel="55" type="L2Npc" name="Ladder Snow Agathion">
+	<npc id="1559" level="55" type="L2Npc" name="Ladder Snow Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2066,7 +2066,7 @@
 			<height normal="28"/>
 		</collision>
 	</npc>
-	<npc id="1560" level="85" originalLevel="55" type="L2Npc" name="Blue Opera Agathion">
+	<npc id="1560" level="55" type="L2Npc" name="Blue Opera Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2101,7 +2101,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1561" level="85" originalLevel="55" type="L2Pet" name="Baby Rudolph">
+	<npc id="1561" level="55" type="L2Pet" name="Baby Rudolph">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
@@ -2137,7 +2137,7 @@
 			<height normal="27"/>
 		</collision>
 	</npc>
-	<npc id="1562" level="85" originalLevel="55" type="L2Pet" name="Desheloph">
+	<npc id="1562" level="55" type="L2Pet" name="Desheloph">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58"/>
@@ -2340,7 +2340,7 @@
 			<height normal="16.9"/>
 		</collision>
 	</npc>
-	<npc id="1563" level="85" originalLevel="55" type="L2Pet" name="Hyum">
+	<npc id="1563" level="55" type="L2Pet" name="Hyum">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -2508,7 +2508,7 @@
 			<height normal="16.9"/>
 		</collision>
 	</npc>
-	<npc id="1564" level="85" originalLevel="55" type="L2Pet" name="Lekang">
+	<npc id="1564" level="55" type="L2Pet" name="Lekang">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100"/>
@@ -2704,7 +2704,7 @@
 			<height normal="16.9"/>
 		</collision>
 	</npc>
-	<npc id="1565" level="85" originalLevel="55" type="L2Pet" name="Lilias">
+	<npc id="1565" level="55" type="L2Pet" name="Lilias">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58"/>
@@ -2907,7 +2907,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="1566" level="85" originalLevel="55" type="L2Pet" name="Lapham">
+	<npc id="1566" level="55" type="L2Pet" name="Lapham">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -3075,7 +3075,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="1567" level="85" originalLevel="55" type="L2Pet" name="Mafum">
+	<npc id="1567" level="55" type="L2Pet" name="Mafum">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100"/>
@@ -3271,7 +3271,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="1568" level="85" originalLevel="55" type="L2Pet" name="Desheloph">
+	<npc id="1568" level="55" type="L2Pet" name="Desheloph">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58"/>
@@ -3474,7 +3474,7 @@
 			<height normal="16.6"/>
 		</collision>
 	</npc>
-	<npc id="1569" level="85" originalLevel="55" type="L2Pet" name="Hyum">
+	<npc id="1569" level="55" type="L2Pet" name="Hyum">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -3642,7 +3642,7 @@
 			<height normal="16.6"/>
 		</collision>
 	</npc>
-	<npc id="1570" level="85" originalLevel="55" type="L2Pet" name="Lekang">
+	<npc id="1570" level="55" type="L2Pet" name="Lekang">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100"/>
@@ -3838,7 +3838,7 @@
 			<height normal="16.6"/>
 		</collision>
 	</npc>
-	<npc id="1571" level="85" originalLevel="55" type="L2Pet" name="Lilias">
+	<npc id="1571" level="55" type="L2Pet" name="Lilias">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58"/>
@@ -4041,7 +4041,7 @@
 			<height normal="17.3"/>
 		</collision>
 	</npc>
-	<npc id="1572" level="85" originalLevel="55" type="L2Pet" name="Lapham">
+	<npc id="1572" level="55" type="L2Pet" name="Lapham">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -4209,7 +4209,7 @@
 			<height normal="17.3"/>
 		</collision>
 	</npc>
-	<npc id="1573" level="85" originalLevel="55" type="L2Pet" name="Mafum">
+	<npc id="1573" level="55" type="L2Pet" name="Mafum">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100"/>
@@ -4405,7 +4405,7 @@
 			<height normal="17.3"/>
 		</collision>
 	</npc>
-	<npc id="1574" level="85" originalLevel="55" type="L2Npc" name="Phoenix">
+	<npc id="1574" level="55" type="L2Npc" name="Phoenix">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4440,7 +4440,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1575" level="85" originalLevel="55" type="L2Npc" name="Samduyong">
+	<npc id="1575" level="55" type="L2Npc" name="Samduyong">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4475,7 +4475,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1576" level="85" originalLevel="55" type="L2Npc" name="Ball Trapping Gnosian">
+	<npc id="1576" level="55" type="L2Npc" name="Ball Trapping Gnosian">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4510,7 +4510,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1577" level="85" originalLevel="55" type="L2Npc" name="Ball Trapping Orodriel">
+	<npc id="1577" level="55" type="L2Npc" name="Ball Trapping Orodriel">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4545,7 +4545,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1578" level="85" originalLevel="55" type="L2Npc" name="Penalty Kick">
+	<npc id="1578" level="55" type="L2Npc" name="Penalty Kick">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4580,7 +4580,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1579" level="85" originalLevel="55" type="L2Npc" name="Ball Trapping Gnosian">
+	<npc id="1579" level="55" type="L2Npc" name="Ball Trapping Gnosian">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4615,7 +4615,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1580" level="85" originalLevel="55" type="L2Npc" name="Ball Trapping Orodriel">
+	<npc id="1580" level="55" type="L2Npc" name="Ball Trapping Orodriel">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4650,7 +4650,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1581" level="85" originalLevel="55" type="L2Npc" name="Penalty Kick">
+	<npc id="1581" level="55" type="L2Npc" name="Penalty Kick">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4685,7 +4685,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1582" level="85" originalLevel="55" type="L2Npc" name="Ball Trapping Gnosian">
+	<npc id="1582" level="55" type="L2Npc" name="Ball Trapping Gnosian">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4720,7 +4720,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1583" level="85" originalLevel="55" type="L2Npc" name="Ball Trapping Orodriel">
+	<npc id="1583" level="55" type="L2Npc" name="Ball Trapping Orodriel">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4755,7 +4755,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1584" level="85" originalLevel="55" type="L2Npc" name="Penalty Kick">
+	<npc id="1584" level="55" type="L2Npc" name="Penalty Kick">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4790,7 +4790,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1585" level="85" originalLevel="55" type="L2Npc" name="Granny Tiger">
+	<npc id="1585" level="55" type="L2Npc" name="Granny Tiger">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4825,7 +4825,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1586" level="85" originalLevel="55" type="L2Npc" name="Flower Fairy Spirit">
+	<npc id="1586" level="55" type="L2Npc" name="Flower Fairy Spirit">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4860,7 +4860,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1587" level="85" originalLevel="55" type="L2Npc" name="Cheerleader Orodriel">
+	<npc id="1587" level="55" type="L2Npc" name="Cheerleader Orodriel">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4895,7 +4895,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1588" level="85" originalLevel="55" type="L2Npc" name="Cheerleader Lana">
+	<npc id="1588" level="55" type="L2Npc" name="Cheerleader Lana">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4930,7 +4930,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1589" level="85" originalLevel="55" type="L2Npc" name="Cheerleader Naonin">
+	<npc id="1589" level="55" type="L2Npc" name="Cheerleader Naonin">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4965,7 +4965,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1590" level="85" originalLevel="55" type="L2Npc" name="Cheerleader Mortia">
+	<npc id="1590" level="55" type="L2Npc" name="Cheerleader Mortia">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -5000,7 +5000,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1591" level="85" originalLevel="55" type="L2Npc" name="Cheerleader Kaurin">
+	<npc id="1591" level="55" type="L2Npc" name="Cheerleader Kaurin">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -5035,7 +5035,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1592" level="85" originalLevel="55" type="L2Npc" name="Cheerleader Meruril">
+	<npc id="1592" level="55" type="L2Npc" name="Cheerleader Meruril">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -5070,7 +5070,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1593" level="85" originalLevel="55" type="L2Npc" name="Handy">
+	<npc id="1593" level="55" type="L2Npc" name="Handy">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -5105,7 +5105,7 @@
 			<height normal="3.75"/>
 		</collision>
 	</npc>
-	<npc id="1594" level="85" originalLevel="80" type="L2Npc" name="Singer &amp; Dancer Agathion" title="Singer &amp; Dancer Agathion">
+	<npc id="1594" level="80" type="L2Npc" name="Singer &amp; Dancer Agathion" title="Singer &amp; Dancer Agathion">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -5128,7 +5128,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="1595" level="85" originalLevel="80" type="L2Npc" name="Zakensword Agathion" title="Zakensword Agathion">
+	<npc id="1595" level="80" type="L2Npc" name="Zakensword Agathion" title="Zakensword Agathion">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -5151,7 +5151,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="1596" level="85" originalLevel="80" type="L2Npc" name="Cow Agathion" title="Cow Agathion">
+	<npc id="1596" level="80" type="L2Npc" name="Cow Agathion" title="Cow Agathion">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -5174,7 +5174,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="1597" level="85" originalLevel="80" type="L2Npc" name="Tow Agathion" title="Tow Agathion">
+	<npc id="1597" level="80" type="L2Npc" name="Tow Agathion" title="Tow Agathion">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -5197,7 +5197,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="1598" level="85" originalLevel="80" type="L2Npc" name="Rudolph Agathion">
+	<npc id="1598" level="80" type="L2Npc" name="Rudolph Agathion">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -5220,7 +5220,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="1599" level="85" originalLevel="80" type="L2Npc" name="Zinyanzi Agathion">
+	<npc id="1599" level="80" type="L2Npc" name="Zinyanzi Agathion">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">

@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="36500" level="85" originalLevel="80" type="L2Monster" name="Territory Catapult" title="Dion">
+	<npc id="36500" level="80" type="L2Monster" name="Territory Catapult" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -36,7 +36,7 @@
 			<height normal="59"/>
 		</collision>
 	</npc>
-	<npc id="36501" level="85" originalLevel="80" type="L2Monster" name="Territory Catapult" title="Giran">
+	<npc id="36501" level="80" type="L2Monster" name="Territory Catapult" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -73,7 +73,7 @@
 			<height normal="59"/>
 		</collision>
 	</npc>
-	<npc id="36502" level="85" originalLevel="80" type="L2Monster" name="Territory Catapult" title="Oren">
+	<npc id="36502" level="80" type="L2Monster" name="Territory Catapult" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -110,7 +110,7 @@
 			<height normal="59"/>
 		</collision>
 	</npc>
-	<npc id="36503" level="85" originalLevel="80" type="L2Monster" name="Territory Catapult" title="Aden">
+	<npc id="36503" level="80" type="L2Monster" name="Territory Catapult" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -147,7 +147,7 @@
 			<height normal="59"/>
 		</collision>
 	</npc>
-	<npc id="36504" level="85" originalLevel="80" type="L2Monster" name="Territory Catapult" title="Innadril">
+	<npc id="36504" level="80" type="L2Monster" name="Territory Catapult" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -184,7 +184,7 @@
 			<height normal="59"/>
 		</collision>
 	</npc>
-	<npc id="36505" level="85" originalLevel="80" type="L2Monster" name="Territory Catapult" title="Goddard">
+	<npc id="36505" level="80" type="L2Monster" name="Territory Catapult" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -221,7 +221,7 @@
 			<height normal="59"/>
 		</collision>
 	</npc>
-	<npc id="36506" level="85" originalLevel="80" type="L2Monster" name="Territory Catapult" title="Rune">
+	<npc id="36506" level="80" type="L2Monster" name="Territory Catapult" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -258,7 +258,7 @@
 			<height normal="59"/>
 		</collision>
 	</npc>
-	<npc id="36507" level="85" originalLevel="80" type="L2Monster" name="Territory Catapult" title="Schuttgart">
+	<npc id="36507" level="80" type="L2Monster" name="Territory Catapult" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -295,7 +295,7 @@
 			<height normal="59"/>
 		</collision>
 	</npc>
-	<npc id="36508" level="85" originalLevel="80" type="L2Defender" name="Military Association Leader" title="Gludio">
+	<npc id="36508" level="80" type="L2Defender" name="Military Association Leader" title="Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -343,7 +343,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="36509" level="85" originalLevel="70" type="L2Defender" name="Territory Border Guard" title="Gludio">
+	<npc id="36509" level="70" type="L2Defender" name="Territory Border Guard" title="Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -392,7 +392,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36510" level="85" originalLevel="80" type="L2Defender" name="Religious Association Leader" title="Gludio">
+	<npc id="36510" level="80" type="L2Defender" name="Religious Association Leader" title="Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -445,7 +445,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="36511" level="85" originalLevel="80" type="L2Defender" name="Territory Guard" title="Gludio">
+	<npc id="36511" level="80" type="L2Defender" name="Territory Guard" title="Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -494,7 +494,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36512" level="85" originalLevel="75" type="L2Defender" name="Territory Border Guard" title="Gludio">
+	<npc id="36512" level="75" type="L2Defender" name="Territory Border Guard" title="Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -543,7 +543,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36513" level="85" originalLevel="80" type="L2Defender" name="Economic Association Leader" title="Gludio">
+	<npc id="36513" level="80" type="L2Defender" name="Economic Association Leader" title="Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -591,7 +591,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="36514" level="85" originalLevel="80" type="L2Defender" name="Military Association Leader" title="Dion">
+	<npc id="36514" level="80" type="L2Defender" name="Military Association Leader" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -639,7 +639,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="36515" level="85" originalLevel="70" type="L2Defender" name="Territory Border Guard" title="Dion">
+	<npc id="36515" level="70" type="L2Defender" name="Territory Border Guard" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -688,7 +688,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36516" level="85" originalLevel="80" type="L2Defender" name="Religious Association Leader" title="Dion">
+	<npc id="36516" level="80" type="L2Defender" name="Religious Association Leader" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -741,7 +741,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="36517" level="85" originalLevel="80" type="L2Defender" name="Territory Guard" title="Dion">
+	<npc id="36517" level="80" type="L2Defender" name="Territory Guard" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -790,7 +790,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36518" level="85" originalLevel="75" type="L2Defender" name="Territory Border Guard" title="Dion">
+	<npc id="36518" level="75" type="L2Defender" name="Territory Border Guard" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -839,7 +839,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36519" level="85" originalLevel="80" type="L2Defender" name="Economic Association Leader" title="Dion">
+	<npc id="36519" level="80" type="L2Defender" name="Economic Association Leader" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -887,7 +887,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="36520" level="85" originalLevel="80" type="L2Defender" name="Military Association Leader" title="Giran">
+	<npc id="36520" level="80" type="L2Defender" name="Military Association Leader" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -935,7 +935,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="36521" level="85" originalLevel="70" type="L2Defender" name="Territory Border Guard" title="Giran">
+	<npc id="36521" level="70" type="L2Defender" name="Territory Border Guard" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -984,7 +984,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36522" level="85" originalLevel="80" type="L2Defender" name="Religious Association Leader" title="Giran">
+	<npc id="36522" level="80" type="L2Defender" name="Religious Association Leader" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1037,7 +1037,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="36523" level="85" originalLevel="80" type="L2Defender" name="Territory Guard" title="Giran">
+	<npc id="36523" level="80" type="L2Defender" name="Territory Guard" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1086,7 +1086,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36524" level="85" originalLevel="75" type="L2Defender" name="Territory Border Guard" title="Giran">
+	<npc id="36524" level="75" type="L2Defender" name="Territory Border Guard" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1135,7 +1135,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36525" level="85" originalLevel="80" type="L2Defender" name="Economic Association Leader" title="Giran">
+	<npc id="36525" level="80" type="L2Defender" name="Economic Association Leader" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1183,7 +1183,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="36526" level="85" originalLevel="80" type="L2Defender" name="Military Association Leader" title="Oren">
+	<npc id="36526" level="80" type="L2Defender" name="Military Association Leader" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1231,7 +1231,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="36527" level="85" originalLevel="70" type="L2Defender" name="Territory Border Guard" title="Oren">
+	<npc id="36527" level="70" type="L2Defender" name="Territory Border Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1280,7 +1280,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36528" level="85" originalLevel="80" type="L2Defender" name="Religious Association Leader" title="Oren">
+	<npc id="36528" level="80" type="L2Defender" name="Religious Association Leader" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1333,7 +1333,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="36529" level="85" originalLevel="80" type="L2Defender" name="Territory Guard" title="Oren">
+	<npc id="36529" level="80" type="L2Defender" name="Territory Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1382,7 +1382,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36530" level="85" originalLevel="75" type="L2Defender" name="Territory Border Guard" title="Oren">
+	<npc id="36530" level="75" type="L2Defender" name="Territory Border Guard" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1431,7 +1431,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36531" level="85" originalLevel="80" type="L2Defender" name="Economic Association Leader" title="Oren">
+	<npc id="36531" level="80" type="L2Defender" name="Economic Association Leader" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1479,7 +1479,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="36532" level="85" originalLevel="80" type="L2Defender" name="Military Association Leader" title="Aden">
+	<npc id="36532" level="80" type="L2Defender" name="Military Association Leader" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1527,7 +1527,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="36533" level="85" originalLevel="70" type="L2Defender" name="Territory Border Guard" title="Aden">
+	<npc id="36533" level="70" type="L2Defender" name="Territory Border Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1576,7 +1576,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36534" level="85" originalLevel="80" type="L2Defender" name="Religious Association Leader" title="Aden">
+	<npc id="36534" level="80" type="L2Defender" name="Religious Association Leader" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1629,7 +1629,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="36535" level="85" originalLevel="80" type="L2Defender" name="Territory Guard" title="Aden">
+	<npc id="36535" level="80" type="L2Defender" name="Territory Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1678,7 +1678,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36536" level="85" originalLevel="75" type="L2Defender" name="Territory Border Guard" title="Aden">
+	<npc id="36536" level="75" type="L2Defender" name="Territory Border Guard" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1727,7 +1727,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36537" level="85" originalLevel="80" type="L2Defender" name="Economic Association Leader" title="Aden">
+	<npc id="36537" level="80" type="L2Defender" name="Economic Association Leader" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1775,7 +1775,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="36538" level="85" originalLevel="80" type="L2Defender" name="Military Association Leader" title="Innadril">
+	<npc id="36538" level="80" type="L2Defender" name="Military Association Leader" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1823,7 +1823,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="36539" level="85" originalLevel="70" type="L2Defender" name="Territory Border Guard" title="Innadril">
+	<npc id="36539" level="70" type="L2Defender" name="Territory Border Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1872,7 +1872,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36540" level="85" originalLevel="80" type="L2Defender" name="Religious Association Leader" title="Innadril">
+	<npc id="36540" level="80" type="L2Defender" name="Religious Association Leader" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1925,7 +1925,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="36541" level="85" originalLevel="80" type="L2Defender" name="Territory Guard" title="Innadril">
+	<npc id="36541" level="80" type="L2Defender" name="Territory Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1974,7 +1974,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36542" level="85" originalLevel="75" type="L2Defender" name="Territory Border Guard" title="Innadril">
+	<npc id="36542" level="75" type="L2Defender" name="Territory Border Guard" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2023,7 +2023,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36543" level="85" originalLevel="80" type="L2Defender" name="Economic Association Leader" title="Innadril">
+	<npc id="36543" level="80" type="L2Defender" name="Economic Association Leader" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2071,7 +2071,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="36544" level="85" originalLevel="80" type="L2Defender" name="Military Association Leader" title="Goddard">
+	<npc id="36544" level="80" type="L2Defender" name="Military Association Leader" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2119,7 +2119,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="36545" level="85" originalLevel="70" type="L2Defender" name="Territory Border Guard" title="Goddard">
+	<npc id="36545" level="70" type="L2Defender" name="Territory Border Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2168,7 +2168,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36546" level="85" originalLevel="80" type="L2Defender" name="Religious Association Leader" title="Goddard">
+	<npc id="36546" level="80" type="L2Defender" name="Religious Association Leader" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2221,7 +2221,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="36547" level="85" originalLevel="80" type="L2Defender" name="Territory Guard" title="Goddard">
+	<npc id="36547" level="80" type="L2Defender" name="Territory Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2270,7 +2270,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36548" level="85" originalLevel="75" type="L2Defender" name="Territory Border Guard" title="Goddard">
+	<npc id="36548" level="75" type="L2Defender" name="Territory Border Guard" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2319,7 +2319,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36549" level="85" originalLevel="80" type="L2Defender" name="Economic Association Leader" title="Goddard">
+	<npc id="36549" level="80" type="L2Defender" name="Economic Association Leader" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2367,7 +2367,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="36550" level="85" originalLevel="80" type="L2Defender" name="Military Association Leader" title="Rune">
+	<npc id="36550" level="80" type="L2Defender" name="Military Association Leader" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2415,7 +2415,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="36551" level="85" originalLevel="70" type="L2Defender" name="Territory Border Guard" title="Rune">
+	<npc id="36551" level="70" type="L2Defender" name="Territory Border Guard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2464,7 +2464,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36552" level="85" originalLevel="80" type="L2Defender" name="Religious Association Leader" title="Rune">
+	<npc id="36552" level="80" type="L2Defender" name="Religious Association Leader" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2517,7 +2517,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="36553" level="85" originalLevel="80" type="L2Defender" name="Territory Guard" title="Rune">
+	<npc id="36553" level="80" type="L2Defender" name="Territory Guard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2566,7 +2566,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36554" level="85" originalLevel="75" type="L2Defender" name="Territory Border Guard" title="Rune">
+	<npc id="36554" level="75" type="L2Defender" name="Territory Border Guard" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2615,7 +2615,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36555" level="85" originalLevel="80" type="L2Defender" name="Economic Association Leader" title="Rune">
+	<npc id="36555" level="80" type="L2Defender" name="Economic Association Leader" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2663,7 +2663,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="36556" level="85" originalLevel="80" type="L2Defender" name="Military Association Leader" title="Schuttgart">
+	<npc id="36556" level="80" type="L2Defender" name="Military Association Leader" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2711,7 +2711,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="36557" level="85" originalLevel="70" type="L2Defender" name="Territory Border Guard" title="Schuttgart">
+	<npc id="36557" level="70" type="L2Defender" name="Territory Border Guard" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2760,7 +2760,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36558" level="85" originalLevel="80" type="L2Defender" name="Religious Association Leader" title="Schuttgart">
+	<npc id="36558" level="80" type="L2Defender" name="Religious Association Leader" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2813,7 +2813,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="36559" level="85" originalLevel="80" type="L2Defender" name="Territory Guard" title="Schuttgart">
+	<npc id="36559" level="80" type="L2Defender" name="Territory Guard" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2862,7 +2862,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36560" level="85" originalLevel="75" type="L2Defender" name="Territory Border Guard" title="Schuttgart">
+	<npc id="36560" level="75" type="L2Defender" name="Territory Border Guard" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2911,7 +2911,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36561" level="85" originalLevel="80" type="L2Defender" name="Economic Association Leader" title="Schuttgart">
+	<npc id="36561" level="80" type="L2Defender" name="Economic Association Leader" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2959,7 +2959,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="36562" level="85" originalLevel="83" type="L2Npc" name="Seduced Knight" title="Investigator">
+	<npc id="36562" level="83" type="L2Npc" name="Seduced Knight" title="Investigator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3018,7 +3018,7 @@
 			<height normal="23.75"/>
 		</collision>
 	</npc>
-	<npc id="36563" level="85" originalLevel="83" type="L2Npc" name="Seduced Ranger" title="Investigator">
+	<npc id="36563" level="83" type="L2Npc" name="Seduced Ranger" title="Investigator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3075,7 +3075,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36564" level="85" originalLevel="83" type="L2Npc" name="Seduced Mage" title="Investigator">
+	<npc id="36564" level="83" type="L2Npc" name="Seduced Mage" title="Investigator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3130,7 +3130,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36565" level="85" originalLevel="83" type="L2Npc" name="Seduced Warrior" title="Investigator">
+	<npc id="36565" level="83" type="L2Npc" name="Seduced Warrior" title="Investigator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3187,7 +3187,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="36566" level="85" originalLevel="77" type="L2Npc" name="Seduced Knight" title="Investigator">
+	<npc id="36566" level="77" type="L2Npc" name="Seduced Knight" title="Investigator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3246,7 +3246,7 @@
 			<height normal="23.75"/>
 		</collision>
 	</npc>
-	<npc id="36567" level="85" originalLevel="77" type="L2Npc" name="Seduced Ranger" title="Investigator">
+	<npc id="36567" level="77" type="L2Npc" name="Seduced Ranger" title="Investigator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3303,7 +3303,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36568" level="85" originalLevel="77" type="L2Npc" name="Seduced Mage" title="Investigator">
+	<npc id="36568" level="77" type="L2Npc" name="Seduced Mage" title="Investigator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3358,7 +3358,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="36569" level="85" originalLevel="77" type="L2Npc" name="Seduced Warrior" title="Investigator">
+	<npc id="36569" level="77" type="L2Npc" name="Seduced Warrior" title="Investigator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3415,7 +3415,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="36570" level="85" originalLevel="80" type="L2Teleporter" name="Emery Compressor" title="Aerial Cleft">
+	<npc id="36570" level="80" type="L2Teleporter" name="Emery Compressor" title="Aerial Cleft">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3460,7 +3460,7 @@
 			<height normal="140"/>
 		</collision>
 	</npc>
-	<npc id="36571" level="85" originalLevel="80" type="L2Npc" name="Vortex" title="Aerial Cleft">
+	<npc id="36571" level="80" type="L2Npc" name="Vortex" title="Aerial Cleft">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3499,7 +3499,7 @@
 			<height normal="130"/>
 		</collision>
 	</npc>
-	<npc id="36572" level="85" originalLevel="80" type="L2TerritoryWard" name="Gludio Ward">
+	<npc id="36572" level="80" type="L2TerritoryWard" name="Gludio Ward">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3536,7 +3536,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="36573" level="85" originalLevel="80" type="L2TerritoryWard" name="Dion Ward">
+	<npc id="36573" level="80" type="L2TerritoryWard" name="Dion Ward">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3573,7 +3573,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="36574" level="85" originalLevel="80" type="L2TerritoryWard" name="Giran Ward">
+	<npc id="36574" level="80" type="L2TerritoryWard" name="Giran Ward">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3610,7 +3610,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="36575" level="85" originalLevel="80" type="L2TerritoryWard" name="Oren Ward">
+	<npc id="36575" level="80" type="L2TerritoryWard" name="Oren Ward">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3647,7 +3647,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="36576" level="85" originalLevel="80" type="L2TerritoryWard" name="Aden Ward">
+	<npc id="36576" level="80" type="L2TerritoryWard" name="Aden Ward">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3684,7 +3684,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="36577" level="85" originalLevel="80" type="L2TerritoryWard" name="Innadril Ward">
+	<npc id="36577" level="80" type="L2TerritoryWard" name="Innadril Ward">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3721,81 +3721,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="36578" level="85" originalLevel="80" type="L2TerritoryWard" name="Goddard Ward">
-		<!-- Confirmed CT2.5 -->
-		<race>CONSTRUCT</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3"/>
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-			<defence physical="341.375" magical="249.80341"/>
-			<attribute>
-				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120"/>
-			</attribute>
-			<speed>
-				<walk ground="1"/>
-				<run ground="120"/>
-			</speed>
-		</stats>
-		<status undying="false" canMove="false"/>
-		<skillList>
-			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
-			<skill id="4390" level="1"/> <!--NPC Abnormal Immunity -->
-			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
-			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
-			<skill id="4410" level="11"/> <!--Average P. Atk. -->
-			<skill id="4411" level="11"/> <!--Average M. Atk. -->
-			<skill id="4412" level="11"/> <!--Average P. Def. -->
-			<skill id="4413" level="11"/> <!--Average M. Def. -->
-			<skill id="4414" level="2"/> <!--Standard Type -->
-			<skill id="4415" level="3"/> <!--One-handed Sword -->
-			<skill id="4416" level="2"/> <!--Magic Creatures -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false"/>
-		<collision>
-			<radius normal="10"/>
-			<height normal="35"/>
-		</collision>
-	</npc>
-	<npc id="36579" level="85" originalLevel="80" type="L2TerritoryWard" name="Rune Ward">
-		<!-- Confirmed CT2.5 -->
-		<race>CONSTRUCT</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3"/>
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-			<defence physical="341.375" magical="249.80341"/>
-			<attribute>
-				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120"/>
-			</attribute>
-			<speed>
-				<walk ground="1"/>
-				<run ground="1"/>
-			</speed>
-		</stats>
-		<status undying="false" canMove="false"/>
-		<skillList>
-			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
-			<skill id="4390" level="1"/> <!--NPC Abnormal Immunity -->
-			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
-			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
-			<skill id="4410" level="11"/> <!--Average P. Atk. -->
-			<skill id="4411" level="11"/> <!--Average M. Atk. -->
-			<skill id="4412" level="11"/> <!--Average P. Def. -->
-			<skill id="4413" level="11"/> <!--Average M. Def. -->
-			<skill id="4414" level="2"/> <!--Standard Type -->
-			<skill id="4415" level="3"/> <!--One-handed Sword -->
-			<skill id="4416" level="2"/> <!--Magic Creatures -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false"/>
-		<collision>
-			<radius normal="10"/>
-			<height normal="35"/>
-		</collision>
-	</npc>
-	<npc id="36580" level="85" originalLevel="80" type="L2TerritoryWard" name="Schuttgart Ward">
+	<npc id="36578" level="80" type="L2TerritoryWard" name="Goddard Ward">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3832,7 +3758,81 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="36581" level="85" originalLevel="80" type="L2Npc" name="Territory Catapult" title="Gludio">
+	<npc id="36579" level="80" type="L2TerritoryWard" name="Rune Ward">
+		<!-- Confirmed CT2.5 -->
+		<race>CONSTRUCT</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3"/>
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<defence physical="341.375" magical="249.80341"/>
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120"/>
+			</attribute>
+			<speed>
+				<walk ground="1"/>
+				<run ground="1"/>
+			</speed>
+		</stats>
+		<status undying="false" canMove="false"/>
+		<skillList>
+			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
+			<skill id="4390" level="1"/> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
+			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
+			<skill id="4410" level="11"/> <!--Average P. Atk. -->
+			<skill id="4411" level="11"/> <!--Average M. Atk. -->
+			<skill id="4412" level="11"/> <!--Average P. Def. -->
+			<skill id="4413" level="11"/> <!--Average M. Def. -->
+			<skill id="4414" level="2"/> <!--Standard Type -->
+			<skill id="4415" level="3"/> <!--One-handed Sword -->
+			<skill id="4416" level="2"/> <!--Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false"/>
+		<collision>
+			<radius normal="10"/>
+			<height normal="35"/>
+		</collision>
+	</npc>
+	<npc id="36580" level="80" type="L2TerritoryWard" name="Schuttgart Ward">
+		<!-- Confirmed CT2.5 -->
+		<race>CONSTRUCT</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3"/>
+			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+			<defence physical="341.375" magical="249.80341"/>
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120"/>
+			</attribute>
+			<speed>
+				<walk ground="1"/>
+				<run ground="120"/>
+			</speed>
+		</stats>
+		<status undying="false" canMove="false"/>
+		<skillList>
+			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
+			<skill id="4390" level="1"/> <!--NPC Abnormal Immunity -->
+			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
+			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
+			<skill id="4410" level="11"/> <!--Average P. Atk. -->
+			<skill id="4411" level="11"/> <!--Average M. Atk. -->
+			<skill id="4412" level="11"/> <!--Average P. Def. -->
+			<skill id="4413" level="11"/> <!--Average M. Def. -->
+			<skill id="4414" level="2"/> <!--Standard Type -->
+			<skill id="4415" level="3"/> <!--One-handed Sword -->
+			<skill id="4416" level="2"/> <!--Magic Creatures -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false"/>
+		<collision>
+			<radius normal="10"/>
+			<height normal="35"/>
+		</collision>
+	</npc>
+	<npc id="36581" level="80" type="L2Npc" name="Territory Catapult" title="Gludio">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3868,7 +3868,7 @@
 			<height normal="43"/>
 		</collision>
 	</npc>
-	<npc id="36582" level="85" originalLevel="80" type="L2Npc" name="Territory Catapult" title="Dion">
+	<npc id="36582" level="80" type="L2Npc" name="Territory Catapult" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3904,7 +3904,7 @@
 			<height normal="43"/>
 		</collision>
 	</npc>
-	<npc id="36583" level="85" originalLevel="80" type="L2Npc" name="Territory Catapult" title="Giran">
+	<npc id="36583" level="80" type="L2Npc" name="Territory Catapult" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3940,7 +3940,7 @@
 			<height normal="43"/>
 		</collision>
 	</npc>
-	<npc id="36584" level="85" originalLevel="80" type="L2Npc" name="Territory Catapult" title="Oren">
+	<npc id="36584" level="80" type="L2Npc" name="Territory Catapult" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3976,7 +3976,7 @@
 			<height normal="43"/>
 		</collision>
 	</npc>
-	<npc id="36585" level="85" originalLevel="80" type="L2Npc" name="Territory Catapult" title="Aden">
+	<npc id="36585" level="80" type="L2Npc" name="Territory Catapult" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4012,7 +4012,7 @@
 			<height normal="43"/>
 		</collision>
 	</npc>
-	<npc id="36586" level="85" originalLevel="80" type="L2Npc" name="Territory Catapult" title="Innadril">
+	<npc id="36586" level="80" type="L2Npc" name="Territory Catapult" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4048,7 +4048,7 @@
 			<height normal="43"/>
 		</collision>
 	</npc>
-	<npc id="36587" level="85" originalLevel="80" type="L2Npc" name="Territory Catapult" title="Goddard">
+	<npc id="36587" level="80" type="L2Npc" name="Territory Catapult" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4084,7 +4084,7 @@
 			<height normal="43"/>
 		</collision>
 	</npc>
-	<npc id="36588" level="85" originalLevel="80" type="L2Npc" name="Territory Catapult" title="Rune">
+	<npc id="36588" level="80" type="L2Npc" name="Territory Catapult" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4120,7 +4120,7 @@
 			<height normal="43"/>
 		</collision>
 	</npc>
-	<npc id="36589" level="85" originalLevel="80" type="L2Npc" name="Territory Catapult" title="Schuttgart">
+	<npc id="36589" level="80" type="L2Npc" name="Territory Catapult" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4156,7 +4156,7 @@
 			<height normal="43"/>
 		</collision>
 	</npc>
-	<npc id="36590" level="85" originalLevel="1" type="L2Npc" name="Outpost">
+	<npc id="36590" level="1" type="L2Npc" name="Outpost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4196,7 +4196,7 @@
 			<height normal="70"/>
 		</collision>
 	</npc>
-	<npc id="36591" level="85" originalLevel="80" type="L2Monster" name="Supplies Safe">
+	<npc id="36591" level="80" type="L2Monster" name="Supplies Safe">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4235,7 +4235,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="36592" level="85" originalLevel="80" type="L2Monster" name="Supplies Safe">
+	<npc id="36592" level="80" type="L2Monster" name="Supplies Safe">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4274,7 +4274,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="36593" level="85" originalLevel="80" type="L2Monster" name="Supplies Safe">
+	<npc id="36593" level="80" type="L2Monster" name="Supplies Safe">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4313,7 +4313,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="36594" level="85" originalLevel="80" type="L2Monster" name="Supplies Safe">
+	<npc id="36594" level="80" type="L2Monster" name="Supplies Safe">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4352,7 +4352,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="36595" level="85" originalLevel="80" type="L2Monster" name="Supplies Safe">
+	<npc id="36595" level="80" type="L2Monster" name="Supplies Safe">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4391,7 +4391,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="36596" level="85" originalLevel="80" type="L2Monster" name="Supplies Safe">
+	<npc id="36596" level="80" type="L2Monster" name="Supplies Safe">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4430,7 +4430,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="36597" level="85" originalLevel="80" type="L2Monster" name="Supplies Safe">
+	<npc id="36597" level="80" type="L2Monster" name="Supplies Safe">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4469,7 +4469,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="36598" level="85" originalLevel="80" type="L2Monster" name="Supplies Safe">
+	<npc id="36598" level="80" type="L2Monster" name="Supplies Safe">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4508,7 +4508,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="36599" level="85" originalLevel="80" type="L2Monster" name="Supplies Safe">
+	<npc id="36599" level="80" type="L2Monster" name="Supplies Safe">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>

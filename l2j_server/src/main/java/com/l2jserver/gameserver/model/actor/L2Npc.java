@@ -18,17 +18,6 @@
  */
 package com.l2jserver.gameserver.model.actor;
 
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ItemsAutoDestroy;
 import com.l2jserver.gameserver.SevenSigns;
@@ -38,33 +27,12 @@ import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.NpcPersonalAIData;
-import com.l2jserver.gameserver.enums.AISkillScope;
-import com.l2jserver.gameserver.enums.AIType;
-import com.l2jserver.gameserver.enums.InstanceType;
-import com.l2jserver.gameserver.enums.PrivateStoreType;
-import com.l2jserver.gameserver.enums.Race;
-import com.l2jserver.gameserver.enums.ShotType;
-import com.l2jserver.gameserver.enums.Team;
+import com.l2jserver.gameserver.enums.*;
 import com.l2jserver.gameserver.handler.BypassHandler;
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
-import com.l2jserver.gameserver.instancemanager.CastleManager;
-import com.l2jserver.gameserver.instancemanager.FortManager;
-import com.l2jserver.gameserver.instancemanager.TownManager;
-import com.l2jserver.gameserver.instancemanager.WalkingManager;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Spawn;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.L2WorldRegion;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.instance.L2ClanHallManagerInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2DoormenInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2FishermanInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2TeleporterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2TrainerInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2WarehouseInstance;
+import com.l2jserver.gameserver.instancemanager.*;
+import com.l2jserver.gameserver.model.*;
+import com.l2jserver.gameserver.model.actor.instance.*;
 import com.l2jserver.gameserver.model.actor.knownlist.NpcKnownList;
 import com.l2jserver.gameserver.model.actor.stat.NpcStat;
 import com.l2jserver.gameserver.model.actor.status.NpcStatus;
@@ -74,11 +42,7 @@ import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
 import com.l2jserver.gameserver.model.events.EventType;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcCanBeSeen;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcEventReceived;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSkillFinished;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSpawn;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcTeleport;
+import com.l2jserver.gameserver.model.events.impl.character.npc.*;
 import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.items.L2Item;
@@ -89,16 +53,20 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.variables.NpcVariables;
 import com.l2jserver.gameserver.model.zone.type.L2TownZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.ExChangeNpcState;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.ServerObjectInfo;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.util.Rnd;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 /**
  * This class represents a Non-Player-Character in the world.<br>
@@ -406,12 +374,7 @@ public class L2Npc extends L2Character
 	{
 		return getTemplate().getLevel();
 	}
-	
-	public final int getOriginalLevel()
-	{
-		return getTemplate().getOriginalLevel();
-	}
-	
+
 	/**
 	 * Verifies if the NPC is aggressive.
 	 * @return {@code true} if the NPC is aggressive, {@code false} otherwise

@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="35600" level="85" originalLevel="56" type="L2Npc" name="Manager">
+	<npc id="35600" level="56" type="L2Npc" name="Manager">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -35,7 +35,7 @@
 			<height normal="10.5"/>
 		</collision>
 	</npc>
-	<npc id="35601" level="85" originalLevel="70" type="L2CastleDoormen" name="Doorman">
+	<npc id="35601" level="70" type="L2CastleDoormen" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -77,7 +77,7 @@
 			<height normal="10.5"/>
 		</collision>
 	</npc>
-	<npc id="35602" level="85" originalLevel="70" type="L2CastleDoormen" name="Doorman">
+	<npc id="35602" level="70" type="L2CastleDoormen" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -119,7 +119,7 @@
 			<height normal="10.5"/>
 		</collision>
 	</npc>
-	<npc id="35603" level="85" originalLevel="70" type="L2Npc" name="Coordinator">
+	<npc id="35603" level="70" type="L2Npc" name="Coordinator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -160,7 +160,7 @@
 			<height normal="27.5"/>
 		</collision>
 	</npc>
-	<npc id="35604" level="85" originalLevel="56" type="L2Npc" name="Messenger">
+	<npc id="35604" level="56" type="L2Npc" name="Messenger">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -201,7 +201,7 @@
 			<height normal="10.5"/>
 		</collision>
 	</npc>
-	<npc id="35605" level="85" originalLevel="56" type="L2ClanHallManager" name="Angout" title="Steward">
+	<npc id="35605" level="56" type="L2ClanHallManager" name="Angout" title="Steward">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -247,7 +247,7 @@
 			<height normal="27.5"/>
 		</collision>
 	</npc>
-	<npc id="35606" level="85" originalLevel="75" type="L2Npc" name="Victor's Flag">
+	<npc id="35606" level="75" type="L2Npc" name="Victor's Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -289,7 +289,7 @@
 			<height normal="97.5"/>
 		</collision>
 	</npc>
-	<npc id="35607" level="85" originalLevel="75" type="L2Npc" name="Red Flag">
+	<npc id="35607" level="75" type="L2Npc" name="Red Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -331,7 +331,7 @@
 			<height normal="108.25"/>
 		</collision>
 	</npc>
-	<npc id="35608" level="85" originalLevel="75" type="L2Npc" name="Yellow Flag">
+	<npc id="35608" level="75" type="L2Npc" name="Yellow Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -373,7 +373,7 @@
 			<height normal="108.25"/>
 		</collision>
 	</npc>
-	<npc id="35609" level="85" originalLevel="75" type="L2Npc" name="Green Flag">
+	<npc id="35609" level="75" type="L2Npc" name="Green Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -415,7 +415,7 @@
 			<height normal="108.25"/>
 		</collision>
 	</npc>
-	<npc id="35610" level="85" originalLevel="75" type="L2Npc" name="Blue Flag">
+	<npc id="35610" level="75" type="L2Npc" name="Blue Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -457,7 +457,7 @@
 			<height normal="108.25"/>
 		</collision>
 	</npc>
-	<npc id="35611" level="85" originalLevel="75" type="L2Npc" name="Purple Flag">
+	<npc id="35611" level="75" type="L2Npc" name="Purple Flag">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -499,7 +499,7 @@
 			<height normal="108.25"/>
 		</collision>
 	</npc>
-	<npc id="35612" level="85" originalLevel="75" type="L2Npc" name="Mass Gatekeeper">
+	<npc id="35612" level="75" type="L2Npc" name="Mass Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -547,7 +547,7 @@
 			<height normal="26"/>
 		</collision>
 	</npc>
-	<npc id="35613" level="85" originalLevel="75" type="L2Npc" name="Mass Gatekeeper">
+	<npc id="35613" level="75" type="L2Npc" name="Mass Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -595,7 +595,7 @@
 			<height normal="26"/>
 		</collision>
 	</npc>
-	<npc id="35614" level="85" originalLevel="75" type="L2Npc" name="Mass Gatekeeper">
+	<npc id="35614" level="75" type="L2Npc" name="Mass Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -643,7 +643,7 @@
 			<height normal="26"/>
 		</collision>
 	</npc>
-	<npc id="35615" level="85" originalLevel="75" type="L2Npc" name="Mass Gatekeeper">
+	<npc id="35615" level="75" type="L2Npc" name="Mass Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -691,7 +691,7 @@
 			<height normal="26"/>
 		</collision>
 	</npc>
-	<npc id="35616" level="85" originalLevel="75" type="L2Npc" name="Mass Gatekeeper">
+	<npc id="35616" level="75" type="L2Npc" name="Mass Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -739,7 +739,7 @@
 			<height normal="26"/>
 		</collision>
 	</npc>
-	<npc id="35617" level="85" originalLevel="75" type="L2Npc" name="Mass Gatekeeper">
+	<npc id="35617" level="75" type="L2Npc" name="Mass Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -787,7 +787,7 @@
 			<height normal="26"/>
 		</collision>
 	</npc>
-	<npc id="35618" level="85" originalLevel="73" type="L2Defender" name="Frenzied Cougar">
+	<npc id="35618" level="73" type="L2Defender" name="Frenzied Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Dest_X" value="57760"/>
@@ -830,7 +830,7 @@
 			<height normal="28" grown="34"/>
 		</collision>
 	</npc>
-	<npc id="35619" level="85" originalLevel="73" type="L2Defender" name="Frenzied Buffalo">
+	<npc id="35619" level="73" type="L2Defender" name="Frenzied Buffalo">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Dest_X" value="57760"/>
@@ -873,7 +873,7 @@
 			<height normal="31" grown="38"/>
 		</collision>
 	</npc>
-	<npc id="35620" level="85" originalLevel="73" type="L2Defender" name="Frenzied Kookaburra">
+	<npc id="35620" level="73" type="L2Defender" name="Frenzied Kookaburra">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Dest_X" value="57760"/>
@@ -915,7 +915,7 @@
 			<height normal="33" grown="40"/>
 		</collision>
 	</npc>
-	<npc id="35621" level="85" originalLevel="73" type="L2Defender" name="Frenzied Buffalo Baby">
+	<npc id="35621" level="73" type="L2Defender" name="Frenzied Buffalo Baby">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Dest_X" value="57760"/>
@@ -957,7 +957,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="35622" level="85" originalLevel="73" type="L2Defender" name="Frenzied Baby Cougar">
+	<npc id="35622" level="73" type="L2Defender" name="Frenzied Baby Cougar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Dest_X" value="57760"/>
@@ -1001,7 +1001,7 @@
 			<height normal="15.7"/>
 		</collision>
 	</npc>
-	<npc id="35623" level="85" originalLevel="75" type="L2Npc" name="Inner Doorman">
+	<npc id="35623" level="75" type="L2Npc" name="Inner Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -1044,7 +1044,7 @@
 			<height normal="32" grown="39"/>
 		</collision>
 	</npc>
-	<npc id="35624" level="85" originalLevel="75" type="L2Npc" name="Inner Doorman">
+	<npc id="35624" level="75" type="L2Npc" name="Inner Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -1087,7 +1087,7 @@
 			<height normal="32" grown="39"/>
 		</collision>
 	</npc>
-	<npc id="35625" level="85" originalLevel="75" type="L2Npc" name="Outer Doorman">
+	<npc id="35625" level="75" type="L2Npc" name="Outer Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -1130,7 +1130,7 @@
 			<height normal="32" grown="39"/>
 		</collision>
 	</npc>
-	<npc id="35626" level="85" originalLevel="75" type="L2Npc" name="Outer Doorman">
+	<npc id="35626" level="75" type="L2Npc" name="Outer Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -1173,7 +1173,7 @@
 			<height normal="32" grown="39"/>
 		</collision>
 	</npc>
-	<npc id="35627" level="85" originalLevel="75" type="L2Npc" name="Messenger">
+	<npc id="35627" level="75" type="L2Npc" name="Messenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -1219,7 +1219,7 @@
 			<height normal="32" grown="39"/>
 		</collision>
 	</npc>
-	<npc id="35628" level="85" originalLevel="75" type="L2Npc" name="Quigby" title="Farm Manager">
+	<npc id="35628" level="75" type="L2Npc" name="Quigby" title="Farm Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90"/>
@@ -1265,7 +1265,7 @@
 			<height normal="32" grown="39"/>
 		</collision>
 	</npc>
-	<npc id="35629" level="85" originalLevel="78" type="L2Monster" name="Lidia von Hellmann">
+	<npc id="35629" level="78" type="L2Monster" name="Lidia von Hellmann">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName1" value="lidia_zone1"/>
@@ -1325,7 +1325,7 @@
 			<height normal="25.4"/>
 		</collision>
 	</npc>
-	<npc id="35630" level="85" originalLevel="77" type="L2Defender" name="Alfred von Hellmann">
+	<npc id="35630" level="77" type="L2Defender" name="Alfred von Hellmann">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName" value="lidia_zone3"/>
@@ -1380,7 +1380,7 @@
 			<height normal="35" grown="42.9"/>
 		</collision>
 	</npc>
-	<npc id="35631" level="85" originalLevel="77" type="L2Defender" name="Giselle von Hellmann">
+	<npc id="35631" level="77" type="L2Defender" name="Giselle von Hellmann">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName1" value="lidia_zone1"/>
@@ -1437,7 +1437,7 @@
 			<height normal="28" grown="34.5"/>
 		</collision>
 	</npc>
-	<npc id="35632" level="85" originalLevel="73" type="L2Defender" name="Vampire Adept">
+	<npc id="35632" level="73" type="L2Defender" name="Vampire Adept">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1490,7 +1490,7 @@
 			<height normal="21.5" grown="25.8"/>
 		</collision>
 	</npc>
-	<npc id="35633" level="85" originalLevel="74" type="L2Defender" name="Vampire Soldier">
+	<npc id="35633" level="74" type="L2Defender" name="Vampire Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1541,7 +1541,7 @@
 			<height normal="23.5" grown="29"/>
 		</collision>
 	</npc>
-	<npc id="35634" level="85" originalLevel="75" type="L2Defender" name="Vampire Caster">
+	<npc id="35634" level="75" type="L2Defender" name="Vampire Caster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1595,7 +1595,7 @@
 			<height normal="21.5" grown="25.8"/>
 		</collision>
 	</npc>
-	<npc id="35635" level="85" originalLevel="76" type="L2Defender" name="Vampire Magister">
+	<npc id="35635" level="76" type="L2Defender" name="Vampire Magister">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95"/>
@@ -1647,7 +1647,7 @@
 			<height normal="28" grown="34.5"/>
 		</collision>
 	</npc>
-	<npc id="35636" level="85" originalLevel="77" type="L2Defender" name="Vampire Warlord">
+	<npc id="35636" level="77" type="L2Defender" name="Vampire Warlord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100"/>
@@ -1700,7 +1700,7 @@
 			<height normal="31.5" grown="38"/>
 		</collision>
 	</npc>
-	<npc id="35637" level="85" originalLevel="78" type="L2Defender" name="Vampire Leader">
+	<npc id="35637" level="78" type="L2Defender" name="Vampire Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130"/>
@@ -1751,7 +1751,7 @@
 			<height normal="25.8"/>
 		</collision>
 	</npc>
-	<npc id="35638" level="85" originalLevel="75" type="L2Npc" name="Valens" title="Wyvern Manager">
+	<npc id="35638" level="75" type="L2Npc" name="Valens" title="Wyvern Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1792,7 +1792,7 @@
 			<height normal="23.5" grown="29"/>
 		</collision>
 	</npc>
-	<npc id="35639" level="85" originalLevel="75" type="L2Npc" name="Jacquard" title="Messenger">
+	<npc id="35639" level="75" type="L2Npc" name="Jacquard" title="Messenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1833,7 +1833,7 @@
 			<height normal="23.5" grown="29"/>
 		</collision>
 	</npc>
-	<npc id="35640" level="85" originalLevel="75" type="L2ClanHallManager" name="Bandello" title="Steward">
+	<npc id="35640" level="75" type="L2ClanHallManager" name="Bandello" title="Steward">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1874,7 +1874,7 @@
 			<height normal="23.5" grown="29"/>
 		</collision>
 	</npc>
-	<npc id="35641" level="85" originalLevel="75" type="L2CastleDoormen" name="Fortress Guard">
+	<npc id="35641" level="75" type="L2CastleDoormen" name="Fortress Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1917,7 +1917,7 @@
 			<height normal="23.5" grown="29"/>
 		</collision>
 	</npc>
-	<npc id="35642" level="85" originalLevel="75" type="L2CastleDoormen" name="Fortress Guard">
+	<npc id="35642" level="75" type="L2CastleDoormen" name="Fortress Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1960,7 +1960,7 @@
 			<height normal="23.5" grown="29"/>
 		</collision>
 	</npc>
-	<npc id="35643" level="85" originalLevel="56" type="L2Npc" name="Gate">
+	<npc id="35643" level="56" type="L2Npc" name="Gate">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2002,7 +2002,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35644" level="85" originalLevel="70" type="L2Merchant" name="Manor Manager" title="Schuttgart">
+	<npc id="35644" level="70" type="L2Merchant" name="Manor Manager" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2043,7 +2043,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="35645" level="85" originalLevel="70" type="L2Merchant" name="Manor Manager" title="Schuttgart">
+	<npc id="35645" level="70" type="L2Merchant" name="Manor Manager" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2084,7 +2084,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35646" level="85" originalLevel="70" type="L2Npc" name="Vampire Caster">
+	<npc id="35646" level="70" type="L2Npc" name="Vampire Caster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2135,7 +2135,7 @@
 			<height normal="21.5" grown="25.8"/>
 		</collision>
 	</npc>
-	<npc id="35647" level="85" originalLevel="73" type="L2Npc" name="Vampire Leader">
+	<npc id="35647" level="73" type="L2Npc" name="Vampire Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130"/>
@@ -2186,7 +2186,7 @@
 			<height normal="25.8"/>
 		</collision>
 	</npc>
-	<npc id="35648" level="85" originalLevel="70" type="L2Npc" name="Court Magician" title="Gludio">
+	<npc id="35648" level="70" type="L2Npc" name="Court Magician" title="Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -2227,7 +2227,7 @@
 			<height normal="21.957"/>
 		</collision>
 	</npc>
-	<npc id="35649" level="85" originalLevel="70" type="L2Npc" name="Court Magician" title="Dion">
+	<npc id="35649" level="70" type="L2Npc" name="Court Magician" title="Dion">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -2268,7 +2268,7 @@
 			<height normal="21.957"/>
 		</collision>
 	</npc>
-	<npc id="35650" level="85" originalLevel="70" type="L2Npc" name="Court Magician" title="Giran">
+	<npc id="35650" level="70" type="L2Npc" name="Court Magician" title="Giran">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -2309,7 +2309,7 @@
 			<height normal="21.957"/>
 		</collision>
 	</npc>
-	<npc id="35651" level="85" originalLevel="70" type="L2Npc" name="Court Magician" title="Oren">
+	<npc id="35651" level="70" type="L2Npc" name="Court Magician" title="Oren">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -2350,7 +2350,7 @@
 			<height normal="21.957"/>
 		</collision>
 	</npc>
-	<npc id="35652" level="85" originalLevel="70" type="L2Npc" name="Court Magician" title="Aden">
+	<npc id="35652" level="70" type="L2Npc" name="Court Magician" title="Aden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -2391,7 +2391,7 @@
 			<height normal="21.957"/>
 		</collision>
 	</npc>
-	<npc id="35653" level="85" originalLevel="70" type="L2Npc" name="Court Magician" title="Innadril">
+	<npc id="35653" level="70" type="L2Npc" name="Court Magician" title="Innadril">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -2432,7 +2432,7 @@
 			<height normal="21.957"/>
 		</collision>
 	</npc>
-	<npc id="35654" level="85" originalLevel="70" type="L2Npc" name="Court Magician" title="Goddard">
+	<npc id="35654" level="70" type="L2Npc" name="Court Magician" title="Goddard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -2473,7 +2473,7 @@
 			<height normal="21.957"/>
 		</collision>
 	</npc>
-	<npc id="35655" level="85" originalLevel="70" type="L2Npc" name="Court Magician" title="Rune">
+	<npc id="35655" level="70" type="L2Npc" name="Court Magician" title="Rune">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -2514,7 +2514,7 @@
 			<height normal="21.957"/>
 		</collision>
 	</npc>
-	<npc id="35656" level="85" originalLevel="70" type="L2Npc" name="Court Magician" title="Schuttgart">
+	<npc id="35656" level="70" type="L2Npc" name="Court Magician" title="Schuttgart">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -2555,7 +2555,7 @@
 			<height normal="21.957"/>
 		</collision>
 	</npc>
-	<npc id="35657" level="85" originalLevel="20" type="L2Npc" name="Flagpole">
+	<npc id="35657" level="20" type="L2Npc" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2592,7 +2592,7 @@
 			<height normal="72.5"/>
 		</collision>
 	</npc>
-	<npc id="35658" level="85" originalLevel="75" type="L2FortManager" name="Foreman" title="Shanty Fortress">
+	<npc id="35658" level="75" type="L2FortManager" name="Foreman" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff"/>
@@ -2635,7 +2635,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35659" level="85" originalLevel="75" type="L2Npc" name="Suspicious Merchant" title="Shanty Fortress">
+	<npc id="35659" level="75" type="L2Npc" name="Suspicious Merchant" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2675,7 +2675,7 @@
 			<height normal="27"/>
 		</collision>
 	</npc>
-	<npc id="35660" level="85" originalLevel="75" type="L2Npc" name="Guard Captain" title="Shanty Fortress">
+	<npc id="35660" level="75" type="L2Npc" name="Guard Captain" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2722,7 +2722,7 @@
 			<height normal="23.75"/>
 		</collision>
 	</npc>
-	<npc id="35661" level="85" originalLevel="75" type="L2Npc" name="Archer Captain" title="Shanty Fortress">
+	<npc id="35661" level="75" type="L2Npc" name="Archer Captain" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2762,7 +2762,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35662" level="85" originalLevel="75" type="L2Npc" name="Support Unit Captain" title="Shanty Fortress">
+	<npc id="35662" level="75" type="L2Npc" name="Support Unit Captain" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2802,7 +2802,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35663" level="85" originalLevel="75" type="L2Npc" name="Engineering Manager" title="Shanty Fortress">
+	<npc id="35663" level="75" type="L2Npc" name="Engineering Manager" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2842,7 +2842,7 @@
 			<height normal="19"/>
 		</collision>
 	</npc>
-	<npc id="35664" level="85" originalLevel="75" type="L2FortLogistics" name="Logistics Officer" title="Shanty Fortress">
+	<npc id="35664" level="75" type="L2FortLogistics" name="Logistics Officer" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2901,7 +2901,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="35665" level="85" originalLevel="80" type="L2Npc" name="Supply Box">
+	<npc id="35665" level="80" type="L2Npc" name="Supply Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2949,7 +2949,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="35666" level="85" originalLevel="75" type="L2Npc" name="Detention Camp Warden" title="Shanty Fortress">
+	<npc id="35666" level="75" type="L2Npc" name="Detention Camp Warden" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2996,7 +2996,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35667" level="85" originalLevel="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35667" level="75" type="L2FortDoormen" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3041,7 +3041,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35668" level="85" originalLevel="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35668" level="75" type="L2FortDoormen" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3086,7 +3086,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35669" level="85" originalLevel="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35669" level="75" type="L2FortDoormen" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3134,7 +3134,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35670" level="85" originalLevel="80" type="L2Defender" name="Rebel Commander" title="Shanty Fortress">
+	<npc id="35670" level="80" type="L2Defender" name="Rebel Commander" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3207,7 +3207,7 @@
 			<height normal="26.985"/>
 		</collision>
 	</npc>
-	<npc id="35671" level="85" originalLevel="76" type="L2Defender" name="Decorated Rebel Soldier" title="Shanty Fortress">
+	<npc id="35671" level="76" type="L2Defender" name="Decorated Rebel Soldier" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3271,7 +3271,7 @@
 			<height normal="45"/>
 		</collision>
 	</npc>
-	<npc id="35672" level="85" originalLevel="75" type="L2Defender" name="Rebel Private" title="Shanty Fortress">
+	<npc id="35672" level="75" type="L2Defender" name="Rebel Private" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3330,7 +3330,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35673" level="85" originalLevel="72" type="L2Defender" name="Court Guard" title="Shanty Fortress">
+	<npc id="35673" level="72" type="L2Defender" name="Court Guard" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3392,7 +3392,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35674" level="85" originalLevel="72" type="L2Defender" name="Guard" title="Shanty Fortress">
+	<npc id="35674" level="72" type="L2Defender" name="Guard" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3454,7 +3454,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35675" level="85" originalLevel="75" type="L2Npc" name="Power Control Unit" title="Control Room">
+	<npc id="35675" level="75" type="L2Npc" name="Power Control Unit" title="Control Room">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3495,7 +3495,7 @@
 			<height normal="59.5"/>
 		</collision>
 	</npc>
-	<npc id="35676" level="85" originalLevel="76" type="L2Defender" name="Dwarven Gunnery Sergeant">
+	<npc id="35676" level="76" type="L2Defender" name="Dwarven Gunnery Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165"/>
@@ -3559,7 +3559,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="35677" level="85" originalLevel="78" type="L2FortCommander" name="Guard Captain" title="Guard">
+	<npc id="35677" level="78" type="L2FortCommander" name="Guard Captain" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3638,7 +3638,7 @@
 			<height normal="23.75"/>
 		</collision>
 	</npc>
-	<npc id="35678" level="85" originalLevel="76" type="L2Defender" name="Guard" title="Guard">
+	<npc id="35678" level="76" type="L2Defender" name="Guard" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3696,7 +3696,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35679" level="85" originalLevel="76" type="L2Defender" name="Guard" title="Guard">
+	<npc id="35679" level="76" type="L2Defender" name="Guard" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3759,7 +3759,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35680" level="85" originalLevel="78" type="L2FortCommander" name="Support Unit Captain" title="Support Unit">
+	<npc id="35680" level="78" type="L2FortCommander" name="Support Unit Captain" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3838,7 +3838,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35681" level="85" originalLevel="76" type="L2Defender" name="Wizard" title="Support Unit">
+	<npc id="35681" level="76" type="L2Defender" name="Wizard" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3909,7 +3909,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="35682" level="85" originalLevel="76" type="L2Defender" name="Healer" title="Support Unit">
+	<npc id="35682" level="76" type="L2Defender" name="Healer" title="Support Unit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -3978,7 +3978,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="35683" level="85" originalLevel="78" type="L2FortCommander" name="Archer Captain" title="Archer">
+	<npc id="35683" level="78" type="L2FortCommander" name="Archer Captain" title="Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4047,7 +4047,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35684" level="85" originalLevel="76" type="L2Defender" name="Archer" title="Archer">
+	<npc id="35684" level="76" type="L2Defender" name="Archer" title="Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4111,7 +4111,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35685" level="85" originalLevel="80" type="L2Monster" name="Ballista" title="Shanty Fortress">
+	<npc id="35685" level="80" type="L2Monster" name="Ballista" title="Shanty Fortress">
 		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
@@ -4148,7 +4148,7 @@
 			<height normal="59"/>
 		</collision>
 	</npc>
-	<npc id="35686" level="85" originalLevel="80" type="L2Npc" name="Mercenary Captain">
+	<npc id="35686" level="80" type="L2Npc" name="Mercenary Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -4236,7 +4236,7 @@
 			<height normal="24.5"/>
 		</collision>
 	</npc>
-	<npc id="35687" level="85" originalLevel="75" type="L2Npc" name="Mercenary Private">
+	<npc id="35687" level="75" type="L2Npc" name="Mercenary Private">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4285,7 +4285,7 @@
 			<height normal="27"/>
 		</collision>
 	</npc>
-	<npc id="35688" level="85" originalLevel="20" type="L2Npc" name="Flagpole">
+	<npc id="35688" level="20" type="L2Npc" name="Flagpole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -4321,7 +4321,7 @@
 			<height normal="72.5"/>
 		</collision>
 	</npc>
-	<npc id="35689" level="85" originalLevel="75" type="L2FortManager" name="Foreman" title="Southern Fortress">
+	<npc id="35689" level="75" type="L2FortManager" name="Foreman" title="Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff"/>
@@ -4364,7 +4364,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="35690" level="85" originalLevel="75" type="L2Npc" name="Suspicious Merchant" title="Southern Fortress">
+	<npc id="35690" level="75" type="L2Npc" name="Suspicious Merchant" title="Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4404,7 +4404,7 @@
 			<height normal="27"/>
 		</collision>
 	</npc>
-	<npc id="35691" level="85" originalLevel="75" type="L2Npc" name="Guard Captain" title="Southern Fortress">
+	<npc id="35691" level="75" type="L2Npc" name="Guard Captain" title="Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4451,7 +4451,7 @@
 			<height normal="23.75"/>
 		</collision>
 	</npc>
-	<npc id="35692" level="85" originalLevel="75" type="L2Npc" name="Archer Captain" title="Southern Fortress">
+	<npc id="35692" level="75" type="L2Npc" name="Archer Captain" title="Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4491,7 +4491,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35693" level="85" originalLevel="75" type="L2Npc" name="General" title="Southern Fortress">
+	<npc id="35693" level="75" type="L2Npc" name="General" title="Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4532,7 +4532,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="35694" level="85" originalLevel="75" type="L2Npc" name="Support Unit Captain" title="Southern Fortress">
+	<npc id="35694" level="75" type="L2Npc" name="Support Unit Captain" title="Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4572,7 +4572,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35695" level="85" originalLevel="75" type="L2Npc" name="Engineering Manager" title="Southern Fortress">
+	<npc id="35695" level="75" type="L2Npc" name="Engineering Manager" title="Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4612,7 +4612,7 @@
 			<height normal="19"/>
 		</collision>
 	</npc>
-	<npc id="35696" level="85" originalLevel="75" type="L2FortLogistics" name="Logistics Officer" title="Southern Fortress">
+	<npc id="35696" level="75" type="L2FortLogistics" name="Logistics Officer" title="Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4671,7 +4671,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="35697" level="85" originalLevel="80" type="L2Npc" name="Supply Box">
+	<npc id="35697" level="80" type="L2Npc" name="Supply Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4719,7 +4719,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="35698" level="85" originalLevel="75" type="L2Npc" name="Detention Camp Warden" title="Southern Fortress">
+	<npc id="35698" level="75" type="L2Npc" name="Detention Camp Warden" title="Southern Fortress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -4766,7 +4766,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="35699" level="85" originalLevel="75" type="L2FortDoormen" name="Doorman">
+	<npc id="35699" level="75" type="L2FortDoormen" name="Doorman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>

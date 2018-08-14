@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="30700" level="85" originalLevel="70" type="L2Trainer" name="Prestan" title="Master">
+	<npc id="30700" level="70" type="L2Trainer" name="Prestan" title="Master">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -39,7 +39,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="30701" level="85" originalLevel="70" type="L2Trainer" name="Errickin" title="Magister">
+	<npc id="30701" level="70" type="L2Trainer" name="Errickin" title="Magister">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -81,7 +81,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="30702" level="85" originalLevel="70" type="L2Npc" name="Bernard" title="Guild President">
+	<npc id="30702" level="70" type="L2Npc" name="Bernard" title="Guild President">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -121,7 +121,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="30703" level="85" originalLevel="70" type="L2Npc" name="Colin" title="Guild President">
+	<npc id="30703" level="70" type="L2Npc" name="Colin" title="Guild President">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -161,7 +161,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="30704" level="85" originalLevel="70" type="L2VillageMasterOrc" name="Garvarentz" title="High Prefect">
+	<npc id="30704" level="70" type="L2VillageMasterOrc" name="Garvarentz" title="High Prefect">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -202,7 +202,7 @@
 			<height normal="26"/>
 		</collision>
 	</npc>
-	<npc id="30705" level="85" originalLevel="70" type="L2Trainer" name="Chakiris" title="Prefect">
+	<npc id="30705" level="70" type="L2Trainer" name="Chakiris" title="Prefect">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -242,7 +242,7 @@
 			<height normal="28.5"/>
 		</collision>
 	</npc>
-	<npc id="30706" level="85" originalLevel="70" type="L2Trainer" name="Lazenby" title="Seer">
+	<npc id="30706" level="70" type="L2Trainer" name="Lazenby" title="Seer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -282,7 +282,7 @@
 			<height normal="29"/>
 		</collision>
 	</npc>
-	<npc id="30707" level="85" originalLevel="80" type="L2Guard" name="Raigen" title="Captain">
+	<npc id="30707" level="80" type="L2Guard" name="Raigen" title="Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -323,7 +323,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30708" level="85" originalLevel="80" type="L2Guard" name="Nasign" title="Guard">
+	<npc id="30708" level="80" type="L2Guard" name="Nasign" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -364,7 +364,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30709" level="85" originalLevel="80" type="L2Guard" name="Norton" title="Guard">
+	<npc id="30709" level="80" type="L2Guard" name="Norton" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -405,7 +405,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30710" level="85" originalLevel="80" type="L2Guard" name="Weston" title="Guard">
+	<npc id="30710" level="80" type="L2Guard" name="Weston" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -446,7 +446,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30711" level="85" originalLevel="80" type="L2Guard" name="Byron" title="Guard">
+	<npc id="30711" level="80" type="L2Guard" name="Byron" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -487,7 +487,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30712" level="85" originalLevel="80" type="L2Guard" name="Makhis" title="Guard">
+	<npc id="30712" level="80" type="L2Guard" name="Makhis" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -528,7 +528,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30713" level="85" originalLevel="80" type="L2Guard" name="Gardner" title="Guard">
+	<npc id="30713" level="80" type="L2Guard" name="Gardner" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -569,7 +569,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30714" level="85" originalLevel="80" type="L2Guard" name="Paros" title="Guard">
+	<npc id="30714" level="80" type="L2Guard" name="Paros" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -610,7 +610,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30715" level="85" originalLevel="70" type="L2Trainer" name="Marina" title="Magister">
+	<npc id="30715" level="70" type="L2Trainer" name="Marina" title="Magister">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -650,7 +650,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="30716" level="85" originalLevel="70" type="L2Teleporter" name="Cecile" title="Gatekeeper">
+	<npc id="30716" level="70" type="L2Teleporter" name="Cecile" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -690,7 +690,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30717" level="85" originalLevel="70" type="L2Trainer" name="Gauen" title="Magister">
+	<npc id="30717" level="70" type="L2Trainer" name="Gauen" title="Magister">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -730,7 +730,7 @@
 			<height normal="22.2"/>
 		</collision>
 	</npc>
-	<npc id="30718" level="85" originalLevel="70" type="L2Trainer" name="Joan" title="Magister">
+	<npc id="30718" level="70" type="L2Trainer" name="Joan" title="Magister">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -770,7 +770,7 @@
 			<height normal="21.2"/>
 		</collision>
 	</npc>
-	<npc id="30719" level="85" originalLevel="70" type="L2Teleporter" name="Mariell" title="Gatekeeper">
+	<npc id="30719" level="70" type="L2Teleporter" name="Mariell" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -810,7 +810,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="30720" level="85" originalLevel="70" type="L2Trainer" name="Kaiena" title="Magister">
+	<npc id="30720" level="70" type="L2Trainer" name="Kaiena" title="Magister">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -850,7 +850,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="30721" level="85" originalLevel="70" type="L2Trainer" name="Ladd" title="Magister">
+	<npc id="30721" level="70" type="L2Trainer" name="Ladd" title="Magister">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -890,7 +890,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="30722" level="85" originalLevel="70" type="L2Teleporter" name="Merian" title="Gatekeeper">
+	<npc id="30722" level="70" type="L2Teleporter" name="Merian" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -930,7 +930,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30723" level="85" originalLevel="80" type="L2Guard" name="Roy" title="Captain">
+	<npc id="30723" level="80" type="L2Guard" name="Roy" title="Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -971,7 +971,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30724" level="85" originalLevel="80" type="L2Guard" name="Tavillian" title="Guard">
+	<npc id="30724" level="80" type="L2Guard" name="Tavillian" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1012,7 +1012,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30725" level="85" originalLevel="80" type="L2Guard" name="Yening" title="Guard">
+	<npc id="30725" level="80" type="L2Guard" name="Yening" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1053,7 +1053,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30726" level="85" originalLevel="80" type="L2Guard" name="Tebose" title="Guard">
+	<npc id="30726" level="80" type="L2Guard" name="Tebose" title="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1094,7 +1094,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30727" level="85" originalLevel="70" type="L2Teleporter" name="Verona" title="Gatekeeper">
+	<npc id="30727" level="70" type="L2Teleporter" name="Verona" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1134,7 +1134,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30728" level="85" originalLevel="70" type="L2Npc" name="Leirynn" title="Militiaman">
+	<npc id="30728" level="70" type="L2Npc" name="Leirynn" title="Militiaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1175,7 +1175,7 @@
 			<height normal="22.4"/>
 		</collision>
 	</npc>
-	<npc id="30729" level="85" originalLevel="70" type="L2Npc" name="Borys" title="Drunkard">
+	<npc id="30729" level="70" type="L2Npc" name="Borys" title="Drunkard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1215,7 +1215,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="30730" level="85" originalLevel="70" type="L2Npc" name="Jax" title="Bodyguard">
+	<npc id="30730" level="70" type="L2Npc" name="Jax" title="Bodyguard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1256,7 +1256,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="30731" level="85" originalLevel="70" type="L2PetManager" name="Martin" title="Pet Manager">
+	<npc id="30731" level="70" type="L2PetManager" name="Martin" title="Pet Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1328,7 +1328,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30732" level="85" originalLevel="36" type="L2Npc" name="Ol Mahum Pilgrim">
+	<npc id="30732" level="36" type="L2Npc" name="Ol Mahum Pilgrim">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130"/>
@@ -1369,7 +1369,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30733" level="85" originalLevel="80" type="L2Guard" name="Guard">
+	<npc id="30733" level="80" type="L2Guard" name="Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1"/>
@@ -1411,7 +1411,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30734" level="85" originalLevel="70" type="L2Npc" name="Supply Box On Wharf">
+	<npc id="30734" level="70" type="L2Npc" name="Supply Box On Wharf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1452,7 +1452,7 @@
 			<height normal="14"/>
 		</collision>
 	</npc>
-	<npc id="30735" level="85" originalLevel="70" type="L2Npc" name="Sophya" title="Mercenary Captain">
+	<npc id="30735" level="70" type="L2Npc" name="Sophya" title="Mercenary Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1492,7 +1492,7 @@
 			<height normal="21.5"/>
 		</collision>
 	</npc>
-	<npc id="30736" level="85" originalLevel="70" type="L2Npc" name="Redfoot" title="Mercenary">
+	<npc id="30736" level="70" type="L2Npc" name="Redfoot" title="Mercenary">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1532,7 +1532,7 @@
 			<height normal="21.5"/>
 		</collision>
 	</npc>
-	<npc id="30737" level="85" originalLevel="70" type="L2Npc" name="Morgan" title="Guildsman">
+	<npc id="30737" level="70" type="L2Npc" name="Morgan" title="Guildsman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1572,7 +1572,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30738" level="85" originalLevel="70" type="L2Npc" name="Matild" title="Alchemist">
+	<npc id="30738" level="70" type="L2Npc" name="Matild" title="Alchemist">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1612,7 +1612,7 @@
 			<height normal="18.5"/>
 		</collision>
 	</npc>
-	<npc id="30739" level="85" originalLevel="70" type="L2Npc" name="Keltir" title="Royal Servant">
+	<npc id="30739" level="70" type="L2Npc" name="Keltir" title="Royal Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -1653,7 +1653,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="30740" level="85" originalLevel="70" type="L2Npc" name="Toad" title="Royal Servant">
+	<npc id="30740" level="70" type="L2Npc" name="Toad" title="Royal Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1694,7 +1694,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="30741" level="85" originalLevel="70" type="L2Npc" name="Rabbit" title="Royal Servant">
+	<npc id="30741" level="70" type="L2Npc" name="Rabbit" title="Royal Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1734,7 +1734,7 @@
 			<height normal="4.5"/>
 		</collision>
 	</npc>
-	<npc id="30742" level="85" originalLevel="70" type="L2Npc" name="Rupina" title="Fairy of Love">
+	<npc id="30742" level="70" type="L2Npc" name="Rupina" title="Fairy of Love">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1775,7 +1775,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30743" level="85" originalLevel="70" type="L2Npc" name="Wisdom Chest">
+	<npc id="30743" level="70" type="L2Npc" name="Wisdom Chest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1816,7 +1816,7 @@
 			<height normal="9"/>
 		</collision>
 	</npc>
-	<npc id="30744" level="85" originalLevel="70" type="L2Npc" name="Grey" title="Guild Member">
+	<npc id="30744" level="70" type="L2Npc" name="Grey" title="Guild Member">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1856,7 +1856,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30745" level="85" originalLevel="70" type="L2Npc" name="Tor" title="Guild Member">
+	<npc id="30745" level="70" type="L2Npc" name="Tor" title="Guild Member">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1896,7 +1896,7 @@
 			<height normal="21.5"/>
 		</collision>
 	</npc>
-	<npc id="30746" level="85" originalLevel="70" type="L2Npc" name="Cybellin">
+	<npc id="30746" level="70" type="L2Npc" name="Cybellin">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1936,7 +1936,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30747" level="85" originalLevel="70" type="L2Npc" name="Mimyu" title="Fairy">
+	<npc id="30747" level="70" type="L2Npc" name="Mimyu" title="Fairy">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1977,7 +1977,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30748" level="85" originalLevel="70" type="L2Npc" name="Exarion" title="Drake">
+	<npc id="30748" level="70" type="L2Npc" name="Exarion" title="Drake">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60"/>
@@ -2018,7 +2018,7 @@
 			<height normal="100"/>
 		</collision>
 	</npc>
-	<npc id="30749" level="85" originalLevel="70" type="L2Npc" name="Zwov" title="Drake">
+	<npc id="30749" level="70" type="L2Npc" name="Zwov" title="Drake">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60"/>
@@ -2059,7 +2059,7 @@
 			<height normal="100"/>
 		</collision>
 	</npc>
-	<npc id="30750" level="85" originalLevel="70" type="L2Npc" name="Kalibran" title="Drake">
+	<npc id="30750" level="70" type="L2Npc" name="Kalibran" title="Drake">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60"/>
@@ -2100,7 +2100,7 @@
 			<height normal="100"/>
 		</collision>
 	</npc>
-	<npc id="30751" level="85" originalLevel="70" type="L2Npc" name="Suzet" title="Wyrm">
+	<npc id="30751" level="70" type="L2Npc" name="Suzet" title="Wyrm">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60"/>
@@ -2141,7 +2141,7 @@
 			<height normal="72"/>
 		</collision>
 	</npc>
-	<npc id="30752" level="85" originalLevel="70" type="L2Npc" name="Shamhai" title="Wyrm">
+	<npc id="30752" level="70" type="L2Npc" name="Shamhai" title="Wyrm">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60"/>
@@ -2182,7 +2182,7 @@
 			<height normal="72"/>
 		</collision>
 	</npc>
-	<npc id="30753" level="85" originalLevel="70" type="L2Npc" name="Gabrielle">
+	<npc id="30753" level="70" type="L2Npc" name="Gabrielle">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2222,7 +2222,7 @@
 			<height normal="22.4"/>
 		</collision>
 	</npc>
-	<npc id="30754" level="85" originalLevel="70" type="L2Npc" name="Gilmore" title="Antharas Watchman">
+	<npc id="30754" level="70" type="L2Npc" name="Gilmore" title="Antharas Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215"/>
@@ -2264,7 +2264,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30755" level="85" originalLevel="70" type="L2Npc" name="Theodric" title="Antharas Watchman">
+	<npc id="30755" level="70" type="L2Npc" name="Theodric" title="Antharas Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215"/>
@@ -2306,7 +2306,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30756" level="85" originalLevel="70" type="L2Npc" name="Sir Kristof Rodemai">
+	<npc id="30756" level="70" type="L2Npc" name="Sir Kristof Rodemai">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2346,7 +2346,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30757" level="85" originalLevel="70" type="L2Npc" name="Statue Of Offering">
+	<npc id="30757" level="70" type="L2Npc" name="Statue Of Offering">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2387,7 +2387,7 @@
 			<height normal="98"/>
 		</collision>
 	</npc>
-	<npc id="30758" level="85" originalLevel="70" type="L2Npc" name="Athrea" title="Witch">
+	<npc id="30758" level="70" type="L2Npc" name="Athrea" title="Witch">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2427,7 +2427,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="30759" level="85" originalLevel="70" type="L2Npc" name="Kalis" title="Witch">
+	<npc id="30759" level="70" type="L2Npc" name="Kalis" title="Witch">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2467,7 +2467,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="30760" level="85" originalLevel="70" type="L2Npc" name="Sir Gustav Athebaldt">
+	<npc id="30760" level="70" type="L2Npc" name="Sir Gustav Athebaldt">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2507,7 +2507,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="30761" level="85" originalLevel="70" type="L2Npc" name="Corpse Of Fritz">
+	<npc id="30761" level="70" type="L2Npc" name="Corpse Of Fritz">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2547,7 +2547,7 @@
 			<height normal="19"/>
 		</collision>
 	</npc>
-	<npc id="30762" level="85" originalLevel="70" type="L2Npc" name="Corpse Of Lutz">
+	<npc id="30762" level="70" type="L2Npc" name="Corpse Of Lutz">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2587,7 +2587,7 @@
 			<height normal="19"/>
 		</collision>
 	</npc>
-	<npc id="30763" level="85" originalLevel="70" type="L2Npc" name="Corpse Of Kurtz">
+	<npc id="30763" level="70" type="L2Npc" name="Corpse Of Kurtz">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2627,7 +2627,7 @@
 			<height normal="19"/>
 		</collision>
 	</npc>
-	<npc id="30764" level="85" originalLevel="70" type="L2Npc" name="Balthazar">
+	<npc id="30764" level="70" type="L2Npc" name="Balthazar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2667,7 +2667,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="30765" level="85" originalLevel="70" type="L2Npc" name="Imperial Coffer">
+	<npc id="30765" level="70" type="L2Npc" name="Imperial Coffer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2708,7 +2708,7 @@
 			<height normal="9.5"/>
 		</collision>
 	</npc>
-	<npc id="30766" level="85" originalLevel="70" type="L2Npc" name="Cleo" title="Witch">
+	<npc id="30766" level="70" type="L2Npc" name="Cleo" title="Witch">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2748,7 +2748,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="30767" level="85" originalLevel="70" type="L2Auctioneer" name="Auctioneer">
+	<npc id="30767" level="70" type="L2Auctioneer" name="Auctioneer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2788,7 +2788,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="30768" level="85" originalLevel="70" type="L2Auctioneer" name="Auctioneer">
+	<npc id="30768" level="70" type="L2Auctioneer" name="Auctioneer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2828,7 +2828,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30769" level="85" originalLevel="70" type="L2Auctioneer" name="Auctioneer">
+	<npc id="30769" level="70" type="L2Auctioneer" name="Auctioneer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2868,7 +2868,7 @@
 			<height normal="21.5"/>
 		</collision>
 	</npc>
-	<npc id="30770" level="85" originalLevel="70" type="L2Auctioneer" name="Auctioneer">
+	<npc id="30770" level="70" type="L2Auctioneer" name="Auctioneer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2908,7 +2908,7 @@
 			<height normal="18.5"/>
 		</collision>
 	</npc>
-	<npc id="30771" level="85" originalLevel="70" type="L2Auctioneer" name="Auctioneer">
+	<npc id="30771" level="70" type="L2Auctioneer" name="Auctioneer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2948,7 +2948,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="30772" level="85" originalLevel="70" type="L2ClanHallDoormen" name="Wilson" title="Clan Hall Gatekeeper">
+	<npc id="30772" level="70" type="L2ClanHallDoormen" name="Wilson" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2988,7 +2988,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="30773" level="85" originalLevel="70" type="L2ClanHallDoormen" name="Todd" title="Clan Hall Gatekeeper">
+	<npc id="30773" level="70" type="L2ClanHallDoormen" name="Todd" title="Clan Hall Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>

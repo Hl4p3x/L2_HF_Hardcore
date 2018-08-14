@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="22800" level="85" originalLevel="84" type="L2Monster" name="Divinity Magus">
+	<npc id="22800" level="84" type="L2Monster" name="Divinity Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -108,7 +108,7 @@
 			<height normal="44"/>
 		</collision>
 	</npc>
-	<npc id="22801" level="85" originalLevel="72" type="L2Monster" name="Cruel Pincer Golem">
+	<npc id="22801" level="72" type="L2Monster" name="Cruel Pincer Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Privates01_sil" value="22802"/> <!-- Cruel Pincer Golem -->
@@ -177,7 +177,7 @@
 			<height normal="34.7"/>
 		</collision>
 	</npc>
-	<npc id="22802" level="85" originalLevel="72" type="L2Monster" name="Cruel Pincer Golem">
+	<npc id="22802" level="72" type="L2Monster" name="Cruel Pincer Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6598" level="9"/> <!-- NPC earth attack -->
@@ -244,7 +244,7 @@
 			<height normal="34.7"/>
 		</collision>
 	</npc>
-	<npc id="22803" level="85" originalLevel="72" type="L2Monster" name="Cruel Pincer Golem">
+	<npc id="22803" level="72" type="L2Monster" name="Cruel Pincer Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6598" level="9"/> <!-- NPC earth attack -->
@@ -307,7 +307,7 @@
 			<height normal="34.7"/>
 		</collision>
 	</npc>
-	<npc id="22804" level="85" originalLevel="73" type="L2Monster" name="Horrifying Jackhammer Golem">
+	<npc id="22804" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Privates01_sil" value="22805"/> <!-- Horrifying Jackhammer Golem -->
@@ -375,7 +375,7 @@
 			<height normal="32.8"/>
 		</collision>
 	</npc>
-	<npc id="22805" level="85" originalLevel="73" type="L2Monster" name="Horrifying Jackhammer Golem">
+	<npc id="22805" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6599" level="9"/> <!-- NPC earth attack -->
@@ -440,7 +440,7 @@
 			<height normal="32.8"/>
 		</collision>
 	</npc>
-	<npc id="22806" level="85" originalLevel="73" type="L2Monster" name="Horrifying Jackhammer Golem">
+	<npc id="22806" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6599" level="9"/> <!-- NPC earth attack -->
@@ -504,7 +504,7 @@
 			<height normal="32.8"/>
 		</collision>
 	</npc>
-	<npc id="22807" level="85" originalLevel="72" type="L2Monster" name="Scout-type Golem No. 28">
+	<npc id="22807" level="72" type="L2Monster" name="Scout-type Golem No. 28">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6610" level="9"/> <!-- NPC earth magic -->
@@ -570,7 +570,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="22808" level="85" originalLevel="72" type="L2Monster" name="Scout-type Golem No. 2">
+	<npc id="22808" level="72" type="L2Monster" name="Scout-type Golem No. 2">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -640,7 +640,7 @@
 			<height normal="19"/>
 		</collision>
 	</npc>
-	<npc id="22809" level="85" originalLevel="73" type="L2Monster" name="Guard Golem">
+	<npc id="22809" level="73" type="L2Monster" name="Guard Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -711,7 +711,7 @@
 			<height normal="37.2"/>
 		</collision>
 	</npc>
-	<npc id="22810" level="85" originalLevel="72" type="L2Monster" name="Micro Scout Golem">
+	<npc id="22810" level="72" type="L2Monster" name="Micro Scout Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -784,7 +784,7 @@
 			<height normal="43.5"/>
 		</collision>
 	</npc>
-	<npc id="22811" level="85" originalLevel="73" type="L2Monster" name="Great Chaos Golem">
+	<npc id="22811" level="73" type="L2Monster" name="Great Chaos Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -858,7 +858,7 @@
 			<height normal="46.3765"/>
 		</collision>
 	</npc>
-	<npc id="22812" level="85" originalLevel="72" type="L2Monster" name="Boom Golem">
+	<npc id="22812" level="72" type="L2Monster" name="Boom Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6264" level="1"/> <!-- Golem Boom -->
@@ -928,7 +928,7 @@
 			<height normal="13"/>
 		</collision>
 	</npc>
-	<npc id="22813" level="85" originalLevel="80" type="L2Monster" name="Demon's Banquet">
+	<npc id="22813" level="80" type="L2Monster" name="Demon's Banquet">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945"/> <!-- rhand: Skeleton Dagger lhand: Skeleton Buckler -->
@@ -961,7 +961,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="22814" level="85" originalLevel="80" type="L2Monster" name="Demon's Banquet">
+	<npc id="22814" level="80" type="L2Monster" name="Demon's Banquet">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945"/> <!-- rhand: Skeleton Dagger lhand: Skeleton Buckler -->
@@ -994,7 +994,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="22815" level="85" originalLevel="80" type="L2Monster" name="Drakos">
+	<npc id="22815" level="80" type="L2Monster" name="Drakos">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1077,7 +1077,7 @@
 			<height normal="27.2"/>
 		</collision>
 	</npc>
-	<npc id="22816" level="85" originalLevel="81" type="L2Monster" name="Maluk Maiden of the Valley">
+	<npc id="22816" level="81" type="L2Monster" name="Maluk Maiden of the Valley">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1149,7 +1149,7 @@
 			<height normal="30.7"/>
 		</collision>
 	</npc>
-	<npc id="22817" level="85" originalLevel="82" type="L2Monster" name="Maluk Summoner of the Valley">
+	<npc id="22817" level="82" type="L2Monster" name="Maluk Summoner of the Valley">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6849" level="1"/> <!-- Summoner Strike -->
@@ -1220,7 +1220,7 @@
 			<height normal="27.5"/>
 		</collision>
 	</npc>
-	<npc id="22818" level="85" originalLevel="81" type="L2Monster" name="Exploding Orc Ghost">
+	<npc id="22818" level="81" type="L2Monster" name="Exploding Orc Ghost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1301,7 +1301,7 @@
 			<height normal="22.3"/>
 		</collision>
 	</npc>
-	<npc id="22819" level="85" originalLevel="81" type="L2Monster" name="Wrathful Orc Ghost">
+	<npc id="22819" level="81" type="L2Monster" name="Wrathful Orc Ghost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1378,7 +1378,7 @@
 			<height normal="24.6"/>
 		</collision>
 	</npc>
-	<npc id="22820" level="85" originalLevel="82" type="L2Monster" name="Mesmer Drake" title="Scout">
+	<npc id="22820" level="82" type="L2Monster" name="Mesmer Drake" title="Scout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1453,7 +1453,7 @@
 			<height normal="44"/>
 		</collision>
 	</npc>
-	<npc id="22821" level="85" originalLevel="82" type="L2Monster" name="Immortal Necromancer" title="Scout">
+	<npc id="22821" level="82" type="L2Monster" name="Immortal Necromancer" title="Scout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1522,7 +1522,7 @@
 			<height normal="45"/>
 		</collision>
 	</npc>
-	<npc id="22822" level="85" originalLevel="83" type="L2Monster" name="Drakos Warrior">
+	<npc id="22822" level="83" type="L2Monster" name="Drakos Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1601,7 +1601,7 @@
 			<height normal="55"/>
 		</collision>
 	</npc>
-	<npc id="22823" level="85" originalLevel="83" type="L2Monster" name="Drakos Assassin">
+	<npc id="22823" level="83" type="L2Monster" name="Drakos Assassin">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1681,7 +1681,7 @@
 			<height normal="27.2"/>
 		</collision>
 	</npc>
-	<npc id="22824" level="85" originalLevel="84" type="L2Monster" name="Drakos Guardian">
+	<npc id="22824" level="84" type="L2Monster" name="Drakos Guardian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1769,7 +1769,7 @@
 			<height normal="55"/>
 		</collision>
 	</npc>
-	<npc id="22825" level="85" originalLevel="83" type="L2Monster" name="Giant Scorpion Bones">
+	<npc id="22825" level="83" type="L2Monster" name="Giant Scorpion Bones">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1852,7 +1852,7 @@
 			<height normal="66"/>
 		</collision>
 	</npc>
-	<npc id="22826" level="85" originalLevel="83" type="L2Monster" name="Scorpion Bones">
+	<npc id="22826" level="83" type="L2Monster" name="Scorpion Bones">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1930,7 +1930,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="22827" level="85" originalLevel="84" type="L2Monster" name="Batwing Drake">
+	<npc id="22827" level="84" type="L2Monster" name="Batwing Drake">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2012,7 +2012,7 @@
 			<height normal="90"/>
 		</collision>
 	</npc>
-	<npc id="22828" level="85" originalLevel="83" type="L2Monster" name="Parasitic Leech">
+	<npc id="22828" level="83" type="L2Monster" name="Parasitic Leech">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2096,7 +2096,7 @@
 			<height normal="16"/>
 		</collision>
 	</npc>
-	<npc id="22829" level="85" originalLevel="82" type="L2Monster" name="Emerald Drake">
+	<npc id="22829" level="82" type="L2Monster" name="Emerald Drake">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2182,7 +2182,7 @@
 			<height normal="75"/>
 		</collision>
 	</npc>
-	<npc id="22830" level="85" originalLevel="83" type="L2Monster" name="Gem Dragon">
+	<npc id="22830" level="83" type="L2Monster" name="Gem Dragon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2270,7 +2270,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="22831" level="85" originalLevel="83" type="L2Monster" name="Dragon Tracker of the Valley" title="Tracker">
+	<npc id="22831" level="83" type="L2Monster" name="Dragon Tracker of the Valley" title="Tracker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2354,7 +2354,7 @@
 			<height normal="36"/>
 		</collision>
 	</npc>
-	<npc id="22832" level="85" originalLevel="83" type="L2Monster" name="Dragon Scout of the Valley" title="Scout">
+	<npc id="22832" level="83" type="L2Monster" name="Dragon Scout of the Valley" title="Scout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2441,7 +2441,7 @@
 			<height normal="28"/>
 		</collision>
 	</npc>
-	<npc id="22833" level="85" originalLevel="83" type="L2Monster" name="Sand Drake Tracker" title="Tracker">
+	<npc id="22833" level="83" type="L2Monster" name="Sand Drake Tracker" title="Tracker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2531,7 +2531,7 @@
 			<height normal="63"/>
 		</collision>
 	</npc>
-	<npc id="22834" level="85" originalLevel="84" type="L2Monster" name="Dust Dragon Tracker" title="Tracker">
+	<npc id="22834" level="84" type="L2Monster" name="Dust Dragon Tracker" title="Tracker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2614,7 +2614,7 @@
 			<height normal="45"/>
 		</collision>
 	</npc>
-	<npc id="22835" level="85" originalLevel="83" type="L2Monster" name="Magma Drake Mother">
+	<npc id="22835" level="83" type="L2Monster" name="Magma Drake Mother">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -2666,7 +2666,7 @@
 			<height normal="42"/>
 		</collision>
 	</npc>
-	<npc id="22836" level="85" originalLevel="83" type="L2Monster" name="Magma Drake Hatchling">
+	<npc id="22836" level="83" type="L2Monster" name="Magma Drake Hatchling">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -2718,7 +2718,7 @@
 			<height normal="15.5"/>
 		</collision>
 	</npc>
-	<npc id="22837" level="85" originalLevel="83" type="L2Monster" name="Gem Dragon Hatchling">
+	<npc id="22837" level="83" type="L2Monster" name="Gem Dragon Hatchling">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -2769,7 +2769,7 @@
 			<height normal="16.5"/>
 		</collision>
 	</npc>
-	<npc id="22838" level="85" originalLevel="85" type="L2Monster" name="Maluk Leader">
+	<npc id="22838" level="85" type="L2Monster" name="Maluk Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2857,7 +2857,7 @@
 			<height normal="45"/>
 		</collision>
 	</npc>
-	<npc id="22839" level="85" originalLevel="85" type="L2Monster" name="Maluk Warlord">
+	<npc id="22839" level="85" type="L2Monster" name="Maluk Warlord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2950,7 +2950,7 @@
 			<height normal="60"/>
 		</collision>
 	</npc>
-	<npc id="22840" level="85" originalLevel="85" type="L2Monster" name="Maluk Hunter">
+	<npc id="22840" level="85" type="L2Monster" name="Maluk Hunter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3043,7 +3043,7 @@
 			<height normal="34"/>
 		</collision>
 	</npc>
-	<npc id="22841" level="85" originalLevel="85" type="L2Monster" name="Maluk Princess">
+	<npc id="22841" level="85" type="L2Monster" name="Maluk Princess">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3128,7 +3128,7 @@
 			<height normal="41"/>
 		</collision>
 	</npc>
-	<npc id="22842" level="85" originalLevel="85" type="L2Monster" name="Maluk Banshee">
+	<npc id="22842" level="85" type="L2Monster" name="Maluk Banshee">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3215,7 +3215,7 @@
 			<height normal="32"/>
 		</collision>
 	</npc>
-	<npc id="22843" level="85" originalLevel="85" type="L2Monster" name="Maluk Sniper">
+	<npc id="22843" level="85" type="L2Monster" name="Maluk Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3301,7 +3301,7 @@
 			<height normal="26"/>
 		</collision>
 	</npc>
-	<npc id="22844" level="85" originalLevel="85" type="L2Monster" name="Dragon Knight">
+	<npc id="22844" level="85" type="L2Monster" name="Dragon Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3390,7 +3390,7 @@
 			<height normal="36"/>
 		</collision>
 	</npc>
-	<npc id="22845" level="85" originalLevel="85" type="L2Monster" name="Dragon Knight">
+	<npc id="22845" level="85" type="L2Monster" name="Dragon Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3479,7 +3479,7 @@
 			<height normal="49.9"/>
 		</collision>
 	</npc>
-	<npc id="22846" level="85" originalLevel="85" type="L2Monster" name="Elite Dragon Knight">
+	<npc id="22846" level="85" type="L2Monster" name="Elite Dragon Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3567,7 +3567,7 @@
 			<height normal="49.9"/>
 		</collision>
 	</npc>
-	<npc id="22847" level="85" originalLevel="85" type="L2Monster" name="Dragon Knight Warrior">
+	<npc id="22847" level="85" type="L2Monster" name="Dragon Knight Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6760" level="1"/> <!-- Dragon Strike -->
@@ -3655,7 +3655,7 @@
 			<height normal="33"/>
 		</collision>
 	</npc>
-	<npc id="22848" level="85" originalLevel="85" type="L2Monster" name="Drake Leader">
+	<npc id="22848" level="85" type="L2Monster" name="Drake Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3743,7 +3743,7 @@
 			<height normal="49.9"/>
 		</collision>
 	</npc>
-	<npc id="22849" level="85" originalLevel="85" type="L2Monster" name="Drake Warrior">
+	<npc id="22849" level="85" type="L2Monster" name="Drake Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6760" level="1"/> <!-- Dragon Strike -->
@@ -3829,7 +3829,7 @@
 			<height normal="42"/>
 		</collision>
 	</npc>
-	<npc id="22850" level="85" originalLevel="85" type="L2Monster" name="Drake Scout">
+	<npc id="22850" level="85" type="L2Monster" name="Drake Scout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6764" level="1"/> <!-- Dragon Earth Shot -->
@@ -3916,7 +3916,7 @@
 			<height normal="36"/>
 		</collision>
 	</npc>
-	<npc id="22851" level="85" originalLevel="85" type="L2Monster" name="Drake Mage">
+	<npc id="22851" level="85" type="L2Monster" name="Drake Mage">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6766" level="1"/> <!-- Earth Tremor -->
@@ -3999,7 +3999,7 @@
 			<height normal="39.5"/>
 		</collision>
 	</npc>
-	<npc id="22852" level="85" originalLevel="85" type="L2Monster" name="Dragon Guard">
+	<npc id="22852" level="85" type="L2Monster" name="Dragon Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4082,7 +4082,7 @@
 			<height normal="55"/>
 		</collision>
 	</npc>
-	<npc id="22853" level="85" originalLevel="85" type="L2Monster" name="Dragon Mage">
+	<npc id="22853" level="85" type="L2Monster" name="Dragon Mage">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4167,7 +4167,7 @@
 			<height normal="34.5"/>
 		</collision>
 	</npc>
-	<npc id="22854" level="85" originalLevel="86" type="L2Monster" name="Bloody Karik">
+	<npc id="22854" level="86" type="L2Monster" name="Bloody Karik">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4253,7 +4253,7 @@
 			<height normal="57"/>
 		</collision>
 	</npc>
-	<npc id="22855" level="85" originalLevel="86" type="L2Monster" name="Bloody Berserker">
+	<npc id="22855" level="86" type="L2Monster" name="Bloody Berserker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4339,7 +4339,7 @@
 			<height normal="43"/>
 		</collision>
 	</npc>
-	<npc id="22856" level="85" originalLevel="86" type="L2Monster" name="Bloody Karinness">
+	<npc id="22856" level="86" type="L2Monster" name="Bloody Karinness">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4430,7 +4430,7 @@
 			<height normal="38"/>
 		</collision>
 	</npc>
-	<npc id="22857" level="85" originalLevel="85" type="L2Monster" name="Knoriks" title="Land Dragon's Patroller">
+	<npc id="22857" level="85" type="L2Monster" name="Knoriks" title="Land Dragon's Patroller">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -4515,7 +4515,7 @@
 			<height normal="42"/>
 		</collision>
 	</npc>
-	<npc id="22858" level="85" originalLevel="82" type="L2Monster" name="Necromancer of the Valley">
+	<npc id="22858" level="82" type="L2Monster" name="Necromancer of the Valley">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4591,7 +4591,7 @@
 			<height normal="45"/>
 		</collision>
 	</npc>
-	<npc id="22859" level="85" originalLevel="81" type="L2Monster" name="Howl" title="Tracker">
+	<npc id="22859" level="81" type="L2Monster" name="Howl" title="Tracker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4666,7 +4666,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="22860" level="85" originalLevel="82" type="L2Monster" name="Hungry Parasitic Leech">
+	<npc id="22860" level="82" type="L2Monster" name="Hungry Parasitic Leech">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4757,7 +4757,7 @@
 			<height normal="16"/>
 		</collision>
 	</npc>
-	<npc id="22861" level="85" originalLevel="83" type="L2Monster" name="Hard Scorpion Bones">
+	<npc id="22861" level="83" type="L2Monster" name="Hard Scorpion Bones">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4844,7 +4844,7 @@
 			<height normal="66"/>
 		</collision>
 	</npc>
-	<npc id="22862" level="85" originalLevel="83" type="L2Monster" name="Drakos Hunter">
+	<npc id="22862" level="83" type="L2Monster" name="Drakos Hunter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>

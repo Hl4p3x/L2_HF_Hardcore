@@ -105,23 +105,23 @@ public class L2PetManagerInstance extends L2MerchantInstance
 			// To ignore evolve just put value 0 where do you like example: evolve(player, 0, 9882, 55);
 				case 1:
 					// Wolf to Great Wolf
-					ok = Evolve.doEvolve(player, this, 2375, 9882, 85, 30000000);
+					ok = Evolve.doEvolve(player, this, 2375, 9882, 55, 30000000);
 					break;
 				case 2:
 					// Great Wolf to Fenrir
-					ok = Evolve.doEvolve(player, this, 9882, 10426, 85, 60000000);
+					ok = Evolve.doEvolve(player, this, 9882, 10426, 75, 60000000);
 					break;
 				case 3:
 					// Baby Buffalo to Improved
-					ok = Evolve.doEvolve(player, this, 6648, 10311, 85, 10000000);
+					ok = Evolve.doEvolve(player, this, 6648, 10311, 55, 10000000);
 					break;
 				case 4:
 					// Baby Kookaburra to Improved
-					ok = Evolve.doEvolve(player, this, 6650, 10313, 85, 10000000);
+					ok = Evolve.doEvolve(player, this, 6650, 10313, 55, 10000000);
 					break;
 				case 5:
 					// Baby Cougar Chime to Improved
-					ok = Evolve.doEvolve(player, this, 6649, 10312, 85, 10000000);
+					ok = Evolve.doEvolve(player, this, 6649, 10312, 55, 10000000);
 					break;
 			}
 			if (!ok)

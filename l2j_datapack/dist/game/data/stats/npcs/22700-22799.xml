@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="22700" level="85" originalLevel="82" type="L2Monster" name="Varangka's Guardian">
+	<npc id="22700" level="82" type="L2Monster" name="Varangka's Guardian">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -26,7 +26,7 @@
 			<height normal="39.5" grown="69"/>
 		</collision>
 	</npc>
-	<npc id="22701" level="85" originalLevel="81" type="L2Monster" name="Varangka's Dre Vanul">
+	<npc id="22701" level="81" type="L2Monster" name="Varangka's Dre Vanul">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000"/>
@@ -106,7 +106,7 @@
 			<height normal="44"/>
 		</collision>
 	</npc>
-	<npc id="22702" level="85" originalLevel="82" type="L2Monster" name="Varangka's Destroyer">
+	<npc id="22702" level="82" type="L2Monster" name="Varangka's Destroyer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000"/>
@@ -188,7 +188,7 @@
 			<height normal="32"/>
 		</collision>
 	</npc>
-	<npc id="22703" level="85" originalLevel="81" type="L2Monster" name="Contaminated Morek Warrior">
+	<npc id="22703" level="81" type="L2Monster" name="Contaminated Morek Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="1000"/>
@@ -264,7 +264,7 @@
 			<height normal="28.8" grown="34.9"/>
 		</collision>
 	</npc>
-	<npc id="22704" level="85" originalLevel="81" type="L2Monster" name="Contaminated Batur Warrior">
+	<npc id="22704" level="81" type="L2Monster" name="Contaminated Batur Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -353,7 +353,7 @@
 			<height normal="34.8"/>
 		</collision>
 	</npc>
-	<npc id="22705" level="85" originalLevel="82" type="L2Monster" name="Contaminated Batur Commander">
+	<npc id="22705" level="82" type="L2Monster" name="Contaminated Batur Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -442,7 +442,7 @@
 			<height normal="28.8"/>
 		</collision>
 	</npc>
-	<npc id="22706" level="85" originalLevel="82" type="L2Monster" name="Turka Follower's Ghost">
+	<npc id="22706" level="82" type="L2Monster" name="Turka Follower's Ghost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -531,7 +531,7 @@
 			<height normal="28.8"/>
 		</collision>
 	</npc>
-	<npc id="22707" level="85" originalLevel="82" type="L2Monster" name="Turka Commander's Ghost" title="Grave Guardian Spirit">
+	<npc id="22707" level="82" type="L2Monster" name="Turka Commander's Ghost" title="Grave Guardian Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -618,7 +618,7 @@
 			<height normal="46.2"/>
 		</collision>
 	</npc>
-	<npc id="22708" level="85" originalLevel="81" type="L2Monster" name="Invader Warrior of Nightmare">
+	<npc id="22708" level="81" type="L2Monster" name="Invader Warrior of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -700,7 +700,7 @@
 			<height normal="30" grown="36"/>
 		</collision>
 	</npc>
-	<npc id="22709" level="85" originalLevel="81" type="L2Monster" name="Invader Healer of Nightmare">
+	<npc id="22709" level="81" type="L2Monster" name="Invader Healer of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -781,7 +781,7 @@
 			<height normal="42"/>
 		</collision>
 	</npc>
-	<npc id="22710" level="85" originalLevel="81" type="L2Monster" name="Invader Guide of Nightmare">
+	<npc id="22710" level="81" type="L2Monster" name="Invader Guide of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -864,7 +864,7 @@
 			<height normal="42"/>
 		</collision>
 	</npc>
-	<npc id="22711" level="85" originalLevel="81" type="L2Monster" name="Invader Destroyer of Nightmare">
+	<npc id="22711" level="81" type="L2Monster" name="Invader Destroyer of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -943,7 +943,7 @@
 			<height normal="45" grown="52"/>
 		</collision>
 	</npc>
-	<npc id="22712" level="85" originalLevel="81" type="L2Monster" name="Invader Assassin of Nightmare">
+	<npc id="22712" level="81" type="L2Monster" name="Invader Assassin of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1014,7 +1014,7 @@
 			<height normal="20"/>
 		</collision>
 	</npc>
-	<npc id="22713" level="85" originalLevel="81" type="L2Monster" name="Invader Shaman of Nightmare">
+	<npc id="22713" level="81" type="L2Monster" name="Invader Shaman of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1093,7 +1093,7 @@
 			<height normal="26.5"/>
 		</collision>
 	</npc>
-	<npc id="22714" level="85" originalLevel="81" type="L2Monster" name="Invader Archer of Nightmare">
+	<npc id="22714" level="81" type="L2Monster" name="Invader Archer of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1165,7 +1165,7 @@
 			<height normal="26"/>
 		</collision>
 	</npc>
-	<npc id="22715" level="85" originalLevel="81" type="L2Monster" name="Invader Soldier of Nightmare">
+	<npc id="22715" level="81" type="L2Monster" name="Invader Soldier of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1238,7 +1238,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="22716" level="85" originalLevel="81" type="L2Monster" name="Invader Soldier of Nightmare">
+	<npc id="22716" level="81" type="L2Monster" name="Invader Soldier of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1312,7 +1312,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="22717" level="85" originalLevel="81" type="L2Monster" name="Invader Disciple of Nightmare">
+	<npc id="22717" level="81" type="L2Monster" name="Invader Disciple of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1386,7 +1386,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="22718" level="85" originalLevel="81" type="L2Monster" name="Invader Elite Soldier of Nightmare">
+	<npc id="22718" level="81" type="L2Monster" name="Invader Elite Soldier of Nightmare">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1461,7 +1461,7 @@
 			<height normal="40" grown="48"/>
 		</collision>
 	</npc>
-	<npc id="22719" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Warrior">
+	<npc id="22719" level="82" type="L2Monster" name="Nihil Invader Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1536,7 +1536,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="22720" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Healer">
+	<npc id="22720" level="82" type="L2Monster" name="Nihil Invader Healer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1618,7 +1618,7 @@
 			<height normal="32.5"/>
 		</collision>
 	</npc>
-	<npc id="22721" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Guide">
+	<npc id="22721" level="82" type="L2Monster" name="Nihil Invader Guide">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1702,7 +1702,7 @@
 			<height normal="32.5"/>
 		</collision>
 	</npc>
-	<npc id="22722" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Destroyer">
+	<npc id="22722" level="82" type="L2Monster" name="Nihil Invader Destroyer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1775,7 +1775,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="22723" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Assassin">
+	<npc id="22723" level="82" type="L2Monster" name="Nihil Invader Assassin">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1852,7 +1852,7 @@
 			<height normal="32.5"/>
 		</collision>
 	</npc>
-	<npc id="22724" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Shaman">
+	<npc id="22724" level="82" type="L2Monster" name="Nihil Invader Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -1932,7 +1932,7 @@
 			<height normal="32.5"/>
 		</collision>
 	</npc>
-	<npc id="22725" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Archer">
+	<npc id="22725" level="82" type="L2Monster" name="Nihil Invader Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2006,7 +2006,7 @@
 			<height normal="27.5"/>
 		</collision>
 	</npc>
-	<npc id="22726" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Soldier">
+	<npc id="22726" level="82" type="L2Monster" name="Nihil Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2080,7 +2080,7 @@
 			<height normal="41"/>
 		</collision>
 	</npc>
-	<npc id="22727" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Soldier">
+	<npc id="22727" level="82" type="L2Monster" name="Nihil Invader Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2155,7 +2155,7 @@
 			<height normal="41"/>
 		</collision>
 	</npc>
-	<npc id="22728" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Disciple">
+	<npc id="22728" level="82" type="L2Monster" name="Nihil Invader Disciple">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2230,7 +2230,7 @@
 			<height normal="33"/>
 		</collision>
 	</npc>
-	<npc id="22729" level="85" originalLevel="82" type="L2Monster" name="Nihil Invader Elite Soldier">
+	<npc id="22729" level="82" type="L2Monster" name="Nihil Invader Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2305,7 +2305,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="22730" level="85" originalLevel="84" type="L2Monster" name="Mutant Warrior">
+	<npc id="22730" level="84" type="L2Monster" name="Mutant Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2382,7 +2382,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="22731" level="85" originalLevel="84" type="L2Monster" name="Mutant Healer">
+	<npc id="22731" level="84" type="L2Monster" name="Mutant Healer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2460,7 +2460,7 @@
 			<height normal="50"/>
 		</collision>
 	</npc>
-	<npc id="22732" level="85" originalLevel="84" type="L2Monster" name="Mutant Guide">
+	<npc id="22732" level="84" type="L2Monster" name="Mutant Guide">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2549,7 +2549,7 @@
 			<height normal="50"/>
 		</collision>
 	</npc>
-	<npc id="22733" level="85" originalLevel="84" type="L2Monster" name="Mutant Destroyer">
+	<npc id="22733" level="84" type="L2Monster" name="Mutant Destroyer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2631,7 +2631,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="22734" level="85" originalLevel="84" type="L2Monster" name="Mutant Assassin">
+	<npc id="22734" level="84" type="L2Monster" name="Mutant Assassin">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2709,7 +2709,7 @@
 			<height normal="32.5"/>
 		</collision>
 	</npc>
-	<npc id="22735" level="85" originalLevel="84" type="L2Monster" name="Mutant Shaman">
+	<npc id="22735" level="84" type="L2Monster" name="Mutant Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2791,7 +2791,7 @@
 			<height normal="50"/>
 		</collision>
 	</npc>
-	<npc id="22736" level="85" originalLevel="84" type="L2Monster" name="Mutant Overlord">
+	<npc id="22736" level="84" type="L2Monster" name="Mutant Overlord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2865,7 +2865,7 @@
 			<height normal="34"/>
 		</collision>
 	</npc>
-	<npc id="22737" level="85" originalLevel="84" type="L2Monster" name="Mutant Soldier">
+	<npc id="22737" level="84" type="L2Monster" name="Mutant Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -2939,7 +2939,7 @@
 			<height normal="41"/>
 		</collision>
 	</npc>
-	<npc id="22738" level="85" originalLevel="84" type="L2Monster" name="Mutant Soldier">
+	<npc id="22738" level="84" type="L2Monster" name="Mutant Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3013,7 +3013,7 @@
 			<height normal="41"/>
 		</collision>
 	</npc>
-	<npc id="22739" level="85" originalLevel="84" type="L2Monster" name="Mutant Disciple">
+	<npc id="22739" level="84" type="L2Monster" name="Mutant Disciple">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3088,7 +3088,7 @@
 			<height normal="45"/>
 		</collision>
 	</npc>
-	<npc id="22740" level="85" originalLevel="84" type="L2Monster" name="Mutant Elite Soldier">
+	<npc id="22740" level="84" type="L2Monster" name="Mutant Elite Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -3166,7 +3166,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="22741" level="85" originalLevel="81" type="L2Monster" name="Grave Robber Warrior">
+	<npc id="22741" level="81" type="L2Monster" name="Grave Robber Warrior">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3239,7 +3239,7 @@
 			<height normal="27.5"/>
 		</collision>
 	</npc>
-	<npc id="22742" level="85" originalLevel="80" type="L2Monster" name="Ornithomimus">
+	<npc id="22742" level="80" type="L2Monster" name="Ornithomimus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0"/>
@@ -3329,7 +3329,7 @@
 			<height normal="37.2"/>
 		</collision>
 	</npc>
-	<npc id="22743" level="85" originalLevel="80" type="L2Monster" name="Deinonychus">
+	<npc id="22743" level="80" type="L2Monster" name="Deinonychus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0"/>
@@ -3413,7 +3413,7 @@
 			<height normal="14.3"/>
 		</collision>
 	</npc>
-	<npc id="22744" level="85" originalLevel="80" type="L2Monster" name="Ornithomimus">
+	<npc id="22744" level="80" type="L2Monster" name="Ornithomimus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0"/>
@@ -3497,7 +3497,7 @@
 			<height normal="37.2"/>
 		</collision>
 	</npc>
-	<npc id="22745" level="85" originalLevel="80" type="L2Monster" name="Deinonychus">
+	<npc id="22745" level="80" type="L2Monster" name="Deinonychus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0"/>
@@ -3575,7 +3575,7 @@
 			<height normal="14.3"/>
 		</collision>
 	</npc>
-	<npc id="22746" level="85" originalLevel="85" type="L2Monster" name="Bgurent">
+	<npc id="22746" level="85" type="L2Monster" name="Bgurent">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6382" level="1"/> <!-- Bistakon Rolling Claw -->
@@ -3661,7 +3661,7 @@
 			<height normal="30.5"/>
 		</collision>
 	</npc>
-	<npc id="22747" level="85" originalLevel="85" type="L2Monster" name="Brakian">
+	<npc id="22747" level="85" type="L2Monster" name="Brakian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6384" level="2"/> <!-- Bistakon Deadly Blow -->
@@ -3745,7 +3745,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="22748" level="85" originalLevel="85" type="L2Monster" name="Groikan">
+	<npc id="22748" level="85" type="L2Monster" name="Groikan">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6386" level="1"/> <!-- Bistakon Earth Rise -->
@@ -3831,7 +3831,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="22749" level="85" originalLevel="85" type="L2Monster" name="Treykan">
+	<npc id="22749" level="85" type="L2Monster" name="Treykan">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6381" level="1"/> <!-- Bistakon Soul Beam -->
@@ -3933,7 +3933,7 @@
 			<height normal="27"/>
 		</collision>
 	</npc>
-	<npc id="22750" level="85" originalLevel="85" type="L2Monster" name="Elite Bgurent" title="Bistakon">
+	<npc id="22750" level="85" type="L2Monster" name="Elite Bgurent" title="Bistakon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6382" level="1"/> <!-- Bistakon Rolling Claw -->
@@ -4028,7 +4028,7 @@
 			<height normal="40.5"/>
 		</collision>
 	</npc>
-	<npc id="22751" level="85" originalLevel="85" type="L2Monster" name="Elite Brakian" title="Bistakon">
+	<npc id="22751" level="85" type="L2Monster" name="Elite Brakian" title="Bistakon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6384" level="2"/> <!-- Bistakon Deadly Blow -->
@@ -4127,7 +4127,7 @@
 			<height normal="41.5"/>
 		</collision>
 	</npc>
-	<npc id="22752" level="85" originalLevel="85" type="L2Monster" name="Elite Groikan" title="Bistakon">
+	<npc id="22752" level="85" type="L2Monster" name="Elite Groikan" title="Bistakon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6386" level="1"/> <!-- Bistakon Earth Rise -->
@@ -4213,7 +4213,7 @@
 			<height normal="47"/>
 		</collision>
 	</npc>
-	<npc id="22753" level="85" originalLevel="85" type="L2Monster" name="Elite Treykan" title="Bistakon">
+	<npc id="22753" level="85" type="L2Monster" name="Elite Treykan" title="Bistakon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6381" level="1"/> <!-- Bistakon Soul Beam -->
@@ -4297,7 +4297,7 @@
 			<height normal="42"/>
 		</collision>
 	</npc>
-	<npc id="22754" level="85" originalLevel="85" type="L2Monster" name="Turtlelian">
+	<npc id="22754" level="85" type="L2Monster" name="Turtlelian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6409" level="1"/> <!-- Reptilikon Earthquake -->
@@ -4399,7 +4399,7 @@
 			<height normal="28.5"/>
 		</collision>
 	</npc>
-	<npc id="22755" level="85" originalLevel="85" type="L2Monster" name="Krajian">
+	<npc id="22755" level="85" type="L2Monster" name="Krajian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6413" level="1"/> <!-- Reptilikon Missile -->
@@ -4494,7 +4494,7 @@
 			<height normal="36"/>
 		</collision>
 	</npc>
-	<npc id="22756" level="85" originalLevel="85" type="L2Monster" name="Tardyon">
+	<npc id="22756" level="85" type="L2Monster" name="Tardyon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6416" level="1"/> <!-- Reptilikon Poison Breath -->
@@ -4587,7 +4587,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="22757" level="85" originalLevel="85" type="L2Monster" name="Elite Turtlelian" title="Reptilikon">
+	<npc id="22757" level="85" type="L2Monster" name="Elite Turtlelian" title="Reptilikon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6409" level="1"/> <!-- Reptilikon Earthquake -->
@@ -4674,7 +4674,7 @@
 			<height normal="42"/>
 		</collision>
 	</npc>
-	<npc id="22758" level="85" originalLevel="85" type="L2Monster" name="Elite Krajian" title="Reptilikon">
+	<npc id="22758" level="85" type="L2Monster" name="Elite Krajian" title="Reptilikon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6413" level="1"/> <!-- Reptilikon Missile -->
@@ -4759,7 +4759,7 @@
 			<height normal="48"/>
 		</collision>
 	</npc>
-	<npc id="22759" level="85" originalLevel="85" type="L2Monster" name="Elite Tardyon" title="Reptilikon">
+	<npc id="22759" level="85" type="L2Monster" name="Elite Tardyon" title="Reptilikon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6416" level="1"/> <!-- Reptilikon Poison Breath -->
@@ -4844,7 +4844,7 @@
 			<height normal="47"/>
 		</collision>
 	</npc>
-	<npc id="22760" level="85" originalLevel="85" type="L2Monster" name="Kanibi">
+	<npc id="22760" level="85" type="L2Monster" name="Kanibi">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6393" level="1"/> <!-- Cokrakon Sonic Beam -->
@@ -4946,7 +4946,7 @@
 			<height normal="45.5"/>
 		</collision>
 	</npc>
-	<npc id="22761" level="85" originalLevel="85" type="L2Monster" name="Kiriona">
+	<npc id="22761" level="85" type="L2Monster" name="Kiriona">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6396" level="1"/> <!-- Cokrakon Panic -->
@@ -5043,7 +5043,7 @@
 			<height normal="33"/>
 		</collision>
 	</npc>
-	<npc id="22762" level="85" originalLevel="85" type="L2Monster" name="Kaiona">
+	<npc id="22762" level="85" type="L2Monster" name="Kaiona">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6399" level="1"/> <!-- Cokrakon Dreadful Piercing -->
@@ -5135,7 +5135,7 @@
 			<height normal="37.5"/>
 		</collision>
 	</npc>
-	<npc id="22763" level="85" originalLevel="85" type="L2Monster" name="Elite Kanibi" title="Kokracon">
+	<npc id="22763" level="85" type="L2Monster" name="Elite Kanibi" title="Kokracon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6393" level="1"/> <!-- Cokrakon Sonic Beam -->
@@ -5232,7 +5232,7 @@
 			<height normal="69.5"/>
 		</collision>
 	</npc>
-	<npc id="22764" level="85" originalLevel="85" type="L2Monster" name="Elite Kiriona" title="Kokracon">
+	<npc id="22764" level="85" type="L2Monster" name="Elite Kiriona" title="Kokracon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6396" level="1"/> <!-- Cokrakon Panic -->
@@ -5332,7 +5332,7 @@
 			<height normal="46"/>
 		</collision>
 	</npc>
-	<npc id="22765" level="85" originalLevel="85" type="L2Monster" name="Elite Kaiona" title="Kokracon">
+	<npc id="22765" level="85" type="L2Monster" name="Elite Kaiona" title="Kokracon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6399" level="1"/> <!-- Cokrakon Dreadful Piercing -->
@@ -5417,7 +5417,7 @@
 			<height normal="49.5"/>
 		</collision>
 	</npc>
-	<npc id="22766" level="85" originalLevel="85" type="L2Monster" name="Mithril Millipede">
+	<npc id="22766" level="85" type="L2Monster" name="Mithril Millipede">
 		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -5466,7 +5466,7 @@
 			<height normal="8"/>
 		</collision>
 	</npc>
-	<npc id="22767" level="85" originalLevel="85" type="L2Monster" name="Archery Knight">
+	<npc id="22767" level="85" type="L2Monster" name="Archery Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1"/> <!-- Power Strike -->
@@ -5522,7 +5522,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="22768" level="85" originalLevel="82" type="L2Monster" name="Tanta Lizardman Scout">
+	<npc id="22768" level="82" type="L2Monster" name="Tanta Lizardman Scout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -5607,7 +5607,7 @@
 			<height normal="35" grown="42.2"/>
 		</collision>
 	</npc>
-	<npc id="22769" level="85" originalLevel="83" type="L2Monster" name="Tanta Lizardman Warrior">
+	<npc id="22769" level="83" type="L2Monster" name="Tanta Lizardman Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6420" level="1"/> <!-- Lizard Strike -->
@@ -5692,7 +5692,7 @@
 			<height normal="40" grown="48"/>
 		</collision>
 	</npc>
-	<npc id="22770" level="85" originalLevel="84" type="L2Monster" name="Tanta Lizardman Soldier">
+	<npc id="22770" level="84" type="L2Monster" name="Tanta Lizardman Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6421" level="1"/> <!-- Rage of Soldier -->
@@ -5789,7 +5789,7 @@
 			<height normal="40.25"/>
 		</collision>
 	</npc>
-	<npc id="22771" level="85" originalLevel="84" type="L2Monster" name="Tanta Lizardman Berserker">
+	<npc id="22771" level="84" type="L2Monster" name="Tanta Lizardman Berserker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6422" level="1"/> <!-- Resistance Explosion -->
@@ -5876,7 +5876,7 @@
 			<height normal="37.5"/>
 		</collision>
 	</npc>
-	<npc id="22772" level="85" originalLevel="83" type="L2Monster" name="Tanta Lizardman Archer">
+	<npc id="22772" level="83" type="L2Monster" name="Tanta Lizardman Archer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
       <skill name="Skill01_ID" id="6423" level="1"/>  <!-- Shock -->
@@ -5969,7 +5969,7 @@
 			<height normal="40.25"/>
 		</collision>
 	</npc>
-	<npc id="22773" level="85" originalLevel="83" type="L2Monster" name="Tanta Lizardman Magician">
+	<npc id="22773" level="83" type="L2Monster" name="Tanta Lizardman Magician">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -6072,7 +6072,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="22774" level="85" originalLevel="84" type="L2Monster" name="Tanta Lizardman Summoner">
+	<npc id="22774" level="84" type="L2Monster" name="Tanta Lizardman Summoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6679" level="1"/> <!-- Summoner's Strike -->
@@ -6163,7 +6163,7 @@
 			<height normal="44"/>
 		</collision>
 	</npc>
-	<npc id="22775" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Drill Sergeant">
+	<npc id="22775" level="84" type="L2Monster" name="Sel Mahum Drill Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="500"/>
@@ -6247,7 +6247,7 @@
 			<height normal="31.5"/>
 		</collision>
 	</npc>
-	<npc id="22776" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Training Officer">
+	<npc id="22776" level="84" type="L2Monster" name="Sel Mahum Training Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6338" level="1"/> <!-- Red Slash 2 -->
@@ -6330,7 +6330,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="22777" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Drill Sergeant">
+	<npc id="22777" level="84" type="L2Monster" name="Sel Mahum Drill Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="500"/>
@@ -6414,7 +6414,7 @@
 			<height normal="37"/>
 		</collision>
 	</npc>
-	<npc id="22778" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Drill Sergeant">
+	<npc id="22778" level="84" type="L2Monster" name="Sel Mahum Drill Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6334" level="1"/> <!-- Shock -->
@@ -6498,7 +6498,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="22779" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Escort Guard">
+	<npc id="22779" level="84" type="L2Monster" name="Sel Mahum Escort Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6339" level="1"/> <!-- Sacred Hammer Attack -->
@@ -6599,7 +6599,7 @@
 			<height normal="37"/>
 		</collision>
 	</npc>
-	<npc id="22780" level="85" originalLevel="83" type="L2Monster" name="Sel Mahum Recruit">
+	<npc id="22780" level="83" type="L2Monster" name="Sel Mahum Recruit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="100"/>
@@ -6696,7 +6696,7 @@
 			<height normal="31.5"/>
 		</collision>
 	</npc>
-	<npc id="22781" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Soldier">
+	<npc id="22781" level="84" type="L2Monster" name="Sel Mahum Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="500"/>
@@ -6781,7 +6781,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="22782" level="85" originalLevel="83" type="L2Monster" name="Sel Mahum Recruit">
+	<npc id="22782" level="83" type="L2Monster" name="Sel Mahum Recruit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="100"/>
@@ -6861,7 +6861,7 @@
 			<height normal="37"/>
 		</collision>
 	</npc>
-	<npc id="22783" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Soldier">
+	<npc id="22783" level="84" type="L2Monster" name="Sel Mahum Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="100"/>
@@ -6939,7 +6939,7 @@
 			<height normal="37"/>
 		</collision>
 	</npc>
-	<npc id="22784" level="85" originalLevel="83" type="L2Monster" name="Sel Mahum Recruit">
+	<npc id="22784" level="83" type="L2Monster" name="Sel Mahum Recruit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="100"/>
@@ -7014,7 +7014,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="22785" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Soldier">
+	<npc id="22785" level="84" type="L2Monster" name="Sel Mahum Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="500"/>
@@ -7088,7 +7088,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="22786" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Squad Leader">
+	<npc id="22786" level="84" type="L2Monster" name="Sel Mahum Squad Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6337" level="1"/> <!-- Red Slash 1 -->
@@ -7167,7 +7167,7 @@
 			<height normal="31.5"/>
 		</collision>
 	</npc>
-	<npc id="22787" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Squad Leader">
+	<npc id="22787" level="84" type="L2Monster" name="Sel Mahum Squad Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6339" level="1"/> <!-- Sacred Hammer Attack -->
@@ -7272,7 +7272,7 @@
 			<height normal="37"/>
 		</collision>
 	</npc>
-	<npc id="22788" level="85" originalLevel="84" type="L2Monster" name="Sel Mahum Squad Leader">
+	<npc id="22788" level="84" type="L2Monster" name="Sel Mahum Squad Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6333" level="1"/> <!-- Electric Bolt 1 -->
@@ -7370,7 +7370,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="22789" level="85" originalLevel="83" type="L2Monster" name="Guide Solina">
+	<npc id="22789" level="83" type="L2Monster" name="Guide Solina">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6303" level="1"/> <!-- Trial of the Coup -->
@@ -7462,7 +7462,7 @@
 			<height normal="23.4"/>
 		</collision>
 	</npc>
-	<npc id="22790" level="85" originalLevel="83" type="L2Monster" name="Seeker Solina">
+	<npc id="22790" level="83" type="L2Monster" name="Seeker Solina">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6305" level="1"/> <!-- Sacred Gnosis -->
@@ -7557,7 +7557,7 @@
 			<height normal="25.4"/>
 		</collision>
 	</npc>
-	<npc id="22791" level="85" originalLevel="83" type="L2Monster" name="Savior Solina">
+	<npc id="22791" level="83" type="L2Monster" name="Savior Solina">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6307" level="1"/> <!-- Opus of the Hand -->
@@ -7641,7 +7641,7 @@
 			<height normal="15.6"/>
 		</collision>
 	</npc>
-	<npc id="22792" level="85" originalLevel="83" type="L2Monster" name="Disciple Solina">
+	<npc id="22792" level="83" type="L2Monster" name="Disciple Solina">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6309" level="1"/> <!-- Pain of the Ascetic -->
@@ -7725,7 +7725,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="22793" level="85" originalLevel="83" type="L2Monster" name="Ascetic Solina">
+	<npc id="22793" level="83" type="L2Monster" name="Ascetic Solina">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6310" level="1"/> <!-- Loss of Quest -->
@@ -7807,7 +7807,7 @@
 			<height normal="23.4"/>
 		</collision>
 	</npc>
-	<npc id="22794" level="85" originalLevel="84" type="L2Monster" name="Divinity Judge">
+	<npc id="22794" level="84" type="L2Monster" name="Divinity Judge">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -7893,7 +7893,7 @@
 			<height normal="36.5" grown="42.5"/>
 		</collision>
 	</npc>
-	<npc id="22795" level="85" originalLevel="84" type="L2Monster" name="Divinity Manager">
+	<npc id="22795" level="84" type="L2Monster" name="Divinity Manager">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -7985,7 +7985,7 @@
 			<height normal="80"/>
 		</collision>
 	</npc>
-	<npc id="22796" level="85" originalLevel="84" type="L2Monster" name="Divinity Supervisor">
+	<npc id="22796" level="84" type="L2Monster" name="Divinity Supervisor">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -8075,7 +8075,7 @@
 			<height normal="47"/>
 		</collision>
 	</npc>
-	<npc id="22797" level="85" originalLevel="84" type="L2Monster" name="Divinity Worshipper">
+	<npc id="22797" level="84" type="L2Monster" name="Divinity Worshipper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -8162,7 +8162,7 @@
 			<height normal="49"/>
 		</collision>
 	</npc>
-	<npc id="22798" level="85" originalLevel="84" type="L2Monster" name="Divinity Protector">
+	<npc id="22798" level="84" type="L2Monster" name="Divinity Protector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -8264,7 +8264,7 @@
 			<height normal="44"/>
 		</collision>
 	</npc>
-	<npc id="22799" level="85" originalLevel="84" type="L2Monster" name="Divinity Fighter">
+	<npc id="22799" level="84" type="L2Monster" name="Divinity Fighter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>

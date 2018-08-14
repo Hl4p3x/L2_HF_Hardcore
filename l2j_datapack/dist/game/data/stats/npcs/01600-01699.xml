@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="1600" level="85" originalLevel="80" type="L2Npc" name="Zinyanzi Agathion">
+	<npc id="1600" level="80" type="L2Npc" name="Zinyanzi Agathion">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -19,7 +19,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="1601" level="85" originalLevel="80" type="L2Npc" name="Super Feline Queen Z">
+	<npc id="1601" level="80" type="L2Npc" name="Super Feline Queen Z">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -43,7 +43,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="1602" level="85" originalLevel="80" type="L2Npc" name="Super Kat the Cat Z">
+	<npc id="1602" level="80" type="L2Npc" name="Super Kat the Cat Z">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -74,7 +74,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="1603" level="85" originalLevel="80" type="L2Npc" name="Super Mew the Cat Z">
+	<npc id="1603" level="80" type="L2Npc" name="Super Mew the Cat Z">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -103,7 +103,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="1604" level="85" originalLevel="80" type="L2Npc" name="Hanbok Agathion">
+	<npc id="1604" level="80" type="L2Npc" name="Hanbok Agathion">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -123,7 +123,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="1605" level="85" originalLevel="80" type="L2Npc" name="Juju Agathion">
+	<npc id="1605" level="80" type="L2Npc" name="Juju Agathion">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">

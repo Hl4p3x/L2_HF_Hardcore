@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="32300" level="85" originalLevel="70" type="L2Npc" name="Bernarde">
+	<npc id="32300" level="70" type="L2Npc" name="Bernarde">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -39,7 +39,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32301" level="85" originalLevel="70" type="L2Npc" name="Kendal" title="Wandering Ghost">
+	<npc id="32301" level="70" type="L2Npc" name="Kendal" title="Wandering Ghost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -80,7 +80,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="32302" level="85" originalLevel="70" type="L2Npc" name="Jerian">
+	<npc id="32302" level="70" type="L2Npc" name="Jerian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -120,7 +120,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32303" level="85" originalLevel="70" type="L2Npc" name="Machine">
+	<npc id="32303" level="70" type="L2Npc" name="Machine">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -157,7 +157,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="32304" level="85" originalLevel="70" type="L2Npc" name="Oasis">
+	<npc id="32304" level="70" type="L2Npc" name="Oasis">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -194,7 +194,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="32305" level="85" originalLevel="70" type="L2Npc" name="Ranku's Scapegoat">
+	<npc id="32305" level="70" type="L2Npc" name="Ranku's Scapegoat">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -230,7 +230,7 @@
 			<height normal="47.5"/>
 		</collision>
 	</npc>
-	<npc id="32306" level="85" originalLevel="70" type="L2Npc" name="Native's Corpse">
+	<npc id="32306" level="70" type="L2Npc" name="Native's Corpse">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -271,7 +271,7 @@
 			<height normal="21"/>
 		</collision>
 	</npc>
-	<npc id="32307" level="85" originalLevel="70" type="L2Npc" name="Dolmen">
+	<npc id="32307" level="70" type="L2Npc" name="Dolmen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -312,7 +312,7 @@
 			<height normal="450"/>
 		</collision>
 	</npc>
-	<npc id="32308" level="85" originalLevel="70" type="L2Npc" name="Ming" title="Love Cat">
+	<npc id="32308" level="70" type="L2Npc" name="Ming" title="Love Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -353,7 +353,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="32312" level="85" originalLevel="70" type="L2Npc" name="Rat Hole">
+	<npc id="32312" level="70" type="L2Npc" name="Rat Hole">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -390,7 +390,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="32313" level="85" originalLevel="70" type="L2Npc" name="Deltuva">
+	<npc id="32313" level="70" type="L2Npc" name="Deltuva">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -430,7 +430,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32314" level="85" originalLevel="70" type="L2Npc" name="Warpgate">
+	<npc id="32314" level="70" type="L2Npc" name="Warpgate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1"/>
@@ -472,7 +472,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="32315" level="85" originalLevel="70" type="L2Npc" name="Warpgate">
+	<npc id="32315" level="70" type="L2Npc" name="Warpgate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1"/>
@@ -514,7 +514,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="32316" level="85" originalLevel="70" type="L2Npc" name="Warpgate">
+	<npc id="32316" level="70" type="L2Npc" name="Warpgate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1"/>
@@ -556,7 +556,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="32317" level="85" originalLevel="70" type="L2Npc" name="Warpgate">
+	<npc id="32317" level="70" type="L2Npc" name="Warpgate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1"/>
@@ -598,7 +598,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="32318" level="85" originalLevel="70" type="L2Npc" name="Warpgate">
+	<npc id="32318" level="70" type="L2Npc" name="Warpgate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1"/>
@@ -640,7 +640,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="32319" level="85" originalLevel="70" type="L2Npc" name="Warpgate">
+	<npc id="32319" level="70" type="L2Npc" name="Warpgate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1"/>
@@ -682,7 +682,7 @@
 			<height normal="31"/>
 		</collision>
 	</npc>
-	<npc id="32320" level="85" originalLevel="70" type="L2Npc" name="Item Broker" title="Adventure Guildsman">
+	<npc id="32320" level="70" type="L2Npc" name="Item Broker" title="Adventure Guildsman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -722,7 +722,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32321" level="85" originalLevel="70" type="L2Npc" name="Item Broker" title="Adventure Guildsman">
+	<npc id="32321" level="70" type="L2Npc" name="Item Broker" title="Adventure Guildsman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -762,7 +762,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32322" level="85" originalLevel="70" type="L2Npc" name="Item Broker" title="Adventure Guildsman">
+	<npc id="32322" level="70" type="L2Npc" name="Item Broker" title="Adventure Guildsman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -802,7 +802,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32323" level="85" originalLevel="70" type="L2Npc" name="Avant-Garde" title="Transformation Wizard">
+	<npc id="32323" level="70" type="L2Npc" name="Avant-Garde" title="Transformation Wizard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -846,7 +846,7 @@
 			<height normal="24.5"/>
 		</collision>
 	</npc>
-	<npc id="32324" level="85" originalLevel="70" type="L2Npc" name="Black Stone Monolith">
+	<npc id="32324" level="70" type="L2Npc" name="Black Stone Monolith">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -883,7 +883,7 @@
 			<height normal="24.5"/>
 		</collision>
 	</npc>
-	<npc id="32325" level="85" originalLevel="70" type="L2Npc" name="Yin" title="Attribute Master">
+	<npc id="32325" level="70" type="L2Npc" name="Yin" title="Attribute Master">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -923,7 +923,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32326" level="85" originalLevel="70" type="L2Npc" name="Yang" title="Attribute Master">
+	<npc id="32326" level="70" type="L2Npc" name="Yang" title="Attribute Master">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -963,7 +963,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32327" level="85" originalLevel="70" type="L2Npc" name="Adventurers' Guide">
+	<npc id="32327" level="70" type="L2Npc" name="Adventurers' Guide">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1003,7 +1003,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32328" level="85" originalLevel="70" type="L2Npc" name="Crystalline Golem">
+	<npc id="32328" level="70" type="L2Npc" name="Crystalline Golem">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1041,7 +1041,7 @@
 			<height normal="47"/>
 		</collision>
 	</npc>
-	<npc id="32330" level="85" originalLevel="70" type="L2Npc" name="Garden Guard">
+	<npc id="32330" level="70" type="L2Npc" name="Garden Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1087,7 +1087,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32331" level="85" originalLevel="70" type="L2Npc" name="Arcane Nucleus">
+	<npc id="32331" level="70" type="L2Npc" name="Arcane Nucleus">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1124,7 +1124,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="32332" level="85" originalLevel="70" type="L2Npc" name="Katenar">
+	<npc id="32332" level="70" type="L2Npc" name="Katenar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1166,7 +1166,7 @@
 			<height normal="24.6155"/>
 		</collision>
 	</npc>
-	<npc id="32333" level="85" originalLevel="70" type="L2Npc" name="Katenar">
+	<npc id="32333" level="70" type="L2Npc" name="Katenar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1208,7 +1208,7 @@
 			<height normal="24.6155"/>
 		</collision>
 	</npc>
-	<npc id="32334" level="85" originalLevel="70" type="L2Npc" name="Harkilgamed">
+	<npc id="32334" level="70" type="L2Npc" name="Harkilgamed">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1249,7 +1249,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32335" level="85" originalLevel="70" type="L2Guard" name="Marksman">
+	<npc id="32335" level="70" type="L2Guard" name="Marksman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1291,7 +1291,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32336" level="85" originalLevel="70" type="L2Guard" name="Marksman">
+	<npc id="32336" level="70" type="L2Guard" name="Marksman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1333,7 +1333,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32337" level="85" originalLevel="70" type="L2Adventurer" name="Adventure Guildsman">
+	<npc id="32337" level="70" type="L2Adventurer" name="Adventure Guildsman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1375,7 +1375,7 @@
 			<height normal="21"/>
 		</collision>
 	</npc>
-	<npc id="32338" level="85" originalLevel="70" type="L2Adventurer" name="Adventure Guildsman">
+	<npc id="32338" level="70" type="L2Adventurer" name="Adventure Guildsman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1416,7 +1416,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="32339" level="85" originalLevel="70" type="L2Adventurer" name="Adventure Guildsman">
+	<npc id="32339" level="70" type="L2Adventurer" name="Adventure Guildsman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1458,7 +1458,7 @@
 			<height normal="22.4"/>
 		</collision>
 	</npc>
-	<npc id="32340" level="85" originalLevel="70" type="L2Adventurer" name="Adventure Guildsman">
+	<npc id="32340" level="70" type="L2Adventurer" name="Adventure Guildsman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1499,7 +1499,7 @@
 			<height normal="26"/>
 		</collision>
 	</npc>
-	<npc id="32342" level="85" originalLevel="70" type="L2Monster" name="Eva's Gift Box">
+	<npc id="32342" level="70" type="L2Monster" name="Eva's Gift Box">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1536,7 +1536,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="32343" level="85" originalLevel="70" type="L2Npc" name="Moonlight Tombstone">
+	<npc id="32343" level="70" type="L2Npc" name="Moonlight Tombstone">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1573,7 +1573,7 @@
 			<height normal="45"/>
 		</collision>
 	</npc>
-	<npc id="32344" level="85" originalLevel="70" type="L2Npc" name="Spooky Tombstone">
+	<npc id="32344" level="70" type="L2Npc" name="Spooky Tombstone">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1610,7 +1610,7 @@
 			<height normal="45"/>
 		</collision>
 	</npc>
-	<npc id="32345" level="85" originalLevel="70" type="L2Npc" name="Buron" title="Tailor">
+	<npc id="32345" level="70" type="L2Npc" name="Buron" title="Tailor">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1650,7 +1650,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32346" level="85" originalLevel="70" type="L2Npc" name="Kanaf">
+	<npc id="32346" level="70" type="L2Npc" name="Kanaf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1692,7 +1692,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32347" level="85" originalLevel="70" type="L2Merchant" name="Shadai" title="Legendary Blacksmith">
+	<npc id="32347" level="70" type="L2Merchant" name="Shadai" title="Legendary Blacksmith">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1"/>
@@ -1731,7 +1731,7 @@
 			<height normal="16.5"/>
 		</collision>
 	</npc>
-	<npc id="32348" level="85" originalLevel="70" type="L2Fisherman" name="Burang" title="Fishing Guild Member">
+	<npc id="32348" level="70" type="L2Fisherman" name="Burang" title="Fishing Guild Member">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1772,7 +1772,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32349" level="85" originalLevel="70" type="L2Npc" name="Rignos">
+	<npc id="32349" level="70" type="L2Npc" name="Rignos">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
@@ -1814,7 +1814,7 @@
 			<height normal="30.5"/>
 		</collision>
 	</npc>
-	<npc id="32350" level="85" originalLevel="84" type="L2Npc" name="Sandstorm">
+	<npc id="32350" level="84" type="L2Npc" name="Sandstorm">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1852,7 +1852,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32351" level="85" originalLevel="70" type="L2Teleporter" name="Enceinte Insurgent">
+	<npc id="32351" level="70" type="L2Teleporter" name="Enceinte Insurgent">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1889,7 +1889,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32352" level="85" originalLevel="70" type="L2Npc" name="Desert Heatmaster">
+	<npc id="32352" level="70" type="L2Npc" name="Desert Heatmaster">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1925,7 +1925,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="32353" level="85" originalLevel="70" type="L2Npc" name="Event Gatekeeper">
+	<npc id="32353" level="70" type="L2Npc" name="Event Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -1966,7 +1966,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="32354" level="85" originalLevel="70" type="L2Npc" name="Kief">
+	<npc id="32354" level="70" type="L2Npc" name="Kief">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1"/>
@@ -2007,7 +2007,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32355" level="85" originalLevel="70" type="L2Npc" name="Solomon">
+	<npc id="32355" level="70" type="L2Npc" name="Solomon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="NoFnHi" value="1"/>
@@ -2048,7 +2048,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32356" level="85" originalLevel="70" type="L2Npc" name="Jude">
+	<npc id="32356" level="70" type="L2Npc" name="Jude">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110"/>
@@ -2089,7 +2089,7 @@
 			<height normal="58.5"/>
 		</collision>
 	</npc>
-	<npc id="32357" level="85" originalLevel="70" type="L2Npc" name="Native Slave">
+	<npc id="32357" level="70" type="L2Npc" name="Native Slave">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2125,7 +2125,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32358" level="85" originalLevel="70" type="L2QuestGuard" name="Native Prisoner">
+	<npc id="32358" level="70" type="L2QuestGuard" name="Native Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2160,7 +2160,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32359" level="85" originalLevel="70" type="L2Merchant" name="Lahm" title="Blacksmith of Power">
+	<npc id="32359" level="70" type="L2Merchant" name="Lahm" title="Blacksmith of Power">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2200,7 +2200,7 @@
 			<height normal="16.5"/>
 		</collision>
 	</npc>
-	<npc id="32361" level="85" originalLevel="70" type="L2Npc" name="Caravan Supporter">
+	<npc id="32361" level="70" type="L2Npc" name="Caravan Supporter">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2236,7 +2236,7 @@
 			<height normal="14"/>
 		</collision>
 	</npc>
-	<npc id="32362" level="85" originalLevel="70" type="L2Npc" name="Hellbound Native">
+	<npc id="32362" level="70" type="L2Npc" name="Hellbound Native">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2277,7 +2277,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32363" level="85" originalLevel="70" type="L2Npc" name="Hellbound Insurgent">
+	<npc id="32363" level="70" type="L2Npc" name="Hellbound Insurgent">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2318,7 +2318,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32364" level="85" originalLevel="70" type="L2Npc" name="Hellbound Traitor">
+	<npc id="32364" level="70" type="L2Npc" name="Hellbound Traitor">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2354,7 +2354,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32365" level="85" originalLevel="70" type="L2Npc" name="Snow" title="Event Manager">
+	<npc id="32365" level="70" type="L2Npc" name="Snow" title="Event Manager">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2390,7 +2390,7 @@
 			<height normal="12.5"/>
 		</collision>
 	</npc>
-	<npc id="32366" level="85" originalLevel="70" type="L2Npc" name="Destroyed Device">
+	<npc id="32366" level="70" type="L2Npc" name="Destroyed Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2432,7 +2432,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32367" level="85" originalLevel="70" type="L2Npc" name="Alarm">
+	<npc id="32367" level="70" type="L2Npc" name="Alarm">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2469,7 +2469,7 @@
 			<height normal="18.5"/>
 		</collision>
 	</npc>
-	<npc id="32368" level="85" originalLevel="70" type="L2Npc" name="Weathered Rock">
+	<npc id="32368" level="70" type="L2Npc" name="Weathered Rock">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2510,7 +2510,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32369" level="85" originalLevel="70" type="L2Npc" name="Fallen Angel">
+	<npc id="32369" level="70" type="L2Npc" name="Fallen Angel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130"/>
@@ -2552,7 +2552,7 @@
 			<height normal="30" grown="36.5"/>
 		</collision>
 	</npc>
-	<npc id="32370" level="85" originalLevel="70" type="L2Npc" name="Old Dwarven Ghost">
+	<npc id="32370" level="70" type="L2Npc" name="Old Dwarven Ghost">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2590,7 +2590,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="32371" level="85" originalLevel="70" type="L2Npc" name="Ingenious Contraption">
+	<npc id="32371" level="70" type="L2Npc" name="Ingenious Contraption">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2626,7 +2626,7 @@
 			<height normal="20"/>
 		</collision>
 	</npc>
-	<npc id="32372" level="85" originalLevel="70" type="L2Npc" name="Mysterious Agent">
+	<npc id="32372" level="70" type="L2Npc" name="Mysterious Agent">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="skill_buff" id="5526" level="1"/> <!-- Challenger's Blessing -->
@@ -2668,7 +2668,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32373" level="85" originalLevel="70" type="L2Npc" name="Dorian">
+	<npc id="32373" level="70" type="L2Npc" name="Dorian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2708,7 +2708,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32374" level="85" originalLevel="70" type="L2Npc" name="Teleportation Cubic">
+	<npc id="32374" level="70" type="L2Npc" name="Teleportation Cubic">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2745,7 +2745,7 @@
 			<height normal="65"/>
 		</collision>
 	</npc>
-	<npc id="32375" level="85" originalLevel="70" type="L2Npc" name="Teleportation Cubic">
+	<npc id="32375" level="70" type="L2Npc" name="Teleportation Cubic">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2782,7 +2782,7 @@
 			<height normal="65"/>
 		</collision>
 	</npc>
-	<npc id="32376" level="85" originalLevel="70" type="L2Npc" name="Teleportation Cubic">
+	<npc id="32376" level="70" type="L2Npc" name="Teleportation Cubic">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2819,7 +2819,7 @@
 			<height normal="65"/>
 		</collision>
 	</npc>
-	<npc id="32377" level="85" originalLevel="70" type="L2Npc" name="Kuram" title="Coordinator">
+	<npc id="32377" level="70" type="L2Npc" name="Kuram" title="Coordinator">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -2855,7 +2855,7 @@
 			<height normal="17.285"/>
 		</collision>
 	</npc>
-	<npc id="32378" level="85" originalLevel="70" type="L2Teleporter" name="Fantasy Isle Paddies" title="Gatekeeper">
+	<npc id="32378" level="70" type="L2Teleporter" name="Fantasy Isle Paddies" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
@@ -2895,7 +2895,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="32379" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32379" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2931,7 +2931,7 @@
 			<height normal="12.5"/>
 		</collision>
 	</npc>
-	<npc id="32380" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32380" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2967,7 +2967,7 @@
 			<height normal="12.5"/>
 		</collision>
 	</npc>
-	<npc id="32381" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32381" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3003,7 +3003,7 @@
 			<height normal="26.5"/>
 		</collision>
 	</npc>
-	<npc id="32382" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32382" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3039,7 +3039,7 @@
 			<height normal="9.5"/>
 		</collision>
 	</npc>
-	<npc id="32383" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32383" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3075,7 +3075,7 @@
 			<height normal="10.25"/>
 		</collision>
 	</npc>
-	<npc id="32384" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32384" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3111,7 +3111,7 @@
 			<height normal="10.25"/>
 		</collision>
 	</npc>
-	<npc id="32385" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32385" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3147,7 +3147,7 @@
 			<height normal="20"/>
 		</collision>
 	</npc>
-	<npc id="32386" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32386" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -3183,7 +3183,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32387" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32387" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -3219,7 +3219,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32388" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32388" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -3255,7 +3255,7 @@
 			<height normal="24.5"/>
 		</collision>
 	</npc>
-	<npc id="32389" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32389" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -3291,7 +3291,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32390" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32390" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
@@ -3327,7 +3327,7 @@
 			<height normal="21.5"/>
 		</collision>
 	</npc>
-	<npc id="32391" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32391" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -3363,7 +3363,7 @@
 			<height normal="19"/>
 		</collision>
 	</npc>
-	<npc id="32392" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32392" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -3399,7 +3399,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="32393" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32393" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -3435,7 +3435,7 @@
 			<height normal="18.5"/>
 		</collision>
 	</npc>
-	<npc id="32394" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32394" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -3471,7 +3471,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="32395" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32395" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -3507,7 +3507,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="32396" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32396" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
@@ -3543,7 +3543,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="32397" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32397" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
@@ -3579,7 +3579,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32398" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32398" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -3615,7 +3615,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32399" level="85" originalLevel="70" type="L2Npc">
+	<npc id="32399" level="70" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>

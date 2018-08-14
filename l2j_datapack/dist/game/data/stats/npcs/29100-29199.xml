@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="29100" level="85" originalLevel="83" type="L2Monster" name="Crystal Prison Guard">
+	<npc id="29100" level="83" type="L2Monster" name="Crystal Prison Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -48,7 +48,7 @@
 			<height normal="43.5"/>
 		</collision>
 	</npc>
-	<npc id="29101" level="85" originalLevel="83" type="L2Monster" name="Crystalline Golem">
+	<npc id="29101" level="83" type="L2Monster" name="Crystalline Golem">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -88,7 +88,7 @@
 			<height normal="47"/>
 		</collision>
 	</npc>
-	<npc id="29102" level="85" originalLevel="83" type="L2Monster" name="Crystalline Golem">
+	<npc id="29102" level="83" type="L2Monster" name="Crystalline Golem">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -128,7 +128,7 @@
 			<height normal="47"/>
 		</collision>
 	</npc>
-	<npc id="29103" level="85" originalLevel="83" type="L2Monster" name="Baylor" title="Warden">
+	<npc id="29103" level="83" type="L2Monster" name="Baylor" title="Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5401" level="1"/> <!-- Stun -->
@@ -170,7 +170,7 @@
 			<height normal="77.5"/>
 		</collision>
 	</npc>
-	<npc id="29104" level="85" originalLevel="83" type="L2Monster" name="Crystal Prison Guard">
+	<npc id="29104" level="83" type="L2Monster" name="Crystal Prison Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5405" level="1"/> <!-- Presentation - Demonic 1 -->
@@ -214,7 +214,7 @@
 			<height normal="43.5"/>
 		</collision>
 	</npc>
-	<npc id="29105" level="85" originalLevel="83" type="L2Monster" name="Crystalline Golem">
+	<npc id="29105" level="83" type="L2Monster" name="Crystalline Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5407" level="1"/> <!-- Presentation - Crystalline Golem 1 -->
@@ -260,7 +260,7 @@
 			<height normal="47"/>
 		</collision>
 	</npc>
-	<npc id="29106" level="85" originalLevel="83" type="L2Npc">
+	<npc id="29106" level="83" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -295,7 +295,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29107" level="85" originalLevel="83" type="L2Npc">
+	<npc id="29107" level="83" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -330,7 +330,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29108" level="85" originalLevel="83" type="L2Npc">
+	<npc id="29108" level="83" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -365,7 +365,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29109" level="85" originalLevel="83" type="L2Npc">
+	<npc id="29109" level="83" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -400,7 +400,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29110" level="85" originalLevel="83" type="L2Npc">
+	<npc id="29110" level="83" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -435,7 +435,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29111" level="85" originalLevel="83" type="L2Npc">
+	<npc id="29111" level="83" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -470,7 +470,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29112" level="85" originalLevel="83" type="L2Npc">
+	<npc id="29112" level="83" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -505,7 +505,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29113" level="85" originalLevel="83" type="L2Npc">
+	<npc id="29113" level="83" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -540,7 +540,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29114" level="85" originalLevel="83" type="L2Npc">
+	<npc id="29114" level="83" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -575,7 +575,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29115" level="85" originalLevel="83" type="L2Monster" name="Crystal Prison Guard">
+	<npc id="29115" level="83" type="L2Monster" name="Crystal Prison Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -620,7 +620,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="29116" level="85" originalLevel="83" type="L2Monster" name="Baylor's Treasure Chest">
+	<npc id="29116" level="83" type="L2Monster" name="Baylor's Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -687,7 +687,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="29117" level="85" originalLevel="83" type="L2Monster" name="Baylor's Treasure Chest">
+	<npc id="29117" level="83" type="L2Monster" name="Baylor's Treasure Chest">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -744,7 +744,7 @@
 			<height normal="8.5"/>
 		</collision>
 	</npc>
-	<npc id="29118" level="85" originalLevel="83" type="L2GrandBoss" name="Beleth">
+	<npc id="29118" level="83" type="L2GrandBoss" name="Beleth">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -830,7 +830,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="29119" level="85" originalLevel="83" type="L2Monster" name="Beleth">
+	<npc id="29119" level="83" type="L2Monster" name="Beleth">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -873,7 +873,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="29120" level="85" originalLevel="80" type="L2Npc" name="Beleth Camera 1">
+	<npc id="29120" level="80" type="L2Npc" name="Beleth Camera 1">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -908,7 +908,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29121" level="85" originalLevel="80" type="L2Npc" name="Beleth Camera 2">
+	<npc id="29121" level="80" type="L2Npc" name="Beleth Camera 2">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -943,7 +943,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29122" level="85" originalLevel="80" type="L2Npc" name="Beleth Camera 3">
+	<npc id="29122" level="80" type="L2Npc" name="Beleth Camera 3">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -978,7 +978,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29123" level="85" originalLevel="80" type="L2Npc" name="Beleth Camera 4">
+	<npc id="29123" level="80" type="L2Npc" name="Beleth Camera 4">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1013,7 +1013,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29124" level="85" originalLevel="80" type="L2Npc" name="Beleth Camera 5">
+	<npc id="29124" level="80" type="L2Npc" name="Beleth Camera 5">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1048,7 +1048,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29125" level="85" originalLevel="80" type="L2Npc" name="Beleth Camera 6">
+	<npc id="29125" level="80" type="L2Npc" name="Beleth Camera 6">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -1083,7 +1083,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="29126" level="85" originalLevel="80" type="L2Npc" name="Beleth Presentation Incarnation 1">
+	<npc id="29126" level="80" type="L2Npc" name="Beleth Presentation Incarnation 1">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1119,7 +1119,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="29127" level="85" originalLevel="80" type="L2Npc" name="Beleth Presentation Incarnation 2">
+	<npc id="29127" level="80" type="L2Npc" name="Beleth Presentation Incarnation 2">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1155,7 +1155,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="29128" level="85" originalLevel="80" type="L2Npc" name="Beleth Presentation Elf">
+	<npc id="29128" level="80" type="L2Npc" name="Beleth Presentation Elf">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
@@ -1191,7 +1191,7 @@
 			<height normal="22.2"/>
 		</collision>
 	</npc>
-	<npc id="29129" level="85" originalLevel="29" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29129" level="29" type="L2RaidBoss" name="Lost Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1262,7 +1262,7 @@
 			<height normal="73.5"/>
 		</collision>
 	</npc>
-	<npc id="29130" level="85" originalLevel="29" type="L2Monster" name="Lost Guard">
+	<npc id="29130" level="29" type="L2Monster" name="Lost Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1300,7 +1300,7 @@
 			<height normal="38"/>
 		</collision>
 	</npc>
-	<npc id="29131" level="85" originalLevel="29" type="L2Monster" name="Lost Assistant Guard">
+	<npc id="29131" level="29" type="L2Monster" name="Lost Assistant Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="2"/> <!-- BOSS Reflect Damage -->
@@ -1347,7 +1347,7 @@
 			<height normal="34"/>
 		</collision>
 	</npc>
-	<npc id="29132" level="85" originalLevel="39" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29132" level="39" type="L2RaidBoss" name="Lost Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1421,7 +1421,7 @@
 			<height normal="45.5"/>
 		</collision>
 	</npc>
-	<npc id="29133" level="85" originalLevel="39" type="L2Monster" name="Lost Guard">
+	<npc id="29133" level="39" type="L2Monster" name="Lost Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1459,7 +1459,7 @@
 			<height normal="35" grown="42.2"/>
 		</collision>
 	</npc>
-	<npc id="29134" level="85" originalLevel="39" type="L2Monster" name="Lost Assistant Guard">
+	<npc id="29134" level="39" type="L2Monster" name="Lost Assistant Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="3"/> <!-- BOSS Reflect Damage -->
@@ -1506,7 +1506,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="29135" level="85" originalLevel="49" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29135" level="49" type="L2RaidBoss" name="Lost Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1581,7 +1581,7 @@
 			<height normal="56"/>
 		</collision>
 	</npc>
-	<npc id="29136" level="85" originalLevel="49" type="L2Monster" name="Lost Guard">
+	<npc id="29136" level="49" type="L2Monster" name="Lost Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1618,7 +1618,7 @@
 			<height normal="34.7"/>
 		</collision>
 	</npc>
-	<npc id="29137" level="85" originalLevel="49" type="L2Monster" name="Lost Assistant Guard">
+	<npc id="29137" level="49" type="L2Monster" name="Lost Assistant Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="4"/> <!-- BOSS Reflect Damage -->
@@ -1664,7 +1664,7 @@
 			<height normal="32.8"/>
 		</collision>
 	</npc>
-	<npc id="29138" level="85" originalLevel="59" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29138" level="59" type="L2RaidBoss" name="Lost Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1745,7 +1745,7 @@
 			<height normal="54.5"/>
 		</collision>
 	</npc>
-	<npc id="29139" level="85" originalLevel="59" type="L2Monster" name="Lost Guard">
+	<npc id="29139" level="59" type="L2Monster" name="Lost Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -1782,7 +1782,7 @@
 			<height normal="42"/>
 		</collision>
 	</npc>
-	<npc id="29140" level="85" originalLevel="59" type="L2Monster" name="Lost Assistant Guard">
+	<npc id="29140" level="59" type="L2Monster" name="Lost Assistant Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="5"/> <!-- BOSS Reflect Damage -->
@@ -1828,7 +1828,7 @@
 			<height normal="42"/>
 		</collision>
 	</npc>
-	<npc id="29141" level="85" originalLevel="69" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29141" level="69" type="L2RaidBoss" name="Lost Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1901,7 +1901,7 @@
 			<height normal="45"/>
 		</collision>
 	</npc>
-	<npc id="29142" level="85" originalLevel="69" type="L2Monster" name="Lost Guard">
+	<npc id="29142" level="69" type="L2Monster" name="Lost Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1938,7 +1938,7 @@
 			<height normal="43.5"/>
 		</collision>
 	</npc>
-	<npc id="29143" level="85" originalLevel="69" type="L2Monster" name="Lost Assistant Guard">
+	<npc id="29143" level="69" type="L2Monster" name="Lost Assistant Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="6"/> <!-- BOSS Reflect Damage -->
@@ -1984,7 +1984,7 @@
 			<height normal="43.5"/>
 		</collision>
 	</npc>
-	<npc id="29144" level="85" originalLevel="78" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29144" level="78" type="L2RaidBoss" name="Lost Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2058,7 +2058,7 @@
 			<height normal="80"/>
 		</collision>
 	</npc>
-	<npc id="29145" level="85" originalLevel="78" type="L2Monster" name="Lost Guard">
+	<npc id="29145" level="78" type="L2Monster" name="Lost Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -2098,7 +2098,7 @@
 			<height normal="47"/>
 		</collision>
 	</npc>
-	<npc id="29146" level="85" originalLevel="78" type="L2Monster" name="Lost Assistant Guard">
+	<npc id="29146" level="78" type="L2Monster" name="Lost Assistant Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="7"/> <!-- BOSS Reflect Damage -->
@@ -2147,7 +2147,7 @@
 			<height normal="38.5" grown="46.5"/>
 		</collision>
 	</npc>
-	<npc id="29147" level="85" originalLevel="81" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29147" level="81" type="L2RaidBoss" name="Lost Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2225,7 +2225,7 @@
 			<height normal="51.5"/>
 		</collision>
 	</npc>
-	<npc id="29148" level="85" originalLevel="81" type="L2Monster" name="Lost Guard">
+	<npc id="29148" level="81" type="L2Monster" name="Lost Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -2263,7 +2263,7 @@
 			<height normal="34.5"/>
 		</collision>
 	</npc>
-	<npc id="29149" level="85" originalLevel="81" type="L2Monster" name="Lost Assistant Guard">
+	<npc id="29149" level="81" type="L2Monster" name="Lost Assistant Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="8"/> <!-- BOSS Reflect Damage -->
@@ -2310,7 +2310,7 @@
 			<height normal="34.5"/>
 		</collision>
 	</npc>
-	<npc id="29150" level="85" originalLevel="82" type="L2GrandBoss" name="Ekimus" title="Lord of Immortality">
+	<npc id="29150" level="82" type="L2GrandBoss" name="Ekimus" title="Lord of Immortality">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill_HPBuff" id="5916" level="1"/> <!-- Cruising Aura -->
@@ -2407,7 +2407,7 @@
 			<height normal="70"/>
 		</collision>
 	</npc>
-	<npc id="29151" level="85" originalLevel="82" type="L2Monster" name="Feral Hound of the Netherworld">
+	<npc id="29151" level="82" type="L2Monster" name="Feral Hound of the Netherworld">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="tide" value="1"/>
@@ -2452,7 +2452,7 @@
 			<height normal="48.4"/>
 		</collision>
 	</npc>
-	<npc id="29152" level="85" originalLevel="82" type="L2Monster" name="Feral Hound of the Netherworld">
+	<npc id="29152" level="82" type="L2Monster" name="Feral Hound of the Netherworld">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="tide" value="3"/>
@@ -2497,7 +2497,7 @@
 			<height normal="48.4"/>
 		</collision>
 	</npc>
-	<npc id="29153" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29153" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2532,7 +2532,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29154" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29154" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2567,7 +2567,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29155" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29155" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2602,7 +2602,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29156" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29156" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2637,7 +2637,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29157" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29157" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2672,7 +2672,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29158" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29158" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2707,7 +2707,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29159" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29159" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2742,7 +2742,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29160" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29160" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2777,7 +2777,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29161" level="85" originalLevel="73" type="L2Npc" name="Pre-Awakened Ekimus">
+	<npc id="29161" level="73" type="L2Npc" name="Pre-Awakened Ekimus">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2812,7 +2812,7 @@
 			<height normal="70"/>
 		</collision>
 	</npc>
-	<npc id="29162" level="85" originalLevel="82" type="L2Monster" name="Soldiers of Bravery" title="Tiat's Bodyguards">
+	<npc id="29162" level="82" type="L2Monster" name="Soldiers of Bravery" title="Tiat's Bodyguards">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000"/>
@@ -2865,7 +2865,7 @@
 			<height normal="51"/>
 		</collision>
 	</npc>
-	<npc id="29163" level="85" originalLevel="82" type="L2GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
+	<npc id="29163" level="82" type="L2GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -2949,7 +2949,7 @@
 			<height normal="104" grown="124.8"/>
 		</collision>
 	</npc>
-	<npc id="29164" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29164" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2984,7 +2984,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29165" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29165" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3019,7 +3019,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29166" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29166" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3054,7 +3054,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29167" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29167" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3089,7 +3089,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29168" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29168" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -3127,7 +3127,7 @@
 			<height normal="104" grown="124.8"/>
 		</collision>
 	</npc>
-	<npc id="29169" level="85" originalLevel="73" type="L2Monster">
+	<npc id="29169" level="73" type="L2Monster">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3162,7 +3162,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29170" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29170" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3197,7 +3197,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="29171" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29171" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3232,7 +3232,7 @@
 			<height normal="160"/>
 		</collision>
 	</npc>
-	<npc id="29172" level="85" originalLevel="73" type="L2Npc">
+	<npc id="29172" level="73" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3267,7 +3267,7 @@
 			<height normal="160"/>
 		</collision>
 	</npc>
-	<npc id="29173" level="85" originalLevel="73" type="L2Npc" name="Tiat Priest">
+	<npc id="29173" level="73" type="L2Npc" name="Tiat Priest">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3302,7 +3302,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="29174" level="85" originalLevel="73" type="L2Npc" name="Tiat Priest">
+	<npc id="29174" level="73" type="L2Npc" name="Tiat Priest">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3337,7 +3337,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="29175" level="85" originalLevel="82" type="L2GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
+	<npc id="29175" level="82" type="L2GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -3409,7 +3409,7 @@
 			<height normal="104" grown="124.8"/>
 		</collision>
 	</npc>
-	<npc id="29176" level="85" originalLevel="60" type="L2GrandBoss" name="Zaken">
+	<npc id="29176" level="60" type="L2GrandBoss" name="Zaken">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3474,7 +3474,7 @@
 			<height normal="32"/>
 		</collision>
 	</npc>
-	<npc id="29177" level="85" originalLevel="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
+	<npc id="29177" level="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3517,7 +3517,7 @@
 			<height normal="98.5"/>
 		</collision>
 	</npc>
-	<npc id="29178" level="85" originalLevel="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
+	<npc id="29178" level="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3560,7 +3560,7 @@
 			<height normal="98.5"/>
 		</collision>
 	</npc>
-	<npc id="29179" level="85" originalLevel="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
+	<npc id="29179" level="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3686,7 +3686,7 @@
 			<height normal="55"/>
 		</collision>
 	</npc>
-	<npc id="29180" level="85" originalLevel="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
+	<npc id="29180" level="85" type="L2GrandBoss" name="Freya" title="Ice Queen">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3783,7 +3783,7 @@
 			<height normal="55"/>
 		</collision>
 	</npc>
-	<npc id="29181" level="85" originalLevel="83" type="L2GrandBoss" name="Zaken">
+	<npc id="29181" level="83" type="L2GrandBoss" name="Zaken">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3921,7 +3921,7 @@
 			<height normal="32"/>
 		</collision>
 	</npc>
-	<npc id="29182" level="85" originalLevel="81" type="L2Monster" name="Doll Blader">
+	<npc id="29182" level="81" type="L2Monster" name="Doll Blader">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3964,7 +3964,7 @@
 			<height normal="12"/>
 		</collision>
 	</npc>
-	<npc id="29183" level="85" originalLevel="82" type="L2Monster" name="Veil Master">
+	<npc id="29183" level="82" type="L2Monster" name="Veil Master">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -4005,7 +4005,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="29184" level="85" originalLevel="83" type="L2Monster" name="Pirate Zombie Captain">
+	<npc id="29184" level="83" type="L2Monster" name="Pirate Zombie Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4052,7 +4052,7 @@
 			<height normal="37"/>
 		</collision>
 	</npc>
-	<npc id="29185" level="85" originalLevel="81" type="L2Monster" name="Pirate Zombie">
+	<npc id="29185" level="81" type="L2Monster" name="Pirate Zombie">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -4092,7 +4092,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="29186" level="85" originalLevel="85" type="L2GrandBoss" name="Baylor" title="Warden">
+	<npc id="29186" level="85" type="L2GrandBoss" name="Baylor" title="Warden">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfbuff1" id="5221" level="1"/> <!-- Balor - Physical Close Range Weak Point -->
@@ -4178,7 +4178,7 @@
 			<height normal="77.5"/>
 		</collision>
 	</npc>
-	<npc id="29187" level="85" originalLevel="85" type="L2Monster" name="Crystal Prison Guard">
+	<npc id="29187" level="85" type="L2Monster" name="Crystal Prison Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1"/>
@@ -4229,7 +4229,7 @@
 			<height normal="43.5"/>
 		</collision>
 	</npc>
-	<npc id="29188" level="85" originalLevel="85" type="L2Monster" name="Crystalline Golem">
+	<npc id="29188" level="85" type="L2Monster" name="Crystalline Golem">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4271,7 +4271,7 @@
 			<height normal="47"/>
 		</collision>
 	</npc>
-	<npc id="29189" level="85" originalLevel="85" type="L2Monster" name="Crystalline Golem">
+	<npc id="29189" level="85" type="L2Monster" name="Crystalline Golem">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -4313,7 +4313,7 @@
 			<height normal="47"/>
 		</collision>
 	</npc>
-	<npc id="29190" level="85" originalLevel="85" type="L2Monster" name="Tarask Dragon">
+	<npc id="29190" level="85" type="L2Monster" name="Tarask Dragon">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5095" level="1"/> <!-- Antharas Subordinate Melee Attack -->

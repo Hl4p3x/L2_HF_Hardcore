@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="13200" level="85" originalLevel="79" type="L2Npc" name="Young Child">
+	<npc id="13200" level="79" type="L2Npc" name="Young Child">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -34,7 +34,7 @@
 			<height normal="12.3"/>
 		</collision>
 	</npc>
-	<npc id="13201" level="85" originalLevel="79" type="L2Npc" name="Guards of the Dawn">
+	<npc id="13201" level="79" type="L2Npc" name="Guards of the Dawn">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -69,7 +69,7 @@
 			<height normal="21.5"/>
 		</collision>
 	</npc>
-	<npc id="13202" level="85" originalLevel="76" type="L2Npc" name="Trap">
+	<npc id="13202" level="76" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -110,7 +110,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13203" level="85" originalLevel="77" type="L2Npc" name="Trap">
+	<npc id="13203" level="77" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -151,7 +151,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13204" level="85" originalLevel="78" type="L2Npc" name="Trap">
+	<npc id="13204" level="78" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -192,7 +192,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13205" level="85" originalLevel="79" type="L2Npc" name="Trap">
+	<npc id="13205" level="79" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -233,7 +233,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13206" level="85" originalLevel="80" type="L2Npc" name="Trap">
+	<npc id="13206" level="80" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -274,7 +274,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13207" level="85" originalLevel="81" type="L2Npc" name="Trap">
+	<npc id="13207" level="81" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -315,7 +315,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13208" level="85" originalLevel="82" type="L2Npc" name="Trap">
+	<npc id="13208" level="82" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -356,7 +356,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13209" level="85" originalLevel="83" type="L2Npc" name="Trap">
+	<npc id="13209" level="83" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -397,7 +397,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13210" level="85" originalLevel="84" type="L2Npc" name="Trap">
+	<npc id="13210" level="84" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -438,7 +438,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13211" level="85" originalLevel="85" type="L2Npc" name="Trap">
+	<npc id="13211" level="85" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -479,7 +479,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13212" level="85" originalLevel="86" type="L2Npc" name="Trap">
+	<npc id="13212" level="86" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -520,7 +520,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13213" level="85" originalLevel="76" type="L2Npc" name="Trap">
+	<npc id="13213" level="76" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -561,7 +561,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13214" level="85" originalLevel="77" type="L2Npc" name="Trap">
+	<npc id="13214" level="77" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -602,7 +602,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13215" level="85" originalLevel="78" type="L2Npc" name="Trap">
+	<npc id="13215" level="78" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -643,7 +643,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13216" level="85" originalLevel="79" type="L2Npc" name="Trap">
+	<npc id="13216" level="79" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -684,7 +684,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13217" level="85" originalLevel="80" type="L2Npc" name="Trap">
+	<npc id="13217" level="80" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -725,7 +725,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13218" level="85" originalLevel="81" type="L2Npc" name="Trap">
+	<npc id="13218" level="81" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -766,7 +766,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13219" level="85" originalLevel="82" type="L2Npc" name="Trap">
+	<npc id="13219" level="82" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -807,7 +807,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13220" level="85" originalLevel="83" type="L2Npc" name="Trap">
+	<npc id="13220" level="83" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -848,7 +848,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13221" level="85" originalLevel="84" type="L2Npc" name="Trap">
+	<npc id="13221" level="84" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -889,7 +889,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13222" level="85" originalLevel="85" type="L2Npc" name="Trap">
+	<npc id="13222" level="85" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -930,7 +930,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13223" level="85" originalLevel="86" type="L2Npc" name="Trap">
+	<npc id="13223" level="86" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -971,7 +971,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13224" level="85" originalLevel="76" type="L2Npc" name="Trap">
+	<npc id="13224" level="76" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1012,7 +1012,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13225" level="85" originalLevel="77" type="L2Npc" name="Trap">
+	<npc id="13225" level="77" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1053,7 +1053,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13226" level="85" originalLevel="78" type="L2Npc" name="Trap">
+	<npc id="13226" level="78" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1094,7 +1094,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13227" level="85" originalLevel="79" type="L2Npc" name="Trap">
+	<npc id="13227" level="79" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1135,7 +1135,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13228" level="85" originalLevel="80" type="L2Npc" name="Trap">
+	<npc id="13228" level="80" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1176,7 +1176,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13229" level="85" originalLevel="81" type="L2Npc" name="Trap">
+	<npc id="13229" level="81" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1217,7 +1217,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13230" level="85" originalLevel="82" type="L2Npc" name="Trap">
+	<npc id="13230" level="82" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1258,7 +1258,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13231" level="85" originalLevel="83" type="L2Npc" name="Trap">
+	<npc id="13231" level="83" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1299,7 +1299,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13232" level="85" originalLevel="84" type="L2Npc" name="Trap">
+	<npc id="13232" level="84" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1340,7 +1340,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13233" level="85" originalLevel="85" type="L2Npc" name="Trap">
+	<npc id="13233" level="85" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1381,7 +1381,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13234" level="85" originalLevel="86" type="L2Npc" name="Trap">
+	<npc id="13234" level="86" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1422,7 +1422,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13235" level="85" originalLevel="76" type="L2Npc" name="Trap">
+	<npc id="13235" level="76" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1463,7 +1463,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13236" level="85" originalLevel="77" type="L2Npc" name="Trap">
+	<npc id="13236" level="77" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1504,7 +1504,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13237" level="85" originalLevel="78" type="L2Npc" name="Trap">
+	<npc id="13237" level="78" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1545,7 +1545,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13238" level="85" originalLevel="79" type="L2Npc" name="Trap">
+	<npc id="13238" level="79" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1586,7 +1586,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13239" level="85" originalLevel="80" type="L2Npc" name="Trap">
+	<npc id="13239" level="80" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1627,7 +1627,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13240" level="85" originalLevel="81" type="L2Npc" name="Trap">
+	<npc id="13240" level="81" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1668,7 +1668,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13241" level="85" originalLevel="82" type="L2Npc" name="Trap">
+	<npc id="13241" level="82" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1709,7 +1709,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13242" level="85" originalLevel="83" type="L2Npc" name="Trap">
+	<npc id="13242" level="83" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1750,7 +1750,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13243" level="85" originalLevel="84" type="L2Npc" name="Trap">
+	<npc id="13243" level="84" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1791,7 +1791,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13244" level="85" originalLevel="85" type="L2Npc" name="Trap">
+	<npc id="13244" level="85" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1832,7 +1832,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13245" level="85" originalLevel="86" type="L2Npc" name="Trap">
+	<npc id="13245" level="86" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0"/>
@@ -1873,7 +1873,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13246" level="85" originalLevel="76" type="L2Npc" name="Trap">
+	<npc id="13246" level="76" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -1914,7 +1914,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13247" level="85" originalLevel="77" type="L2Npc" name="Trap">
+	<npc id="13247" level="77" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -1955,7 +1955,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13248" level="85" originalLevel="78" type="L2Npc" name="Trap">
+	<npc id="13248" level="78" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -1996,7 +1996,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13249" level="85" originalLevel="79" type="L2Npc" name="Trap">
+	<npc id="13249" level="79" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -2037,7 +2037,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13250" level="85" originalLevel="80" type="L2Npc" name="Trap">
+	<npc id="13250" level="80" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -2078,7 +2078,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13251" level="85" originalLevel="81" type="L2Npc" name="Trap">
+	<npc id="13251" level="81" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -2119,7 +2119,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13252" level="85" originalLevel="82" type="L2Npc" name="Trap">
+	<npc id="13252" level="82" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -2160,7 +2160,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13253" level="85" originalLevel="83" type="L2Npc" name="Trap">
+	<npc id="13253" level="83" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -2201,7 +2201,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13254" level="85" originalLevel="84" type="L2Npc" name="Trap">
+	<npc id="13254" level="84" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -2242,7 +2242,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13255" level="85" originalLevel="85" type="L2Npc" name="Trap">
+	<npc id="13255" level="85" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -2283,7 +2283,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13256" level="85" originalLevel="86" type="L2Npc" name="Trap">
+	<npc id="13256" level="86" type="L2Npc" name="Trap">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1"/>
@@ -2324,7 +2324,7 @@
 			<height normal="10"/>
 		</collision>
 	</npc>
-	<npc id="13257" level="85" originalLevel="76" type="L2Decoy" name="Virtual Image">
+	<npc id="13257" level="76" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="7"/> <!-- Decoy Provocation -->
@@ -2363,7 +2363,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13258" level="85" originalLevel="77" type="L2Decoy" name="Virtual Image">
+	<npc id="13258" level="77" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="8"/> <!-- Decoy Provocation -->
@@ -2402,7 +2402,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13259" level="85" originalLevel="78" type="L2Decoy" name="Virtual Image">
+	<npc id="13259" level="78" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="9"/> <!-- Decoy Provocation -->
@@ -2441,7 +2441,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13260" level="85" originalLevel="79" type="L2Decoy" name="Virtual Image">
+	<npc id="13260" level="79" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="10"/> <!-- Decoy Provocation -->
@@ -2480,7 +2480,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13261" level="85" originalLevel="80" type="L2Decoy" name="Virtual Image">
+	<npc id="13261" level="80" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="11"/> <!-- Decoy Provocation -->
@@ -2519,7 +2519,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13262" level="85" originalLevel="81" type="L2Decoy" name="Virtual Image">
+	<npc id="13262" level="81" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="12"/> <!-- Decoy Provocation -->
@@ -2558,7 +2558,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13263" level="85" originalLevel="82" type="L2Decoy" name="Virtual Image">
+	<npc id="13263" level="82" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="13"/> <!-- Decoy Provocation -->
@@ -2597,7 +2597,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13264" level="85" originalLevel="83" type="L2Decoy" name="Virtual Image">
+	<npc id="13264" level="83" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="14"/> <!-- Decoy Provocation -->
@@ -2636,7 +2636,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13265" level="85" originalLevel="84" type="L2Decoy" name="Virtual Image">
+	<npc id="13265" level="84" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="15"/> <!-- Decoy Provocation -->
@@ -2675,7 +2675,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13266" level="85" originalLevel="85" type="L2Decoy" name="Virtual Image">
+	<npc id="13266" level="85" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="16"/> <!-- Decoy Provocation -->
@@ -2714,7 +2714,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13267" level="85" originalLevel="86" type="L2Decoy" name="Virtual Image">
+	<npc id="13267" level="86" type="L2Decoy" name="Virtual Image">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="17"/> <!-- Decoy Provocation -->
@@ -2753,7 +2753,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13268" level="85" originalLevel="55" type="L2Npc" name="Aqua Elf">
+	<npc id="13268" level="55" type="L2Npc" name="Aqua Elf">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2788,7 +2788,7 @@
 			<height normal="27.5"/>
 		</collision>
 	</npc>
-	<npc id="13269" level="85" originalLevel="80" type="L2Npc" name="Hot Weather">
+	<npc id="13269" level="80" type="L2Npc" name="Hot Weather">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -2824,7 +2824,7 @@
 			<height normal="14.5" grown="18"/>
 		</collision>
 	</npc>
-	<npc id="13270" level="85" originalLevel="80" type="L2Npc" name="Sultriness">
+	<npc id="13270" level="80" type="L2Npc" name="Sultriness">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -2860,7 +2860,7 @@
 			<height normal="53.5" grown="65.5"/>
 		</collision>
 	</npc>
-	<npc id="13271" level="85" originalLevel="1" type="L2Npc" name="Young Watermelon">
+	<npc id="13271" level="1" type="L2Npc" name="Young Watermelon">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2897,7 +2897,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="13272" level="85" originalLevel="1" type="L2Npc" name="Defective Watermelon">
+	<npc id="13272" level="1" type="L2Npc" name="Defective Watermelon">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2934,7 +2934,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="13273" level="85" originalLevel="1" type="L2Npc" name="Rain Watermelon">
+	<npc id="13273" level="1" type="L2Npc" name="Rain Watermelon">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2972,7 +2972,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="13274" level="85" originalLevel="1" type="L2Npc" name="Large Rain Watermelon">
+	<npc id="13274" level="1" type="L2Npc" name="Large Rain Watermelon">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3010,7 +3010,7 @@
 			<height normal="65"/>
 		</collision>
 	</npc>
-	<npc id="13275" level="85" originalLevel="1" type="L2Npc" name="Young Honey Watermelon">
+	<npc id="13275" level="1" type="L2Npc" name="Young Honey Watermelon">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3048,7 +3048,7 @@
 			<height normal="20"/>
 		</collision>
 	</npc>
-	<npc id="13276" level="85" originalLevel="1" type="L2Npc" name="Defective Honey Watermelon">
+	<npc id="13276" level="1" type="L2Npc" name="Defective Honey Watermelon">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3086,7 +3086,7 @@
 			<height normal="40"/>
 		</collision>
 	</npc>
-	<npc id="13277" level="85" originalLevel="1" type="L2Npc" name="Rain Honey Watermelon">
+	<npc id="13277" level="1" type="L2Npc" name="Rain Honey Watermelon">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3124,7 +3124,7 @@
 			<height normal="52"/>
 		</collision>
 	</npc>
-	<npc id="13278" level="85" originalLevel="1" type="L2Npc" name="Large Rain Honey Watermelon">
+	<npc id="13278" level="1" type="L2Npc" name="Large Rain Honey Watermelon">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3162,7 +3162,7 @@
 			<height normal="60"/>
 		</collision>
 	</npc>
-	<npc id="13279" level="85" originalLevel="1" type="L2Npc" name="Uldie">
+	<npc id="13279" level="1" type="L2Npc" name="Uldie">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3200,7 +3200,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="13280" level="85" originalLevel="1" type="L2Npc" name="Belldandy">
+	<npc id="13280" level="1" type="L2Npc" name="Belldandy">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3238,7 +3238,7 @@
 			<height normal="20.5"/>
 		</collision>
 	</npc>
-	<npc id="13281" level="85" originalLevel="80" type="L2Npc" name="Skooldie" title="Event manager">
+	<npc id="13281" level="80" type="L2Npc" name="Skooldie" title="Event manager">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3275,7 +3275,7 @@
 			<height normal="12.8"/>
 		</collision>
 	</npc>
-	<npc id="13282" level="85" originalLevel="1" type="L2Npc" name="Skooldie">
+	<npc id="13282" level="1" type="L2Npc" name="Skooldie">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3313,7 +3313,7 @@
 			<height normal="12.8"/>
 		</collision>
 	</npc>
-	<npc id="13283" level="85" originalLevel="55" type="L2Npc" name="Treykan">
+	<npc id="13283" level="55" type="L2Npc" name="Treykan">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -3348,7 +3348,7 @@
 			<height normal="27"/>
 		</collision>
 	</npc>
-	<npc id="13284" level="85" originalLevel="80" type="L2Npc">
+	<npc id="13284" level="80" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3384,7 +3384,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="13285" level="85" originalLevel="80" type="L2Npc" name="Santa Claus" title="Event manager">
+	<npc id="13285" level="80" type="L2Npc" name="Santa Claus" title="Event manager">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -3420,7 +3420,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="13286" level="85" originalLevel="85" type="L2Npc" name="Baby White Tiger">
+	<npc id="13286" level="85" type="L2Npc" name="Baby White Tiger">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -3456,7 +3456,7 @@
 			<height normal="15.7"/>
 		</collision>
 	</npc>
-	<npc id="13287" level="85" originalLevel="85" type="L2Npc" name="Baby White Tiger Captain">
+	<npc id="13287" level="85" type="L2Npc" name="Baby White Tiger Captain">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -3492,7 +3492,7 @@
 			<height normal="29.5"/>
 		</collision>
 	</npc>
-	<npc id="13288" level="85" originalLevel="85" type="L2Npc" name="Gloomy Baby White Tiger">
+	<npc id="13288" level="85" type="L2Npc" name="Gloomy Baby White Tiger">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -3528,7 +3528,7 @@
 			<height normal="15.7"/>
 		</collision>
 	</npc>
-	<npc id="13289" level="85" originalLevel="85" type="L2Npc" name="Gloomy Baby White Tiger Captain">
+	<npc id="13289" level="85" type="L2Npc" name="Gloomy Baby White Tiger Captain">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -3564,7 +3564,7 @@
 			<height normal="29.5"/>
 		</collision>
 	</npc>
-	<npc id="13290" level="85" originalLevel="85" type="L2Npc" name="White Tiger">
+	<npc id="13290" level="85" type="L2Npc" name="White Tiger">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -3600,7 +3600,7 @@
 			<height normal="17.2"/>
 		</collision>
 	</npc>
-	<npc id="13291" level="85" originalLevel="85" type="L2Npc" name="White Tiger Captain">
+	<npc id="13291" level="85" type="L2Npc" name="White Tiger Captain">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -3636,7 +3636,7 @@
 			<height normal="34"/>
 		</collision>
 	</npc>
-	<npc id="13292" level="85" originalLevel="75" type="L2Npc" name="Employee of Magic Research Institute" title="Event manager">
+	<npc id="13292" level="75" type="L2Npc" name="Employee of Magic Research Institute" title="Event manager">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -3673,7 +3673,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="13293" level="85" originalLevel="85" type="L2Npc">
+	<npc id="13293" level="85" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3708,7 +3708,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="13294" level="85" originalLevel="85" type="L2Npc">
+	<npc id="13294" level="85" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3743,7 +3743,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="13295" level="85" originalLevel="80" type="L2Npc" name="White Lady" title="Event manager">
+	<npc id="13295" level="80" type="L2Npc" name="White Lady" title="Event manager">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -3779,7 +3779,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="13296" level="85" originalLevel="80" type="L2Npc" name="Freya" title="Event manager">
+	<npc id="13296" level="80" type="L2Npc" name="Freya" title="Event manager">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
@@ -3815,7 +3815,7 @@
 			<height normal="36"/>
 		</collision>
 	</npc>
-	<npc id="13297" level="85" originalLevel="80" type="L2Npc" name="World Cup Cat">
+	<npc id="13297" level="80" type="L2Npc" name="World Cup Cat">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3835,7 +3835,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="13298" level="85" originalLevel="80" type="L2Npc" name="Game Manager" title="Customer Joining">
+	<npc id="13298" level="80" type="L2Npc" name="Game Manager" title="Customer Joining">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">

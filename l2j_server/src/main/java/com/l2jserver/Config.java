@@ -247,6 +247,12 @@ public final class Config
 	public static boolean ALT_DROPPABLE_AUGMENTED_ITEMS;
 	public static boolean ALT_DISABLE_DEATH_PENALTY;
 	public static boolean ALT_AUTO_LEARN_SKILLS_ON_SP;
+	public static int MIN_LVL_DMG_PENALTY;
+	public static Map<Integer, Float> DMG_PENALTY;
+	public static Map<Integer, Float> CRIT_DMG_PENALTY;
+	public static Map<Integer, Float> SKILL_DMG_PENALTY;
+	public static int MIN_LVL_MAGIC_PENALTY;
+	public static Map<Integer, Float> SKILL_CHANCE_PENALTY;
 	
 	// --------------------------------------------------
 	// ClanHall Settings
@@ -870,6 +876,8 @@ public final class Config
 	public static long NPC_DELAY_BETWEEN_CASTS;
 	public static int NPC_DEFAULT_MIN_SKILL_CHANCE;
 	public static int NPC_DEFAULT_MAX_SKILL_CHANCE;
+
+	public static boolean ALT_PLAYER_LEVEL_MANOR;
 	
 	// --------------------------------------------------
 	// PvP Settings
@@ -1790,7 +1798,14 @@ public final class Config
 			ALT_DISABLE_DEATH_PENALTY = character.getBoolean("AltDisableDeathPenalty", false);
 			PLAYER_MOVEMENT_BLOCK_TIME = character.getInt("NpcTalkBlockingTime", 0) * 1000;
 			ALT_AUTO_LEARN_SKILLS_ON_SP = character.getBoolean("AltAutoLearnSkillsOnSp", false);
-			
+
+			MIN_LVL_DMG_PENALTY = character.getInt("MinLevelForDmgPenalty", 78);
+			DMG_PENALTY = parseConfigLine(character.getString("DmgPenaltyForLvLDifferences", "0.7, 0.6, 0.6, 0.55"));
+			CRIT_DMG_PENALTY = parseConfigLine(character.getString("CritDmgPenaltyForLvLDifferences", "0.75, 0.65, 0.6, 0.58"));
+			SKILL_DMG_PENALTY = parseConfigLine(character.getString("SkillDmgPenaltyForLvLDifferences", "0.8, 0.7, 0.65, 0.62"));
+			MIN_LVL_MAGIC_PENALTY = character.getInt("MinLevelForMagicPenalty", 78);
+			SKILL_CHANCE_PENALTY = parseConfigLine(character.getString("SkillChancePenaltyForLvLDifferences", "2.5, 3.0, 3.25, 3.5"));
+
 			// Load Telnet L2Properties file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);
 			
@@ -2198,7 +2213,9 @@ public final class Config
 			NPC_DELAY_BETWEEN_CASTS = NPC.getLong("NpcDelayBetweenCasts", 8000);
 			NPC_DEFAULT_MIN_SKILL_CHANCE = NPC.getInt("NpcDefaultMinSkillChance", 0);
 			NPC_DEFAULT_MAX_SKILL_CHANCE = NPC.getInt("NpcDefaultMaxSkillChance", 9);
-			
+
+			ALT_PLAYER_LEVEL_MANOR = NPC.getBoolean("AltPlayerLevelManor", false);
+
 			// Load Rates L2Properties file (if exists)
 			final PropertiesParser RatesSettings = new PropertiesParser(RATES_CONFIG_FILE);
 			

@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="14900" level="85" originalLevel="85" type="L2Pet" name="Magnus the Unicorn">
+	<npc id="14900" level="85" type="L2Pet" name="Magnus the Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1"/> <!-- Whiplash -->
@@ -43,7 +43,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="14901" level="85" originalLevel="81" type="L2Pet" name="Spectral Lord">
+	<npc id="14901" level="81" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -87,7 +87,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14902" level="85" originalLevel="81" type="L2Pet" name="Spectral Lord">
+	<npc id="14902" level="81" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -131,7 +131,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14903" level="85" originalLevel="81" type="L2Pet" name="Spectral Lord">
+	<npc id="14903" level="81" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -175,7 +175,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14904" level="85" originalLevel="82" type="L2Pet" name="Spectral Lord">
+	<npc id="14904" level="82" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -219,7 +219,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14905" level="85" originalLevel="82" type="L2Pet" name="Spectral Lord">
+	<npc id="14905" level="82" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -263,7 +263,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14906" level="85" originalLevel="82" type="L2Pet" name="Spectral Lord">
+	<npc id="14906" level="82" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -307,7 +307,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14907" level="85" originalLevel="83" type="L2Pet" name="Spectral Lord">
+	<npc id="14907" level="83" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -351,7 +351,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14908" level="85" originalLevel="83" type="L2Pet" name="Spectral Lord">
+	<npc id="14908" level="83" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -395,7 +395,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14909" level="85" originalLevel="83" type="L2Pet" name="Spectral Lord">
+	<npc id="14909" level="83" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -439,7 +439,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14910" level="85" originalLevel="84" type="L2Pet" name="Spectral Lord">
+	<npc id="14910" level="84" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -483,7 +483,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14911" level="85" originalLevel="84" type="L2Pet" name="Spectral Lord">
+	<npc id="14911" level="84" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -527,7 +527,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14912" level="85" originalLevel="84" type="L2Pet" name="Spectral Lord">
+	<npc id="14912" level="84" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -571,7 +571,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14913" level="85" originalLevel="85" type="L2Pet" name="Spectral Lord">
+	<npc id="14913" level="85" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -615,7 +615,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14914" level="85" originalLevel="85" type="L2Pet" name="Spectral Lord">
+	<npc id="14914" level="85" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -659,7 +659,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14915" level="85" originalLevel="85" type="L2Pet" name="Spectral Lord">
+	<npc id="14915" level="85" type="L2Pet" name="Spectral Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1"/> <!-- Corpse Kaboom -->
@@ -703,7 +703,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="14916" level="85" originalLevel="61" type="L2Pet" name="Tigress">
+	<npc id="14916" level="61" type="L2Pet" name="Tigress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="5761" level="1"/> <!-- Power Strike -->
@@ -746,7 +746,7 @@
 			<height normal="18.4"/>
 		</collision>
 	</npc>
-	<npc id="14917" level="85" originalLevel="61" type="L2Pet" name="Tigress">
+	<npc id="14917" level="61" type="L2Pet" name="Tigress">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="5761" level="2"/> <!-- Power Strike -->
@@ -789,7 +789,7 @@
 			<height normal="18.4"/>
 		</collision>
 	</npc>
-	<npc id="14918" level="85" originalLevel="83" type="L2Pet" name="Imperial Phoenix">
+	<npc id="14918" level="83" type="L2Pet" name="Imperial Phoenix">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6041" level="1"/> <!-- Phoenix Rush -->

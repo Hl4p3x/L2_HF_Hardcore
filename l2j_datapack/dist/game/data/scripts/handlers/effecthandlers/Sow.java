@@ -18,6 +18,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.audio.Sound;
 import com.l2jserver.gameserver.model.L2Seed;
@@ -115,19 +116,19 @@ public final class Sow extends AbstractEffect
 		{
 			basicSuccess -= 5 * (levelTarget - maxlevelSeed);
 		}
-		
-		// 5% decrease in chance if player level
-		// is more than +/- 5 levels to _target's_ level
-		int diff = (levelPlayer - levelTarget);
-		if (diff < 0)
-		{
-			diff = -diff;
+
+		if (!Config.ALT_PLAYER_LEVEL_MANOR) {
+			// 5% decrease in chance if player level
+			// is more than +/- 5 levels to _target's_ level
+			int diff = (levelPlayer - levelTarget);
+			if (diff < 0) {
+				diff = -diff;
+			}
+			if (diff > 5) {
+				basicSuccess -= 5 * (diff - 5);
+			}
 		}
-		if (diff > 5)
-		{
-			basicSuccess -= 5 * (diff - 5);
-		}
-		
+
 		// chance can't be less than 1%
 		Math.max(basicSuccess, 1);
 		return Rnd.nextInt(99) < basicSuccess;

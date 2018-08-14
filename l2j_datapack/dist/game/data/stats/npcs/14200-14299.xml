@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="14200" level="85" originalLevel="83" type="L2Pet" name="Mew the Cat">
+	<npc id="14200" level="83" type="L2Pet" name="Mew the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4261" level="11"/> <!-- Mega Storm Strike -->
@@ -43,7 +43,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14201" level="85" originalLevel="84" type="L2Pet" name="Mew the Cat">
+	<npc id="14201" level="84" type="L2Pet" name="Mew the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12"/> <!-- Mega Storm Strike -->
@@ -87,7 +87,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14202" level="85" originalLevel="84" type="L2Pet" name="Mew the Cat">
+	<npc id="14202" level="84" type="L2Pet" name="Mew the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12"/> <!-- Mega Storm Strike -->
@@ -131,7 +131,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14203" level="85" originalLevel="84" type="L2Pet" name="Mew the Cat">
+	<npc id="14203" level="84" type="L2Pet" name="Mew the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12"/> <!-- Mega Storm Strike -->
@@ -175,7 +175,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14204" level="85" originalLevel="85" type="L2Pet" name="Mew the Cat">
+	<npc id="14204" level="85" type="L2Pet" name="Mew the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12"/> <!-- Mega Storm Strike -->
@@ -219,7 +219,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14205" level="85" originalLevel="85" type="L2Pet" name="Mew the Cat">
+	<npc id="14205" level="85" type="L2Pet" name="Mew the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12"/> <!-- Mega Storm Strike -->
@@ -263,7 +263,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14206" level="85" originalLevel="85" type="L2Pet" name="Mew the Cat">
+	<npc id="14206" level="85" type="L2Pet" name="Mew the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12"/> <!-- Mega Storm Strike -->
@@ -307,7 +307,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14207" level="85" originalLevel="42" type="L2Pet" name="Kai the Cat">
+	<npc id="14207" level="42" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="4"/> <!-- Self Damage Shield -->
@@ -350,7 +350,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14208" level="85" originalLevel="46" type="L2Pet" name="Kai the Cat">
+	<npc id="14208" level="46" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="4"/> <!-- Self Damage Shield -->
@@ -393,7 +393,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14209" level="85" originalLevel="50" type="L2Pet" name="Kai the Cat">
+	<npc id="14209" level="50" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="5"/> <!-- Self Damage Shield -->
@@ -436,7 +436,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14210" level="85" originalLevel="54" type="L2Pet" name="Kai the Cat">
+	<npc id="14210" level="54" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="5"/> <!-- Self Damage Shield -->
@@ -479,7 +479,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14211" level="85" originalLevel="58" type="L2Pet" name="Kai the Cat">
+	<npc id="14211" level="58" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="5"/> <!-- Self Damage Shield -->
@@ -522,7 +522,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14212" level="85" originalLevel="60" type="L2Pet" name="Kai the Cat">
+	<npc id="14212" level="60" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6"/> <!-- Self Damage Shield -->
@@ -565,7 +565,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14213" level="85" originalLevel="62" type="L2Pet" name="Kai the Cat">
+	<npc id="14213" level="62" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6"/> <!-- Self Damage Shield -->
@@ -608,7 +608,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14214" level="85" originalLevel="64" type="L2Pet" name="Kai the Cat">
+	<npc id="14214" level="64" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6"/> <!-- Self Damage Shield -->
@@ -651,7 +651,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14215" level="85" originalLevel="66" type="L2Pet" name="Kai the Cat">
+	<npc id="14215" level="66" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6"/> <!-- Self Damage Shield -->
@@ -694,7 +694,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14216" level="85" originalLevel="68" type="L2Pet" name="Kai the Cat">
+	<npc id="14216" level="68" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6"/> <!-- Self Damage Shield -->
@@ -737,7 +737,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14217" level="85" originalLevel="70" type="L2Pet" name="Kai the Cat">
+	<npc id="14217" level="70" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7"/> <!-- Self Damage Shield -->
@@ -780,7 +780,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14218" level="85" originalLevel="72" type="L2Pet" name="Kai the Cat">
+	<npc id="14218" level="72" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7"/> <!-- Self Damage Shield -->
@@ -823,7 +823,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14219" level="85" originalLevel="74" type="L2Pet" name="Kai the Cat">
+	<npc id="14219" level="74" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7"/> <!-- Self Damage Shield -->
@@ -866,7 +866,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14220" level="85" originalLevel="76" type="L2Pet" name="Kai the Cat">
+	<npc id="14220" level="76" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7"/> <!-- Self Damage Shield -->
@@ -909,7 +909,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14221" level="85" originalLevel="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14221" level="78" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8"/> <!-- Self Damage Shield -->
@@ -952,7 +952,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14222" level="85" originalLevel="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14222" level="78" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8"/> <!-- Self Damage Shield -->
@@ -995,7 +995,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14223" level="85" originalLevel="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14223" level="78" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8"/> <!-- Self Damage Shield -->
@@ -1038,7 +1038,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14224" level="85" originalLevel="78" type="L2Pet" name="Kai the Cat">
+	<npc id="14224" level="78" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8"/> <!-- Self Damage Shield -->
@@ -1081,7 +1081,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14225" level="85" originalLevel="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14225" level="79" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8"/> <!-- Self Damage Shield -->
@@ -1124,7 +1124,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14226" level="85" originalLevel="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14226" level="79" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8"/> <!-- Self Damage Shield -->
@@ -1167,7 +1167,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14227" level="85" originalLevel="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14227" level="79" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9"/> <!-- Self Damage Shield -->
@@ -1210,7 +1210,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14228" level="85" originalLevel="79" type="L2Pet" name="Kai the Cat">
+	<npc id="14228" level="79" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9"/> <!-- Self Damage Shield -->
@@ -1253,7 +1253,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14229" level="85" originalLevel="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14229" level="80" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9"/> <!-- Self Damage Shield -->
@@ -1296,7 +1296,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14230" level="85" originalLevel="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14230" level="80" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9"/> <!-- Self Damage Shield -->
@@ -1339,7 +1339,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14231" level="85" originalLevel="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14231" level="80" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9"/> <!-- Self Damage Shield -->
@@ -1382,7 +1382,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14232" level="85" originalLevel="80" type="L2Pet" name="Kai the Cat">
+	<npc id="14232" level="80" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9"/> <!-- Self Damage Shield -->
@@ -1425,7 +1425,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14233" level="85" originalLevel="81" type="L2Pet" name="Kai the Cat">
+	<npc id="14233" level="81" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10"/> <!-- Self Damage Shield -->
@@ -1468,7 +1468,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14234" level="85" originalLevel="81" type="L2Pet" name="Kai the Cat">
+	<npc id="14234" level="81" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10"/> <!-- Self Damage Shield -->
@@ -1511,7 +1511,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14235" level="85" originalLevel="81" type="L2Pet" name="Kai the Cat">
+	<npc id="14235" level="81" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10"/> <!-- Self Damage Shield -->
@@ -1554,7 +1554,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14236" level="85" originalLevel="81" type="L2Pet" name="Kai the Cat">
+	<npc id="14236" level="81" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10"/> <!-- Self Damage Shield -->
@@ -1597,7 +1597,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14237" level="85" originalLevel="82" type="L2Pet" name="Kai the Cat">
+	<npc id="14237" level="82" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10"/> <!-- Self Damage Shield -->
@@ -1640,7 +1640,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14238" level="85" originalLevel="82" type="L2Pet" name="Kai the Cat">
+	<npc id="14238" level="82" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10"/> <!-- Self Damage Shield -->
@@ -1683,7 +1683,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14239" level="85" originalLevel="82" type="L2Pet" name="Kai the Cat">
+	<npc id="14239" level="82" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11"/> <!-- Self Damage Shield -->
@@ -1726,7 +1726,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14240" level="85" originalLevel="82" type="L2Pet" name="Kai the Cat">
+	<npc id="14240" level="82" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11"/> <!-- Self Damage Shield -->
@@ -1769,7 +1769,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14241" level="85" originalLevel="83" type="L2Pet" name="Kai the Cat">
+	<npc id="14241" level="83" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11"/> <!-- Self Damage Shield -->
@@ -1812,7 +1812,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14242" level="85" originalLevel="83" type="L2Pet" name="Kai the Cat">
+	<npc id="14242" level="83" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11"/> <!-- Self Damage Shield -->
@@ -1855,7 +1855,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14243" level="85" originalLevel="83" type="L2Pet" name="Kai the Cat">
+	<npc id="14243" level="83" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11"/> <!-- Self Damage Shield -->
@@ -1898,7 +1898,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14244" level="85" originalLevel="83" type="L2Pet" name="Kai the Cat">
+	<npc id="14244" level="83" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11"/> <!-- Self Damage Shield -->
@@ -1941,7 +1941,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14245" level="85" originalLevel="84" type="L2Pet" name="Kai the Cat">
+	<npc id="14245" level="84" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12"/> <!-- Self Damage Shield -->
@@ -1985,7 +1985,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14246" level="85" originalLevel="84" type="L2Pet" name="Kai the Cat">
+	<npc id="14246" level="84" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12"/> <!-- Self Damage Shield -->
@@ -2029,7 +2029,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14247" level="85" originalLevel="84" type="L2Pet" name="Kai the Cat">
+	<npc id="14247" level="84" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12"/> <!-- Self Damage Shield -->
@@ -2073,7 +2073,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14248" level="85" originalLevel="85" type="L2Pet" name="Kai the Cat">
+	<npc id="14248" level="85" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12"/> <!-- Self Damage Shield -->
@@ -2117,7 +2117,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14249" level="85" originalLevel="85" type="L2Pet" name="Kai the Cat">
+	<npc id="14249" level="85" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12"/> <!-- Self Damage Shield -->
@@ -2161,7 +2161,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14250" level="85" originalLevel="85" type="L2Pet" name="Kai the Cat">
+	<npc id="14250" level="85" type="L2Pet" name="Kai the Cat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12"/> <!-- Self Damage Shield -->
@@ -2205,7 +2205,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14251" level="85" originalLevel="58" type="L2Pet" name="Feline Queen">
+	<npc id="14251" level="58" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="1"/> <!-- Blessing of Queen -->
@@ -2254,7 +2254,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14252" level="85" originalLevel="60" type="L2Pet" name="Feline Queen">
+	<npc id="14252" level="60" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="1"/> <!-- Blessing of Queen -->
@@ -2303,7 +2303,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14253" level="85" originalLevel="62" type="L2Pet" name="Feline Queen">
+	<npc id="14253" level="62" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="1"/> <!-- Blessing of Queen -->
@@ -2352,7 +2352,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14254" level="85" originalLevel="64" type="L2Pet" name="Feline Queen">
+	<npc id="14254" level="64" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="2"/> <!-- Blessing of Queen -->
@@ -2401,7 +2401,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14255" level="85" originalLevel="66" type="L2Pet" name="Feline Queen">
+	<npc id="14255" level="66" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="2"/> <!-- Blessing of Queen -->
@@ -2450,7 +2450,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14256" level="85" originalLevel="68" type="L2Pet" name="Feline Queen">
+	<npc id="14256" level="68" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="2"/> <!-- Blessing of Queen -->
@@ -2499,7 +2499,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14257" level="85" originalLevel="70" type="L2Pet" name="Feline Queen">
+	<npc id="14257" level="70" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="3"/> <!-- Blessing of Queen -->
@@ -2548,7 +2548,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14258" level="85" originalLevel="72" type="L2Pet" name="Feline Queen">
+	<npc id="14258" level="72" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="3"/> <!-- Blessing of Queen -->
@@ -2597,7 +2597,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14259" level="85" originalLevel="74" type="L2Pet" name="Feline Queen">
+	<npc id="14259" level="74" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="3"/> <!-- Blessing of Queen -->
@@ -2646,7 +2646,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14260" level="85" originalLevel="76" type="L2Pet" name="Feline Queen">
+	<npc id="14260" level="76" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="3"/> <!-- Blessing of Queen -->
@@ -2695,7 +2695,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14265" level="85" originalLevel="78" type="L2Pet" name="Feline Queen">
+	<npc id="14265" level="78" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="4"/> <!-- Blessing of Queen -->
@@ -2744,7 +2744,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14266" level="85" originalLevel="78" type="L2Pet" name="Feline Queen">
+	<npc id="14266" level="78" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="4"/> <!-- Blessing of Queen -->
@@ -2793,7 +2793,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14267" level="85" originalLevel="78" type="L2Pet" name="Feline Queen">
+	<npc id="14267" level="78" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="4"/> <!-- Blessing of Queen -->
@@ -2842,7 +2842,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14268" level="85" originalLevel="78" type="L2Pet" name="Feline Queen">
+	<npc id="14268" level="78" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="5"/> <!-- Blessing of Queen -->
@@ -2891,7 +2891,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14269" level="85" originalLevel="79" type="L2Pet" name="Feline Queen">
+	<npc id="14269" level="79" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="5"/> <!-- Blessing of Queen -->
@@ -2940,7 +2940,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14270" level="85" originalLevel="79" type="L2Pet" name="Feline Queen">
+	<npc id="14270" level="79" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="5"/> <!-- Blessing of Queen -->
@@ -2989,7 +2989,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14271" level="85" originalLevel="79" type="L2Pet" name="Feline Queen">
+	<npc id="14271" level="79" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="6"/> <!-- Blessing of Queen -->
@@ -3038,7 +3038,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14272" level="85" originalLevel="79" type="L2Pet" name="Feline Queen">
+	<npc id="14272" level="79" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="6"/> <!-- Blessing of Queen -->
@@ -3087,7 +3087,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14273" level="85" originalLevel="80" type="L2Pet" name="Feline Queen">
+	<npc id="14273" level="80" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="6"/> <!-- Blessing of Queen -->
@@ -3136,7 +3136,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14274" level="85" originalLevel="80" type="L2Pet" name="Feline Queen">
+	<npc id="14274" level="80" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="7"/> <!-- Blessing of Queen -->
@@ -3185,7 +3185,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14275" level="85" originalLevel="80" type="L2Pet" name="Feline Queen">
+	<npc id="14275" level="80" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="7"/> <!-- Blessing of Queen -->
@@ -3234,7 +3234,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14276" level="85" originalLevel="80" type="L2Pet" name="Feline Queen">
+	<npc id="14276" level="80" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="7"/> <!-- Blessing of Queen -->
@@ -3283,7 +3283,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14277" level="85" originalLevel="81" type="L2Pet" name="Feline Queen">
+	<npc id="14277" level="81" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="8"/> <!-- Blessing of Queen -->
@@ -3332,7 +3332,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14278" level="85" originalLevel="81" type="L2Pet" name="Feline Queen">
+	<npc id="14278" level="81" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="8"/> <!-- Blessing of Queen -->
@@ -3381,7 +3381,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14279" level="85" originalLevel="81" type="L2Pet" name="Feline Queen">
+	<npc id="14279" level="81" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="8"/> <!-- Blessing of Queen -->
@@ -3430,7 +3430,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14280" level="85" originalLevel="81" type="L2Pet" name="Feline Queen">
+	<npc id="14280" level="81" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="9"/> <!-- Blessing of Queen -->
@@ -3479,7 +3479,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14281" level="85" originalLevel="82" type="L2Pet" name="Feline Queen">
+	<npc id="14281" level="82" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="9"/> <!-- Blessing of Queen -->
@@ -3528,7 +3528,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14282" level="85" originalLevel="82" type="L2Pet" name="Feline Queen">
+	<npc id="14282" level="82" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="9"/> <!-- Blessing of Queen -->
@@ -3577,7 +3577,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14283" level="85" originalLevel="82" type="L2Pet" name="Feline Queen">
+	<npc id="14283" level="82" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="10"/> <!-- Blessing of Queen -->
@@ -3626,7 +3626,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14284" level="85" originalLevel="82" type="L2Pet" name="Feline Queen">
+	<npc id="14284" level="82" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="10"/> <!-- Blessing of Queen -->
@@ -3675,7 +3675,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14285" level="85" originalLevel="83" type="L2Pet" name="Feline Queen">
+	<npc id="14285" level="83" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="10"/> <!-- Blessing of Queen -->
@@ -3724,7 +3724,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14286" level="85" originalLevel="83" type="L2Pet" name="Feline Queen">
+	<npc id="14286" level="83" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="11"/> <!-- Blessing of Queen -->
@@ -3773,7 +3773,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14287" level="85" originalLevel="83" type="L2Pet" name="Feline Queen">
+	<npc id="14287" level="83" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="11"/> <!-- Blessing of Queen -->
@@ -3822,7 +3822,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14288" level="85" originalLevel="83" type="L2Pet" name="Feline Queen">
+	<npc id="14288" level="83" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="11"/> <!-- Blessing of Queen -->
@@ -3871,7 +3871,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14289" level="85" originalLevel="84" type="L2Pet" name="Feline Queen">
+	<npc id="14289" level="84" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="12"/> <!-- Blessing of Queen -->
@@ -3920,7 +3920,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14290" level="85" originalLevel="84" type="L2Pet" name="Feline Queen">
+	<npc id="14290" level="84" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="12"/> <!-- Blessing of Queen -->
@@ -3969,7 +3969,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14291" level="85" originalLevel="84" type="L2Pet" name="Feline Queen">
+	<npc id="14291" level="84" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="12"/> <!-- Blessing of Queen -->
@@ -4018,7 +4018,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14292" level="85" originalLevel="85" type="L2Pet" name="Feline Queen">
+	<npc id="14292" level="85" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="13"/> <!-- Blessing of Queen -->
@@ -4067,7 +4067,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14293" level="85" originalLevel="85" type="L2Pet" name="Feline Queen">
+	<npc id="14293" level="85" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="13"/> <!-- Blessing of Queen -->
@@ -4116,7 +4116,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14294" level="85" originalLevel="85" type="L2Pet" name="Feline Queen">
+	<npc id="14294" level="85" type="L2Pet" name="Feline Queen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="13"/> <!-- Blessing of Queen -->
@@ -4165,7 +4165,7 @@
 			<height normal="15"/>
 		</collision>
 	</npc>
-	<npc id="14295" level="85" originalLevel="22" type="L2Pet" name="Boxer the Unicorn">
+	<npc id="14295" level="22" type="L2Pet" name="Boxer the Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4025" level="2"/> <!-- Master Recharge -->
@@ -4208,7 +4208,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="14296" level="85" originalLevel="27" type="L2Pet" name="Boxer the Unicorn">
+	<npc id="14296" level="27" type="L2Pet" name="Boxer the Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4025" level="2"/> <!-- Master Recharge -->
@@ -4251,7 +4251,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="14297" level="85" originalLevel="32" type="L2Pet" name="Boxer the Unicorn">
+	<npc id="14297" level="32" type="L2Pet" name="Boxer the Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4025" level="3"/> <!-- Master Recharge -->
@@ -4294,7 +4294,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="14298" level="85" originalLevel="37" type="L2Pet" name="Boxer the Unicorn">
+	<npc id="14298" level="37" type="L2Pet" name="Boxer the Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4025" level="3"/> <!-- Master Recharge -->
@@ -4337,7 +4337,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="14299" level="85" originalLevel="42" type="L2Pet" name="Boxer the Unicorn">
+	<npc id="14299" level="42" type="L2Pet" name="Boxer the Unicorn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4025" level="4"/> <!-- Master Recharge -->

@@ -18,6 +18,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -120,19 +121,17 @@ public final class Harvesting extends AbstractEffect
 	{
 		final int levelPlayer = activeChar.getLevel();
 		final int levelTarget = target.getLevel();
-		
-		int diff = (levelPlayer - levelTarget);
-		if (diff < 0)
-		{
-			diff = -diff;
-		}
+
+		int diff = Math.abs(levelPlayer - levelTarget);
 		
 		// apply penalty, target <=> player levels
 		// 5% penalty for each level
 		int basicSuccess = 100;
-		if (diff > 5)
-		{
-			basicSuccess -= (diff - 5) * 5;
+
+		if (!Config.ALT_PLAYER_LEVEL_MANOR) {
+			if (diff > 5) {
+				basicSuccess -= (diff - 5) * 5;
+			}
 		}
 		
 		// success rate can't be less than 1%

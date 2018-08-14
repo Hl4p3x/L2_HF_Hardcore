@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="32800" level="85" originalLevel="80" type="L2Npc" name="Frikios" title="Guide of Revelation">
+	<npc id="32800" level="80" type="L2Npc" name="Frikios" title="Guide of Revelation">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -19,7 +19,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32801" level="85" originalLevel="80" type="L2Npc" name="Solina Bodyguard" title="Solina's Guard">
+	<npc id="32801" level="80" type="L2Npc" name="Solina Bodyguard" title="Solina's Guard">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -39,7 +39,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32802" level="85" originalLevel="80" type="L2Npc" name="Solina Bodyguard" title="Solina's Guard">
+	<npc id="32802" level="80" type="L2Npc" name="Solina Bodyguard" title="Solina's Guard">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -59,7 +59,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32803" level="85" originalLevel="80" type="L2Npc" name="Relic Guardian">
+	<npc id="32803" level="80" type="L2Npc" name="Relic Guardian">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -79,7 +79,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32804" level="85" originalLevel="80" type="L2Npc" name="Relic Watcher">
+	<npc id="32804" level="80" type="L2Npc" name="Relic Watcher">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -99,7 +99,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32805" level="85" originalLevel="80" type="L2Npc" name="Relic Watcher">
+	<npc id="32805" level="80" type="L2Npc" name="Relic Watcher">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -119,7 +119,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32806" level="85" originalLevel="80" type="L2Npc" name="Relic Watcher">
+	<npc id="32806" level="80" type="L2Npc" name="Relic Watcher">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -139,7 +139,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32807" level="85" originalLevel="80" type="L2Npc" name="Relic Watcher">
+	<npc id="32807" level="80" type="L2Npc" name="Relic Watcher">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -159,7 +159,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32808" level="85" originalLevel="80" type="L2Npc" name="Etis van Etina" title="Head of the Embryo">
+	<npc id="32808" level="80" type="L2Npc" name="Etis van Etina" title="Head of the Embryo">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -179,7 +179,7 @@
 			<height normal="26.5"/>
 		</collision>
 	</npc>
-	<npc id="32809" level="85" originalLevel="80" type="L2Npc" name="Pile of Books">
+	<npc id="32809" level="80" type="L2Npc" name="Pile of Books">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -199,7 +199,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32810" level="85" originalLevel="80" type="L2Npc" name="Pile of Books">
+	<npc id="32810" level="80" type="L2Npc" name="Pile of Books">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -219,7 +219,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32811" level="85" originalLevel="80" type="L2Npc" name="Pile of Books">
+	<npc id="32811" level="80" type="L2Npc" name="Pile of Books">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -239,7 +239,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32812" level="85" originalLevel="80" type="L2Npc" name="Pile of Books">
+	<npc id="32812" level="80" type="L2Npc" name="Pile of Books">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -259,7 +259,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32813" level="85" originalLevel="80" type="L2Npc" name="Pile of Books">
+	<npc id="32813" level="80" type="L2Npc" name="Pile of Books">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -279,7 +279,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32814" level="85" originalLevel="80" type="L2Npc" name="Pile of Books">
+	<npc id="32814" level="80" type="L2Npc" name="Pile of Books">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -299,7 +299,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32815" level="85" originalLevel="80" type="L2Npc" name="Odd Globe">
+	<npc id="32815" level="80" type="L2Npc" name="Odd Globe">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -319,7 +319,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32816" level="85" originalLevel="80" type="L2Npc" name="Teleport Control Device">
+	<npc id="32816" level="80" type="L2Npc" name="Teleport Control Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -339,7 +339,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32817" level="85" originalLevel="80" type="L2Npc" name="Teleport Control Device">
+	<npc id="32817" level="80" type="L2Npc" name="Teleport Control Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -359,7 +359,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32818" level="85" originalLevel="80" type="L2Npc" name="Teleport Control Device">
+	<npc id="32818" level="80" type="L2Npc" name="Teleport Control Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -379,7 +379,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32819" level="85" originalLevel="80" type="L2Npc" name="Teleport Control Device">
+	<npc id="32819" level="80" type="L2Npc" name="Teleport Control Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -399,7 +399,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32820" level="85" originalLevel="80" type="L2Npc" name="Teleport Control Device">
+	<npc id="32820" level="80" type="L2Npc" name="Teleport Control Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -419,7 +419,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32821" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32821" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -439,7 +439,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32822" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32822" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -459,7 +459,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32823" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32823" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -479,7 +479,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32824" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32824" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -499,7 +499,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32825" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32825" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -519,7 +519,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32826" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32826" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -539,7 +539,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32827" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32827" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -559,7 +559,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32828" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32828" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -579,7 +579,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32829" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32829" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -599,7 +599,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32830" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32830" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -619,7 +619,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32831" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32831" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -639,7 +639,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32832" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32832" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -659,7 +659,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32833" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32833" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -679,7 +679,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32834" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32834" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -699,7 +699,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32835" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32835" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -719,7 +719,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32836" level="85" originalLevel="80" type="L2Npc" name="Reading Desk">
+	<npc id="32836" level="80" type="L2Npc" name="Reading Desk">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -739,7 +739,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32837" level="85" originalLevel="80" type="L2Npc" name="Teleport Control Device">
+	<npc id="32837" level="80" type="L2Npc" name="Teleport Control Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -759,7 +759,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32838" level="85" originalLevel="80" type="L2Npc" name="Powerful Device">
+	<npc id="32838" level="80" type="L2Npc" name="Powerful Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -779,7 +779,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32839" level="85" originalLevel="80" type="L2Npc" name="Powerful Device">
+	<npc id="32839" level="80" type="L2Npc" name="Powerful Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -799,7 +799,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32840" level="85" originalLevel="80" type="L2Npc" name="Powerful Device">
+	<npc id="32840" level="80" type="L2Npc" name="Powerful Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -819,7 +819,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32841" level="85" originalLevel="80" type="L2Npc" name="Powerful Device">
+	<npc id="32841" level="80" type="L2Npc" name="Powerful Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -839,7 +839,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32842" level="85" originalLevel="80" type="L2Npc" name="Teleport Control Device">
+	<npc id="32842" level="80" type="L2Npc" name="Teleport Control Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -859,7 +859,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32843" level="85" originalLevel="80" type="L2Npc" name="Tomb of the Saintess">
+	<npc id="32843" level="80" type="L2Npc" name="Tomb of the Saintess">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -879,7 +879,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32844" level="85" originalLevel="80" type="L2Npc" name="Teleport Control Device">
+	<npc id="32844" level="80" type="L2Npc" name="Teleport Control Device">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -899,7 +899,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32845" level="85" originalLevel="80" type="L2Monster" name="Treasure Chest">
+	<npc id="32845" level="80" type="L2Monster" name="Treasure Chest">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -919,7 +919,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32846" level="85" originalLevel="80" type="L2Monster" name="Treasure Chest">
+	<npc id="32846" level="80" type="L2Monster" name="Treasure Chest">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -939,7 +939,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32847" level="85" originalLevel="80" type="L2Monster" name="Treasure Chest">
+	<npc id="32847" level="80" type="L2Monster" name="Treasure Chest">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -959,7 +959,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32848" level="85" originalLevel="80" type="L2Monster" name="Treasure Chest">
+	<npc id="32848" level="80" type="L2Monster" name="Treasure Chest">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -979,7 +979,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32849" level="85" originalLevel="80" type="L2Monster" name="Treasure Chest">
+	<npc id="32849" level="80" type="L2Monster" name="Treasure Chest">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -999,7 +999,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32850" level="85" originalLevel="80" type="L2Monster" name="Treasure Chest">
+	<npc id="32850" level="80" type="L2Monster" name="Treasure Chest">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1019,7 +1019,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32851" level="85" originalLevel="80" type="L2Monster" name="Treasure Chest">
+	<npc id="32851" level="80" type="L2Monster" name="Treasure Chest">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1039,7 +1039,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32852" level="85" originalLevel="80" type="L2Monster" name="Treasure Chest">
+	<npc id="32852" level="80" type="L2Monster" name="Treasure Chest">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1059,7 +1059,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32853" level="85" originalLevel="80" type="L2Monster" name="Altar of Hallows">
+	<npc id="32853" level="80" type="L2Monster" name="Altar of Hallows">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1079,7 +1079,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32854" level="85" originalLevel="80" type="L2Monster" name="Altar of Hallows">
+	<npc id="32854" level="80" type="L2Monster" name="Altar of Hallows">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1099,7 +1099,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32855" level="85" originalLevel="80" type="L2Monster" name="Altar of Hallows">
+	<npc id="32855" level="80" type="L2Monster" name="Altar of Hallows">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1119,7 +1119,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32856" level="85" originalLevel="80" type="L2Monster" name="Altar of Hallows">
+	<npc id="32856" level="80" type="L2Monster" name="Altar of Hallows">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1139,7 +1139,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32857" level="85" originalLevel="80" type="L2Npc" name="Altar of Hallows">
+	<npc id="32857" level="80" type="L2Npc" name="Altar of Hallows">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1159,7 +1159,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32858" level="85" originalLevel="80" type="L2Npc" name="Altar of Hallows">
+	<npc id="32858" level="80" type="L2Npc" name="Altar of Hallows">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1179,7 +1179,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32859" level="85" originalLevel="80" type="L2Npc" name="Altar of Hallows">
+	<npc id="32859" level="80" type="L2Npc" name="Altar of Hallows">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1199,7 +1199,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32860" level="85" originalLevel="80" type="L2Npc" name="Altar of Hallows">
+	<npc id="32860" level="80" type="L2Npc" name="Altar of Hallows">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1219,7 +1219,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32861" level="85" originalLevel="80" type="L2Npc" name="Sophia" title="Library Director of Saints">
+	<npc id="32861" level="80" type="L2Npc" name="Sophia" title="Library Director of Saints">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1239,7 +1239,7 @@
 			<height normal="21.2"/>
 		</collision>
 	</npc>
-	<npc id="32862" level="85" originalLevel="80" type="L2Npc" name="Gruff-looking Man">
+	<npc id="32862" level="80" type="L2Npc" name="Gruff-looking Man">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1259,7 +1259,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="32863" level="85" originalLevel="80" type="L2Npc" name="Sophia" title="Library Director of Saints">
+	<npc id="32863" level="80" type="L2Npc" name="Sophia" title="Library Director of Saints">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1279,7 +1279,7 @@
 			<height normal="21.2"/>
 		</collision>
 	</npc>
-	<npc id="32864" level="85" originalLevel="80" type="L2Teleporter" name="Separated Soul">
+	<npc id="32864" level="80" type="L2Teleporter" name="Separated Soul">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1302,7 +1302,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32865" level="85" originalLevel="80" type="L2Teleporter" name="Separated Soul">
+	<npc id="32865" level="80" type="L2Teleporter" name="Separated Soul">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1325,7 +1325,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32866" level="85" originalLevel="80" type="L2Teleporter" name="Separated Soul">
+	<npc id="32866" level="80" type="L2Teleporter" name="Separated Soul">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1348,7 +1348,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32867" level="85" originalLevel="80" type="L2Teleporter" name="Separated Soul">
+	<npc id="32867" level="80" type="L2Teleporter" name="Separated Soul">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1371,7 +1371,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32868" level="85" originalLevel="80" type="L2Teleporter" name="Separated Soul">
+	<npc id="32868" level="80" type="L2Teleporter" name="Separated Soul">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1394,7 +1394,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32869" level="85" originalLevel="80" type="L2Teleporter" name="Separated Soul">
+	<npc id="32869" level="80" type="L2Teleporter" name="Separated Soul">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1417,7 +1417,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32870" level="85" originalLevel="80" type="L2Teleporter" name="Separated Soul">
+	<npc id="32870" level="80" type="L2Teleporter" name="Separated Soul">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1440,7 +1440,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32871" level="85" originalLevel="80" type="L2Npc" name="Dragon Vortex">
+	<npc id="32871" level="80" type="L2Npc" name="Dragon Vortex">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1461,7 +1461,7 @@
 			<height normal="50"/>
 		</collision>
 	</npc>
-	<npc id="32872" level="85" originalLevel="80" type="L2Npc" name="Tightly Shut Door">
+	<npc id="32872" level="80" type="L2Npc" name="Tightly Shut Door">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1481,7 +1481,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32873" level="85" originalLevel="80" type="L2Npc" name="Cracked Wall">
+	<npc id="32873" level="80" type="L2Npc" name="Cracked Wall">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1501,7 +1501,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32874" level="85" originalLevel="70" type="L2Merchant" name="Lyann" title="Recipe Merchant">
+	<npc id="32874" level="70" type="L2Merchant" name="Lyann" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1524,7 +1524,7 @@
 			<height normal="18.5"/>
 		</collision>
 	</npc>
-	<npc id="32875" level="85" originalLevel="70" type="L2Merchant" name="Tahoo" title="Recipe Merchant">
+	<npc id="32875" level="70" type="L2Merchant" name="Tahoo" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1547,7 +1547,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="32876" level="85" originalLevel="70" type="L2Merchant" name="Desian" title="Recipe Merchant">
+	<npc id="32876" level="70" type="L2Merchant" name="Desian" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1570,7 +1570,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="32877" level="85" originalLevel="70" type="L2Merchant" name="Plani" title="Recipe Merchant">
+	<npc id="32877" level="70" type="L2Merchant" name="Plani" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1593,7 +1593,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="32878" level="85" originalLevel="70" type="L2Merchant" name="Sparky" title="Recipe Merchant">
+	<npc id="32878" level="70" type="L2Merchant" name="Sparky" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1616,7 +1616,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="32879" level="85" originalLevel="70" type="L2Merchant" name="Drawin" title="Recipe Merchant">
+	<npc id="32879" level="70" type="L2Merchant" name="Drawin" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1639,7 +1639,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="32880" level="85" originalLevel="70" type="L2Merchant" name="Dolphren" title="Recipe Merchant">
+	<npc id="32880" level="70" type="L2Merchant" name="Dolphren" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1662,7 +1662,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="32881" level="85" originalLevel="70" type="L2Merchant" name="Denver" title="Recipe Merchant">
+	<npc id="32881" level="70" type="L2Merchant" name="Denver" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1685,7 +1685,7 @@
 			<height normal="18.4"/>
 		</collision>
 	</npc>
-	<npc id="32882" level="85" originalLevel="70" type="L2Merchant" name="Prouse" title="Recipe Merchant">
+	<npc id="32882" level="70" type="L2Merchant" name="Prouse" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1708,7 +1708,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="32883" level="85" originalLevel="70" type="L2Merchant" name="Hedinger" title="Recipe Merchant">
+	<npc id="32883" level="70" type="L2Merchant" name="Hedinger" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1731,7 +1731,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="32884" level="85" originalLevel="80" type="L2Npc" name="Drake Lord">
+	<npc id="32884" level="80" type="L2Npc" name="Drake Lord">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1751,7 +1751,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32885" level="85" originalLevel="80" type="L2Npc" name="Behemoth Leader">
+	<npc id="32885" level="80" type="L2Npc" name="Behemoth Leader">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1771,7 +1771,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32886" level="85" originalLevel="80" type="L2Npc" name="Dragon Beast">
+	<npc id="32886" level="80" type="L2Npc" name="Dragon Beast">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1791,7 +1791,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32887" level="85" originalLevel="70" type="L2Merchant" name="Metar" title="Recipe Merchant">
+	<npc id="32887" level="70" type="L2Merchant" name="Metar" title="Recipe Merchant">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1814,7 +1814,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="32888" level="85" originalLevel="80" type="L2Npc" name="Jude van Etina's Evil Thoughts" title="Solina's Disciple">
+	<npc id="32888" level="80" type="L2Npc" name="Jude van Etina's Evil Thoughts" title="Solina's Disciple">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1834,7 +1834,7 @@
 			<height normal="20"/>
 		</collision>
 	</npc>
-	<npc id="32889" level="85" originalLevel="80" type="L2Npc" name="Jude van Etina's Evil Thoughts" title="Solina's Disciple">
+	<npc id="32889" level="80" type="L2Npc" name="Jude van Etina's Evil Thoughts" title="Solina's Disciple">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1854,7 +1854,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32890" level="85" originalLevel="80" type="L2Warehouse" name="Ruiman" title="Warehouse Keeper of the Valley">
+	<npc id="32890" level="80" type="L2Warehouse" name="Ruiman" title="Warehouse Keeper of the Valley">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -1877,7 +1877,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="32891" level="85" originalLevel="80" type="L2Teleporter" name="Separated Soul">
+	<npc id="32891" level="80" type="L2Teleporter" name="Separated Soul">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">

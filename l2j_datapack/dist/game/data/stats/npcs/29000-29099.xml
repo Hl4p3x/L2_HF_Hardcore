@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-  <npc id="29001" level="85" originalLevel="40" type="L2GrandBoss" name="Queen Ant">
+  <npc id="29001" level="40" type="L2GrandBoss" name="Queen Ant">
     <!-- Confirmed CT2.5 -->
     <race>BUG</race>
     <sex>FEMALE</sex>
@@ -103,7 +103,7 @@
       <height normal="53"/>
     </collision>
   </npc>
-  <npc id="29002" level="85" originalLevel="38" type="L2Monster" name="Queen Ant Larva">
+  <npc id="29002" level="38" type="L2Monster" name="Queen Ant Larva">
     <!-- Confirmed CT2.5 -->
     <race>BUG</race>
     <sex>MALE</sex>
@@ -145,7 +145,7 @@
       <height normal="8"/>
     </collision>
   </npc>
-  <npc id="29003" level="85" originalLevel="35" type="L2Monster" name="Nurse Ant">
+  <npc id="29003" level="35" type="L2Monster" name="Nurse Ant">
     <!-- Confirmed CT2.5 -->
     <race>BUG</race>
     <sex>MALE</sex>
@@ -187,7 +187,7 @@
       <height normal="15"/>
     </collision>
   </npc>
-  <npc id="29004" level="85" originalLevel="37" type="L2Monster" name="Guard Ant">
+  <npc id="29004" level="37" type="L2Monster" name="Guard Ant">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="120"/>
@@ -234,7 +234,7 @@
       <height normal="15"/>
     </collision>
   </npc>
-  <npc id="29005" level="85" originalLevel="39" type="L2Monster" name="Court Guard Ant">
+  <npc id="29005" level="39" type="L2Monster" name="Court Guard Ant">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="120"/>
@@ -281,7 +281,7 @@
       <height normal="15"/>
     </collision>
   </npc>
-  <npc id="29006" level="85" originalLevel="50" type="L2GrandBoss" name="Core">
+  <npc id="29006" level="50" type="L2GrandBoss" name="Core">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>MALE</sex>
@@ -425,7 +425,7 @@
       <height normal="75"/>
     </collision>
   </npc>
-  <npc id="29007" level="85" originalLevel="50" type="L2Monster" name="Death Knight">
+  <npc id="29007" level="50" type="L2Monster" name="Death Knight">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="74"/>
@@ -474,7 +474,7 @@
       <height normal="31" grown="36"/>
     </collision>
   </npc>
-  <npc id="29008" level="85" originalLevel="55" type="L2Monster" name="Doom Wraith">
+  <npc id="29008" level="55" type="L2Monster" name="Doom Wraith">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="80"/>
@@ -525,7 +525,7 @@
       <height normal="45" grown="52"/>
     </collision>
   </npc>
-  <npc id="29009" level="85" originalLevel="47" type="L2Monster" name="Dicor">
+  <npc id="29009" level="47" type="L2Monster" name="Dicor">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="0"/>
@@ -574,7 +574,7 @@
       <height normal="25.5"/>
     </collision>
   </npc>
-  <npc id="29010" level="85" originalLevel="46" type="L2Monster" name="Validus">
+  <npc id="29010" level="46" type="L2Monster" name="Validus">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="0"/>
@@ -621,7 +621,7 @@
       <height normal="29"/>
     </collision>
   </npc>
-  <npc id="29011" level="85" originalLevel="49" type="L2Monster" name="Susceptor">
+  <npc id="29011" level="49" type="L2Monster" name="Susceptor">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="0"/>
@@ -670,7 +670,7 @@
       <height normal="35" grown="41.5"/>
     </collision>
   </npc>
-  <npc id="29012" level="85" originalLevel="48" type="L2Monster" name="Perum">
+  <npc id="29012" level="48" type="L2Monster" name="Perum">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="0"/>
@@ -722,7 +722,7 @@
       <height normal="34"/>
     </collision>
   </npc>
-  <npc id="29013" level="85" originalLevel="45" type="L2Monster" name="Premo">
+  <npc id="29013" level="45" type="L2Monster" name="Premo">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="135"/>
@@ -769,7 +769,7 @@
       <height normal="35" grown="43"/>
     </collision>
   </npc>
-  <npc id="29014" level="85" originalLevel="50" type="L2GrandBoss" name="Orfen">
+  <npc id="29014" level="50" type="L2GrandBoss" name="Orfen">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="80"/>
@@ -976,7 +976,7 @@
       <height normal="143"/>
     </collision>
   </npc>
-  <npc id="29015" level="85" originalLevel="48" type="L2Monster" name="Raikel">
+  <npc id="29015" level="48" type="L2Monster" name="Raikel">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="70"/>
@@ -1023,7 +1023,7 @@
       <height normal="64"/>
     </collision>
   </npc>
-  <npc id="29016" level="85" originalLevel="49" type="L2Monster" name="Raikel Leos">
+  <npc id="29016" level="49" type="L2Monster" name="Raikel Leos">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="70"/>
@@ -1070,7 +1070,7 @@
       <height normal="64"/>
     </collision>
   </npc>
-  <npc id="29017" level="85" originalLevel="48" type="L2Monster" name="Riba">
+  <npc id="29017" level="48" type="L2Monster" name="Riba">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="40"/>
@@ -1117,7 +1117,7 @@
       <height normal="72"/>
     </collision>
   </npc>
-  <npc id="29018" level="85" originalLevel="49" type="L2Monster" name="Riba Iren">
+  <npc id="29018" level="49" type="L2Monster" name="Riba Iren">
     <!-- Confirmed CT2.5 -->
     <race>BUG</race>
     <sex>FEMALE</sex>
@@ -1159,7 +1159,7 @@
       <height normal="72"/>
     </collision>
   </npc>
-  <npc id="29019" level="85" originalLevel="79" type="L2GrandBoss" name="Antharas">
+  <npc id="29019" level="79" type="L2GrandBoss" name="Antharas">
     <!-- Confirmed CT2.5 -->
     <race>DRAGON</race>
     <sex>MALE</sex>
@@ -1370,7 +1370,7 @@
       <height normal="300"/>
     </collision>
   </npc>
-  <npc id="29020" level="85" originalLevel="75" type="L2GrandBoss" name="Baium">
+  <npc id="29020" level="75" type="L2GrandBoss" name="Baium">
     <!-- Confirmed CT2.5 -->
     <race>UNDEAD</race>
     <sex>MALE</sex>
@@ -1551,7 +1551,7 @@
       <height normal="174"/>
     </collision>
   </npc>
-  <npc id="29021" level="85" originalLevel="74" type="L2Monster" name="Archangel">
+  <npc id="29021" level="74" type="L2Monster" name="Archangel">
     <!-- Confirmed CT2.5 -->
     <race>DIVINE</race>
     <sex>MALE</sex>
@@ -1595,7 +1595,7 @@
       <height normal="80"/>
     </collision>
   </npc>
-  <npc id="29022" level="85" originalLevel="60" type="L2GrandBoss" name="Zaken">
+  <npc id="29022" level="60" type="L2GrandBoss" name="Zaken">
     <!-- Confirmed CT2.5 -->
     <race>UNDEAD</race>
     <sex>MALE</sex>
@@ -1725,7 +1725,7 @@
       <height normal="32"/>
     </collision>
   </npc>
-  <npc id="29023" level="85" originalLevel="58" type="L2Monster" name="Doll Blader">
+  <npc id="29023" level="58" type="L2Monster" name="Doll Blader">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="50"/>
@@ -1779,7 +1779,7 @@
       <height normal="12"/>
     </collision>
   </npc>
-  <npc id="29024" level="85" originalLevel="59" type="L2Monster" name="Veil Master">
+  <npc id="29024" level="59" type="L2Monster" name="Veil Master">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="114"/>
@@ -1832,7 +1832,7 @@
       <height normal="40"/>
     </collision>
   </npc>
-  <npc id="29025" level="85" originalLevel="75" type="L2Npc" name="Baium">
+  <npc id="29025" level="75" type="L2Npc" name="Baium">
     <!-- Confirmed CT2.5 -->
     <race>UNDEAD</race>
     <sex>MALE</sex>
@@ -1868,7 +1868,7 @@
       <height normal="82"/>
     </collision>
   </npc>
-  <npc id="29026" level="85" originalLevel="60" type="L2Monster" name="Pirate Zombie Captain">
+  <npc id="29026" level="60" type="L2Monster" name="Pirate Zombie Captain">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="70"/>
@@ -1919,7 +1919,7 @@
       <height normal="28"/>
     </collision>
   </npc>
-  <npc id="29027" level="85" originalLevel="57" type="L2Monster" name="Pirate Zombie">
+  <npc id="29027" level="57" type="L2Monster" name="Pirate Zombie">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="100"/>
@@ -1970,7 +1970,7 @@
       <height normal="23"/>
     </collision>
   </npc>
-  <npc id="29028" level="85" originalLevel="85" type="L2GrandBoss" name="Valakas" title="Fire Dragon">
+  <npc id="29028" level="85" type="L2GrandBoss" name="Valakas" title="Fire Dragon">
     <!-- Confirmed CT2.5 -->
     <race>DRAGON</race>
     <sex>MALE</sex>
@@ -2129,7 +2129,7 @@
       <height normal="335"/>
     </collision>
   </npc>
-  <npc id="29029" level="85" originalLevel="85" type="L2Monster" name="Lavasaurus Alpha">
+  <npc id="29029" level="85" type="L2Monster" name="Lavasaurus Alpha">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="SkillRange" value="500"/>
@@ -2181,7 +2181,7 @@
       <height normal="75"/>
     </collision>
   </npc>
-  <npc id="29030" level="85" originalLevel="84" type="L2RaidBoss" name="Fenril Hound Kerinne" title="Family of Valakas">
+  <npc id="29030" level="84" type="L2RaidBoss" name="Fenril Hound Kerinne" title="Family of Valakas">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <minions name="Privates">
@@ -2242,7 +2242,7 @@
       <height normal="30"/>
     </collision>
   </npc>
-  <npc id="29031" level="85" originalLevel="84" type="L2Monster" name="Kerinne's Ifrit">
+  <npc id="29031" level="84" type="L2Monster" name="Kerinne's Ifrit">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="HealMagic_a" id="4209" level="9"/> <!-- BOSS Heal -->
@@ -2289,7 +2289,7 @@
       <height normal="42"/>
     </collision>
   </npc>
-  <npc id="29032" level="85" originalLevel="84" type="L2Monster" name="Kerinne's Golem">
+  <npc id="29032" level="84" type="L2Monster" name="Kerinne's Golem">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>MALE</sex>
@@ -2330,7 +2330,7 @@
       <height normal="45"/>
     </collision>
   </npc>
-  <npc id="29033" level="85" originalLevel="84" type="L2RaidBoss" name="Fenril Hound Freki" title="Family of Valakas">
+  <npc id="29033" level="84" type="L2RaidBoss" name="Fenril Hound Freki" title="Family of Valakas">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <minions name="Privates">
@@ -2391,7 +2391,7 @@
       <height normal="30"/>
     </collision>
   </npc>
-  <npc id="29034" level="85" originalLevel="84" type="L2Monster" name="Freki's Ifrit">
+  <npc id="29034" level="84" type="L2Monster" name="Freki's Ifrit">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="DDMagic_a" id="4193" level="9"/> <!-- BOSS Life Drain -->
@@ -2438,7 +2438,7 @@
       <height normal="42"/>
     </collision>
   </npc>
-  <npc id="29035" level="85" originalLevel="84" type="L2Monster" name="Freki's Golem">
+  <npc id="29035" level="84" type="L2Monster" name="Freki's Golem">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>MALE</sex>
@@ -2479,7 +2479,7 @@
       <height normal="45"/>
     </collision>
   </npc>
-  <npc id="29036" level="85" originalLevel="84" type="L2RaidBoss" name="Fenril Hound Uruz" title="Family of Valakas">
+  <npc id="29036" level="84" type="L2RaidBoss" name="Fenril Hound Uruz" title="Family of Valakas">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="SelfRangeCancel_a" id="4177" level="9"/> <!-- BOSS Cancel Magic -->
@@ -2542,7 +2542,7 @@
       <height normal="30"/>
     </collision>
   </npc>
-  <npc id="29037" level="85" originalLevel="84" type="L2RaidBoss" name="Fenril Hound Kinaz" title="Family of Valakas">
+  <npc id="29037" level="84" type="L2RaidBoss" name="Fenril Hound Kinaz" title="Family of Valakas">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <minions name="Privates">
@@ -2607,7 +2607,7 @@
       <height normal="30"/>
     </collision>
   </npc>
-  <npc id="29038" level="85" originalLevel="84" type="L2Monster" name="Kinaz's Ifrit">
+  <npc id="29038" level="84" type="L2Monster" name="Kinaz's Ifrit">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="DDMagic_a" id="4191" level="9"/> <!-- BOSS Windstrike -->
@@ -2654,7 +2654,7 @@
       <height normal="42"/>
     </collision>
   </npc>
-  <npc id="29039" level="85" originalLevel="84" type="L2Monster" name="Kinaz's Ifrit">
+  <npc id="29039" level="84" type="L2Monster" name="Kinaz's Ifrit">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="HealMagic_a" id="4210" level="9"/> <!-- BOSS Chant of Life -->
@@ -2701,7 +2701,7 @@
       <height normal="42"/>
     </collision>
   </npc>
-  <npc id="29040" level="85" originalLevel="84" type="L2RaidBoss" name="Wings of Flame, Ixion" title="Gatekeeper of Valakas">
+  <npc id="29040" level="84" type="L2RaidBoss" name="Wings of Flame, Ixion" title="Gatekeeper of Valakas">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <minions name="Privates">
@@ -2771,7 +2771,7 @@
       <height normal="42"/>
     </collision>
   </npc>
-  <npc id="29041" level="85" originalLevel="84" type="L2Monster" name="Inferno Golem">
+  <npc id="29041" level="84" type="L2Monster" name="Inferno Golem">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="PhysicalSpecial_a" id="4179" level="9"/> <!-- BOSS Strike -->
@@ -2816,7 +2816,7 @@
       <height normal="45"/>
     </collision>
   </npc>
-  <npc id="29042" level="85" originalLevel="84" type="L2Monster" name="Inferno Golem">
+  <npc id="29042" level="84" type="L2Monster" name="Inferno Golem">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>MALE</sex>
@@ -2857,7 +2857,7 @@
       <height normal="45"/>
     </collision>
   </npc>
-  <npc id="29043" level="85" originalLevel="84" type="L2Monster" name="Howling Ifrit">
+  <npc id="29043" level="84" type="L2Monster" name="Howling Ifrit">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="HealMagic_a" id="4209" level="9"/> <!-- BOSS Heal -->
@@ -2904,7 +2904,7 @@
       <height normal="42"/>
     </collision>
   </npc>
-  <npc id="29044" level="85" originalLevel="84" type="L2Monster" name="Howling Ifrit">
+  <npc id="29044" level="84" type="L2Monster" name="Howling Ifrit">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="DDMagic_a" id="4191" level="9"/> <!-- BOSS Windstrike -->
@@ -2951,7 +2951,7 @@
       <height normal="42"/>
     </collision>
   </npc>
-  <npc id="29045" level="85" originalLevel="85" type="L2GrandBoss" name="Frintezza">
+  <npc id="29045" level="85" type="L2GrandBoss" name="Frintezza">
     <!-- Confirmed CT2.5 -->
     <race>HUMANOID</race>
     <sex>MALE</sex>
@@ -2995,7 +2995,7 @@
       <height normal="42.7"/>
     </collision>
   </npc>
-  <npc id="29046" level="85" originalLevel="85" type="L2GrandBoss" name="Scarlet van Halisha">
+  <npc id="29046" level="85" type="L2GrandBoss" name="Scarlet van Halisha">
     <!-- Confirmed CT2.5 -->
     <race>DEMONIC</race>
     <sex>MALE</sex>
@@ -3043,7 +3043,7 @@
       <height normal="90.7" grown="109.4"/>
     </collision>
   </npc>
-  <npc id="29047" level="85" originalLevel="85" type="L2GrandBoss" name="Scarlet van Halisha">
+  <npc id="29047" level="85" type="L2GrandBoss" name="Scarlet van Halisha">
     <!-- Confirmed CT2.5 -->
     <race>DEMONIC</race>
     <sex>MALE</sex>
@@ -3155,7 +3155,7 @@
       <height normal="112.8"/>
     </collision>
   </npc>
-  <npc id="29048" level="85" originalLevel="85" type="L2Monster" name="Evil Spirit">
+  <npc id="29048" level="85" type="L2Monster" name="Evil Spirit">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>FEMALE</sex>
@@ -3198,7 +3198,7 @@
       <height normal="100"/>
     </collision>
   </npc>
-  <npc id="29049" level="85" originalLevel="85" type="L2Monster" name="Evil Spirit">
+  <npc id="29049" level="85" type="L2Monster" name="Evil Spirit">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>FEMALE</sex>
@@ -3241,7 +3241,7 @@
       <height normal="100"/>
     </collision>
   </npc>
-  <npc id="29050" level="85" originalLevel="85" type="L2Monster" name="Breath of Halisha">
+  <npc id="29050" level="85" type="L2Monster" name="Breath of Halisha">
     <!-- Confirmed CT2.5 -->
     <race>DEMONIC</race>
     <sex>MALE</sex>
@@ -3284,7 +3284,7 @@
       <height normal="40" grown="50"/>
     </collision>
   </npc>
-  <npc id="29051" level="85" originalLevel="85" type="L2Monster" name="Breath of Halisha">
+  <npc id="29051" level="85" type="L2Monster" name="Breath of Halisha">
     <!-- Confirmed CT2.5 -->
     <race>DEMONIC</race>
     <sex>MALE</sex>
@@ -3327,7 +3327,7 @@
       <height normal="40"/>
     </collision>
   </npc>
-  <npc id="29052" level="85" originalLevel="85" type="L2Monster" name="">
+  <npc id="29052" level="85" type="L2Monster" name="">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>FEMALE</sex>
@@ -3367,7 +3367,7 @@
       <height normal="35"/>
     </collision>
   </npc>
-  <npc id="29053" level="85" originalLevel="85" type="L2Monster" name="">
+  <npc id="29053" level="85" type="L2Monster" name="">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>FEMALE</sex>
@@ -3407,7 +3407,7 @@
       <height normal="58"/>
     </collision>
   </npc>
-  <npc id="29054" level="85" originalLevel="75" type="L2RaidBoss" name="Benom" title="Triol's Leader">
+  <npc id="29054" level="75" type="L2RaidBoss" name="Benom" title="Triol's Leader">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="PhysicalSpecial" id="4993" level="1"/> <!-- Venom - Strike -->
@@ -3475,7 +3475,7 @@
       <height normal="56"/>
     </collision>
   </npc>
-  <npc id="29055" level="85" originalLevel="70" type="L2Npc" name="Teleportation Cubic">
+  <npc id="29055" level="70" type="L2Npc" name="Teleportation Cubic">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="0"/>
@@ -3521,7 +3521,7 @@
       <height normal="80"/>
     </collision>
   </npc>
-  <npc id="29056" level="85" originalLevel="60" type="L2RaidBoss" name="Ice Fairy Sirra" title="Raid Boss">
+  <npc id="29056" level="60" type="L2RaidBoss" name="Ice Fairy Sirra" title="Raid Boss">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <minions name="Privates">
@@ -3604,7 +3604,7 @@
       <height normal="35.6"/>
     </collision>
   </npc>
-  <npc id="29057" level="85" originalLevel="59" type="L2Monster" name="Sirra's Page" title="Raid Fighter">
+  <npc id="29057" level="59" type="L2Monster" name="Sirra's Page" title="Raid Fighter">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="HealMagic_a" id="4780" level="5"/> <!-- BOSS Heal -->
@@ -3658,7 +3658,7 @@
       <height normal="39.7"/>
     </collision>
   </npc>
-  <npc id="29058" level="85" originalLevel="59" type="L2Monster" name="Sirra's Beholder" title="Raid Fighter">
+  <npc id="29058" level="59" type="L2Monster" name="Sirra's Beholder" title="Raid Fighter">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>MALE</sex>
@@ -3706,7 +3706,7 @@
       <height normal="36"/>
     </collision>
   </npc>
-  <npc id="29059" level="85" originalLevel="80" type="L2Monster">
+  <npc id="29059" level="80" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>MALE</sex>
@@ -3741,7 +3741,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29060" level="85" originalLevel="59" type="L2RaidBoss" name="Captain of the Ice Queen's Royal Guard" title="Raid Boss">
+  <npc id="29060" level="59" type="L2RaidBoss" name="Captain of the Ice Queen's Royal Guard" title="Raid Boss">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="SelfRangeCancel_a" id="4177" level="5"/> <!-- BOSS Cancel Magic -->
@@ -3814,7 +3814,7 @@
       <height normal="61"/>
     </collision>
   </npc>
-  <npc id="29061" level="85" originalLevel="70" type="L2Teleporter" name="Teleportation Cubic">
+  <npc id="29061" level="70" type="L2Teleporter" name="Teleportation Cubic">
     <!-- Confirmed CT2.5 -->
     <race>ETC</race>
     <sex>ETC</sex>
@@ -3850,7 +3850,7 @@
       <height normal="80"/>
     </collision>
   </npc>
-  <npc id="29062" level="85" originalLevel="80" type="L2RaidBoss" name="Andreas Van Halter" title="Seer of Pagan">
+  <npc id="29062" level="80" type="L2RaidBoss" name="Andreas Van Halter" title="Seer of Pagan">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="RaidSpawnMusic" value="Rm03_A"/>
@@ -3923,7 +3923,7 @@
       <height normal="21.3"/>
     </collision>
   </npc>
-  <npc id="29063" level="85" originalLevel="80" type="L2Monster" name="Andreas' Acolyte" title="Raid Fighter">
+  <npc id="29063" level="80" type="L2Monster" name="Andreas' Acolyte" title="Raid Fighter">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="DDMagic_a" id="4193" level="10"/> <!-- BOSS Life Drain -->
@@ -3978,7 +3978,7 @@
       <height normal="28.4"/>
     </collision>
   </npc>
-  <npc id="29064" level="85" originalLevel="80" type="L2Monster" name="Andreas' Acolyte" title="Raid Fighter">
+  <npc id="29064" level="80" type="L2Monster" name="Andreas' Acolyte" title="Raid Fighter">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="HealMagic_a" id="4210" level="10"/> <!-- BOSS Chant of Life -->
@@ -4033,7 +4033,7 @@
       <height normal="28.4"/>
     </collision>
   </npc>
-  <npc id="29065" level="85" originalLevel="80" type="L2RaidBoss" name="Sailren" title="Sealed Evil Power">
+  <npc id="29065" level="80" type="L2RaidBoss" name="Sailren" title="Sealed Evil Power">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="RootingManage" value="0"/>
@@ -4101,7 +4101,7 @@
       <height normal="82.1"/>
     </collision>
   </npc>
-  <npc id="29066" level="85" originalLevel="79" type="L2GrandBoss" name="Antharas">
+  <npc id="29066" level="79" type="L2GrandBoss" name="Antharas">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="ultra_respawn_time" value="8"/>
@@ -4318,7 +4318,7 @@
       <height normal="300"/>
     </collision>
   </npc>
-  <npc id="29067" level="85" originalLevel="79" type="L2GrandBoss" name="Antharas">
+  <npc id="29067" level="79" type="L2GrandBoss" name="Antharas">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="ultra_respawn_time" value="5"/>
@@ -4538,7 +4538,7 @@
       <height normal="300"/>
     </collision>
   </npc>
-  <npc id="29068" level="85" originalLevel="85" type="L2GrandBoss" name="Antharas" title="Earth Dragon">
+  <npc id="29068" level="85" type="L2GrandBoss" name="Antharas" title="Earth Dragon">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="ultra_respawn_time" value="3"/>
@@ -4699,7 +4699,7 @@
       <height normal="300"/>
     </collision>
   </npc>
-  <npc id="29069" level="85" originalLevel="85" type="L2Monster" name="Behemoth Dragon">
+  <npc id="29069" level="85" type="L2Monster" name="Behemoth Dragon">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="RootingManage" value="0"/>
@@ -4748,7 +4748,7 @@
       <height normal="54"/>
     </collision>
   </npc>
-  <npc id="29070" level="85" originalLevel="85" type="L2Monster" name="Dragon Bomber">
+  <npc id="29070" level="85" type="L2Monster" name="Dragon Bomber">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="SelfRangeDDMagic" id="5094" level="1"/> <!-- Antharas Subordinate Suicide -->
@@ -4792,7 +4792,7 @@
       <height normal="28"/>
     </collision>
   </npc>
-  <npc id="29071" level="85" originalLevel="78" type="L2Monster" name="Dragon Bomber">
+  <npc id="29071" level="78" type="L2Monster" name="Dragon Bomber">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="SelfRangeDDMagic" id="5094" level="1"/> <!-- Antharas Subordinate Suicide -->
@@ -4834,7 +4834,7 @@
       <height normal="28"/>
     </collision>
   </npc>
-  <npc id="29072" level="85" originalLevel="78" type="L2Monster" name="Dragon Bomber">
+  <npc id="29072" level="78" type="L2Monster" name="Dragon Bomber">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="SelfRangeDDMagic" id="5094" level="1"/> <!-- Antharas Subordinate Suicide -->
@@ -4876,7 +4876,7 @@
       <height normal="28"/>
     </collision>
   </npc>
-  <npc id="29073" level="85" originalLevel="78" type="L2Monster" name="Dragon Bomber">
+  <npc id="29073" level="78" type="L2Monster" name="Dragon Bomber">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="SelfRangeDDMagic" id="5094" level="1"/> <!-- Antharas Subordinate Suicide -->
@@ -4918,7 +4918,7 @@
       <height normal="28"/>
     </collision>
   </npc>
-  <npc id="29074" level="85" originalLevel="78" type="L2Monster" name="Dragon Bomber">
+  <npc id="29074" level="78" type="L2Monster" name="Dragon Bomber">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="SelfRangeDDMagic" id="5094" level="1"/> <!-- Antharas Subordinate Suicide -->
@@ -4960,7 +4960,7 @@
       <height normal="28"/>
     </collision>
   </npc>
-  <npc id="29075" level="85" originalLevel="78" type="L2Monster" name="Dragon Bomber">
+  <npc id="29075" level="78" type="L2Monster" name="Dragon Bomber">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="SelfRangeDDMagic" id="5094" level="1"/> <!-- Antharas Subordinate Suicide -->
@@ -5002,7 +5002,7 @@
       <height normal="28"/>
     </collision>
   </npc>
-  <npc id="29076" level="85" originalLevel="85" type="L2Monster" name="Dragon Bomber">
+  <npc id="29076" level="85" type="L2Monster" name="Dragon Bomber">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="SelfRangeDDMagic" id="5094" level="1"/> <!-- Antharas Subordinate Suicide -->
@@ -5046,7 +5046,7 @@
       <height normal="34.5"/>
     </collision>
   </npc>
-  <npc id="29077" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29077" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="177456"/>
@@ -5099,7 +5099,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29078" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29078" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="175952"/>
@@ -5152,7 +5152,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29079" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29079" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="175120"/>
@@ -5205,7 +5205,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29080" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29080" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="174640"/>
@@ -5258,7 +5258,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29081" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29081" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="173968"/>
@@ -5311,7 +5311,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29082" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29082" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="173920"/>
@@ -5364,7 +5364,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29083" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29083" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="174704"/>
@@ -5417,7 +5417,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29084" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29084" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="175424"/>
@@ -5470,7 +5470,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29085" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29085" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="176880"/>
@@ -5523,7 +5523,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29086" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29086" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="178368"/>
@@ -5576,7 +5576,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29087" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29087" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="179696"/>
@@ -5629,7 +5629,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29088" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29088" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="180592"/>
@@ -5682,7 +5682,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29089" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29089" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="180896"/>
@@ -5735,7 +5735,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29090" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29090" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="180496"/>
@@ -5788,7 +5788,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29091" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29091" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="180896"/>
@@ -5841,7 +5841,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29092" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29092" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="180720"/>
@@ -5894,7 +5894,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29093" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29093" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="180048"/>
@@ -5947,7 +5947,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29094" level="85" originalLevel="78" type="L2Monster">
+  <npc id="29094" level="78" type="L2Monster">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="suicide1_x" value="178848"/>
@@ -6000,7 +6000,7 @@
       <height normal="0.1"/>
     </collision>
   </npc>
-  <npc id="29095" level="85" originalLevel="80" type="L2RaidBoss" name="Gordon" title="Knight of Destruction">
+  <npc id="29095" level="80" type="L2RaidBoss" name="Gordon" title="Knight of Destruction">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="RaidSpawnMusic" value="Rm01_A"/>
@@ -6070,7 +6070,7 @@
       <height normal="46.6"/>
     </collision>
   </npc>
-  <npc id="29096" level="85" originalLevel="80" type="L2RaidBoss" name="Anais" title="Lord of Splendor">
+  <npc id="29096" level="80" type="L2RaidBoss" name="Anais" title="Lord of Splendor">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <minions name="Privates">
@@ -6146,7 +6146,7 @@
       <height normal="41.8"/>
     </collision>
   </npc>
-  <npc id="29097" level="85" originalLevel="80" type="L2Monster" name="Disciple of Splendor" title="Raid Fighter">
+  <npc id="29097" level="80" type="L2Monster" name="Disciple of Splendor" title="Raid Fighter">
     <!-- Confirmed CT2.5 -->
     <race>DIVINE</race>
     <sex>MALE</sex>
@@ -6196,7 +6196,7 @@
       <height normal="47"/>
     </collision>
   </npc>
-  <npc id="29098" level="85" originalLevel="80" type="L2Monster" name="Splendor Worshiper" title="Raid Fighter">
+  <npc id="29098" level="80" type="L2Monster" name="Splendor Worshiper" title="Raid Fighter">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="LongRangePhysicalSpecial_a" id="4208" level="10"/> <!-- Stun -->
@@ -6249,7 +6249,7 @@
       <height normal="47"/>
     </collision>
   </npc>
-  <npc id="29099" level="85" originalLevel="83" type="L2GrandBoss" name="Baylor" title="Warden">
+  <npc id="29099" level="83" type="L2GrandBoss" name="Baylor" title="Warden">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <skill name="selfbuff1" id="5221" level="1"/> <!-- Balor - Physical Close Range Weak Point -->

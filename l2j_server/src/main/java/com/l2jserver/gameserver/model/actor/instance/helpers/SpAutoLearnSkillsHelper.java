@@ -26,6 +26,7 @@ public class SpAutoLearnSkillsHelper {
     private static final Logger LOG = LoggerFactory.getLogger(SpAutoLearnSkillsHelper.class);
 
     private static final String LOG_MARKER = "[SP Skill AutoLearn]";
+    private static final boolean LEVEL_UP_ON_LEARN = false;
 
     public static boolean tryAutoLearnNextSkill(L2PcInstance pcInstance) {
         if (!Config.ALT_AUTO_LEARN_SKILLS_ON_SP) {
@@ -92,7 +93,7 @@ public class SpAutoLearnSkillsHelper {
         pcInstance.sendPacket(new AcquireSkillDone());
         pcInstance.sendSkillList();
 
-        if (!addedSkills.isEmpty()) {
+        if (LEVEL_UP_ON_LEARN && !addedSkills.isEmpty()) {
             pcInstance.broadcastPacket(new SocialAction(pcInstance.getObjectId(), SocialAction.LEVEL_UP));
         }
 

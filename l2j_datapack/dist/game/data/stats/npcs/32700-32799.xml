@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="32700" level="85" originalLevel="80" type="L2Npc" name="Delusion Manager">
+	<npc id="32700" level="80" type="L2Npc" name="Delusion Manager">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -35,7 +35,7 @@
 			<height normal="47.5"/>
 		</collision>
 	</npc>
-	<npc id="32701" level="85" originalLevel="80" type="L2Npc" name="Delusion Manager">
+	<npc id="32701" level="80" type="L2Npc" name="Delusion Manager">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -71,7 +71,7 @@
 			<height normal="47.5"/>
 		</collision>
 	</npc>
-	<npc id="32702" level="85" originalLevel="80" type="L2Npc">
+	<npc id="32702" level="80" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -107,7 +107,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="32703" level="85" originalLevel="80" type="L2Npc">
+	<npc id="32703" level="80" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -143,7 +143,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="32704" level="85" originalLevel="80" type="L2Npc" name="Somulitan" title="Soul Fragment Annex">
+	<npc id="32704" level="80" type="L2Npc" name="Somulitan" title="Soul Fragment Annex">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
@@ -178,7 +178,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32705" level="85" originalLevel="80" type="L2Npc" name="Zaken's Candle">
+	<npc id="32705" level="80" type="L2Npc" name="Zaken's Candle">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -214,7 +214,7 @@
 			<height normal="13.5"/>
 		</collision>
 	</npc>
-	<npc id="32706" level="85" originalLevel="80" type="L2Npc" name="Lucien's Altar">
+	<npc id="32706" level="80" type="L2Npc" name="Lucien's Altar">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -250,7 +250,7 @@
 			<height normal="38.5"/>
 		</collision>
 	</npc>
-	<npc id="32707" level="85" originalLevel="80" type="L2Npc" name="Lucien's Altar">
+	<npc id="32707" level="80" type="L2Npc" name="Lucien's Altar">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -286,7 +286,7 @@
 			<height normal="38.5"/>
 		</collision>
 	</npc>
-	<npc id="32708" level="85" originalLevel="80" type="L2Npc" name="Lucien's Altar">
+	<npc id="32708" level="80" type="L2Npc" name="Lucien's Altar">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -322,7 +322,7 @@
 			<height normal="38.5"/>
 		</collision>
 	</npc>
-	<npc id="32709" level="85" originalLevel="80" type="L2Npc" name="Lucien's Altar">
+	<npc id="32709" level="80" type="L2Npc" name="Lucien's Altar">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -358,7 +358,7 @@
 			<height normal="38.5"/>
 		</collision>
 	</npc>
-	<npc id="32710" level="85" originalLevel="80" type="L2Npc" name="Lucien's Altar">
+	<npc id="32710" level="80" type="L2Npc" name="Lucien's Altar">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -394,7 +394,7 @@
 			<height normal="38.5"/>
 		</collision>
 	</npc>
-	<npc id="32711" level="85" originalLevel="80" type="L2Teleporter" name="Droph" title="Dwarf Adventurer">
+	<npc id="32711" level="80" type="L2Teleporter" name="Droph" title="Dwarf Adventurer">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -429,7 +429,7 @@
 			<height normal="18"/>
 		</collision>
 	</npc>
-	<npc id="32712" level="85" originalLevel="80" type="L2Teleporter" name="Somulitan" title="Zaken Researcher">
+	<npc id="32712" level="80" type="L2Teleporter" name="Somulitan" title="Zaken Researcher">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
@@ -464,7 +464,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32713" level="85" originalLevel="80" type="L2Npc" name="Pathfinder Worker">
+	<npc id="32713" level="80" type="L2Npc" name="Pathfinder Worker">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -499,7 +499,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32714" level="85" originalLevel="80" type="L2Teleporter" name="Asher" title="Gatekeeper">
+	<npc id="32714" level="80" type="L2Teleporter" name="Asher" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -534,7 +534,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32715" level="85" originalLevel="80" type="L2Npc" name="Lilith" title="Holy Mother of Abyss">
+	<npc id="32715" level="80" type="L2Npc" name="Lilith" title="Holy Mother of Abyss">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -570,7 +570,7 @@
 			<height normal="55"/>
 		</collision>
 	</npc>
-	<npc id="32716" level="85" originalLevel="80" type="L2Npc" name="Lilith's Steward">
+	<npc id="32716" level="80" type="L2Npc" name="Lilith's Steward">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -606,7 +606,7 @@
 			<height normal="34"/>
 		</collision>
 	</npc>
-	<npc id="32717" level="85" originalLevel="80" type="L2Npc" name="Lilith's Elite">
+	<npc id="32717" level="80" type="L2Npc" name="Lilith's Elite">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -644,7 +644,7 @@
 			<height normal="50"/>
 		</collision>
 	</npc>
-	<npc id="32718" level="85" originalLevel="80" type="L2Npc" name="Anakim" title="Flames of Sacred Fire">
+	<npc id="32718" level="80" type="L2Npc" name="Anakim" title="Flames of Sacred Fire">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
@@ -680,7 +680,7 @@
 			<height normal="29"/>
 		</collision>
 	</npc>
-	<npc id="32719" level="85" originalLevel="80" type="L2Npc" name="Anakim's Guardian">
+	<npc id="32719" level="80" type="L2Npc" name="Anakim's Guardian">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -716,7 +716,7 @@
 			<height normal="40.5"/>
 		</collision>
 	</npc>
-	<npc id="32720" level="85" originalLevel="80" type="L2Npc" name="Anakim's Guard">
+	<npc id="32720" level="80" type="L2Npc" name="Anakim's Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -753,7 +753,7 @@
 			<height normal="43" grown="51.6"/>
 		</collision>
 	</npc>
-	<npc id="32721" level="85" originalLevel="80" type="L2Npc" name="Anakim's Executor">
+	<npc id="32721" level="80" type="L2Npc" name="Anakim's Executor">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -789,7 +789,7 @@
 			<height normal="36"/>
 		</collision>
 	</npc>
-	<npc id="32722" level="85" originalLevel="80" type="L2Npc" name="Battle League Helper">
+	<npc id="32722" level="80" type="L2Npc" name="Battle League Helper">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -818,7 +818,7 @@
 			<height normal="12.5"/>
 		</collision>
 	</npc>
-	<npc id="32723" level="85" originalLevel="80" type="L2Npc">
+	<npc id="32723" level="80" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -847,7 +847,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="32724" level="85" originalLevel="80" type="L2Npc">
+	<npc id="32724" level="80" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -876,7 +876,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="32725" level="85" originalLevel="80" type="L2Npc" name="Priest of Resurrection">
+	<npc id="32725" level="80" type="L2Npc" name="Priest of Resurrection">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -905,7 +905,7 @@
 			<height normal="26.5"/>
 		</collision>
 	</npc>
-	<npc id="32726" level="85" originalLevel="80" type="L2Npc" name="Dr. Ice" title="Event manager">
+	<npc id="32726" level="80" type="L2Npc" name="Dr. Ice" title="Event manager">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -940,7 +940,7 @@
 			<height normal="21.3"/>
 		</collision>
 	</npc>
-	<npc id="32727" level="85" originalLevel="80" type="L2Npc" name="Puss the Cat" title="Event manager">
+	<npc id="32727" level="80" type="L2Npc" name="Puss the Cat" title="Event manager">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -976,7 +976,7 @@
 			<height normal="16"/>
 		</collision>
 	</npc>
-	<npc id="32728" level="85" originalLevel="80" type="L2Npc" name="Heavenly Bridge Keeper" title="Event manager">
+	<npc id="32728" level="80" type="L2Npc" name="Heavenly Bridge Keeper" title="Event manager">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
@@ -1011,7 +1011,7 @@
 			<height normal="17"/>
 		</collision>
 	</npc>
-	<npc id="32729" level="85" originalLevel="80" type="L2Npc">
+	<npc id="32729" level="80" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1046,7 +1046,7 @@
 			<height normal="152"/>
 		</collision>
 	</npc>
-	<npc id="32730" level="85" originalLevel="80" type="L2Npc">
+	<npc id="32730" level="80" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1081,7 +1081,7 @@
 			<height normal="365"/>
 		</collision>
 	</npc>
-	<npc id="32731" level="85" originalLevel="80" type="L2Npc" name="Hardin">
+	<npc id="32731" level="80" type="L2Npc" name="Hardin">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1116,7 +1116,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32732" level="85" originalLevel="80" type="L2Npc" name="Sixth Anniversary Party Manager" title="Event manager">
+	<npc id="32732" level="80" type="L2Npc" name="Sixth Anniversary Party Manager" title="Event manager">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1151,7 +1151,7 @@
 			<height normal="21"/>
 		</collision>
 	</npc>
-	<npc id="32733" level="85" originalLevel="80" type="L2Npc" name="Kbaldir" title="Commander">
+	<npc id="32733" level="80" type="L2Npc" name="Kbaldir" title="Commander">
 		<!-- Confirmed CT2.5 -->
 		<race>ORC</race>
 		<sex>MALE</sex>
@@ -1187,7 +1187,7 @@
 			<height normal="27.5"/>
 		</collision>
 	</npc>
-	<npc id="32734" level="85" originalLevel="80" type="L2Npc" name="Klemis" title="Officer">
+	<npc id="32734" level="80" type="L2Npc" name="Klemis" title="Officer">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
@@ -1223,7 +1223,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="32735" level="85" originalLevel="80" type="L2Npc" name="Nemo">
+	<npc id="32735" level="80" type="L2Npc" name="Nemo">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1260,7 +1260,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32736" level="85" originalLevel="80" type="L2Npc" name="Ermian" title="General">
+	<npc id="32736" level="80" type="L2Npc" name="Ermian" title="General">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1296,7 +1296,7 @@
 			<height normal="21.5"/>
 		</collision>
 	</npc>
-	<npc id="32737" level="85" originalLevel="80" type="L2Npc" name="Seyo">
+	<npc id="32737" level="80" type="L2Npc" name="Seyo">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1331,7 +1331,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32738" level="85" originalLevel="80" type="L2Npc" name="Injured Soldier">
+	<npc id="32738" level="80" type="L2Npc" name="Injured Soldier">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1367,7 +1367,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="32739" level="85" originalLevel="80" type="L2Npc" name="Bomona">
+	<npc id="32739" level="80" type="L2Npc" name="Bomona">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1403,7 +1403,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32740" level="85" originalLevel="80" type="L2Npc" name="Batracos" title="Gatekeeper">
+	<npc id="32740" level="80" type="L2Npc" name="Batracos" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1439,7 +1439,7 @@
 			<height normal="44"/>
 		</collision>
 	</npc>
-	<npc id="32741" level="85" originalLevel="80" type="L2Npc" name="Ankumi" title="Researcher">
+	<npc id="32741" level="80" type="L2Npc" name="Ankumi" title="Researcher">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
@@ -1474,7 +1474,7 @@
 			<height normal="17.5"/>
 		</collision>
 	</npc>
-	<npc id="32742" level="85" originalLevel="80" type="L2Npc" name="Laki" title="Investigator">
+	<npc id="32742" level="80" type="L2Npc" name="Laki" title="Investigator">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1509,7 +1509,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="32743" level="85" originalLevel="80" type="L2Npc" name="Sally" title="Investigator">
+	<npc id="32743" level="80" type="L2Npc" name="Sally" title="Investigator">
 		<!-- Confirmed CT2.5 -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
@@ -1545,7 +1545,7 @@
 			<height normal="24"/>
 		</collision>
 	</npc>
-	<npc id="32744" level="85" originalLevel="80" type="L2Npc" name="Johnny" title="Chief Investigator">
+	<npc id="32744" level="80" type="L2Npc" name="Johnny" title="Chief Investigator">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1581,7 +1581,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32745" level="85" originalLevel="80" type="L2Npc" name="Teleport Device">
+	<npc id="32745" level="80" type="L2Npc" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1618,7 +1618,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32746" level="85" originalLevel="80" type="L2Npc" name="Teleport Device">
+	<npc id="32746" level="80" type="L2Npc" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1655,7 +1655,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32747" level="85" originalLevel="80" type="L2Npc" name="Teleport Device">
+	<npc id="32747" level="80" type="L2Npc" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1692,7 +1692,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32748" level="85" originalLevel="80" type="L2Npc" name="Teleport Device">
+	<npc id="32748" level="80" type="L2Npc" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1729,7 +1729,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32749" level="85" originalLevel="80" type="L2Npc" name="Teleport Device">
+	<npc id="32749" level="80" type="L2Npc" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1766,7 +1766,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32750" level="85" originalLevel="80" type="L2Npc" name="Teleport Device">
+	<npc id="32750" level="80" type="L2Npc" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1803,7 +1803,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32751" level="85" originalLevel="80" type="L2Npc" name="Teleport Device">
+	<npc id="32751" level="80" type="L2Npc" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1840,7 +1840,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32752" level="85" originalLevel="80" type="L2Npc" name="Teleport Device">
+	<npc id="32752" level="80" type="L2Npc" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1877,7 +1877,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32753" level="85" originalLevel="80" type="L2Npc" name="Floor Teleport Device">
+	<npc id="32753" level="80" type="L2Npc" name="Floor Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1914,7 +1914,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32754" level="85" originalLevel="80" type="L2Npc" name="Floor Teleport Device">
+	<npc id="32754" level="80" type="L2Npc" name="Floor Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1951,7 +1951,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32755" level="85" originalLevel="80" type="L2Npc" name="Floor Teleport Device">
+	<npc id="32755" level="80" type="L2Npc" name="Floor Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1988,7 +1988,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32756" level="85" originalLevel="80" type="L2Npc" name="Floor Teleport Device">
+	<npc id="32756" level="80" type="L2Npc" name="Floor Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2025,7 +2025,7 @@
 			<height normal="33.5"/>
 		</collision>
 	</npc>
-	<npc id="32757" level="85" originalLevel="80" type="L2Npc" name="Greymore" title="Priest">
+	<npc id="32757" level="80" type="L2Npc" name="Greymore" title="Priest">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2060,7 +2060,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32758" level="85" originalLevel="80" type="L2Npc" name="Sumiel" title="Treasure Seeker">
+	<npc id="32758" level="80" type="L2Npc" name="Sumiel" title="Treasure Seeker">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2095,7 +2095,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="32759" level="85" originalLevel="80" type="L2Npc" name="Gumiel" title="Treasure Seeker">
+	<npc id="32759" level="80" type="L2Npc" name="Gumiel" title="Treasure Seeker">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2130,7 +2130,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="32760" level="85" originalLevel="80" type="L2Npc" name="Jinia">
+	<npc id="32760" level="80" type="L2Npc" name="Jinia">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2165,7 +2165,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="32761" level="85" originalLevel="80" type="L2Npc" name="Kegor">
+	<npc id="32761" level="80" type="L2Npc" name="Kegor">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2200,7 +2200,7 @@
 			<height normal="27.5"/>
 		</collision>
 	</npc>
-	<npc id="32762" level="85" originalLevel="80" type="L2Npc" name="Sirra">
+	<npc id="32762" level="80" type="L2Npc" name="Sirra">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2235,7 +2235,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="32763" level="85" originalLevel="80" type="L2Npc" name="Sirra" title="Ice Fairy">
+	<npc id="32763" level="80" type="L2Npc" name="Sirra" title="Ice Fairy">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
@@ -2271,7 +2271,7 @@
 			<height normal="35.6"/>
 		</collision>
 	</npc>
-	<npc id="32764" level="85" originalLevel="80" type="L2Npc">
+	<npc id="32764" level="80" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2307,7 +2307,7 @@
 			<height normal="0.1"/>
 		</collision>
 	</npc>
-	<npc id="32765" level="85" originalLevel="80" type="L2Npc" name="Box of Doubt">
+	<npc id="32765" level="80" type="L2Npc" name="Box of Doubt">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2343,7 +2343,7 @@
 			<height normal="14"/>
 		</collision>
 	</npc>
-	<npc id="32766" level="85" originalLevel="80" type="L2Npc" name="Ilvenis" title="Soldier">
+	<npc id="32766" level="80" type="L2Npc" name="Ilvenis" title="Soldier">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2380,7 +2380,7 @@
 			<height normal="25"/>
 		</collision>
 	</npc>
-	<npc id="32767" level="85" originalLevel="80" type="L2Npc" name="McLaren" title="Soldier">
+	<npc id="32767" level="80" type="L2Npc" name="McLaren" title="Soldier">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -2416,7 +2416,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32768" level="85" originalLevel="80" type="L2Npc" name="Kelleyia">
+	<npc id="32768" level="80" type="L2Npc" name="Kelleyia">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2452,7 +2452,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32769" level="85" originalLevel="80" type="L2Npc" name="Gracian Soldier's Corpse">
+	<npc id="32769" level="80" type="L2Npc" name="Gracian Soldier's Corpse">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2487,7 +2487,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32770" level="85" originalLevel="80" type="L2Npc" name="Gracian Soldier's Corpse">
+	<npc id="32770" level="80" type="L2Npc" name="Gracian Soldier's Corpse">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
@@ -2522,7 +2522,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32771" level="85" originalLevel="80" type="L2Npc" name="Gracian Soldier's Corpse">
+	<npc id="32771" level="80" type="L2Npc" name="Gracian Soldier's Corpse">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
@@ -2557,7 +2557,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="32772" level="85" originalLevel="80" type="L2Npc" name="Gracian Soldier's Corpse">
+	<npc id="32772" level="80" type="L2Npc" name="Gracian Soldier's Corpse">
 		<!-- Confirmed CT2.5 -->
 		<race>ORC</race>
 		<sex>MALE</sex>
@@ -2592,7 +2592,7 @@
 			<height normal="27.5"/>
 		</collision>
 	</npc>
-	<npc id="32773" level="85" originalLevel="80" type="L2Npc" name="Jakan" title="Officer">
+	<npc id="32773" level="80" type="L2Npc" name="Jakan" title="Officer">
 		<!-- Confirmed CT2.5 -->
 		<race>ORC</race>
 		<sex>MALE</sex>
@@ -2628,7 +2628,7 @@
 			<height normal="27.5"/>
 		</collision>
 	</npc>
-	<npc id="32774" level="85" originalLevel="80" type="L2Teleporter" name="Elmina" title="Soldier">
+	<npc id="32774" level="80" type="L2Teleporter" name="Elmina" title="Soldier">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2664,7 +2664,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32775" level="85" originalLevel="80" type="L2TerrainObject" name="Gracian Soldier">
+	<npc id="32775" level="80" type="L2TerrainObject" name="Gracian Soldier">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2701,7 +2701,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32776" level="85" originalLevel="80" type="L2TerrainObject" name="Gracian Soldier">
+	<npc id="32776" level="80" type="L2TerrainObject" name="Gracian Soldier">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2738,7 +2738,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32777" level="85" originalLevel="80" type="L2Npc" name="Battalion Leader" title="Jinia Guild">
+	<npc id="32777" level="80" type="L2Npc" name="Battalion Leader" title="Jinia Guild">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2775,7 +2775,7 @@
 			<height normal="23.75"/>
 		</collision>
 	</npc>
-	<npc id="32778" level="85" originalLevel="80" type="L2Npc" name="Legionnaire" title="Jinia Guild">
+	<npc id="32778" level="80" type="L2Npc" name="Legionnaire" title="Jinia Guild">
 		<!-- Confirmed CT2.5 -->
 		<race>ORC</race>
 		<sex>MALE</sex>
@@ -2812,7 +2812,7 @@
 			<height normal="30"/>
 		</collision>
 	</npc>
-	<npc id="32779" level="85" originalLevel="80" type="L2Npc" name="Airship Controller">
+	<npc id="32779" level="80" type="L2Npc" name="Airship Controller">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -2848,7 +2848,7 @@
 			<height normal="28"/>
 		</collision>
 	</npc>
-	<npc id="32780" level="85" originalLevel="80" type="L2Npc" name="Aquilani">
+	<npc id="32780" level="80" type="L2Npc" name="Aquilani">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2883,7 +2883,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32781" level="85" originalLevel="80" type="L2Npc" name="Jinia">
+	<npc id="32781" level="80" type="L2Npc" name="Jinia">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2918,7 +2918,7 @@
 			<height normal="23.5"/>
 		</collision>
 	</npc>
-	<npc id="32782" level="85" originalLevel="80" type="L2Teleporter" name="Lionel" title="Transmitter">
+	<npc id="32782" level="80" type="L2Teleporter" name="Lionel" title="Transmitter">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -2954,7 +2954,7 @@
 			<height normal="28"/>
 		</collision>
 	</npc>
-	<npc id="32783" level="85" originalLevel="80" type="L2Npc" name="Priest of Blessing">
+	<npc id="32783" level="80" type="L2Npc" name="Priest of Blessing">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2989,7 +2989,7 @@
 			<height normal="22.5"/>
 		</collision>
 	</npc>
-	<npc id="32784" level="85" originalLevel="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
+	<npc id="32784" level="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3009,7 +3009,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32785" level="85" originalLevel="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
+	<npc id="32785" level="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3029,7 +3029,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32786" level="85" originalLevel="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
+	<npc id="32786" level="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3049,7 +3049,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32787" level="85" originalLevel="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
+	<npc id="32787" level="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3069,7 +3069,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32788" level="85" originalLevel="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
+	<npc id="32788" level="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3089,7 +3089,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32789" level="85" originalLevel="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
+	<npc id="32789" level="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3109,7 +3109,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32790" level="85" originalLevel="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
+	<npc id="32790" level="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3129,7 +3129,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32791" level="85" originalLevel="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
+	<npc id="32791" level="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3149,7 +3149,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32792" level="85" originalLevel="80" type="L2Npc" name="Eris's Evil Thoughts" title="Director">
+	<npc id="32792" level="80" type="L2Npc" name="Eris's Evil Thoughts" title="Director">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3169,7 +3169,7 @@
 			<height normal="22"/>
 		</collision>
 	</npc>
-	<npc id="32793" level="85" originalLevel="80" type="L2Npc" name="Solina's Evil Thoughts" title="Saintess of Elmore-Aden">
+	<npc id="32793" level="80" type="L2Npc" name="Solina's Evil Thoughts" title="Saintess of Elmore-Aden">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3189,7 +3189,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32794" level="85" originalLevel="80" type="L2Npc" name="Solina" title="Saintess of Elmore-Aden">
+	<npc id="32794" level="80" type="L2Npc" name="Solina" title="Saintess of Elmore-Aden">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3209,7 +3209,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32795" level="85" originalLevel="80" type="L2Npc" name="Eris" title="Solina's Disciple">
+	<npc id="32795" level="80" type="L2Npc" name="Eris" title="Solina's Disciple">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3229,7 +3229,7 @@
 			<height normal="12"/>
 		</collision>
 	</npc>
-	<npc id="32796" level="85" originalLevel="80" type="L2Npc" name="Anais" title="Solina's Disciple">
+	<npc id="32796" level="80" type="L2Npc" name="Anais" title="Solina's Disciple">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3249,7 +3249,7 @@
 			<height normal="35"/>
 		</collision>
 	</npc>
-	<npc id="32797" level="85" originalLevel="80" type="L2Npc" name="Jude van Etina" title="Solina's Disciple">
+	<npc id="32797" level="80" type="L2Npc" name="Jude van Etina" title="Solina's Disciple">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3269,7 +3269,7 @@
 			<height normal="20"/>
 		</collision>
 	</npc>
-	<npc id="32798" level="85" originalLevel="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
+	<npc id="32798" level="80" type="L2Npc" name="Elcadia" title="Abyssal Saintess">
 		<!-- TODO: Must be confirmed -->
 		<sex>FEMALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
@@ -3289,7 +3289,7 @@
 			<height normal="23"/>
 		</collision>
 	</npc>
-	<npc id="32799" level="85" originalLevel="80" type="L2Npc" name="Hardin" title="Grand Wizard">
+	<npc id="32799" level="80" type="L2Npc" name="Hardin" title="Grand Wizard">
 		<!-- TODO: Must be confirmed -->
 		<sex>MALE</sex>
 		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">

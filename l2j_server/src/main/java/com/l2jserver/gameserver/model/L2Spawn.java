@@ -34,6 +34,7 @@ import com.l2jserver.gameserver.model.interfaces.INamable;
 import com.l2jserver.gameserver.model.interfaces.IPositionable;
 import com.l2jserver.gameserver.model.zone.type.NpcSpawnTerritory;
 import com.l2jserver.util.Rnd;
+
 import java.lang.reflect.Constructor;
 import java.util.Deque;
 import java.util.List;
@@ -656,8 +657,8 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			// Set champion on next spawn
 			if (mob.isMonster() && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && //
 				(Config.L2JMOD_CHAMPION_FREQUENCY > 0) && //
-				(mob.getOriginalLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && //
-				(mob.getOriginalLevel() <= Config.L2JMOD_CHAMP_MAX_LVL) && //
+					(mob.getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && //
+					(mob.getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL) && //
 				(Config.L2JMOD_CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
 			{
 				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY) {

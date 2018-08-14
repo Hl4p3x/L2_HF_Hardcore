@@ -18,14 +18,6 @@
  */
 package com.l2jserver.gameserver.model.actor.templates;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.enums.AISkillScope;
@@ -41,6 +33,8 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 import com.l2jserver.gameserver.model.skills.Skill;
 
+import java.util.*;
+
 /**
  * NPC template.
  * @author NosBit
@@ -50,7 +44,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private int _id;
 	private int _displayId;
 	private byte _level;
-	private byte _originalLevel;
 	private String _type;
 	private String _name;
 	private boolean _usingServerSideName;
@@ -117,7 +110,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_id = set.getInt("id");
 		_displayId = set.getInt("displayId", _id);
 		_level = set.getByte("level", (byte) 85);
-		_originalLevel = set.getByte("originalLevel", (byte) 70);
 		_type = set.getString("type", "L2Npc");
 		_name = set.getString("name", "");
 		_usingServerSideName = set.getBoolean("usingServerSideName", false);
@@ -186,12 +178,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	{
 		return _level;
 	}
-	
-	public byte getOriginalLevel()
-	{
-		return _originalLevel;
-	}
-	
+
 	public String getType()
 	{
 		return _type;
