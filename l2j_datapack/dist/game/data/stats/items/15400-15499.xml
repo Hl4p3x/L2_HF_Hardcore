@@ -1305,6 +1305,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills"/>
 		<set name="item_skill" val="9074-1" />
 	</item>
 	<item id="15493" type="EtcItem" name="Fantasy Mushroom Pouch">

@@ -510,7 +510,11 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="25">

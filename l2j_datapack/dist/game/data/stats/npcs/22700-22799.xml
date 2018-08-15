@@ -6209,7 +6209,11 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -6291,7 +6295,11 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -6376,7 +6384,11 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -6456,7 +6468,11 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -6542,7 +6558,11 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -6644,7 +6664,11 @@
 			<skill id="6337" level="1"/> <!--Red Slash 1 -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="400" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -6741,7 +6765,11 @@
 			<skill id="6338" level="1"/> <!--Red Slash 2 -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -6826,7 +6854,11 @@
 			<skill id="6340" level="1"/> <!--Shock -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="400" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -6906,7 +6938,11 @@
 			<skill id="6340" level="1"/> <!--Shock -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -6982,7 +7018,11 @@
 			<skill id="6333" level="1"/> <!--Electric Bolt 1 -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="400" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -7057,7 +7097,11 @@
 			<skill id="6334" level="1"/> <!--Shock -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false"/>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>SEL_MAHUM</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
 				<group chance="70">
@@ -7135,6 +7179,7 @@
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clanList>
 				<clan>XEL_PRIVATE</clan>
+				<clan>SEL_MAHUM</clan>
 			</clanList>
 		</ai>
 		<dropLists>
@@ -7214,6 +7259,7 @@
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clanList>
 				<clan>XEL_PRIVATE</clan>
+				<clan>SEL_MAHUM</clan>
 			</clanList>
 		</ai>
 		<dropLists>
@@ -7317,6 +7363,7 @@
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clanList>
 				<clan>XEL_PRIVATE</clan>
+				<clan>SEL_MAHUM</clan>
 			</clanList>
 		</ai>
 		<dropLists>
