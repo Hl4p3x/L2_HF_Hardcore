@@ -5,9 +5,9 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import java.util.Arrays;
 import java.util.List;
 
-public class Hierophant {
+public class Hierophant implements BuffList {
 
-    public static final List<SkillHolder> BUFFS = Arrays.asList(
+    public final List<SkillHolder> buffs = Arrays.asList(
             new SkillHolder(1040, 3), // Shield
             new SkillHolder(1068, 3), // Might
             new SkillHolder(1191, 3), // Resist Fire
@@ -43,5 +43,10 @@ public class Hierophant {
             new SkillHolder(1542, 1), // Counter Critical
             new SkillHolder(1352, 1) // Elemental Protection
     );
+
+    @Override
+    public List<SkillHolder> getBuffs() {
+        return buffs;
+    }
 
 }

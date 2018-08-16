@@ -5,9 +5,9 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import java.util.Arrays;
 import java.util.List;
 
-public class SwordMuse {
+public class SwordMuse implements BuffList {
 
-    public static final List<SkillHolder> BUFFS = Arrays.asList(
+    public final List<SkillHolder> buffs = Arrays.asList(
             new SkillHolder(308, 1), // Song of Storm Guard
             new SkillHolder(305, 1), // Song of Vengeance
             new SkillHolder(306, 1), // Song of Flame Guard
@@ -26,5 +26,10 @@ public class SwordMuse {
             new SkillHolder(349, 1), // Song of Renewal
             new SkillHolder(364, 1)  // Song of Champion
     );
+
+    @Override
+    public List<SkillHolder> getBuffs() {
+        return buffs;
+    }
 
 }

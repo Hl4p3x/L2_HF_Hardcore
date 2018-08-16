@@ -7,7 +7,7 @@ import com.l2jserver.gameserver.handler.IParseBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import handlers.communityboard.custom.*;
-import handlers.communityboard.custom.bufflists.BuffListHandler;
+import handlers.communityboard.custom.bufflists.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,17 +32,17 @@ public class CustomHomeBoard implements IParseBoardHandler {
         actions.put("mage_buff_24", new DefaultPresetBuff("mage_buff_24"));
         actions.put("mage_song_dance", new DefaultPresetBuff("mage_song_dance"));
 
-        actions.put("dances", new BuffListHandler("dances"));
-        actions.put("songs", new BuffListHandler("songs"));
+        actions.put("dances", new BuffListHandler(new SpectralDancer()));
+        actions.put("songs", new BuffListHandler(new SwordMuse()));
 
-        actions.put("prophet", new BuffListHandler("prophet"));
-        actions.put("warsmith_summoners", new BuffListHandler("warsmith_summoners"));
+        actions.put("prophet", new BuffListHandler(new Hierophant()));
+        actions.put("warsmith_summoners", new BuffListHandler(new WarsmithAndSummoners()));
 
-        actions.put("elven_elder", new BuffListHandler("elven_elder"));
-        actions.put("shillen_elder", new BuffListHandler("shillen_elder"));
+        actions.put("elven_elder", new BuffListHandler(new ElvenSaint()));
+        actions.put("shillen_elder", new BuffListHandler(new ShillenSaint()));
 
-        actions.put("overlord", new BuffListHandler("overlord"));
-        actions.put("warcryer", new BuffListHandler("warcryer"));
+        actions.put("overlord", new BuffListHandler(new Dominator()));
+        actions.put("warcryer", new BuffListHandler(new Doomcryer()));
     }
 
 

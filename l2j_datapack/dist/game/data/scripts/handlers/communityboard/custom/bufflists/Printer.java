@@ -9,9 +9,9 @@ public class Printer {
 
 
         System.out.println(String.join(";",
-                Stream.of(Dominator.BUFFS, Doomcryer.BUFFS, ElvenSaint.BUFFS,
-                        Hierophant.BUFFS, Maestro.BUFFS, ShillenSaint.BUFFS,
-                        SpectralDancer.BUFFS, Summoners.BUFFS, SwordMuse.BUFFS)
+                Stream.of(new Dominator().getBuffs(), new Doomcryer().getBuffs(), new ElvenSaint().getBuffs(),
+                        new Hierophant().getBuffs(), new Maestro().getBuffs(), new ShillenSaint().getBuffs(),
+                        new SpectralDancer().getBuffs(), new Summoners().getBuffs(), new SwordMuse().getBuffs())
                         .flatMap(buffs -> buffs.stream().map(skillHolder -> skillHolder.getSkillId() + ",7200"))
                         .collect(Collectors.toList())));
 

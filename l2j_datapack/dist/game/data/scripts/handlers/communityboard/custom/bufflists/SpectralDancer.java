@@ -5,9 +5,9 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import java.util.Arrays;
 import java.util.List;
 
-public class SpectralDancer {
+public class SpectralDancer implements BuffList {
 
-    public static final List<SkillHolder> BUFFS = Arrays.asList(
+    public final List<SkillHolder> buffs = Arrays.asList(
             new SkillHolder(311, 1), // Dance of Protection
             new SkillHolder(310, 1), // Dance of the Vampire
             new SkillHolder(309, 1), // Dance of Earth Guard
@@ -24,5 +24,10 @@ public class SpectralDancer {
             new SkillHolder(915, 1), // Dance of Berserker
             new SkillHolder(365, 1) // Siren's Dance
     );
+
+    @Override
+    public List<SkillHolder> getBuffs() {
+        return buffs;
+    }
 
 }

@@ -5,9 +5,9 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import java.util.Arrays;
 import java.util.List;
 
-public class Doomcryer {
+public class Doomcryer implements BuffList {
 
-    public static final List<SkillHolder> BUFFS = Arrays.asList(
+    public final List<SkillHolder> buffs = Arrays.asList(
             new SkillHolder(1007, 3), // Chant of Battle
             new SkillHolder(1009, 3), // Chant of Shielding
             new SkillHolder(1006, 3), // Chant of Fire
@@ -32,4 +32,9 @@ public class Doomcryer {
             new SkillHolder(1363, 1), // Chant of Victory
             new SkillHolder(1362, 1) // Chant of Spirit
     );
+
+    @Override
+    public List<SkillHolder> getBuffs() {
+        return buffs;
+    }
 }

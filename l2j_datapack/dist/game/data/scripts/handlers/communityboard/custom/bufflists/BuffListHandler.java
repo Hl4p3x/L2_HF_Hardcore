@@ -10,6 +10,11 @@ import java.util.List;
 
 public class BuffListHandler implements BoardAction {
 
+    private final BuffList buffList;
+
+    public BuffListHandler(BuffList buffList) {
+        this.buffList = buffList;
+    }
 
     @Override
     public ProcessResult process(L2PcInstance player, ActionArgs args) {

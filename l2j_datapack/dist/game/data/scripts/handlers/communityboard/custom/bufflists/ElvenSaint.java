@@ -5,9 +5,9 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import java.util.Arrays;
 import java.util.List;
 
-public class ElvenSaint {
+public class ElvenSaint implements BuffList {
 
-    public static final List<SkillHolder> BUFFS = Arrays.asList(
+    public final List<SkillHolder> buffs = Arrays.asList(
             new SkillHolder(1040, 3), // Shield
             new SkillHolder(1068, 3), // Might
             new SkillHolder(1078, 6), // Concentration
@@ -32,5 +32,10 @@ public class ElvenSaint {
             new SkillHolder(1355, 1), // Prophecy of Water
             new SkillHolder(1354, 1) // Arcane Protection
     );
+
+    @Override
+    public List<SkillHolder> getBuffs() {
+        return buffs;
+    }
 
 }

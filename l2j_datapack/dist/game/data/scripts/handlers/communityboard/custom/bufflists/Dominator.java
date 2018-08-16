@@ -5,9 +5,9 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import java.util.Arrays;
 import java.util.List;
 
-public class Dominator {
+public class Dominator implements BuffList {
 
-    public static final List<SkillHolder> BUFFS = Arrays.asList(
+    public final List<SkillHolder> buffs = Arrays.asList(
             new SkillHolder(1005, 3), // Blessings of Pa'agrio
             new SkillHolder(1003, 3), // Pa'agrian Gift
             new SkillHolder(1004, 3), // The Wisdom of Pa'agrio
@@ -26,5 +26,10 @@ public class Dominator {
             new SkillHolder(1414, 1), // Victory of Pa'agrio
             new SkillHolder(1415, 1)  // Pa'agrio's Emblem
     );
+
+    @Override
+    public List<SkillHolder> getBuffs() {
+        return buffs;
+    }
 
 }
