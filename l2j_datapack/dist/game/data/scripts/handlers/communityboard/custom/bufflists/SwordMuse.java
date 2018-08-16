@@ -7,7 +7,7 @@ import java.util.List;
 
 public class SwordMuse {
 
-    public static final List<SkillHolder> SONGS = Arrays.asList(
+    public static final List<SkillHolder> BUFFS = Arrays.asList(
             new SkillHolder(308, 1), // Song of Storm Guard
             new SkillHolder(305, 1), // Song of Vengeance
             new SkillHolder(306, 1), // Song of Flame Guard

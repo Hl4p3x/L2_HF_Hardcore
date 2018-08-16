@@ -1215,6 +1215,7 @@ public final class Config
 	public static long COMMUNITY_RESTORE_PRICE;
 	public static long COMMUNITY_CANCEL_PRICE;
 	public static long COMMUNITY_DEFAULT_PRESET_PRICE;
+	public static int FREE_COMMUNITY_TILL_CLASS_LEVEL;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -3027,6 +3028,7 @@ public final class Config
 		COMMUNITY_RESTORE_PRICE = customCommunity.getLong("CommunityRestorePrice", 500000L);
 		COMMUNITY_CANCEL_PRICE = customCommunity.getLong("CommunityCancelPrice", 100000L);
 		COMMUNITY_DEFAULT_PRESET_PRICE = customCommunity.getLong("CommunityDefaultPresetPrice", 1000000L);
+		FREE_COMMUNITY_TILL_CLASS_LEVEL = customCommunity.getInt("CommunityFreeUntilClassLevel", 2);
 	}
 	
 	/**

@@ -11,7 +11,7 @@ public class Printer {
         System.out.println(String.join(";",
                 Stream.of(Dominator.BUFFS, Doomcryer.BUFFS, ElvenSaint.BUFFS,
                         Hierophant.BUFFS, Maestro.BUFFS, ShillenSaint.BUFFS,
-                        SpectralDancer.BUFFS, Summoners.BUFFS, SwordMuse.SONGS)
+                        SpectralDancer.BUFFS, Summoners.BUFFS, SwordMuse.BUFFS)
                         .flatMap(buffs -> buffs.stream().map(skillHolder -> skillHolder.getSkillId() + ",7200"))
                         .collect(Collectors.toList())));
 

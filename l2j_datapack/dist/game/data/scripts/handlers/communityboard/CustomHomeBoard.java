@@ -7,6 +7,7 @@ import com.l2jserver.gameserver.handler.IParseBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import handlers.communityboard.custom.*;
+import handlers.communityboard.custom.bufflists.BuffListHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +31,20 @@ public class CustomHomeBoard implements IParseBoardHandler {
         actions.put("fighter_song_dance", new DefaultPresetBuff("fighter_song_dance"));
         actions.put("mage_buff_24", new DefaultPresetBuff("mage_buff_24"));
         actions.put("mage_song_dance", new DefaultPresetBuff("mage_song_dance"));
+
+        actions.put("dances", new BuffListHandler("dances"));
+        actions.put("songs", new BuffListHandler("songs"));
+
+        actions.put("prophet", new BuffListHandler("prophet"));
+        actions.put("warsmith_summoners", new BuffListHandler("warsmith_summoners"));
+
+        actions.put("elven_elder", new BuffListHandler("elven_elder"));
+        actions.put("shillen_elder", new BuffListHandler("shillen_elder"));
+
+        actions.put("overlord", new BuffListHandler("overlord"));
+        actions.put("warcryer", new BuffListHandler("warcryer"));
     }
+
 
     @Override
     public String[] getCommunityBoardCommands() {
@@ -77,8 +91,11 @@ public class CustomHomeBoard implements IParseBoardHandler {
 
             ProcessResult result = action.process(player, actionArgs);
             if (result.isFailure()) {
-                player.sendPacket(new ExShowScreenMessage(result.getComment(), 2000));
+                player.sendPacket(new ExShowScreenMessage(result.getResult(), 2000));
+            } else {
+                CommunityBoardHandler.separateAndSend(result.getResult(), player);
             }
+
             return true;
         } else {
             return false;
