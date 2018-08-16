@@ -6821,4 +6821,20 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		broadcastPacket(new CreatureSay(getObjectId(), isPlayer() ? Say2.SHOUT : Say2.NPC_SHOUT, getName(), msg));
 	}
+
+	public void stopAndDisable() {
+		abortAttack();
+		abortCast();
+		disableAllSkills();
+		setTarget(null);
+		stopMove(null);
+		setIsImmobilized(true);
+		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+	}
+
+	public void startAndEnable() {
+		enableAllSkills();
+		setIsImmobilized(false);
+	}
+
 }

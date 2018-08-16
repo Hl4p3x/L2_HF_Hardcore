@@ -10,7 +10,11 @@ public class BuffCondition {
         }
 
         if (player.isInOlympiadMode()) {
-            return ProcessResult.failure("You cannot do this while being in Olypmiad");
+            return ProcessResult.failure("You cannot do this while being in Olympiad");
+        }
+
+        if (player.isPvpFlagged()) {
+            return ProcessResult.failure("You cannot do this while in PvP mode");
         }
 
         if (player.isFlying()) {

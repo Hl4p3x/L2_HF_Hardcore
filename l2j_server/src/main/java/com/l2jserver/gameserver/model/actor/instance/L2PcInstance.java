@@ -1323,6 +1323,10 @@ public final class L2PcInstance extends L2Playable {
         return _pvpFlag;
     }
 
+    public boolean isPvpFlagged() {
+        return _pvpFlag == 1;
+    }
+
     /**
      * Set the PvP Flag of the L2PcInstance.
      *
@@ -10846,4 +10850,5 @@ public final class L2PcInstance extends L2Playable {
     public void getDwarvenRecipeBookClear() {
         _dwarvenRecipeBook.clear();
     }
+
 }

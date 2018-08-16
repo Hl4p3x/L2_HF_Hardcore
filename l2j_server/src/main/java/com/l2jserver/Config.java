@@ -92,7 +92,7 @@ public final class Config
 	public static final String EMAIL_CONFIG_FILE = "./config/Email.properties";
 	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.properties";
 	public static final String GEODATA_FILE = "./config/GeoData.properties";
-	public static final String CUSTOM_BOARD_FILE = "./config/CustomBoard.properties";
+	public static final String CUSTOM_COMMUNITY_FILE = "./config/CustomCommunity.properties";
 	// --------------------------------------------------
 	// L2J Variable Definitions
 	// --------------------------------------------------
@@ -1211,7 +1211,10 @@ public final class Config
 
 	// Custom Board
 	public static boolean CUSTOM_COMMUNITY;
-	public static long COMMUNITY_HEAL_PRICE;
+	public static boolean COMMUNITY_RESTORE_ENABLED;
+	public static long COMMUNITY_RESTORE_PRICE;
+	public static long COMMUNITY_CANCEL_PRICE;
+	public static long COMMUNITY_DEFAULT_PRESET_PRICE;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -3016,12 +3019,14 @@ public final class Config
 			LOG.error("Could not Load Config: server mode was not set!");
 		}
 
-
 		// Gracia Seeds
-		final PropertiesParser customBoard = new PropertiesParser(CUSTOM_BOARD_FILE);
+		final PropertiesParser customCommunity = new PropertiesParser(CUSTOM_COMMUNITY_FILE);
 
-		CUSTOM_COMMUNITY = customBoard.getBoolean("CustomCommunity", false);
-		COMMUNITY_HEAL_PRICE = customBoard.getLong("CommunityHealPrice", 500000L);
+		CUSTOM_COMMUNITY = customCommunity.getBoolean("CustomCommunity", false);
+		COMMUNITY_RESTORE_ENABLED = customCommunity.getBoolean("CommunityRestoreEnabled", false);
+		COMMUNITY_RESTORE_PRICE = customCommunity.getLong("CommunityRestorePrice", 500000L);
+		COMMUNITY_CANCEL_PRICE = customCommunity.getLong("CommunityCancelPrice", 100000L);
+		COMMUNITY_DEFAULT_PRESET_PRICE = customCommunity.getLong("CommunityDefaultPresetPrice", 1000000L);
 	}
 	
 	/**
