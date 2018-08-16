@@ -18,9 +18,9 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.List;
-
 import com.l2jserver.util.StringUtil;
+
+import java.util.List;
 
 public class ShowBoard extends L2GameServerPacket
 {
@@ -46,7 +46,7 @@ public class ShowBoard extends L2GameServerPacket
 	{
 		writeC(0x7B);
 		writeC(0x01); // c4 1 to show community 00 to hide
-		writeS("bypass _bbshome"); // top
+        writeS("bypass bbs_buff"); // top
 		writeS("bypass _bbsgetfav"); // favorite
 		writeS("bypass _bbsloc"); // region
 		writeS("bypass _bbsclan"); // clan

@@ -1,0 +1,198 @@
+<html>
+<body>
+
+<br>
+<br>
+<br>
+
+<center>
+    <table width="600" height="450">
+        <tr>
+            <td><img src="L2UI.SquareWhite" width=600 height=1></td>
+        </tr>
+        <tr>
+            <td>
+                <center>
+                    <table width="350">
+                        <tr>
+                            <td>
+                                <center>Buff Lists</center>
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="350">
+                        <tr>
+                            <td align=center>
+                                <button value="Prophet"
+                                        action="bypass -h _bbs_buff prophet"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                            <td align=center>
+                                <button value="Warsmith/Summoners"
+                                        action="bypass -h _bbs_buff warcryer"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=center>
+                                <button value="Elven Elder"
+                                        action="bypass -h _bbs_buff elven_elder"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                            <td align=center>
+                                <button value="Shillen Elder"
+                                        action="bypass -h _bbs_buff shillen_elder"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=center>
+                                <button value="Overlord"
+                                        action="bypass -h _bbs_buff overlord"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                            <td align=center>
+                                <button value="Warcryer"
+                                        action="bypass -h _bbs_buff warcryer"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=center>
+                                <button value="Songs"
+                                        action="bypass -h _bbs_buff songs"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                            <td align=center>
+                                <button value="Dances"
+                                        action="bypass -h _bbs_buff dances"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table width="350">
+                        <tr>
+                            <td>
+                                <center>Buff Presets</center>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table width="350" align=center>
+                        <tr>
+                            <td align=center>
+                                <button value="Tank Buff Preset"
+                                        action="bypass -h _bbs_buff tank_buff_24 $buff_target"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                            <td align=center>
+                                <button value="Tank Songs/Dances"
+                                        action="bypass -h _bbs_buff tank_song_dance $buff_target"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=center>
+                                <button value="Fighter Buff Preset"
+                                        action="bypass -h _bbs_buff fighter_buff_24 $buff_target"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                            <td align=center>
+                                <button value="Fighter Songs/Dances"
+                                        action="bypass -h _bbs_buff fighter_song_dance $buff_target"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=center>
+                                <button value="Mage Buff Preset"
+                                        action="bypass -h _bbs_buff mage_buff_24 $buff_target"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                            <td align=center>
+                                <button value="Mage Songs/Dances"
+                                        action="bypass -h _bbs_buff mage_song_dance $buff_target"
+                                        width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table width="350">
+                        <tr>
+                            <td align=center>
+                                Preset
+                            </td>
+                            <td align=center>
+                                Target
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=center>
+                                <combobox width=110 var="buff_preset" list="Fighter;Mage;Tank">
+                            </td>
+                            <td align=center>
+                                <combobox width=110 var="buff_target" list="Player;Summon">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table width="350">
+                        <tr>
+                            <td align=center>
+                                <table>
+                                    <tr>
+                                        <td align=center>
+                                            <button value="Buff Selected"
+                                                    action="bypass -h _bbs_buff buff_preset $buff_preset $buff_target"
+                                                    width=120
+                                                    height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                                        </td>
+                                        <td align=center>
+                                            <button value="Restore CP/HP/MP"
+                                                    action="bypass -h _bbs_buff restore $buff_target"
+                                                    width=120
+                                                    height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                                        </td>
+                                        <td align=center>
+                                            <button value="Cancel Buffs"
+                                                    action="bypass -h _bbs_buff cancel $buff_target"
+                                                    width=120
+                                                    height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align=center>
+                                            <button value="Create Preset"
+                                                    action="bypass -h _bbs_buff create_preset $buff_preset"
+                                                    width=120
+                                                    height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                                        </td>
+                                        <td align=center>
+                                            <button value="Delete Preset"
+                                                    action="bypass -h _bbs_buff delete_preset $buff_preset"
+                                                    width=120
+                                                    height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                                        </td>
+                                        <td align=center>
+                                            <button value="Update Preset"
+                                                    action="bypass -h _bbs_buff update_preset $buff_preset $buff_target"
+                                                    width=120
+                                                    height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="L2UI.SquareWhite" width=600 height=1></td>
+        </tr>
+    </table>
+</center>
+
+</body>
+</html>

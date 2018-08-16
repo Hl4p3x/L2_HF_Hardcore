@@ -186,6 +186,9 @@ import com.l2jserver.Config;
  */
 public final class StringUtil
 {
+
+	public static final String EMPTY = "";
+
 	private StringUtil()
 	{
 	}

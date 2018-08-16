@@ -55,7 +55,7 @@ import java.util.stream.IntStream;
  */
 public final class Config
 {
-	
+
 	private static final Logger LOG = LoggerFactory.getLogger(Config.class);
 	
 	// --------------------------------------------------
@@ -92,6 +92,7 @@ public final class Config
 	public static final String EMAIL_CONFIG_FILE = "./config/Email.properties";
 	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.properties";
 	public static final String GEODATA_FILE = "./config/GeoData.properties";
+	public static final String CUSTOM_BOARD_FILE = "./config/CustomBoard.properties";
 	// --------------------------------------------------
 	// L2J Variable Definitions
 	// --------------------------------------------------
@@ -641,7 +642,7 @@ public final class Config
 	public static String[] BOTREPORT_RESETPOINT_HOUR;
 	public static long BOTREPORT_REPORT_DELAY;
 	public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
-	
+
 	// --------------------------------------------------
 	// FloodProtector Settings
 	// --------------------------------------------------
@@ -1207,6 +1208,10 @@ public final class Config
 	public static Path GEODATA_PATH;
 	public static boolean TRY_LOAD_UNSPECIFIED_REGIONS;
 	public static Map<String, Boolean> GEODATA_REGIONS;
+
+	// Custom Board
+	public static boolean CUSTOM_COMMUNITY;
+	public static long COMMUNITY_HEAL_PRICE;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -2073,7 +2078,7 @@ public final class Config
 			BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000;
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
 			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
-			
+
 			// Load FloodProtector L2Properties file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_FILE);
 			
@@ -3010,6 +3015,13 @@ public final class Config
 		{
 			LOG.error("Could not Load Config: server mode was not set!");
 		}
+
+
+		// Gracia Seeds
+		final PropertiesParser customBoard = new PropertiesParser(CUSTOM_BOARD_FILE);
+
+		CUSTOM_COMMUNITY = customBoard.getBoolean("CustomCommunity", false);
+		COMMUNITY_HEAL_PRICE = customBoard.getLong("CommunityHealPrice", 500000L);
 	}
 	
 	/**
