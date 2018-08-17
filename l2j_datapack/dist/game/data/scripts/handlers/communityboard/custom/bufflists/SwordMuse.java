@@ -4,6 +4,7 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class SwordMuse implements BuffList {
 
@@ -32,4 +33,8 @@ public class SwordMuse implements BuffList {
         return buffs;
     }
 
+    @Override
+    public Optional<SkillHolder> findBySkillId(int skillId) {
+        return BuffFilter.findBySkillId(buffs, skillId);
+    }
 }

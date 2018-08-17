@@ -28,7 +28,7 @@ public class DefaultPresetBuff implements BoardAction {
     public ProcessResult process(L2PcInstance player, ActionArgs args) {
         if (args.getArgs().size() != 2) {
             LOG.warn("{} is trying to use buff preset with invalid args number {}", player, args.getArgs().size());
-            return ProcessResult.failure("Invalid restore request");
+            return ProcessResult.failure("Invalid preset buff request");
         }
 
         Optional<L2Character> targetOption = TargetHelper.parseTarget(player, args.getArgs().get(0));

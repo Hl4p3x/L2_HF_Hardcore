@@ -1216,6 +1216,8 @@ public final class Config
 	public static long COMMUNITY_CANCEL_PRICE;
 	public static long COMMUNITY_DEFAULT_PRESET_PRICE;
 	public static int FREE_COMMUNITY_TILL_CLASS_LEVEL;
+	public static int DISPLAY_NUMBER_OF_BUFFS_IN_ROW;
+	public static long COMMUNITY_SINGLE_BUFF_PRICE;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -3029,6 +3031,8 @@ public final class Config
 		COMMUNITY_CANCEL_PRICE = customCommunity.getLong("CommunityCancelPrice", 100000L);
 		COMMUNITY_DEFAULT_PRESET_PRICE = customCommunity.getLong("CommunityDefaultPresetPrice", 1000000L);
 		FREE_COMMUNITY_TILL_CLASS_LEVEL = customCommunity.getInt("CommunityFreeUntilClassLevel", 2);
+		DISPLAY_NUMBER_OF_BUFFS_IN_ROW = customCommunity.getInt("CommunityDisplayBuffsInRow", 4);
+		COMMUNITY_SINGLE_BUFF_PRICE = customCommunity.getLong("CommunitySingleBuffPrice", 50000);
 	}
 	
 	/**

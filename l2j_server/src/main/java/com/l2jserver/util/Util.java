@@ -18,6 +18,9 @@
  */
 package com.l2jserver.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,14 +31,8 @@ import java.nio.ByteBuffer;
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Useful utilities common to L2J Server.
@@ -237,6 +234,39 @@ public final class Util
 	 */
 	public static <K, V> Function<K, V> mapToFunction(Map<K, V> map)
 	{
-		return key -> map.get(key);
+		return map::get;
 	}
+
+	public static <T> List<List<T>> chunks(List<T> items, int chunkSize) {
+		if (items.isEmpty()) {
+			return Collections.emptyList();
+		}
+
+		if (chunkSize <= 0) {
+			return Collections.singletonList(items);
+		}
+
+		int chunkCount = (int) Math.ceil(items.size() / (double) chunkSize);
+		List<List<T>> result = new ArrayList<>();
+
+		Iterator<T> iterator = items.iterator();
+		for (int i = 0; i < chunkCount; i++) {
+			if (!iterator.hasNext()) {
+				break;
+			}
+
+			List<T> chunk = new ArrayList<>();
+			for (int j = 0; j < chunkSize; j++) {
+				if (iterator.hasNext()) {
+					chunk.add(iterator.next());
+				} else {
+					break;
+				}
+			}
+			result.add(chunk);
+		}
+
+		return result;
+	}
+
 }

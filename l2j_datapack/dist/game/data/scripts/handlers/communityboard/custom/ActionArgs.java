@@ -17,6 +17,21 @@ public class ActionArgs {
         this.args = args;
     }
 
+    public static ActionArgs subActionArgs(ActionArgs actionArgs) {
+        if (actionArgs.isEmpty()) {
+            throw new IllegalStateException("Illegal sub action " + actionArgs);
+        }
+
+        List<String> newArgs;
+        if (actionArgs.getArgs().size() > 1) {
+            newArgs = actionArgs.getArgs().subList(1, actionArgs.getArgs().size());
+        } else {
+            newArgs = Collections.emptyList();
+        }
+
+        return new ActionArgs(actionArgs.getCommandPath() + " " + actionArgs.getActionName(), actionArgs.getArgs().get(0), newArgs);
+    }
+
     public static Optional<ActionArgs> parse(String command) {
         if (command == null || command.trim().length() <= 0) {
             return Optional.empty();

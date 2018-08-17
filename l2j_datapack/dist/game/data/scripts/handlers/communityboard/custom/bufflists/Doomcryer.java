@@ -4,6 +4,7 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class Doomcryer implements BuffList {
 
@@ -36,5 +37,10 @@ public class Doomcryer implements BuffList {
     @Override
     public List<SkillHolder> getBuffs() {
         return buffs;
+    }
+
+    @Override
+    public Optional<SkillHolder> findBySkillId(int skillId) {
+        return BuffFilter.findBySkillId(buffs, skillId);
     }
 }

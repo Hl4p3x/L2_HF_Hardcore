@@ -32,17 +32,21 @@ public class CustomHomeBoard implements IParseBoardHandler {
         actions.put("mage_buff_24", new DefaultPresetBuff("mage_buff_24"));
         actions.put("mage_song_dance", new DefaultPresetBuff("mage_song_dance"));
 
-        actions.put("dances", new BuffListHandler(new SpectralDancer()));
-        actions.put("songs", new BuffListHandler(new SwordMuse()));
 
-        actions.put("prophet", new BuffListHandler(new Hierophant()));
-        actions.put("warsmith_summoners", new BuffListHandler(new WarsmithAndSummoners()));
+        Map<String, BoardAction> listBuffActions = new HashMap<>();
+        listBuffActions.put("prophet", new ShowBuffListAction("prophet", new Hierophant()));
+        listBuffActions.put("dances", new ShowBuffListAction("dances", new SpectralDancer()));
+        listBuffActions.put("songs", new ShowBuffListAction("songs", new SwordMuse()));
+        listBuffActions.put("warsmith_summoners", new ShowBuffListAction("warsmith_summoners", new WarsmithAndSummoners()));
+        listBuffActions.put("elven_elder", new ShowBuffListAction("elven_elder", new ElvenSaint()));
+        listBuffActions.put("shillen_elder", new ShowBuffListAction("shillen_elder", new ShillenSaint()));
+        listBuffActions.put("overlord", new ShowBuffListAction("overlord", new Dominator()));
+        listBuffActions.put("warcryer", new ShowBuffListAction("warcryer", new Doomcryer()));
 
-        actions.put("elven_elder", new BuffListHandler(new ElvenSaint()));
-        actions.put("shillen_elder", new BuffListHandler(new ShillenSaint()));
+        actions.put("list_buff", new RouteAction(listBuffActions));
 
-        actions.put("overlord", new BuffListHandler(new Dominator()));
-        actions.put("warcryer", new BuffListHandler(new Doomcryer()));
+        actions.put("buff", new BuffHandler(AllBuffs.getBuffMap()));
+
     }
 
 
@@ -92,10 +96,7 @@ public class CustomHomeBoard implements IParseBoardHandler {
             ProcessResult result = action.process(player, actionArgs);
             if (result.isFailure()) {
                 player.sendPacket(new ExShowScreenMessage(result.getResult(), 2000));
-            } else {
-                CommunityBoardHandler.separateAndSend(result.getResult(), player);
             }
-
             return true;
         } else {
             return false;
