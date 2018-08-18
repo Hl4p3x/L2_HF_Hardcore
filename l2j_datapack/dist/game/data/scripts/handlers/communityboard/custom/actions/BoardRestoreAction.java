@@ -53,7 +53,8 @@ public class BoardRestoreAction implements BoardAction {
         int greaterHealId = 1217;
 
         L2Character target = targetOption.get();
-        target.stopAndDisable();
+        CharacterBlockHelper.block(target);
+
         MagicSkillUse msk = new MagicSkillUse(target, greaterHealId, 1, delay, 0);
         Broadcast.toSelfAndKnownPlayersInRadius(target, msk, 900);
 
@@ -61,7 +62,7 @@ public class BoardRestoreAction implements BoardAction {
             target.setCurrentHp(target.getMaxRecoverableHp());
             target.setCurrentMp(target.getMaxRecoverableMp());
             target.setCurrentCp(target.getMaxRecoverableCp());
-            target.startAndEnable();
+            CharacterBlockHelper.unblock(target);
         }, delay));
 
         return ProcessResult.success();

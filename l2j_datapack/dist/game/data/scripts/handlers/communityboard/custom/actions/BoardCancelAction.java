@@ -44,14 +44,15 @@ public class BoardCancelAction implements BoardAction {
         int cancellationId = 1056;
 
         L2Character target = targetOption.get();
-        target.stopAndDisable();
+        CharacterBlockHelper.block(target);
+
         MagicSkillUse msk = new MagicSkillUse(target, cancellationId, 1, delay, 0);
         Broadcast.toSelfAndKnownPlayersInRadius(target, msk, 900);
 
         player.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(() -> {
             target.getEffectList().stopAllBuffs(true, false);
             target.getEffectList().stopAllDances(true);
-            target.startAndEnable();
+            CharacterBlockHelper.unblock(target);
         }, delay));
 
         return ProcessResult.success();

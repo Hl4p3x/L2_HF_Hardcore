@@ -16,6 +16,7 @@ import handlers.communityboard.custom.actions.RouteAction;
 import handlers.communityboard.custom.bufflists.BuffHandler;
 import handlers.communityboard.custom.bufflists.ShowBuffListAction;
 import handlers.communityboard.custom.bufflists.sets.*;
+import handlers.communityboard.custom.bufflists.sets.presets.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,19 +34,18 @@ public class CustomHomeBoard implements IParseBoardHandler {
         actions = new HashMap<>();
         actions.put("restore", new BoardRestoreAction());
         actions.put("cancel", new BoardCancelAction());
-        actions.put("tank_buff_24", new PresetBuffAction("tank_buff_24", new Hierophant()));
-        actions.put("tank_song_dance", new PresetBuffAction("tank_buff_24", new Hierophant()));
-        actions.put("fighter_buff_24", new PresetBuffAction("tank_buff_24", new Hierophant()));
-        actions.put("fighter_song_dance", new PresetBuffAction("tank_buff_24", new Hierophant()));
-        actions.put("mage_buff_24", new PresetBuffAction("tank_buff_24", new Hierophant()));
-        actions.put("mage_song_dance", new PresetBuffAction("tank_buff_24", new Hierophant()));
+        actions.put("tank_buff", new PresetBuffAction("tank_buff", new TankBuff()));
+        actions.put("tank_song_dance", new PresetBuffAction("tank_song_dance", new TankDanceAndSong()));
+        actions.put("fighter_buff", new PresetBuffAction("fighter_buff", new FighterBuff()));
+        actions.put("fighter_song_dance", new PresetBuffAction("fighter_song_dance", new FighterDanceAndSong()));
+        actions.put("mage_buff", new PresetBuffAction("mage_buff", new MageBuff()));
+        actions.put("mage_song_dance", new PresetBuffAction("mage_song_dance", new MageDanceAndSong()));
 
 
         Map<String, BoardAction> listBuffActions = new HashMap<>();
         listBuffActions.put("prophet", new ShowBuffListAction("prophet", new Hierophant()));
         listBuffActions.put("dances", new ShowBuffListAction("dances", new SpectralDancer()));
         listBuffActions.put("songs", new ShowBuffListAction("songs", new SwordMuse()));
-        listBuffActions.put("warsmith_summoners", new ShowBuffListAction("warsmith_summoners", new WarsmithAndSummoners()));
         listBuffActions.put("elven_elder", new ShowBuffListAction("elven_elder", new ElvenSaint()));
         listBuffActions.put("shillen_elder", new ShowBuffListAction("shillen_elder", new ShillenSaint()));
         listBuffActions.put("overlord", new ShowBuffListAction("overlord", new Dominator()));

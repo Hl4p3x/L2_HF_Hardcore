@@ -53,7 +53,7 @@ public class PresetBuffAction implements BoardAction {
         int delay = GameTimeController.TICKS_PER_SECOND * GameTimeController.MILLIS_IN_TICK;
 
         final L2Character target = targetOption.get();
-        target.stopAndDisable();
+        CharacterBlockHelper.block(target);
 
         int rollingCastDelay = 0;
         int rollingEffectDelay = delay;
@@ -71,7 +71,9 @@ public class PresetBuffAction implements BoardAction {
             rollingEffectDelay += delay;
         }
 
-        ThreadPoolManager.getInstance().scheduleGeneral(target::startAndEnable, rollingEffectDelay);
+        ThreadPoolManager.getInstance().scheduleGeneral(() -> {
+            CharacterBlockHelper.unblock(target);
+        }, rollingEffectDelay);
 
         return ProcessResult.success();
     }
