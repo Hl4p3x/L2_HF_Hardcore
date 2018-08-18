@@ -25,12 +25,12 @@ public class CustomHomeBoard implements IParseBoardHandler {
         actions = new HashMap<>();
         actions.put("restore", new BoardRestoreAction());
         actions.put("cancel", new BoardCancelAction());
-        actions.put("tank_buff_24", new DefaultPresetBuff("tank_buff_24"));
-        actions.put("tank_song_dance", new DefaultPresetBuff("tank_song_dance"));
-        actions.put("fighter_buff_24", new DefaultPresetBuff("fighter_buff_24"));
-        actions.put("fighter_song_dance", new DefaultPresetBuff("fighter_song_dance"));
-        actions.put("mage_buff_24", new DefaultPresetBuff("mage_buff_24"));
-        actions.put("mage_song_dance", new DefaultPresetBuff("mage_song_dance"));
+        actions.put("tank_buff_24", new PresetBuff("tank_buff_24", new Hierophant()));
+        actions.put("tank_song_dance", new PresetBuff("tank_buff_24", new Hierophant()));
+        actions.put("fighter_buff_24", new PresetBuff("tank_buff_24", new Hierophant()));
+        actions.put("fighter_song_dance", new PresetBuff("tank_buff_24", new Hierophant()));
+        actions.put("mage_buff_24", new PresetBuff("tank_buff_24", new Hierophant()));
+        actions.put("mage_song_dance", new PresetBuff("tank_buff_24", new Hierophant()));
 
 
         Map<String, BoardAction> listBuffActions = new HashMap<>();

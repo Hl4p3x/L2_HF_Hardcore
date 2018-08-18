@@ -13,6 +13,10 @@ public class BuffCondition {
             return ProcessResult.failure("You cannot do this while being in Olympiad");
         }
 
+        if (player.isAttackingDisabled() || player.isCastingNow() || player.isCastingSimultaneouslyNow()) {
+            return ProcessResult.failure("You cannot do this because you are busy");
+        }
+
         if (player.isPvpFlagged()) {
             return ProcessResult.failure("You cannot do this while in PvP mode");
         }

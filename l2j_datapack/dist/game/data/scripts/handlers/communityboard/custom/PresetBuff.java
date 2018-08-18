@@ -2,31 +2,33 @@ package handlers.communityboard.custom;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
+import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.util.Broadcast;
+import handlers.communityboard.custom.bufflists.BuffList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
-public class DefaultPresetBuff implements BoardAction {
+public class PresetBuff implements BoardAction {
 
-    private final static Logger LOG = LoggerFactory.getLogger(DefaultPresetBuff.class);
+    private final static Logger LOG = LoggerFactory.getLogger(PresetBuff.class);
 
     private final String name;
-    private final List<Skill> buffs;
+    private final BuffList buffs;
 
-    public DefaultPresetBuff(String name) {
+    public PresetBuff(String name, BuffList buffs) {
         this.name = name;
-        this.buffs = new ArrayList<>();
+        this.buffs = buffs;
     }
 
     @Override
     public ProcessResult process(L2PcInstance player, ActionArgs args) {
-        if (args.getArgs().size() != 2) {
+        if (args.getArgs().size() != 1) {
             LOG.warn("{} is trying to use buff preset with invalid args number {}", player, args.getArgs().size());
             return ProcessResult.failure("Invalid preset buff request");
         }
@@ -49,21 +51,26 @@ public class DefaultPresetBuff implements BoardAction {
 
         int delay = GameTimeController.TICKS_PER_SECOND * GameTimeController.MILLIS_IN_TICK;
 
-        L2Character target = targetOption.get();
+        final L2Character target = targetOption.get();
+        target.stopAndDisable();
 
-        Runnable stopAndDisableTask = target::stopAndDisable;
+        int rollingCastDelay = 0;
+        int rollingEffectDelay = delay;
+        for (SkillHolder buff : buffs.getBuffs()) {
+            ThreadPoolManager.getInstance().scheduleGeneral(() -> {
+                MagicSkillUse msk = new MagicSkillUse(target, buff.getSkillId(), buff.getSkillLvl(), delay, 0);
+                Broadcast.toSelfAndKnownPlayersInRadius(target, msk, 900);
+            }, rollingCastDelay);
 
-/*        player.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(() -> {
-            MagicSkillUse msk = new MagicSkillUse(target, cancellationId, 1, delay, 0);
-            Broadcast.toSelfAndKnownPlayersInRadius(target, msk, 900);
-            target.startAndEnable();
-        }, delay));
+            player.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(() -> {
+                buff.getSkill().applyEffects(target, target);
+            }, rollingEffectDelay));
 
-        buffs.map(buff -> {
+            rollingCastDelay += delay;
+            rollingEffectDelay += delay;
+        }
 
-        });*/
-
-        Runnable startAndEnableTask = target::startAndEnable;
+        ThreadPoolManager.getInstance().scheduleGeneral(target::startAndEnable, rollingEffectDelay);
 
         return ProcessResult.success();
     }
