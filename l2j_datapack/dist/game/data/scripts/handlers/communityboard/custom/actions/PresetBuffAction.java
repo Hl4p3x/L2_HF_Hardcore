@@ -1,4 +1,4 @@
-package handlers.communityboard.custom;
+package handlers.communityboard.custom.actions;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
@@ -8,20 +8,21 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
+import handlers.communityboard.custom.*;
 import handlers.communityboard.custom.bufflists.BuffList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Optional;
 
-public class PresetBuff implements BoardAction {
+public class PresetBuffAction implements BoardAction {
 
-    private final static Logger LOG = LoggerFactory.getLogger(PresetBuff.class);
+    private final static Logger LOG = LoggerFactory.getLogger(PresetBuffAction.class);
 
     private final String name;
     private final BuffList buffs;
 
-    public PresetBuff(String name, BuffList buffs) {
+    public PresetBuffAction(String name, BuffList buffs) {
         this.name = name;
         this.buffs = buffs;
     }

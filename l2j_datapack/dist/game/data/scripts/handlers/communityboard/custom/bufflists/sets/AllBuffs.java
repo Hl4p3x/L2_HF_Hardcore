@@ -1,6 +1,8 @@
-package handlers.communityboard.custom.bufflists;
+package handlers.communityboard.custom.bufflists.sets;
 
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import handlers.communityboard.custom.bufflists.BuffFilter;
+import handlers.communityboard.custom.bufflists.BuffList;
 
 import java.util.*;
 

@@ -6,8 +6,16 @@ import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IParseBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
-import handlers.communityboard.custom.*;
-import handlers.communityboard.custom.bufflists.*;
+import handlers.communityboard.custom.ActionArgs;
+import handlers.communityboard.custom.BoardAction;
+import handlers.communityboard.custom.ProcessResult;
+import handlers.communityboard.custom.actions.BoardCancelAction;
+import handlers.communityboard.custom.actions.BoardRestoreAction;
+import handlers.communityboard.custom.actions.PresetBuffAction;
+import handlers.communityboard.custom.actions.RouteAction;
+import handlers.communityboard.custom.bufflists.BuffHandler;
+import handlers.communityboard.custom.bufflists.ShowBuffListAction;
+import handlers.communityboard.custom.bufflists.sets.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,12 +33,12 @@ public class CustomHomeBoard implements IParseBoardHandler {
         actions = new HashMap<>();
         actions.put("restore", new BoardRestoreAction());
         actions.put("cancel", new BoardCancelAction());
-        actions.put("tank_buff_24", new PresetBuff("tank_buff_24", new Hierophant()));
-        actions.put("tank_song_dance", new PresetBuff("tank_buff_24", new Hierophant()));
-        actions.put("fighter_buff_24", new PresetBuff("tank_buff_24", new Hierophant()));
-        actions.put("fighter_song_dance", new PresetBuff("tank_buff_24", new Hierophant()));
-        actions.put("mage_buff_24", new PresetBuff("tank_buff_24", new Hierophant()));
-        actions.put("mage_song_dance", new PresetBuff("tank_buff_24", new Hierophant()));
+        actions.put("tank_buff_24", new PresetBuffAction("tank_buff_24", new Hierophant()));
+        actions.put("tank_song_dance", new PresetBuffAction("tank_buff_24", new Hierophant()));
+        actions.put("fighter_buff_24", new PresetBuffAction("tank_buff_24", new Hierophant()));
+        actions.put("fighter_song_dance", new PresetBuffAction("tank_buff_24", new Hierophant()));
+        actions.put("mage_buff_24", new PresetBuffAction("tank_buff_24", new Hierophant()));
+        actions.put("mage_song_dance", new PresetBuffAction("tank_buff_24", new Hierophant()));
 
 
         Map<String, BoardAction> listBuffActions = new HashMap<>();

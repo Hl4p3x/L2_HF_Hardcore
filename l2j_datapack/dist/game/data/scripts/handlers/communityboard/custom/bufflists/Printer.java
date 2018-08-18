@@ -1,5 +1,7 @@
 package handlers.communityboard.custom.bufflists;
 
+import handlers.communityboard.custom.bufflists.sets.*;
+
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 

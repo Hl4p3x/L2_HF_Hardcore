@@ -1,6 +1,9 @@
-package handlers.communityboard.custom;
+package handlers.communityboard.custom.actions;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import handlers.communityboard.custom.ActionArgs;
+import handlers.communityboard.custom.BoardAction;
+import handlers.communityboard.custom.ProcessResult;
 
 import java.util.Map;
 
