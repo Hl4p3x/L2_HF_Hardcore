@@ -19,8 +19,7 @@ public class MageDanceAndSong implements BuffList {
             new SkillHolder(268, 1), // Song of Wind
             new SkillHolder(267, 1), // Song of Warding
             new SkillHolder(264, 1), // Song of Earth
-            new SkillHolder(349, 1), // Song of Renewal
-            new SkillHolder(364, 1)  // Song of Champion
+            new SkillHolder(349, 1) // Song of Renewal
     );
 
     @Override
