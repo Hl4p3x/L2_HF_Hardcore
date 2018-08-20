@@ -97,7 +97,7 @@ public class CommunityBuffListDao {
         );
     }
 
-    public CommunityBuffList findSingleCommunityBuffSet(int ownerId, String listName) {
+    public Optional<CommunityBuffList> findSingleCommunityBuffSet(int ownerId, String listName) {
         Jdbi jdbi = Jdbi.create(ConnectionFactory.getInstance().getDataSource());
         jdbi.registerRowMapper(new CommunityBuffListMapper());
 
@@ -112,17 +112,19 @@ public class CommunityBuffListDao {
                                 buffList.getName(),
                                 findAllBuffListItems(buffList.getId()))
                 )
-                .findFirst()
-                .orElseThrow(() -> new IllegalStateException("Buff list " + listName + " for player " + ownerId + " was not found"))
-        );
+                .findFirst());
     }
 
     public boolean removeCommunityBuffList(int ownerId, String listName) {
         Jdbi jdbi = Jdbi.create(ConnectionFactory.getInstance().getDataSource());
         return jdbi.inTransaction(h -> {
-            CommunityBuffList communityBuffList = findSingleCommunityBuffSet(ownerId, listName);
+            Optional<CommunityBuffList> communityBuffList = findSingleCommunityBuffSet(ownerId, listName);
+            if (communityBuffList.isPresent()) {
+                return false;
+            }
+
             h.createUpdate(DELETE_ALL_BUFF_ITEMS)
-                    .bind("list_id", communityBuffList.getId())
+                    .bind("list_id", communityBuffList.get().getId())
                     .execute();
             return h.createUpdate(DELETE_BUFF_LIST)
                     .bind("owner_id", ownerId)

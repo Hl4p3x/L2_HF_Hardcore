@@ -11,12 +11,13 @@ import com.l2jserver.util.StringUtil;
 import handlers.communityboard.custom.ActionArgs;
 import handlers.communityboard.custom.BoardAction;
 import handlers.communityboard.custom.ProcessResult;
-import handlers.communityboard.custom.renderers.BuffListRender;
+import handlers.communityboard.custom.renderers.BuffCategoriesRender;
 import handlers.communityboard.custom.renderers.BuffRowRender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class UpdatePresetAction implements BoardAction {
@@ -35,19 +36,20 @@ public class UpdatePresetAction implements BoardAction {
             ProcessResult.failure("Preset name cannot be empty or contain whitespaces");
         }
 
-        CommunityBuffList communityBuffList;
-        try {
-            communityBuffList = DAOFactory.getInstance()
+
+        Optional<CommunityBuffList> communityBuffListOption = DAOFactory.getInstance()
                     .getCommunityBuffListDao()
                     .findSingleCommunityBuffSet(player.getObjectId(), presetName);
-        } catch (RuntimeException e) {
+        if (!communityBuffListOption.isPresent()) {
             LOG.warn("Player {} is trying to retrieve preset [{}] that does not belong to him", player, presetName);
             return ProcessResult.failure("Error occurred, could not retrieve buff preset");
         }
 
+        CommunityBuffList communityBuffList = communityBuffListOption.get();
+
         String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/CommunityBoard/buff_preset_editor.html");
 
-        html = html.replace("%buff_categories%", BuffListRender.renderBuffCategoriesList("list_add_to_preset_buff", player));
+        html = html.replace("%buff_categories%", BuffCategoriesRender.renderBuffCategoriesList("list_add_to_preset_buff ", String.valueOf(communityBuffList.getName()), player));
         html = html.replace("%current_preset_buff_count%", String.valueOf(communityBuffList.getSkills().size()));
 
         List<Skill> presetBuffs = communityBuffList.getSkills().stream().map(SkillHolder::getSkill).collect(Collectors.toList());

@@ -21,6 +21,8 @@ package com.l2jserver.gameserver.model.holders;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.skills.Skill;
 
+import java.util.Objects;
+
 /**
  * Simple class for storing skill id/level.
  * @author BiggBoss
@@ -56,10 +58,23 @@ public class SkillHolder
 	{
 		return SkillData.getInstance().getSkill(_skillId, Math.max(_skillLvl, 1));
 	}
-	
+
 	@Override
-	public String toString()
-	{
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		SkillHolder that = (SkillHolder) o;
+		return _skillId == that._skillId &&
+				_skillLvl == that._skillLvl;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(_skillId, _skillLvl);
+	}
+
+	@Override
+	public String toString() {
 		return "[SkillId: " + _skillId + " Level: " + _skillLvl + "]";
 	}
 }

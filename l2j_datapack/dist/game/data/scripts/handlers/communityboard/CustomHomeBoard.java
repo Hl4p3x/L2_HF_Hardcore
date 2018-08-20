@@ -14,7 +14,7 @@ import handlers.communityboard.custom.ProcessResult;
 import handlers.communityboard.custom.actions.*;
 import handlers.communityboard.custom.bufflists.sets.*;
 import handlers.communityboard.custom.bufflists.sets.presets.*;
-import handlers.communityboard.custom.renderers.BuffListRender;
+import handlers.communityboard.custom.renderers.BuffCategoriesRender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,15 +60,16 @@ public class CustomHomeBoard implements IParseBoardHandler {
         actions.put("update_preset", new UpdatePresetAction());
 
         actions.put("remove_preset_buff", new RemovePresetBuffAction());
+        actions.put("add_preset_buff", new AddPresetBuffAction());
 
         Map<String, BoardAction> listAddToPresetBuffActions = new HashMap<>();
-        listBuffActions.put("prophet", new ShowAddToPresetBuffAction(new Hierophant()));
-        listBuffActions.put("dances", new ShowAddToPresetBuffAction(new SpectralDancer()));
-        listBuffActions.put("songs", new ShowAddToPresetBuffAction(new SwordMuse()));
-        listBuffActions.put("elven_elder", new ShowAddToPresetBuffAction(new ElvenSaint()));
-        listBuffActions.put("shillen_elder", new ShowAddToPresetBuffAction(new ShillenSaint()));
-        listBuffActions.put("overlord", new ShowAddToPresetBuffAction(new Dominator()));
-        listBuffActions.put("warcryer", new ShowAddToPresetBuffAction(new Doomcryer()));
+        listAddToPresetBuffActions.put("prophet", new ShowAddToPresetBuffAction(new Hierophant()));
+        listAddToPresetBuffActions.put("dances", new ShowAddToPresetBuffAction(new SpectralDancer()));
+        listAddToPresetBuffActions.put("songs", new ShowAddToPresetBuffAction(new SwordMuse()));
+        listAddToPresetBuffActions.put("elven_elder", new ShowAddToPresetBuffAction(new ElvenSaint()));
+        listAddToPresetBuffActions.put("shillen_elder", new ShowAddToPresetBuffAction(new ShillenSaint()));
+        listAddToPresetBuffActions.put("overlord", new ShowAddToPresetBuffAction(new Dominator()));
+        listAddToPresetBuffActions.put("warcryer", new ShowAddToPresetBuffAction(new Doomcryer()));
 
         actions.put("list_add_to_preset_buff", new RouteAction(listAddToPresetBuffActions));
     }
@@ -101,7 +102,7 @@ public class CustomHomeBoard implements IParseBoardHandler {
             List<CommunityBuffList> presets = DAOFactory.getInstance().getCommunityBuffListDao().findAllCommunityBuffSets(player.getObjectId());
             List<String> buffPresetNames = presets.stream().map(CommunityBuffList::getName).collect(Collectors.toList());
             html = html.replace("%user_buff_presets%", String.join(";", buffPresetNames));
-            html = html.replace("%buff_list%", BuffListRender.renderBuffCategoriesList("list_buff", player));
+            html = html.replace("%buff_list%", BuffCategoriesRender.renderBuffCategoriesList("list_buff", player));
 
             CommunityBoardHandler.separateAndSend(html, player);
             return true;
