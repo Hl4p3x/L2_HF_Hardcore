@@ -19,11 +19,9 @@ public class PresetBuffAction implements BoardAction {
 
     private final static Logger LOG = LoggerFactory.getLogger(PresetBuffAction.class);
 
-    private final String name;
     private final BuffList buffs;
 
-    public PresetBuffAction(String name, BuffList buffs) {
-        this.name = name;
+    public PresetBuffAction(BuffList buffs) {
         this.buffs = buffs;
     }
 

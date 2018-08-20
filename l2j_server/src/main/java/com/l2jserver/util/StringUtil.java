@@ -274,4 +274,22 @@ public final class StringUtil
 		}
 		return sbString.toString();
 	}
+
+	public static boolean isBlank(String text) {
+		if (text == null) {
+			return true;
+		}
+		if (text.length() == 0) {
+			return true;
+		}
+		if (text.trim().length() == 0) {
+			return true;
+		}
+		return false;
+	}
+
+	public static boolean hasWhitespaces(String text) {
+		return text.contains(" ");
+	}
+
 }

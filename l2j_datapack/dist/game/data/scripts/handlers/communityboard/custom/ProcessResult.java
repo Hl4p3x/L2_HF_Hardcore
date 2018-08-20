@@ -28,10 +28,6 @@ public class ProcessResult {
         return new ProcessResult(false, result);
     }
 
-    public static ProcessResult success(String result) {
-        return new ProcessResult(true, result);
-    }
-
     public static ProcessResult success() {
         return new ProcessResult(true, StringUtil.EMPTY);
     }

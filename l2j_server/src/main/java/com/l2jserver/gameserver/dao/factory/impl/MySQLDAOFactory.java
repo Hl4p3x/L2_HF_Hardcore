@@ -53,6 +53,7 @@ enum MySQLDAOFactory implements IDAOFactory
 	private final LoginBonusDao loginBonusDao = new LoginBonusDao();
 	private final CustomVariablesDao customVariablesDao = new CustomVariablesDao();
 	private final ClanBonusesDao clanBonusesDao = new ClanBonusesDao();
+	private final CommunityBuffListDao communityBuffListDao = new CommunityBuffListDao();
 	
 	@Override
 	public FriendDAO getFriendDAO()
@@ -175,4 +176,9 @@ enum MySQLDAOFactory implements IDAOFactory
 	public ClanBonusesDao getClanBonusesDao() {
 		return clanBonusesDao;
 	}
+
+	public CommunityBuffListDao getCommunityBuffListDao() {
+		return communityBuffListDao;
+	}
+
 }

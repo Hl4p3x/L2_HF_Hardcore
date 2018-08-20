@@ -70,4 +70,7 @@ public interface IDAOFactory
 
 	ClanBonusesDao getClanBonusesDao();
 
+	CommunityBuffListDao getCommunityBuffListDao();
+
+
 }

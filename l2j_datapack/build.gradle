@@ -26,6 +26,8 @@ dependencies {
 	compile 'org.slf4j:slf4j-api:1.7.25'
 	compile files('../l2j_server/dist/libs/mmocore.jar')
 	compile project(':l2j_server')
+	compile group: 'org.jdbi', name: 'jdbi3-core', version: '3.4.0'
+	compile group: 'org.jdbi', name: 'jdbi3-sqlobject', version: '3.4.0'
 	testCompile 'org.testng:testng:6.10'
 	testCompile 'com.beust:jcommander:1.48'
 	testCompile 'org.mockito:mockito-core:2.7.9'

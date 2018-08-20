@@ -1,4 +1,4 @@
-package handlers.communityboard.custom.bufflists;
+package handlers.communityboard.custom.renderers;
 
 public class IconRender {
 
