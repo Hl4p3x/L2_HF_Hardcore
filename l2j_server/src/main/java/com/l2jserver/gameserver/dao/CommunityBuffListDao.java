@@ -119,7 +119,7 @@ public class CommunityBuffListDao {
         Jdbi jdbi = Jdbi.create(ConnectionFactory.getInstance().getDataSource());
         return jdbi.inTransaction(h -> {
             Optional<CommunityBuffList> communityBuffList = findSingleCommunityBuffSet(ownerId, listName);
-            if (communityBuffList.isPresent()) {
+            if (!communityBuffList.isPresent()) {
                 return false;
             }
 
@@ -133,6 +133,7 @@ public class CommunityBuffListDao {
         });
     }
 
+    // TODO handle duplicate exception
     public boolean addToCommunityBuffList(int listId, SkillHolder skillHolder) {
         Jdbi jdbi = Jdbi.create(ConnectionFactory.getInstance().getDataSource());
         return jdbi.withHandle(h -> h.createUpdate(ADD_BUFF_TO_LIST)

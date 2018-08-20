@@ -9,7 +9,7 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
 import handlers.communityboard.custom.*;
-import handlers.communityboard.custom.bufflists.BuffList;
+import handlers.communityboard.custom.bufflists.Buffs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,9 +19,9 @@ public class PresetBuffAction implements BoardAction {
 
     private final static Logger LOG = LoggerFactory.getLogger(PresetBuffAction.class);
 
-    private final BuffList buffs;
+    private final Buffs buffs;
 
-    public PresetBuffAction(BuffList buffs) {
+    public PresetBuffAction(Buffs buffs) {
         this.buffs = buffs;
     }
 

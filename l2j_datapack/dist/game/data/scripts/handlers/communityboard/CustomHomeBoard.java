@@ -62,6 +62,8 @@ public class CustomHomeBoard implements IParseBoardHandler {
         actions.put("remove_preset_buff", new RemovePresetBuffAction());
         actions.put("add_preset_buff", new AddPresetBuffAction());
 
+        actions.put("buff_preset", new PlayerCustomBuffAction());
+
         Map<String, BoardAction> listAddToPresetBuffActions = new HashMap<>();
         listAddToPresetBuffActions.put("prophet", new ShowAddToPresetBuffAction(new Hierophant()));
         listAddToPresetBuffActions.put("dances", new ShowAddToPresetBuffAction(new SpectralDancer()));
