@@ -9,11 +9,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import handlers.communityboard.custom.ActionArgs;
 import handlers.communityboard.custom.BoardAction;
 import handlers.communityboard.custom.ProcessResult;
-import handlers.communityboard.custom.actions.BoardCancelAction;
-import handlers.communityboard.custom.actions.BoardRestoreAction;
-import handlers.communityboard.custom.actions.PresetBuffAction;
-import handlers.communityboard.custom.actions.RouteAction;
-import handlers.communityboard.custom.bufflists.BuffHandler;
+import handlers.communityboard.custom.actions.*;
 import handlers.communityboard.custom.bufflists.ShowBuffListAction;
 import handlers.communityboard.custom.bufflists.sets.*;
 import handlers.communityboard.custom.bufflists.sets.presets.*;
@@ -53,7 +49,7 @@ public class CustomHomeBoard implements IParseBoardHandler {
 
         actions.put("list_buff", new RouteAction(listBuffActions));
 
-        actions.put("buff", new BuffHandler(AllBuffs.getBuffMap()));
+        actions.put("buff", new BuffHandlerAction(AllBuffs.getBuffMap()));
 
     }
 

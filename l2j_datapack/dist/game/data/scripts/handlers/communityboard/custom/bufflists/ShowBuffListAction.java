@@ -40,7 +40,7 @@ public class ShowBuffListAction implements BoardAction {
         buffs.forEach(buff ->
                 buffHtml.append("<td>")
                         .append("<center>").append(IconRender.render(buff.getIcon())).append("</center>")
-                        .append(ButtonRender.render(SkillDisplayNameHelper.changeDisplayName(buff.getName()), "bypass -h _bbs_buff buff " + buffListName + " " + buff.getId() + " player"))
+                        .append(ButtonRender.render(SkillDisplayNameHelper.changeDisplayName(buff.getName()), "bypass -h _bbs_buff buff " + buffListName + " " + buff.getId() + " $buff_target"))
                         .append("</td>")
         );
         buffHtml.append("</tr>");

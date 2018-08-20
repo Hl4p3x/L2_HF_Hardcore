@@ -1,4 +1,4 @@
-package handlers.communityboard.custom.bufflists;
+package handlers.communityboard.custom.actions;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
@@ -9,6 +9,7 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
 import handlers.communityboard.custom.*;
+import handlers.communityboard.custom.bufflists.BuffList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,13 +17,13 @@ import java.util.Map;
 import java.util.Optional;
 
 
-public class BuffHandler implements BoardAction {
+public class BuffHandlerAction implements BoardAction {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BuffHandler.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BuffHandlerAction.class);
 
     private final Map<String, BuffList> buffMap;
 
-    public BuffHandler(Map<String, BuffList> buffMap) {
+    public BuffHandlerAction(Map<String, BuffList> buffMap) {
         this.buffMap = buffMap;
     }
 
@@ -58,13 +59,14 @@ public class BuffHandler implements BoardAction {
         int delay = GameTimeController.TICKS_PER_SECOND * GameTimeController.MILLIS_IN_TICK;
 
         L2Character target = targetOption.get();
-        target.stopAndDisable();
+        CharacterBlockHelper.block(target);
+
         MagicSkillUse msk = new MagicSkillUse(target, buffHolder.get().getSkillId(), buffHolder.get().getSkillLvl(), delay, 0);
         Broadcast.toSelfAndKnownPlayersInRadius(target, msk, 900);
 
         player.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(() -> {
             buffHolder.get().getSkill().applyEffects(target, target);
-            target.startAndEnable();
+            CharacterBlockHelper.unblock(target);
         }, delay));
 
         return ProcessResult.success();
