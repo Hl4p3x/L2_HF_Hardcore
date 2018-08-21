@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS community_buff_lists (
  	list_id int NOT NULL AUTO_INCREMENT,
  	owner_id int,
- 	list_name varchar(255),
+ 	list_name varchar(126),
  	PRIMARY KEY(list_id),
  	UNIQUE (owner_id, list_name)
 );
