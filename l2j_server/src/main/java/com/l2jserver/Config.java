@@ -1218,6 +1218,7 @@ public final class Config
 	public static int FREE_COMMUNITY_TILL_CLASS_LEVEL;
 	public static int DISPLAY_NUMBER_OF_BUFFS_IN_ROW;
 	public static long COMMUNITY_SINGLE_BUFF_PRICE;
+	public static int MAX_CUSTOM_PRESET_BUFFS;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -3033,6 +3034,7 @@ public final class Config
 		FREE_COMMUNITY_TILL_CLASS_LEVEL = customCommunity.getInt("CommunityFreeUntilClassLevel", 2);
 		DISPLAY_NUMBER_OF_BUFFS_IN_ROW = customCommunity.getInt("CommunityDisplayBuffsInRow", 4);
 		COMMUNITY_SINGLE_BUFF_PRICE = customCommunity.getLong("CommunitySingleBuffPrice", 50000);
+		MAX_CUSTOM_PRESET_BUFFS = customCommunity.getInt("CommunityMaxBuffsInPreset", 36);
 	}
 	
 	/**

@@ -1,5 +1,6 @@
 package handlers.communityboard.custom.actions;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
 import com.l2jserver.gameserver.data.sql.impl.CommunityBuffList;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
@@ -30,6 +31,10 @@ public class AddPresetBuffAction implements BoardAction {
         String presetName = args.getArgs().get(1);
         String buffSkillIdString = args.getArgs().get(2);
 
+        if (StringUtil.isBlank(categoryName)) {
+            ProcessResult.failure("Category name cannot be empty");
+        }
+
         if (StringUtil.isBlank(presetName)) {
             ProcessResult.failure("Preset name cannot be empty");
         }
@@ -50,6 +55,10 @@ public class AddPresetBuffAction implements BoardAction {
         if (!buffList.isPresent()) {
             LOG.warn("Player {} is trying to add a buff from list that does not belong to him {}", player, presetName);
             return ProcessResult.success();
+        }
+
+        if (buffList.get().getSkills().size() >= Config.MAX_CUSTOM_PRESET_BUFFS) {
+            return ProcessResult.failure("You have reached maximum number of buffs in a preset!");
         }
 
         DAOFactory.getInstance().getCommunityBuffListDao().addToCommunityBuffList(buffList.get().getId(), requestedBuffOption.get());
