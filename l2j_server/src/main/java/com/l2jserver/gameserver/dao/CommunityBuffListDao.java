@@ -7,6 +7,8 @@ import com.l2jserver.gameserver.data.sql.impl.SkillHolderMapper;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.core.statement.PreparedBatch;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +16,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class CommunityBuffListDao {
+
+    private static final Logger LOG = LoggerFactory.getLogger(CommunityBuffListDao.class);
 
     private static final String CREATE_BUFF_LIST = "INSERT INTO community_buff_lists (owner_id, list_name) VALUES (:owner_id, :list_name)";
     private static final String ADD_BUFF_TO_LIST = "INSERT INTO community_buff_items (list_id, skill_id, skill_level) VALUES (:list_id, :skill_id, :skill_level)";
@@ -133,22 +137,31 @@ public class CommunityBuffListDao {
         });
     }
 
-    // TODO handle duplicate exception
     public boolean addToCommunityBuffList(int listId, SkillHolder skillHolder) {
         Jdbi jdbi = Jdbi.create(ConnectionFactory.getInstance().getDataSource());
-        return jdbi.withHandle(h -> h.createUpdate(ADD_BUFF_TO_LIST)
-                .bind("list_id", listId)
-                .bind("skill_id", skillHolder.getSkillId())
-                .bind("skill_level", skillHolder.getSkillLvl())
-                .execute()) > 0;
+        try {
+            return jdbi.withHandle(h -> h.createUpdate(ADD_BUFF_TO_LIST)
+                    .bind("list_id", listId)
+                    .bind("skill_id", skillHolder.getSkillId())
+                    .bind("skill_level", skillHolder.getSkillLvl())
+                    .execute()) > 0;
+        } catch (RuntimeException e) {
+            LOG.error("Failed to add community buff", e);
+            return false;
+        }
     }
 
     public boolean removeFromCommunityBuffList(int listId, int skillId) {
         Jdbi jdbi = Jdbi.create(ConnectionFactory.getInstance().getDataSource());
-        return jdbi.withHandle(h -> h.createUpdate(DELETE_BUFF_ITEM_SKILL)
-                .bind("list_id", listId)
-                .bind("skill_id", skillId)
-                .execute()) > 0;
+        try {
+            return jdbi.withHandle(h -> h.createUpdate(DELETE_BUFF_ITEM_SKILL)
+                    .bind("list_id", listId)
+                    .bind("skill_id", skillId)
+                    .execute()) > 0;
+        } catch (RuntimeException e) {
+            LOG.error("Failed to remove community buff", e);
+            return false;
+        }
     }
 
 }
