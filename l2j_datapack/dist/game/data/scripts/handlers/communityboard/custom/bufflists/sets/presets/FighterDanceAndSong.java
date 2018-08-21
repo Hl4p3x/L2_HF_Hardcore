@@ -14,7 +14,6 @@ public class FighterDanceAndSong implements BuffList {
             new SkillHolder(275, 1), // Dance of Fury
             new SkillHolder(274, 1), // Dance of Fire
             new SkillHolder(271, 1), // Dance of the Warrior
-            new SkillHolder(272, 1), // Dance of Inspiration
             new SkillHolder(915, 1), // Dance of Berserker
             new SkillHolder(304, 1), // Song of Vitality
             new SkillHolder(268, 1), // Song of Wind
