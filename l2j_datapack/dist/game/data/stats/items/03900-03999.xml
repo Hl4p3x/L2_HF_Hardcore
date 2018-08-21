@@ -876,7 +876,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="5" />
-		<set name="price" val="28" />
+        <set name="price" val="40"/>
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
