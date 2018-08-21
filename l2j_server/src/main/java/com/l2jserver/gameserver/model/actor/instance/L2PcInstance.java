@@ -5267,10 +5267,6 @@ public final class L2PcInstance extends L2Playable {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 sendPacket(SystemMessageId.NO_DISMOUNT_HERE);
                 return false;
-            } else if (isHungry()) {
-                sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.HUNGRY_STRIDER_NOT_MOUNT);
-                return false;
             } else {
                 dismount();
             }
