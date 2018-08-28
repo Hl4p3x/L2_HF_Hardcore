@@ -1,5 +1,6 @@
 package handlers.communityboard.custom;
 
+import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -25,6 +26,7 @@ public class CharacterBlockHelper {
             L2PcInstance owner = summon.getOwner();
             owner.setIsCastingNow(false);
             owner.startAndEnable();
+            summon.getAI().notifyEvent(CtrlEvent.EVT_THINK);
         }
     }
 
