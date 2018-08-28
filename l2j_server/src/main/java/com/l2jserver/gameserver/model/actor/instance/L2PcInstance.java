@@ -6184,6 +6184,7 @@ public final class L2PcInstance extends L2Playable {
             case PARTY:
             case CLAN:
             case PARTY_CLAN:
+            case CORPSE_CLAN:
             case GROUND:
             case SELF:
             case AREA_SUMMON:
@@ -6324,6 +6325,7 @@ public final class L2PcInstance extends L2Playable {
                     case BEHIND_AURA:
                     case AURA_CORPSE_MOB:
                     case CLAN:
+                    case CORPSE_CLAN:
                     case PARTY:
                     case SELF:
                     case GROUND:
@@ -6369,6 +6371,7 @@ public final class L2PcInstance extends L2Playable {
         switch (sklTargetType) {
             case PARTY:
             case CLAN: // For such skills, checkPvpSkill() is called from L2Skill.getTargetList()
+            case CORPSE_CLAN:
             case PARTY_CLAN: // For such skills, checkPvpSkill() is called from L2Skill.getTargetList()
             case AURA:
             case FRONT_AURA:
