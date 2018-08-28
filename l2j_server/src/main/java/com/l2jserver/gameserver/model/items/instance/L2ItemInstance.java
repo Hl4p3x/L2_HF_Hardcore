@@ -749,6 +749,10 @@ public class L2ItemInstance extends L2Object
 		return _item.isStackable();
 	}
 
+	public boolean isNotStackable() {
+		return !_item.isStackable();
+	}
+
 	/**
 	 * Returns if item is dropable
 	 * @return boolean
