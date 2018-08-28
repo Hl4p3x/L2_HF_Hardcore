@@ -6150,11 +6150,11 @@
 					<item id="57" min="1223" max="2498" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.725600004196167">
-                    <item id="6675" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
-                    <item id="6675" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
+					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-                    <item id="6675" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="45.73310089111328">
@@ -6238,11 +6238,11 @@
 					<item id="57" min="1230" max="2515" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.736799955368042">
-                    <item id="6675" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
-                    <item id="6675" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
+					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-                    <item id="6675" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="46.029598236083984">
@@ -6326,11 +6326,11 @@
 					<item id="57" min="1216" max="2484" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.7156000137329102">
-                    <item id="6675" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
-                    <item id="6675" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
+					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-                    <item id="6675" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="45.46950149536133">
@@ -6414,9 +6414,9 @@
 					<item id="57" min="1268" max="2577" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.17419999837875366">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -6501,9 +6501,9 @@
 					<item id="57" min="1260" max="2562" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.17319999635219574">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -6588,9 +6588,9 @@
 					<item id="57" min="1276" max="2593" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.1753000020980835">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -6675,9 +6675,9 @@
 					<item id="57" min="1309" max="2658" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.17980000376701355">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -6762,9 +6762,9 @@
 					<item id="57" min="1318" max="2676" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.1809999942779541">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -6849,9 +6849,9 @@
 					<item id="57" min="1302" max="2643" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.17880000174045563">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -6936,13 +6936,13 @@
 					<item id="57" min="1351" max="2748" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.4026000499725342">
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
 				</group>
 				<group chance="26.378799438476562">
@@ -7025,13 +7025,13 @@
 					<item id="57" min="1343" max="2732" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.3945000171661377">
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
 				</group>
 				<group chance="26.2268009185791">
@@ -7114,13 +7114,13 @@
 					<item id="57" min="1360" max="2766" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.4117000102996826">
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
 				</group>
 				<group chance="26.549800872802734">
@@ -7204,9 +7204,9 @@
 					<item id="57" min="1391" max="2835" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.1914999932050705">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -7292,9 +7292,9 @@
 					<item id="57" min="1383" max="2819" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.19040000438690186">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -7380,9 +7380,9 @@
 					<item id="57" min="1400" max="2853" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.19280000030994415">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -7467,9 +7467,9 @@
 					<item id="57" min="2269" max="4612" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.3118000030517578">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -7558,9 +7558,9 @@
 					<item id="57" min="2414" max="4902" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.33160001039505005">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
@@ -7642,7 +7642,7 @@
 					<item id="57" min="3597" max="7319" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.49540001153945923">
-                    <item id="6675" min="1" max="1" chance="7.4658"/> <!-- Carnage Bow -->
+					<item id="288" min="1" max="1" chance="7.4658"/> <!-- Carnage Bow -->
 					<item id="5535" min="1" max="1" chance="92.5342"/> <!-- Carnage Bow Stave -->
 				</group>
 				<group chance="36.890098571777344">
@@ -7726,7 +7726,7 @@
 					<item id="57" min="3615" max="7369" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.4973999857902527">
-                    <item id="6675" min="1" max="1" chance="7.4858"/> <!-- Bloody Orchid -->
+					<item id="235" min="1" max="1" chance="7.4858"/> <!-- Bloody Orchid -->
 					<item id="5536" min="1" max="1" chance="92.5142"/> <!-- Bloody Orchid Head -->
 				</group>
 				<group chance="42.368099212646484">
@@ -7807,13 +7807,13 @@
 					<item id="57" min="2327" max="4743" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.4203999042510986">
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-                    <item id="6675" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
 				</group>
 				<group chance="46.03219985961914">
@@ -7903,9 +7903,9 @@
 					<item id="57" min="3724" max="7603" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.5131000280380249">
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
+					<item id="80" min="1" max="1" chance="2.493"/> <!-- Tallum Blade -->
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
-                    <item id="6675" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
+					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
 					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->

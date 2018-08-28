@@ -22,7 +22,7 @@ for file in files_to_process:
             item_id = item.get('id')
             normal_item_id = common_id_to_normal_map.get(item_id)
             if normal_item_id:
-                item.set('id', normal_id)
+                item.set('id', normal_item_id)
                 comment_sibling = item.getnext()
                 if comment_sibling is not None and comment_sibling.tag is ET.Comment:
                     if comment_sibling.text:
