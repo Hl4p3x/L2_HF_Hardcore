@@ -709,6 +709,7 @@ public final class L2PcInstance extends L2Playable {
                 final long masks = player.getVariables().getLong(COND_OVERRIDE_KEY, PcCondOverride.getAllExceptionsMask());
                 player.setOverrideCond(masks);
             }
+
             return player;
         } catch (Exception e) {
             LOG.error("Failed loading character.", e);
@@ -5739,16 +5740,16 @@ public final class L2PcInstance extends L2Playable {
             return false;
         }
 
-        slot--;
+        int hennaSlotArrayIdx = slot - 1;
 
-        L2Henna henna = _henna[slot];
+        L2Henna henna = _henna[hennaSlotArrayIdx];
         if (henna == null) {
             return false;
         }
 
-        _henna[slot] = null;
+        _henna[hennaSlotArrayIdx] = null;
 
-        DAOFactory.getInstance().getHennaDAO().delete(this, slot + 1);
+        DAOFactory.getInstance().getHennaDAO().delete(this, slot);
 
         // Calculate Henna modifiers of this L2PcInstance
         recalcHennaStats();
@@ -5798,7 +5799,7 @@ public final class L2PcInstance extends L2Playable {
                 sendPacket(new ExBrExtraUserInfo(this));
 
                 // Notify to scripts
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaRemove(this, henna), this);
+                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaAdd(this, henna), this);
                 return true;
             }
         }
@@ -10831,6 +10832,7 @@ public final class L2PcInstance extends L2Playable {
 
     public void setHenna(L2Henna[] henna) {
         _henna = henna;
+        recalcHennaStats();
     }
 
     public long getOnlineBeginTime() {
