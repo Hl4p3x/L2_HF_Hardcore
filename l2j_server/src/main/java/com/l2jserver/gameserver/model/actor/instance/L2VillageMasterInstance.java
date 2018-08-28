@@ -18,12 +18,6 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-import java.util.StringTokenizer;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
@@ -48,15 +42,14 @@ import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.util.StringUtil;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.StringTokenizer;
+import java.util.logging.Logger;
 
 /**
  * This class ...
@@ -535,8 +528,10 @@ public class L2VillageMasterInstance extends L2NpcInstance
 							{
 								return;
 							}
-							
-							player.changeActiveClass(player.getTotalSubClasses());
+
+							if (!player.changeActiveClass(player.getTotalSubClasses())) {
+								return;
+							}
 							
 							html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/SubClass_AddOk.htm");
 							
@@ -584,8 +579,10 @@ public class L2VillageMasterInstance extends L2NpcInstance
 								return;
 							}
 						}
-						
-						player.changeActiveClass(paramOne);
+
+						if (!player.changeActiveClass(paramOne)) {
+							return;
+						}
 						player.sendPacket(SystemMessageId.SUBCLASS_TRANSFER_COMPLETED); // Transfer completed.
 						return;
 					case 6: // Change/Cancel Subclass - Choice
@@ -647,7 +644,9 @@ public class L2VillageMasterInstance extends L2NpcInstance
 							player.stopAllEffectsExceptThoseThatLastThroughDeath(); // all effects from old subclass stopped!
 							player.stopAllEffectsNotStayOnSubclassChange();
 							player.stopCubics();
-							player.changeActiveClass(paramOne);
+							if (!player.changeActiveClass(paramOne)) {
+								return;
+							}
 							
 							html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/SubClass_ModifyOk.htm");
 							html.replace("%name%", ClassListData.getInstance().getClass(paramTwo).getClientCode());
@@ -659,8 +658,9 @@ public class L2VillageMasterInstance extends L2NpcInstance
 							/**
 							 * This isn't good! modifySubClass() removed subclass from memory we must update _classIndex! Else IndexOutOfBoundsException can turn up some place down the line along with other seemingly unrelated problems.
 							 */
-							player.changeActiveClass(0); // Also updates _classIndex plus switching _classid to baseclass.
-							
+							if (player.changeActiveClass(0)) { // Also updates _classIndex plus switching _classid to baseclass.
+								return;
+							}
 							player.sendMessage("The sub class could not be added, you have been reverted to your base class.");
 							return;
 						}

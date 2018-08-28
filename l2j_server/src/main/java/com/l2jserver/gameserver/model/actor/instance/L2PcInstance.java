@@ -7336,6 +7336,10 @@ public final class L2PcInstance extends L2Playable {
         }
 
         try {
+            if (isMounted() || isFlyingMounted()) {
+                return false;
+            }
+
             if ((getTotalSubClasses() == Config.MAX_SUBCLASS) || (classIndex == 0)) {
                 return false;
             }
@@ -7394,6 +7398,10 @@ public final class L2PcInstance extends L2Playable {
         }
 
         try {
+            if (isMounted() || isFlyingMounted()) {
+                return false;
+            }
+
             DAOFactory.getInstance().getHennaDAO().deleteAll(this, classIndex);
 
             DAOFactory.getInstance().getSkillDAO().deleteAll(this, classIndex);
@@ -7485,6 +7493,11 @@ public final class L2PcInstance extends L2Playable {
         }
 
         try {
+            if (isMounted() || isFlyingMounted()) {
+                sendPacket(SystemMessageId.ACTION_PROHIBITED_WHILE_MOUNTED_OR_ON_AN_AIRSHIP);
+                return false;
+            }
+
             // Cannot switch or change subclasses while transformed
             if (_transformation != null) {
                 return false;
