@@ -18,38 +18,16 @@
  */
 package com.l2jserver.gameserver.model.actor;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicReference;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.ai.CtrlEvent;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.ai.L2AttackableAI;
-import com.l2jserver.gameserver.ai.L2CharacterAI;
-import com.l2jserver.gameserver.ai.L2FortSiegeGuardAI;
-import com.l2jserver.gameserver.ai.L2SiegeGuardAI;
+import com.l2jserver.gameserver.ai.*;
 import com.l2jserver.gameserver.datatables.EventDroplist;
 import com.l2jserver.gameserver.datatables.EventDroplist.DateDrop;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
-import com.l2jserver.gameserver.model.AbsorberInfo;
-import com.l2jserver.gameserver.model.AggroInfo;
-import com.l2jserver.gameserver.model.DamageDoneInfo;
-import com.l2jserver.gameserver.model.L2CommandChannel;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Seed;
+import com.l2jserver.gameserver.model.*;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -67,6 +45,7 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.model.stats.AltExpCalculator;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -75,6 +54,12 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class L2Attackable extends L2Npc
 {
@@ -469,9 +454,9 @@ public class L2Attackable extends L2Npc
 							// mob = 24, atk = 50, diff = 26 (no xp)
 							final int levelDiff = attacker.getLevel() - getLevel();
 
-							final int[] expSp = calculateExpAndSp(levelDiff, damage, totalDamage);
+							final long[] expSp = calculateExpAndSp(levelDiff, damage, totalDamage);
 							long exp = expSp[0];
-							int sp = expSp[1];
+							long sp = expSp[1];
 
 							if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
 							{
@@ -578,9 +563,9 @@ public class L2Attackable extends L2Npc
 						final int levelDiff = partyLvl - getLevel();
 
 						// Calculate Exp and SP rewards
-						final int[] expSp = calculateExpAndSp(levelDiff, partyDmg, totalDamage);
+						final long[] expSp = calculateExpAndSp(levelDiff, partyDmg, totalDamage);
 						long exp = expSp[0];
-						int sp = expSp[1];
+						long sp = expSp[1];
 
 						if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
 						{
@@ -1310,10 +1295,13 @@ public class L2Attackable extends L2Npc
 	 * @param totalDamage The total damage done
 	 * @return
 	 */
-	private int[] calculateExpAndSp(int diff, int damage, long totalDamage)
+	private long[] calculateExpAndSp(int diff, int damage, long totalDamage)
 	{
 		double xp;
 		double sp;
+		if (Config.ALT_DISABLE_EXP_PENALTY) {
+			return AltExpCalculator.calculateExpAndSp(getExpReward(), getSpReward(), damage, totalDamage);
+		}
 
 		if (diff < -5)
 		{
@@ -1336,7 +1324,7 @@ public class L2Attackable extends L2Npc
 		{
 			if (diff > 5) // formula revised May 07
 			{
-				double pow = Math.pow((double) 5 / 6, diff - 5);
+				double pow = Math.pow(0.83D, diff - 5);
 				xp = xp * pow;
 				sp = sp * pow;
 			}
@@ -1351,12 +1339,10 @@ public class L2Attackable extends L2Npc
 				sp = 0;
 			}
 		}
-		int[] tmp =
-		{
-			(int) xp,
-			(int) sp
+		return new long[]{
+				(long) xp,
+				(long) sp
 		};
-		return tmp;
 	}
 
 	public long calculateOverhitExp(long normalExp)

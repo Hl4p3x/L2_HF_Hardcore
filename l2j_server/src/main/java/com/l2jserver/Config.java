@@ -233,6 +233,7 @@ public final class Config
 	public static int DELETE_DAYS;
 	public static float ALT_GAME_EXPONENT_XP;
 	public static float ALT_GAME_EXPONENT_SP;
+	public static boolean ALT_DISABLE_EXP_PENALTY;
 	public static String PARTY_XP_CUTOFF_METHOD;
 	public static double PARTY_XP_CUTOFF_PERCENT;
 	public static int PARTY_XP_CUTOFF_LEVEL;
@@ -1777,6 +1778,7 @@ public final class Config
 			MAX_PETITIONS_PER_PLAYER = character.getInt("MaxPetitionsPerPlayer", 5);
 			MAX_PETITIONS_PENDING = character.getInt("MaxPetitionsPending", 25);
 			ALT_GAME_FREE_TELEPORT = character.getBoolean("AltFreeTeleporting", false);
+			ALT_DISABLE_EXP_PENALTY = character.getBoolean("AltDisableExpPenalty", true);
 			DELETE_DAYS = character.getInt("DeleteCharAfterDays", 7);
 			ALT_GAME_EXPONENT_XP = character.getFloat("AltGameExponentXp", 0);
 			ALT_GAME_EXPONENT_SP = character.getFloat("AltGameExponentSp", 0);

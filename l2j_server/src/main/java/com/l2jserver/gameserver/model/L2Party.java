@@ -18,21 +18,6 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.Future;
-import java.util.concurrent.atomic.AtomicLong;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.SevenSignsFestival;
@@ -50,21 +35,18 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExAskModifyPartyLooting;
-import com.l2jserver.gameserver.network.serverpackets.ExCloseMPCC;
-import com.l2jserver.gameserver.network.serverpackets.ExOpenMPCC;
-import com.l2jserver.gameserver.network.serverpackets.ExPartyPetWindowAdd;
-import com.l2jserver.gameserver.network.serverpackets.ExPartyPetWindowDelete;
-import com.l2jserver.gameserver.network.serverpackets.ExSetPartyLooting;
-import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jserver.gameserver.network.serverpackets.PartyMemberPosition;
-import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowAdd;
-import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowAll;
-import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowDelete;
-import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
+
+import java.time.Duration;
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.Future;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * This class serves as a container for player parties.
@@ -752,7 +734,7 @@ public class L2Party extends AbstractPlayerGroup
 	 * @param partyDmg
 	 * @param target
 	 */
-	public void distributeXpAndSp(long xpReward, int spReward, List<L2PcInstance> rewardedMembers, int topLvl, int partyDmg, L2Attackable target)
+	public void distributeXpAndSp(long xpReward, long spReward, List<L2PcInstance> rewardedMembers, int topLvl, int partyDmg, L2Attackable target)
 	{
 		final List<L2PcInstance> validMembers = getValidMembers(rewardedMembers, topLvl);
 		
