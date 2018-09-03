@@ -21,24 +21,33 @@ print("Masterwork item ids:", masterwork_item_ids)
 
 normal_items = {}
 common_items = []
-masterwork_items = []
+pseudo_masterwork_items = {}
 for file in files_to_process:
     print("Processing file", file)
     dom = ET.parse(file)
     items = dom.findall('.//item')
     results = []
     for item in items:
-        item_is_common = 'Common Item - ' in item.get('name')
-        item_id = item.get('id')
-        if item_is_common:
-            print(item.get('name'), '[', item.get('id') , ']', 'is common')
-            common_items.append(item)
-        elif item_id in masterwork_item_ids:
-            print(item.get('name'), '[', item.get('id') , ']', 'is masterwork')
-            masterwork_items.append(item)
-        else:
-            print(item.get('name'), '[', item.get('id') , ']', 'is normal')
-            normal_items[item.get('name')] = item
+        if (item.get('type') == "Armor" or item.get('type') == "Weapon"):
+            item_is_common = 'Common Item - ' in item.get('name')
+            item_id = item.get('id')
+            if item_is_common:
+                print(item.get('name'), '[', item.get('id') , ']', 'is common')
+                common_items.append(item)
+            elif item_id in masterwork_item_ids:
+                print(item.get('name'), '[', item.get('id') , ']', 'is masterwork')
+            else:
+                print(item.get('name'), '[', item.get('id') , ']', 'is normal')
+                normal_item = normal_items.get(item.get('name'))
+                if normal_item is None:
+                    normal_items[item.get('name')] = item
+                else:
+                    print("Found pseudo masterwork item", normal_item.get('name'), '[', normal_item.get('id'), ']')
+                    if int(normal_item.get('id')) > int(item.get('id')):                    
+                        pseudo_masterwork_items[normal_item.get('id')] = item.get('id')
+                        normal_items[item.get('name')] = item
+                    else:
+                        pseudo_masterwork_items[item.get('id') ] = normal_item.get('id') 
 
 common_to_normal_map = {}
 for common_item in common_items:
@@ -60,6 +69,7 @@ for common_item in common_items:
 all_map = {}
 all_map.update(common_to_normal_map)
 all_map.update(masterwork_to_normal_map)
+all_map.update(pseudo_masterwork_items)
 
 results = []
 for key, value in all_map.items():
