@@ -170,6 +170,14 @@ public final class AirShipGludioGracia extends Quest implements Runnable
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
+		if (event.equals("teleport_gludio")) {
+			player.teleToLocation(OUST_GLUDIO);
+			return null;
+		} else if (event.equals("teleport_gracia")) {
+			player.teleToLocation(OUST_GRACIA);
+			return null;
+		}
+
 		if (player.isTransformed())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_TRANSFORMED);
