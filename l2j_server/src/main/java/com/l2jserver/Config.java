@@ -504,6 +504,12 @@ public final class Config
 	public static int MIN_MONSTER_ANIMATION;
 	public static int MAX_MONSTER_ANIMATION;
 	public static boolean ENABLE_FALLING_DAMAGE;
+
+	public static boolean ALT_DROP_ENCHANTED;
+	public static double ALT_DROP_ENCHANTED_CHANCE;
+	public static int ALT_DROP_ENCHANTED_MIN;
+	public static int ALT_DROP_ENCHANTED_MAX;
+
 	public static boolean GRIDS_ALWAYS_ON;
 	public static int GRID_NEIGHBOR_TURNON_TIME;
 	public static int GRID_NEIGHBOR_TURNOFF_TIME;
@@ -2085,6 +2091,11 @@ public final class Config
 			BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000;
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
 			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
+
+			ALT_DROP_ENCHANTED = General.getBoolean("AltDropEnchanted", true);
+			ALT_DROP_ENCHANTED_CHANCE = General.getDouble("AltDropEnchantedChance", 35);
+			ALT_DROP_ENCHANTED_MIN = General.getInt("AltDropEnchantedMin", 1);
+			ALT_DROP_ENCHANTED_MAX = General.getInt("AltDropEnchantedMax", 5);
 
 			// Load FloodProtector L2Properties file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_FILE);
