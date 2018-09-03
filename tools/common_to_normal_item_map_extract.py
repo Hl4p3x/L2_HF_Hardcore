@@ -47,7 +47,7 @@ for file in files_to_process:
                         pseudo_masterwork_items[normal_item.get('id')] = item.get('id')
                         normal_items[item.get('name')] = item
                     else:
-                        pseudo_masterwork_items[item.get('id') ] = normal_item.get('id') 
+                        pseudo_masterwork_items[item.get('id')] = normal_item.get('id') 
 
 common_to_normal_map = {}
 for common_item in common_items:
@@ -77,3 +77,7 @@ for key, value in all_map.items():
 
 with open('common_to_normal_map.txt', 'w') as result_file:
     result_file.write(';'.join(results))
+
+with open('replace_pseudo_mw.sql', 'w') as sql_result_file:
+    for psedo_mw_id, normal_id in pseudo_masterwork_items.items():
+        sql_result_file.write("UPDATE items SET item_id=" + normal_id + " WHERE item_id=" + psedo_mw_id + ";\n")
