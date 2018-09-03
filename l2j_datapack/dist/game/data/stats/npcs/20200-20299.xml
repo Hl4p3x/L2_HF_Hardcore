@@ -3946,11 +3946,11 @@
 					<item id="57" min="933" max="1900" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.091900110244751">
-					<item id="11575" min="1" max="1" chance="4.5566"/> <!-- Adamantite Earring -->
+					<item id="856" min="1" max="1" chance="4.5566"/> <!-- Adamantite Earring -->
 					<item id="4049" min="1" max="1" chance="29.1581"/> <!-- Adamantite Earring Gemstone -->
 					<item id="918" min="1" max="1" chance="3.4209"/> <!-- Adamantite Necklace -->
 					<item id="4051" min="1" max="1" chance="21.559"/> <!-- Adamantite Necklace Chain -->
-					<item id="11577" min="1" max="1" chance="6.863"/> <!-- Adamantite Ring -->
+					<item id="887" min="1" max="1" chance="6.863"/> <!-- Adamantite Ring -->
 					<item id="4050" min="1" max="1" chance="34.4424"/> <!-- Adamantite Ring Wire -->
 				</group>
 				<group chance="18.552799224853516">

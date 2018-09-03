@@ -6682,11 +6682,11 @@
 					<item id="57" min="1015" max="2058" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.4250999689102173">
-					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+					<item id="864" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
 					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+					<item id="895" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="22.627700805664062">

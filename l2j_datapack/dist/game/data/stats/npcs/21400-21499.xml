@@ -383,9 +383,9 @@
 					<item id="57" min="5642" max="11518" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.0694999694824219">
-					<item id="11467" min="1" max="1" chance="5.5184"/> <!-- Sealed Robe of Nightmare -->
+                    <item id="5326" min="1" max="1" chance="5.5184"/> <!-- Sealed Robe of Nightmare -->
 					<item id="5487" min="1" max="1" chance="44.4816"/> <!-- Sealed Robe of Nightmare Fabric -->
-					<item id="11460" min="1" max="1" chance="5.5184"/> <!-- Sealed Majestic Robe -->
+                    <item id="5329" min="1" max="1" chance="5.5184"/> <!-- Sealed Majestic Robe -->
 					<item id="5488" min="1" max="1" chance="44.4816"/> <!-- Sealed Majestic Robe Fabric -->
 				</group>
 				<group chance="36.534698486328125">
@@ -467,9 +467,9 @@
 					<item id="57" min="4031" max="8230" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.76419997215271">
-					<item id="11467" min="1" max="1" chance="5.5184"/> <!-- Sealed Robe of Nightmare -->
+                    <item id="5326" min="1" max="1" chance="5.5184"/> <!-- Sealed Robe of Nightmare -->
 					<item id="5487" min="1" max="1" chance="44.4816"/> <!-- Sealed Robe of Nightmare Fabric -->
-					<item id="11460" min="1" max="1" chance="5.5184"/> <!-- Sealed Majestic Robe -->
+                    <item id="5329" min="1" max="1" chance="5.5184"/> <!-- Sealed Majestic Robe -->
 					<item id="5488" min="1" max="1" chance="44.4816"/> <!-- Sealed Majestic Robe Fabric -->
 				</group>
 				<group chance="39.15230178833008">
@@ -556,9 +556,9 @@
 					<item id="57" min="5491" max="11210" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="4.032400131225586">
-					<item id="11468" min="1" max="1" chance="3.469"/> <!-- Sealed Boots of Nightmare -->
+                    <item id="5314" min="1" max="1" chance="3.469"/> <!-- Sealed Boots of Nightmare -->
 					<item id="5502" min="1" max="1" chance="21.531"/> <!-- Sealed Boots of Nightmare Lining -->
-					<item id="11461" min="1" max="1" chance="3.469"/> <!-- Sealed Majestic Boots -->
+                    <item id="5319" min="1" max="1" chance="3.469"/> <!-- Sealed Majestic Boots -->
 					<item id="5503" min="1" max="1" chance="21.531"/> <!-- Sealed Majestic Boots Lining -->
 					<item id="11465" min="1" max="1" chance="3.469"/> <!-- Sealed Gauntlet of Nightmare -->
 					<item id="5514" min="1" max="1" chance="21.531"/> <!-- Sealed Gauntlets of Nightmare Design -->
@@ -644,9 +644,9 @@
 					<item id="57" min="3520" max="7185" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.5848000049591064">
-					<item id="11468" min="1" max="1" chance="3.469"/> <!-- Sealed Boots of Nightmare -->
+                    <item id="5314" min="1" max="1" chance="3.469"/> <!-- Sealed Boots of Nightmare -->
 					<item id="5502" min="1" max="1" chance="21.531"/> <!-- Sealed Boots of Nightmare Lining -->
-					<item id="11461" min="1" max="1" chance="3.469"/> <!-- Sealed Majestic Boots -->
+                    <item id="5319" min="1" max="1" chance="3.469"/> <!-- Sealed Majestic Boots -->
 					<item id="5503" min="1" max="1" chance="21.531"/> <!-- Sealed Majestic Boots Lining -->
 					<item id="11465" min="1" max="1" chance="3.469"/> <!-- Sealed Gauntlet of Nightmare -->
 					<item id="5514" min="1" max="1" chance="21.531"/> <!-- Sealed Gauntlets of Nightmare Design -->
@@ -1098,7 +1098,7 @@
 					<item id="57" min="6826" max="13977" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="3.8691999912261963">
-					<item id="11469" min="1" max="1" chance="5.7237"/> <!-- Sealed Shield of Nightmare -->
+                    <item id="5315" min="1" max="1" chance="5.7237"/> <!-- Sealed Shield of Nightmare -->
 					<item id="5495" min="1" max="1" chance="33.5054"/> <!-- Sealed Shield of Nightmare Fragment -->
 					<item id="5312" min="1" max="1" chance="4.0045"/> <!-- Sealed Helm of Nightmare -->
 					<item id="5527" min="1" max="1" chance="26.3809"/> <!-- Sealed Helm of Nightmare Design -->
@@ -1190,7 +1190,7 @@
 					<item id="57" min="5249" max="10748" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.9753000736236572">
-					<item id="11469" min="1" max="1" chance="5.7237"/> <!-- Sealed Shield of Nightmare -->
+                    <item id="5315" min="1" max="1" chance="5.7237"/> <!-- Sealed Shield of Nightmare -->
 					<item id="5495" min="1" max="1" chance="33.5054"/> <!-- Sealed Shield of Nightmare Fragment -->
 					<item id="5312" min="1" max="1" chance="4.0045"/> <!-- Sealed Helm of Nightmare -->
 					<item id="5527" min="1" max="1" chance="26.3809"/> <!-- Sealed Helm of Nightmare Design -->
@@ -1622,7 +1622,7 @@
 					<item id="57" min="4369" max="8949" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.476900100708008">
-					<item id="11469" min="1" max="1" chance="5.7237"/> <!-- Sealed Shield of Nightmare -->
+                    <item id="5315" min="1" max="1" chance="5.7237"/> <!-- Sealed Shield of Nightmare -->
 					<item id="5495" min="1" max="1" chance="33.5054"/> <!-- Sealed Shield of Nightmare Fragment -->
 					<item id="5312" min="1" max="1" chance="4.0045"/> <!-- Sealed Helm of Nightmare -->
 					<item id="5527" min="1" max="1" chance="26.3809"/> <!-- Sealed Helm of Nightmare Design -->
@@ -1709,7 +1709,7 @@
 					<item id="57" min="4450" max="9114" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.5225000381469727">
-					<item id="11469" min="1" max="1" chance="5.7237"/> <!-- Sealed Shield of Nightmare -->
+                    <item id="5315" min="1" max="1" chance="5.7237"/> <!-- Sealed Shield of Nightmare -->
 					<item id="5495" min="1" max="1" chance="33.5054"/> <!-- Sealed Shield of Nightmare Fragment -->
 					<item id="5312" min="1" max="1" chance="4.0045"/> <!-- Sealed Helm of Nightmare -->
 					<item id="5527" min="1" max="1" chance="26.3809"/> <!-- Sealed Helm of Nightmare Design -->
@@ -2672,9 +2672,9 @@
 					<item id="57" min="7481" max="15268" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.4129999876022339">
-					<item id="11466" min="1" max="1" chance="5.5358"/> <!-- Sealed Leather Armor of Nightmare -->
+                    <item id="5320" min="1" max="1" chance="5.5358"/> <!-- Sealed Leather Armor of Nightmare -->
 					<item id="5480" min="1" max="1" chance="44.4642"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
-					<item id="11459" min="1" max="1" chance="5.5358"/> <!-- Sealed Majestic Leather Armor -->
+                    <item id="5323" min="1" max="1" chance="5.5358"/> <!-- Sealed Majestic Leather Armor -->
 					<item id="5481" min="1" max="1" chance="44.4642"/> <!-- Sealed Majestic Leather Armor Fabric -->
 				</group>
 				<group chance="37.43949890136719">
@@ -2758,9 +2758,9 @@
 					<item id="57" min="6381" max="13023" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.205199956893921">
-					<item id="11466" min="1" max="1" chance="5.5358"/> <!-- Sealed Leather Armor of Nightmare -->
+                    <item id="5320" min="1" max="1" chance="5.5358"/> <!-- Sealed Leather Armor of Nightmare -->
 					<item id="5480" min="1" max="1" chance="44.4642"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
-					<item id="11459" min="1" max="1" chance="5.5358"/> <!-- Sealed Majestic Leather Armor -->
+                    <item id="5323" min="1" max="1" chance="5.5358"/> <!-- Sealed Majestic Leather Armor -->
 					<item id="5481" min="1" max="1" chance="44.4642"/> <!-- Sealed Majestic Leather Armor Fabric -->
 				</group>
 				<group chance="43.6338005065918">
@@ -2928,9 +2928,9 @@
 					<item id="57" min="8184" max="16701" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.1720000505447388">
-					<item id="11464" min="1" max="1" chance="5.4811"/> <!-- Sealed Armor of Nightmare -->
+                    <item id="5311" min="1" max="1" chance="5.4811"/> <!-- Sealed Armor of Nightmare -->
 					<item id="5522" min="1" max="1" chance="44.5189"/> <!-- Sealed Armor of Nightmare Pattern -->
-					<item id="11463" min="1" max="1" chance="5.4811"/> <!-- Sealed Majestic Plate Armor -->
+                    <item id="5316" min="1" max="1" chance="5.4811"/> <!-- Sealed Majestic Plate Armor -->
 					<item id="5523" min="1" max="1" chance="44.5189"/> <!-- Sealed Majestic Plate Armor Pattern -->
 				</group>
 				<group chance="46.285099029541016">
@@ -3015,9 +3015,9 @@
 					<item id="57" min="15536" max="31822" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.941699981689453">
-					<item id="11466" min="1" max="1" chance="5.5358"/> <!-- Sealed Leather Armor of Nightmare -->
+                    <item id="5320" min="1" max="1" chance="5.5358"/> <!-- Sealed Leather Armor of Nightmare -->
 					<item id="5480" min="1" max="1" chance="44.4642"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
-					<item id="11459" min="1" max="1" chance="5.5358"/> <!-- Sealed Majestic Leather Armor -->
+                    <item id="5323" min="1" max="1" chance="5.5358"/> <!-- Sealed Majestic Leather Armor -->
 					<item id="5481" min="1" max="1" chance="44.4642"/> <!-- Sealed Majestic Leather Armor Fabric -->
 				</group>
 				<group chance="32.2338981628418">
@@ -3428,7 +3428,7 @@
 					<item id="57" min="252" max="511" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.04410000145435333">
-					<item id="1303" min="1" max="1" chance="6.9659"/> <!-- Lance -->
+                    <item id="97" min="1" max="1" chance="6.9659"/> <!-- Lance -->
 					<item id="4115" min="1" max="1" chance="93.0341"/> <!-- Lance Blade -->
 				</group>
 				<group chance="12.837900161743164">
@@ -3787,7 +3787,7 @@
 					<item id="57" min="1140" max="2309" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.6980999708175659">
-					<item id="11405" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
+                    <item id="358" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
 					<item id="4078" min="1" max="1" chance="29.6205"/> <!-- Blue Wolf Breastplate Part -->
 					<item id="2381" min="1" max="1" chance="1.6621"/> <!-- Doom Plate Armor -->
 					<item id="4081" min="1" max="1" chance="19.9864"/> <!-- Doom Plate Armor Temper -->
@@ -3871,7 +3871,7 @@
 					<item id="57" min="958" max="1940" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.5866000056266785">
-					<item id="11405" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
+                    <item id="358" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
 					<item id="4078" min="1" max="1" chance="29.6205"/> <!-- Blue Wolf Breastplate Part -->
 					<item id="2381" min="1" max="1" chance="1.6621"/> <!-- Doom Plate Armor -->
 					<item id="4081" min="1" max="1" chance="19.9864"/> <!-- Doom Plate Armor Temper -->
@@ -4987,11 +4987,11 @@
 		<dropLists>
 			<death>
 				<group chance="1.4112000465393066">
-					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+                    <item id="864" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
 					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+                    <item id="895" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="22.096399307250977">
@@ -5699,11 +5699,11 @@
 		<dropLists>
 			<death>
 				<group chance="3.6575000286102295">
-					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+                    <item id="864" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
 					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+                    <item id="895" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="42.776100158691406">
@@ -6654,7 +6654,7 @@
 		<dropLists>
 			<death>
 				<group chance="0.6574000120162964">
-					<item id="11405" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
+                    <item id="358" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
 					<item id="4078" min="1" max="1" chance="29.6205"/> <!-- Blue Wolf Breastplate Part -->
 					<item id="2381" min="1" max="1" chance="1.6621"/> <!-- Doom Plate Armor -->
 					<item id="4081" min="1" max="1" chance="19.9864"/> <!-- Doom Plate Armor Temper -->
@@ -6844,11 +6844,11 @@
 		<dropLists>
 			<death>
 				<group chance="1.5068000555038452">
-					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+                    <item id="864" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
 					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+                    <item id="895" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="14.503800392150879">
@@ -7464,11 +7464,11 @@
 		<dropLists>
 			<death>
 				<group chance="3.7571001052856445">
-					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+                    <item id="864" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
 					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+                    <item id="895" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="42.11669921875">
@@ -7564,7 +7564,7 @@
 		<dropLists>
 			<death>
 				<group chance="1.5765000581741333">
-					<item id="11405" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
+                    <item id="358" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
 					<item id="4078" min="1" max="1" chance="29.6205"/> <!-- Blue Wolf Breastplate Part -->
 					<item id="2381" min="1" max="1" chance="1.6621"/> <!-- Doom Plate Armor -->
 					<item id="4081" min="1" max="1" chance="19.9864"/> <!-- Doom Plate Armor Temper -->

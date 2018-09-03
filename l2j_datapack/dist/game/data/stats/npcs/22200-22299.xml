@@ -4293,13 +4293,13 @@
 					<item id="57" min="1771" max="3615" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.8072999715805054">
-					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+                    <item id="5290" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+                    <item id="5291" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+                    <item id="5295" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
-					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+                    <item id="5296" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
 				</group>
 				<group chance="34.50590133666992">
@@ -4560,9 +4560,9 @@
 					<item id="57" min="1647" max="3363" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.2312999963760376">
-					<item id="11464" min="1" max="1" chance="5.4811"/> <!-- Sealed Armor of Nightmare -->
+                    <item id="5311" min="1" max="1" chance="5.4811"/> <!-- Sealed Armor of Nightmare -->
 					<item id="5522" min="1" max="1" chance="44.5189"/> <!-- Sealed Armor of Nightmare Pattern -->
-					<item id="11463" min="1" max="1" chance="5.4811"/> <!-- Sealed Majestic Plate Armor -->
+                    <item id="5316" min="1" max="1" chance="5.4811"/> <!-- Sealed Majestic Plate Armor -->
 					<item id="5523" min="1" max="1" chance="44.5189"/> <!-- Sealed Majestic Plate Armor Pattern -->
 				</group>
 				<group chance="2.0852999687194824">
@@ -5219,9 +5219,9 @@
 					<item id="57" min="1377" max="2821" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.2556000053882599">
-					<item id="11466" min="1" max="1" chance="5.5358"/> <!-- Sealed Leather Armor of Nightmare -->
+                    <item id="5320" min="1" max="1" chance="5.5358"/> <!-- Sealed Leather Armor of Nightmare -->
 					<item id="5480" min="1" max="1" chance="44.4642"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
-					<item id="11459" min="1" max="1" chance="5.5358"/> <!-- Sealed Majestic Leather Armor -->
+                    <item id="5323" min="1" max="1" chance="5.5358"/> <!-- Sealed Majestic Leather Armor -->
 					<item id="5481" min="1" max="1" chance="44.4642"/> <!-- Sealed Majestic Leather Armor Fabric -->
 				</group>
 				<group chance="40.032798767089844">
@@ -5302,9 +5302,9 @@
 					<item id="57" min="1391" max="2849" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.195700004696846">
-					<item id="11464" min="1" max="1" chance="5.4811"/> <!-- Sealed Armor of Nightmare -->
+                    <item id="5311" min="1" max="1" chance="5.4811"/> <!-- Sealed Armor of Nightmare -->
 					<item id="5522" min="1" max="1" chance="44.5189"/> <!-- Sealed Armor of Nightmare Pattern -->
-					<item id="11463" min="1" max="1" chance="5.4811"/> <!-- Sealed Majestic Plate Armor -->
+                    <item id="5316" min="1" max="1" chance="5.4811"/> <!-- Sealed Majestic Plate Armor -->
 					<item id="5523" min="1" max="1" chance="44.5189"/> <!-- Sealed Majestic Plate Armor Pattern -->
 				</group>
 				<group chance="42.16510009765625">
@@ -5384,9 +5384,9 @@
 					<item id="57" min="1537" max="3147" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.28610000014305115">
-					<item id="11467" min="1" max="1" chance="5.5184"/> <!-- Sealed Robe of Nightmare -->
+                    <item id="5326" min="1" max="1" chance="5.5184"/> <!-- Sealed Robe of Nightmare -->
 					<item id="5487" min="1" max="1" chance="44.4816"/> <!-- Sealed Robe of Nightmare Fabric -->
-					<item id="11460" min="1" max="1" chance="5.5184"/> <!-- Sealed Majestic Robe -->
+                    <item id="5329" min="1" max="1" chance="5.5184"/> <!-- Sealed Majestic Robe -->
 					<item id="5488" min="1" max="1" chance="44.4816"/> <!-- Sealed Majestic Robe Fabric -->
 				</group>
 				<group chance="36.43199920654297">

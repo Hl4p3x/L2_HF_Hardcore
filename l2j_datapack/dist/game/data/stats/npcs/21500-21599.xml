@@ -745,11 +745,11 @@
 					<item id="57" min="1298" max="2632" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.823199987411499">
-					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+					<item id="864" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
 					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+					<item id="895" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="5.40310001373291">
@@ -1182,13 +1182,13 @@
 					<item id="57" min="1474" max="2999" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.5307999849319458">
-					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+					<item id="5291" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+					<item id="5296" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
-					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5290" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+					<item id="5295" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
 				</group>
 				<group chance="4.530700206756592">
@@ -1533,11 +1533,11 @@
 					<item id="57" min="2357" max="4804" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.9463000297546387">
-					<item id="11422" min="1" max="1" chance="4.5113"/> <!-- Sealed Dark Crystal Leather Armor -->
+					<item id="5297" min="1" max="1" chance="4.5113"/> <!-- Sealed Dark Crystal Leather Armor -->
 					<item id="5478" min="1" max="1" chance="26.1184"/> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="11430" min="1" max="1" chance="2.7732"/> <!-- Sealed Tallum Leather Armor -->
+					<item id="5301" min="1" max="1" chance="2.7732"/> <!-- Sealed Tallum Leather Armor -->
 					<item id="5479" min="1" max="1" chance="18.3787"/> <!-- Sealed Tallum Leather Armor Pattern -->
-					<item id="11428" min="1" max="1" chance="7.2233"/> <!-- Sealed Dark Crystal Leggings -->
+					<item id="5298" min="1" max="1" chance="7.2233"/> <!-- Sealed Dark Crystal Leggings -->
 					<item id="5482" min="1" max="1" chance="40.9951"/> <!-- Sealed Dark Crystal Leggings Design -->
 				</group>
 				<group chance="38.72060012817383">
@@ -1692,13 +1692,13 @@
 					<item id="57" min="1488" max="3039" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.549299955368042">
-					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+					<item id="5291" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+					<item id="5296" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
-					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5290" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+					<item id="5295" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
 				</group>
 				<group chance="32.5099983215332">
@@ -1786,11 +1786,11 @@
 					<item id="57" min="1203" max="2445" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.6933999061584473">
-					<item id="11575" min="1" max="1" chance="4.5566"/> <!-- Adamantite Earring -->
+					<item id="856" min="1" max="1" chance="4.5566"/> <!-- Adamantite Earring -->
 					<item id="4049" min="1" max="1" chance="29.1581"/> <!-- Adamantite Earring Gemstone -->
 					<item id="918" min="1" max="1" chance="3.4209"/> <!-- Adamantite Necklace -->
 					<item id="4051" min="1" max="1" chance="21.559"/> <!-- Adamantite Necklace Chain -->
-					<item id="11577" min="1" max="1" chance="6.863"/> <!-- Adamantite Ring -->
+					<item id="887" min="1" max="1" chance="6.863"/> <!-- Adamantite Ring -->
 					<item id="4050" min="1" max="1" chance="34.4424"/> <!-- Adamantite Ring Wire -->
 				</group>
 				<group chance="13.37279987335205">
@@ -3016,11 +3016,11 @@
 					<item id="57" min="1270" max="2576" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.7836999893188477">
-					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+					<item id="864" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
 					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+					<item id="895" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="27.384599685668945">
@@ -3109,11 +3109,11 @@
 					<item id="57" min="1679" max="3405" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.3578999042510986">
-					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+					<item id="864" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
 					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+					<item id="895" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="36.199798583984375">
@@ -3299,7 +3299,7 @@
 					<item id="57" min="1454" max="2949" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.2549999952316284">
-					<item id="11939" min="1" max="1" chance="6.9442"/> <!-- Common Item - Demon's Dagger -->
+					<item id="234" min="1" max="1" chance="6.9442"/> <!-- Demon's Dagger -->
 					<item id="4119" min="1" max="1" chance="93.0558"/> <!-- Demon's Dagger Edge -->
 				</group>
 				<group chance="3.245300054550171">
@@ -3858,7 +3858,7 @@
 					<item id="57" min="1125" max="2280" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.19709999859333038">
-					<item id="11939" min="1" max="1" chance="6.9442"/> <!-- Common Item - Demon's Dagger -->
+					<item id="234" min="1" max="1" chance="6.9442"/> <!-- Demon's Dagger -->
 					<item id="4119" min="1" max="1" chance="93.0558"/> <!-- Demon's Dagger Edge -->
 				</group>
 				<group chance="35.00310134887695">
@@ -4047,11 +4047,11 @@
 					<item id="57" min="1783" max="3643" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.516200065612793">
-					<item id="11578" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
+					<item id="864" min="1" max="1" chance="4.1055"/> <!-- Earring of Black Ore -->
 					<item id="4052" min="1" max="1" chance="31.3238"/> <!-- Earring of Black Ore Piece -->
 					<item id="926" min="1" max="1" chance="3.0774"/> <!-- Necklace of Black Ore -->
 					<item id="4054" min="1" max="1" chance="17.4264"/> <!-- Necklace of Black Ore Beads -->
-					<item id="11580" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
+					<item id="895" min="1" max="1" chance="6.144"/> <!-- Ring of Black Ore -->
 					<item id="4053" min="1" max="1" chance="37.9229"/> <!-- Ring of Black Ore Gemstone -->
 				</group>
 				<group chance="35.19670104980469">
@@ -4137,7 +4137,7 @@
 					<item id="57" min="1288" max="2611" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.7890999913215637">
-					<item id="11405" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
+					<item id="358" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
 					<item id="4078" min="1" max="1" chance="29.6205"/> <!-- Blue Wolf Breastplate Part -->
 					<item id="2381" min="1" max="1" chance="1.6621"/> <!-- Doom Plate Armor -->
 					<item id="4081" min="1" max="1" chance="19.9864"/> <!-- Doom Plate Armor Temper -->
@@ -5249,7 +5249,7 @@
 					<item id="57" min="1438" max="2917" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.8813999891281128">
-					<item id="11405" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
+					<item id="358" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
 					<item id="4078" min="1" max="1" chance="29.6205"/> <!-- Blue Wolf Breastplate Part -->
 					<item id="2381" min="1" max="1" chance="1.6621"/> <!-- Doom Plate Armor -->
 					<item id="4081" min="1" max="1" chance="19.9864"/> <!-- Doom Plate Armor Temper -->
@@ -5344,7 +5344,7 @@
 					<item id="57" min="1438" max="2917" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.8813999891281128">
-					<item id="11405" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
+					<item id="358" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
 					<item id="4078" min="1" max="1" chance="29.6205"/> <!-- Blue Wolf Breastplate Part -->
 					<item id="2381" min="1" max="1" chance="1.6621"/> <!-- Doom Plate Armor -->
 					<item id="4081" min="1" max="1" chance="19.9864"/> <!-- Doom Plate Armor Temper -->
@@ -5634,7 +5634,7 @@
 					<item id="57" min="1318" max="2693" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.8113999962806702">
-					<item id="11405" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
+					<item id="358" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
 					<item id="4078" min="1" max="1" chance="29.6205"/> <!-- Blue Wolf Breastplate Part -->
 					<item id="2381" min="1" max="1" chance="1.6621"/> <!-- Doom Plate Armor -->
 					<item id="4081" min="1" max="1" chance="19.9864"/> <!-- Doom Plate Armor Temper -->
@@ -5825,7 +5825,7 @@
 					<item id="57" min="1585" max="3240" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.9761999845504761">
-					<item id="11405" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
+					<item id="358" min="1" max="1" chance="2.7002"/> <!-- Blue Wolf Breastplate -->
 					<item id="4078" min="1" max="1" chance="29.6205"/> <!-- Blue Wolf Breastplate Part -->
 					<item id="2381" min="1" max="1" chance="1.6621"/> <!-- Doom Plate Armor -->
 					<item id="4081" min="1" max="1" chance="19.9864"/> <!-- Doom Plate Armor Temper -->
@@ -6727,7 +6727,7 @@
 					<item id="57" min="1750" max="3554" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.347100019454956">
-					<item id="11425" min="1" max="1" chance="6.7053"/> <!-- Sealed Dark Crystal Shield -->
+					<item id="5292" min="1" max="1" chance="6.7053"/> <!-- Sealed Dark Crystal Shield -->
 					<item id="5494" min="1" max="1" chance="33.9386"/> <!-- Sealed Dark Crystal Shield Fragment -->
 					<item id="5289" min="1" max="1" chance="4.6976"/> <!-- Sealed Dark Crystal Helmet -->
 					<item id="5525" min="1" max="1" chance="24.9804"/> <!-- Sealed Dark Crystal Helmet Design -->

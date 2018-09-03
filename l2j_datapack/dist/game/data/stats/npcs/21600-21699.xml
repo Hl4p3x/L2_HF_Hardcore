@@ -4196,7 +4196,7 @@
 					<item id="57" min="1701" max="3463" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.3114999532699585">
-					<item id="11425" min="1" max="1" chance="6.7053"/> <!-- Sealed Dark Crystal Shield -->
+					<item id="5292" min="1" max="1" chance="6.7053"/> <!-- Sealed Dark Crystal Shield -->
 					<item id="5494" min="1" max="1" chance="33.9386"/> <!-- Sealed Dark Crystal Shield Fragment -->
 					<item id="5289" min="1" max="1" chance="4.6976"/> <!-- Sealed Dark Crystal Helmet -->
 					<item id="5525" min="1" max="1" chance="24.9804"/> <!-- Sealed Dark Crystal Helmet Design -->
@@ -4286,9 +4286,9 @@
 				<group chance="0.43549999594688416">
 					<item id="12227" min="1" max="1" chance="4.4751"/> <!-- Common Item - Sealed Dark Crystal Breastplate -->
 					<item id="5520" min="1" max="1" chance="26.477"/> <!-- Sealed Dark Crystal Breastplate Pattern -->
-					<item id="11433" min="1" max="1" chance="2.7556"/> <!-- Sealed Tallum Plate Armor -->
+					<item id="5293" min="1" max="1" chance="2.7556"/> <!-- Sealed Tallum Plate Armor -->
 					<item id="5521" min="1" max="1" chance="18.6832"/> <!-- Sealed Tallum Plate Armor Pattern -->
-					<item id="11420" min="1" max="1" chance="7.1407"/> <!-- Sealed Dark Crystal Gaiters -->
+					<item id="5288" min="1" max="1" chance="7.1407"/> <!-- Sealed Dark Crystal Gaiters -->
 					<item id="5524" min="1" max="1" chance="40.4684"/> <!-- Sealed Dark Crystal Gaiters Pattern -->
 				</group>
 				<group chance="28.023700714111328">
@@ -4367,7 +4367,7 @@
 					<item id="57" min="1566" max="3192" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.2086000442504883">
-					<item id="11425" min="1" max="1" chance="6.7053"/> <!-- Sealed Dark Crystal Shield -->
+					<item id="5292" min="1" max="1" chance="6.7053"/> <!-- Sealed Dark Crystal Shield -->
 					<item id="5494" min="1" max="1" chance="33.9386"/> <!-- Sealed Dark Crystal Shield Fragment -->
 					<item id="5289" min="1" max="1" chance="4.6976"/> <!-- Sealed Dark Crystal Helmet -->
 					<item id="5525" min="1" max="1" chance="24.9804"/> <!-- Sealed Dark Crystal Helmet Design -->
@@ -4457,9 +4457,9 @@
 				<group chance="0.5626999735832214">
 					<item id="12227" min="1" max="1" chance="4.4751"/> <!-- Common Item - Sealed Dark Crystal Breastplate -->
 					<item id="5520" min="1" max="1" chance="26.477"/> <!-- Sealed Dark Crystal Breastplate Pattern -->
-					<item id="11433" min="1" max="1" chance="2.7556"/> <!-- Sealed Tallum Plate Armor -->
+					<item id="5293" min="1" max="1" chance="2.7556"/> <!-- Sealed Tallum Plate Armor -->
 					<item id="5521" min="1" max="1" chance="18.6832"/> <!-- Sealed Tallum Plate Armor Pattern -->
-					<item id="11420" min="1" max="1" chance="7.1407"/> <!-- Sealed Dark Crystal Gaiters -->
+					<item id="5288" min="1" max="1" chance="7.1407"/> <!-- Sealed Dark Crystal Gaiters -->
 					<item id="5524" min="1" max="1" chance="40.4684"/> <!-- Sealed Dark Crystal Gaiters Pattern -->
 				</group>
 				<group chance="1.8904999494552612">

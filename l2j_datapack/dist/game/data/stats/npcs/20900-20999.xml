@@ -2895,11 +2895,11 @@
 					<item id="57" min="675" max="1379" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.5159000158309937">
-					<item id="11575" min="1" max="1" chance="4.5566"/> <!-- Adamantite Earring -->
+					<item id="856" min="1" max="1" chance="4.5566"/> <!-- Adamantite Earring -->
 					<item id="4049" min="1" max="1" chance="29.1581"/> <!-- Adamantite Earring Gemstone -->
 					<item id="918" min="1" max="1" chance="3.4209"/> <!-- Adamantite Necklace -->
 					<item id="4051" min="1" max="1" chance="21.559"/> <!-- Adamantite Necklace Chain -->
-					<item id="11577" min="1" max="1" chance="6.863"/> <!-- Adamantite Ring -->
+					<item id="887" min="1" max="1" chance="6.863"/> <!-- Adamantite Ring -->
 					<item id="4050" min="1" max="1" chance="34.4424"/> <!-- Adamantite Ring Wire -->
 				</group>
 				<group chance="17.277299880981445">
@@ -3167,7 +3167,7 @@
 					<item id="57" min="946" max="1914" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.1656000018119812">
-					<item id="11939" min="1" max="1" chance="6.9442"/> <!-- Common Item - Demon's Dagger -->
+					<item id="234" min="1" max="1" chance="6.9442"/> <!-- Demon's Dagger -->
 					<item id="4119" min="1" max="1" chance="93.0558"/> <!-- Demon's Dagger Edge -->
 				</group>
 				<group chance="12.085399627685547">
@@ -3348,7 +3348,7 @@
 					<item id="57" min="742" max="1509" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.5715000033378601">
-					<item id="11425" min="1" max="1" chance="6.7053"/> <!-- Sealed Dark Crystal Shield -->
+					<item id="5292" min="1" max="1" chance="6.7053"/> <!-- Sealed Dark Crystal Shield -->
 					<item id="5494" min="1" max="1" chance="33.9386"/> <!-- Sealed Dark Crystal Shield Fragment -->
 					<item id="5289" min="1" max="1" chance="4.6976"/> <!-- Sealed Dark Crystal Helmet -->
 					<item id="5525" min="1" max="1" chance="24.9804"/> <!-- Sealed Dark Crystal Helmet Design -->
@@ -3437,11 +3437,11 @@
 					<item id="57" min="1195" max="2431" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.4787999987602234">
-					<item id="11432" min="1" max="1" chance="4.5113"/> <!-- Sealed Tallum Tunic -->
+					<item id="5304" min="1" max="1" chance="4.5113"/> <!-- Sealed Tallum Tunic -->
 					<item id="5485" min="1" max="1" chance="26.1184"/> <!-- Sealed Tallum Tunic Texture -->
-					<item id="11423" min="1" max="1" chance="2.7732"/> <!-- Sealed Dark Crystal Robe -->
+					<item id="5308" min="1" max="1" chance="2.7732"/> <!-- Sealed Dark Crystal Robe -->
 					<item id="5486" min="1" max="1" chance="18.3787"/> <!-- Sealed Dark Crystal Robe Fabric -->
-					<item id="11435" min="1" max="1" chance="7.2233"/> <!-- Sealed Tallum Stockings -->
+					<item id="5305" min="1" max="1" chance="7.2233"/> <!-- Sealed Tallum Stockings -->
 					<item id="5489" min="1" max="1" chance="40.9951"/> <!-- Sealed Tallum Stockings Fabric -->
 				</group>
 				<group chance="14.35990047454834">
@@ -3526,7 +3526,7 @@
 					<item id="57" min="652" max="1319" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.11379999667406082">
-					<item id="1303" min="1" max="1" chance="6.9659"/> <!-- Lance -->
+					<item id="97" min="1" max="1" chance="6.9659"/> <!-- Lance -->
 					<item id="4115" min="1" max="1" chance="93.0341"/> <!-- Lance Blade -->
 				</group>
 				<group chance="17.59709930419922">
@@ -3797,13 +3797,13 @@
 					<item id="57" min="868" max="1764" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.9010999798774719">
-					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+					<item id="5291" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+					<item id="5296" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
-					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5290" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+					<item id="5295" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
 				</group>
 				<group chance="20.506000518798828">
@@ -3996,11 +3996,11 @@
 					<item id="57" min="4242" max="8646" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.7029999494552612">
-					<item id="11422" min="1" max="1" chance="4.5113"/> <!-- Sealed Dark Crystal Leather Armor -->
+					<item id="5297" min="1" max="1" chance="4.5113"/> <!-- Sealed Dark Crystal Leather Armor -->
 					<item id="5478" min="1" max="1" chance="26.1184"/> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="11430" min="1" max="1" chance="2.7732"/> <!-- Sealed Tallum Leather Armor -->
+					<item id="5301" min="1" max="1" chance="2.7732"/> <!-- Sealed Tallum Leather Armor -->
 					<item id="5479" min="1" max="1" chance="18.3787"/> <!-- Sealed Tallum Leather Armor Pattern -->
-					<item id="11428" min="1" max="1" chance="7.2233"/> <!-- Sealed Dark Crystal Leggings -->
+					<item id="5298" min="1" max="1" chance="7.2233"/> <!-- Sealed Dark Crystal Leggings -->
 					<item id="5482" min="1" max="1" chance="40.9951"/> <!-- Sealed Dark Crystal Leggings Design -->
 				</group>
 				<group chance="35.66299819946289">
@@ -4155,13 +4155,13 @@
 					<item id="57" min="3864" max="7887" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="4.021599769592285">
-					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+					<item id="5291" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+					<item id="5296" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
-					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5290" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+					<item id="5295" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
 				</group>
 				<group chance="43.25669860839844">
@@ -4239,9 +4239,9 @@
 					<item id="57" min="5111" max="10430" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="3.7527999877929688">
-					<item id="11468" min="1" max="1" chance="3.469"/> <!-- Sealed Boots of Nightmare -->
+					<item id="5314" min="1" max="1" chance="3.469"/> <!-- Sealed Boots of Nightmare -->
 					<item id="5502" min="1" max="1" chance="21.531"/> <!-- Sealed Boots of Nightmare Lining -->
-					<item id="11461" min="1" max="1" chance="3.469"/> <!-- Sealed Majestic Boots -->
+					<item id="5319" min="1" max="1" chance="3.469"/> <!-- Sealed Majestic Boots -->
 					<item id="5503" min="1" max="1" chance="21.531"/> <!-- Sealed Majestic Boots Lining -->
 					<item id="11465" min="1" max="1" chance="3.469"/> <!-- Sealed Gauntlet of Nightmare -->
 					<item id="5514" min="1" max="1" chance="21.531"/> <!-- Sealed Gauntlets of Nightmare Design -->
@@ -4326,13 +4326,13 @@
 					<item id="57" min="3100" max="6312" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="3.2223000526428223">
-					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+					<item id="5291" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+					<item id="5296" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
-					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5290" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+					<item id="5295" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
 				</group>
 				<group chance="4.803999900817871">
@@ -4409,7 +4409,7 @@
 					<item id="57" min="3285" max="6703" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="2.5360000133514404">
-					<item id="11425" min="1" max="1" chance="6.7053"/> <!-- Sealed Dark Crystal Shield -->
+					<item id="5292" min="1" max="1" chance="6.7053"/> <!-- Sealed Dark Crystal Shield -->
 					<item id="5494" min="1" max="1" chance="33.9386"/> <!-- Sealed Dark Crystal Shield Fragment -->
 					<item id="5289" min="1" max="1" chance="4.6976"/> <!-- Sealed Dark Crystal Helmet -->
 					<item id="5525" min="1" max="1" chance="24.9804"/> <!-- Sealed Dark Crystal Helmet Design -->
@@ -4492,13 +4492,13 @@
 					<item id="57" min="3405" max="6948" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="3.5436999797821045">
-					<item id="11424" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
+					<item id="5291" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
-					<item id="11431" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
+					<item id="5296" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
-					<item id="11421" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
+					<item id="5290" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
-					<item id="11429" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
+					<item id="5295" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
 				</group>
 				<group chance="4.078499794006348">

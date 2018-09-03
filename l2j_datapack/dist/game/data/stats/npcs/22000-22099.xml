@@ -8207,9 +8207,9 @@
 					<item id="57" min="787" max="1603" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.7692999839782715">
-					<item id="11364" min="1" max="1" chance="2.29"/> <!-- Zubei's Breastplate -->
+                    <item id="357" min="1" max="1" chance="2.29"/> <!-- Zubei's Breastplate -->
 					<item id="4056" min="1" max="1" chance="17.3042"/> <!-- Zubei's Breastplate Part -->
-					<item id="11355" min="1" max="1" chance="3.663"/> <!-- Zubei's Gaiters -->
+                    <item id="383" min="1" max="1" chance="3.663"/> <!-- Zubei's Gaiters -->
 					<item id="4057" min="1" max="1" chance="26.7428"/> <!-- Zubei's Gaiter Material -->
 					<item id="2376" min="1" max="1" chance="2.29"/> <!-- Avadon Breastplate -->
 					<item id="4064" min="1" max="1" chance="17.3042"/> <!-- Avadon Breastplate Part -->
