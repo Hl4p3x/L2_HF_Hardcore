@@ -79,5 +79,5 @@ with open('common_to_normal_map.txt', 'w') as result_file:
     result_file.write(';'.join(results))
 
 with open('replace_pseudo_mw.sql', 'w') as sql_result_file:
-    for psedo_mw_id, normal_id in pseudo_masterwork_items.items():
+    for psedo_mw_id, normal_id in all_map.items():
         sql_result_file.write("UPDATE items SET item_id=" + normal_id + " WHERE item_id=" + psedo_mw_id + ";\n")
