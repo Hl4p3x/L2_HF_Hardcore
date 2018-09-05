@@ -155,7 +155,7 @@ public final class NewCrypt
 	 * @param size Length of the data to be encrypted
 	 * @param key The 4 bytes (int) XOR key
 	 */
-	static void encXORPass(byte[] raw, final int offset, final int size, int key)
+	public static void encXORPass(byte[] raw, final int offset, final int size, int key)
 	{
 		int stop = size - 8;
 		int pos = 4 + offset;
@@ -178,13 +178,34 @@ public final class NewCrypt
 			raw[pos++] = (byte) ((edx >> 16) & 0xFF);
 			raw[pos++] = (byte) ((edx >> 24) & 0xFF);
 		}
-		
+
 		raw[pos++] = (byte) (ecx & 0xFF);
 		raw[pos++] = (byte) ((ecx >> 8) & 0xFF);
 		raw[pos++] = (byte) ((ecx >> 16) & 0xFF);
 		raw[pos++] = (byte) ((ecx >> 24) & 0xFF);
 	}
-	
+
+	public static void decXORPass(byte[] raw, final int offset, final int size, int key) {
+		int ecx = key;
+		int edx;
+		int pos = size - offset - 4;
+		while (pos > 2) {
+			edx = (raw[pos] & 0xFF);
+			edx |= (raw[pos + 1] & 0xFF) << 8;
+			edx |= (raw[pos + 2] & 0xFF) << 16;
+			edx |= (raw[pos + 3] & 0xFF) << 24;
+
+			edx ^= ecx;
+			ecx -= edx;
+
+			raw[pos] = (byte) (edx & 0xFF);
+			raw[pos + 1] = (byte) ((edx >> 8) & 0xFF);
+			raw[pos + 2] = (byte) ((edx >> 16) & 0xFF);
+			raw[pos + 3] = (byte) ((edx >> 24) & 0xFF);
+			pos -= 4;
+		}
+	}
+
 	/**
 	 * Method to decrypt using Blowfish-Blockcipher in ECB mode.<br>
 	 * The results will be directly placed inside {@code raw} array.<br>

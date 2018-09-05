@@ -18,21 +18,17 @@
  */
 package com.l2jserver.loginserver;
 
+import com.l2jserver.loginserver.network.L2LoginClient;
+import com.l2jserver.loginserver.network.serverpackets.Init;
+import com.l2jserver.mmocore.*;
+import com.l2jserver.util.IPv4Filter;
+
 import java.net.UnknownHostException;
 import java.nio.channels.SocketChannel;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
-
-import com.l2jserver.loginserver.network.L2LoginClient;
-import com.l2jserver.loginserver.network.serverpackets.Init;
-import com.l2jserver.mmocore.IAcceptFilter;
-import com.l2jserver.mmocore.IClientFactory;
-import com.l2jserver.mmocore.IMMOExecutor;
-import com.l2jserver.mmocore.MMOConnection;
-import com.l2jserver.mmocore.ReceivablePacket;
-import com.l2jserver.util.IPv4Filter;
 
 /**
  * @author KenM
@@ -45,7 +41,7 @@ public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFacto
 	
 	public SelectorHelper()
 	{
-		_generalPacketsThreadPool = new ThreadPoolExecutor(4, 6, 15L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
+		_generalPacketsThreadPool = new ThreadPoolExecutor(4, 6, 15L, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
 		_ipv4filter = new IPv4Filter();
 	}
 	
