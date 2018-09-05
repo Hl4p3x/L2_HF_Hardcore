@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.drops.DropListScope;
 import com.l2jserver.gameserver.model.drops.GeneralDropItem;
 import com.l2jserver.gameserver.model.drops.GroupedGeneralDropItem;
@@ -195,8 +194,8 @@ public class NpcViewMod implements IBypassHandler
 			stringBuilder.append("<tr>");
 			String attackerName = aggro.getAttacker().getName();
 			if (attackerName == null) {
-				if (aggro.getAttacker() instanceof L2PetInstance) {
-					L2PetInstance attackerPet = (L2PetInstance) aggro.getAttacker();
+                if (aggro.getAttacker() instanceof L2Summon) {
+                    L2Summon attackerPet = (L2Summon) aggro.getAttacker();
                     attackerName = attackerPet.getTemplate().getName();
 				} else {
 					attackerName = "Unknown";
@@ -204,7 +203,7 @@ public class NpcViewMod implements IBypassHandler
 			}
 
 			if (aggro.getAttacker() instanceof L2Summon) {
-                L2PetInstance attackerPet = (L2PetInstance) aggro.getAttacker();
+                L2Summon attackerPet = (L2Summon) aggro.getAttacker();
                 attackerName += " (" + attackerPet.getOwner().getName() + ")";
             }
 

@@ -1560,6 +1560,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			case PARTY:
 			case CLAN:
 			case PARTY_CLAN:
+			case CORPSE_CLAN:
 			case COMMAND_CHANNEL:
 				doit = true;
 			default:

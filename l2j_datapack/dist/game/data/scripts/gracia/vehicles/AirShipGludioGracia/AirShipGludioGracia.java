@@ -170,6 +170,14 @@ public final class AirShipGludioGracia extends Quest implements Runnable
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
+		if (event.equals("teleport_gludio")) {
+			player.teleToLocation(OUST_GLUDIO);
+			return null;
+		} else if (event.equals("teleport_gracia")) {
+			player.teleToLocation(OUST_GRACIA);
+			return null;
+		}
+
 		if (player.isTransformed())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_TRANSFORMED);
@@ -252,7 +260,7 @@ public final class AirShipGludioGracia extends Quest implements Runnable
 					_ship.executePath(GLUDIO_TO_WARPGATE);
 					break;
 				case 1:
-					// _ship.teleToLocation(-167874, 256731, -509, 41035, false);
+					_ship.teleToLocation(-167874, 256731, -509, 41035, false);
 					_ship.setOustLoc(OUST_GRACIA);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
 					break;
@@ -271,7 +279,7 @@ public final class AirShipGludioGracia extends Quest implements Runnable
 					_ship.executePath(GRACIA_TO_WARPGATE);
 					break;
 				case 5:
-					// _ship.teleToLocation(-157261, 255664, 221, 64781, false);
+					_ship.teleToLocation(-157261, 255664, 221, 64781, false);
 					_ship.setOustLoc(OUST_GLUDIO);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
 					break;

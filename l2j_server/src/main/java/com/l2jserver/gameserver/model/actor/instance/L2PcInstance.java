@@ -709,6 +709,7 @@ public final class L2PcInstance extends L2Playable {
                 final long masks = player.getVariables().getLong(COND_OVERRIDE_KEY, PcCondOverride.getAllExceptionsMask());
                 player.setOverrideCond(masks);
             }
+
             return player;
         } catch (Exception e) {
             LOG.error("Failed loading character.", e);
@@ -5739,16 +5740,16 @@ public final class L2PcInstance extends L2Playable {
             return false;
         }
 
-        slot--;
+        int hennaSlotArrayIdx = slot - 1;
 
-        L2Henna henna = _henna[slot];
+        L2Henna henna = _henna[hennaSlotArrayIdx];
         if (henna == null) {
             return false;
         }
 
-        _henna[slot] = null;
+        _henna[hennaSlotArrayIdx] = null;
 
-        DAOFactory.getInstance().getHennaDAO().delete(this, slot + 1);
+        DAOFactory.getInstance().getHennaDAO().delete(this, slot);
 
         // Calculate Henna modifiers of this L2PcInstance
         recalcHennaStats();
@@ -5798,7 +5799,7 @@ public final class L2PcInstance extends L2Playable {
                 sendPacket(new ExBrExtraUserInfo(this));
 
                 // Notify to scripts
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaRemove(this, henna), this);
+                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaAdd(this, henna), this);
                 return true;
             }
         }
@@ -6184,6 +6185,7 @@ public final class L2PcInstance extends L2Playable {
             case PARTY:
             case CLAN:
             case PARTY_CLAN:
+            case CORPSE_CLAN:
             case GROUND:
             case SELF:
             case AREA_SUMMON:
@@ -6324,6 +6326,7 @@ public final class L2PcInstance extends L2Playable {
                     case BEHIND_AURA:
                     case AURA_CORPSE_MOB:
                     case CLAN:
+                    case CORPSE_CLAN:
                     case PARTY:
                     case SELF:
                     case GROUND:
@@ -6369,6 +6372,7 @@ public final class L2PcInstance extends L2Playable {
         switch (sklTargetType) {
             case PARTY:
             case CLAN: // For such skills, checkPvpSkill() is called from L2Skill.getTargetList()
+            case CORPSE_CLAN:
             case PARTY_CLAN: // For such skills, checkPvpSkill() is called from L2Skill.getTargetList()
             case AURA:
             case FRONT_AURA:
@@ -7332,6 +7336,10 @@ public final class L2PcInstance extends L2Playable {
         }
 
         try {
+            if (isMounted() || isFlyingMounted()) {
+                return false;
+            }
+
             if ((getTotalSubClasses() == Config.MAX_SUBCLASS) || (classIndex == 0)) {
                 return false;
             }
@@ -7390,6 +7398,10 @@ public final class L2PcInstance extends L2Playable {
         }
 
         try {
+            if (isMounted() || isFlyingMounted()) {
+                return false;
+            }
+
             DAOFactory.getInstance().getHennaDAO().deleteAll(this, classIndex);
 
             DAOFactory.getInstance().getSkillDAO().deleteAll(this, classIndex);
@@ -7481,6 +7493,11 @@ public final class L2PcInstance extends L2Playable {
         }
 
         try {
+            if (isMounted() || isFlyingMounted()) {
+                sendPacket(SystemMessageId.ACTION_PROHIBITED_WHILE_MOUNTED_OR_ON_AN_AIRSHIP);
+                return false;
+            }
+
             // Cannot switch or change subclasses while transformed
             if (_transformation != null) {
                 return false;
@@ -10828,6 +10845,7 @@ public final class L2PcInstance extends L2Playable {
 
     public void setHenna(L2Henna[] henna) {
         _henna = henna;
+        recalcHennaStats();
     }
 
     public long getOnlineBeginTime() {

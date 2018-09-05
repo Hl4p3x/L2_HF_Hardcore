@@ -18,18 +18,17 @@
  */
 package com.l2jserver.gameserver.dao.impl.mysql;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.dao.HennaDAO;
 import com.l2jserver.gameserver.data.xml.impl.HennaData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.L2Henna;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  * Henna DAO MySQL implementation.
@@ -104,7 +103,7 @@ public class HennaDAOMySQLImpl implements HennaDAO
 			PreparedStatement ps = con.prepareStatement(DELETE_ONE))
 		{
 			ps.setInt(1, player.getObjectId());
-			ps.setInt(2, slot + 1);
+			ps.setInt(2, slot);
 			ps.setInt(3, player.getClassIndex());
 			ps.execute();
 		}

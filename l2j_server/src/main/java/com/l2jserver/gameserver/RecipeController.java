@@ -18,22 +18,12 @@
  */
 package com.l2jserver.gameserver;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.StatType;
-import com.l2jserver.gameserver.model.L2ManufactureItem;
-import com.l2jserver.gameserver.model.L2RecipeInstance;
-import com.l2jserver.gameserver.model.L2RecipeList;
-import com.l2jserver.gameserver.model.L2RecipeStatInstance;
-import com.l2jserver.gameserver.model.TempItem;
+import com.l2jserver.gameserver.model.*;
+import com.l2jserver.gameserver.model.actor.RandomEnchantmentHelper;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.L2Item;
@@ -42,17 +32,16 @@ import com.l2jserver.gameserver.model.skills.CommonSkill;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.ItemList;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.RecipeBookItemList;
-import com.l2jserver.gameserver.network.serverpackets.RecipeItemMakeInfo;
-import com.l2jserver.gameserver.network.serverpackets.RecipeShopItemInfo;
-import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Logger;
 
 public class RecipeController
 {
@@ -678,11 +667,12 @@ public class RecipeController
 					itemCount = _recipeList.getRareCount();
 				}
 			}
-			
-			_target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
-			
+
+            L2ItemInstance craftedItem = _target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
+            RandomEnchantmentHelper.applyRandomDropEnchant(craftedItem);
+
 			// inform customer of earned item
-			SystemMessage sm = null;
+            SystemMessage sm;
 			if (_target != _player)
 			{
 				// inform manufacturer of earned profit

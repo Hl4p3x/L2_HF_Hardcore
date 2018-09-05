@@ -4293,9 +4293,13 @@
 					<item id="57" min="1771" max="3615" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.8072999715805054">
+                    <item id="5290" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Gloves -->
 					<item id="5508" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Gloves Design -->
+                    <item id="5291" min="1" max="1" chance="3.9179"/> <!-- Sealed Dark Crystal Boots -->
 					<item id="5496" min="1" max="1" chance="21.0821"/> <!-- Sealed Dark Crystal Boots Lining -->
+                    <item id="5295" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Gloves -->
 					<item id="5509" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Gloves Design -->
+                    <item id="5296" min="1" max="1" chance="3.9179"/> <!-- Sealed Tallum Boots -->
 					<item id="5497" min="1" max="1" chance="21.0821"/> <!-- Sealed Tallum Boots Lining -->
 				</group>
 				<group chance="34.50590133666992">
@@ -4382,8 +4386,11 @@
 					<item id="57" min="1821" max="3717" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.2012999951839447">
+					<item id="81" min="1" max="1" chance="1.9679"/> <!-- Dragon Slayer -->
 					<item id="5529" min="1" max="1" chance="30.3693"/> <!-- Dragon Slayer Edge -->
+					<item id="151" min="1" max="1" chance="1.9679"/> <!-- Sword of Miracles -->
 					<item id="5546" min="1" max="1" chance="33.3577"/> <!-- Sword of Miracles Edge -->
+					<item id="2500" min="1" max="1" chance="1.9679"/> <!-- Dark Legion's Edge -->
 					<item id="5545" min="1" max="1" chance="30.3693"/> <!-- Dark Legion's Edge Blade -->
 				</group>
 				<group chance="2.640500068664551">
@@ -4463,9 +4470,13 @@
 					<item id="57" min="1988" max="4059" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.21320000290870667">
+					<item id="164" min="1" max="1" chance="1.5221"/> <!-- Elysian -->
 					<item id="5533" min="1" max="1" chance="23.4849"/> <!-- Elysian Head -->
+					<item id="213" min="1" max="1" chance="1.5221"/> <!-- Branch of the Mother Tree -->
 					<item id="5544" min="1" max="1" chance="23.4617"/> <!-- Branch of the Mother Tree Head -->
+					<item id="7895" min="1" max="1" chance="1.5221"/> <!-- Flaming Dragon Skull -->
 					<item id="8342" min="1" max="1" chance="23.4849"/> <!-- Flaming Dragon Skull Piece -->
+					<item id="7902" min="1" max="1" chance="1.5221"/> <!-- Doom Crusher -->
 					<item id="8349" min="1" max="1" chance="23.4801"/> <!-- Doom Crusher Head -->
 				</group>
 				<group chance="43.22959899902344">
@@ -4549,7 +4560,9 @@
 					<item id="57" min="1647" max="3363" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.2312999963760376">
+                    <item id="5311" min="1" max="1" chance="5.4811"/> <!-- Sealed Armor of Nightmare -->
 					<item id="5522" min="1" max="1" chance="44.5189"/> <!-- Sealed Armor of Nightmare Pattern -->
+                    <item id="5316" min="1" max="1" chance="5.4811"/> <!-- Sealed Majestic Plate Armor -->
 					<item id="5523" min="1" max="1" chance="44.5189"/> <!-- Sealed Majestic Plate Armor Pattern -->
 				</group>
 				<group chance="2.0852999687194824">
@@ -4627,6 +4640,7 @@
 					<item id="57" min="1696" max="3473" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.18240000307559967">
+					<item id="289" min="1" max="1" chance="6.0817"/> <!-- Soul Bow -->
 					<item id="5534" min="1" max="1" chance="93.9183"/> <!-- Soul Bow Stave -->
 				</group>
 				<group chance="2.151400089263916">
@@ -4703,9 +4717,13 @@
 					<item id="57" min="1717" max="3516" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.18440000712871552">
+					<item id="164" min="1" max="1" chance="1.5221"/> <!-- Elysian -->
 					<item id="5533" min="1" max="1" chance="23.4849"/> <!-- Elysian Head -->
+					<item id="213" min="1" max="1" chance="1.5221"/> <!-- Branch of the Mother Tree -->
 					<item id="5544" min="1" max="1" chance="23.4617"/> <!-- Branch of the Mother Tree Head -->
+					<item id="7895" min="1" max="1" chance="1.5221"/> <!-- Flaming Dragon Skull -->
 					<item id="8342" min="1" max="1" chance="23.4849"/> <!-- Flaming Dragon Skull Piece -->
+					<item id="7902" min="1" max="1" chance="1.5221"/> <!-- Doom Crusher -->
 					<item id="8349" min="1" max="1" chance="23.4801"/> <!-- Doom Crusher Head -->
 				</group>
 				<group chance="4.246200084686279">
@@ -4789,6 +4807,7 @@
 					<item id="57" min="1978" max="4052" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.2125999927520752">
+					<item id="270" min="1" max="1" chance="6.0867"/> <!-- Dragon Grinder -->
 					<item id="5538" min="1" max="1" chance="93.9133"/> <!-- Dragon Grinder Edge -->
 				</group>
 				<group chance="4.892899990081787">
@@ -4874,6 +4893,7 @@
 					<item id="57" min="1759" max="3602" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.1890999972820282">
+					<item id="289" min="1" max="1" chance="6.0817"/> <!-- Soul Bow -->
 					<item id="5534" min="1" max="1" chance="93.9183"/> <!-- Soul Bow Stave -->
 				</group>
 				<group chance="48.211299896240234">
@@ -4956,6 +4976,7 @@
 					<item id="57" min="1778" max="3566" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.21860000491142273">
+					<item id="236" min="1" max="1" chance="6.0856"/> <!-- Soul Separator -->
 					<item id="5537" min="1" max="1" chance="93.9144"/> <!-- Soul Separator Head -->
 				</group>
 				<group chance="5.029600143432617">
@@ -5041,6 +5062,7 @@
 					<item id="57" min="1584" max="3176" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.19470000267028809">
+					<item id="236" min="1" max="1" chance="6.0856"/> <!-- Soul Separator -->
 					<item id="5537" min="1" max="1" chance="93.9144"/> <!-- Soul Separator Head -->
 				</group>
 				<group chance="30.048799514770508">
@@ -5119,6 +5141,7 @@
 					<item id="57" min="24706" max="49558" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="3.036799907684326">
+					<item id="305" min="1" max="1" chance="6.0879"/> <!-- Tallum Glaive -->
 					<item id="5541" min="1" max="1" chance="93.9121"/> <!-- Tallum Glaive Edge -->
 				</group>
 				<group chance="33.59640121459961">
@@ -5196,7 +5219,9 @@
 					<item id="57" min="1377" max="2821" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.2556000053882599">
+                    <item id="5320" min="1" max="1" chance="5.5358"/> <!-- Sealed Leather Armor of Nightmare -->
 					<item id="5480" min="1" max="1" chance="44.4642"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
+                    <item id="5323" min="1" max="1" chance="5.5358"/> <!-- Sealed Majestic Leather Armor -->
 					<item id="5481" min="1" max="1" chance="44.4642"/> <!-- Sealed Majestic Leather Armor Fabric -->
 				</group>
 				<group chance="40.032798767089844">
@@ -5277,7 +5302,9 @@
 					<item id="57" min="1391" max="2849" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.195700004696846">
+                    <item id="5311" min="1" max="1" chance="5.4811"/> <!-- Sealed Armor of Nightmare -->
 					<item id="5522" min="1" max="1" chance="44.5189"/> <!-- Sealed Armor of Nightmare Pattern -->
+                    <item id="5316" min="1" max="1" chance="5.4811"/> <!-- Sealed Majestic Plate Armor -->
 					<item id="5523" min="1" max="1" chance="44.5189"/> <!-- Sealed Majestic Plate Armor Pattern -->
 				</group>
 				<group chance="42.16510009765625">
@@ -5357,7 +5384,9 @@
 					<item id="57" min="1537" max="3147" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.28610000014305115">
+                    <item id="5326" min="1" max="1" chance="5.5184"/> <!-- Sealed Robe of Nightmare -->
 					<item id="5487" min="1" max="1" chance="44.4816"/> <!-- Sealed Robe of Nightmare Fabric -->
+                    <item id="5329" min="1" max="1" chance="5.5184"/> <!-- Sealed Majestic Robe -->
 					<item id="5488" min="1" max="1" chance="44.4816"/> <!-- Sealed Majestic Robe Fabric -->
 				</group>
 				<group chance="36.43199920654297">
@@ -5442,8 +5471,11 @@
 					<item id="57" min="1537" max="3147" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.4672000408172607">
+					<item id="6326" min="1" max="1" chance="2.3717"/> <!-- Sealed Majestic Necklace -->
 					<item id="6344" min="1" max="1" chance="18.8265"/> <!-- Sealed Majestic Necklace Beads -->
+					<item id="6327" min="1" max="1" chance="3.1593"/> <!-- Sealed Majestic Earring -->
 					<item id="6342" min="1" max="1" chance="29.0917"/> <!-- Sealed Majestic Earring Gemstone -->
+					<item id="6328" min="1" max="1" chance="4.7389"/> <!-- Sealed Majestic Ring -->
 					<item id="6346" min="1" max="1" chance="41.8119"/> <!-- Sealed Majestic Ring Gemstone -->
 				</group>
 				<group chance="6.165800094604492">

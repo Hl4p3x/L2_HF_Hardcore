@@ -7582,8 +7582,11 @@
 					<item id="57" min="625" max="1276" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.6844000220298767">
+					<item id="2397" min="1" max="1" chance="3.6406"/> <!-- Tunic of Zubei -->
 					<item id="4069" min="1" max="1" chance="26.8656"/> <!-- Tunic of Zubei Fabric -->
+					<item id="2402" min="1" max="1" chance="5.8287"/> <!-- Stockings of Zubei -->
 					<item id="4070" min="1" max="1" chance="40.7913"/> <!-- Stockings of Zubei Fabric -->
+					<item id="2406" min="1" max="1" chance="2.2343"/> <!-- Avadon Robe -->
 					<item id="4071" min="1" max="1" chance="20.6395"/> <!-- Avadon Robe Fabric -->
 				</group>
 				<group chance="8.294599533081055">
@@ -7759,8 +7762,11 @@
 					<item id="57" min="641" max="1309" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.7019000053405762">
+					<item id="2384" min="1" max="1" chance="3.6406"/> <!-- Zubei's Leather Shirt -->
 					<item id="4066" min="1" max="1" chance="26.8656"/> <!-- Zubei's Leather Shirt Fabric -->
+					<item id="2388" min="1" max="1" chance="5.8287"/> <!-- Zubei's Leather Gaiters -->
 					<item id="4067" min="1" max="1" chance="40.7913"/> <!-- Zubei's Leather Gaiter Texture -->
+					<item id="2390" min="1" max="1" chance="2.2343"/> <!-- Avadon Leather Armor -->
 					<item id="4068" min="1" max="1" chance="20.6395"/> <!-- Avadon Leather Armor Lining -->
 				</group>
 				<group chance="9.447999954223633">
@@ -7846,7 +7852,9 @@
 					<item id="57" min="1029" max="2101" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.23899999260902405">
+					<item id="229" min="1" max="1" chance="4.6104"/> <!-- Kris -->
 					<item id="4109" min="1" max="1" chance="45.3896"/> <!-- Kris Edge -->
+					<item id="243" min="1" max="1" chance="4.6104"/> <!-- Hell Knife -->
 					<item id="4110" min="1" max="1" chance="45.3896"/> <!-- Hell Knife Edge -->
 				</group>
 				<group chance="42.677398681640625">
@@ -7930,8 +7938,11 @@
 					<item id="57" min="626" max="1278" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.1460999995470047">
+					<item id="78" min="1" max="1" chance="3.059"/> <!-- Great Sword -->
 					<item id="4104" min="1" max="1" chance="30.5903"/> <!-- Great Sword Blade -->
+					<item id="142" min="1" max="1" chance="3.059"/> <!-- Keshanberk -->
 					<item id="4107" min="1" max="1" chance="30.1163"/> <!-- Keshanberk Blade -->
+					<item id="148" min="1" max="1" chance="3.059"/> <!-- Sword of Valhalla -->
 					<item id="4108" min="1" max="1" chance="30.1164"/> <!-- Sword of Valhalla Blade -->
 				</group>
 				<group chance="25.966999053955078">
@@ -8014,9 +8025,13 @@
 					<item id="57" min="719" max="1469" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.16500000655651093">
+					<item id="91" min="1" max="1" chance="2.3349"/> <!-- Heavy War Axe -->
 					<item id="4105" min="1" max="1" chance="23.3491"/> <!-- Heavy War Axe Head -->
+					<item id="92" min="1" max="1" chance="2.3349"/> <!-- Sprite's Staff -->
 					<item id="4106" min="1" max="1" chance="22.966"/> <!-- Sprite's Staff Head -->
+					<item id="7892" min="1" max="1" chance="2.3349"/> <!-- Spell Breaker -->
 					<item id="8339" min="1" max="1" chance="23.3491"/> <!-- Spell Breaker Head -->
+					<item id="7900" min="1" max="1" chance="2.3349"/> <!-- Ice Storm Hammer -->
 					<item id="8347" min="1" max="1" chance="20.9962"/> <!-- Ice Storm Hammer Head -->
 				</group>
 				<group chance="15.775199890136719">
@@ -8098,9 +8113,13 @@
 					<item id="57" min="747" max="1521" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.17110000550746918">
+					<item id="91" min="1" max="1" chance="2.3349"/> <!-- Heavy War Axe -->
 					<item id="4105" min="1" max="1" chance="23.3491"/> <!-- Heavy War Axe Head -->
+					<item id="92" min="1" max="1" chance="2.3349"/> <!-- Sprite's Staff -->
 					<item id="4106" min="1" max="1" chance="22.966"/> <!-- Sprite's Staff Head -->
+					<item id="7892" min="1" max="1" chance="2.3349"/> <!-- Spell Breaker -->
 					<item id="8339" min="1" max="1" chance="23.3491"/> <!-- Spell Breaker Head -->
+					<item id="7900" min="1" max="1" chance="2.3349"/> <!-- Ice Storm Hammer -->
 					<item id="8347" min="1" max="1" chance="20.9962"/> <!-- Ice Storm Hammer Head -->
 				</group>
 				<group chance="16.359899520874023">
@@ -8188,9 +8207,13 @@
 					<item id="57" min="787" max="1603" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.7692999839782715">
+                    <item id="357" min="1" max="1" chance="2.29"/> <!-- Zubei's Breastplate -->
 					<item id="4056" min="1" max="1" chance="17.3042"/> <!-- Zubei's Breastplate Part -->
+                    <item id="383" min="1" max="1" chance="3.663"/> <!-- Zubei's Gaiters -->
 					<item id="4057" min="1" max="1" chance="26.7428"/> <!-- Zubei's Gaiter Material -->
+					<item id="2376" min="1" max="1" chance="2.29"/> <!-- Avadon Breastplate -->
 					<item id="4064" min="1" max="1" chance="17.3042"/> <!-- Avadon Breastplate Part -->
+					<item id="12172" min="1" max="1" chance="3.663"/> <!-- Common Item - Avadon Plate Gaiters -->
 					<item id="4065" min="1" max="1" chance="26.7428"/> <!-- Avadon Gaiters Material -->
 				</group>
 				<group chance="33.56420135498047">
@@ -8278,8 +8301,11 @@
 					<item id="57" min="816" max="1662" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.19030000269412994">
+					<item id="78" min="1" max="1" chance="3.059"/> <!-- Great Sword -->
 					<item id="4104" min="1" max="1" chance="30.5903"/> <!-- Great Sword Blade -->
+					<item id="142" min="1" max="1" chance="3.059"/> <!-- Keshanberk -->
 					<item id="4107" min="1" max="1" chance="30.1163"/> <!-- Keshanberk Blade -->
+					<item id="148" min="1" max="1" chance="3.059"/> <!-- Sword of Valhalla -->
 					<item id="4108" min="1" max="1" chance="30.1164"/> <!-- Sword of Valhalla Blade -->
 				</group>
 				<group chance="34.81399917602539">
@@ -8364,8 +8390,11 @@
 					<item id="57" min="1193" max="2426" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="1.3035000562667847">
+					<item id="2384" min="1" max="1" chance="3.6406"/> <!-- Zubei's Leather Shirt -->
 					<item id="4066" min="1" max="1" chance="26.8656"/> <!-- Zubei's Leather Shirt Fabric -->
+					<item id="2388" min="1" max="1" chance="5.8287"/> <!-- Zubei's Leather Gaiters -->
 					<item id="4067" min="1" max="1" chance="40.7913"/> <!-- Zubei's Leather Gaiter Texture -->
+					<item id="2390" min="1" max="1" chance="2.2343"/> <!-- Avadon Leather Armor -->
 					<item id="4068" min="1" max="1" chance="20.6395"/> <!-- Avadon Leather Armor Lining -->
 				</group>
 				<group chance="35.302398681640625">
@@ -8449,9 +8478,13 @@
 					<item id="57" min="726" max="1472" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.1657000035047531">
+					<item id="91" min="1" max="1" chance="2.3349"/> <!-- Heavy War Axe -->
 					<item id="4105" min="1" max="1" chance="23.3491"/> <!-- Heavy War Axe Head -->
+					<item id="92" min="1" max="1" chance="2.3349"/> <!-- Sprite's Staff -->
 					<item id="4106" min="1" max="1" chance="22.966"/> <!-- Sprite's Staff Head -->
+					<item id="7892" min="1" max="1" chance="2.3349"/> <!-- Spell Breaker -->
 					<item id="8339" min="1" max="1" chance="23.3491"/> <!-- Spell Breaker Head -->
+					<item id="7900" min="1" max="1" chance="2.3349"/> <!-- Ice Storm Hammer -->
 					<item id="8347" min="1" max="1" chance="20.9962"/> <!-- Ice Storm Hammer Head -->
 				</group>
 				<group chance="15.843799591064453">
@@ -8533,7 +8566,9 @@
 					<item id="57" min="753" max="1526" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.17409999668598175">
+					<item id="229" min="1" max="1" chance="4.6104"/> <!-- Kris -->
 					<item id="4109" min="1" max="1" chance="45.3896"/> <!-- Kris Edge -->
+					<item id="243" min="1" max="1" chance="4.6104"/> <!-- Hell Knife -->
 					<item id="4110" min="1" max="1" chance="45.3896"/> <!-- Hell Knife Edge -->
 				</group>
 				<group chance="17.32900047302246">
@@ -8619,10 +8654,15 @@
 					<item id="57" min="780" max="1580" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.13500000536441803">
+					<item id="171" min="1" max="1" chance="1.4052"/> <!-- Deadman's Glory -->
 					<item id="4116" min="1" max="1" chance="18.7987"/> <!-- Deadman's Glory Stone -->
+					<item id="175" min="1" max="1" chance="1.4052"/> <!-- Art of Battle Axe -->
 					<item id="4117" min="1" max="1" chance="18.7987"/> <!-- Art of Battle Axe Blade -->
+					<item id="210" min="1" max="1" chance="1.4052"/> <!-- Staff of Evil Spirits -->
 					<item id="4118" min="1" max="1" chance="17.8107"/> <!-- Evil Spirit Head -->
+					<item id="7893" min="1" max="1" chance="1.4052"/> <!-- Kaim Vanul's Bones -->
 					<item id="8340" min="1" max="1" chance="18.7987"/> <!-- Bones Head of Kaim Vanul -->
+					<item id="7901" min="1" max="1" chance="1.4052"/> <!-- Star Buster -->
 					<item id="8348" min="1" max="1" chance="18.7672"/> <!-- Star Buster Head -->
 				</group>
 				<group chance="12.032699584960938">
@@ -8705,9 +8745,13 @@
 					<item id="57" min="910" max="1844" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.7703999876976013">
+					<item id="2398" min="1" max="1" chance="1.9518"/> <!-- Blue Wolf Tunic -->
 					<item id="4084" min="1" max="1" chance="19.1146"/> <!-- Blue Wolf Tunic Fabric -->
+					<item id="2399" min="1" max="1" chance="1.9518"/> <!-- Tunic of Doom -->
 					<item id="4085" min="1" max="1" chance="19.1146"/> <!-- Tunic of Doom Pattern -->
+					<item id="2403" min="1" max="1" chance="3.1246"/> <!-- Blue Wolf Stockings -->
 					<item id="4086" min="1" max="1" chance="25.809"/> <!-- Blue Wolf Stockings Pattern -->
+					<item id="2404" min="1" max="1" chance="3.1246"/> <!-- Stockings of Doom -->
 					<item id="4087" min="1" max="1" chance="25.809"/> <!-- Stockings of Doom Pattern -->
 				</group>
 				<group chance="19.30109977722168">
@@ -8792,8 +8836,11 @@
 					<item id="57" min="942" max="1908" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.16500000655651093">
+					<item id="79" min="1" max="1" chance="2.3159"/> <!-- Sword of Damascus -->
 					<item id="4114" min="1" max="1" chance="31.0348"/> <!-- Sword of Damascus Blade -->
+					<item id="7883" min="1" max="1" chance="2.3159"/> <!-- Guardian Sword -->
 					<item id="8330" min="1" max="1" chance="30.9826"/> <!-- Guardian Sword Blade -->
+					<item id="7889" min="1" max="1" chance="2.3159"/> <!-- Wizard's Tear -->
 					<item id="8336" min="1" max="1" chance="31.0349"/> <!-- Blade of the Wizard's Tear -->
 				</group>
 				<group chance="13.291399955749512">

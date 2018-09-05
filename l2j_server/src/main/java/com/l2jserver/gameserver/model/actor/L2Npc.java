@@ -1768,7 +1768,8 @@ public class L2Npc extends L2Character
 			{
 				item.getDropProtection().protect(player);
 			}
-			
+
+			RandomEnchantmentHelper.applyRandomDropEnchant(item);
 			item.dropMe(this, newX, newY, newZ);
 			
 			// Add drop to auto destroy item task.

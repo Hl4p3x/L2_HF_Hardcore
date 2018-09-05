@@ -233,6 +233,7 @@ public final class Config
 	public static int DELETE_DAYS;
 	public static float ALT_GAME_EXPONENT_XP;
 	public static float ALT_GAME_EXPONENT_SP;
+	public static boolean ALT_DISABLE_EXP_PENALTY;
 	public static String PARTY_XP_CUTOFF_METHOD;
 	public static double PARTY_XP_CUTOFF_PERCENT;
 	public static int PARTY_XP_CUTOFF_LEVEL;
@@ -248,12 +249,11 @@ public final class Config
 	public static boolean ALT_DROPPABLE_AUGMENTED_ITEMS;
 	public static boolean ALT_DISABLE_DEATH_PENALTY;
 	public static boolean ALT_AUTO_LEARN_SKILLS_ON_SP;
-	public static int MIN_LVL_DMG_PENALTY;
-	public static Map<Integer, Float> DMG_PENALTY;
-	public static Map<Integer, Float> CRIT_DMG_PENALTY;
-	public static Map<Integer, Float> SKILL_DMG_PENALTY;
-	public static int MIN_LVL_MAGIC_PENALTY;
-	public static Map<Integer, Float> SKILL_CHANCE_PENALTY;
+	public static int DMG_PENALTY_LEVEL_DIFF;
+	public static double DMG_PENALTY;
+	public static int DMG_BENEFIT_LEVEL_DIFF;
+	public static double DMG_BENEFIT;
+	public static double ACCURACY_BENEFIT;
 	
 	// --------------------------------------------------
 	// ClanHall Settings
@@ -504,6 +504,12 @@ public final class Config
 	public static int MIN_MONSTER_ANIMATION;
 	public static int MAX_MONSTER_ANIMATION;
 	public static boolean ENABLE_FALLING_DAMAGE;
+
+	public static boolean ALT_DROP_ENCHANTED;
+	public static double ALT_DROP_ENCHANTED_CHANCE;
+	public static int ALT_DROP_ENCHANTED_MIN;
+	public static int ALT_DROP_ENCHANTED_MAX;
+
 	public static boolean GRIDS_ALWAYS_ON;
 	public static int GRID_NEIGHBOR_TURNON_TIME;
 	public static int GRID_NEIGHBOR_TURNOFF_TIME;
@@ -1777,6 +1783,7 @@ public final class Config
 			MAX_PETITIONS_PER_PLAYER = character.getInt("MaxPetitionsPerPlayer", 5);
 			MAX_PETITIONS_PENDING = character.getInt("MaxPetitionsPending", 25);
 			ALT_GAME_FREE_TELEPORT = character.getBoolean("AltFreeTeleporting", false);
+			ALT_DISABLE_EXP_PENALTY = character.getBoolean("AltDisableExpPenalty", true);
 			DELETE_DAYS = character.getInt("DeleteCharAfterDays", 7);
 			ALT_GAME_EXPONENT_XP = character.getFloat("AltGameExponentXp", 0);
 			ALT_GAME_EXPONENT_SP = character.getFloat("AltGameExponentSp", 0);
@@ -1811,12 +1818,11 @@ public final class Config
 			PLAYER_MOVEMENT_BLOCK_TIME = character.getInt("NpcTalkBlockingTime", 0) * 1000;
 			ALT_AUTO_LEARN_SKILLS_ON_SP = character.getBoolean("AltAutoLearnSkillsOnSp", false);
 
-			MIN_LVL_DMG_PENALTY = character.getInt("MinLevelForDmgPenalty", 78);
-			DMG_PENALTY = parseConfigLine(character.getString("DmgPenaltyForLvLDifferences", "0.7, 0.6, 0.6, 0.55"));
-			CRIT_DMG_PENALTY = parseConfigLine(character.getString("CritDmgPenaltyForLvLDifferences", "0.75, 0.65, 0.6, 0.58"));
-			SKILL_DMG_PENALTY = parseConfigLine(character.getString("SkillDmgPenaltyForLvLDifferences", "0.8, 0.7, 0.65, 0.62"));
-			MIN_LVL_MAGIC_PENALTY = character.getInt("MinLevelForMagicPenalty", 78);
-			SKILL_CHANCE_PENALTY = parseConfigLine(character.getString("SkillChancePenaltyForLvLDifferences", "2.5, 3.0, 3.25, 3.5"));
+			DMG_PENALTY_LEVEL_DIFF = character.getInt("AltLevelDiffForDmgPenalty", 6);
+			DMG_PENALTY = character.getDouble("DmgPenaltyForLvLDifferencesMultiplier", 1D);
+			DMG_BENEFIT_LEVEL_DIFF = character.getInt("AltLevelDiffForDmgBenefit", 6);
+			DMG_BENEFIT = character.getDouble("AltDmgBenefitForLvLDifferencesMultiplier", 1.1);
+			ACCURACY_BENEFIT = character.getDouble("AltAccuracyBenefitForLvLDifferencesMultiplier", 1);
 
 			// Load Telnet L2Properties file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);
@@ -2085,6 +2091,11 @@ public final class Config
 			BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000;
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
 			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
+
+			ALT_DROP_ENCHANTED = General.getBoolean("AltDropEnchanted", true);
+			ALT_DROP_ENCHANTED_CHANCE = General.getDouble("AltDropEnchantedChance", 35);
+			ALT_DROP_ENCHANTED_MIN = General.getInt("AltDropEnchantedMin", 1);
+			ALT_DROP_ENCHANTED_MAX = General.getInt("AltDropEnchantedMax", 5);
 
 			// Load FloodProtector L2Properties file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_FILE);
