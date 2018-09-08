@@ -136,9 +136,13 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 		}
 		clientStopMoving(null);
 		summon.setFollowStatus(false);
-		setIntention(AI_INTENTION_IDLE);
 		_startFollow = val;
 		_actor.doCast(_skill);
+        if (getAttackTarget() != null) {
+            setIntention(AI_INTENTION_ATTACK);
+        } else {
+            setIntention(AI_INTENTION_IDLE);
+        }
 	}
 	
 	private void thinkPickUp()
@@ -151,8 +155,8 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 		{
 			return;
 		}
-		setIntention(AI_INTENTION_IDLE);
 		((L2Summon) _actor).doPickupItem(getTarget());
+        setIntention(AI_INTENTION_IDLE);
 	}
 	
 	private void thinkInteract()
