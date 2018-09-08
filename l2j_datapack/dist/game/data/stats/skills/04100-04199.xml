@@ -1736,10 +1736,10 @@
 	<skill id="4177" levels="12" name="BOSS Cancel Magic">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#mpConsume"> 15 22 29 39 49 59 68 72 75 76 77 79 </table>
+        <table name="#mpConsume">35 42 49 59 69 79 88 92 105 106 117 119</table>
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
-		<set name="hitTime" val="1500" />
+        <set name="hitTime" val="3000"/>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
@@ -1747,7 +1747,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="DispelByCategory">
-				<param slot="buff" rate="60" max="4"/>
+                <param slot="buff" rate="40" max="4"/>
 			</effect>
 		</for>
 	</skill>
