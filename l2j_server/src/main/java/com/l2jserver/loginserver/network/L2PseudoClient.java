@@ -123,25 +123,6 @@ public class L2PseudoClient {
 
     }
 
-    private static final byte[] STATIC_BLOWFISH_KEY =
-            {
-                    (byte) 0x6b,
-                    (byte) 0x60,
-                    (byte) 0xcb,
-                    (byte) 0x5b,
-                    (byte) 0x82,
-                    (byte) 0xce,
-                    (byte) 0x90,
-                    (byte) 0xb1,
-                    (byte) 0xcc,
-                    (byte) 0x2b,
-                    (byte) 0x6c,
-                    (byte) 0x55,
-                    (byte) 0x6c,
-                    (byte) 0x6c,
-                    (byte) 0x6c,
-                    (byte) 0x6c
-            };
 
     public static void main(String[] args) throws Exception {
         Socket socket = new Socket("127.0.0.1", 2106);
@@ -200,7 +181,7 @@ public class L2PseudoClient {
 
         final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
         rsaCipher.init(Cipher.ENCRYPT_MODE, publicKey);
-        decrypted = rsaCipher.doFinal(_raw, 0x00, 0x80);
+        //decrypted = rsaCipher.doFinal(_raw, 0x00, 0x80);
 
     }
 

@@ -18,9 +18,9 @@
  */
 package com.l2jserver.util.crypt;
 
-import java.io.IOException;
-
 import com.l2jserver.util.Rnd;
+
+import java.io.IOException;
 
 /**
  * @author KenM
@@ -92,37 +92,44 @@ public class LoginCrypt
 	 * @return the new array size
 	 * @throws IOException packet is too long to make padding and add verification data
 	 */
-	public int encrypt(byte[] raw, final int offset, int size) throws IOException
-	{
+	public int encrypt(byte[] raw, final int offset, int size) throws IOException {
+		if (_static) {
+			return encryptStatic(raw, offset, size);
+		} else {
+			return encryptRegular(raw, offset, size);
+		}
+	}
+
+	public int encryptStatic(byte[] raw, final int offset, int size) throws IOException {
 		// reserve checksum
 		size += 4;
-		
-		if (_static)
-		{
-			// reserve for XOR "key"
-			size += 4;
-			
-			// padding
-			size += 8 - (size % 8);
-			if ((offset + size) > raw.length)
-			{
-				throw new IOException("packet too long");
-			}
-			NewCrypt.encXORPass(raw, offset, size, Rnd.nextInt());
-			_STATIC_CRYPT.crypt(raw, offset, size);
-			_static = false;
+
+		// reserve for XOR "key"
+		size += 4;
+
+		// padding
+		size += 8 - (size % 8);
+		if ((offset + size) > raw.length) {
+			throw new IOException("packet too long");
 		}
-		else
-		{
-			// padding
-			size += 8 - (size % 8);
-			if ((offset + size) > raw.length)
-			{
-				throw new IOException("packet too long");
-			}
-			NewCrypt.appendChecksum(raw, offset, size);
-			_crypt.crypt(raw, offset, size);
-		}
+		NewCrypt.encXORPass(raw, offset, size, Rnd.nextInt());
+		_STATIC_CRYPT.crypt(raw, offset, size);
+		_static = false;
 		return size;
 	}
+
+	public int encryptRegular(byte[] raw, final int offset, int size) throws IOException {
+		// reserve checksum
+		size += 4;
+
+		// padding
+		size += 8 - (size % 8);
+		if ((offset + size) > raw.length) {
+			throw new IOException("packet too long");
+		}
+		NewCrypt.appendChecksum(raw, offset, size);
+		_crypt.crypt(raw, offset, size);
+		return size;
+	}
+
 }
