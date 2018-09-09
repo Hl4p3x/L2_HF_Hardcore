@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.type.ArmorType;
+import com.l2jserver.gameserver.model.items.type.WeaponType;
 import com.l2jserver.gameserver.model.skills.Skill;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -97,6 +98,10 @@ public final class ConditionUsingItemType extends Condition
         LOG.debug("Testing using wear condition for {} by skill {} with wear mask {} against mask {} results in {}", effector, skill, inv.getWearedMask(), _mask, _mask & inv.getWearedMask());
         return (_mask & inv.getWearedMask()) != 0;
     }
+
+	public boolean checkUsingWeaponMask(WeaponType weaponType) {
+		return (_mask & weaponType.mask()) != 0;
+	}
 
     @Override
     public String toString() {

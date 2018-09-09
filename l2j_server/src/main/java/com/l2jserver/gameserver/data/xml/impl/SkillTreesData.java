@@ -37,19 +37,13 @@ import com.l2jserver.gameserver.model.interfaces.ISkillsHolder;
 import com.l2jserver.gameserver.model.skills.CommonSkill;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.util.data.xml.IXmlReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 /**
  * This class loads and manage the characters and pledges skills trees.<br>
@@ -315,7 +309,30 @@ public final class SkillTreesData implements IXmlReader
 			}
 		}
 	}
-	
+
+	public List<L2SkillLearn> getAllSkillsByAcquiredLevel(int level) {
+		Map<Integer, L2SkillLearn> maxSkillLevels = new HashMap<>();
+
+		List<L2SkillLearn> availableSkillLearns = _classSkillTrees
+				.values()
+				.stream()
+				.flatMap(classTree ->
+						classTree.values().stream().filter(skillLearn -> skillLearn.getGetLevel() <= level)
+				)
+				.collect(Collectors.toList());
+
+		availableSkillLearns.forEach(skillLearn -> {
+			L2SkillLearn maxSkillLearn = maxSkillLevels.get(skillLearn.getSkillId());
+			if (maxSkillLearn == null) {
+				maxSkillLevels.put(skillLearn.getSkillId(), skillLearn);
+			} else if (maxSkillLearn.getSkillLevel() < skillLearn.getSkillLevel()) {
+				maxSkillLevels.put(skillLearn.getSkillId(), skillLearn);
+			}
+		});
+
+		return new ArrayList<>(maxSkillLevels.values());
+	}
+
 	/**
 	 * Method to get the complete skill tree for a given class id.<br>
 	 * Include all skills common to all classes.<br>

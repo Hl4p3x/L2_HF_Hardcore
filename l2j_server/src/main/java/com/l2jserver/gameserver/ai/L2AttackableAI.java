@@ -398,7 +398,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		// self and buffs
 		if ((_lastBuffTick + 30) < GameTimeController.getInstance().getGameTicks())
 		{
-			for (Skill buff : getActiveChar().getTemplate().getAISkills(AISkillScope.BUFF))
+			for (Skill buff : getActiveChar().getBuffSkills())
 			{
 				if (checkSkillCastConditions(getActiveChar(), buff))
 				{
@@ -654,7 +654,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 			else if (Rnd.nextInt(RANDOM_WALK_RATE) == 0)
 			{
-				for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
+				for (Skill sk : npc.getBuffSkills())
 				{
 					if (cast(sk))
 					{
@@ -675,8 +675,8 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			int y1 = 0;
 			int z1 = 0;
 			final int range = Config.MAX_DRIFT_RANGE;
-			
-			for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
+
+			for (Skill sk : npc.getBuffSkills())
 			{
 				if (cast(sk))
 				{
@@ -1055,7 +1055,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		if (!generalSkills.isEmpty())
 		{
 			// Heal Condition
-			final List<Skill> aiHealSkills = npc.getTemplate().getAISkills(AISkillScope.HEAL);
+			final List<Skill> aiHealSkills = npc.getHealSkills();
 			if (!aiHealSkills.isEmpty())
 			{
 				double percentage = (npc.getCurrentHp() / npc.getMaxHp()) * 100;

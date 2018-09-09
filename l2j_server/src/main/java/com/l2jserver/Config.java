@@ -782,6 +782,8 @@ public final class Config
 	// --------------------------------------------------
 	// NPC Settings
 	// --------------------------------------------------
+	public static boolean ADD_RANDOM_NPC_SKILLS;
+	public static int RANDOM_NPC_SKILLS_COUNT;
 	public static boolean ANNOUNCE_MAMMON_SPAWN;
 	public static boolean ALT_MOB_AGRO_IN_PEACEZONE;
 	public static boolean ALT_ATTACKABLE_NPCS;
@@ -2104,7 +2106,10 @@ public final class Config
 			
 			// Load NPC L2Properties file (if exists)
 			final PropertiesParser NPC = new PropertiesParser(NPC_CONFIG_FILE);
-			
+
+			ADD_RANDOM_NPC_SKILLS = NPC.getBoolean("AddRandomNpcSkills", true);
+			RANDOM_NPC_SKILLS_COUNT = NPC.getInt("RandomNpcSkillsCount", 2);
+
 			ANNOUNCE_MAMMON_SPAWN = NPC.getBoolean("AnnounceMammonSpawn", false);
 			ALT_MOB_AGRO_IN_PEACEZONE = NPC.getBoolean("AltMobAgroInPeaceZone", true);
 			ALT_ATTACKABLE_NPCS = NPC.getBoolean("AltAttackableNpcs", true);

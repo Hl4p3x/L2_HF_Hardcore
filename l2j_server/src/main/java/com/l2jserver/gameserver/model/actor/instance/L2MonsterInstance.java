@@ -18,14 +18,28 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import java.util.concurrent.ScheduledFuture;
-
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.enums.AISkillScope;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.knownlist.MonsterKnownList;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.type.WeaponType;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.MinionList;
+import com.l2jserver.util.Rnd;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.ScheduledFuture;
+import java.util.stream.Collectors;
 
 /**
  * This class manages all Monsters. L2MonsterInstance:
@@ -45,6 +59,11 @@ public class L2MonsterInstance extends L2Attackable
 	private volatile MinionList _minionList = null;
 	
 	protected ScheduledFuture<?> _maintenanceTask = null;
+
+	private List<Skill> dynamicShortRangeSkills = new ArrayList<>();
+	private List<Skill> dynamicLongRangeSkills = new ArrayList<>();
+	private List<Skill> dynamicBuffSkills = new ArrayList<>();
+	private List<Skill> dynamicHealSkills = new ArrayList<>();
 	
 	/**
 	 * Creates a monster.
@@ -55,8 +74,91 @@ public class L2MonsterInstance extends L2Attackable
 		super(template);
 		setInstanceType(InstanceType.L2MonsterInstance);
 		setAutoAttackable(true);
+		addRandomSkills();
 	}
-	
+
+	private void addRandomSkills() {
+		if (Config.ADD_RANDOM_NPC_SKILLS && !isRaid() && !isRaidMinion()) {
+			boolean isFighter = getTemplate().getBasePAtk() > getTemplate().getBaseMAtk();
+			L2Weapon activeWeapon = getActiveWeaponItem();
+			WeaponType activeWeaponType;
+			if (activeWeapon == null) {
+				activeWeaponType = WeaponType.NONE;
+			} else {
+				activeWeaponType = activeWeapon.getItemType();
+			}
+
+			List<Skill> possibleSkills = SkillData.getInstance()
+					.lookupAllSkillLearns(SkillTreesData.getInstance().getAllSkillsByAcquiredLevel(getLevel()))
+					.stream()
+					.filter(skill -> {
+						if (skill.isPassive()) {
+							return false;
+						}
+						if (isFighter) {
+							return skill.hasEffectType(
+									L2EffectType.PHYSICAL_ATTACK,
+									L2EffectType.BUFF, L2EffectType.SUMMON,
+									L2EffectType.STUN);
+						} else {
+							return skill.hasEffectType(
+									L2EffectType.MAGICAL_ATTACK,
+									L2EffectType.HEAL, L2EffectType.BUFF,
+									L2EffectType.SUMMON, L2EffectType.PARALYZE,
+									L2EffectType.SLEEP, L2EffectType.ROOT);
+						}
+					})
+					.filter(skill -> {
+						Optional<Boolean> result = skill.getConditionUsingItemType()
+								.map(conditionUsingItemType -> conditionUsingItemType.checkUsingWeaponMask(activeWeaponType));
+						return !result.isPresent() || result.get();
+					})
+					.collect(Collectors.toList());
+
+
+			Rnd.getUniqueRandom(possibleSkills, Config.RANDOM_NPC_SKILLS_COUNT).forEach(skill -> {
+				AISkillScope rangeSkillScope = NpcData.getSkillRangeScope(skill);
+				if (skill.hasEffectType(L2EffectType.HEAL)) {
+					dynamicHealSkills.add(skill);
+				} else if (skill.hasEffectType(L2EffectType.BUFF)) {
+					dynamicBuffSkills.add(skill);
+				} else if (rangeSkillScope.equals(AISkillScope.SHORT_RANGE)) {
+					dynamicShortRangeSkills.add(skill);
+				} else if (rangeSkillScope.equals(AISkillScope.LONG_RANGE)) {
+					dynamicLongRangeSkills.add(skill);
+				}
+			});
+		}
+	}
+
+	@Override
+	public List<Skill> getBuffSkills() {
+		List<Skill> skills = super.getBuffSkills();
+		skills.addAll(dynamicBuffSkills);
+		return skills;
+	}
+
+	@Override
+	public List<Skill> getHealSkills() {
+		List<Skill> skills = super.getHealSkills();
+		skills.addAll(dynamicHealSkills);
+		return skills;
+	}
+
+	@Override
+	public List<Skill> getLongRangeSkills() {
+		List<Skill> skills = super.getLongRangeSkills();
+		skills.addAll(dynamicLongRangeSkills);
+		return skills;
+	}
+
+	@Override
+	public List<Skill> getShortRangeSkills() {
+		List<Skill> skills = super.getShortRangeSkills();
+		skills.addAll(dynamicShortRangeSkills);
+		return skills;
+	}
+
 	@Override
 	public final MonsterKnownList getKnownList()
 	{

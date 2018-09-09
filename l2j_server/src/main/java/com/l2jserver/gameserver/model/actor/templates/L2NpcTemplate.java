@@ -102,7 +102,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	{
 		super(set);
 	}
-	
+
 	@Override
 	public void set(StatsSet set)
 	{
@@ -402,7 +402,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	
 	public List<Skill> getAISkills(AISkillScope aiSkillScope)
 	{
-		return _aiSkillLists.getOrDefault(aiSkillScope, Collections.emptyList());
+		return _aiSkillLists.getOrDefault(aiSkillScope, new ArrayList<>());
 	}
 	
 	public void setAISkillLists(Map<AISkillScope, List<Skill>> aiSkillLists)

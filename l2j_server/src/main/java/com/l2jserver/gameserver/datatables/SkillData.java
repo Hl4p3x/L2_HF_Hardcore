@@ -18,17 +18,16 @@
  */
 package com.l2jserver.gameserver.datatables;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.engines.DocumentEngine;
+import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.skills.Skill;
+
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 /**
  * Skill data.
@@ -94,7 +93,8 @@ public final class SkillData
 	{
 		return getSkillHashCode(skill.getId(), skill.getLevel());
 	}
-	
+
+
 	/**
 	 * Centralized method for easier change of the hashing sys
 	 * @param skillId The Skill Id
@@ -105,7 +105,15 @@ public final class SkillData
 	{
 		return (skillId * 1021) + skillLevel;
 	}
-	
+
+	public static int getSkillHashCode(L2SkillLearn l2SkillLearn) {
+		return getSkillHashCode(l2SkillLearn.getSkillId(), l2SkillLearn.getSkillLevel());
+	}
+
+	public List<Skill> lookupAllSkillLearns(List<L2SkillLearn> skillLearns) {
+		return skillLearns.stream().map(skillLearn -> _skills.get(getSkillHashCode(skillLearn))).filter(Objects::nonNull).collect(Collectors.toList());
+	}
+
 	public Skill getSkill(int skillId, int level)
 	{
 		final Skill result = _skills.get(getSkillHashCode(skillId, level));

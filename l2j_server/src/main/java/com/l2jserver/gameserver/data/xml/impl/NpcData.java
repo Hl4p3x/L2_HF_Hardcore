@@ -36,21 +36,15 @@ import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.data.xml.IXmlReader;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.EnumMap;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
+import java.io.File;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * NPC data parser.
@@ -518,7 +512,7 @@ public class NpcData implements IXmlReader
 								}
 
 								final List<AISkillScope> aiSkillScopes = new ArrayList<>();
-								final AISkillScope shortOrLongRangeScope = skill.getCastRange() <= 150 ? AISkillScope.SHORT_RANGE : AISkillScope.LONG_RANGE;
+								final AISkillScope shortOrLongRangeScope = getSkillRangeScope(skill);
 								if (skill.isSuicideAttack())
 								{
 									aiSkillScopes.add(AISkillScope.SUICIDE);
@@ -691,6 +685,10 @@ public class NpcData implements IXmlReader
 				break;
 			}
 		}
+	}
+
+	public static AISkillScope getSkillRangeScope(Skill skill) {
+		return skill.getCastRange() <= 150 ? AISkillScope.SHORT_RANGE : AISkillScope.LONG_RANGE;
 	}
 
 	/**

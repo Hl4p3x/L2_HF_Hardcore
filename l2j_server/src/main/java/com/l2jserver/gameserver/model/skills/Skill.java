@@ -18,17 +18,6 @@
  */
 package com.l2jserver.gameserver.model.skills;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.EnumMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
@@ -38,12 +27,7 @@ import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.handler.TargetHandler;
 import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager;
-import com.l2jserver.gameserver.model.ArenaParticipantsHolder;
-import com.l2jserver.gameserver.model.L2ExtractableProductItem;
-import com.l2jserver.gameserver.model.L2ExtractableSkill;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.PcCondOverride;
-import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.*;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
@@ -51,6 +35,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2CubicInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.conditions.ConditionUsingItemType;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
@@ -68,6 +53,10 @@ import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
+
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Skill implements IIdentifiable
 {
@@ -182,7 +171,7 @@ public class Skill implements IIdentifiable
 	private final boolean _isTriggeredSkill; // If true the skill will take activation buff slot instead of a normal buff slot
 	private final int _effectPoint;
 	// Condition lists
-	private List<Condition> _preCondition;
+	private List<Condition> _preCondition = new ArrayList<>();
 	private List<Condition> _itemPreCondition;
 	private Set<MountType> _rideState;
 	// Function lists
@@ -1623,7 +1612,11 @@ public class Skill implements IIdentifiable
 			_preCondition.add(c);
 		}
 	}
-	
+
+	public Optional<ConditionUsingItemType> getConditionUsingItemType() {
+		return _preCondition.stream().filter(condition -> condition instanceof ConditionUsingItemType).map(condition -> (ConditionUsingItemType) condition).findFirst();
+	}
+
 	@Override
 	public String toString()
 	{

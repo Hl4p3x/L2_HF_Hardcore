@@ -105,9 +105,9 @@ public class L2Npc extends L2Character
 	private boolean _isTalking = true;
 	
 	protected RandomAnimationTask _rAniTask = null;
-	private int _currentLHandId; // normally this shouldn't change from the template, but there exist exceptions
-	private int _currentRHandId; // normally this shouldn't change from the template, but there exist exceptions
-	private int _currentEnchant; // normally this shouldn't change from the template, but there exist exceptions
+	private int _currentLHandId; // normally this shouldn't change from the template, but there are exceptions
+	private int _currentRHandId; // normally this shouldn't change from the template, but there are exceptions
+	private int _currentEnchant; // normally this shouldn't change from the template, but there are exceptions
 	private double _currentCollisionHeight; // used for npc grow effect skills
 	private double _currentCollisionRadius; // used for npc grow effect skills
 	
@@ -199,7 +199,15 @@ public class L2Npc extends L2Character
 	{
 		return getTemplate().getAISkills(AISkillScope.SHORT_RANGE);
 	}
-	
+
+	public List<Skill> getHealSkills() {
+		return getTemplate().getAISkills(AISkillScope.HEAL);
+	}
+
+	public List<Skill> getBuffSkills() {
+		return getTemplate().getAISkills(AISkillScope.BUFF);
+	}
+
 	/** Task launching the function onRandomAnimation() */
 	protected static class RandomAnimationTask implements Runnable
 	{

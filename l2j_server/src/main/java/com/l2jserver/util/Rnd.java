@@ -19,7 +19,7 @@
 package com.l2jserver.util;
 
 import java.security.SecureRandom;
-import java.util.Random;
+import java.util.*;
 
 /**
  * @author Forsaiken
@@ -60,7 +60,7 @@ public final class Rnd
 			_seed = (seed ^ MULTIPLIER) & MASK;
 		}
 	}
-	
+
 	/**
 	 * @author Forsaiken
 	 */
@@ -453,4 +453,42 @@ public final class Rnd
 	{
 		return rnd.nextLong();
 	}
+
+	public static final <T> Set<T> getUniqueRandom(List<T> items, int amount) {
+		if (amount <= 0) {
+			throw new IllegalArgumentException("Cannot use negative or zero values for random amount");
+		}
+
+		if (items.isEmpty() || items.size() <= amount) {
+			return new HashSet<>(items);
+		}
+
+		Set<T> result = new HashSet<>();
+		for (int i = 0; i < amount; i++) {
+			T item = items.get(Rnd.get(items.size()));
+			if (result.contains(item)) {
+				i -= 1;
+			} else {
+				result.add(item);
+			}
+		}
+		return result;
+	}
+
+	public static final <T> List<T> getFewRandom(List<T> items, int amount) {
+		if (amount <= 0) {
+			throw new IllegalArgumentException("Cannot use negative or zero values for random amount");
+		}
+
+		if (items.isEmpty() || items.size() <= amount) {
+			return items;
+		}
+
+		List<T> result = new ArrayList<>();
+		for (int i = 0; i < amount; i++) {
+			result.add(items.get(Rnd.get(items.size())));
+		}
+		return result;
+	}
+
 }
