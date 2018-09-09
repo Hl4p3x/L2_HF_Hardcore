@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.GameServer;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
+import com.l2jserver.gameserver.model.holders.RangeChanceHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.util.FloodProtectorConfig;
 import com.l2jserver.gameserver.util.Util;
@@ -506,9 +507,7 @@ public final class Config
 	public static boolean ENABLE_FALLING_DAMAGE;
 
 	public static boolean ALT_DROP_ENCHANTED;
-	public static double ALT_DROP_ENCHANTED_CHANCE;
-	public static int ALT_DROP_ENCHANTED_MIN;
-	public static int ALT_DROP_ENCHANTED_MAX;
+	public static List<RangeChanceHolder> ALT_DROP_ENCHANTED_CHANCES;
 
 	public static boolean GRIDS_ALWAYS_ON;
 	public static int GRID_NEIGHBOR_TURNON_TIME;
@@ -2095,9 +2094,7 @@ public final class Config
 			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 
 			ALT_DROP_ENCHANTED = General.getBoolean("AltDropEnchanted", true);
-			ALT_DROP_ENCHANTED_CHANCE = General.getDouble("AltDropEnchantedChance", 35);
-			ALT_DROP_ENCHANTED_MIN = General.getInt("AltDropEnchantedMin", 1);
-			ALT_DROP_ENCHANTED_MAX = General.getInt("AltDropEnchantedMax", 5);
+			ALT_DROP_ENCHANTED_CHANCES = RangeChanceHolder.parse(General.getString("AltDropEnchantedChance", "[1-3]:50;[4-5]:30;[6-9]:7;[10-13]:2;[14-16]:0.2"));
 
 			// Load FloodProtector L2Properties file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_FILE);

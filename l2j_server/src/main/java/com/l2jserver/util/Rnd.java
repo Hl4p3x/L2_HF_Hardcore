@@ -331,6 +331,10 @@ public final class Rnd
 	{
 		return rnd.get(n);
 	}
+
+	public static final double getDouble(final int n) {
+		return rnd.get(n) + get();
+	}
 	
 	/**
 	 * Gets a random integer number from min(inclusive) to max(inclusive)

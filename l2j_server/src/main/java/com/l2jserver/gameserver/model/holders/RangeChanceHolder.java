@@ -18,6 +18,9 @@
  */
 package com.l2jserver.gameserver.model.holders;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author UnAfraid
  */
@@ -57,4 +60,31 @@ public class RangeChanceHolder
 	{
 		return _chance;
 	}
+
+	public static List<RangeChanceHolder> parse(String text) {
+		String[] items = text.split(";");
+		List<RangeChanceHolder> results = new ArrayList<>();
+		for (String item : items) {
+			String[] rangeChanceSplit = item.split(":");
+			if (rangeChanceSplit.length != 2) {
+				continue;
+			}
+
+			int min, max;
+			String valueRange = rangeChanceSplit[0].replace("[", "").replace("]", "");
+			double chance = Double.parseDouble(rangeChanceSplit[1]);
+			if (valueRange.contains("-")) {
+				String[] rangeItems = valueRange.split("-");
+				min = Integer.parseInt(rangeItems[0]);
+				max = Integer.parseInt(rangeItems[1]);
+			} else {
+				int value = Integer.parseInt(valueRange);
+				min = value;
+				max = value;
+			}
+			results.add(new RangeChanceHolder(min, max, chance));
+		}
+		return results;
+	}
+
 }
