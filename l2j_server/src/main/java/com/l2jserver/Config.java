@@ -886,6 +886,8 @@ public final class Config
 	public static int NPC_DEFAULT_MAX_SKILL_CHANCE;
 
 	public static boolean ALT_PLAYER_LEVEL_MANOR;
+
+	public static boolean DYNAMIC_LOOT;
 	
 	// --------------------------------------------------
 	// PvP Settings
@@ -2240,6 +2242,7 @@ public final class Config
 			NPC_DEFAULT_MAX_SKILL_CHANCE = NPC.getInt("NpcDefaultMaxSkillChance", 9);
 
 			ALT_PLAYER_LEVEL_MANOR = NPC.getBoolean("AltPlayerLevelManor", false);
+			DYNAMIC_LOOT = NPC.getBoolean("DynamicLoot", true);
 
 			// Load Rates L2Properties file (if exists)
 			final PropertiesParser RatesSettings = new PropertiesParser(RATES_CONFIG_FILE);

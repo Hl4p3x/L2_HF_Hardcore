@@ -18,33 +18,33 @@
  */
 package com.l2jserver.gameserver.model.drops.strategy;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.drops.GeneralDropItem;
-import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.util.Rnd;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * @author Battlecruiser
  */
 public interface IDropCalculationStrategy
 {
-	public static Logger LOG = Logger.getLogger(IDropCalculationStrategy.class.getName());
+	Logger LOG = Logger.getLogger(IDropCalculationStrategy.class.getName());
 
-	public static final IDropCalculationStrategy DEFAULT_STRATEGY = (item, victim, killer) -> calculateDrop(item, victim, item.getChance(victim, killer));
+	IDropCalculationStrategy DEFAULT_STRATEGY = (item, victim, killer) -> calculateDrop(item, victim, item.getChance(victim, killer));
 
-	public static List<ItemHolder> calculateDrop(GeneralDropItem item, L2Character victim, double dropChance) {
+	static List<ItemHolder> calculateDrop(GeneralDropItem item, L2Character victim, double dropChance) {
 		return calculateDrop(item, victim, dropChance, 1L);
 	}
 
-	public static List<ItemHolder> calculateDrop(GeneralDropItem item, L2Character victim, double dropChance, long amountMultiplier) {
+	static List<ItemHolder> calculateDrop(GeneralDropItem item, L2Character victim, double dropChance, long amountMultiplier) {
 		String itemName = ItemTable.getInstance().getTemplate( item.getItemId()).getName();
 
 		List<ItemHolder> items = new ArrayList<>();
@@ -69,13 +69,13 @@ public interface IDropCalculationStrategy
 		}
 	}
 
-	public static final IDropCalculationStrategy VALUABLE_STRATEGY = (item, victim, killer) -> calculateValuableDrop(item, victim, item.getChance(victim, killer));
+	IDropCalculationStrategy VALUABLE_STRATEGY = (item, victim, killer) -> calculateValuableDrop(item, victim, item.getChance(victim, killer));
 
-	public static List<ItemHolder> calculateValuableDrop(GeneralDropItem item, L2Character victim, double dropChance) {
+	static List<ItemHolder> calculateValuableDrop(GeneralDropItem item, L2Character victim, double dropChance) {
 		return calculateValuableDrop(item, victim, dropChance, 1L);
 	}
 
-	public static List<ItemHolder> calculateValuableDrop(GeneralDropItem item, L2Character victim, double dropChance, long amountMultiplier) {
+	static List<ItemHolder> calculateValuableDrop(GeneralDropItem item, L2Character victim, double dropChance, long amountMultiplier) {
 		long iterations = 0;
 		if (item.getMin(victim) == item.getMax(victim) || item.getMin(victim) > item.getMax(victim)) {
 			iterations = item.getMin(victim);
@@ -87,7 +87,7 @@ public interface IDropCalculationStrategy
 
 		String itemName = ItemTable.getInstance().getTemplate(item.getItemId()).getName();
 		if (Config.VALUABLE_ITEMS_LIMIT_LOG && iterations > Config.VALUABLE_ITEMS_WARNING_LIMIT) {
-			LOG.warning("Warning, valuable iterations calculation for large number of items " + iterations + " caused by kill of " + victim);
+			LOG.warning("Warning, valuable iterations calculation for large number of items " + iterations + "of " + itemName + " caused by kill of " + victim);
 		}
 
 		List<ItemHolder> results = new ArrayList<>();
@@ -101,11 +101,12 @@ public interface IDropCalculationStrategy
 		return results.isEmpty() ? null : results;
 	}
 
-	public static boolean isValuable(L2Item item) {
+	static boolean isValuable(L2Item item) {
 		return item.getType2() == L2Item.TYPE2_WEAPON ||
 					 item.getType2() == L2Item.TYPE2_SHIELD_ARMOR ||
 			 		 item.getType2() == L2Item.TYPE2_ACCESSORY;
 	}
 
-	public List<ItemHolder> calculateDrops(GeneralDropItem item, L2Character victim, L2Character killer);
+	List<ItemHolder> calculateDrops(GeneralDropItem item, L2Character victim, L2Character killer);
+
 }

@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.Sex;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.templates.drop.DynamicDropCalculator;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.drops.DropListScope;
 import com.l2jserver.gameserver.model.drops.IDropItem;
@@ -519,35 +520,45 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		Map<DropListScope, List<IDropItem>> dropLists = _dropLists;
 		return dropLists != null ? dropLists.get(dropListScope) : null;
 	}
-	
-	public Collection<ItemHolder> calculateDrops(DropListScope dropListScope, L2Character victim, L2Character killer)
-	{
+
+	public Collection<ItemHolder> calculateDrops(DropListScope dropListScope, L2Character victim, L2Character killer) {
+		if (Config.DYNAMIC_LOOT) {
+			List<IDropItem> normalDropList = getDropList(dropListScope);
+			if (normalDropList == null || normalDropList.isEmpty()) {
+				return Collections.emptyList();
+			}
+
+			return DynamicDropCalculator.calculate(victim, killer);
+		} else {
+			return calculateNormalDrops(dropListScope, victim, killer);
+		}
+	}
+
+	public Collection<ItemHolder> calculateNormalDrops(DropListScope dropListScope, L2Character victim, L2Character killer) {
 		List<IDropItem> dropList = getDropList(dropListScope);
-		if (dropList == null)
-		{
+		if (dropList == null) {
 			return null;
 		}
-		
+
 		Collection<ItemHolder> calculatedDrops = null;
-		for (IDropItem dropItem : dropList)
-		{
+		for (IDropItem dropItem : dropList) {
 			final Collection<ItemHolder> drops = dropItem.calculateDrops(victim, killer);
-			if ((drops == null) || drops.isEmpty())
-			{
+			if ((drops == null) || drops.isEmpty()) {
 				continue;
 			}
-			
-			if (calculatedDrops == null)
-			{
+
+			if (calculatedDrops == null) {
 				calculatedDrops = new LinkedList<>();
 			}
-			
+
 			calculatedDrops.addAll(drops);
 		}
-		
+
 		return calculatedDrops;
 	}
-	
+
+
+
 	public double getCollisionRadiusGrown()
 	{
 		return _collisionRadiusGrown;
