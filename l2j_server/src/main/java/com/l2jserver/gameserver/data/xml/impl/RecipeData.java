@@ -28,10 +28,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * The Class RecipeData.
@@ -243,7 +241,15 @@ public class RecipeData implements IXmlReader
 				.findFirst()
 				.orElse(null);
 	}
-	
+
+    public Set<Integer> getAllMasterworkItemIds() {
+        return _recipes.values()
+                .stream()
+                .filter(recipe -> recipe.getRareItemId() != 0 && recipe.getRareItemId() != recipe.getItemId())
+                .map(L2RecipeList::getRareItemId)
+                .collect(Collectors.toSet());
+    }
+
 	/**
 	 * Gets the all item ids.
 	 * @return the all item ids

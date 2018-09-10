@@ -65,6 +65,6 @@ public enum EtcItemType implements ItemType
 	@Override
 	public int mask()
 	{
-		return 0;
+		return ordinal();
 	}
 }

@@ -18,18 +18,6 @@
  */
 package com.l2jserver.gameserver.datatables;
 
-import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -50,6 +38,18 @@ import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.util.GMAudit;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ScheduledFuture;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
+
+import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
 /**
  * This class serves as a container for all item templates in the game.
@@ -397,7 +397,19 @@ public class ItemTable
 			_item.setItemLootShedule(null);
 		}
 	}
-	
+
+	public Map<Integer, L2EtcItem> getEtcItems() {
+		return _etcItems;
+	}
+
+	public Map<Integer, L2Armor> getArmor() {
+		return _armors;
+	}
+
+	public Map<Integer, L2Weapon> getWeapons() {
+		return _weapons;
+	}
+
 	public Set<Integer> getAllArmorsId()
 	{
 		return _armors.keySet();
