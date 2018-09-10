@@ -192,7 +192,21 @@ public final class StringUtil
 	private StringUtil()
 	{
 	}
-	
+
+
+	public static String removeLastWord(String text) {
+		return removeLastWord(text, " ");
+	}
+
+	public static String removeLastWord(String text, String wordSeparator) {
+		int lastWhitespace = text.lastIndexOf(wordSeparator);
+		if (lastWhitespace == -1) {
+			return text;
+		}
+
+		return text.substring(0, lastWhitespace + 1);
+	}
+
 	/**
 	 * Concatenates strings.
 	 * @param strings strings to be concatenated

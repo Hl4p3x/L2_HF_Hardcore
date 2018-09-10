@@ -35,6 +35,8 @@ import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 import com.l2jserver.gameserver.model.skills.Skill;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * NPC template.
@@ -523,12 +525,15 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 
 	public Collection<ItemHolder> calculateDrops(DropListScope dropListScope, L2Character victim, L2Character killer) {
 		if (Config.DYNAMIC_LOOT) {
-			List<IDropItem> normalDropList = getDropList(dropListScope);
+			Collection<ItemHolder> normalDropList = calculateNormalDrops(dropListScope, victim, killer);
 			if (normalDropList == null || normalDropList.isEmpty()) {
 				return Collections.emptyList();
 			}
 
-			return DynamicDropCalculator.calculate(victim, killer);
+			List<ItemHolder> normalNonDynamicDrop = normalDropList.stream().filter(drop -> !DynamicDropCalculator.getInstance().getAllDynamicItemsIds().contains(drop.getId())).collect(Collectors.toList());
+			List<ItemHolder> dynamicDrop = DynamicDropCalculator.getInstance().calculate(victim, killer);
+
+			return Stream.concat(normalNonDynamicDrop.stream(), dynamicDrop.stream()).collect(Collectors.toList());
 		} else {
 			return calculateNormalDrops(dropListScope, victim, killer);
 		}
