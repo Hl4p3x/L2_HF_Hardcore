@@ -1,18 +1,11 @@
 package com.l2jserver.gameserver.datatables.categorized;
 
-import com.google.common.collect.LinkedHashMultimap;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Multimap;
-import com.l2jserver.gameserver.datatables.ItemSlots;
-import com.l2jserver.gameserver.model.actor.templates.drop.EquipmentGradeRanges;
 import com.l2jserver.gameserver.model.items.L2Armor;
 import com.l2jserver.gameserver.model.items.L2EtcItem;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.L2Weapon;
-import com.l2jserver.gameserver.model.items.type.CrystalType;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -105,55 +98,8 @@ public class CategorizedItems {
         return allIds;
     }
 
-    public List<L2Item> findAllByGradeRange(EquipmentGradeRanges equipmentGradeRange) {
-        final int parts;
-        final CrystalType crystalType;
-        if (equipmentGradeRange.name().endsWith("NG")) {
-            parts = 3;
-            crystalType = CrystalType.NONE;
-        } else if (equipmentGradeRange.name().endsWith("D")) {
-            parts = 3;
-            crystalType = CrystalType.D;
-        } else if (equipmentGradeRange.name().endsWith("C")) {
-            parts = 3;
-            crystalType = CrystalType.C;
-        } else if (equipmentGradeRange.name().endsWith("B")) {
-            parts = 2;
-            crystalType = CrystalType.B;
-        } else if (equipmentGradeRange.name().endsWith("A")) {
-            parts = 2;
-            crystalType = CrystalType.A;
-        } else if (equipmentGradeRange == EquipmentGradeRanges.S) {
-            parts = 1;
-            crystalType = CrystalType.S;
-        } else if (equipmentGradeRange == EquipmentGradeRanges.S_DYNO || equipmentGradeRange == EquipmentGradeRanges.S_MORA) {
-            parts = 2;
-            crystalType = CrystalType.S80;
-        } else if (equipmentGradeRange == EquipmentGradeRanges.S_VESP) {
-            parts = 3;
-            crystalType = CrystalType.S84;
-        } else {
-            parts = 3;
-            crystalType = CrystalType.NONE;
-        }
-
-        List<L2Item> items = allEquipment.stream().filter(l2Item -> l2Item.getCrystalType().equals(crystalType)).collect(Collectors.toList());
-
-        Multimap<ItemSlots, L2Item> categorizedValues = LinkedHashMultimap.create();
-        allEquipment.forEach(equipment -> {
-            ItemSlots slot = ItemSlots.bySlotNumber(equipment.getBodyPart()).orElse(ItemSlots.NONE);
-            categorizedValues.put(slot, equipment);
-        });
-
-        List<List<L2Item>> partitions
-        categorizedValues.asMap().forEach((key, value) -> {
-            List<L2Item> values = new ArrayList<>(value);
-            values.sort(Comparator.comparingInt(L2Item::getReferencePrice));
-        });
-
-        List<List<L2Item>> partitions = Lists.partition(items, parts);
-
-
+    public List<L2Item> getAllEquipment() {
+        return allEquipment;
     }
 
 }

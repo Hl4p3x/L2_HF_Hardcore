@@ -2,14 +2,32 @@ package com.l2jserver.util;
 
 import com.google.common.collect.Lists;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 
 public class CollectionUtil {
+
+    public static <T> List<List<T>> splitList(List<T> items, int parts) {
+        if (items.size() < parts) {
+            return Collections.singletonList(items);
+        }
+
+        int partSize = (int) Math.ceil((double) items.size() / parts);
+        List<List<T>> results = new ArrayList<>();
+
+        int partStart = 0;
+        int partEnd = partSize;
+        for (int i = 0; i < parts; i++) {
+            results.add(items.subList(partStart, partEnd));
+            partStart = partEnd;
+            partEnd += partSize;
+            if (partEnd > items.size()) {
+                partEnd = items.size();
+            }
+        }
+        return results;
+    }
 
     public static <T> HeadTail<T> beheaded(Collection<T> collection) {
         if (collection.isEmpty()) {
