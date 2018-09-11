@@ -291,7 +291,14 @@ public class RecipeData implements IXmlReader
 	{
 		return SingletonHolder._instance;
 	}
-	
+
+	public Set<Integer> getAllCraftableIds() {
+		return _recipes.values()
+				.stream()
+				.map(L2RecipeList::getItemId)
+				.collect(Collectors.toSet());
+	}
+
 	/**
 	 * The Class SingletonHolder.
 	 */

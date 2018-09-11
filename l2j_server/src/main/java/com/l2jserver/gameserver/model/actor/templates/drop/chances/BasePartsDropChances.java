@@ -2,7 +2,7 @@ package com.l2jserver.gameserver.model.actor.templates.drop.chances;
 
 public enum BasePartsDropChances {
 
-    WEAPON(30), ARMOR(40), JEWELS(50);
+    WEAPON(60), ARMOR(70), JEWELS(75);
 
     private final double chance;
 

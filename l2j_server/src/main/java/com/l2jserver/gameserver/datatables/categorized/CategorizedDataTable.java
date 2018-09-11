@@ -32,16 +32,16 @@ public class CategorizedDataTable {
         Map<Integer, L2Armor> armorsMap = ItemTable.getInstance().getArmor();
         Map<Integer, L2EtcItem> etcItemsMap = ItemTable.getInstance().getEtcItems();
 
-        Set<Integer> masterworkIds = RecipeData.getInstance().getAllMasterworkItemIds();
+        Set<Integer> craftableIds = RecipeData.getInstance().getAllCraftableIds();
 
-        List<L2Weapon> nonMasterworkWeapons = weaponsMap.values().stream().filter(weapon -> !masterworkIds.contains(weapon.getId())).collect(Collectors.toList());
-        List<L2Armor> nonMasterworkAllArmors = armorsMap.values().stream().filter(armor -> !masterworkIds.contains(armor.getId())).collect(Collectors.toList());
+        List<L2Weapon> craftableWeapons = weaponsMap.values().stream().filter(weapon -> craftableIds.contains(weapon.getId())).collect(Collectors.toList());
+        List<L2Armor> craftableArmors = armorsMap.values().stream().filter(armor -> craftableIds.contains(armor.getId())).collect(Collectors.toList());
 
-        List<L2Armor> nonMasterworkArmors = nonMasterworkAllArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY != armor.getType2()).collect(Collectors.toList());
-        List<L2Armor> nonMasterworkJewels = nonMasterworkAllArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY == armor.getType2()).collect(Collectors.toList());
+        List<L2Armor> nonMasterworkArmors = craftableArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY != armor.getType2()).collect(Collectors.toList());
+        List<L2Armor> nonMasterworkJewels = craftableArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY == armor.getType2()).collect(Collectors.toList());
 
-        Set<String> weaponNames = nonMasterworkWeapons.stream().map(L2Weapon::getName).collect(Collectors.toSet());
-        Set<String> armorNames = nonMasterworkAllArmors.stream().map(L2Armor::getName).collect(Collectors.toSet());
+        Set<String> weaponNames = craftableWeapons.stream().map(L2Weapon::getName).collect(Collectors.toSet());
+        Set<String> armorNames = craftableArmors.stream().map(L2Armor::getName).collect(Collectors.toSet());
         Set<String> weaponsAndArmorNames = new HashSet<>(weaponNames.size() + armorNames.size());
         weaponsAndArmorNames.addAll(weaponNames);
         weaponsAndArmorNames.addAll(armorNames);
@@ -55,7 +55,7 @@ public class CategorizedDataTable {
         List<L2EtcItem> weaponEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_WP == etcItem.getItemType()).collect(Collectors.toList());
         List<L2EtcItem> armorEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_AM == etcItem.getItemType()).collect(Collectors.toList());
 
-        return new CategorizedItems(nonMasterworkWeapons, nonMasterworkArmors, nonMasterworkJewels, weaponAndArmorParts, craftMaterials, recipes, weaponEnchants, armorEnchants);
+        return new CategorizedItems(craftableWeapons, nonMasterworkArmors, nonMasterworkJewels, weaponAndArmorParts, craftMaterials, recipes, weaponEnchants, armorEnchants);
     }
 
     public static CategorizedDataTable getInstance() {
