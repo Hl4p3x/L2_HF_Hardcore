@@ -73,7 +73,7 @@ public class CategoryDataPopulator {
     }
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
-        Config.DATAPACK_ROOT = new File("");
+        Config.DATAPACK_ROOT = new File("l2j_datapack/dist/game");
 
         List<L2Item> allEquipment = CategorizedDataTable.getInstance().getCategorizedItems().getAllEquipment();
 
@@ -196,22 +196,19 @@ public class CategoryDataPopulator {
 
         for (File itemFile : itemFiles) {
             Document document = factory.newDocumentBuilder().parse(itemFile);
-            Node listNode = document.getFirstChild();
+            NodeList itemNodes = document.getElementsByTagName("item");
             int updates = 0;
-            if (listNode != null) {
-                NodeList itemNodes = listNode.getChildNodes();
-                for (int i = 0; i < itemNodes.getLength(); i++) {
-                    Node itemNode = itemNodes.item(i);
-                    Integer id = Integer.parseInt(itemNode.getAttributes().getNamedItem("id").getNodeValue().trim());
+            for (int i = 0; i < itemNodes.getLength(); i++) {
+                Node itemNode = itemNodes.item(i);
+                Integer id = Integer.parseInt(itemNode.getAttributes().getNamedItem("id").getNodeValue().trim());
 
-                    if (equipmentCategoriesMultimap.containsKey(id)) {
+                if (equipmentCategoriesMultimap.containsKey(id)) {
                         Collection<EquipmentCategories> categories = equipmentCategoriesMultimap.get(id);
                         Element categorySetNode = document.createElement("set");
                         categorySetNode.setAttribute("name", "grade_category");
                         categorySetNode.setAttribute("val", Joiner.on(';').join(categories));
                         itemNode.appendChild(categorySetNode);
                         updates++;
-                    }
                 }
             }
             if (updates > 0) {

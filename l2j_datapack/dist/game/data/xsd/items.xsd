@@ -7,7 +7,7 @@
 					<xs:enumeration value="displayId" />
 					<xs:enumeration value="armor_type" />
 					<xs:enumeration value="attack_range" />
-					<xs:enumeration value="auto_destroy_time" />
+					<xs:enumeration value="auto_pricedestroy_time"/>
 					<xs:enumeration value="blessed" />
 					<xs:enumeration value="bodypart" />
 					<xs:enumeration value="capsuled_items" />
@@ -51,6 +51,7 @@
 					<xs:enumeration value="onmagic_chance" />
 					<xs:enumeration value="onmagic_skill" />
 					<xs:enumeration value="price" />
+					<xs:enumeration value="grade_category"/>
 					<xs:enumeration value="random_damage" />
 					<xs:enumeration value="recipe_id" />
 					<xs:enumeration value="reduced_mp_consume" />
