@@ -19,14 +19,16 @@
 package handlers.admincommandhandlers;
 
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;
-import com.l2jserver.gameserver.datatables.categorized.CategorizedDataTable;
-import com.l2jserver.gameserver.datatables.categorized.CategorizedItems;
-import com.l2jserver.gameserver.datatables.categorized.EquipmentCategories;
+import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.datatables.categorized.GradedEquipmentDataTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.buylist.L2BuyList;
 import com.l2jserver.gameserver.model.buylist.Product;
-import com.l2jserver.gameserver.model.items.L2Item;
+import com.l2jserver.gameserver.model.items.graded.Grade;
+import com.l2jserver.gameserver.model.items.graded.GradeCategory;
+import com.l2jserver.gameserver.model.items.graded.GradeInfo;
+import com.l2jserver.gameserver.model.items.graded.GradedItem;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.BuyList;
 import com.l2jserver.gameserver.network.serverpackets.ExBuySellList;
@@ -67,30 +69,37 @@ public class AdminShop implements IAdminCommandHandler
 		} else if (command.startsWith("admin_categorized")) {
 			String[] commandSplit = command.split(" ");
 
-			CategorizedItems categorizedItems = CategorizedDataTable.getInstance().getCategorizedItems();
-			Map<EquipmentCategories, Collection<L2Item>> items = categorizedItems.getAllEquipmentByCategory();
+            Map<GradeInfo, Collection<GradedItem>> items = GradedEquipmentDataTable.getInstance().getGradedItemsMap();
 
 			if (commandSplit.length == 1) {
-				Set<EquipmentCategories> categories = items.keySet();
+                Set<GradeInfo> categories = items.keySet();
 
 				StringBuilder html = new StringBuilder();
 				html.append("<table>");
 				categories.forEach(category -> {
+                    String categoryKey = category.getGrade() + " " + category.getCategory();
+
 					html.append("<tr>");
 					html.append("<td>");
-					html.append("<button action=\"bypass -h admin_categorized ").append(category.name()).append("\" value=\"").append(category.name()).append("\" width=85 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">");
+                    html.append("<button action=\"bypass -h admin_categorized ")
+                            .append(categoryKey)
+                            .append("\" value=\"")
+                            .append(categoryKey)
+                            .append("\" width=85 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">");
 					html.append("</td>");
 					html.append("</tr>");
 				});
 				html.append("</table>");
 
 				activeChar.sendPacket(new NpcHtmlMessage(html.toString()));
-			} else if (commandSplit.length == 2) {
-				Collection<L2Item> categoryItems = items.get(EquipmentCategories.valueOf(commandSplit[1]));
+            } else if (commandSplit.length == 3) {
+                Grade grade = Grade.valueOf(commandSplit[1]);
+                GradeCategory gradeCategory = GradeCategory.valueOf(commandSplit[2]);
+                Collection<GradedItem> categoryItems = items.get(new GradeInfo(grade, gradeCategory));
 
-				L2BuyList buyList = new L2BuyList(-999);
+                L2BuyList buyList = new L2BuyList(0);
 				categoryItems.forEach(item -> {
-					buyList.addProduct(new Product(-999, item, 0, 0, -1));
+                    buyList.addProduct(new Product(0, ItemTable.getInstance().getTemplate(item.getItemId()), item.getItemPrice(), 0, -1));
 				});
 
 				activeChar.sendPacket(new BuyList(buyList, activeChar.getAdena(), 0));

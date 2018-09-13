@@ -7,6 +7,9 @@ public class GradedItem {
     private int itemPrice;
     private GradeInfo gradeInfo;
 
+    public GradedItem() {
+    }
+
     public GradedItem(Integer itemId, String itemName, int itemPrice, GradeInfo gradeInfo) {
         this.itemId = itemId;
         this.itemName = itemName;

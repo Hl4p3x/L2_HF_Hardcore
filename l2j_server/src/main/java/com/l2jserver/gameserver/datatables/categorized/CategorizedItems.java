@@ -102,8 +102,8 @@ public class CategorizedItems {
         return allEquipment;
     }
 
-    public Map<EquipmentCategories, Collection<L2Item>> getAllEquipmentByCategory() {
-        Multimap<EquipmentCategories, L2Item> result = HashMultimap.create();
+    public Map<EquipmentCategory, Collection<L2Item>> getAllEquipmentByCategory() {
+        Multimap<EquipmentCategory, L2Item> result = HashMultimap.create();
         allEquipment.forEach(item -> {
             item.getEquipmentCategories().forEach(equipmentCategories -> {
                 result.put(equipmentCategories, item);

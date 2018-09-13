@@ -20,7 +20,7 @@ package com.l2jserver.gameserver.model.items;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.categorized.EquipmentCategories;
+import com.l2jserver.gameserver.datatables.categorized.EquipmentCategory;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.PcCondOverride;
@@ -150,7 +150,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private final int _reuseDelay;
 	private final int _sharedReuseGroup;
 
-	private final Set<EquipmentCategories> equipmentCategories;
+	private final Set<EquipmentCategory> equipmentCategories;
 	
 	/**
 	 * Constructor of the L2Item that fill class variables.<BR>
@@ -188,7 +188,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_is_oly_restricted = set.getBoolean("is_oly_restricted", false);
 		_for_npc = set.getBoolean("for_npc", false);
 
-		equipmentCategories = EquipmentCategories.parse(set.getString("grade_category", "NONE"));
+		equipmentCategories = EquipmentCategory.parse(set.getString("grade_category", "NONE"));
 		
 		_immediate_effect = set.getBoolean("immediate_effect", false);
 		_ex_immediate_effect = set.getBoolean("ex_immediate_effect", false);
@@ -969,7 +969,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		return null;
 	}
 
-	public Set<EquipmentCategories> getEquipmentCategories() {
+	public Set<EquipmentCategory> getEquipmentCategories() {
 		return equipmentCategories;
 	}
 
