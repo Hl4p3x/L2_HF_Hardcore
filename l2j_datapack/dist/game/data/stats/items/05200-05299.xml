@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="5200" name="Chest Key - Grade 5" type="EtcItem">
         <set name="icon" val="icon.etc_key_i00"/>
@@ -1043,7 +1042,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_D"/>
+        <for>
             <set stat="pAtk" val="49"/>
             <set stat="mAtk" val="26"/>
             <set stat="critRate" val="8"/>
@@ -1051,7 +1051,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_D"/>
     </item>
     <item id="5286" name="Berserker Blade" type="Weapon">
         <set name="icon" val="icon.weapon_berserker_blade_i00"/>
@@ -1071,7 +1070,8 @@
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_C"/>
+        <for>
             <set stat="pAtk" val="190"/>
             <set stat="mAtk" val="83"/>
             <set stat="critRate" val="8"/>
@@ -1079,7 +1079,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_C"/>
     </item>
     <item id="5287" name="Sealed Dark Crystal breastplate" type="Armor">
         <set name="icon" val="icon.armor_t74_u_i02"/>
@@ -1093,14 +1092,14 @@
         <set name="weight" val="7700"/>
         <set name="price" val="3562000"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_A"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="171"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5288" name="Sealed Dark Crystal Gaiters" type="Armor">
         <set name="icon" val="icon.armor_t74_l_i02"/>
@@ -1114,14 +1113,14 @@
         <set name="weight" val="3320"/>
         <set name="price" val="2226000"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_A"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="107"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5289" name="Sealed Dark Crystal Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i02"/>
@@ -1134,11 +1133,11 @@
         <set name="weight" val="570"/>
         <set name="price" val="1336000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_A"/>
+        <for>
             <add order="0" stat="pDef" val="69"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5290" name="Sealed Dark Crystal Gloves" type="Armor">
         <set name="icon" val="icon.armor_t74_g_i02"/>
@@ -1151,11 +1150,11 @@
         <set name="weight" val="580"/>
         <set name="price" val="890000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_A"/>
+        <for>
             <add order="0" stat="pDef" val="46"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5291" name="Sealed Dark Crystal Boots" type="Armor">
         <set name="icon" val="icon.armor_t74_b_i02"/>
@@ -1168,11 +1167,11 @@
         <set name="weight" val="1110"/>
         <set name="price" val="890000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_A"/>
+        <for>
             <add order="0" stat="pDef" val="46"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5292" name="Sealed Dark Crystal Shield" type="Armor">
         <set name="icon" val="icon.shield_dark_crystal_shield_i02"/>
@@ -1185,7 +1184,8 @@
         <set name="weight" val="1190"/>
         <set name="price" val="935000"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_A"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -1194,7 +1194,6 @@
             <set stat="sDef" val="243"/>
             <enchant stat="sDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5293" name="Sealed Tallum Plate Armor" type="Armor">
         <set name="icon" val="icon.armor_t77_ul_i02"/>
@@ -1208,14 +1207,14 @@
         <set name="weight" val="9780"/>
         <set name="price" val="5788000"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_A"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="278"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5294" name="Sealed Tallum Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i02"/>
@@ -1228,11 +1227,11 @@
         <set name="weight" val="570"/>
         <set name="price" val="1336000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_A"/>
+        <for>
             <add order="0" stat="pDef" val="69"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5295" name="Sealed Tallum Gloves" type="Armor">
         <set name="icon" val="icon.armor_t77_g_i02"/>
@@ -1245,11 +1244,11 @@
         <set name="weight" val="580"/>
         <set name="price" val="890000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_A"/>
+        <for>
             <add order="0" stat="pDef" val="46"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5296" name="Sealed Tallum Boots" type="Armor">
         <set name="icon" val="icon.armor_t77_b_i02"/>
@@ -1262,11 +1261,11 @@
         <set name="weight" val="1130"/>
         <set name="price" val="890000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_A"/>
+        <for>
             <add order="0" stat="pDef" val="46"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5297" name="Sealed Dark Crystal Leather Armor" type="Armor">
         <set name="icon" val="icon.armor_t75_u_i02"/>
@@ -1280,11 +1279,11 @@
         <set name="weight" val="4300"/>
         <set name="price" val="2671000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_A"/>
+        <for>
             <add order="0" stat="pDef" val="128"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5298" name="Sealed Dark Crystal Leggings" type="Armor">
         <set name="icon" val="icon.armor_t75_l_i02"/>
@@ -1298,11 +1297,11 @@
         <set name="weight" val="1480"/>
         <set name="price" val="1670000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_A"/>
+        <for>
             <add order="0" stat="pDef" val="80"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="5299" name="Sealed Gloves of Underworld" type="Armor">
         <set name="icon" val="icon.armor_t40_g_i00"/>

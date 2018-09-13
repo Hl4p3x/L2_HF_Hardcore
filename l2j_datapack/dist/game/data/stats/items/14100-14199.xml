@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="14100" name="Teddy Girl Agathion Bracelet (event) - 7-day limited period" type="Armor">
         <set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
@@ -89,14 +88,14 @@
         <set name="price" val="46668000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S84"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="236"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14106" name="Sealed Vesper Leather Breastplate" type="Armor">
         <set name="icon" val="icon.armor_t95_u_i02"/>
@@ -111,11 +110,11 @@
         <set name="price" val="35000000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_S84"/>
+        <for>
             <add order="0" stat="pDef" val="177"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14107" name="Sealed Vesper Tunic" type="Armor">
         <set name="icon" val="icon.armor_t96_u_i02"/>
@@ -130,7 +129,8 @@
         <set name="price" val="35000000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S84"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -138,7 +138,6 @@
             <add stat="maxMp" val="637"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14108" name="Sealed Vesper Gaiters" type="Armor">
         <set name="icon" val="icon.armor_t94_l_i02"/>
@@ -153,14 +152,14 @@
         <set name="price" val="29168000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S84"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="148"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14109" name="Sealed Vesper Gauntlet" type="Armor">
         <set name="icon" val="icon.armor_t94_g_i02"/>
@@ -174,14 +173,14 @@
         <set name="price" val="11667000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S84"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="68"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14110" name="Sealed Vesper Boots" type="Armor">
         <set name="icon" val="icon.armor_t94_b_i02"/>
@@ -195,14 +194,14 @@
         <set name="price" val="11667000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S84"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="68"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14111" name="Sealed Vesper Shield" type="Armor">
         <set name="icon" val="icon.weapon_vesper_verteidiger_i00"/>
@@ -215,7 +214,8 @@
         <set name="weight" val="1130"/>
         <set name="price" val="12250000"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S84"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -224,7 +224,6 @@
             <set stat="sDef" val="352"/>
             <enchant stat="sDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14112" name="Sealed Vesper Leather Leggings" type="Armor">
         <set name="icon" val="icon.armor_t95_l_i02"/>
@@ -239,11 +238,11 @@
         <set name="price" val="21876000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_S84"/>
+        <for>
             <add order="0" stat="pDef" val="111"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14113" name="Sealed Vesper Leather Gloves" type="Armor">
         <set name="icon" val="icon.armor_t95_g_i02"/>
@@ -257,11 +256,11 @@
         <set name="price" val="11667000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_S84"/>
+        <for>
             <add order="0" stat="pDef" val="68"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14114" name="Sealed Vesper Leather Boots" type="Armor">
         <set name="icon" val="icon.armor_t95_b_i02"/>
@@ -275,11 +274,11 @@
         <set name="price" val="11667000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_S84"/>
+        <for>
             <add order="0" stat="pDef" val="68"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14115" name="Sealed Vesper Stockings" type="Armor">
         <set name="icon" val="icon.armor_t96_l_i02"/>
@@ -294,7 +293,8 @@
         <set name="price" val="21876000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S84"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -302,7 +302,6 @@
             <add stat="maxMp" val="415"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14116" name="Sealed Vesper Gloves" type="Armor">
         <set name="icon" val="icon.armor_t96_g_i02"/>
@@ -316,14 +315,14 @@
         <set name="price" val="11667000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S84"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="68"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14117" name="Sealed Vesper Shoes" type="Armor">
         <set name="icon" val="icon.armor_t96_b_i02"/>
@@ -337,14 +336,14 @@
         <set name="price" val="11667000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S84"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="68"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14118" name="Vesper Cutter - Haste" type="Weapon">
         <set name="icon" val="icon.weapon_vesper_cutter_i01"/>
@@ -1642,11 +1641,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="7713000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_S84"/>
+        <for>
             <add order="0" stat="mDef" val="83"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14161" name="Sealed Vesper Necklace" type="Armor">
         <set name="icon" val="icon.vesper_necklace_i01"/>
@@ -1659,11 +1658,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="10284000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_S84"/>
+        <for>
             <add order="0" stat="mDef" val="110"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14162" name="Sealed Vesper Ring" type="Armor">
         <set name="icon" val="icon.vesper_ring_i01"/>
@@ -1676,11 +1675,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="5142000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_S84"/>
+        <for>
             <add order="0" stat="mDef" val="55"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="14163" name="Vesper Earring" type="Armor">
         <set name="icon" val="icon.vesper_earring_i00"/>

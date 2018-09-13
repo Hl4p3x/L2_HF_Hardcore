@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="16000" name="Jade Claw {PvP} - Health" type="Weapon">
         <set name="icon" val="icon.weapon_jademice_claw_i01"/>

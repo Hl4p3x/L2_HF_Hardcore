@@ -453,6 +453,7 @@
 	<!-- ADMIN SHOP -->
 	<admin command="admin_buy" accessLevel="7" />
 	<admin command="admin_gmshop" accessLevel="7" />
+    <admin command="admin_categorized" accessLevel="7"/>
 
 	<!-- ADMIN SHOW QUEST -->
 	<admin command="admin_charquestmenu" accessLevel="7" />

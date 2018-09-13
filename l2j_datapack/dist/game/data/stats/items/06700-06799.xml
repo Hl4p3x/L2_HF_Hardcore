@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="6700" name="Sealed Tateossian Necklace Chain" type="EtcItem">
         <set name="icon" val="icon.etc_jewel_box_i00"/>
@@ -362,11 +361,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="3270000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="S"/>
+        <for>
             <add order="0" stat="mDef" val="68"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6725" name="Sealed Tateossian Ring" type="Armor">
         <set name="icon" val="icon.accessory_tateossian_ring_i02"/>
@@ -379,11 +378,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="2180000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="S"/>
+        <for>
             <add order="0" stat="mDef" val="46"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6726" name="Sealed Tateossian Necklace" type="Armor">
         <set name="icon" val="icon.accessory_tateossian_necklace_i02"/>
@@ -396,11 +395,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="4361000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="S"/>
+        <for>
             <add order="0" stat="mDef" val="91"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6727" name="Seed: Alternative Great Coba" type="EtcItem">
         <set name="icon" val="icon.etc_great_coba_seed_i00"/>

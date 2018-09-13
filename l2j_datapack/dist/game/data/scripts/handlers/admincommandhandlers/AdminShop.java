@@ -18,15 +18,24 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.logging.Logger;
-
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;
+import com.l2jserver.gameserver.datatables.categorized.CategorizedDataTable;
+import com.l2jserver.gameserver.datatables.categorized.CategorizedItems;
+import com.l2jserver.gameserver.datatables.categorized.EquipmentCategories;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.buylist.L2BuyList;
+import com.l2jserver.gameserver.model.buylist.Product;
+import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.BuyList;
 import com.l2jserver.gameserver.network.serverpackets.ExBuySellList;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+
+import java.util.Collection;
+import java.util.Map;
+import java.util.Set;
+import java.util.logging.Logger;
 
 /**
  * This class handles following admin commands:
@@ -41,26 +50,55 @@ public class AdminShop implements IAdminCommandHandler
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_buy",
-		"admin_gmshop"
+			"admin_buy",
+			"admin_gmshop",
+			"admin_categorized"
 	};
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		if (command.startsWith("admin_buy"))
-		{
-			try
-			{
+		if (command.startsWith("admin_buy")) {
+			try {
 				handleBuyRequest(activeChar, command.substring(10));
-			}
-			catch (IndexOutOfBoundsException e)
-			{
+			} catch (IndexOutOfBoundsException e) {
 				activeChar.sendMessage("Please specify buylist.");
 			}
-		}
-		else if (command.equals("admin_gmshop"))
-		{
+		} else if (command.startsWith("admin_categorized")) {
+			String[] commandSplit = command.split(" ");
+
+			CategorizedItems categorizedItems = CategorizedDataTable.getInstance().getCategorizedItems();
+			Map<EquipmentCategories, Collection<L2Item>> items = categorizedItems.getAllEquipmentByCategory();
+
+			if (commandSplit.length == 1) {
+				Set<EquipmentCategories> categories = items.keySet();
+
+				StringBuilder html = new StringBuilder();
+				html.append("<table>");
+				categories.forEach(category -> {
+					html.append("<tr>");
+					html.append("<td>");
+					html.append("<button action=\"bypass -h admin_categorized ").append(category.name()).append("\" value=\"").append(category.name()).append("\" width=85 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">");
+					html.append("</td>");
+					html.append("</tr>");
+				});
+				html.append("</table>");
+
+				activeChar.sendPacket(new NpcHtmlMessage(html.toString()));
+			} else if (commandSplit.length == 2) {
+				Collection<L2Item> categoryItems = items.get(EquipmentCategories.valueOf(commandSplit[1]));
+
+				L2BuyList buyList = new L2BuyList(-999);
+				categoryItems.forEach(item -> {
+					buyList.addProduct(new Product(-999, item, 0, 0, -1));
+				});
+
+				activeChar.sendPacket(new BuyList(buyList, activeChar.getAdena(), 0));
+				activeChar.sendPacket(new ExBuySellList(activeChar, false));
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+
+			}
+		} else if (command.equals("admin_gmshop")) {
 			AdminHtml.showAdminHtml(activeChar, "gmshops.htm");
 		}
 		return true;

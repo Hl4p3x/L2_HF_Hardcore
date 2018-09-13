@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="7600" name="Worn Tarot Card - Wealth" type="EtcItem">
         <set name="icon" val="icon.etc_piece_of_report_i00"/>
@@ -774,10 +773,10 @@
         <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="MID_NG"/>
+        <cond msgId="1518">
             <player sex="1"/>
 		</cond>
-        <set name="grade_category" val="MID_NG"/>
     </item>
     <item id="7683" name="Rabbit Ears" type="Armor">
         <set name="icon" val="icon.accessory_rabbit_ear_i00"/>
@@ -915,10 +914,10 @@
         <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="MID_NG"/>
+        <cond msgId="1518">
             <player sex="1"/>
 		</cond>
-        <set name="grade_category" val="MID_NG"/>
     </item>
     <item id="7696" name="Daisy Hairpin" type="Armor">
         <set name="icon" val="icon.accessory_daisy_hairpin_i00"/>
@@ -928,10 +927,10 @@
         <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="MID_NG"/>
+        <cond msgId="1518">
             <player sex="1"/>
 		</cond>
-        <set name="grade_category" val="MID_NG"/>
     </item>
     <item id="7697" name="Piece of Forget-me-not Hairpin" type="EtcItem">
         <set name="icon" val="icon.etc_broken_crystal_green_i00"/>

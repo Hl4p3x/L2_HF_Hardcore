@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="1300" name="Apprentice's Rod" type="Weapon">
         <set name="icon" val="icon.weapon_apprentices_rod_i00"/>
@@ -613,13 +612,13 @@
         <set name="price" val="41600"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-		<for>
+        <set name="grade_category" val="MID_NG"/>
+        <for>
             <set stat="pAtk" val="21"/>
             <set stat="mAtk" val="12"/>
             <set stat="critRate" val="8"/>
             <set stat="pAtkSpd" val="325"/>
 		</for>
-        <set name="grade_category" val="MID_NG"/>
     </item>
     <item id="1334" name="Predator's Fang" type="EtcItem">
         <set name="icon" val="icon.etc_claw_i00"/>

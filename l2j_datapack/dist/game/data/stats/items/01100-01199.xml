@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="1100" name="Cotton Tunic" type="Armor">
         <set name="icon" val="icon.armor_t50_u_i00"/>
@@ -268,11 +267,11 @@
         <set name="weight" val="1600"/>
         <set name="price" val="123900"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <add order="0" stat="pDef" val="34"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="1121" name="Apprentice's Shoes" type="Armor">
         <set name="icon" val="icon.armor_t01_b_i00"/>
@@ -325,11 +324,11 @@
         <set name="weight" val="1250"/>
         <set name="price" val="57400"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_D"/>
+        <for>
             <add order="0" stat="pDef" val="27"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_D"/>
     </item>
     <item id="1125" name="Assault Boots" type="Armor">
         <set name="icon" val="icon.armor_t44_b_i00"/>
@@ -342,11 +341,11 @@
         <set name="weight" val="1240"/>
         <set name="price" val="75200"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_D"/>
+        <for>
             <add order="0" stat="pDef" val="29"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_D"/>
     </item>
     <item id="1126" name="Crimson Boots" type="Armor">
         <set name="icon" val="icon.armor_t57_b_i00"/>
@@ -359,11 +358,11 @@
         <set name="weight" val="1210"/>
         <set name="price" val="123900"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="pDef" val="34"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="1127" name="Forgotten Boots" type="Armor">
         <set name="icon" val="icon.armor_iron_boots_i00"/>
@@ -376,11 +375,11 @@
         <set name="weight" val="4000"/>
         <set name="price" val="188800"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="pDef" val="36"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="1128" name="Adamantite Boots" type="Armor">
         <set name="icon" val="icon.armor_iron_boots_i00"/>
@@ -393,11 +392,11 @@
         <set name="weight" val="4000"/>
         <set name="price" val="275100"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_C"/>
+        <for>
             <add order="0" stat="pDef" val="39"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_C"/>
     </item>
     <item id="1129" name="Crude Leather Shoes" type="Armor">
         <set name="icon" val="icon.armor_t04_b_i00"/>
@@ -651,11 +650,11 @@
         <set name="weight" val="600"/>
         <set name="price" val="283200"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <add order="0" stat="pDef" val="54"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="1150" name="Spellbook: Wind Strike" type="EtcItem">
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="13800" name="Transformation Scroll: Frog" type="EtcItem">
         <set name="icon" val="icon.etc_q_frog_green_i00"/>
@@ -1065,7 +1064,8 @@
         <set name="weight" val="940"/>
         <set name="price" val="3355000"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -1073,7 +1073,6 @@
             <add order="0" stat="pDef" val="13"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="13886" name="Sealed Dynasty Sigil" type="Armor">
         <set name="icon" val="icon.armor_dynasty_sigil_i01"/>
@@ -1087,7 +1086,8 @@
         <set name="weight" val="930"/>
         <set name="price" val="6404000"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S80"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -1095,7 +1095,6 @@
             <add order="0" stat="pDef" val="15"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S80"/>
     </item>
     <item id="13887" name="Sealed Vesper Sigil" type="Armor">
         <set name="icon" val="icon.armor_verper_sigil_i01"/>
@@ -1109,7 +1108,8 @@
         <set name="weight" val="920"/>
         <set name="price" val="12250000"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_S84"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -1117,7 +1117,6 @@
             <add order="0" stat="pDef" val="17"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_S84"/>
     </item>
     <item id="13888" name="Sealed Lord's Cloak" type="Armor">
         <set name="icon" val="icon.feud_load_cloak_i01"/>

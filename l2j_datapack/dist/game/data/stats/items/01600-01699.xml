@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="1600" name="Kasha Bear Claw" type="EtcItem">
         <set name="icon" val="icon.etc_claw_i00"/>
@@ -671,7 +670,8 @@
         <set name="enchant_enabled" val="1"/>
         <set name="oncrit_chance" val="50"/>
         <set name="oncrit_skill" val="3005-1"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <set stat="pAtk" val="62"/>
             <set stat="mAtk" val="42"/>
             <set stat="critRate" val="12"/>
@@ -680,7 +680,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="1661" name="Thief Key" type="EtcItem">
         <set name="icon" val="icon.etc_key_i00"/>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="6500" name="Big Blue Treasure Chest" type="EtcItem">
         <set name="icon" val="icon.etc_treasure_box_i01"/>
@@ -933,7 +932,8 @@
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="S"/>
+        <for>
             <set stat="pAtk" val="225"/>
             <set stat="mAtk" val="175"/>
             <set stat="critRate" val="4"/>
@@ -942,7 +942,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6580" name="Tallum Blade*Dark Legion's Edge" type="Weapon">
         <set name="icon" val="icon.weapon_dual_sword_i00"/>

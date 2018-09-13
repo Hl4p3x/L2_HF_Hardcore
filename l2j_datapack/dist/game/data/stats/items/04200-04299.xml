@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="4200" name="Spellbook: Restore Life" type="EtcItem">
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
@@ -436,7 +435,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="148"/>
             <set stat="mAtk" val="68"/>
             <set stat="critRate" val="4"/>
@@ -445,7 +445,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="4234" name="Hatchling's Level 65 Armor" type="Armor">
         <set name="icon" val="icon.etc_pet_armor_i06"/>

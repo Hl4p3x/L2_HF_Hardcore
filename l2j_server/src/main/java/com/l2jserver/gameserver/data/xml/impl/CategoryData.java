@@ -18,17 +18,16 @@
  */
 package com.l2jserver.gameserver.data.xml.impl;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
+import com.l2jserver.gameserver.enums.CategoryType;
+import com.l2jserver.util.data.xml.IXmlReader;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.enums.CategoryType;
-import com.l2jserver.util.data.xml.IXmlReader;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Loads the category data with Class or NPC IDs.

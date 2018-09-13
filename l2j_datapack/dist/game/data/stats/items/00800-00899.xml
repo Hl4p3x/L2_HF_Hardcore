@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="800" name="Tome of Nassen" type="EtcItem">
         <set name="icon" val="icon.item_normal07"/>
@@ -562,11 +561,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="49400"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_D"/>
+        <for>
             <add order="0" stat="mDef" val="30"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_D"/>
     </item>
     <item id="850" name="Elven Earring" type="Armor">
         <set name="icon" val="icon.accessary_elven_earing_i00"/>
@@ -579,11 +578,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="71900"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <add order="0" stat="mDef" val="34"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="851" name="Omen Beast's Eye Earring" type="Armor">
         <set name="icon" val="icon.accessary_onyxbeastseye_earing_i00"/>
@@ -596,11 +595,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="93300"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_D"/>
+        <for>
             <add order="0" stat="mDef" val="36"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_D"/>
     </item>
     <item id="852" name="Moonstone Earring" type="Armor">
         <set name="icon" val="icon.accessary_moonstone_earing_i00"/>
@@ -613,11 +612,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="119300"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <add order="0" stat="mDef" val="39"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="853" name="Earring of Protection" type="Armor">
         <set name="icon" val="icon.accessary_earing_of_protection_i00"/>
@@ -630,11 +629,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="150500"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <add order="0" stat="mDef" val="42"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="854" name="Earring of Seal" type="Armor">
         <set name="icon" val="icon.accessary_earing_of_binding_i00"/>
@@ -647,11 +646,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="226600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="mDef" val="45"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="855" name="Nassen's Earring" type="Armor">
         <set name="icon" val="icon.accessary_nassens_earing_i00"/>
@@ -664,11 +663,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="325800"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="mDef" val="48"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="856" name="Adamantite Earring" type="Armor">
         <set name="icon" val="icon.accessary_adamantite_earing_i00"/>
@@ -681,11 +680,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="465900"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <add order="0" stat="mDef" val="51"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="857" name="Blessed Earring" type="Armor">
         <set name="icon" val="icon.accessary_blessed_earing_i00"/>
@@ -812,11 +811,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="711000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_B"/>
+        <for>
             <add order="0" stat="mDef" val="54"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_B"/>
     </item>
     <item id="865" name="Earring of Summoning" type="Armor">
         <set name="icon" val="icon.accessary_earing_of_summons_i00"/>
@@ -1070,11 +1069,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="47900"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <add order="0" stat="mDef" val="22"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="882" name="Mithril Ring" type="Armor">
         <set name="icon" val="icon.accessary_mithril_ring_i00"/>
@@ -1087,11 +1086,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="62200"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <add order="0" stat="mDef" val="24"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="883" name="Aquastone Ring" type="Armor">
         <set name="icon" val="icon.accessary_aquastone_ring_i00"/>
@@ -1104,11 +1103,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="79500"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <add order="0" stat="mDef" val="26"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="884" name="Ring of Protection" type="Armor">
         <set name="icon" val="icon.accessary_ring_of_protection_i00"/>
@@ -1121,11 +1120,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="100300"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <add order="0" stat="mDef" val="28"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="885" name="Ring of Ages" type="Armor">
         <set name="icon" val="icon.accessary_ring_of_ages_i00"/>
@@ -1138,11 +1137,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="151100"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="mDef" val="30"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="886" name="Ring of Seal" type="Armor">
         <set name="icon" val="icon.accessary_ring_of_binding_i00"/>
@@ -1155,11 +1154,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="217200"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="mDef" val="32"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="887" name="Adamantite Ring" type="Armor">
         <set name="icon" val="icon.accessary_adamantite_ring_i00"/>
@@ -1172,11 +1171,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="310600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <add order="0" stat="mDef" val="34"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="888" name="Blessed Ring" type="Armor">
         <set name="icon" val="icon.accessary_blessed_ring_i00"/>
@@ -1238,11 +1237,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="474000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <add order="0" stat="mDef" val="36"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="892" name="Paradia Ring" type="Armor">
         <set name="icon" val="icon.accessary_paradia_ring_i00"/>
@@ -1304,11 +1303,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="474000"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_B"/>
+        <for>
             <add order="0" stat="mDef" val="36"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_B"/>
     </item>
     <item id="896" name="Ring of Summoning" type="Armor">
         <set name="icon" val="icon.accessary_ring_of_summons_i00"/>

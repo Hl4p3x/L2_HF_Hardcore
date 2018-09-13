@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.model.items;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.datatables.categorized.EquipmentCategories;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.PcCondOverride;
@@ -40,10 +41,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.StringUtil;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.logging.Logger;
 
 /**
@@ -151,6 +149,8 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private final int _useSkillDisTime;
 	private final int _reuseDelay;
 	private final int _sharedReuseGroup;
+
+	private final Set<EquipmentCategories> equipmentCategories;
 	
 	/**
 	 * Constructor of the L2Item that fill class variables.<BR>
@@ -187,6 +187,8 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_allow_self_resurrection = set.getBoolean("allow_self_resurrection", false);
 		_is_oly_restricted = set.getBoolean("is_oly_restricted", false);
 		_for_npc = set.getBoolean("for_npc", false);
+
+		equipmentCategories = EquipmentCategories.parse(set.getString("grade_category", "NONE"));
 		
 		_immediate_effect = set.getBoolean("immediate_effect", false);
 		_ex_immediate_effect = set.getBoolean("ex_immediate_effect", false);
@@ -946,4 +948,9 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	{
 		return null;
 	}
+
+	public Set<EquipmentCategories> getEquipmentCategories() {
+		return equipmentCategories;
+	}
+
 }

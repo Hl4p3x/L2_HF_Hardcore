@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="7500" name="Halisha's Mark" type="EtcItem">
         <set name="icon" val="icon.etc_eyeball_i00"/>
@@ -871,7 +870,8 @@
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
         <set name="reuse_delay" val="1500"/>
-		<for>
+        <set name="grade_category" val="S"/>
+        <for>
             <set stat="pAtk" val="581"/>
             <set stat="mAtk" val="132"/>
             <set stat="critRate" val="12"/>
@@ -880,7 +880,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="7576" name="Draconic Bow - Cheap Shot" type="Weapon">
         <set name="icon" val="icon.weapon_draconic_bow_i01"/>

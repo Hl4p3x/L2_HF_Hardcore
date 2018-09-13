@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="100" name="Voodoo Doll" type="Weapon">
         <set name="icon" val="icon.weapon_voodoo_doll_i00"/>
@@ -78,7 +77,8 @@
         <set name="weight" val="1240"/>
         <set name="price" val="198300"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="MID_C"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -87,7 +87,6 @@
             <set stat="sDef" val="190"/>
             <enchant stat="sDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="104" name="Shield of Victory" type="Armor">
         <set name="icon" val="icon.shield_small_shield_i00"/>
@@ -163,7 +162,8 @@
         <set name="weight" val="1230"/>
         <set name="price" val="198300"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="MID_C"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -172,7 +172,6 @@
             <set stat="sDef" val="190"/>
             <enchant stat="sDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="108" name="Masterpiece Shield" type="Armor">
         <set name="icon" val="icon.shield_masterpiece_shield_i00"/>
@@ -227,7 +226,8 @@
         <set name="weight" val="1200"/>
         <set name="price" val="649800"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="TOP_B"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -236,7 +236,6 @@
             <set stat="sDef" val="230"/>
             <enchant stat="sDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_B"/>
     </item>
     <item id="111" name="Shield of Pledge" type="Armor">
         <set name="icon" val="icon.shield_shield_of_pledge_i00"/>
@@ -358,11 +357,11 @@
         <set name="weight" val="150"/>
         <set name="price" val="434400"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="mDef" val="64"/>
             <enchant stat="mDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="120" name="Sword of Reflection" type="Weapon">
         <set name="icon" val="icon.weapon_sword_of_watershadow_i00"/>
@@ -378,13 +377,13 @@
         <set name="price" val="105000"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-		<for>
+        <set name="grade_category" val="MID_NG"/>
+        <for>
             <set stat="pAtk" val="24"/>
             <set stat="mAtk" val="17"/>
             <set stat="critRate" val="8"/>
             <set stat="pAtkSpd" val="379"/>
 		</for>
-        <set name="grade_category" val="MID_NG"/>
     </item>
     <item id="121" name="Sword of Watershadow" type="Weapon">
         <set name="icon" val="icon.weapon_sword_of_watershadow_i00"/>
@@ -446,7 +445,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_D"/>
+        <for>
             <set stat="pAtk" val="40"/>
             <set stat="mAtk" val="26"/>
             <set stat="critRate" val="8"/>
@@ -454,7 +454,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_D"/>
     </item>
     <item id="124" name="Two-Handed Sword" type="Weapon">
         <set name="icon" val="icon.weapon_two_handed_sword_i00"/>
@@ -474,7 +473,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <set stat="pAtk" val="78"/>
             <set stat="mAtk" val="39"/>
             <set stat="critRate" val="8"/>
@@ -482,7 +482,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="125" name="Spinebone Sword" type="Weapon">
         <set name="icon" val="icon.weapon_spinebone_sword_i00"/>
@@ -502,7 +501,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <set stat="pAtk" val="51"/>
             <set stat="mAtk" val="32"/>
             <set stat="critRate" val="8"/>
@@ -510,7 +510,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="126" name="Artisan's Sword" type="Weapon">
         <set name="icon" val="icon.weapon_artisans_sword_i00"/>
@@ -611,7 +610,8 @@
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <set stat="pAtk" val="79"/>
             <set stat="mAtk" val="47"/>
             <set stat="critRate" val="8"/>
@@ -619,7 +619,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="130" name="Elven Sword" type="Weapon">
         <set name="icon" val="icon.weapon_elven_sword_i00"/>
@@ -666,7 +665,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="122"/>
             <set stat="mAtk" val="68"/>
             <set stat="critRate" val="8"/>
@@ -674,7 +674,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="132" name="Sword of Limit" type="Weapon">
         <set name="icon" val="icon.weapon_sword_of_limit_i00"/>
@@ -694,7 +693,8 @@
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_C"/>
+        <for>
             <set stat="pAtk" val="139"/>
             <set stat="mAtk" val="76"/>
             <set stat="critRate" val="8"/>
@@ -702,7 +702,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_C"/>
     </item>
     <item id="133" name="Raid Sword" type="Weapon">
         <set name="icon" val="icon.weapon_raid_sword_i00"/>
@@ -722,7 +721,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <set stat="pAtk" val="122"/>
             <set stat="mAtk" val="68"/>
             <set stat="critRate" val="8"/>
@@ -730,7 +730,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="134" name="Sword of Nightmare" type="Weapon">
         <set name="icon" val="icon.weapon_sword_of_nightmare_i00"/>
@@ -750,7 +749,8 @@
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_C"/>
+        <for>
             <set stat="pAtk" val="139"/>
             <set stat="mAtk" val="76"/>
             <set stat="critRate" val="8"/>
@@ -758,7 +758,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_C"/>
     </item>
     <item id="135" name="Samurai Longsword" type="Weapon">
         <set name="icon" val="icon.weapon_samurai_longsword_i00"/>
@@ -778,7 +777,8 @@
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_C"/>
+        <for>
             <set stat="pAtk" val="156"/>
             <set stat="mAtk" val="83"/>
             <set stat="critRate" val="8"/>
@@ -786,7 +786,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_C"/>
     </item>
     <item id="136" name="(Not In Use)" type="EtcItem">
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
@@ -890,7 +889,8 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <set stat="pAtk" val="175"/>
             <set stat="mAtk" val="91"/>
             <set stat="critRate" val="8"/>
@@ -898,7 +898,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="143" name="Sword of Mystic" type="Weapon">
         <set name="icon" val="icon.weapon_sword_of_mystic_i00"/>
@@ -972,7 +971,8 @@
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="TOP_C"/>
+        <for>
             <set stat="pAtk" val="111"/>
             <set stat="mAtk" val="101"/>
             <set stat="critRate" val="8"/>
@@ -980,7 +980,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_C"/>
     </item>
     <item id="146" name="Ghoulbane" type="Weapon">
         <set name="icon" val="icon.weapon_falchion_i00"/>
@@ -1054,7 +1053,8 @@
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <set stat="pAtk" val="140"/>
             <set stat="mAtk" val="122"/>
             <set stat="critRate" val="8"/>
@@ -1062,7 +1062,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="149" name="Sword of Life" type="Weapon">
         <set name="icon" val="icon.weapon_needle_wolverine_i00"/>
@@ -1109,7 +1108,8 @@
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="LOW_A"/>
+        <for>
             <set stat="pAtk" val="170"/>
             <set stat="mAtk" val="143"/>
             <set stat="critRate" val="8"/>
@@ -1117,7 +1117,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_A"/>
     </item>
     <item id="151" name="Sword of Miracles" type="Weapon">
         <set name="icon" val="icon.weapon_sword_of_miracle_i00"/>
@@ -1137,7 +1136,8 @@
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="MID_A"/>
+        <for>
             <set stat="pAtk" val="186"/>
             <set stat="mAtk" val="152"/>
             <set stat="critRate" val="8"/>
@@ -1145,7 +1145,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_A"/>
     </item>
     <item id="152" name="Heavy Chisel" type="Weapon">
         <set name="icon" val="icon.weapon_heavy_chisel_i00"/>
@@ -1279,7 +1278,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_D"/>
+        <for>
             <set stat="pAtk" val="64"/>
             <set stat="mAtk" val="39"/>
             <set stat="critRate" val="4"/>
@@ -1288,7 +1288,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_D"/>
     </item>
     <item id="158" name="Tarbar" type="Weapon">
         <set name="icon" val="icon.weapon_tarbar_i00"/>
@@ -1307,7 +1306,8 @@
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <set stat="pAtk" val="79"/>
             <set stat="mAtk" val="47"/>
             <set stat="critRate" val="4"/>
@@ -1316,7 +1316,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="159" name="Bonebreaker" type="Weapon">
         <set name="icon" val="icon.weapon_bonebreaker_i00"/>
@@ -1335,7 +1334,8 @@
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_D"/>
+        <for>
             <set stat="pAtk" val="92"/>
             <set stat="mAtk" val="54"/>
             <set stat="critRate" val="4"/>
@@ -1344,7 +1344,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_D"/>
     </item>
     <item id="160" name="Battle Axe" type="Weapon">
         <set name="icon" val="icon.weapon_battle_axe_i00"/>
@@ -1363,7 +1362,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="107"/>
             <set stat="mAtk" val="61"/>
             <set stat="critRate" val="4"/>
@@ -1372,7 +1372,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="161" name="Silver Axe" type="Weapon">
         <set name="icon" val="icon.weapon_war_pick_i00"/>
@@ -1391,7 +1390,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="107"/>
             <set stat="mAtk" val="61"/>
             <set stat="critRate" val="4"/>
@@ -1400,7 +1400,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="162" name="War Axe" type="Weapon">
         <set name="icon" val="icon.weapon_war_axe_i00"/>
@@ -1419,7 +1418,8 @@
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <set stat="pAtk" val="139"/>
             <set stat="mAtk" val="76"/>
             <set stat="critRate" val="4"/>
@@ -1428,7 +1428,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="163" name="(Not In Use)" type="EtcItem">
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
@@ -1461,7 +1460,8 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_A"/>
+        <for>
             <set stat="pAtk" val="232"/>
             <set stat="mAtk" val="114"/>
             <set stat="critRate" val="4"/>
@@ -1470,7 +1470,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_A"/>
     </item>
     <item id="165" name="Yablonski's Hammer" type="Weapon">
         <set name="icon" val="icon.weapon_basalt_battlehammer_i00"/>
@@ -1597,7 +1596,8 @@
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <set stat="pAtk" val="79"/>
             <set stat="mAtk" val="47"/>
             <set stat="critRate" val="4"/>
@@ -1606,7 +1606,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="170" name="Sudden Agathion 7-Day Pack (Event)" type="EtcItem">
         <set name="icon" val="icon.etc_pi_gift_box_i02"/>
@@ -1639,7 +1638,8 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <set stat="pAtk" val="194"/>
             <set stat="mAtk" val="99"/>
             <set stat="critRate" val="4"/>
@@ -1648,7 +1648,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="172" name="Heavy Bone Club" type="Weapon">
         <set name="icon" val="icon.weapon_heavy_bone_club_i00"/>
@@ -1667,7 +1666,8 @@
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <set stat="pAtk" val="79"/>
             <set stat="mAtk" val="47"/>
             <set stat="critRate" val="4"/>
@@ -1676,7 +1676,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="173" name="Skull Graver" type="Weapon">
         <set name="icon" val="icon.weapon_skull_graver_i00"/>
@@ -1695,7 +1694,8 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="107"/>
             <set stat="mAtk" val="61"/>
             <set stat="critRate" val="4"/>
@@ -1704,7 +1704,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="174" name="Nirvana Axe" type="Weapon">
         <set name="icon" val="icon.weapon_nirvana_axe_i00"/>
@@ -1724,7 +1723,8 @@
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <set stat="pAtk" val="111"/>
             <set stat="mAtk" val="101"/>
             <set stat="critRate" val="4"/>
@@ -1733,7 +1733,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="175" name="Art of Battle Axe" type="Weapon">
         <set name="icon" val="icon.weapon_art_of_battle_axe_i00"/>
@@ -1752,7 +1751,8 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_B"/>
+        <for>
             <set stat="pAtk" val="194"/>
             <set stat="mAtk" val="99"/>
             <set stat="critRate" val="4"/>
@@ -1761,7 +1761,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_B"/>
     </item>
     <item id="176" name="Apprentice's Staff" type="Weapon">
         <set name="icon" val="icon.weapon_apprentices_staff_i00"/>
@@ -1883,7 +1882,8 @@
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="LOW_D"/>
+        <for>
             <set stat="pAtk" val="41"/>
             <set stat="mAtk" val="43"/>
             <set stat="critRate" val="4"/>
@@ -1892,7 +1892,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_D"/>
     </item>
     <item id="181" name="Mace of Miracle" type="Weapon">
         <set name="icon" val="icon.weapon_mace_of_miracle_i00"/>
@@ -1996,7 +1995,8 @@
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="LOW_D"/>
+        <for>
             <set stat="pAtk" val="50"/>
             <set stat="mAtk" val="47"/>
             <set stat="critRate" val="4"/>
@@ -2005,7 +2005,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_D"/>
     </item>
     <item id="185" name="Staff of Mana" type="Weapon">
         <set name="icon" val="icon.weapon_staff_of_mana_i00"/>
@@ -2081,7 +2080,8 @@
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="MID_D"/>
+        <for>
             <set stat="pAtk" val="90"/>
             <set stat="mAtk" val="79"/>
             <set stat="critRate" val="4"/>
@@ -2090,7 +2090,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_D"/>
     </item>
     <item id="188" name="Ghost Staff" type="Weapon">
         <set name="icon" val="icon.weapon_ghost_staff_i00"/>
@@ -2110,7 +2109,8 @@
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="TOP_D"/>
+        <for>
             <set stat="pAtk" val="90"/>
             <set stat="mAtk" val="79"/>
             <set stat="critRate" val="4"/>
@@ -2119,7 +2119,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_D"/>
     </item>
     <item id="189" name="Staff of Life" type="Weapon">
         <set name="icon" val="icon.weapon_life_stick_i00"/>
@@ -2139,7 +2138,8 @@
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="TOP_D"/>
+        <for>
             <set stat="pAtk" val="74"/>
             <set stat="mAtk" val="72"/>
             <set stat="critRate" val="4"/>
@@ -2148,7 +2148,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_D"/>
     </item>
     <item id="190" name="Atuba Mace" type="Weapon">
         <set name="icon" val="icon.weapon_atuba_mace_i00"/>
@@ -2168,7 +2167,8 @@
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="TOP_D"/>
+        <for>
             <set stat="pAtk" val="90"/>
             <set stat="mAtk" val="79"/>
             <set stat="critRate" val="4"/>
@@ -2177,7 +2177,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_D"/>
     </item>
     <item id="191" name="Heavy Doom Hammer" type="Weapon">
         <set name="icon" val="icon.weapon_heavy_doom_hammer_i00"/>
@@ -2197,7 +2196,8 @@
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="103"/>
             <set stat="mAtk" val="89"/>
             <set stat="critRate" val="4"/>
@@ -2206,7 +2206,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="192" name="Crystal Staff" type="Weapon">
         <set name="icon" val="icon.weapon_crystal_staff_i00"/>
@@ -2226,7 +2225,8 @@
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="103"/>
             <set stat="mAtk" val="89"/>
             <set stat="critRate" val="4"/>
@@ -2235,7 +2235,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="193" name="Stick of Faith" type="Weapon">
         <set name="icon" val="icon.weapon_stick_of_faith_i00"/>
@@ -2255,7 +2254,8 @@
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="85"/>
             <set stat="mAtk" val="81"/>
             <set stat="critRate" val="4"/>
@@ -2264,7 +2264,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="194" name="Heavy Doom Axe" type="Weapon">
         <set name="icon" val="icon.weapon_heavy_doom_axe_i00"/>
@@ -2284,7 +2283,8 @@
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="103"/>
             <set stat="mAtk" val="89"/>
             <set stat="critRate" val="4"/>
@@ -2293,7 +2293,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="195" name="Cursed Staff" type="Weapon">
         <set name="icon" val="icon.weapon_cursed_staff_i00"/>
@@ -2313,7 +2312,8 @@
         <set name="spiritshots" val="2"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="119"/>
             <set stat="mAtk" val="100"/>
             <set stat="critRate" val="4"/>
@@ -2322,7 +2322,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="196" name="Stick of Eternity" type="Weapon">
         <set name="icon" val="icon.weapon_stick_of_eternity_i00"/>
@@ -2342,7 +2341,8 @@
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <set stat="pAtk" val="111"/>
             <set stat="mAtk" val="101"/>
             <set stat="critRate" val="4"/>
@@ -2351,7 +2351,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="197" name="Paradia Staff" type="Weapon">
         <set name="icon" val="icon.weapon_paradia_staff_i00"/>
@@ -2371,7 +2370,8 @@
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <set stat="pAtk" val="135"/>
             <set stat="mAtk" val="111"/>
             <set stat="critRate" val="4"/>
@@ -2380,7 +2380,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="198" name="Inferno Staff" type="Weapon">
         <set name="icon" val="icon.weapon_inferno_staff_i00"/>
@@ -2400,7 +2399,8 @@
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <set stat="pAtk" val="135"/>
             <set stat="mAtk" val="111"/>
             <set stat="critRate" val="4"/>
@@ -2409,7 +2409,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="199" name="Pa'agrian Hammer" type="Weapon">
         <set name="icon" val="icon.weapon_paagrio_hammer_i00"/>
@@ -2429,7 +2428,8 @@
         <set name="spiritshots" val="3"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_magic_weapon" val="true"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <set stat="pAtk" val="135"/>
             <set stat="mAtk" val="111"/>
             <set stat="critRate" val="4"/>
@@ -2438,6 +2438,5 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
 </list>

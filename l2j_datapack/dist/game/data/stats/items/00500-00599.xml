@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="500" name="Great Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
@@ -11,11 +10,11 @@
         <set name="weight" val="610"/>
         <set name="price" val="185800"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <add order="0" stat="pDef" val="51"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="501" name="Armet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
@@ -60,11 +59,11 @@
         <set name="weight" val="590"/>
         <set name="price" val="598600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <add order="0" stat="pDef" val="62"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="504" name="Dragon Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
@@ -288,11 +287,11 @@
         <set name="weight" val="610"/>
         <set name="price" val="283200"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_C"/>
+        <for>
             <add order="0" stat="pDef" val="54"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_C"/>
     </item>
     <item id="518" name="Hell Helm" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
@@ -481,11 +480,11 @@
         <set name="weight" val="320"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="530" name="Sage's Cap" type="Armor">
         <set name="icon" val="icon.armor_cloth_helmet_i00"/>
@@ -514,11 +513,11 @@
         <set name="weight" val="320"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="532" name="Inferno Hood" type="Armor">
         <set name="icon" val="icon.armor_cloth_helmet_i00"/>
@@ -547,11 +546,11 @@
         <set name="weight" val="320"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="534" name="Hood of Black Ore" type="Armor">
         <set name="icon" val="icon.armor_cloth_helmet_i00"/>
@@ -580,11 +579,11 @@
         <set name="weight" val="320"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="536" name="Otherworldly Hood" type="Armor">
         <set name="icon" val="icon.armor_cloth_helmet_i00"/>
@@ -613,11 +612,11 @@
         <set name="weight" val="320"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="538" name="Hood of Phantom" type="Armor">
         <set name="icon" val="icon.armor_cloth_helmet_i00"/>
@@ -646,11 +645,11 @@
         <set name="weight" val="320"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="540" name="Hood of Holy Spirit" type="Armor">
         <set name="icon" val="icon.armor_cloth_helmet_i00"/>
@@ -679,11 +678,11 @@
         <set name="weight" val="590"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_C"/>
     </item>
     <item id="542" name="Cerberus Hood" type="Armor">
         <set name="icon" val="icon.armor_cloth_helmet_i00"/>
@@ -712,11 +711,11 @@
         <set name="weight" val="320"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_C"/>
     </item>
     <item id="544" name="Hood of Blessing" type="Armor">
         <set name="icon" val="icon.armor_cloth_helmet_i00"/>
@@ -745,11 +744,11 @@
         <set name="weight" val="400"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_C"/>
     </item>
     <item id="546" name="Helm of Bravery" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
@@ -810,11 +809,11 @@
         <set name="weight" val="400"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_C"/>
     </item>
     <item id="550" name="Helm of Doom" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
@@ -843,11 +842,11 @@
         <set name="weight" val="400"/>
         <set name="price" val="412600"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_C"/>
+        <for>
             <add order="0" stat="pDef" val="58"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_C"/>
     </item>
     <item id="552" name="Divine Helm" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
@@ -876,11 +875,11 @@
         <set name="weight" val="1280"/>
         <set name="price" val="39100"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_D"/>
+        <for>
             <add order="0" stat="pDef" val="24"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_D"/>
     </item>
     <item id="554" name="Sealed Zubei's Boots" type="Armor">
         <set name="icon" val="icon.armor_t64_b_i02"/>
@@ -893,11 +892,11 @@
         <set name="weight" val="1180"/>
         <set name="price" val="399100"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <add order="0" stat="pDef" val="41"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="555" name="Dragon Boots" type="Armor">
         <set name="icon" val="icon.armor_iron_boots_i00"/>
@@ -1057,11 +1056,11 @@
         <set name="weight" val="1150"/>
         <set name="price" val="618800"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <add order="0" stat="pDef" val="44"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="565" name="Dark Dragon Boots" type="Armor">
         <set name="icon" val="icon.armor_iron_boots_i00"/>
@@ -1186,11 +1185,11 @@
         <set name="weight" val="1190"/>
         <set name="price" val="399100"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <add order="0" stat="pDef" val="41"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="573" name="Gust Boots" type="Armor">
         <set name="icon" val="icon.armor_t45_b_i00"/>
@@ -1283,11 +1282,11 @@
         <set name="weight" val="1180"/>
         <set name="price" val="399100"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <add order="0" stat="pDef" val="41"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="579" name="Marksman Boots" type="Armor">
         <set name="icon" val="icon.armor_iron_boots_i00"/>
@@ -1348,11 +1347,11 @@
         <set name="weight" val="1140"/>
         <set name="price" val="618800"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_B"/>
+        <for>
             <add order="0" stat="pDef" val="44"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_B"/>
     </item>
     <item id="583" name="Majestic Boots" type="Armor">
         <set name="icon" val="icon.armor_t45_b_i00"/>
@@ -1445,11 +1444,11 @@
         <set name="weight" val="1130"/>
         <set name="price" val="618800"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_B"/>
+        <for>
             <add order="0" stat="pDef" val="44"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_B"/>
     </item>
     <item id="589" name="Boots of Phantom" type="Armor">
         <set name="icon" val="icon.armor_t45_b_i00"/>
@@ -1478,11 +1477,11 @@
         <set name="weight" val="1130"/>
         <set name="price" val="618800"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_B"/>
+        <for>
             <add order="0" stat="pDef" val="44"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_B"/>
     </item>
     <item id="591" name="Boots of Holy Spirit" type="Armor">
         <set name="icon" val="icon.armor_iron_boots_i00"/>
@@ -1559,11 +1558,11 @@
         <set name="weight" val="1160"/>
         <set name="price" val="399100"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <add order="0" stat="pDef" val="41"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="596" name="Flame Boots" type="Armor">
         <set name="icon" val="icon.armor_iron_boots_i00"/>

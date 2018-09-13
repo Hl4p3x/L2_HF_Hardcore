@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="15600" name="Vorpal Gloves" type="Armor">
         <set name="icon" val="icon.armor_t96_g_i03"/>
@@ -1399,14 +1398,14 @@
         <set name="price" val="12627000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="TOP_S80"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="96"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_S80"/>
     </item>
     <item id="15695" name="Sealed Moirai Leather Helmet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i02"/>
@@ -1420,11 +1419,11 @@
         <set name="price" val="12627000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_S80"/>
+        <for>
             <add order="0" stat="pDef" val="96"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_S80"/>
     </item>
     <item id="15696" name="Sealed Moirai Circlet" type="Armor">
         <set name="icon" val="icon.armor_circlet_i02"/>
@@ -1438,14 +1437,14 @@
         <set name="price" val="12627000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="TOP_S80"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="96"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_S80"/>
     </item>
     <item id="15697" name="Sealed Moirai Breastplate" type="Armor">
         <set name="icon" val="icon.armor_t94_u_i02"/>
@@ -1460,14 +1459,14 @@
         <set name="price" val="33673000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="TOP_S80"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="225"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_S80"/>
     </item>
     <item id="15698" name="Sealed Moirai Leather Breastplate" type="Armor">
         <set name="icon" val="icon.armor_t95_u_i02"/>
@@ -1482,11 +1481,11 @@
         <set name="price" val="25255000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_S80"/>
+        <for>
             <add order="0" stat="pDef" val="169"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_S80"/>
     </item>
     <item id="15699" name="Sealed Moirai Tunic" type="Armor">
         <set name="icon" val="icon.armor_t96_u_i02"/>
@@ -1501,7 +1500,8 @@
         <set name="price" val="25255000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="TOP_S80"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -1509,6 +1509,5 @@
             <add stat="maxMp" val="614"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_S80"/>
     </item>
 </list>

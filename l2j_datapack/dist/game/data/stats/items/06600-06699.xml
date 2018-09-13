@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="6600" name="Saint Spear - Guidance" type="Weapon">
         <set name="icon" val="icon.weapon_saint_spear_i01"/>
@@ -1251,14 +1250,14 @@
         <set name="price" val="12781000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="193"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6675" name="Sealed Imperial Crusader Gaiters" type="Armor">
         <set name="icon" val="icon.armor_t88_l_i02"/>
@@ -1273,14 +1272,14 @@
         <set name="price" val="7988000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="121"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6676" name="Sealed Imperial Crusader Gauntlet" type="Armor">
         <set name="icon" val="icon.armor_t88_g_i02"/>
@@ -1294,14 +1293,14 @@
         <set name="price" val="3195000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="55"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6677" name="Sealed Imperial Crusader Boots" type="Armor">
         <set name="icon" val="icon.armor_t88_b_i02"/>
@@ -1315,14 +1314,14 @@
         <set name="price" val="3195000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="55"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6678" name="Sealed Imperial Crusader Shield" type="Armor">
         <set name="icon" val="icon.shield_imperial_crusader_shield_i02"/>
@@ -1335,7 +1334,8 @@
         <set name="weight" val="1170"/>
         <set name="price" val="3355000"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -1344,7 +1344,6 @@
             <set stat="sDef" val="276"/>
             <enchant stat="sDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6679" name="Sealed Imperial Crusader Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i02"/>
@@ -1358,14 +1357,14 @@
         <set name="price" val="4793000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="83"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6680" name="Sealed Draconic Leather Armor" type="Armor">
         <set name="icon" val="icon.armor_t89_ul_i02"/>
@@ -1380,11 +1379,11 @@
         <set name="price" val="15577000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="S"/>
+        <for>
             <add order="0" stat="pDef" val="236"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6681" name="Sealed Draconic Leather Glove" type="Armor">
         <set name="icon" val="icon.armor_t89_g_i02"/>
@@ -1398,11 +1397,11 @@
         <set name="price" val="3195000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="S"/>
+        <for>
             <add order="0" stat="pDef" val="55"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6682" name="Sealed Draconic Leather Boots" type="Armor">
         <set name="icon" val="icon.armor_t89_b_i02"/>
@@ -1416,11 +1415,11 @@
         <set name="price" val="3195000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="S"/>
+        <for>
             <add order="0" stat="pDef" val="55"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6683" name="Sealed Draconic Leather Helmet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i02"/>
@@ -1434,11 +1433,11 @@
         <set name="price" val="4793000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="S"/>
+        <for>
             <add order="0" stat="pDef" val="83"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6684" name="Sealed Major Arcana Robe" type="Armor">
         <set name="icon" val="icon.armor_t90_ul_i02"/>
@@ -1453,7 +1452,8 @@
         <set name="price" val="15577000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
@@ -1461,7 +1461,6 @@
             <add stat="maxMp" val="866"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6685" name="Sealed Major Arcana Glove" type="Armor">
         <set name="icon" val="icon.armor_t90_g_i02"/>
@@ -1475,14 +1474,14 @@
         <set name="price" val="3195000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="55"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6686" name="Sealed Major Arcana Boots" type="Armor">
         <set name="icon" val="icon.armor_t90_b_i02"/>
@@ -1496,14 +1495,14 @@
         <set name="price" val="3195000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="55"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6687" name="Sealed Major Arcana Circlet" type="Armor">
         <set name="icon" val="icon.armor_circlet_i02"/>
@@ -1517,14 +1516,14 @@
         <set name="price" val="4793000"/>
         <set name="element_enabled" val="true"/>
         <set name="enchant_enabled" val="1"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="S"/>
+        <cond msgId="1518">
             <player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
 		<for>
             <add order="0" stat="pDef" val="83"/>
             <enchant stat="pDef" val="0"/>
 		</for>
-        <set name="grade_category" val="S"/>
     </item>
     <item id="6688" name="Forgotten Blade Edge" type="EtcItem">
         <set name="icon" val="icon.etc_sword_body_i00"/>

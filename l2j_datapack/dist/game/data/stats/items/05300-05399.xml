@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5300" name="Sealed Boots of Underworld" type="Armor">
 		<set name="icon" val="icon.armor_t10_b_i00"/>
@@ -28,11 +27,11 @@
 		<set name="weight" val="5400"/>
 		<set name="price" val="4341000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="LOW_A"/>
 		<for>
 			<add order="0" stat="pDef" val="209"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="LOW_A"/>
 	</item>
 	<item id="5302" name="Sealed Gust Bracer" type="Armor">
 		<set name="icon" val="icon.armor_t45_g_i00"/>
@@ -78,6 +77,7 @@
 		<set name="weight" val="1860"/>
 		<set name="price" val="2671000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="LOW_A"/>
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
@@ -86,7 +86,6 @@
 			<add stat="maxMp" val="409"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="LOW_A"/>
 	</item>
 	<item id="5305" name="Sealed Tallum Stockings" type="Armor">
 		<set name="icon" val="icon.armor_t79_l_i02"/>
@@ -100,6 +99,7 @@
 		<set name="weight" val="920"/>
 		<set name="price" val="1670000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="LOW_A"/>
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
@@ -108,7 +108,6 @@
 			<add stat="maxMp" val="256"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="LOW_A"/>
 	</item>
 	<item id="5306" name="Sealed Gloves of Black Ore" type="Armor">
 		<set name="icon" val="icon.armor_t14_g_i00"/>
@@ -154,6 +153,7 @@
 		<set name="weight" val="2450"/>
 		<set name="price" val="4341000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="LOW_A"/>
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
@@ -162,7 +162,6 @@
 			<add stat="maxMp" val="665"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="LOW_A"/>
 	</item>
 	<item id="5309" name="Sealed Phoenix Gloves" type="Armor">
 		<set name="icon" val="icon.armor_t44_g_i00"/>
@@ -208,6 +207,7 @@
 		<set name="weight" val="9580"/>
 		<set name="price" val="8804000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="LOW_A"/>
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
@@ -215,7 +215,6 @@
 			<add order="0" stat="pDef" val="293"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="LOW_A"/>
 	</item>
 	<item id="5312" name="Sealed Helm of Nightmare" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i02"/>
@@ -228,11 +227,11 @@
 		<set name="weight" val="560"/>
 		<set name="price" val="2032000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="TOP_A"/>
 		<for>
 			<add order="0" stat="pDef" val="73"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="TOP_A"/>
 	</item>
 	<item id="5313" name="Sealed Gauntlets of Nightmare" type="Armor">
 		<set name="icon" val="icon.armor_t80_g_i02"/>
@@ -245,11 +244,11 @@
 		<set name="weight" val="550"/>
 		<set name="price" val="1355000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="TOP_A"/>
 		<for>
 			<add order="0" stat="pDef" val="49"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="TOP_A"/>
 	</item>
 	<item id="5314" name="Sealed Boots of Nightmare" type="Armor">
 		<set name="icon" val="icon.armor_t80_b_i02"/>
@@ -262,11 +261,11 @@
 		<set name="weight" val="1110"/>
 		<set name="price" val="1355000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="TOP_A"/>
 		<for>
 			<add order="0" stat="pDef" val="49"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="TOP_A"/>
 	</item>
 	<item id="5315" name="Sealed Shield of Nightmare" type="Armor">
 		<set name="icon" val="icon.shield_shield_of_nightmare_i02"/>
@@ -279,6 +278,7 @@
 		<set name="weight" val="1180"/>
 		<set name="price" val="1422000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="LOW_A"/>
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
@@ -288,7 +288,6 @@
 			<set stat="sDef" val="256"/>
 			<enchant stat="sDef" val="0"/>
 		</for>
-		<set name="grade_category" val="LOW_A"/>
 	</item>
 	<item id="5316" name="Sealed Majestic Plate Armor" type="Armor">
 		<set name="icon" val="icon.armor_t83_ul_i02"/>
@@ -302,6 +301,7 @@
 		<set name="weight" val="9200"/>
 		<set name="price" val="8804000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="TOP_A"/>
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
@@ -309,7 +309,6 @@
 			<add order="0" stat="pDef" val="293"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="TOP_A"/>
 	</item>
 	<item id="5317" name="Sealed Majestic Circlet" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i02"/>
@@ -322,11 +321,11 @@
 		<set name="weight" val="550"/>
 		<set name="price" val="2032000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="TOP_A"/>
 		<for>
 			<add order="0" stat="pDef" val="73"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="TOP_A"/>
 	</item>
 	<item id="5318" name="Sealed Majestic Gauntlets" type="Armor">
 		<set name="icon" val="icon.armor_t83_g_i02"/>
@@ -339,11 +338,11 @@
 		<set name="weight" val="540"/>
 		<set name="price" val="1355000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="TOP_A"/>
 		<for>
 			<add order="0" stat="pDef" val="49"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="TOP_A"/>
 	</item>
 	<item id="5319" name="Sealed Majestic Boots" type="Armor">
 		<set name="icon" val="icon.armor_t83_b_i02"/>
@@ -356,11 +355,11 @@
 		<set name="weight" val="1110"/>
 		<set name="price" val="1355000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="TOP_A"/>
 		<for>
 			<add order="0" stat="pDef" val="49"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="TOP_A"/>
 	</item>
 	<item id="5320" name="Sealed Leather Armor of Nightmare" type="Armor">
 		<set name="icon" val="icon.armor_t81_ul_i02"/>
@@ -374,11 +373,11 @@
 		<set name="weight" val="5300"/>
 		<set name="price" val="6603000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="LOW_A"/>
 		<for>
 			<add order="0" stat="pDef" val="220"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="LOW_A"/>
 	</item>
 	<item id="5321" name="Sealed Dark Legion Gloves" type="Armor">
 		<set name="icon" val="icon.armor_t45_g_i00"/>
@@ -424,11 +423,11 @@
 		<set name="weight" val="5350"/>
 		<set name="price" val="6603000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="TOP_A"/>
 		<for>
 			<add order="0" stat="pDef" val="220"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="TOP_A"/>
 	</item>
 	<item id="5324" name="Sealed Gloves of Phantom" type="Armor">
 		<set name="icon" val="icon.armor_t45_g_i00"/>
@@ -474,6 +473,7 @@
 		<set name="weight" val="2300"/>
 		<set name="price" val="6603000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="LOW_A"/>
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
@@ -482,7 +482,6 @@
 			<add stat="maxMp" val="718"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="LOW_A"/>
 	</item>
 	<item id="5327" name="Sealed Cerberus Gloves" type="Armor">
 		<set name="icon" val="icon.armor_t44_g_i00"/>
@@ -528,6 +527,7 @@
 		<set name="weight" val="2330"/>
 		<set name="price" val="6603000"/>
 		<set name="enchant_enabled" val="1"/>
+		<set name="grade_category" val="TOP_A"/>
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF"/>
 		</cond>
@@ -536,7 +536,6 @@
 			<add stat="maxMp" val="718"/>
 			<enchant stat="pDef" val="0"/>
 		</for>
-		<set name="grade_category" val="TOP_A"/>
 	</item>
 	<item id="5330" name="Sealed Dasparion's Gloves" type="Armor">
 		<set name="icon" val="icon.armor_t44_g_i00"/>

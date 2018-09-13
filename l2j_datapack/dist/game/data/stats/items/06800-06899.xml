@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="6800" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
         <set name="icon" val="icon.mticket_cleric_move_i00"/>
@@ -507,10 +506,10 @@
         <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
-		<cond msgId="1518">
+        <set name="grade_category" val="LOW_NG"/>
+        <cond msgId="1518">
             <player sex="1"/>
 		</cond>
-        <set name="grade_category" val="LOW_NG"/>
     </item>
     <item id="6845" name="Pirate's Eye Patch" type="Armor">
         <set name="icon" val="icon.accessory_eye_bandage_i00"/>

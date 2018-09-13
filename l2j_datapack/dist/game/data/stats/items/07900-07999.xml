@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
     <item id="7900" name="Ice Storm Hammer" type="Weapon">
         <set name="icon" val="icon.weapon_ice_storm_hammer_i00"/>
@@ -17,7 +16,8 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="LOW_B"/>
+        <for>
             <set stat="pAtk" val="213"/>
             <set stat="mAtk" val="91"/>
             <set stat="critRate" val="4"/>
@@ -26,7 +26,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="LOW_B"/>
     </item>
     <item id="7901" name="Star Buster" type="Weapon">
         <set name="icon" val="icon.weapon_star_buster_i00"/>
@@ -45,7 +44,8 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="TOP_B"/>
+        <for>
             <set stat="pAtk" val="236"/>
             <set stat="mAtk" val="99"/>
             <set stat="critRate" val="4"/>
@@ -54,7 +54,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="TOP_B"/>
     </item>
     <item id="7902" name="Doom Crusher" type="Weapon">
         <set name="icon" val="icon.weapon_doom_crusher_i00"/>
@@ -73,7 +72,8 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-		<for>
+        <set name="grade_category" val="MID_A"/>
+        <for>
             <set stat="pAtk" val="282"/>
             <set stat="mAtk" val="114"/>
             <set stat="critRate" val="4"/>
@@ -82,7 +82,6 @@
             <enchant stat="pAtk" val="0"/>
             <enchant stat="mAtk" val="0"/>
 		</for>
-        <set name="grade_category" val="MID_A"/>
     </item>
     <item id="7903" name="Frintezza's Sword" type="Weapon">
         <set name="icon" val="icon.weapon_monster_i00"/>

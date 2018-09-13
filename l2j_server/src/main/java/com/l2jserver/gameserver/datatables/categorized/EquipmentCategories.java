@@ -1,5 +1,8 @@
 package com.l2jserver.gameserver.datatables.categorized;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public enum EquipmentCategories {
 
     NONE, //
@@ -10,6 +13,15 @@ public enum EquipmentCategories {
     LOW_A, MID_A, TOP_A, //
     S, //
     LOW_S80, TOP_S80, //
-    LOW_S84, MID_S84, TOP_S84
+    LOW_S84, MID_S84, TOP_S84;
+
+    public static Set<EquipmentCategories> parse(String raw) {
+        Set<EquipmentCategories> result = new HashSet<>();
+        String[] categories = raw.split(";");
+        for (String category : categories) {
+            result.add(valueOf(category));
+        }
+        return result;
+    }
 
 }
