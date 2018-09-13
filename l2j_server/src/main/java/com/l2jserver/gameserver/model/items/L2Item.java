@@ -933,6 +933,26 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	{
 		return _icon;
 	}
+
+	public boolean isMonsterItem() {
+		return getName().contains("For Monsters Only");
+	}
+
+	public boolean isEventItem() {
+		return getName().contains("(Event)");
+	}
+
+	public boolean isNpcItem() {
+		return getName().contains("For NPC");
+	}
+
+	public boolean isTimed() {
+		return getDuration() > 0;
+	}
+
+	public boolean isHair() {
+		return _bodyPart == SLOT_HAIR || _bodyPart == SLOT_HAIR2 || _bodyPart == SLOT_HAIRALL;
+	}
 	
 	public int getDefaultEnchantLevel()
 	{
@@ -951,6 +971,31 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 
 	public Set<EquipmentCategories> getEquipmentCategories() {
 		return equipmentCategories;
+	}
+
+	public boolean isBracelet() {
+		return _bodyPart == SLOT_R_BRACELET || _bodyPart == SLOT_L_BRACELET;
+	}
+
+	public boolean isCloak() {
+		return _bodyPart == SLOT_BACK;
+	}
+
+	public boolean isBelt() {
+		return _bodyPart == SLOT_BELT;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		L2Item l2Item = (L2Item) o;
+		return _itemId == l2Item._itemId;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(_itemId);
 	}
 
 }

@@ -1,0 +1,5897 @@
+[
+  {
+    "itemId": 1121,
+    "itemName": "Apprentice's Shoes",
+    "itemPrice": 5,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 116,
+    "itemName": "Magic Ring",
+    "itemPrice": 25,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 48,
+    "itemName": "Short Gloves",
+    "itemPrice": 28,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 35,
+    "itemName": "Cloth Shoes",
+    "itemPrice": 28,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 36,
+    "itemName": "Leather Sandals",
+    "itemPrice": 28,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 18,
+    "itemName": "Leather Shield",
+    "itemPrice": 30,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 112,
+    "itemName": "Apprentice's Earring",
+    "itemPrice": 38,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 41,
+    "itemName": "Cloth Cap",
+    "itemPrice": 42,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 118,
+    "itemName": "Necklace of Magic",
+    "itemPrice": 51,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 28,
+    "itemName": "Pants",
+    "itemPrice": 71,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 462,
+    "itemName": "Stockings",
+    "itemPrice": 71,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 21,
+    "itemName": "Shirt",
+    "itemPrice": 113,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 426,
+    "itemName": "Tunic",
+    "itemPrice": 113,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 875,
+    "itemName": "Ring of Knowledge",
+    "itemPrice": 420,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1119,
+    "itemName": "Short Leather Gloves",
+    "itemPrice": 470,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1122,
+    "itemName": "Cotton Shoes",
+    "itemPrice": 470,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1129,
+    "itemName": "Crude Leather Shoes",
+    "itemPrice": 470,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 19,
+    "itemName": "Small Shield",
+    "itemPrice": 490,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 7,
+    "itemName": "Apprentice's Rod",
+    "itemPrice": 590,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 11,
+    "itemName": "Bone Dagger",
+    "itemPrice": 590,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 308,
+    "itemName": "Buffalo's Horn",
+    "itemPrice": 590,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 4,
+    "itemName": "Club",
+    "itemPrice": 590,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1,
+    "itemName": "Short Sword",
+    "itemPrice": 590,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13,
+    "itemName": "Short Bow",
+    "itemPrice": 590,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 253,
+    "itemName": "Spiked Gloves",
+    "itemPrice": 590,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 113,
+    "itemName": "Mystic's Earring",
+    "itemPrice": 620,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 42,
+    "itemName": "Leather Cap",
+    "itemPrice": 700,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 906,
+    "itemName": "Necklace of Knowledge",
+    "itemPrice": 830,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1103,
+    "itemName": "Cotton Stockings",
+    "itemPrice": 1170,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 463,
+    "itemName": "Feriotic Stockings",
+    "itemPrice": 1170,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 29,
+    "itemName": "Leather Pants",
+    "itemPrice": 1170,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9577,
+    "itemName": "Cotton Shirt",
+    "itemPrice": 1300,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 876,
+    "itemName": "Ring of Anguish",
+    "itemPrice": 1800,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1100,
+    "itemName": "Cotton Tunic",
+    "itemPrice": 1870,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 428,
+    "itemName": "Feriotic Tunic",
+    "itemPrice": 1870,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 22,
+    "itemName": "Leather Shirt",
+    "itemPrice": 1870,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 49,
+    "itemName": "Gloves",
+    "itemPrice": 2040,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 37,
+    "itemName": "Leather Shoes",
+    "itemPrice": 2040,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 20,
+    "itemName": "Buckler",
+    "itemPrice": 2140,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 114,
+    "itemName": "Earring of Strength",
+    "itemPrice": 2700,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 115,
+    "itemName": "Earring of Wisdom",
+    "itemPrice": 2700,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 43,
+    "itemName": "Wooden Helmet",
+    "itemPrice": 3060,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 907,
+    "itemName": "Necklace of Anguish",
+    "itemPrice": 3600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 30,
+    "itemName": "Hard Leather Pants",
+    "itemPrice": 3820,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 464,
+    "itemName": "Leather Stockings",
+    "itemPrice": 3820,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2386,
+    "itemName": "Wooden Gaiters",
+    "itemPrice": 3820,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 877,
+    "itemName": "Ring of Wisdom",
+    "itemPrice": 4560,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 50,
+    "itemName": "Leather Gloves",
+    "itemPrice": 5210,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 38,
+    "itemName": "Low Boots",
+    "itemPrice": 5210,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 102,
+    "itemName": "Round Shield",
+    "itemPrice": 5470,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9583,
+    "itemName": "Striped Cotton Shirt",
+    "itemPrice": 6100,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 429,
+    "itemName": "Leather Tunic",
+    "itemPrice": 6120,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 23,
+    "itemName": "Wooden Breastplate",
+    "itemPrice": 6120,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 152,
+    "itemName": "Heavy Chisel",
+    "itemPrice": 6200,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 845,
+    "itemName": "Cat's Eye Earring",
+    "itemPrice": 6840,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 44,
+    "itemName": "Leather Helmet",
+    "itemPrice": 7820,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 908,
+    "itemName": "Necklace of Wisdom",
+    "itemPrice": 9120,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 51,
+    "itemName": "Bracer",
+    "itemPrice": 9500,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 39,
+    "itemName": "Boots",
+    "itemPrice": 9500,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 99,
+    "itemName": "Apprentice's Spellbook",
+    "itemPrice": 9600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 3,
+    "itemName": "Broadsword",
+    "itemPrice": 9600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 215,
+    "itemName": "Doom Dagger",
+    "itemPrice": 9600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 12,
+    "itemName": "Knife",
+    "itemPrice": 9600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 5,
+    "itemName": "Mace",
+    "itemPrice": 9600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 14,
+    "itemName": "Bow",
+    "itemPrice": 9600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 254,
+    "itemName": "Iron Gloves",
+    "itemPrice": 9600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8,
+    "itemName": "Willow Staff",
+    "itemPrice": 9600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 31,
+    "itemName": "Bone Gaiters",
+    "itemPrice": 9770,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 412,
+    "itemName": "Cotton Pants",
+    "itemPrice": 9770,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 1104,
+    "itemName": "Stockings of Devotion",
+    "itemPrice": 9770,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 625,
+    "itemName": "Bone Shield",
+    "itemPrice": 9900,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 1148,
+    "itemName": "Hard Leather Helmet",
+    "itemPrice": 14200,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 153,
+    "itemName": "Sigil",
+    "itemPrice": 14200,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 32,
+    "itemName": "Piece Bone Gaiters",
+    "itemPrice": 15300,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 24,
+    "itemName": "Bone Breastplate",
+    "itemPrice": 15600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 390,
+    "itemName": "Cotton Shirt",
+    "itemPrice": 15600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 1101,
+    "itemName": "Tunic of Devotion",
+    "itemPrice": 15600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 33,
+    "itemName": "Hard Leather Gaiters",
+    "itemPrice": 17700,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 1105,
+    "itemName": "Stockings of Magic",
+    "itemPrice": 17700,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 34,
+    "itemName": "Bronze Gaiters",
+    "itemPrice": 23600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 25,
+    "itemName": "Piece Bone Breastplate",
+    "itemPrice": 24480,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 27,
+    "itemName": "Hard Leather Shirt",
+    "itemPrice": 28400,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 1102,
+    "itemName": "Tunic of Magic",
+    "itemPrice": 28400,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 26,
+    "itemName": "Bronze Breastplate",
+    "itemPrice": 37820,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 216,
+    "itemName": "Dirk",
+    "itemPrice": 41600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 154,
+    "itemName": "Dwarven Mace",
+    "itemPrice": 41600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 66,
+    "itemName": "Gladius",
+    "itemPrice": 41600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 122,
+    "itemName": "Handmade Sword",
+    "itemPrice": 41600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 67,
+    "itemName": "Orcish Sword",
+    "itemPrice": 41600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 1333,
+    "itemName": "Brandish",
+    "itemPrice": 41600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 9,
+    "itemName": "Cedar Staff",
+    "itemPrice": 41600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 255,
+    "itemName": "Fox Claw Gloves",
+    "itemPrice": 41600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 271,
+    "itemName": "Hunting Bow",
+    "itemPrice": 41600,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 2,
+    "itemName": "Long Sword",
+    "itemPrice": 105000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 310,
+    "itemName": "Relic of the Saints",
+    "itemPrice": 105000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 218,
+    "itemName": "Throwing Knife",
+    "itemPrice": 105000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 176,
+    "itemName": "Apprentice's Staff",
+    "itemPrice": 105000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 256,
+    "itemName": "Cestus",
+    "itemPrice": 105000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 272,
+    "itemName": "Forest Bow",
+    "itemPrice": 105000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 15,
+    "itemName": "Short Spear",
+    "itemPrice": 105000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 311,
+    "itemName": "Crucifix of Blessing",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 68,
+    "itemName": "Falchion",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 155,
+    "itemName": "Flanged Mace",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 87,
+    "itemName": "Iron Hammer",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 219,
+    "itemName": "Sword Breaker",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 100,
+    "itemName": "Voodoo Doll",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 273,
+    "itemName": "Composite Bow",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 16,
+    "itemName": "Great Spear",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 177,
+    "itemName": "Mage Staff",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 257,
+    "itemName": "Viper Fang",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 5284,
+    "itemName": "Zweihander",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 604,
+    "itemName": "Crafted Leather Gloves",
+    "itemPrice": 16100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 40,
+    "itemName": "Leather Boots",
+    "itemPrice": 16100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 45,
+    "itemName": "Bone Helmet",
+    "itemPrice": 24100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 910,
+    "itemName": "Necklace of Devotion",
+    "itemPrice": 27600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 553,
+    "itemName": "Iron Boots",
+    "itemPrice": 39100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 911,
+    "itemName": "Enchanted Necklace",
+    "itemPrice": 43700,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 881,
+    "itemName": "Elven Ring",
+    "itemPrice": 47900,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 467,
+    "itemName": "Dark Stockings",
+    "itemPrice": 48000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 849,
+    "itemName": "Tiger's Eye Earring",
+    "itemPrice": 49400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2449,
+    "itemName": "Brigandine Gauntlets",
+    "itemPrice": 57400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2448,
+    "itemName": "Manticore Skin Gloves",
+    "itemPrice": 57400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2450,
+    "itemName": "Mithril Gloves",
+    "itemPrice": 57400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 606,
+    "itemName": "Rip Gauntlets",
+    "itemPrice": 57400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1124,
+    "itemName": "Boots of Power",
+    "itemPrice": 57400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2425,
+    "itemName": "Brigandine Boots",
+    "itemPrice": 57400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2426,
+    "itemName": "Elven Mithril Boots",
+    "itemPrice": 57400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2424,
+    "itemName": "Manticore Skin Boots",
+    "itemPrice": 57400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2493,
+    "itemName": "Brigandine Shield",
+    "itemPrice": 60300,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 629,
+    "itemName": "Kite Shield",
+    "itemPrice": 60300,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 882,
+    "itemName": "Mithril Ring",
+    "itemPrice": 62200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 377,
+    "itemName": "Scale Gaiters",
+    "itemPrice": 64100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 850,
+    "itemName": "Elven Earring",
+    "itemPrice": 71900,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 415,
+    "itemName": "Mithril Banded Gaiters",
+    "itemPrice": 73200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 61,
+    "itemName": "Mithril Plate Gloves",
+    "itemPrice": 75200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 607,
+    "itemName": "Ogre Power Gauntlets",
+    "itemPrice": 75200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2451,
+    "itemName": "Sage's Worn Gloves",
+    "itemPrice": 75200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1125,
+    "itemName": "Assault Boots",
+    "itemPrice": 75200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2428,
+    "itemName": "Plate Boots",
+    "itemPrice": 75200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2427,
+    "itemName": "Salamander Skin Boots",
+    "itemPrice": 75200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 434,
+    "itemName": "White Tunic",
+    "itemPrice": 76900,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2494,
+    "itemName": "Plate Shield",
+    "itemPrice": 79000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 630,
+    "itemName": "Square Shield",
+    "itemPrice": 79000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2411,
+    "itemName": "Brigandine Helmet",
+    "itemPrice": 86100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 851,
+    "itemName": "Omen Beast's Eye Earring",
+    "itemPrice": 93300,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 913,
+    "itemName": "Elven Necklace",
+    "itemPrice": 95800,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 348,
+    "itemName": "Scale Mail",
+    "itemPrice": 102500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2401,
+    "itemName": "Elven Mithril Stockings",
+    "itemPrice": 107700,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 417,
+    "itemName": "Manticore Skin Gaiters",
+    "itemPrice": 107700,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 470,
+    "itemName": "Mithril Stockings",
+    "itemPrice": 107700,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2412,
+    "itemName": "Plate Helmet",
+    "itemPrice": 112800,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 393,
+    "itemName": "Mithril Banded Mail",
+    "itemPrice": 117000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 914,
+    "itemName": "Necklace of Darkness",
+    "itemPrice": 124400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2378,
+    "itemName": "Brigandine Gaiters",
+    "itemPrice": 143600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2377,
+    "itemName": "Mithril Scale Gaiters",
+    "itemPrice": 143600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2396,
+    "itemName": "Elven Mithril Tunic",
+    "itemPrice": 172000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 395,
+    "itemName": "Manticore Skin Shirt",
+    "itemPrice": 172000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 437,
+    "itemName": "Mithril Tunic",
+    "itemPrice": 172000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 380,
+    "itemName": "Plate Gaiters",
+    "itemPrice": 188000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 352,
+    "itemName": "Brigandine Tunic",
+    "itemPrice": 229700,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 353,
+    "itemName": "Half Plate Armor",
+    "itemPrice": 300800,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 221,
+    "itemName": "Assassin Knife",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7885,
+    "itemName": "Priest Sword",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 123,
+    "itemName": "Saber",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 313,
+    "itemName": "Temptation of Abyss",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 5285,
+    "itemName": "Heavy Sword",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7880,
+    "itemName": "Steel Sword",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 291,
+    "itemName": "Trident",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 438,
+    "itemName": "Sage's Rag",
+    "itemPrice": 366600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 396,
+    "itemName": "Salamander Skin Mail",
+    "itemPrice": 366600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 180,
+    "itemName": "Mace of Judgment",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 125,
+    "itemName": "Spinebone Sword",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 184,
+    "itemName": "Conjuror's Staff",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 295,
+    "itemName": "Dwarven Trident",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 276,
+    "itemName": "Elven Bow",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 241,
+    "itemName": "Shilen Knife",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 157,
+    "itemName": "Spiked Club",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 317,
+    "itemName": "Tome of Blood",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 278,
+    "itemName": "Gastraphetes",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 124,
+    "itemName": "Two-Handed Sword",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 318,
+    "itemName": "Crucifix of Blood",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 1660,
+    "itemName": "Cursed Maingauche",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 172,
+    "itemName": "Heavy Bone Club",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 224,
+    "itemName": "Maingauche",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 88,
+    "itemName": "Morning Star",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 7890,
+    "itemName": "Priest Mace",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 169,
+    "itemName": "Skull Breaker",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 7886,
+    "itemName": "Sword of Magic Fog",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 129,
+    "itemName": "Sword of Revolution",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 158,
+    "itemName": "Tarbar",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 261,
+    "itemName": "Bich'Hwa",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 90,
+    "itemName": "Goat Head Staff",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 279,
+    "itemName": "Reinforced Long Bow",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 7896,
+    "itemName": "Titan Hammer",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 7881,
+    "itemName": "Titan Sword",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 294,
+    "itemName": "War Pick",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 93,
+    "itemName": "Winged Spear",
+    "itemPrice": 1074000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 321,
+    "itemName": "Demon Fangs",
+    "itemPrice": 1171900,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 159,
+    "itemName": "Bonebreaker",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 2499,
+    "itemName": "Elven Long Sword",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 225,
+    "itemName": "Mithril Dagger",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 189,
+    "itemName": "Staff of Life",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 187,
+    "itemName": "Atuba Hammer",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 190,
+    "itemName": "Atuba Mace",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 70,
+    "itemName": "Claymore",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 188,
+    "itemName": "Ghost Staff",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 297,
+    "itemName": "Glaive",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 280,
+    "itemName": "Light Crossbow",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 262,
+    "itemName": "Scallop Jamadhr",
+    "itemPrice": 1387000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 319,
+    "itemName": "Eye of Infinity",
+    "itemPrice": 1400000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 320,
+    "itemName": "Blue Crystal Skull",
+    "itemPrice": 1520000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 323,
+    "itemName": "Ancient Reagent",
+    "itemPrice": 1800000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 322,
+    "itemName": "Vajra Wands",
+    "itemPrice": 1800000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 883,
+    "itemName": "Aquastone Ring",
+    "itemPrice": 79500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2453,
+    "itemName": "Chain Gloves",
+    "itemPrice": 97100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2454,
+    "itemName": "Karmian Gloves",
+    "itemPrice": 97100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2452,
+    "itemName": "Reinforced Mithril Gloves",
+    "itemPrice": 97100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2433,
+    "itemName": "Boots of Seal",
+    "itemPrice": 97100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2429,
+    "itemName": "Chain Boots",
+    "itemPrice": 97100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2432,
+    "itemName": "Dwarven Chain Boots",
+    "itemPrice": 97100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2430,
+    "itemName": "Karmian Boots",
+    "itemPrice": 97100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2431,
+    "itemName": "Plated Leather Boots",
+    "itemPrice": 97100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 62,
+    "itemName": "Reinforced Mithril Boots",
+    "itemPrice": 97100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 884,
+    "itemName": "Ring of Protection",
+    "itemPrice": 100300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2495,
+    "itemName": "Chain Shield",
+    "itemPrice": 102000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 631,
+    "itemName": "Eldarake",
+    "itemPrice": 102000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 497,
+    "itemName": "Chain Helmet",
+    "itemPrice": 112800,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2455,
+    "itemName": "Plated Leather Gloves",
+    "itemPrice": 114400,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 852,
+    "itemName": "Moonstone Earring",
+    "itemPrice": 119300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2496,
+    "itemName": "Dwarven Chain Shield",
+    "itemPrice": 120100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2456,
+    "itemName": "Dwarven Chain Gloves",
+    "itemPrice": 123900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2457,
+    "itemName": "Gloves of Seal",
+    "itemPrice": 123900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1120,
+    "itemName": "Pa'agrian Hand",
+    "itemPrice": 123900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2458,
+    "itemName": "Rind Leather Gloves",
+    "itemPrice": 123900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1126,
+    "itemName": "Crimson Boots",
+    "itemPrice": 123900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2434,
+    "itemName": "Rind Leather Boots",
+    "itemPrice": 123900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 632,
+    "itemName": "Knight's Shield",
+    "itemPrice": 130100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2413,
+    "itemName": "Chain Hood",
+    "itemPrice": 145700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 853,
+    "itemName": "Earring of Protection",
+    "itemPrice": 150500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 885,
+    "itemName": "Ring of Ages",
+    "itemPrice": 151100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 498,
+    "itemName": "Steel Plate Helmet",
+    "itemPrice": 158200,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 915,
+    "itemName": "Aquastone Necklace",
+    "itemPrice": 159000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 471,
+    "itemName": "Karmian Stockings",
+    "itemPrice": 182100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2387,
+    "itemName": "Reinforced Mithril Gaiters",
+    "itemPrice": 182100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 500,
+    "itemName": "Great Helmet",
+    "itemPrice": 185800,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2459,
+    "itemName": "Demon's Gloves",
+    "itemPrice": 188800,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 608,
+    "itemName": "Mithril Gauntlets",
+    "itemPrice": 188800,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 64,
+    "itemName": "Composite Boots",
+    "itemPrice": 188800,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2435,
+    "itemName": "Demon's Boots",
+    "itemPrice": 188800,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1127,
+    "itemName": "Forgotten Boots",
+    "itemPrice": 188800,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 107,
+    "itemName": "Composite Shield",
+    "itemPrice": 198300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 103,
+    "itemName": "Tower Shield",
+    "itemPrice": 198300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 916,
+    "itemName": "Necklace of Protection",
+    "itemPrice": 200600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2460,
+    "itemName": "Theca Leather Gloves",
+    "itemPrice": 211600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2436,
+    "itemName": "Theca Leather Boots",
+    "itemPrice": 211600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 418,
+    "itemName": "Plated Leather Gaiters",
+    "itemPrice": 214500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 886,
+    "itemName": "Ring of Seal",
+    "itemPrice": 217200,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 854,
+    "itemName": "Earring of Seal",
+    "itemPrice": 226600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 419,
+    "itemName": "Rind Leather Gaiters",
+    "itemPrice": 232300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 381,
+    "itemName": "Chain Gaiters",
+    "itemPrice": 242900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2468,
+    "itemName": "Blessed Gloves",
+    "itemPrice": 275100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2463,
+    "itemName": "Divine Gloves",
+    "itemPrice": 275100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2461,
+    "itemName": "Drake Leather Gloves",
+    "itemPrice": 275100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2462,
+    "itemName": "Full Plate Gauntlets",
+    "itemPrice": 275100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 609,
+    "itemName": "Gauntlets of Ghost",
+    "itemPrice": 275100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1128,
+    "itemName": "Adamantite Boots",
+    "itemPrice": 275100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 603,
+    "itemName": "Divine Boots",
+    "itemPrice": 275100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2437,
+    "itemName": "Drake Leather Boots",
+    "itemPrice": 275100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2438,
+    "itemName": "Full Plate Boots",
+    "itemPrice": 275100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 517,
+    "itemName": "Composite Helmet",
+    "itemPrice": 283200,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1149,
+    "itemName": "Shining Circlet",
+    "itemPrice": 283200,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2497,
+    "itemName": "Full Plate Shield",
+    "itemPrice": 288800,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 439,
+    "itemName": "Karmian Tunic",
+    "itemPrice": 291000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 397,
+    "itemName": "Mithril Shirt",
+    "itemPrice": 291000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 917,
+    "itemName": "Necklace of Mermaid",
+    "itemPrice": 302100,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 382,
+    "itemName": "Dwarven Chain Gaiters",
+    "itemPrice": 309700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 855,
+    "itemName": "Nassen's Earring",
+    "itemPrice": 325800,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 398,
+    "itemName": "Plated Leather",
+    "itemPrice": 343000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 472,
+    "itemName": "Demon's Stockings",
+    "itemPrice": 354000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 399,
+    "itemName": "Rind Leather Armor",
+    "itemPrice": 372000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 354,
+    "itemName": "Chain Mail Shirt",
+    "itemPrice": 388600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 420,
+    "itemName": "Theca Leather Gaiters",
+    "itemPrice": 396700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 529,
+    "itemName": "Cap of Mana",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 537,
+    "itemName": "Elemental Hood",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 545,
+    "itemName": "Flame Helm",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2414,
+    "itemName": "Full Plate Helmet",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 549,
+    "itemName": "Helm of Avadon",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 551,
+    "itemName": "Helmet of Pledge",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 543,
+    "itemName": "Hood of Aid",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 539,
+    "itemName": "Hood of Grace",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 533,
+    "itemName": "Hood of Solar Eclipse",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 535,
+    "itemName": "Hood of Summoning",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 499,
+    "itemName": "Mithril Helmet",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 531,
+    "itemName": "Paradia Hood",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 541,
+    "itemName": "Phoenix Hood",
+    "itemPrice": 412600,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 119,
+    "itemName": "Necklace of Seal",
+    "itemPrice": 434400,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 355,
+    "itemName": "Dwarven Chain Mail Shirt",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 473,
+    "itemName": "Divine Stockings",
+    "itemPrice": 515800,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 441,
+    "itemName": "Demon's Tunic",
+    "itemPrice": 566000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 440,
+    "itemName": "Robe of Seal",
+    "itemPrice": 603900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 400,
+    "itemName": "Theca Leather Armor",
+    "itemPrice": 635000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 442,
+    "itemName": "Divine Tunic",
+    "itemPrice": 825000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 60,
+    "itemName": "Composite Armor",
+    "itemPrice": 1227000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 401,
+    "itemName": "Drake Leather Armor",
+    "itemPrice": 1341000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 160,
+    "itemName": "Battle Axe",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 89,
+    "itemName": "Big Hammer",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 226,
+    "itemName": "Cursed Dagger",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 232,
+    "itemName": "Dark Elven Dagger",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7887,
+    "itemName": "Mysterious Sword",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 161,
+    "itemName": "Silver Axe",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 173,
+    "itemName": "Skull Graver",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 193,
+    "itemName": "Stick of Faith",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 72,
+    "itemName": "Stormbringer",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 230,
+    "itemName": "Wolverine Needle",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 302,
+    "itemName": "Body Slasher",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 263,
+    "itemName": "Chakram",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 192,
+    "itemName": "Crystal Staff",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 281,
+    "itemName": "Crystallized Ice Bow",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 71,
+    "itemName": "Flamberge",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 194,
+    "itemName": "Heavy Doom Axe",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 191,
+    "itemName": "Heavy Doom Hammer",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 298,
+    "itemName": "Orcish Glaive",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 96,
+    "itemName": "Scythe",
+    "itemPrice": 1762900,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 356,
+    "itemName": "Full Plate Armor",
+    "itemPrice": 1788000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2502,
+    "itemName": "Dwarven War Hammer",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 325,
+    "itemName": "Horn of Glory",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 74,
+    "itemName": "Katana",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 133,
+    "itemName": "Raid Sword",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 73,
+    "itemName": "Shamshir",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 242,
+    "itemName": "Soulfire Dirk",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 131,
+    "itemName": "Spirit Sword",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 227,
+    "itemName": "Stiletto",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 94,
+    "itemName": "Bec de Corbin",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 195,
+    "itemName": "Cursed Staff",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 282,
+    "itemName": "Elemental Bow",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 4233,
+    "itemName": "Knuckle Duster",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 285,
+    "itemName": "Noble Elven Bow",
+    "itemPrice": 2209700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 324,
+    "itemName": "Tears of Fairy",
+    "itemPrice": 2870000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 75,
+    "itemName": "Caliburs",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 201,
+    "itemName": "Club of Nature",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 233,
+    "itemName": "Dark Screamer",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 231,
+    "itemName": "Grace Dagger",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 326,
+    "itemName": "Heathen's Book",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 84,
+    "itemName": "Homunkulus's Sword",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 202,
+    "itemName": "Mace of Underworld",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 174,
+    "itemName": "Nirvana Axe",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 196,
+    "itemName": "Stick of Eternity",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 76,
+    "itemName": "Sword of Delusion",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 132,
+    "itemName": "Sword of Limit",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 134,
+    "itemName": "Sword of Nightmare",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 145,
+    "itemName": "Sword of Whispering Death",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 77,
+    "itemName": "Tsurugi",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 162,
+    "itemName": "War Axe",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 283,
+    "itemName": "Akat Long Bow",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 265,
+    "itemName": "Fisted Blade",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 198,
+    "itemName": "Inferno Staff",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 7898,
+    "itemName": "Karik Horn",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 199,
+    "itemName": "Pa'agrian Hammer",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 7882,
+    "itemName": "Pa'agrian Sword",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 197,
+    "itemName": "Paradia Staff",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 95,
+    "itemName": "Poleaxe",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 200,
+    "itemName": "Sage's Staff",
+    "itemPrice": 3304300,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 203,
+    "itemName": "Pa'agrian Axe",
+    "itemPrice": 3677700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 301,
+    "itemName": "Scorpion",
+    "itemPrice": 3677700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 303,
+    "itemName": "Widow Maker",
+    "itemPrice": 3677700,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 327,
+    "itemName": "Hex Doll",
+    "itemPrice": 4300000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 228,
+    "itemName": "Crystal Dagger",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 7891,
+    "itemName": "Ecliptic Axe",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 7888,
+    "itemName": "Ecliptic Sword",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 135,
+    "itemName": "Samurai Longsword",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 2503,
+    "itemName": "Yaksa Mace",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 5286,
+    "itemName": "Berserker Blade",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 204,
+    "itemName": "Deadman's Staff",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 206,
+    "itemName": "Demon's Staff",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 7897,
+    "itemName": "Dwarven Hammer",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 286,
+    "itemName": "Eminence Bow",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 205,
+    "itemName": "Ghoul's Staff",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 266,
+    "itemName": "Great Pata",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 299,
+    "itemName": "Orcish Poleaxe",
+    "itemPrice": 4713500,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 329,
+    "itemName": "Blessed Branch",
+    "itemPrice": 6130000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 328,
+    "itemName": "Candle of Wisdom",
+    "itemPrice": 6130000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 331,
+    "itemName": "Cerberus Eye",
+    "itemPrice": 6130000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 333,
+    "itemName": "Claws of Black Dragon",
+    "itemPrice": 6130000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 330,
+    "itemName": "Phoenix Feather",
+    "itemPrice": 6130000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 332,
+    "itemName": "Scroll of Destruction",
+    "itemPrice": 6130000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 334,
+    "itemName": "Three Eyed Crow's Feather",
+    "itemPrice": 6130000,
+    "gradeInfo": {
+      "grade": "C",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 887,
+    "itemName": "Adamantite Ring",
+    "itemPrice": 310600,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2465,
+    "itemName": "Chain Gloves of Silence",
+    "itemPrice": 399100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2467,
+    "itemName": "Gloves of Blessing",
+    "itemPrice": 399100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2466,
+    "itemName": "Guardian's Gloves",
+    "itemPrice": 399100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2464,
+    "itemName": "Sealed Avadon Gloves",
+    "itemPrice": 399100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 612,
+    "itemName": "Sealed Zubei's Gauntlets",
+    "itemPrice": 399100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 595,
+    "itemName": "Boots of Blessing",
+    "itemPrice": 399100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 572,
+    "itemName": "Boots of Silence",
+    "itemPrice": 399100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 578,
+    "itemName": "Guardian's Boots",
+    "itemPrice": 399100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 600,
+    "itemName": "Sealed Avadon Boots",
+    "itemPrice": 399100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 554,
+    "itemName": "Sealed Zubei's Boots",
+    "itemPrice": 399100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 673,
+    "itemName": "Avadon Shield",
+    "itemPrice": 419000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 633,
+    "itemName": "Zubei's Shield",
+    "itemPrice": 419000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 856,
+    "itemName": "Adamantite Earring",
+    "itemPrice": 465900,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 895,
+    "itemName": "Ring of Black Ore",
+    "itemPrice": 474000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 891,
+    "itemName": "Sage's Ring",
+    "itemPrice": 474000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2415,
+    "itemName": "Avadon Circlet",
+    "itemPrice": 598600,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 503,
+    "itemName": "Zubei's Helmet",
+    "itemPrice": 598600,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2480,
+    "itemName": "Elemental Gloves",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2481,
+    "itemName": "Gloves of Grace",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2485,
+    "itemName": "Implosion Gauntlets",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2486,
+    "itemName": "Paradia Gloves",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2487,
+    "itemName": "Sealed Blue Wolf Gloves",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2475,
+    "itemName": "Sealed Doom Gloves",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 590,
+    "itemName": "Boots of Grace",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 588,
+    "itemName": "Elemental Boots",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 564,
+    "itemName": "Implosion Boots",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 582,
+    "itemName": "Paradia Boots",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2439,
+    "itemName": "Sealed Blue Wolf Boots",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 601,
+    "itemName": "Sealed Doom Boots",
+    "itemPrice": 618800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 918,
+    "itemName": "Adamantite Necklace",
+    "itemPrice": 621200,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 110,
+    "itemName": "Doom Shield",
+    "itemPrice": 649800,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 864,
+    "itemName": "Earring of Black Ore",
+    "itemPrice": 711000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2402,
+    "itemName": "Stockings of Zubei",
+    "itemPrice": 748300,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2388,
+    "itemName": "Zubei's Leather Gaiters",
+    "itemPrice": 748300,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2416,
+    "itemName": "Blue Wolf Helmet",
+    "itemPrice": 928300,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2417,
+    "itemName": "Doom Helmet",
+    "itemPrice": 928300,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 926,
+    "itemName": "Necklace of Black Ore",
+    "itemPrice": 948000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 922,
+    "itemName": "Sage's Necklace",
+    "itemPrice": 948000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2379,
+    "itemName": "Avadon Gaiters",
+    "itemPrice": 997700,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 383,
+    "itemName": "Zubei's Gaiters",
+    "itemPrice": 997700,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2403,
+    "itemName": "Blue Wolf Stockings",
+    "itemPrice": 1160300,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2404,
+    "itemName": "Stockings of Doom",
+    "itemPrice": 1160300,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2397,
+    "itemName": "Tunic of Zubei",
+    "itemPrice": 1197000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2384,
+    "itemName": "Zubei's Leather Shirt",
+    "itemPrice": 1197000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2380,
+    "itemName": "Blue Wolf Gaiters",
+    "itemPrice": 1547100,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2376,
+    "itemName": "Avadon Breastplate",
+    "itemPrice": 1596000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 357,
+    "itemName": "Zubei's Breastplate",
+    "itemPrice": 1596000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2398,
+    "itemName": "Blue Wolf Tunic",
+    "itemPrice": 1857000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2399,
+    "itemName": "Tunic of Doom",
+    "itemPrice": 1857000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2390,
+    "itemName": "Avadon Leather Armor",
+    "itemPrice": 1946000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2406,
+    "itemName": "Avadon Robe",
+    "itemPrice": 1946000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 358,
+    "itemName": "Blue Wolf Breastplate",
+    "itemPrice": 2475000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2391,
+    "itemName": "Blue Wolf Leather Armor",
+    "itemPrice": 3017000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2392,
+    "itemName": "Leather Armor of Doom",
+    "itemPrice": 3017000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2381,
+    "itemName": "Doom Plate Armor",
+    "itemPrice": 4022000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 91,
+    "itemName": "Heavy War Axe",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 243,
+    "itemName": "Hell Knife",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 142,
+    "itemName": "Keshanberk",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 229,
+    "itemName": "Kris",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7892,
+    "itemName": "Spell Breaker",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 148,
+    "itemName": "Sword of Valhalla",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 267,
+    "itemName": "Arthro Nail",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 284,
+    "itemName": "Dark Elven Long Bow",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 300,
+    "itemName": "Great Axe",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 78,
+    "itemName": "Great Sword",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7900,
+    "itemName": "Ice Storm Hammer",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 92,
+    "itemName": "Sprite's Staff",
+    "itemPrice": 6680500,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 264,
+    "itemName": "Pata",
+    "itemPrice": 7830000,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 175,
+    "itemName": "Art of Battle Axe",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 171,
+    "itemName": "Deadman's Glory",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 234,
+    "itemName": "Demon's Dagger",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7893,
+    "itemName": "Kaim Vanul's Bones",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 79,
+    "itemName": "Sword of Damascus",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7889,
+    "itemName": "Wizard's Tear",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 268,
+    "itemName": "Bellion Cestus",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 287,
+    "itemName": "Bow of Peril",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7883,
+    "itemName": "Guardian Sword",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 97,
+    "itemName": "Lance",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 210,
+    "itemName": "Staff of Evil Spirits",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7901,
+    "itemName": "Star Buster",
+    "itemPrice": 10091400,
+    "gradeInfo": {
+      "grade": "B",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6325,
+    "itemName": "Sealed Phoenix Ring",
+    "itemPrice": 670000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5290,
+    "itemName": "Sealed Dark Crystal Gloves",
+    "itemPrice": 890000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5295,
+    "itemName": "Sealed Tallum Gloves",
+    "itemPrice": 890000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5291,
+    "itemName": "Sealed Dark Crystal Boots",
+    "itemPrice": 890000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5296,
+    "itemName": "Sealed Tallum Boots",
+    "itemPrice": 890000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5292,
+    "itemName": "Sealed Dark Crystal Shield",
+    "itemPrice": 935000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6328,
+    "itemName": "Sealed Majestic Ring",
+    "itemPrice": 999000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6324,
+    "itemName": "Sealed Phoenix Earring",
+    "itemPrice": 1005000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5289,
+    "itemName": "Sealed Dark Crystal Helmet",
+    "itemPrice": 1336000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5294,
+    "itemName": "Sealed Tallum Helmet",
+    "itemPrice": 1336000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6323,
+    "itemName": "Sealed Phoenix Necklace",
+    "itemPrice": 1340000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5313,
+    "itemName": "Sealed Gauntlets of Nightmare",
+    "itemPrice": 1355000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5318,
+    "itemName": "Sealed Majestic Gauntlets",
+    "itemPrice": 1355000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5314,
+    "itemName": "Sealed Boots of Nightmare",
+    "itemPrice": 1355000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5319,
+    "itemName": "Sealed Majestic Boots",
+    "itemPrice": 1355000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5315,
+    "itemName": "Sealed Shield of Nightmare",
+    "itemPrice": 1422000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6327,
+    "itemName": "Sealed Majestic Earring",
+    "itemPrice": 1498000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5298,
+    "itemName": "Sealed Dark Crystal Leggings",
+    "itemPrice": 1670000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5305,
+    "itemName": "Sealed Tallum Stockings",
+    "itemPrice": 1670000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6326,
+    "itemName": "Sealed Majestic Necklace",
+    "itemPrice": 1998000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5312,
+    "itemName": "Sealed Helm of Nightmare",
+    "itemPrice": 2032000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5317,
+    "itemName": "Sealed Majestic Circlet",
+    "itemPrice": 2032000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5288,
+    "itemName": "Sealed Dark Crystal Gaiters",
+    "itemPrice": 2226000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5297,
+    "itemName": "Sealed Dark Crystal Leather Armor",
+    "itemPrice": 2671000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5304,
+    "itemName": "Sealed Tallum Tunic",
+    "itemPrice": 2671000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5287,
+    "itemName": "Sealed Dark Crystal breastplate",
+    "itemPrice": 3562000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5308,
+    "itemName": "Sealed Dark Crystal Robe",
+    "itemPrice": 4341000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5301,
+    "itemName": "Sealed Tallum Leather Armor",
+    "itemPrice": 4341000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5293,
+    "itemName": "Sealed Tallum Plate Armor",
+    "itemPrice": 5788000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5320,
+    "itemName": "Sealed Leather Armor of Nightmare",
+    "itemPrice": 6603000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5323,
+    "itemName": "Sealed Majestic Leather Armor",
+    "itemPrice": 6603000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5329,
+    "itemName": "Sealed Majestic Robe",
+    "itemPrice": 6603000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5326,
+    "itemName": "Sealed Robe of Nightmare",
+    "itemPrice": 6603000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5311,
+    "itemName": "Sealed Armor of Nightmare",
+    "itemPrice": 8804000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 5316,
+    "itemName": "Sealed Majestic Plate Armor",
+    "itemPrice": 8804000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 235,
+    "itemName": "Bloody Orchid",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 150,
+    "itemName": "Elemental Sword",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2504,
+    "itemName": "Meteor Shower",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7894,
+    "itemName": "Spiritual Eye",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 80,
+    "itemName": "Tallum Blade",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 269,
+    "itemName": "Blood Tornado",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 288,
+    "itemName": "Carnage Bow",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 212,
+    "itemName": "Dasparion's Staff",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7899,
+    "itemName": "Destroyer Hammer",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 98,
+    "itemName": "Halberd",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7884,
+    "itemName": "Infernal Master",
+    "itemPrice": 14098000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2500,
+    "itemName": "Dark Legion's Edge",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 164,
+    "itemName": "Elysian",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7895,
+    "itemName": "Flaming Dragon Skull",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 236,
+    "itemName": "Soul Separator",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 151,
+    "itemName": "Sword of Miracles",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 213,
+    "itemName": "Branch of the Mother Tree",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7902,
+    "itemName": "Doom Crusher",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 270,
+    "itemName": "Dragon Grinder",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 81,
+    "itemName": "Dragon Slayer",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 289,
+    "itemName": "Soul Bow",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 305,
+    "itemName": "Tallum Glaive",
+    "itemPrice": 20741000,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8680,
+    "itemName": "Barakiel's Axe",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8687,
+    "itemName": "Cabrio's Hand",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8682,
+    "itemName": "Naga Storm",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8678,
+    "itemName": "Sirra's Blade",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8686,
+    "itemName": "Themis' Tongue",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8681,
+    "itemName": "Behemoth's Tuning Fork",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8688,
+    "itemName": "Daimon Crystal",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8684,
+    "itemName": "Shyeed's Bow",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8685,
+    "itemName": "Sobekk's Hurricane",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8679,
+    "itemName": "Sword of Ipos",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 8683,
+    "itemName": "Tiphon's Spear",
+    "itemPrice": 26968400,
+    "gradeInfo": {
+      "grade": "A",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6725,
+    "itemName": "Sealed Tateossian Ring",
+    "itemPrice": 2180000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9454,
+    "itemName": "Sealed Dynasty Ring",
+    "itemPrice": 2688000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6681,
+    "itemName": "Sealed Draconic Leather Glove",
+    "itemPrice": 3195000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6676,
+    "itemName": "Sealed Imperial Crusader Gauntlet",
+    "itemPrice": 3195000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6685,
+    "itemName": "Sealed Major Arcana Glove",
+    "itemPrice": 3195000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6682,
+    "itemName": "Sealed Draconic Leather Boots",
+    "itemPrice": 3195000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6677,
+    "itemName": "Sealed Imperial Crusader Boots",
+    "itemPrice": 3195000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6686,
+    "itemName": "Sealed Major Arcana Boots",
+    "itemPrice": 3195000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6724,
+    "itemName": "Sealed Tateossian Earring",
+    "itemPrice": 3270000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13885,
+    "itemName": "Sealed Arcana Sigil",
+    "itemPrice": 3355000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6678,
+    "itemName": "Sealed Imperial Crusader Shield",
+    "itemPrice": 3355000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9452,
+    "itemName": "Sealed Dynasty Earring",
+    "itemPrice": 4032000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6726,
+    "itemName": "Sealed Tateossian Necklace",
+    "itemPrice": 4361000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6683,
+    "itemName": "Sealed Draconic Leather Helmet",
+    "itemPrice": 4793000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6679,
+    "itemName": "Sealed Imperial Crusader Helmet",
+    "itemPrice": 4793000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6687,
+    "itemName": "Sealed Major Arcana Circlet",
+    "itemPrice": 4793000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9453,
+    "itemName": "Sealed Dynasty Necklace",
+    "itemPrice": 5376000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9517,
+    "itemName": "Sealed Dynasty Gauntlets",
+    "itemPrice": 6099000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9527,
+    "itemName": "Sealed Dynasty Gloves",
+    "itemPrice": 6099000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9522,
+    "itemName": "Sealed Dynasty Leather Gloves",
+    "itemPrice": 6099000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9518,
+    "itemName": "Sealed Dynasty Boots",
+    "itemPrice": 6099000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9523,
+    "itemName": "Sealed Dynasty Leather Boots",
+    "itemPrice": 6099000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9528,
+    "itemName": "Sealed Dynasty Shoes",
+    "itemPrice": 6099000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9529,
+    "itemName": "Sealed Dynasty Shield",
+    "itemPrice": 6404000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13886,
+    "itemName": "Sealed Dynasty Sigil",
+    "itemPrice": 6404000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 6675,
+    "itemName": "Sealed Imperial Crusader Gaiters",
+    "itemPrice": 7988000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9526,
+    "itemName": "Sealed Dynasty Circlet",
+    "itemPrice": 9149000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9516,
+    "itemName": "Sealed Dynasty Helmet",
+    "itemPrice": 9149000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9521,
+    "itemName": "Sealed Dynasty Leather Helmet",
+    "itemPrice": 9149000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9520,
+    "itemName": "Sealed Dynasty Leather Leggings",
+    "itemPrice": 11436000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 9525,
+    "itemName": "Sealed Dynasty Stockings",
+    "itemPrice": 11436000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6674,
+    "itemName": "Sealed Imperial Crusader Breastplate",
+    "itemPrice": 12781000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9515,
+    "itemName": "Sealed Dynasty Gaiter",
+    "itemPrice": 15248000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6680,
+    "itemName": "Sealed Draconic Leather Armor",
+    "itemPrice": 15577000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6684,
+    "itemName": "Sealed Major Arcana Robe",
+    "itemPrice": 15577000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9519,
+    "itemName": "Sealed Dynasty Leather Armor",
+    "itemPrice": 18298000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9524,
+    "itemName": "Sealed Dynasty Tunic",
+    "itemPrice": 18298000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9514,
+    "itemName": "Sealed Dynasty Breast Plate",
+    "itemPrice": 24398000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6367,
+    "itemName": "Angel Slayer",
+    "itemPrice": 42759400,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6579,
+    "itemName": "Arcana Mace",
+    "itemPrice": 42759400,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6365,
+    "itemName": "Basalt Battlehammer",
+    "itemPrice": 42759400,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6364,
+    "itemName": "Forgotten Blade",
+    "itemPrice": 42759400,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6371,
+    "itemName": "Demon Splinter",
+    "itemPrice": 42759400,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 7575,
+    "itemName": "Draconic Bow",
+    "itemPrice": 42759400,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6369,
+    "itemName": "Dragon Hunter Axe",
+    "itemPrice": 42759400,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6372,
+    "itemName": "Heaven's Divider",
+    "itemPrice": 42759400,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6366,
+    "itemName": "Imperial Staff",
+    "itemPrice": 42759400,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6370,
+    "itemName": "Saint Spear",
+    "itemPrice": 42759400,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 6368,
+    "itemName": "Shining Bow",
+    "itemPrice": 48800000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9448,
+    "itemName": "Dynasty Cudgel",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9446,
+    "itemName": "Dynasty Knife",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9449,
+    "itemName": "Dynasty Mace",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9444,
+    "itemName": "Dynasty Phantom",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9442,
+    "itemName": "Dynasty Sword",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9450,
+    "itemName": "Dynasty Bagh-Nakh",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9443,
+    "itemName": "Dynasty Blade",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9445,
+    "itemName": "Dynasty Bow",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 10253,
+    "itemName": "Dynasty Crusher",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 9447,
+    "itemName": "Dynasty Halberd",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 10252,
+    "itemName": "Dynasty Staff",
+    "itemPrice": 74946000,
+    "gradeInfo": {
+      "grade": "S",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 15766,
+    "itemName": "Sealed Moirai Ring",
+    "itemPrice": 3710000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15767,
+    "itemName": "Sealed Moirai Earring",
+    "itemPrice": 5565000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15768,
+    "itemName": "Sealed Moirai Necklace",
+    "itemPrice": 7420000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15703,
+    "itemName": "Sealed Moirai Gauntlet",
+    "itemPrice": 8418000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15705,
+    "itemName": "Sealed Moirai Gloves",
+    "itemPrice": 8418000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15704,
+    "itemName": "Sealed Moirai Leather Gloves",
+    "itemPrice": 8418000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15706,
+    "itemName": "Sealed Moirai Boots",
+    "itemPrice": 8418000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15707,
+    "itemName": "Sealed Moirai Leather Boots",
+    "itemPrice": 8418000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15708,
+    "itemName": "Sealed Moirai Shoes",
+    "itemPrice": 8418000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15710,
+    "itemName": "Sealed Moirai Shield",
+    "itemPrice": 8839000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15709,
+    "itemName": "Sealed Moirai Sigil",
+    "itemPrice": 8839000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15696,
+    "itemName": "Sealed Moirai Circlet",
+    "itemPrice": 12627000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15694,
+    "itemName": "Sealed Moirai Helmet",
+    "itemPrice": 12627000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15695,
+    "itemName": "Sealed Moirai Leather Helmet",
+    "itemPrice": 12627000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15701,
+    "itemName": "Sealed Moirai Leather Legging",
+    "itemPrice": 15784000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15702,
+    "itemName": "Sealed Moirai Stockings",
+    "itemPrice": 15784000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15700,
+    "itemName": "Sealed Moirai Gaiter",
+    "itemPrice": 21046000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15698,
+    "itemName": "Sealed Moirai Leather Breastplate",
+    "itemPrice": 25255000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15699,
+    "itemName": "Sealed Moirai Tunic",
+    "itemPrice": 25255000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 15697,
+    "itemName": "Sealed Moirai Breastplate",
+    "itemPrice": 33673000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 10216,
+    "itemName": "Icarus Disperser",
+    "itemPrice": 103439000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 10222,
+    "itemName": "Icarus Hall",
+    "itemPrice": 103439000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 10220,
+    "itemName": "Icarus Hammer",
+    "itemPrice": 103439000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 10215,
+    "itemName": "Icarus Sawsword",
+    "itemPrice": 103439000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 10217,
+    "itemName": "Icarus Spirit",
+    "itemPrice": 103439000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 10221,
+    "itemName": "Icarus Hand",
+    "itemPrice": 103439000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 10218,
+    "itemName": "Icarus Heavy Arms",
+    "itemPrice": 103439000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 10223,
+    "itemName": "Icarus Spitter",
+    "itemPrice": 103439000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 10219,
+    "itemName": "Icarus Trident",
+    "itemPrice": 103439000,
+    "gradeInfo": {
+      "grade": "S80",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14162,
+    "itemName": "Sealed Vesper Ring",
+    "itemPrice": 5142000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14160,
+    "itemName": "Sealed Vesper Earring",
+    "itemPrice": 7713000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14161,
+    "itemName": "Sealed Vesper Necklace",
+    "itemPrice": 10284000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14109,
+    "itemName": "Sealed Vesper Gauntlet",
+    "itemPrice": 11667000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14116,
+    "itemName": "Sealed Vesper Gloves",
+    "itemPrice": 11667000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14113,
+    "itemName": "Sealed Vesper Leather Gloves",
+    "itemPrice": 11667000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14110,
+    "itemName": "Sealed Vesper Boots",
+    "itemPrice": 11667000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14114,
+    "itemName": "Sealed Vesper Leather Boots",
+    "itemPrice": 11667000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14117,
+    "itemName": "Sealed Vesper Shoes",
+    "itemPrice": 11667000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14111,
+    "itemName": "Sealed Vesper Shield",
+    "itemPrice": 12250000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13887,
+    "itemName": "Sealed Vesper Sigil",
+    "itemPrice": 12250000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13145,
+    "itemName": "Sealed Vesper Circlet",
+    "itemPrice": 17500000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13143,
+    "itemName": "Sealed Vesper Helmet",
+    "itemPrice": 17500000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13144,
+    "itemName": "Sealed Vesper Leather Helmet",
+    "itemPrice": 17500000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14112,
+    "itemName": "Sealed Vesper Leather Leggings",
+    "itemPrice": 21876000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14115,
+    "itemName": "Sealed Vesper Stockings",
+    "itemPrice": 21876000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14108,
+    "itemName": "Sealed Vesper Gaiters",
+    "itemPrice": 29168000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14106,
+    "itemName": "Sealed Vesper Leather Breastplate",
+    "itemPrice": 35000000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14107,
+    "itemName": "Sealed Vesper Tunic",
+    "itemPrice": 35000000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 14105,
+    "itemName": "Sealed Vesper Breastplate",
+    "itemPrice": 46668000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13463,
+    "itemName": "Vesper Avenger",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13459,
+    "itemName": "Vesper Buster",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13465,
+    "itemName": "Vesper Caster",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13457,
+    "itemName": "Vesper Cutter",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13460,
+    "itemName": "Vesper Shaper",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13461,
+    "itemName": "Vesper Fighter",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13464,
+    "itemName": "Vesper Retributer",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13466,
+    "itemName": "Vesper Singer",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13458,
+    "itemName": "Vesper Slasher",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13462,
+    "itemName": "Vesper Stormer",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 13467,
+    "itemName": "Vesper Thrower",
+    "itemPrice": 143356000,
+    "gradeInfo": {
+      "grade": "S84",
+      "category": "LOW"
+    }
+  }
+]

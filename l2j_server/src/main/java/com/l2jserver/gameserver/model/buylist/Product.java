@@ -18,17 +18,20 @@
  */
 package com.l2jserver.gameserver.model.buylist;
 
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.model.items.L2Item;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.model.items.L2Item;
+import java.util.stream.Collectors;
 
 /**
  * @author NosBit
@@ -186,4 +189,9 @@ public final class Product
 			_log.log(Level.WARNING, "Failed to save Product buylist_id:" + getBuyListId() + " item_id:" + getItemId(), e);
 		}
 	}
+
+	public static List<L2Item> convertToItems(Collection<Product> products) {
+		return products.stream().map(Product::getItem).collect(Collectors.toList());
+	}
+
 }
