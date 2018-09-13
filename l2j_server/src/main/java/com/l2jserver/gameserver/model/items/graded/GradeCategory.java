@@ -2,6 +2,6 @@ package com.l2jserver.gameserver.model.items.graded;
 
 public enum GradeCategory {
 
-    LOW, MID, TOP
+    LOW, MID, TOP, ALL, UNSET
 
 }

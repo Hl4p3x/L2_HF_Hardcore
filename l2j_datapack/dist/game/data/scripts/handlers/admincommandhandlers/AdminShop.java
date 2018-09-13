@@ -75,7 +75,7 @@ public class AdminShop implements IAdminCommandHandler
                 Set<GradeInfo> categories = items.keySet();
 
 				StringBuilder html = new StringBuilder();
-				html.append("<table>");
+                html.append("<center><table>");
 				categories.forEach(category -> {
                     String categoryKey = category.getGrade() + " " + category.getCategory();
 
@@ -89,7 +89,7 @@ public class AdminShop implements IAdminCommandHandler
 					html.append("</td>");
 					html.append("</tr>");
 				});
-				html.append("</table>");
+                html.append("</table></center>");
 
 				activeChar.sendPacket(new NpcHtmlMessage(html.toString()));
             } else if (commandSplit.length == 3) {

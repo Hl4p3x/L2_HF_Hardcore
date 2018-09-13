@@ -32,6 +32,57 @@ import java.util.stream.Stream;
 
 public class GradedEquipmentGenerator {
 
+    private static final List<Integer> blacklistIds = Arrays.asList(
+            2465, // Chain Gloves of Silence
+            2467, // Gloves of Blessing
+            2466, // Guardian's Gloves
+            612, // Sealed Zubei's Gauntlets
+            595, // Boots of Blessing
+            572, // Boots of Silence
+            578, // Guardian's Boots
+            2480, // Elemental Gloves
+            2481, // Gloves of Grace
+            2485, // Implosion Gauntlets
+            2486, // Paradia Gloves
+            590, // Boots of Grace
+            588, // Elemental Boots
+            564, // Implosion Boots
+            582, // Paradia Boots
+            324, // Tears of Fairy
+            327, // Hex Doll
+            329, // Blessed Branch
+            328, // Candle of Wisdom
+            331, // Cerberus Eye
+            333, // Claws of Black Dragon
+            330, // Phoenix Feather
+            332, // Scroll of Destruction
+            334, // Three Eyed Crow's Feather
+            325, // Horn of Glory
+            230, // Wolverine Needle
+            531, // Paradia Hood
+            541, // Phoenix Hood
+            549, // Helm of Avadon
+            551, // Helmet of Pledge
+            543, // Hood of Aid
+            539, // Hood of Grace
+            533, // Hood of Solar Eclipse
+            535, // Hood of Summoning
+            529, // Cap of Mana
+            537, // Elemental Hood
+            545, // Flame Helm
+            1128, // Adamantite Boots
+            609, // Gauntlets of Ghost
+            2468, // Blessed Gloves
+            1127, // Forgotten Boots
+            1126, // Crimson Boots
+            1120, // Pa'agrian Hand
+            319, // Eye of Infinity
+            320, // Blue Crystal Skull
+            323, // Ancient Reagent
+            322, // Vajra Wands
+            6368 // Shining Bow
+    );
+
     private static CategorizedItems collectCategorizedItems() {
         Map<Integer, L2Weapon> weaponsMap = ItemTable.getInstance().getWeapons();
         Map<Integer, L2Armor> armorsMap = ItemTable.getInstance().getArmor();
@@ -41,12 +92,16 @@ public class GradedEquipmentGenerator {
 
         List<L2Weapon> craftableWeapons = weaponsMap.values()
                 .stream()
-                .filter(weapon -> craftableIds.contains(weapon.getId()) &&
+                .filter(weapon ->
+                        !blacklistIds.contains(weapon.getId()) &&
+                                craftableIds.contains(weapon.getId()) &&
                         !weapon.getCrystalType().equals(CrystalType.NONE))
                 .collect(Collectors.toList());
         List<L2Armor> craftableArmors = armorsMap.values()
                 .stream()
-                .filter(armor -> (craftableIds.contains(armor.getId()) && !armor.isHair()) &&
+                .filter(armor ->
+                        !blacklistIds.contains(armor.getId()) &&
+                                (craftableIds.contains(armor.getId()) && !armor.isHair()) &&
                         !armor.isBracelet() && !armor.isCloak() && !armor.isBelt() &&
                         !armor.getCrystalType().equals(CrystalType.NONE))
                 .collect(Collectors.toList());
@@ -101,7 +156,48 @@ public class GradedEquipmentGenerator {
         return new CategorizedItems(craftableWeapons, nonMasterworkArmors, nonMasterworkJewels, weaponAndArmorParts, craftMaterials, recipes, weaponEnchants, armorEnchants);
     }
 
+    private static <T extends L2Item> List<L2Item> sort(List<T> items) {
+        Comparator<L2Item> crystalCompare = Comparator.comparing(item -> item.getCrystalType().getId());
+        Comparator<L2Item> bodyPartCompare = Comparator.comparing(L2Item::getBodyPart);
+        Comparator<L2Item> priceCompare = Comparator.comparing(L2Item::getReferencePrice);
+        Comparator<L2Item> nameCompare = Comparator.comparing(L2Item::getName);
+
+        return items.stream()
+                .sorted(
+                        crystalCompare.thenComparing(priceCompare).thenComparing(bodyPartCompare).thenComparing(nameCompare)
+                ).collect(Collectors.toList());
+    }
+
+    private static List<GradedItem> convert(List<L2Item> items) {
+        return items.stream()
+                .map(item -> new GradedItem(item.getId(), item.getName(), item.getReferencePrice(),
+                        new GradeInfo(Grade.fromCrystalType(item.getCrystalType()), GradeCategory.UNSET)))
+                .collect(Collectors.toList());
+    }
+
     public static void main(String[] args) throws IOException {
+        Config.DATAPACK_ROOT = new File("l2j_datapack/dist/game");
+        Server.serverMode = Server.MODE_GAMESERVER;
+        Config.load();
+
+        List<GradedItem> allWeapon = convert(sort(collectCategorizedItems().getNonMasterworkWeapons()));
+        List<GradedItem> allArmor = convert(sort(collectCategorizedItems().getNonMasterworkArmors()));
+        List<GradedItem> allJewels = convert(sort(collectCategorizedItems().getNonMasterworkJewels()));
+
+        gradeItems(allWeapon);
+        gradeItems(allArmor);
+        gradeItems(allJewels);
+
+        List<GradedItem> allItems = new ArrayList<>();
+        allItems.addAll(allWeapon);
+        allItems.addAll(allArmor);
+        allItems.addAll(allJewels);
+
+        File gradedEquipment = new File("data/stats/categorized/graded_equipment.json");
+        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(gradedEquipment, allItems);
+    }
+
+    private static void gradeItems(List<GradedItem> itemsToBeGraded) {
         Map<Grade, Integer> gradeParts = new HashMap<>();
         gradeParts.put(Grade.NG, 3);
         gradeParts.put(Grade.D, 3);
@@ -112,40 +208,36 @@ public class GradedEquipmentGenerator {
         gradeParts.put(Grade.S80, 1);
         gradeParts.put(Grade.S84, 1);
 
-        Config.DATAPACK_ROOT = new File("l2j_datapack/dist/game");
-        Server.serverMode = Server.MODE_GAMESERVER;
-        Config.load();
+        Map<Integer, Map<Integer, GradeCategory>> categoriesForParts = new HashMap<>();
+        Map<Integer, GradeCategory> single = new HashMap<>();
+        single.put(1, GradeCategory.ALL);
+        categoriesForParts.put(1, single);
 
-        List<L2Item> allEquipment = collectCategorizedItems().getAllEquipment();
+        Map<Integer, GradeCategory> twoPart = new HashMap<>();
+        twoPart.put(1, GradeCategory.LOW);
+        twoPart.put(2, GradeCategory.TOP);
+        categoriesForParts.put(2, twoPart);
 
-        Comparator<L2Item> crystalCompare = Comparator.comparing(item -> item.getCrystalType().getId());
-        Comparator<L2Item> bodyPartCompare = Comparator.comparing(L2Item::getBodyPart);
-        Comparator<L2Item> priceCompare = Comparator.comparing(L2Item::getReferencePrice);
-        Comparator<L2Item> nameCompare = Comparator.comparing(L2Item::getName);
-
-        List<L2Item> sorted = allEquipment.stream()
-                .sorted(
-                        crystalCompare.thenComparing(priceCompare).thenComparing(bodyPartCompare).thenComparing(nameCompare)
-                )
-                .collect(Collectors.toList());
-        List<GradedItem> gradedItems = sorted.stream().map(item -> new GradedItem(item.getId(), item.getName(), item.getReferencePrice(), new GradeInfo(Grade.fromCrystalType(item.getCrystalType()), GradeCategory.MID))).collect(Collectors.toList());
+        Map<Integer, GradeCategory> threePart = new HashMap<>();
+        threePart.put(1, GradeCategory.LOW);
+        threePart.put(2, GradeCategory.MID);
+        threePart.put(3, GradeCategory.TOP);
+        categoriesForParts.put(3, threePart);
 
         Multimap<Grade, GradedItem> gradedItemsByGrade = LinkedHashMultimap.create();
-        gradedItems.forEach(item -> gradedItemsByGrade.put(item.getGradeInfo().getGrade(), item));
+        itemsToBeGraded.forEach(item -> gradedItemsByGrade.put(item.getGradeInfo().getGrade(), item));
 
         gradedItemsByGrade.asMap().forEach((key, value) -> {
             List<List<GradedItem>> items = CollectionUtil.splitList(new ArrayList<>(value), gradeParts.get(key));
-            int grade = 0;
+            Map<Integer, GradeCategory> categoryMapper = categoriesForParts.get(items.size());
+            int grade = 1;
             for (List<GradedItem> gradedItem : items) {
                 for (GradedItem it : gradedItem) {
-                    it.getGradeInfo().setCategory(GradeCategory.values()[grade]);
+                    it.getGradeInfo().setCategory(categoryMapper.get(grade));
                 }
                 grade += 1;
             }
         });
-
-        File gradedEquipment = new File("data/stats/categorized/graded_equipment.json");
-        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(gradedEquipment, gradedItems);
     }
 
 }
