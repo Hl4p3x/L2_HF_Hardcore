@@ -1,41 +1,46 @@
 package com.l2jserver.gameserver.model.actor.templates.drop;
 
-import com.l2jserver.gameserver.datatables.categorized.EquipmentCategory;
+import com.l2jserver.gameserver.model.items.graded.Grade;
+import com.l2jserver.gameserver.model.items.graded.GradeCategory;
+import com.l2jserver.gameserver.model.items.graded.GradeInfo;
+
+import java.util.Optional;
+import java.util.stream.Stream;
 
 public enum EquipmentGradeRanges {
 
-    LOW_NG(1, 9, EquipmentCategory.LOW_NG), //
-    MID_NG(10, 16, EquipmentCategory.MID_NG), //
-    TOP_NG(17, 20, EquipmentCategory.TOP_NG), //
+    LOW_NG(1, 9, new GradeInfo(Grade.NG, GradeCategory.LOW)), //
+    MID_NG(10, 16, new GradeInfo(Grade.NG, GradeCategory.MID)), //
+    TOP_NG(17, 20, new GradeInfo(Grade.NG, GradeCategory.TOP)), //
     //
-    LOW_D(21, 30, EquipmentCategory.LOW_D), //
-    MID_D(31, 36, EquipmentCategory.MID_D), //
-    TOP_D(37, 40, EquipmentCategory.TOP_D), //
+    LOW_D(21, 30, new GradeInfo(Grade.D, GradeCategory.LOW)), //
+    MID_D(31, 36, new GradeInfo(Grade.D, GradeCategory.MID)), //
+    TOP_D(37, 40, new GradeInfo(Grade.D, GradeCategory.TOP)), //
     //
-    LOW_C(41, 46, EquipmentCategory.LOW_C), //
-    MID_C(47, 49, EquipmentCategory.MID_C), //
-    TOP_C(50, 52, EquipmentCategory.TOP_C), //
+    LOW_C(41, 46, new GradeInfo(Grade.C, GradeCategory.LOW)), //
+    MID_C(47, 49, new GradeInfo(Grade.C, GradeCategory.MID)), //
+    TOP_C(50, 52, new GradeInfo(Grade.C, GradeCategory.TOP)), //
     //
-    LOW_B(53, 58, EquipmentCategory.LOW_B), //
-    TOP_B(59, 61, EquipmentCategory.TOP_B), //
+    LOW_B(53, 58, new GradeInfo(Grade.B, GradeCategory.LOW)), //
+    TOP_B(59, 61, new GradeInfo(Grade.B, GradeCategory.TOP)), //
     //
-    LOW_A(62, 68, EquipmentCategory.LOW_A), //
-    MID_A(62, 68, EquipmentCategory.MID_A), //
-    TOP_A(69, 75, EquipmentCategory.TOP_A), //
+    LOW_A(62, 68, new GradeInfo(Grade.A, GradeCategory.LOW)), //
+    MID_A(69, 71, new GradeInfo(Grade.A, GradeCategory.MID)), //
+    TOP_A(72, 75, new GradeInfo(Grade.A, GradeCategory.TOP)), //
     //
-    S(76, 79, EquipmentCategory.S), //
-    S_DYNO(80, 81, EquipmentCategory.LOW_S80), //
-    S_MORA(82, 83, EquipmentCategory.TOP_S80), //
-    S_VESP(84, 84, EquipmentCategory.LOW_S84);
+    S(76, 79, new GradeInfo(Grade.S, GradeCategory.ALL)), //
+    S_DYNO(80, 82, new GradeInfo(Grade.S80, GradeCategory.LOW)), //
+    S_MORA(83, 84, new GradeInfo(Grade.S80, GradeCategory.TOP)), //
+    S_VESP(85, 88, new GradeInfo(Grade.S84, GradeCategory.LOW));
 
     private int lowLevel;
     private int highLevel;
-    private EquipmentCategory equipmentCategory;
+    private GradeInfo gradeInfo;
 
-    EquipmentGradeRanges(int lowLevel, int highLevel, EquipmentCategory equipmentCategory) {
+    EquipmentGradeRanges(int lowLevel, int highLevel, GradeInfo gradeInfo) {
         this.lowLevel = lowLevel;
         this.highLevel = highLevel;
-        this.equipmentCategory = equipmentCategory;
+        this.gradeInfo = gradeInfo;
     }
 
     public int getLowLevel() {
@@ -46,8 +51,12 @@ public enum EquipmentGradeRanges {
         return highLevel;
     }
 
-    public EquipmentCategory getEquipmentCategory() {
-        return equipmentCategory;
+    public GradeInfo getGradeInfo() {
+        return gradeInfo;
+    }
+
+    public static Optional<EquipmentGradeRanges> byLevel(int level) {
+        return Stream.of(values()).filter(item -> item.getLowLevel() <= level && level <= item.getHighLevel()).findFirst();
     }
 
 }

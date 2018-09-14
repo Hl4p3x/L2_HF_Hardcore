@@ -1,13 +1,13 @@
 package com.l2jserver.gameserver.datatables.categorized;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
 import com.l2jserver.gameserver.model.items.L2Armor;
 import com.l2jserver.gameserver.model.items.L2EtcItem;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class CategorizedItems {
@@ -100,17 +100,6 @@ public class CategorizedItems {
 
     public List<L2Item> getAllEquipment() {
         return allEquipment;
-    }
-
-    public Map<EquipmentCategory, Collection<L2Item>> getAllEquipmentByCategory() {
-        Multimap<EquipmentCategory, L2Item> result = HashMultimap.create();
-        allEquipment.forEach(item -> {
-            item.getEquipmentCategories().forEach(equipmentCategories -> {
-                result.put(equipmentCategories, item);
-            });
-        });
-
-        return result.asMap();
     }
 
 }
