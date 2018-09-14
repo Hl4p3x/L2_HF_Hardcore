@@ -80,8 +80,17 @@ public class GradedEquipmentGenerator {
             320, // Blue Crystal Skull
             323, // Ancient Reagent
             322, // Vajra Wands
-            6368 // Shining Bow
+            6368, // Shining Bow
+            891, // Sage's Ring
+            922, // Sage's Necklace
+            9577, // Cotton Shirt
+            9583, // Striped Cotton Shirt
+            9578, // Linen Shirt
+            9584 // Stripe Linen Shirt
     );
+
+    // Magic constant of full armor 0.616 to chest price ration
+    private static final double FULL_TO_CHEST_PRICE_RATION = 0.616;
 
     private static CategorizedItems collectCategorizedItems() {
         Map<Integer, L2Weapon> weaponsMap = ItemTable.getInstance().getWeapons();
@@ -108,32 +117,37 @@ public class GradedEquipmentGenerator {
 
         // Add NG
         BuyListData buyListData = BuyListData.getInstance();
-        L2BuyList wizardArmorShopTopNg = buyListData.getBuyList(3008800);
-        L2BuyList fighterArmorShopTopNg = buyListData.getBuyList(3008701);
-        L2BuyList wizardArmorShopLopNg = buyListData.getBuyList(3055901);
-        L2BuyList fighterArmorShopLopNg = buyListData.getBuyList(3055900);
-        L2BuyList accessoryShop = buyListData.getBuyList(3000300);
-        L2BuyList wizardWeaponShopTopNg = buyListData.getBuyList(3008500);
-        L2BuyList fighterWeaponShopTopNg = buyListData.getBuyList(3008400);
-        L2BuyList wizardWeaponShopLowNg = buyListData.getBuyList(3055801);
-        L2BuyList fighterWeaponShopLowNg = buyListData.getBuyList(3055800);
+        L2BuyList wizardArmorShopTop = buyListData.getBuyList(3008800);
+        L2BuyList fighterArmorShopTop = buyListData.getBuyList(3008701);
+        L2BuyList wizardArmorShopLow = buyListData.getBuyList(3055901);
+        L2BuyList fighterArmorShopLow = buyListData.getBuyList(3055900);
+        L2BuyList accessoryShopLow = buyListData.getBuyList(3000300);
+        L2BuyList accessoryShopTop = buyListData.getBuyList(3009000);
+        L2BuyList wizardWeaponShopTop = buyListData.getBuyList(3008500);
+        L2BuyList fighterWeaponShopTop = buyListData.getBuyList(3008400);
+        L2BuyList wizardWeaponShopLow = buyListData.getBuyList(3055801);
+        L2BuyList fighterWeaponShopLow = buyListData.getBuyList(3055800);
 
-        Stream<L2BuyList> shops = Stream.of(wizardArmorShopTopNg, fighterArmorShopTopNg, wizardArmorShopLopNg, fighterArmorShopLopNg, accessoryShop, fighterWeaponShopLowNg, fighterWeaponShopTopNg, wizardWeaponShopLowNg, wizardWeaponShopTopNg);
-        List<L2Item> ngItemsFromShops = shops.flatMap(l2BuyList -> Product.convertToItems(l2BuyList.getProducts()).stream()).filter(item -> item.getCrystalType().equals(CrystalType.NONE)).collect(Collectors.toList());
+        Stream<L2BuyList> shops = Stream.of(wizardArmorShopTop, fighterArmorShopTop, wizardArmorShopLow, fighterArmorShopLow, accessoryShopLow, accessoryShopTop, fighterWeaponShopLow, fighterWeaponShopTop, wizardWeaponShopLow, wizardWeaponShopTop);
+        List<L2Item> itemsFromShops = shops.flatMap(l2BuyList -> Product.convertToItems(l2BuyList.getProducts()).stream()).filter(item -> !blacklistIds.contains(item.getId())).collect(Collectors.toList());
 
-        List<L2Weapon> weaponsFromShops = ngItemsFromShops.stream()
+        List<L2Weapon> weaponsFromShops = itemsFromShops.stream()
                 .filter((L2Item item) -> item instanceof L2Weapon)
                 .map(item -> (L2Weapon) item)
                 .distinct()
                 .collect(Collectors.toList());
-        List<L2Armor> armorFromShops = ngItemsFromShops.stream()
+
+        List<L2Armor> armorFromShops = itemsFromShops.stream()
                 .filter((L2Item item) -> item instanceof L2Armor)
                 .map(item -> (L2Armor) item)
                 .distinct()
                 .collect(Collectors.toList());
 
         craftableWeapons.addAll(weaponsFromShops);
+        craftableWeapons = craftableWeapons.stream().distinct().collect(Collectors.toList());
+
         craftableArmors.addAll(armorFromShops);
+        craftableArmors = craftableArmors.stream().distinct().collect(Collectors.toList());
 
         List<L2Armor> nonMasterworkArmors = craftableArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY != armor.getType2()).collect(Collectors.toList());
         List<L2Armor> nonMasterworkJewels = craftableArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY == armor.getType2()).collect(Collectors.toList());
@@ -170,8 +184,17 @@ public class GradedEquipmentGenerator {
 
     private static List<GradedItem> convert(List<L2Item> items) {
         return items.stream()
-                .map(item -> new GradedItem(item.getId(), item.getName(), item.getReferencePrice(),
-                        new GradeInfo(Grade.fromCrystalType(item.getCrystalType()), GradeCategory.UNSET)))
+                .map(item -> {
+                    int bodyPart = item.getBodyPart();
+                    int price = item.getReferencePrice();
+                    // Grade full armor as a partly priced chest armor
+                    if (bodyPart == L2Item.SLOT_FULL_ARMOR) {
+                        bodyPart = L2Item.SLOT_CHEST;
+                        price = (int) Math.round(price * FULL_TO_CHEST_PRICE_RATION);
+                    }
+                    return new GradedItem(item.getId(), item.getName(), price, bodyPart,
+                            new GradeInfo(Grade.fromCrystalType(item.getCrystalType()), GradeCategory.UNSET));
+                })
                 .collect(Collectors.toList());
     }
 
@@ -180,13 +203,13 @@ public class GradedEquipmentGenerator {
         Server.serverMode = Server.MODE_GAMESERVER;
         Config.load();
 
-        List<GradedItem> allWeapon = convert(sort(collectCategorizedItems().getNonMasterworkWeapons()));
-        List<GradedItem> allArmor = convert(sort(collectCategorizedItems().getNonMasterworkArmors()));
-        List<GradedItem> allJewels = convert(sort(collectCategorizedItems().getNonMasterworkJewels()));
+        List<GradedItem> allWeapon = regradeDynastyToS80(convert(sort(collectCategorizedItems().getNonMasterworkWeapons())));
+        List<GradedItem> allArmor = regradeDynastyToS80(convert(sort(collectCategorizedItems().getNonMasterworkArmors())));
+        List<GradedItem> allJewels = regradeDynastyToS80(convert(sort(collectCategorizedItems().getNonMasterworkJewels())));
 
-        gradeItems(allWeapon);
-        gradeItems(allArmor);
-        gradeItems(allJewels);
+        gradeItems(allWeapon, weaponsGradeParts());
+        gradeItems(allArmor, commonGradeParts());
+        gradeItems(allJewels, commonGradeParts());
 
         List<GradedItem> allItems = new ArrayList<>();
         allItems.addAll(allWeapon);
@@ -197,17 +220,38 @@ public class GradedEquipmentGenerator {
         new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(gradedEquipment, allItems);
     }
 
-    private static void gradeItems(List<GradedItem> itemsToBeGraded) {
+    private static List<GradedItem> regradeDynastyToS80(List<GradedItem> items) {
+        items.stream().filter(item -> item.getItemName().contains("Dynasty")).forEach(item -> item.getGradeInfo().setGrade(Grade.S80));
+        return items;
+    }
+
+    private static Map<Grade, Integer> commonGradeParts() {
         Map<Grade, Integer> gradeParts = new HashMap<>();
         gradeParts.put(Grade.NG, 3);
         gradeParts.put(Grade.D, 3);
         gradeParts.put(Grade.C, 3);
         gradeParts.put(Grade.B, 2);
         gradeParts.put(Grade.A, 2);
-        gradeParts.put(Grade.S, 2);
-        gradeParts.put(Grade.S80, 1);
+        gradeParts.put(Grade.S, 1);
+        gradeParts.put(Grade.S80, 2); // Dynasty is regraded from S to S80
         gradeParts.put(Grade.S84, 1);
+        return gradeParts;
+    }
 
+    private static Map<Grade, Integer> weaponsGradeParts() {
+        Map<Grade, Integer> gradeParts = new HashMap<>();
+        gradeParts.put(Grade.NG, 3);
+        gradeParts.put(Grade.D, 3);
+        gradeParts.put(Grade.C, 3);
+        gradeParts.put(Grade.B, 2);
+        gradeParts.put(Grade.A, 3);
+        gradeParts.put(Grade.S, 1);
+        gradeParts.put(Grade.S80, 2); // Dynasty is regraded from S to S80
+        gradeParts.put(Grade.S84, 1);
+        return gradeParts;
+    }
+
+    private static Map<Integer, Map<Integer, GradeCategory>> categoriesForParts() {
         Map<Integer, Map<Integer, GradeCategory>> categoriesForParts = new HashMap<>();
         Map<Integer, GradeCategory> single = new HashMap<>();
         single.put(1, GradeCategory.ALL);
@@ -223,12 +267,17 @@ public class GradedEquipmentGenerator {
         threePart.put(2, GradeCategory.MID);
         threePart.put(3, GradeCategory.TOP);
         categoriesForParts.put(3, threePart);
+        return categoriesForParts;
+    }
 
-        Multimap<Grade, GradedItem> gradedItemsByGrade = LinkedHashMultimap.create();
-        itemsToBeGraded.forEach(item -> gradedItemsByGrade.put(item.getGradeInfo().getGrade(), item));
+    private static void gradeItems(List<GradedItem> itemsToBeGraded, Map<Grade, Integer> gradeParts) {
+        Map<Integer, Map<Integer, GradeCategory>> categoriesForParts = categoriesForParts();
+
+        Multimap<GradeAndBody, GradedItem> gradedItemsByGrade = LinkedHashMultimap.create();
+        itemsToBeGraded.forEach(item -> gradedItemsByGrade.put(new GradeAndBody(item.getGradeInfo().getGrade(), item.getItemSlot()), item));
 
         gradedItemsByGrade.asMap().forEach((key, value) -> {
-            List<List<GradedItem>> items = CollectionUtil.splitList(new ArrayList<>(value), gradeParts.get(key));
+            List<List<GradedItem>> items = CollectionUtil.splitList(new ArrayList<>(value), gradeParts.get(key.getGrade()));
             Map<Integer, GradeCategory> categoryMapper = categoriesForParts.get(items.size());
             int grade = 1;
             for (List<GradedItem> gradedItem : items) {

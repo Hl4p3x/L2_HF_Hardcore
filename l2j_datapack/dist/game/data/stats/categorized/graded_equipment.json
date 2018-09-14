@@ -104,7 +104,7 @@
     "itemPrice": 9600,
     "gradeInfo": {
       "grade": "NG",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -113,7 +113,7 @@
     "itemPrice": 9600,
     "gradeInfo": {
       "grade": "NG",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -140,7 +140,7 @@
     "itemPrice": 9600,
     "gradeInfo": {
       "grade": "NG",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -203,7 +203,7 @@
     "itemPrice": 41600,
     "gradeInfo": {
       "grade": "NG",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -248,7 +248,7 @@
     "itemPrice": 105000,
     "gradeInfo": {
       "grade": "NG",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -257,7 +257,7 @@
     "itemPrice": 105000,
     "gradeInfo": {
       "grade": "NG",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -275,7 +275,7 @@
     "itemPrice": 105000,
     "gradeInfo": {
       "grade": "NG",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -284,7 +284,7 @@
     "itemPrice": 105000,
     "gradeInfo": {
       "grade": "NG",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -405,8 +405,53 @@
     }
   },
   {
+    "itemId": 312,
+    "itemName": "Branch of Life",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 220,
+    "itemName": "Crafted Dagger",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 156,
+    "itemName": "Hand Axe",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 166,
+    "itemName": "Heavy Mace",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
     "itemId": 7885,
     "itemName": "Priest Sword",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 314,
+    "itemName": "Proof of Revenge",
     "itemPrice": 315000,
     "gradeInfo": {
       "grade": "D",
@@ -423,6 +468,15 @@
     }
   },
   {
+    "itemId": 101,
+    "itemName": "Scroll of Wisdom",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
     "itemId": 313,
     "itemName": "Temptation of Abyss",
     "itemPrice": 315000,
@@ -432,8 +486,44 @@
     }
   },
   {
+    "itemId": 168,
+    "itemName": "Work Hammer",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 258,
+    "itemName": "Bagh-Nakh",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 178,
+    "itemName": "Bone Staff",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
     "itemId": 5285,
     "itemName": "Heavy Sword",
+    "itemPrice": 315000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 274,
+    "itemName": "Reinforced Bow",
     "itemPrice": 315000,
     "gradeInfo": {
       "grade": "D",
@@ -459,6 +549,42 @@
     }
   },
   {
+    "itemId": 126,
+    "itemName": "Artisan's Sword",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 69,
+    "itemName": "Bastard Sword",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 315,
+    "itemName": "Divine Tome",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 182,
+    "itemName": "Doom Hammer",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
     "itemId": 180,
     "itemName": "Mace of Judgment",
     "itemPrice": 495500,
@@ -468,8 +594,44 @@
     }
   },
   {
+    "itemId": 179,
+    "itemName": "Mace of Prayer",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 222,
+    "itemName": "Poniard Dagger",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
     "itemId": 125,
     "itemName": "Spinebone Sword",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 86,
+    "itemName": "Tomahawk",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 184,
+    "itemName": "Conjuror's Staff",
     "itemPrice": 495500,
     "gradeInfo": {
       "grade": "D",
@@ -477,8 +639,8 @@
     }
   },
   {
-    "itemId": 184,
-    "itemName": "Conjuror's Staff",
+    "itemId": 277,
+    "itemName": "Dark Elven Bow",
     "itemPrice": 495500,
     "gradeInfo": {
       "grade": "D",
@@ -504,12 +666,147 @@
     }
   },
   {
+    "itemId": 275,
+    "itemName": "Long Bow",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 183,
+    "itemName": "Mystic Staff",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 292,
+    "itemName": "Pike",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 259,
+    "itemName": "Single-Edged Jamadhr",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 185,
+    "itemName": "Staff of Mana",
+    "itemPrice": 495500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 83,
+    "itemName": "Sword of Magic",
+    "itemPrice": 550800,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 143,
+    "itemName": "Sword of Mystic",
+    "itemPrice": 550800,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 144,
+    "itemName": "Sword of Occult",
+    "itemPrice": 550800,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 240,
+    "itemName": "Conjurer's Knife",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 127,
+    "itemName": "Crimson Sword",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 238,
+    "itemName": "Dagger of Mana",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 130,
+    "itemName": "Elven Sword",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 223,
+    "itemName": "Kukuri",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 239,
+    "itemName": "Mystic Knife",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 316,
+    "itemName": "Sage's Blood",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
     "itemId": 241,
     "itemName": "Shilen Knife",
     "itemPrice": 743500,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -518,7 +815,7 @@
     "itemPrice": 743500,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -527,7 +824,16 @@
     "itemPrice": 743500,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 296,
+    "itemName": "Dwarven Pike",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
     }
   },
   {
@@ -536,7 +842,25 @@
     "itemPrice": 743500,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 186,
+    "itemName": "Staff of Magic",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 260,
+    "itemName": "Triple-Edged Jamadhr",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
     }
   },
   {
@@ -549,12 +873,21 @@
     }
   },
   {
+    "itemId": 293,
+    "itemName": "War Hammer",
+    "itemPrice": 743500,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
     "itemId": 318,
     "itemName": "Crucifix of Blood",
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -563,7 +896,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -572,7 +905,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -581,7 +914,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -590,7 +923,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -599,7 +932,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -608,7 +941,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -617,7 +950,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -626,7 +959,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -635,7 +968,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -671,7 +1004,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -680,7 +1013,7 @@
     "itemPrice": 1074000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -1004,7 +1337,7 @@
     "itemPrice": 2209700,
     "gradeInfo": {
       "grade": "C",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -1013,7 +1346,7 @@
     "itemPrice": 2209700,
     "gradeInfo": {
       "grade": "C",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -1022,7 +1355,7 @@
     "itemPrice": 2209700,
     "gradeInfo": {
       "grade": "C",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -1040,7 +1373,7 @@
     "itemPrice": 2209700,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -1049,7 +1382,7 @@
     "itemPrice": 2209700,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -1058,7 +1391,7 @@
     "itemPrice": 2209700,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -1157,7 +1490,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -1166,7 +1499,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -1175,7 +1508,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -1184,7 +1517,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -1193,7 +1526,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -1202,7 +1535,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -1211,7 +1544,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -1247,7 +1580,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1256,7 +1589,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1265,7 +1598,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1274,7 +1607,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1283,7 +1616,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1292,7 +1625,7 @@
     "itemPrice": 3304300,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1769,7 +2102,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -1778,7 +2111,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -1787,7 +2120,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -1796,7 +2129,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -1805,7 +2138,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -1814,7 +2147,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -1823,7 +2156,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1832,7 +2165,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1841,7 +2174,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1850,7 +2183,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1859,7 +2192,7 @@
     "itemPrice": 20741000,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -1967,7 +2300,7 @@
     "itemPrice": 42759400,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -1976,7 +2309,7 @@
     "itemPrice": 42759400,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -1985,7 +2318,7 @@
     "itemPrice": 42759400,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -1994,7 +2327,7 @@
     "itemPrice": 42759400,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -2003,7 +2336,7 @@
     "itemPrice": 42759400,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -2012,7 +2345,7 @@
     "itemPrice": 42759400,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -2021,7 +2354,7 @@
     "itemPrice": 42759400,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -2030,7 +2363,7 @@
     "itemPrice": 42759400,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -2039,7 +2372,7 @@
     "itemPrice": 42759400,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -2048,16 +2381,7 @@
     "itemPrice": 42759400,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
-    }
-  },
-  {
-    "itemId": 6368,
-    "itemName": "Shining Bow",
-    "itemPrice": 48800000,
-    "gradeInfo": {
-      "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -2065,8 +2389,8 @@
     "itemName": "Dynasty Cudgel",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -2074,8 +2398,8 @@
     "itemName": "Dynasty Knife",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -2083,8 +2407,8 @@
     "itemName": "Dynasty Mace",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -2092,8 +2416,8 @@
     "itemName": "Dynasty Phantom",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -2101,8 +2425,8 @@
     "itemName": "Dynasty Sword",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -2110,8 +2434,8 @@
     "itemName": "Dynasty Bagh-Nakh",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -2119,8 +2443,8 @@
     "itemName": "Dynasty Blade",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -2128,8 +2452,8 @@
     "itemName": "Dynasty Bow",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -2137,8 +2461,8 @@
     "itemName": "Dynasty Crusher",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -2146,8 +2470,8 @@
     "itemName": "Dynasty Halberd",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -2155,7 +2479,7 @@
     "itemName": "Dynasty Staff",
     "itemPrice": 74946000,
     "gradeInfo": {
-      "grade": "S",
+      "grade": "S80",
       "category": "TOP"
     }
   },
@@ -2165,7 +2489,7 @@
     "itemPrice": 103439000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -2174,7 +2498,7 @@
     "itemPrice": 103439000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -2183,7 +2507,7 @@
     "itemPrice": 103439000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -2192,7 +2516,7 @@
     "itemPrice": 103439000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -2201,7 +2525,7 @@
     "itemPrice": 103439000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -2210,7 +2534,7 @@
     "itemPrice": 103439000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -2219,7 +2543,7 @@
     "itemPrice": 103439000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -2228,7 +2552,7 @@
     "itemPrice": 103439000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -2237,7 +2561,7 @@
     "itemPrice": 103439000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -2444,7 +2768,7 @@
     "itemPrice": 470,
     "gradeInfo": {
       "grade": "NG",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -2453,7 +2777,7 @@
     "itemPrice": 470,
     "gradeInfo": {
       "grade": "NG",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -2502,21 +2826,12 @@
     }
   },
   {
-    "itemId": 9577,
-    "itemName": "Cotton Shirt",
-    "itemPrice": 1300,
-    "gradeInfo": {
-      "grade": "NG",
-      "category": "MID"
-    }
-  },
-  {
     "itemId": 1100,
     "itemName": "Cotton Tunic",
     "itemPrice": 1870,
     "gradeInfo": {
       "grade": "NG",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -2525,7 +2840,7 @@
     "itemPrice": 1870,
     "gradeInfo": {
       "grade": "NG",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -2534,7 +2849,7 @@
     "itemPrice": 1870,
     "gradeInfo": {
       "grade": "NG",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -2615,22 +2930,13 @@
     "itemPrice": 5210,
     "gradeInfo": {
       "grade": "NG",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
     "itemId": 102,
     "itemName": "Round Shield",
     "itemPrice": 5470,
-    "gradeInfo": {
-      "grade": "NG",
-      "category": "MID"
-    }
-  },
-  {
-    "itemId": 9583,
-    "itemName": "Striped Cotton Shirt",
-    "itemPrice": 6100,
     "gradeInfo": {
       "grade": "NG",
       "category": "MID"
@@ -2687,7 +2993,7 @@
     "itemPrice": 9770,
     "gradeInfo": {
       "grade": "NG",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -2696,7 +3002,7 @@
     "itemPrice": 9770,
     "gradeInfo": {
       "grade": "NG",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -2741,7 +3047,7 @@
     "itemPrice": 15600,
     "gradeInfo": {
       "grade": "NG",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -2750,7 +3056,7 @@
     "itemPrice": 15600,
     "gradeInfo": {
       "grade": "NG",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -2759,7 +3065,7 @@
     "itemPrice": 15600,
     "gradeInfo": {
       "grade": "NG",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -2844,9 +3150,108 @@
     }
   },
   {
+    "itemId": 626,
+    "itemName": "Bronze Shield",
+    "itemPrice": 16900,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
     "itemId": 45,
     "itemName": "Bone Helmet",
     "itemPrice": 24100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 605,
+    "itemName": "Leather Gauntlets",
+    "itemPrice": 25600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 1123,
+    "itemName": "Blue Buckskin Boots",
+    "itemPrice": 25600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 627,
+    "itemName": "Aspis",
+    "itemPrice": 26900,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 465,
+    "itemName": "Cursed Stockings",
+    "itemPrice": 30100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 413,
+    "itemName": "Puma Skin Gaiters",
+    "itemPrice": 30100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 46,
+    "itemName": "Bronze Helmet",
+    "itemPrice": 38400,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 63,
+    "itemName": "Gauntlets",
+    "itemPrice": 39100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2447,
+    "itemName": "Gloves of Knowledge",
+    "itemPrice": 39100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 2446,
+    "itemName": "Reinforced Leather Gloves",
+    "itemPrice": 39100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 2423,
+    "itemName": "Boots of Knowledge",
+    "itemPrice": 39100,
     "gradeInfo": {
       "grade": "D",
       "category": "LOW"
@@ -2862,9 +3267,72 @@
     }
   },
   {
+    "itemId": 2422,
+    "itemName": "Reinforced Leather Boots",
+    "itemPrice": 39100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 376,
+    "itemName": "Iron Plate Gaiters",
+    "itemPrice": 40100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 628,
+    "itemName": "Hoplon",
+    "itemPrice": 41000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
     "itemId": 467,
     "itemName": "Dark Stockings",
     "itemPrice": 48000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 414,
+    "itemName": "Lion Skin Gaiters",
+    "itemPrice": 48000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 468,
+    "itemName": "Mystic's Stockings",
+    "itemPrice": 48000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 432,
+    "itemName": "Cursed Tunic",
+    "itemPrice": 48200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 391,
+    "itemName": "Puma Skin Shirt",
+    "itemPrice": 48200,
     "gradeInfo": {
       "grade": "D",
       "category": "LOW"
@@ -2876,7 +3344,7 @@
     "itemPrice": 57400,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -2885,7 +3353,7 @@
     "itemPrice": 57400,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -2894,7 +3362,7 @@
     "itemPrice": 57400,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -2903,7 +3371,7 @@
     "itemPrice": 57400,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -2912,7 +3380,7 @@
     "itemPrice": 57400,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -2921,7 +3389,7 @@
     "itemPrice": 57400,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -2930,7 +3398,7 @@
     "itemPrice": 57400,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -2939,7 +3407,16 @@
     "itemPrice": 57400,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 47,
+    "itemName": "Helmet",
+    "itemPrice": 58600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
     }
   },
   {
@@ -2948,7 +3425,7 @@
     "itemPrice": 60300,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -2957,7 +3434,7 @@
     "itemPrice": 60300,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -2966,7 +3443,16 @@
     "itemPrice": 64100,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 347,
+    "itemName": "Ring Mail Breastplate",
+    "itemPrice": 64210,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
     }
   },
   {
@@ -2979,12 +3465,30 @@
     }
   },
   {
+    "itemId": 416,
+    "itemName": "Reinforced Leather Gaiters",
+    "itemPrice": 73200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 469,
+    "itemName": "Stockings of Knowledge",
+    "itemPrice": 73200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
     "itemId": 61,
     "itemName": "Mithril Plate Gloves",
     "itemPrice": 75200,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -2993,7 +3497,7 @@
     "itemPrice": 75200,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3002,7 +3506,7 @@
     "itemPrice": 75200,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3011,7 +3515,7 @@
     "itemPrice": 75200,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3020,7 +3524,7 @@
     "itemPrice": 75200,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3029,7 +3533,25 @@
     "itemPrice": 75200,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 392,
+    "itemName": "Lion Skin Shirt",
+    "itemPrice": 76900,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 435,
+    "itemName": "Mystic's Tunic",
+    "itemPrice": 76900,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
     }
   },
   {
@@ -3038,7 +3560,7 @@
     "itemPrice": 76900,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -3047,7 +3569,7 @@
     "itemPrice": 79000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3056,7 +3578,7 @@
     "itemPrice": 79000,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3069,12 +3591,39 @@
     }
   },
   {
+    "itemId": 378,
+    "itemName": "Compound Scale Gaiters",
+    "itemPrice": 97600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 379,
+    "itemName": "Dwarven Scale Gaiters",
+    "itemPrice": 97600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 59,
+    "itemName": "Mithril Gaiters",
+    "itemPrice": 97600,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
     "itemId": 348,
     "itemName": "Scale Mail",
     "itemPrice": 102500,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -3083,7 +3632,7 @@
     "itemPrice": 107700,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3092,7 +3641,7 @@
     "itemPrice": 107700,
     "gradeInfo": {
       "grade": "D",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3119,7 +3668,52 @@
     "itemPrice": 117000,
     "gradeInfo": {
       "grade": "D",
-      "category": "TOP"
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 394,
+    "itemName": "Reinforced Leather Shirt",
+    "itemPrice": 117000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 436,
+    "itemName": "Tunic of Knowledge",
+    "itemPrice": 117000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 349,
+    "itemName": "Compound Scale Mail",
+    "itemPrice": 141100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 350,
+    "itemName": "Dwarven Scale Mail",
+    "itemPrice": 141100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 58,
+    "itemName": "Mithril Breastplate",
+    "itemPrice": 141100,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
     }
   },
   {
@@ -3138,6 +3732,15 @@
     "gradeInfo": {
       "grade": "D",
       "category": "TOP"
+    }
+  },
+  {
+    "itemId": 351,
+    "itemName": "Blast Plate",
+    "itemPrice": 156200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
     }
   },
   {
@@ -3197,7 +3800,7 @@
   {
     "itemId": 438,
     "itemName": "Sage's Rag",
-    "itemPrice": 366600,
+    "itemPrice": 225826,
     "gradeInfo": {
       "grade": "D",
       "category": "TOP"
@@ -3206,7 +3809,7 @@
   {
     "itemId": 396,
     "itemName": "Salamander Skin Mail",
-    "itemPrice": 366600,
+    "itemPrice": 225826,
     "gradeInfo": {
       "grade": "D",
       "category": "TOP"
@@ -3290,7 +3893,7 @@
     "itemPrice": 97100,
     "gradeInfo": {
       "grade": "C",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -3353,7 +3956,7 @@
     "itemPrice": 123900,
     "gradeInfo": {
       "grade": "C",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -3362,7 +3965,7 @@
     "itemPrice": 123900,
     "gradeInfo": {
       "grade": "C",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -3371,7 +3974,7 @@
     "itemPrice": 123900,
     "gradeInfo": {
       "grade": "C",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -3380,7 +3983,7 @@
     "itemPrice": 130100,
     "gradeInfo": {
       "grade": "C",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -3407,7 +4010,7 @@
     "itemPrice": 182100,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -3416,7 +4019,7 @@
     "itemPrice": 182100,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -3479,7 +4082,7 @@
     "itemPrice": 198300,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3488,7 +4091,7 @@
     "itemPrice": 211600,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3497,7 +4100,7 @@
     "itemPrice": 211600,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3506,7 +4109,7 @@
     "itemPrice": 214500,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -3533,7 +4136,7 @@
     "itemPrice": 275100,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3542,7 +4145,7 @@
     "itemPrice": 275100,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3551,7 +4154,7 @@
     "itemPrice": 275100,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3560,7 +4163,7 @@
     "itemPrice": 275100,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3569,7 +4172,7 @@
     "itemPrice": 275100,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3578,7 +4181,7 @@
     "itemPrice": 275100,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -3596,7 +4199,7 @@
     "itemPrice": 283200,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -3614,7 +4217,7 @@
     "itemPrice": 291000,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -3623,7 +4226,7 @@
     "itemPrice": 291000,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -3632,7 +4235,7 @@
     "itemPrice": 309700,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -3641,7 +4244,7 @@
     "itemPrice": 343000,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -3659,7 +4262,7 @@
     "itemPrice": 372000,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -3668,7 +4271,7 @@
     "itemPrice": 388600,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -3704,7 +4307,7 @@
     "itemPrice": 495500,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -3722,16 +4325,16 @@
     "itemPrice": 566000,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
     "itemId": 440,
     "itemName": "Robe of Seal",
-    "itemPrice": 603900,
+    "itemPrice": 372002,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -3740,7 +4343,7 @@
     "itemPrice": 635000,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -3755,7 +4358,7 @@
   {
     "itemId": 60,
     "itemName": "Composite Armor",
-    "itemPrice": 1227000,
+    "itemPrice": 755832,
     "gradeInfo": {
       "grade": "C",
       "category": "TOP"
@@ -3764,7 +4367,7 @@
   {
     "itemId": 401,
     "itemName": "Drake Leather Armor",
-    "itemPrice": 1341000,
+    "itemPrice": 826056,
     "gradeInfo": {
       "grade": "C",
       "category": "TOP"
@@ -3773,7 +4376,7 @@
   {
     "itemId": 356,
     "itemName": "Full Plate Armor",
-    "itemPrice": 1788000,
+    "itemPrice": 1101408,
     "gradeInfo": {
       "grade": "C",
       "category": "TOP"
@@ -3857,7 +4460,7 @@
     "itemPrice": 618800,
     "gradeInfo": {
       "grade": "B",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -3866,7 +4469,7 @@
     "itemPrice": 618800,
     "gradeInfo": {
       "grade": "B",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -3875,7 +4478,7 @@
     "itemPrice": 618800,
     "gradeInfo": {
       "grade": "B",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -3884,7 +4487,7 @@
     "itemPrice": 649800,
     "gradeInfo": {
       "grade": "B",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -3911,7 +4514,7 @@
     "itemPrice": 928300,
     "gradeInfo": {
       "grade": "B",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -3920,7 +4523,7 @@
     "itemPrice": 928300,
     "gradeInfo": {
       "grade": "B",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -3938,7 +4541,7 @@
     "itemPrice": 997700,
     "gradeInfo": {
       "grade": "B",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -3965,7 +4568,7 @@
     "itemPrice": 1197000,
     "gradeInfo": {
       "grade": "B",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -3974,7 +4577,7 @@
     "itemPrice": 1197000,
     "gradeInfo": {
       "grade": "B",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -3992,7 +4595,7 @@
     "itemPrice": 1596000,
     "gradeInfo": {
       "grade": "B",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -4001,7 +4604,7 @@
     "itemPrice": 1596000,
     "gradeInfo": {
       "grade": "B",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -4010,7 +4613,7 @@
     "itemPrice": 1857000,
     "gradeInfo": {
       "grade": "B",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -4019,13 +4622,13 @@
     "itemPrice": 1857000,
     "gradeInfo": {
       "grade": "B",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
     "itemId": 2390,
     "itemName": "Avadon Leather Armor",
-    "itemPrice": 1946000,
+    "itemPrice": 1198736,
     "gradeInfo": {
       "grade": "B",
       "category": "TOP"
@@ -4034,7 +4637,7 @@
   {
     "itemId": 2406,
     "itemName": "Avadon Robe",
-    "itemPrice": 1946000,
+    "itemPrice": 1198736,
     "gradeInfo": {
       "grade": "B",
       "category": "TOP"
@@ -4052,7 +4655,7 @@
   {
     "itemId": 2391,
     "itemName": "Blue Wolf Leather Armor",
-    "itemPrice": 3017000,
+    "itemPrice": 1858472,
     "gradeInfo": {
       "grade": "B",
       "category": "TOP"
@@ -4061,7 +4664,7 @@
   {
     "itemId": 2392,
     "itemName": "Leather Armor of Doom",
-    "itemPrice": 3017000,
+    "itemPrice": 1858472,
     "gradeInfo": {
       "grade": "B",
       "category": "TOP"
@@ -4070,7 +4673,7 @@
   {
     "itemId": 2381,
     "itemName": "Doom Plate Armor",
-    "itemPrice": 4022000,
+    "itemPrice": 2477552,
     "gradeInfo": {
       "grade": "B",
       "category": "TOP"
@@ -4145,7 +4748,7 @@
     "itemPrice": 1355000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -4154,7 +4757,7 @@
     "itemPrice": 1355000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -4163,7 +4766,7 @@
     "itemPrice": 1355000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -4172,7 +4775,7 @@
     "itemPrice": 1355000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -4181,7 +4784,7 @@
     "itemPrice": 1422000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -4208,7 +4811,7 @@
     "itemPrice": 2032000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -4235,7 +4838,7 @@
     "itemPrice": 2671000,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -4244,7 +4847,7 @@
     "itemPrice": 2671000,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -4253,40 +4856,40 @@
     "itemPrice": 3562000,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
     "itemId": 5308,
     "itemName": "Sealed Dark Crystal Robe",
-    "itemPrice": 4341000,
+    "itemPrice": 2674056,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
     "itemId": 5301,
     "itemName": "Sealed Tallum Leather Armor",
-    "itemPrice": 4341000,
+    "itemPrice": 2674056,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
     "itemId": 5293,
     "itemName": "Sealed Tallum Plate Armor",
-    "itemPrice": 5788000,
+    "itemPrice": 3565408,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
     "itemId": 5320,
     "itemName": "Sealed Leather Armor of Nightmare",
-    "itemPrice": 6603000,
+    "itemPrice": 4067448,
     "gradeInfo": {
       "grade": "A",
       "category": "TOP"
@@ -4295,7 +4898,7 @@
   {
     "itemId": 5323,
     "itemName": "Sealed Majestic Leather Armor",
-    "itemPrice": 6603000,
+    "itemPrice": 4067448,
     "gradeInfo": {
       "grade": "A",
       "category": "TOP"
@@ -4304,7 +4907,7 @@
   {
     "itemId": 5329,
     "itemName": "Sealed Majestic Robe",
-    "itemPrice": 6603000,
+    "itemPrice": 4067448,
     "gradeInfo": {
       "grade": "A",
       "category": "TOP"
@@ -4313,7 +4916,7 @@
   {
     "itemId": 5326,
     "itemName": "Sealed Robe of Nightmare",
-    "itemPrice": 6603000,
+    "itemPrice": 4067448,
     "gradeInfo": {
       "grade": "A",
       "category": "TOP"
@@ -4322,7 +4925,7 @@
   {
     "itemId": 5311,
     "itemName": "Sealed Armor of Nightmare",
-    "itemPrice": 8804000,
+    "itemPrice": 5423264,
     "gradeInfo": {
       "grade": "A",
       "category": "TOP"
@@ -4331,7 +4934,7 @@
   {
     "itemId": 5316,
     "itemName": "Sealed Majestic Plate Armor",
-    "itemPrice": 8804000,
+    "itemPrice": 5423264,
     "gradeInfo": {
       "grade": "A",
       "category": "TOP"
@@ -4343,7 +4946,7 @@
     "itemPrice": 3195000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4352,7 +4955,7 @@
     "itemPrice": 3195000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4361,7 +4964,7 @@
     "itemPrice": 3195000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4370,7 +4973,7 @@
     "itemPrice": 3195000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4379,7 +4982,7 @@
     "itemPrice": 3195000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4388,7 +4991,7 @@
     "itemPrice": 3195000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4397,7 +5000,7 @@
     "itemPrice": 3355000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4406,7 +5009,7 @@
     "itemPrice": 3355000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4415,7 +5018,7 @@
     "itemPrice": 4793000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4424,7 +5027,7 @@
     "itemPrice": 4793000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4433,7 +5036,7 @@
     "itemPrice": 4793000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -4441,7 +5044,7 @@
     "itemName": "Sealed Dynasty Gauntlets",
     "itemPrice": 6099000,
     "gradeInfo": {
-      "grade": "S",
+      "grade": "S80",
       "category": "LOW"
     }
   },
@@ -4450,7 +5053,7 @@
     "itemName": "Sealed Dynasty Gloves",
     "itemPrice": 6099000,
     "gradeInfo": {
-      "grade": "S",
+      "grade": "S80",
       "category": "LOW"
     }
   },
@@ -4459,7 +5062,7 @@
     "itemName": "Sealed Dynasty Leather Gloves",
     "itemPrice": 6099000,
     "gradeInfo": {
-      "grade": "S",
+      "grade": "S80",
       "category": "LOW"
     }
   },
@@ -4468,7 +5071,7 @@
     "itemName": "Sealed Dynasty Boots",
     "itemPrice": 6099000,
     "gradeInfo": {
-      "grade": "S",
+      "grade": "S80",
       "category": "LOW"
     }
   },
@@ -4477,7 +5080,7 @@
     "itemName": "Sealed Dynasty Leather Boots",
     "itemPrice": 6099000,
     "gradeInfo": {
-      "grade": "S",
+      "grade": "S80",
       "category": "LOW"
     }
   },
@@ -4486,8 +5089,8 @@
     "itemName": "Sealed Dynasty Shoes",
     "itemPrice": 6099000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4495,8 +5098,8 @@
     "itemName": "Sealed Dynasty Shield",
     "itemPrice": 6404000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4504,8 +5107,8 @@
     "itemName": "Sealed Dynasty Sigil",
     "itemPrice": 6404000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4514,7 +5117,7 @@
     "itemPrice": 7988000,
     "gradeInfo": {
       "grade": "S",
-      "category": "TOP"
+      "category": "ALL"
     }
   },
   {
@@ -4522,8 +5125,8 @@
     "itemName": "Sealed Dynasty Circlet",
     "itemPrice": 9149000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4531,8 +5134,8 @@
     "itemName": "Sealed Dynasty Helmet",
     "itemPrice": 9149000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4540,8 +5143,8 @@
     "itemName": "Sealed Dynasty Leather Helmet",
     "itemPrice": 9149000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4549,8 +5152,8 @@
     "itemName": "Sealed Dynasty Leather Leggings",
     "itemPrice": 11436000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4558,8 +5161,8 @@
     "itemName": "Sealed Dynasty Stockings",
     "itemPrice": 11436000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4568,7 +5171,7 @@
     "itemPrice": 12781000,
     "gradeInfo": {
       "grade": "S",
-      "category": "TOP"
+      "category": "ALL"
     }
   },
   {
@@ -4576,26 +5179,26 @@
     "itemName": "Sealed Dynasty Gaiter",
     "itemPrice": 15248000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
     "itemId": 6680,
     "itemName": "Sealed Draconic Leather Armor",
-    "itemPrice": 15577000,
+    "itemPrice": 9595432,
     "gradeInfo": {
       "grade": "S",
-      "category": "TOP"
+      "category": "ALL"
     }
   },
   {
     "itemId": 6684,
     "itemName": "Sealed Major Arcana Robe",
-    "itemPrice": 15577000,
+    "itemPrice": 9595432,
     "gradeInfo": {
       "grade": "S",
-      "category": "TOP"
+      "category": "ALL"
     }
   },
   {
@@ -4603,8 +5206,8 @@
     "itemName": "Sealed Dynasty Leather Armor",
     "itemPrice": 18298000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4612,8 +5215,8 @@
     "itemName": "Sealed Dynasty Tunic",
     "itemPrice": 18298000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4621,8 +5224,8 @@
     "itemName": "Sealed Dynasty Breast Plate",
     "itemPrice": 24398000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -4631,7 +5234,7 @@
     "itemPrice": 8418000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4640,7 +5243,7 @@
     "itemPrice": 8418000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4649,7 +5252,7 @@
     "itemPrice": 8418000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4658,7 +5261,7 @@
     "itemPrice": 8418000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4667,7 +5270,7 @@
     "itemPrice": 8418000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4676,7 +5279,7 @@
     "itemPrice": 8418000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4685,7 +5288,7 @@
     "itemPrice": 8839000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4694,7 +5297,7 @@
     "itemPrice": 8839000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4703,7 +5306,7 @@
     "itemPrice": 12627000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4712,7 +5315,7 @@
     "itemPrice": 12627000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4721,7 +5324,7 @@
     "itemPrice": 12627000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4730,7 +5333,7 @@
     "itemPrice": 15784000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4739,7 +5342,7 @@
     "itemPrice": 15784000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4748,7 +5351,7 @@
     "itemPrice": 21046000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4757,7 +5360,7 @@
     "itemPrice": 25255000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4766,7 +5369,7 @@
     "itemPrice": 25255000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4775,7 +5378,7 @@
     "itemPrice": 33673000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -4982,7 +5585,7 @@
     "itemPrice": 830,
     "gradeInfo": {
       "grade": "NG",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -5027,7 +5630,7 @@
     "itemPrice": 4560,
     "gradeInfo": {
       "grade": "NG",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -5040,12 +5643,66 @@
     }
   },
   {
+    "itemId": 878,
+    "itemName": "Blue Coral Ring",
+    "itemPrice": 8200,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
     "itemId": 908,
     "itemName": "Necklace of Wisdom",
     "itemPrice": 9120,
     "gradeInfo": {
       "grade": "NG",
+      "category": "MID"
+    }
+  },
+  {
+    "itemId": 846,
+    "itemName": "Coral Earring",
+    "itemPrice": 12300,
+    "gradeInfo": {
+      "grade": "NG",
       "category": "TOP"
+    }
+  },
+  {
+    "itemId": 909,
+    "itemName": "Blue Diamond Necklace",
+    "itemPrice": 16400,
+    "gradeInfo": {
+      "grade": "NG",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 890,
+    "itemName": "Ring of Devotion",
+    "itemPrice": 13800,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 847,
+    "itemName": "Red Crescent Earring",
+    "itemPrice": 20700,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 879,
+    "itemName": "Enchanted Ring",
+    "itemPrice": 21800,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
     }
   },
   {
@@ -5055,6 +5712,24 @@
     "gradeInfo": {
       "grade": "D",
       "category": "LOW"
+    }
+  },
+  {
+    "itemId": 848,
+    "itemName": "Enchanted Earring",
+    "itemPrice": 32800,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "LOW"
+    }
+  },
+  {
+    "itemId": 880,
+    "itemName": "Black Pearl Ring",
+    "itemPrice": 33000,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "MID"
     }
   },
   {
@@ -5072,7 +5747,7 @@
     "itemPrice": 47900,
     "gradeInfo": {
       "grade": "D",
-      "category": "LOW"
+      "category": "MID"
     }
   },
   {
@@ -5088,6 +5763,15 @@
     "itemId": 882,
     "itemName": "Mithril Ring",
     "itemPrice": 62200,
+    "gradeInfo": {
+      "grade": "D",
+      "category": "TOP"
+    }
+  },
+  {
+    "itemId": 912,
+    "itemName": "Near Forest Necklace",
+    "itemPrice": 65900,
     "gradeInfo": {
       "grade": "D",
       "category": "MID"
@@ -5117,7 +5801,7 @@
     "itemPrice": 95800,
     "gradeInfo": {
       "grade": "D",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -5180,7 +5864,7 @@
     "itemPrice": 159000,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -5189,7 +5873,7 @@
     "itemPrice": 200600,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "LOW"
     }
   },
   {
@@ -5198,7 +5882,7 @@
     "itemPrice": 217200,
     "gradeInfo": {
       "grade": "C",
-      "category": "MID"
+      "category": "TOP"
     }
   },
   {
@@ -5207,7 +5891,7 @@
     "itemPrice": 226600,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -5216,7 +5900,7 @@
     "itemPrice": 302100,
     "gradeInfo": {
       "grade": "C",
-      "category": "TOP"
+      "category": "MID"
     }
   },
   {
@@ -5261,16 +5945,7 @@
     "itemPrice": 474000,
     "gradeInfo": {
       "grade": "B",
-      "category": "LOW"
-    }
-  },
-  {
-    "itemId": 891,
-    "itemName": "Sage's Ring",
-    "itemPrice": 474000,
-    "gradeInfo": {
-      "grade": "B",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -5279,7 +5954,7 @@
     "itemPrice": 621200,
     "gradeInfo": {
       "grade": "B",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -5301,15 +5976,6 @@
     }
   },
   {
-    "itemId": 922,
-    "itemName": "Sage's Necklace",
-    "itemPrice": 948000,
-    "gradeInfo": {
-      "grade": "B",
-      "category": "TOP"
-    }
-  },
-  {
     "itemId": 6325,
     "itemName": "Sealed Phoenix Ring",
     "itemPrice": 670000,
@@ -5324,7 +5990,7 @@
     "itemPrice": 999000,
     "gradeInfo": {
       "grade": "A",
-      "category": "LOW"
+      "category": "TOP"
     }
   },
   {
@@ -5342,7 +6008,7 @@
     "itemPrice": 1340000,
     "gradeInfo": {
       "grade": "A",
-      "category": "TOP"
+      "category": "LOW"
     }
   },
   {
@@ -5369,7 +6035,7 @@
     "itemPrice": 2180000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -5377,7 +6043,7 @@
     "itemName": "Sealed Dynasty Ring",
     "itemPrice": 2688000,
     "gradeInfo": {
-      "grade": "S",
+      "grade": "S80",
       "category": "LOW"
     }
   },
@@ -5387,7 +6053,7 @@
     "itemPrice": 3270000,
     "gradeInfo": {
       "grade": "S",
-      "category": "LOW"
+      "category": "ALL"
     }
   },
   {
@@ -5395,8 +6061,8 @@
     "itemName": "Sealed Dynasty Earring",
     "itemPrice": 4032000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -5405,7 +6071,7 @@
     "itemPrice": 4361000,
     "gradeInfo": {
       "grade": "S",
-      "category": "TOP"
+      "category": "ALL"
     }
   },
   {
@@ -5413,8 +6079,8 @@
     "itemName": "Sealed Dynasty Necklace",
     "itemPrice": 5376000,
     "gradeInfo": {
-      "grade": "S",
-      "category": "TOP"
+      "grade": "S80",
+      "category": "LOW"
     }
   },
   {
@@ -5423,7 +6089,7 @@
     "itemPrice": 3710000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -5432,7 +6098,7 @@
     "itemPrice": 5565000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {
@@ -5441,7 +6107,7 @@
     "itemPrice": 7420000,
     "gradeInfo": {
       "grade": "S80",
-      "category": "ALL"
+      "category": "TOP"
     }
   },
   {

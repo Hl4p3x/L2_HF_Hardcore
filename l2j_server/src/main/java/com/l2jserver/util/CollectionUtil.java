@@ -13,20 +13,31 @@ public class CollectionUtil {
             return Collections.singletonList(items);
         }
 
-        int partSize = (int) Math.ceil((double) items.size() / parts);
-        List<List<T>> results = new ArrayList<>();
-
-        int partStart = 0;
-        int partEnd = partSize;
+        int partSize = items.size() / parts;
+        List<Integer> partSizes = new ArrayList<>();
         for (int i = 0; i < parts; i++) {
-            results.add(items.subList(partStart, partEnd));
-            partStart = partEnd;
-            partEnd += partSize;
-            if (partEnd > items.size()) {
-                partEnd = items.size();
+            partSizes.add(partSize);
+        }
+
+        int leftover = items.size() % parts;
+        int leftoverIndex = 0;
+        while (leftover > 0) {
+            if (leftoverIndex >= items.size()) {
+                leftoverIndex = 0;
             }
+            partSizes.set(leftoverIndex, partSizes.get(leftoverIndex) + 1);
+            leftover -= 1;
+            leftoverIndex += 1;
+        }
+
+        int partPosition = 0;
+        List<List<T>> results = new ArrayList<>();
+        for (Integer partSizeItem : partSizes) {
+            results.add(items.subList(partPosition, partPosition + partSizeItem));
+            partPosition = partPosition + partSizeItem;
         }
         return results;
+
     }
 
     public static <T> HeadTail<T> beheaded(Collection<T> collection) {

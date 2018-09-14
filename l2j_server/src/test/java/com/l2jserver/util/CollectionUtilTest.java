@@ -12,6 +12,34 @@ import java.util.List;
 class CollectionUtilTest {
 
     @Test
+    void testSplitList() {
+        List<Integer> testData = Arrays.asList(1, 2, 3, 4);
+        List<List<Integer>> result = CollectionUtil.splitList(testData, 3);
+        Assertions.assertThat(result).isEqualTo(Arrays.asList(Arrays.asList(1, 2), Arrays.asList(3), Arrays.asList(4)));
+    }
+
+    @Test
+    void testSplitListMediumPositiveOverflow() {
+        List<Integer> testData = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+        List<List<Integer>> result = CollectionUtil.splitList(testData, 3);
+        Assertions.assertThat(result).isEqualTo(Arrays.asList(Arrays.asList(1, 2, 3), Arrays.asList(4, 5, 6), Arrays.asList(7, 8)));
+    }
+
+    @Test
+    void testSplitListEqualParts() {
+        List<Integer> testData = Arrays.asList(1, 2, 3, 4, 5, 6);
+        List<List<Integer>> result = CollectionUtil.splitList(testData, 3);
+        Assertions.assertThat(result).isEqualTo(Arrays.asList(Arrays.asList(1, 2), Arrays.asList(3, 4), Arrays.asList(5, 6)));
+    }
+
+    @Test
+    void testSplitListMedium() {
+        List<Integer> testData = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+        List<List<Integer>> result = CollectionUtil.splitList(testData, 3);
+        Assertions.assertThat(result).isEqualTo(Arrays.asList(Arrays.asList(1, 2, 3, 4, 5), Arrays.asList(6, 7, 8, 9), Arrays.asList(10, 11, 12, 13)));
+    }
+
+    @Test
     void textConsecutiveForEach() {
         List<Integer> iterationResults = new ArrayList<>();
         CollectionUtil.consecutiveForEach(Lists.newArrayList(1, 2, 3, 4, 5), (left, right) -> iterationResults.add(left + right));
