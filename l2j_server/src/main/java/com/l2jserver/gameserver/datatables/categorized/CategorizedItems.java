@@ -1,9 +1,11 @@
 package com.l2jserver.gameserver.datatables.categorized;
 
+import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.items.L2Armor;
 import com.l2jserver.gameserver.model.items.L2EtcItem;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.parts.ItemPart;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,7 @@ public class CategorizedItems {
     private final List<L2Armor> nonMasterworkArmors;
     private final List<L2Armor> nonMasterworkJewels;
 
-    private final List<L2EtcItem> weaponAndArmorParts;
+    private final List<ItemPart> weaponAndArmorParts;
     private final List<L2EtcItem> craftMaterials;
 
     private final List<L2EtcItem> recipes;
@@ -28,7 +30,7 @@ public class CategorizedItems {
     private final Set<Integer> allIds;
 
     public CategorizedItems(List<L2Weapon> nonMasterworkWeapons, List<L2Armor> nonMasterworkArmors,
-                            List<L2Armor> nonMasterworkJewels, List<L2EtcItem> weaponAndArmorParts,
+                            List<L2Armor> nonMasterworkJewels, List<ItemPart> weaponAndArmorParts,
                             List<L2EtcItem> craftMaterials, List<L2EtcItem> recipes,
                             List<L2EtcItem> weaponEnchantScrolls, List<L2EtcItem> armorEnchantScrolls) {
         this.nonMasterworkWeapons = nonMasterworkWeapons;
@@ -44,7 +46,7 @@ public class CategorizedItems {
         allItems.addAll(nonMasterworkWeapons);
         allItems.addAll(nonMasterworkArmors);
         allItems.addAll(nonMasterworkJewels);
-        allItems.addAll(weaponAndArmorParts);
+        allItems.addAll(weaponAndArmorParts.stream().map(part -> ItemTable.getInstance().getTemplate(part.getPartId())).collect(Collectors.toList()));
         allItems.addAll(craftMaterials);
         allItems.addAll(recipes);
         allItems.addAll(weaponEnchantScrolls);
@@ -70,7 +72,7 @@ public class CategorizedItems {
         return nonMasterworkJewels;
     }
 
-    public List<L2EtcItem> getWeaponAndArmorParts() {
+    public List<ItemPart> getWeaponAndArmorParts() {
         return weaponAndArmorParts;
     }
 

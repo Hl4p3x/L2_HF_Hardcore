@@ -30,6 +30,7 @@ import org.w3c.dom.Node;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * The Class RecipeData.
@@ -296,6 +297,13 @@ public class RecipeData implements IXmlReader
 		return _recipes.values()
 				.stream()
 				.map(L2RecipeList::getItemId)
+				.collect(Collectors.toSet());
+	}
+
+	public Set<Integer> getAllIngredientIds() {
+		return _recipes.values()
+				.stream()
+				.flatMap(item -> Stream.of(item.getRecipes()).map(L2RecipeInstance::getItemId))
 				.collect(Collectors.toSet());
 	}
 

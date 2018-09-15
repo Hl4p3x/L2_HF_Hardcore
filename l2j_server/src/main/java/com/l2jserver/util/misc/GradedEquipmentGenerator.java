@@ -9,6 +9,8 @@ import com.l2jserver.gameserver.data.xml.impl.BuyListData;
 import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.categorized.CategorizedItems;
+import com.l2jserver.gameserver.model.L2RecipeInstance;
+import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.buylist.L2BuyList;
 import com.l2jserver.gameserver.model.buylist.Product;
 import com.l2jserver.gameserver.model.items.L2Armor;
@@ -19,6 +21,7 @@ import com.l2jserver.gameserver.model.items.graded.Grade;
 import com.l2jserver.gameserver.model.items.graded.GradeCategory;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
+import com.l2jserver.gameserver.model.items.parts.ItemPart;
 import com.l2jserver.gameserver.model.items.type.CrystalType;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.util.CollectionUtil;
@@ -27,6 +30,7 @@ import com.l2jserver.util.StringUtil;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -152,22 +156,72 @@ public class GradedEquipmentGenerator {
         List<L2Armor> nonMasterworkArmors = craftableArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY != armor.getType2()).collect(Collectors.toList());
         List<L2Armor> nonMasterworkJewels = craftableArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY == armor.getType2()).collect(Collectors.toList());
 
-        Set<String> weaponNames = craftableWeapons.stream().map(L2Weapon::getName).collect(Collectors.toSet());
-        Set<String> armorNames = craftableArmors.stream().map(L2Armor::getName).collect(Collectors.toSet());
-        Set<String> weaponsAndArmorNames = new HashSet<>(weaponNames.size() + armorNames.size());
-        weaponsAndArmorNames.addAll(weaponNames);
-        weaponsAndArmorNames.addAll(armorNames);
+        Map<String, L2Item> weaponByNames = craftableWeapons.stream().collect(Collectors.toMap(L2Item::getName, Function.identity()));
+        Map<String, L2Item> armorByNames = craftableArmors.stream().collect(Collectors.toMap(L2Item::getName, Function.identity()));
+        Map<String, L2Item> weaponsAndArmorNames = new HashMap<>();
+        weaponsAndArmorNames.putAll(weaponByNames);
+        weaponsAndArmorNames.putAll(armorByNames);
 
         List<L2EtcItem> allMaterials = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.MATERIAL == etcItem.getItemType()).collect(Collectors.toList());
 
-        List<L2EtcItem> weaponAndArmorParts = allMaterials.stream().filter(material -> weaponsAndArmorNames.contains(StringUtil.removeLastWord(material.getName()))).collect(Collectors.toList());
-        List<L2EtcItem> craftMaterials = allMaterials.stream().filter(material -> !weaponsAndArmorNames.contains(StringUtil.removeLastWord(material.getName()))).collect(Collectors.toList());
+        List<ItemPart> weaponAndArmorParts =
+                Stream.concat(craftableWeapons.stream(), craftableArmors.stream())
+                        .map(item -> {
+                            L2RecipeList recipeList = RecipeData.getInstance().getRecipeByProductionItem(item.getId());
+                            if (recipeList == null) {
+                                return null;
+                            }
+
+                            Optional<ItemPart> hardcodedPart = HardcodedPartsForMismatchedItems.PARTS.stream().filter(part -> part.getItemId() == item.getId()).findFirst();
+                            if (hardcodedPart.isPresent()) {
+                                return hardcodedPart.get();
+                            }
+
+                            Optional<L2RecipeInstance> instance = Stream.of(recipeList.getRecipes())
+                                    .filter(recipe -> {
+                                        L2Item recipeItem = ItemTable.getInstance().getTemplate(recipe.getItemId());
+                                        return (crossContainsIgnoreCase(removeEndingS(joinLongbowWorkTogether(item.getName())), removeEndingS(joinLongbowWorkTogether(recipeItem.getName())))
+                                                || recipeItem.getName().toLowerCase().contains("Sealed".toLowerCase())
+                                        ) && !recipeItem.getName().toLowerCase().contains("Recipe".toLowerCase());
+                                    })
+                                    .findFirst();
+                            if (instance.isPresent()) {
+                                return instance.map(l2RecipeInstance -> new ItemPart(item.getId(), item.getName(), l2RecipeInstance.getItemId(), ItemTable.getInstance().getTemplate(l2RecipeInstance.getItemId()).getName())).get();
+                            } else {
+                                System.out.println("Could not find part for " + item);
+                                return null;
+                            }
+                        })
+                        .filter(Objects::nonNull)
+                        .collect(Collectors.toList());
+
+
+        List<L2EtcItem> craftMaterials = allMaterials.stream().filter(material -> !weaponsAndArmorNames.containsKey(StringUtil.removeLastWord(material.getName()).trim())).collect(Collectors.toList());
 
         List<L2EtcItem> recipes = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.RECIPE == etcItem.getItemType()).collect(Collectors.toList());
         List<L2EtcItem> weaponEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_WP == etcItem.getItemType()).collect(Collectors.toList());
         List<L2EtcItem> armorEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_AM == etcItem.getItemType()).collect(Collectors.toList());
 
         return new CategorizedItems(craftableWeapons, nonMasterworkArmors, nonMasterworkJewels, weaponAndArmorParts, craftMaterials, recipes, weaponEnchants, armorEnchants);
+    }
+
+    private static boolean crossContainsIgnoreCase(String left, String right) {
+        return left.toLowerCase().contains(right.toLowerCase()) ||
+                right.toLowerCase().contains(left.toLowerCase());
+    }
+
+    private static String removeEndingS(String text) {
+        char character = text.charAt(text.length() - 1);
+        if (character == 's' || character == 'S') {
+            return text.substring(0, text.length() - 1);
+        }
+        {
+            return text;
+        }
+    }
+
+    private static String joinLongbowWorkTogether(String text) {
+        return text.replaceAll("(?i)Long bow", "Longbow");
     }
 
     private static <T extends L2Item> List<L2Item> sort(List<T> items) {
@@ -203,9 +257,11 @@ public class GradedEquipmentGenerator {
         Server.serverMode = Server.MODE_GAMESERVER;
         Config.load();
 
-        List<GradedItem> allWeapon = regradeDynastyToS80(convert(sort(collectCategorizedItems().getNonMasterworkWeapons())));
-        List<GradedItem> allArmor = regradeDynastyToS80(convert(sort(collectCategorizedItems().getNonMasterworkArmors())));
-        List<GradedItem> allJewels = regradeDynastyToS80(convert(sort(collectCategorizedItems().getNonMasterworkJewels())));
+        CategorizedItems categorizedItems = collectCategorizedItems();
+
+        List<GradedItem> allWeapon = regradeDynastyToS80(convert(sort(categorizedItems.getNonMasterworkWeapons())));
+        List<GradedItem> allArmor = regradeDynastyToS80(convert(sort(categorizedItems.getNonMasterworkArmors())));
+        List<GradedItem> allJewels = regradeDynastyToS80(convert(sort(categorizedItems.getNonMasterworkJewels())));
 
         gradeItems(allWeapon, weaponsGradeParts());
         gradeItems(allArmor, commonGradeParts());
@@ -216,8 +272,12 @@ public class GradedEquipmentGenerator {
         allItems.addAll(allArmor);
         allItems.addAll(allJewels);
 
-        File gradedEquipment = new File("data/stats/categorized/graded_equipment.json");
-        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValue(gradedEquipment, allItems);
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_equipment.json"), allItems);
+
+        List<ItemPart> itemParts = categorizedItems.getWeaponAndArmorParts();
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/craftable_item_parts.json"), itemParts);
     }
 
     private static List<GradedItem> regradeDynastyToS80(List<GradedItem> items) {

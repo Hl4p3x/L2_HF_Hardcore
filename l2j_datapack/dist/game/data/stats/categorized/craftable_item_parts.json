@@ -1,0 +1,3110 @@
+[
+  {
+    "itemId": 70,
+    "itemName": "Claymore",
+    "partId": 2047,
+    "partName": "Claymore Blade"
+  },
+  {
+    "itemId": 71,
+    "itemName": "Flamberge",
+    "partId": 2059,
+    "partName": "Flamberge Blade"
+  },
+  {
+    "itemId": 72,
+    "itemName": "Stormbringer",
+    "partId": 2060,
+    "partName": "Stormbringer Blade"
+  },
+  {
+    "itemId": 73,
+    "itemName": "Shamshir",
+    "partId": 2077,
+    "partName": "Shamshir Blade"
+  },
+  {
+    "itemId": 74,
+    "itemName": "Katana",
+    "partId": 2078,
+    "partName": "Katana Blade"
+  },
+  {
+    "itemId": 75,
+    "itemName": "Caliburs",
+    "partId": 2089,
+    "partName": "Caliburs Edge"
+  },
+  {
+    "itemId": 76,
+    "itemName": "Sword of Delusion",
+    "partId": 2090,
+    "partName": "Delusional Blade"
+  },
+  {
+    "itemId": 77,
+    "itemName": "Tsurugi",
+    "partId": 2091,
+    "partName": "Tsurugi Blade"
+  },
+  {
+    "itemId": 78,
+    "itemName": "Great Sword",
+    "partId": 4104,
+    "partName": "Great Sword Blade"
+  },
+  {
+    "itemId": 79,
+    "itemName": "Sword of Damascus",
+    "partId": 4114,
+    "partName": "Sword of Damascus Blade"
+  },
+  {
+    "itemId": 80,
+    "itemName": "Tallum Blade",
+    "partId": 5548,
+    "partName": "Tallum Blade Edge"
+  },
+  {
+    "itemId": 81,
+    "itemName": "Dragon Slayer",
+    "partId": 5529,
+    "partName": "Dragon Slayer Edge"
+  },
+  {
+    "itemId": 84,
+    "itemName": "Homunkulus's Sword",
+    "partId": 2092,
+    "partName": "Homunkulus's Sword Blade"
+  },
+  {
+    "itemId": 88,
+    "itemName": "Morning Star",
+    "partId": 2031,
+    "partName": "Morning Star Head"
+  },
+  {
+    "itemId": 89,
+    "itemName": "Big Hammer",
+    "partId": 2061,
+    "partName": "Big Hammer Head"
+  },
+  {
+    "itemId": 90,
+    "itemName": "Goat Head Staff",
+    "partId": 2032,
+    "partName": "Goat Head Staff Head"
+  },
+  {
+    "itemId": 91,
+    "itemName": "Heavy War Axe",
+    "partId": 4105,
+    "partName": "Heavy War Axe Head"
+  },
+  {
+    "itemId": 92,
+    "itemName": "Sprite's Staff",
+    "partId": 4106,
+    "partName": "Sprite's Staff Head"
+  },
+  {
+    "itemId": 93,
+    "itemName": "Winged Spear",
+    "partId": 2033,
+    "partName": "Winged Spear Blade"
+  },
+  {
+    "itemId": 94,
+    "itemName": "Bec de Corbin",
+    "partId": 2079,
+    "partName": "Bec De Corbin Blade"
+  },
+  {
+    "itemId": 95,
+    "itemName": "Poleaxe",
+    "partId": 2093,
+    "partName": "Poleaxe Blade"
+  },
+  {
+    "itemId": 96,
+    "itemName": "Scythe",
+    "partId": 2062,
+    "partName": "Scythe Edge"
+  },
+  {
+    "itemId": 97,
+    "itemName": "Lance",
+    "partId": 4115,
+    "partName": "Lance Blade"
+  },
+  {
+    "itemId": 98,
+    "itemName": "Halberd",
+    "partId": 5542,
+    "partName": "Halberd Edge"
+  },
+  {
+    "itemId": 123,
+    "itemName": "Saber",
+    "partId": 2017,
+    "partName": "Saber Blade"
+  },
+  {
+    "itemId": 124,
+    "itemName": "Two-Handed Sword",
+    "partId": 2026,
+    "partName": "Two-Handed Sword Edge"
+  },
+  {
+    "itemId": 125,
+    "itemName": "Spinebone Sword",
+    "partId": 2021,
+    "partName": "Spinebone Sword Blade"
+  },
+  {
+    "itemId": 129,
+    "itemName": "Sword of Revolution",
+    "partId": 2034,
+    "partName": "Sword of Revolution Blade"
+  },
+  {
+    "itemId": 131,
+    "itemName": "Spirit Sword",
+    "partId": 2080,
+    "partName": "Spirit Sword Blade"
+  },
+  {
+    "itemId": 132,
+    "itemName": "Sword of Limit",
+    "partId": 2094,
+    "partName": "Sword of Limit Blade"
+  },
+  {
+    "itemId": 133,
+    "itemName": "Raid Sword",
+    "partId": 2081,
+    "partName": "Raid Sword Blade"
+  },
+  {
+    "itemId": 134,
+    "itemName": "Sword of Nightmare",
+    "partId": 2095,
+    "partName": "Sword of Nightmare Blade"
+  },
+  {
+    "itemId": 135,
+    "itemName": "Samurai Longsword",
+    "partId": 2115,
+    "partName": "Samurai Longsword Blade"
+  },
+  {
+    "itemId": 142,
+    "itemName": "Keshanberk",
+    "partId": 4107,
+    "partName": "Keshanberk Blade"
+  },
+  {
+    "itemId": 145,
+    "itemName": "Sword of Whispering Death",
+    "partId": 2096,
+    "partName": "Sword of Whispering Death Blade"
+  },
+  {
+    "itemId": 148,
+    "itemName": "Sword of Valhalla",
+    "partId": 4108,
+    "partName": "Sword of Valhalla Blade"
+  },
+  {
+    "itemId": 150,
+    "itemName": "Elemental Sword",
+    "partId": 5547,
+    "partName": "Elemental Sword Edge"
+  },
+  {
+    "itemId": 151,
+    "itemName": "Sword of Miracles",
+    "partId": 5546,
+    "partName": "Sword of Miracles Edge"
+  },
+  {
+    "itemId": 157,
+    "itemName": "Spiked Club",
+    "partId": 2027,
+    "partName": "Spiked Club Head"
+  },
+  {
+    "itemId": 158,
+    "itemName": "Tarbar",
+    "partId": 2035,
+    "partName": "Tarbar Head"
+  },
+  {
+    "itemId": 159,
+    "itemName": "Bonebreaker",
+    "partId": 2048,
+    "partName": "Bonebreaker Head"
+  },
+  {
+    "itemId": 160,
+    "itemName": "Battle Axe",
+    "partId": 2063,
+    "partName": "Battle Axe Head"
+  },
+  {
+    "itemId": 161,
+    "itemName": "Silver Axe",
+    "partId": 2064,
+    "partName": "Silver Axe Head"
+  },
+  {
+    "itemId": 162,
+    "itemName": "War Axe",
+    "partId": 2097,
+    "partName": "War Axe Blade"
+  },
+  {
+    "itemId": 164,
+    "itemName": "Elysian",
+    "partId": 5533,
+    "partName": "Elysian Head"
+  },
+  {
+    "itemId": 169,
+    "itemName": "Skull Breaker",
+    "partId": 2036,
+    "partName": "Skull Breaker Head"
+  },
+  {
+    "itemId": 171,
+    "itemName": "Deadman's Glory",
+    "partId": 4116,
+    "partName": "Deadman's Glory Stone"
+  },
+  {
+    "itemId": 172,
+    "itemName": "Heavy Bone Club",
+    "partId": 2037,
+    "partName": "Heavy Bone Club Head"
+  },
+  {
+    "itemId": 173,
+    "itemName": "Skull Graver",
+    "partId": 2065,
+    "partName": "Skull Graver Head"
+  },
+  {
+    "itemId": 174,
+    "itemName": "Nirvana Axe",
+    "partId": 2098,
+    "partName": "Nirvana Axe Blade"
+  },
+  {
+    "itemId": 175,
+    "itemName": "Art of Battle Axe",
+    "partId": 4117,
+    "partName": "Art of Battle Axe Blade"
+  },
+  {
+    "itemId": 180,
+    "itemName": "Mace of Judgment",
+    "partId": 2022,
+    "partName": "Mace of Judgment Head"
+  },
+  {
+    "itemId": 184,
+    "itemName": "Conjuror's Staff",
+    "partId": 2023,
+    "partName": "Conjuror's Staff Head"
+  },
+  {
+    "itemId": 187,
+    "itemName": "Atuba Hammer",
+    "partId": 2049,
+    "partName": "Atuba Hammer Head"
+  },
+  {
+    "itemId": 188,
+    "itemName": "Ghost Staff",
+    "partId": 2050,
+    "partName": "Ghost Staff Head"
+  },
+  {
+    "itemId": 189,
+    "itemName": "Staff of Life",
+    "partId": 2051,
+    "partName": "Staff of Life Shaft"
+  },
+  {
+    "itemId": 190,
+    "itemName": "Atuba Mace",
+    "partId": 2058,
+    "partName": "Atuba Mace Head"
+  },
+  {
+    "itemId": 191,
+    "itemName": "Heavy Doom Hammer",
+    "partId": 2066,
+    "partName": "Heavy Doom Hammer Head"
+  },
+  {
+    "itemId": 192,
+    "itemName": "Crystal Staff",
+    "partId": 2067,
+    "partName": "Crystal Staff Head"
+  },
+  {
+    "itemId": 193,
+    "itemName": "Stick of Faith",
+    "partId": 2068,
+    "partName": "Stick of Faith Shaft"
+  },
+  {
+    "itemId": 194,
+    "itemName": "Heavy Doom Axe",
+    "partId": 2069,
+    "partName": "Heavy Doom Axe Blade"
+  },
+  {
+    "itemId": 195,
+    "itemName": "Cursed Staff",
+    "partId": 2082,
+    "partName": "Cursed Staff Head"
+  },
+  {
+    "itemId": 196,
+    "itemName": "Stick of Eternity",
+    "partId": 2099,
+    "partName": "Stick of Eternity Shaft"
+  },
+  {
+    "itemId": 197,
+    "itemName": "Paradia Staff",
+    "partId": 2100,
+    "partName": "Paradia Staff Head"
+  },
+  {
+    "itemId": 198,
+    "itemName": "Inferno Staff",
+    "partId": 2101,
+    "partName": "Inferno Staff Head"
+  },
+  {
+    "itemId": 199,
+    "itemName": "Pa'agrian Hammer",
+    "partId": 2102,
+    "partName": "Pa'agrian Hammer Head"
+  },
+  {
+    "itemId": 200,
+    "itemName": "Sage's Staff",
+    "partId": 2103,
+    "partName": "Sage's Staff Head"
+  },
+  {
+    "itemId": 201,
+    "itemName": "Club of Nature",
+    "partId": 2104,
+    "partName": "Club of Nature Head"
+  },
+  {
+    "itemId": 202,
+    "itemName": "Mace of Underworld",
+    "partId": 2105,
+    "partName": "Mace of Underworld Head"
+  },
+  {
+    "itemId": 203,
+    "itemName": "Pa'agrian Axe",
+    "partId": 2112,
+    "partName": "Pa'agrian Axe Blade"
+  },
+  {
+    "itemId": 204,
+    "itemName": "Deadman's Staff",
+    "partId": 2116,
+    "partName": "Deadman's Staff Head"
+  },
+  {
+    "itemId": 205,
+    "itemName": "Ghoul's Staff",
+    "partId": 2117,
+    "partName": "Ghoul's Staff Head"
+  },
+  {
+    "itemId": 206,
+    "itemName": "Demon's Staff",
+    "partId": 2118,
+    "partName": "Demon's Staff Head"
+  },
+  {
+    "itemId": 210,
+    "itemName": "Staff of Evil Spirits",
+    "partId": 4118,
+    "partName": "Evil Spirit Head"
+  },
+  {
+    "itemId": 212,
+    "itemName": "Dasparion's Staff",
+    "partId": 5543,
+    "partName": "Dasparion's Staff Head"
+  },
+  {
+    "itemId": 213,
+    "itemName": "Branch of the Mother Tree",
+    "partId": 5544,
+    "partName": "Branch of the Mother Tree Head"
+  },
+  {
+    "itemId": 221,
+    "itemName": "Assassin Knife",
+    "partId": 2018,
+    "partName": "Assassin Knife Edge"
+  },
+  {
+    "itemId": 224,
+    "itemName": "Maingauche",
+    "partId": 2038,
+    "partName": "Maingauche Edge"
+  },
+  {
+    "itemId": 225,
+    "itemName": "Mithril Dagger",
+    "partId": 2052,
+    "partName": "Mithril Dagger Blade"
+  },
+  {
+    "itemId": 226,
+    "itemName": "Cursed Dagger",
+    "partId": 2070,
+    "partName": "Cursed Dagger Blade"
+  },
+  {
+    "itemId": 227,
+    "itemName": "Stiletto",
+    "partId": 2083,
+    "partName": "Stiletto Edge"
+  },
+  {
+    "itemId": 228,
+    "itemName": "Crystal Dagger",
+    "partId": 2119,
+    "partName": "Crystal Dagger Blade"
+  },
+  {
+    "itemId": 229,
+    "itemName": "Kris",
+    "partId": 4109,
+    "partName": "Kris Edge"
+  },
+  {
+    "itemId": 231,
+    "itemName": "Grace Dagger",
+    "partId": 2106,
+    "partName": "Grace Dagger Edge"
+  },
+  {
+    "itemId": 232,
+    "itemName": "Dark Elven Dagger",
+    "partId": 2072,
+    "partName": "Dark Elven Dagger Edge"
+  },
+  {
+    "itemId": 233,
+    "itemName": "Dark Screamer",
+    "partId": 2107,
+    "partName": "Dark Screamer Edge"
+  },
+  {
+    "itemId": 234,
+    "itemName": "Demon's Dagger",
+    "partId": 4119,
+    "partName": "Demon's Dagger Edge"
+  },
+  {
+    "itemId": 235,
+    "itemName": "Bloody Orchid",
+    "partId": 5536,
+    "partName": "Bloody Orchid Head"
+  },
+  {
+    "itemId": 236,
+    "itemName": "Soul Separator",
+    "partId": 5537,
+    "partName": "Soul Separator Head"
+  },
+  {
+    "itemId": 241,
+    "itemName": "Shilen Knife",
+    "partId": 2028,
+    "partName": "Shilen Knife Edge"
+  },
+  {
+    "itemId": 242,
+    "itemName": "Soulfire Dirk",
+    "partId": 2084,
+    "partName": "Soulfire Dirk Blade"
+  },
+  {
+    "itemId": 243,
+    "itemName": "Hell Knife",
+    "partId": 4110,
+    "partName": "Hell Knife Edge"
+  },
+  {
+    "itemId": 261,
+    "itemName": "Bich'Hwa",
+    "partId": 2039,
+    "partName": "Bich'Hwa Edge"
+  },
+  {
+    "itemId": 262,
+    "itemName": "Scallop Jamadhr",
+    "partId": 2053,
+    "partName": "Scallop Jamadhr Edge"
+  },
+  {
+    "itemId": 263,
+    "itemName": "Chakram",
+    "partId": 2073,
+    "partName": "Chakram Edge"
+  },
+  {
+    "itemId": 264,
+    "itemName": "Pata",
+    "partId": 4103,
+    "partName": "Pata Blade"
+  },
+  {
+    "itemId": 265,
+    "itemName": "Fisted Blade",
+    "partId": 2108,
+    "partName": "Fisted Blade Piece"
+  },
+  {
+    "itemId": 266,
+    "itemName": "Great Pata",
+    "partId": 2120,
+    "partName": "Great Pata Blade"
+  },
+  {
+    "itemId": 267,
+    "itemName": "Arthro Nail",
+    "partId": 4111,
+    "partName": "Arthro Nail Blade"
+  },
+  {
+    "itemId": 268,
+    "itemName": "Bellion Cestus",
+    "partId": 4120,
+    "partName": "Bellion Cestus Edge"
+  },
+  {
+    "itemId": 269,
+    "itemName": "Blood Tornado",
+    "partId": 5539,
+    "partName": "Blood Tornado Edge"
+  },
+  {
+    "itemId": 270,
+    "itemName": "Dragon Grinder",
+    "partId": 5538,
+    "partName": "Dragon Grinder Edge"
+  },
+  {
+    "itemId": 276,
+    "itemName": "Elven Bow",
+    "partId": 2024,
+    "partName": "Elven Bow Shaft"
+  },
+  {
+    "itemId": 278,
+    "itemName": "Gastraphetes",
+    "partId": 2029,
+    "partName": "Gastraphetes Shaft"
+  },
+  {
+    "itemId": 279,
+    "itemName": "Reinforced Long Bow",
+    "partId": 2040,
+    "partName": "Reinforced Long Bow Shaft"
+  },
+  {
+    "itemId": 280,
+    "itemName": "Light Crossbow",
+    "partId": 2054,
+    "partName": "Light Crossbow Shaft"
+  },
+  {
+    "itemId": 281,
+    "itemName": "Crystallized Ice Bow",
+    "partId": 2074,
+    "partName": "Crystallized Ice Bow Shaft"
+  },
+  {
+    "itemId": 282,
+    "itemName": "Elemental Bow",
+    "partId": 2085,
+    "partName": "Crossbow Shaft"
+  },
+  {
+    "itemId": 283,
+    "itemName": "Akat Long Bow",
+    "partId": 2109,
+    "partName": "Akat Longbow Shaft"
+  },
+  {
+    "itemId": 284,
+    "itemName": "Dark Elven Long Bow",
+    "partId": 4112,
+    "partName": "Dark Elven Longbow Shaft"
+  },
+  {
+    "itemId": 285,
+    "itemName": "Noble Elven Bow",
+    "partId": 2086,
+    "partName": "Noble Elven Bow Shaft"
+  },
+  {
+    "itemId": 286,
+    "itemName": "Eminence Bow",
+    "partId": 2121,
+    "partName": "Eminence Bow Shaft"
+  },
+  {
+    "itemId": 287,
+    "itemName": "Bow of Peril",
+    "partId": 4121,
+    "partName": "Bow of Peril Shaft"
+  },
+  {
+    "itemId": 288,
+    "itemName": "Carnage Bow",
+    "partId": 5535,
+    "partName": "Carnage Bow Stave"
+  },
+  {
+    "itemId": 289,
+    "itemName": "Soul Bow",
+    "partId": 5534,
+    "partName": "Soul Bow Stave"
+  },
+  {
+    "itemId": 291,
+    "itemName": "Trident",
+    "partId": 2019,
+    "partName": "Trident Edge"
+  },
+  {
+    "itemId": 294,
+    "itemName": "War Pick",
+    "partId": 2041,
+    "partName": "War Pick Head"
+  },
+  {
+    "itemId": 295,
+    "itemName": "Dwarven Trident",
+    "partId": 2025,
+    "partName": "Dwarven Trident Edge"
+  },
+  {
+    "itemId": 297,
+    "itemName": "Glaive",
+    "partId": 2055,
+    "partName": "Glaive Edge"
+  },
+  {
+    "itemId": 298,
+    "itemName": "Orcish Glaive",
+    "partId": 2075,
+    "partName": "Orcish Glaive Blade"
+  },
+  {
+    "itemId": 299,
+    "itemName": "Orcish Poleaxe",
+    "partId": 2122,
+    "partName": "Orcish Poleaxe Blade"
+  },
+  {
+    "itemId": 300,
+    "itemName": "Great Axe",
+    "partId": 4113,
+    "partName": "Great Axe Head"
+  },
+  {
+    "itemId": 301,
+    "itemName": "Scorpion",
+    "partId": 2113,
+    "partName": "Scorpion Blade"
+  },
+  {
+    "itemId": 302,
+    "itemName": "Body Slasher",
+    "partId": 2076,
+    "partName": "Body Slasher Blade"
+  },
+  {
+    "itemId": 303,
+    "itemName": "Widow Maker",
+    "partId": 2114,
+    "partName": "Widowmaker Head"
+  },
+  {
+    "itemId": 305,
+    "itemName": "Tallum Glaive",
+    "partId": 5541,
+    "partName": "Tallum Glaive Edge"
+  },
+  {
+    "itemId": 313,
+    "itemName": "Temptation of Abyss",
+    "partId": 2020,
+    "partName": "Temptation of Abyss Piece"
+  },
+  {
+    "itemId": 317,
+    "itemName": "Tome of Blood",
+    "partId": 2030,
+    "partName": "Tome of Blood Page"
+  },
+  {
+    "itemId": 318,
+    "itemName": "Crucifix of Blood",
+    "partId": 2042,
+    "partName": "Crucifix of Blood Piece"
+  },
+  {
+    "itemId": 321,
+    "itemName": "Demon Fangs",
+    "partId": 2046,
+    "partName": "Demon Fangs Part"
+  },
+  {
+    "itemId": 326,
+    "itemName": "Heathen's Book",
+    "partId": 2110,
+    "partName": "Heathen's Book Page"
+  },
+  {
+    "itemId": 8678,
+    "itemName": "Sirra's Blade",
+    "partId": 8712,
+    "partName": "Sirra's Blade Edge"
+  },
+  {
+    "itemId": 8679,
+    "itemName": "Sword of Ipos",
+    "partId": 8713,
+    "partName": "Sword of Ipos Blade"
+  },
+  {
+    "itemId": 8680,
+    "itemName": "Barakiel's Axe",
+    "partId": 8714,
+    "partName": "Barakiel's Axe Piece"
+  },
+  {
+    "itemId": 8681,
+    "itemName": "Behemoth's Tuning Fork",
+    "partId": 8715,
+    "partName": "Behemoth's Tuning Fork Piece"
+  },
+  {
+    "itemId": 8682,
+    "itemName": "Naga Storm",
+    "partId": 8716,
+    "partName": "Naga Storm Piece"
+  },
+  {
+    "itemId": 8683,
+    "itemName": "Tiphon's Spear",
+    "partId": 8717,
+    "partName": "Tiphon's Spear Edge"
+  },
+  {
+    "itemId": 8684,
+    "itemName": "Shyeed's Bow",
+    "partId": 8718,
+    "partName": "Shyeed's Bow Shaft"
+  },
+  {
+    "itemId": 8685,
+    "itemName": "Sobekk's Hurricane",
+    "partId": 8719,
+    "partName": "Sobekk's Hurricane Edge"
+  },
+  {
+    "itemId": 8686,
+    "itemName": "Themis' Tongue",
+    "partId": 8720,
+    "partName": "Themis' Tongue Piece"
+  },
+  {
+    "itemId": 8687,
+    "itemName": "Cabrio's Hand",
+    "partId": 8721,
+    "partName": "Cabrio's Hand Head"
+  },
+  {
+    "itemId": 8688,
+    "itemName": "Daimon Crystal",
+    "partId": 8722,
+    "partName": "Daimon Crystal Fragment"
+  },
+  {
+    "itemId": 9442,
+    "itemName": "Dynasty Sword",
+    "partId": 9616,
+    "partName": "Dynasty Sword Piece"
+  },
+  {
+    "itemId": 9443,
+    "itemName": "Dynasty Blade",
+    "partId": 9617,
+    "partName": "Dynasty Blade Piece"
+  },
+  {
+    "itemId": 9444,
+    "itemName": "Dynasty Phantom",
+    "partId": 9618,
+    "partName": "Dynasty Phantom Piece"
+  },
+  {
+    "itemId": 9445,
+    "itemName": "Dynasty Bow",
+    "partId": 9619,
+    "partName": "Dynasty Bow Piece"
+  },
+  {
+    "itemId": 9446,
+    "itemName": "Dynasty Knife",
+    "partId": 9620,
+    "partName": "Dynasty Knife Piece"
+  },
+  {
+    "itemId": 9447,
+    "itemName": "Dynasty Halberd",
+    "partId": 9621,
+    "partName": "Dynasty Halberd Piece"
+  },
+  {
+    "itemId": 9448,
+    "itemName": "Dynasty Cudgel",
+    "partId": 9622,
+    "partName": "Dynasty Cudgel Piece"
+  },
+  {
+    "itemId": 9449,
+    "itemName": "Dynasty Mace",
+    "partId": 9623,
+    "partName": "Dynasty Mace Piece"
+  },
+  {
+    "itemId": 9450,
+    "itemName": "Dynasty Bagh-Nakh",
+    "partId": 9624,
+    "partName": "Dynasty Bagh-Nakh Piece"
+  },
+  {
+    "itemId": 1660,
+    "itemName": "Cursed Maingauche",
+    "partId": 2044,
+    "partName": "Cursed Maingauche Edge"
+  },
+  {
+    "itemId": 10215,
+    "itemName": "Icarus Sawsword",
+    "partId": 10397,
+    "partName": "Icarus Sawsword Piece"
+  },
+  {
+    "itemId": 10216,
+    "itemName": "Icarus Disperser",
+    "partId": 10398,
+    "partName": "Icarus Disperser Piece"
+  },
+  {
+    "itemId": 10217,
+    "itemName": "Icarus Spirit",
+    "partId": 10399,
+    "partName": "Icarus Spirit Piece"
+  },
+  {
+    "itemId": 10218,
+    "itemName": "Icarus Heavy Arms",
+    "partId": 10400,
+    "partName": "Icarus Heavy Arms Piece"
+  },
+  {
+    "itemId": 10219,
+    "itemName": "Icarus Trident",
+    "partId": 10401,
+    "partName": "Icarus Trident Piece"
+  },
+  {
+    "itemId": 10220,
+    "itemName": "Icarus Hammer",
+    "partId": 10402,
+    "partName": "Icarus Hammer Piece"
+  },
+  {
+    "itemId": 10221,
+    "itemName": "Icarus Hand",
+    "partId": 10403,
+    "partName": "Icarus Hand Piece"
+  },
+  {
+    "itemId": 10222,
+    "itemName": "Icarus Hall",
+    "partId": 10404,
+    "partName": "Icarus Hall Piece"
+  },
+  {
+    "itemId": 10223,
+    "itemName": "Icarus Spitter",
+    "partId": 10405,
+    "partName": "Icarus Spitter Piece"
+  },
+  {
+    "itemId": 10252,
+    "itemName": "Dynasty Staff",
+    "partId": 10546,
+    "partName": "Dynasty Staff Fragment"
+  },
+  {
+    "itemId": 10253,
+    "itemName": "Dynasty Crusher",
+    "partId": 10547,
+    "partName": "Dynasty Crusher Fragment"
+  },
+  {
+    "itemId": 2499,
+    "itemName": "Elven Long Sword",
+    "partId": 2967,
+    "partName": "Elven Long Sword Blade"
+  },
+  {
+    "itemId": 2500,
+    "itemName": "Dark Legion's Edge",
+    "partId": 5545,
+    "partName": "Dark Legion's Edge Blade"
+  },
+  {
+    "itemId": 2502,
+    "itemName": "Dwarven War Hammer",
+    "partId": 2968,
+    "partName": "Dwarven War Hammer Head"
+  },
+  {
+    "itemId": 2503,
+    "itemName": "Yaksa Mace",
+    "partId": 2969,
+    "partName": "Yaksa Mace Head"
+  },
+  {
+    "itemId": 2504,
+    "itemName": "Meteor Shower",
+    "partId": 5532,
+    "partName": "Meteor Shower Head"
+  },
+  {
+    "itemId": 4233,
+    "itemName": "Knuckle Duster",
+    "partId": 4438,
+    "partName": "Knuckle Duster Edge"
+  },
+  {
+    "itemId": 13457,
+    "itemName": "Vesper Cutter",
+    "partId": 15634,
+    "partName": "Vesper Cutter Piece"
+  },
+  {
+    "itemId": 13458,
+    "itemName": "Vesper Slasher",
+    "partId": 15635,
+    "partName": "Vesper Slasher Piece"
+  },
+  {
+    "itemId": 13459,
+    "itemName": "Vesper Buster",
+    "partId": 15636,
+    "partName": "Vesper Buster Piece"
+  },
+  {
+    "itemId": 13460,
+    "itemName": "Vesper Shaper",
+    "partId": 15637,
+    "partName": "Vesper Shaper Piece"
+  },
+  {
+    "itemId": 13461,
+    "itemName": "Vesper Fighter",
+    "partId": 15638,
+    "partName": "Vesper Fighter Piece"
+  },
+  {
+    "itemId": 13462,
+    "itemName": "Vesper Stormer",
+    "partId": 15639,
+    "partName": "Vesper Stormer Piece"
+  },
+  {
+    "itemId": 13463,
+    "itemName": "Vesper Avenger",
+    "partId": 15640,
+    "partName": "Vesper Avenger Piece"
+  },
+  {
+    "itemId": 13464,
+    "itemName": "Vesper Retributer",
+    "partId": 15641,
+    "partName": "Vesper Retributer Piece"
+  },
+  {
+    "itemId": 13465,
+    "itemName": "Vesper Caster",
+    "partId": 15642,
+    "partName": "Vesper Caster Piece"
+  },
+  {
+    "itemId": 13466,
+    "itemName": "Vesper Singer",
+    "partId": 15643,
+    "partName": "Vesper Singer Piece"
+  },
+  {
+    "itemId": 13467,
+    "itemName": "Vesper Thrower",
+    "partId": 15644,
+    "partName": "Vesper Thrower Piece"
+  },
+  {
+    "itemId": 5285,
+    "itemName": "Heavy Sword",
+    "partId": 5531,
+    "partName": "Heavy Sword Edge"
+  },
+  {
+    "itemId": 5286,
+    "itemName": "Berserker Blade",
+    "partId": 5530,
+    "partName": "Berserker Blade Edge"
+  },
+  {
+    "itemId": 6364,
+    "itemName": "Forgotten Blade",
+    "partId": 6688,
+    "partName": "Forgotten Blade Edge"
+  },
+  {
+    "itemId": 6365,
+    "itemName": "Basalt Battlehammer",
+    "partId": 6689,
+    "partName": "Basalt Battlehammer Head"
+  },
+  {
+    "itemId": 6366,
+    "itemName": "Imperial Staff",
+    "partId": 6690,
+    "partName": "Imperial Staff Head"
+  },
+  {
+    "itemId": 6367,
+    "itemName": "Angel Slayer",
+    "partId": 6691,
+    "partName": "Angel Slayer Blade"
+  },
+  {
+    "itemId": 6369,
+    "itemName": "Dragon Hunter Axe",
+    "partId": 6693,
+    "partName": "Dragon Hunter Axe Blade"
+  },
+  {
+    "itemId": 6370,
+    "itemName": "Saint Spear",
+    "partId": 6694,
+    "partName": "Saint Spear Blade"
+  },
+  {
+    "itemId": 6371,
+    "itemName": "Demon Splinter",
+    "partId": 6695,
+    "partName": "Demon Splinter Blade"
+  },
+  {
+    "itemId": 6372,
+    "itemName": "Heaven's Divider",
+    "partId": 6696,
+    "partName": "Heavens Divider Edge"
+  },
+  {
+    "itemId": 6579,
+    "itemName": "Arcana Mace",
+    "partId": 6697,
+    "partName": "Arcana Mace Head"
+  },
+  {
+    "itemId": 7575,
+    "itemName": "Draconic Bow",
+    "partId": 7579,
+    "partName": "Draconic Bow Shaft"
+  },
+  {
+    "itemId": 7880,
+    "itemName": "Steel Sword",
+    "partId": 8327,
+    "partName": "Steel Sword Blade"
+  },
+  {
+    "itemId": 7881,
+    "itemName": "Titan Sword",
+    "partId": 8328,
+    "partName": "Titan Sword Blade"
+  },
+  {
+    "itemId": 7882,
+    "itemName": "Pa'agrian Sword",
+    "partId": 8329,
+    "partName": "Pa'agrian Sword Blade"
+  },
+  {
+    "itemId": 7883,
+    "itemName": "Guardian Sword",
+    "partId": 8330,
+    "partName": "Guardian Sword Blade"
+  },
+  {
+    "itemId": 7884,
+    "itemName": "Infernal Master",
+    "partId": 8331,
+    "partName": "Infernal Master Blade"
+  },
+  {
+    "itemId": 7885,
+    "itemName": "Priest Sword",
+    "partId": 8332,
+    "partName": "Priest Sword Blade"
+  },
+  {
+    "itemId": 7886,
+    "itemName": "Sword of Magic Fog",
+    "partId": 8333,
+    "partName": "Sword of Magic Fog Blade"
+  },
+  {
+    "itemId": 7887,
+    "itemName": "Mysterious Sword",
+    "partId": 8334,
+    "partName": "Mysterious Sword Blade"
+  },
+  {
+    "itemId": 7888,
+    "itemName": "Ecliptic Sword",
+    "partId": 8335,
+    "partName": "Ecliptic Sword Blade"
+  },
+  {
+    "itemId": 7889,
+    "itemName": "Wizard's Tear",
+    "partId": 8336,
+    "partName": "Blade of the Wizard's Tear"
+  },
+  {
+    "itemId": 7890,
+    "itemName": "Priest Mace",
+    "partId": 8337,
+    "partName": "Priest Mace Head"
+  },
+  {
+    "itemId": 7891,
+    "itemName": "Ecliptic Axe",
+    "partId": 8338,
+    "partName": "Axe of Eclipse Head"
+  },
+  {
+    "itemId": 7892,
+    "itemName": "Spell Breaker",
+    "partId": 8339,
+    "partName": "Spell Breaker Head"
+  },
+  {
+    "itemId": 7893,
+    "itemName": "Kaim Vanul's Bones",
+    "partId": 8340,
+    "partName": "Bones Head of Kaim Vanul"
+  },
+  {
+    "itemId": 7894,
+    "itemName": "Spiritual Eye",
+    "partId": 8341,
+    "partName": "Spiritual Eye Piece"
+  },
+  {
+    "itemId": 7895,
+    "itemName": "Flaming Dragon Skull",
+    "partId": 8342,
+    "partName": "Flaming Dragon Skull Piece"
+  },
+  {
+    "itemId": 7896,
+    "itemName": "Titan Hammer",
+    "partId": 8343,
+    "partName": "Titan Hammer Piece"
+  },
+  {
+    "itemId": 7897,
+    "itemName": "Dwarven Hammer",
+    "partId": 8344,
+    "partName": "Dwarven Hammer Piece"
+  },
+  {
+    "itemId": 7898,
+    "itemName": "Karik Horn",
+    "partId": 8345,
+    "partName": "Karik Horn Piece"
+  },
+  {
+    "itemId": 7899,
+    "itemName": "Destroyer Hammer",
+    "partId": 8346,
+    "partName": "Hammer Piece of Destroyer"
+  },
+  {
+    "itemId": 7900,
+    "itemName": "Ice Storm Hammer",
+    "partId": 8347,
+    "partName": "Ice Storm Hammer Head"
+  },
+  {
+    "itemId": 7901,
+    "itemName": "Star Buster",
+    "partId": 8348,
+    "partName": "Star Buster Head"
+  },
+  {
+    "itemId": 7902,
+    "itemName": "Doom Crusher",
+    "partId": 8349,
+    "partName": "Doom Crusher Head"
+  },
+  {
+    "itemId": 3,
+    "itemName": "Broadsword",
+    "partId": 2005,
+    "partName": "Broadsword Blade"
+  },
+  {
+    "itemId": 14,
+    "itemName": "Bow",
+    "partId": 2007,
+    "partName": "Bow Shaft"
+  },
+  {
+    "itemId": 1333,
+    "itemName": "Brandish",
+    "partId": 2010,
+    "partName": "Brandish Blade"
+  },
+  {
+    "itemId": 216,
+    "itemName": "Dirk",
+    "partId": 2009,
+    "partName": "Dirk Blade"
+  },
+  {
+    "itemId": 272,
+    "itemName": "Forest Bow",
+    "partId": 2013,
+    "partName": "Forest Bow Shaft"
+  },
+  {
+    "itemId": 15,
+    "itemName": "Short Spear",
+    "partId": 2011,
+    "partName": "Short Spear Edge"
+  },
+  {
+    "itemId": 219,
+    "itemName": "Sword Breaker",
+    "partId": 2015,
+    "partName": "Sword Breaker Edge"
+  },
+  {
+    "itemId": 273,
+    "itemName": "Composite Bow",
+    "partId": 2016,
+    "partName": "Composite Bow Shaft"
+  },
+  {
+    "itemId": 87,
+    "itemName": "Iron Hammer",
+    "partId": 2014,
+    "partName": "Iron Hammer Head"
+  },
+  {
+    "itemId": 8,
+    "itemName": "Willow Staff",
+    "partId": 2006,
+    "partName": "Willow Staff Head"
+  },
+  {
+    "itemId": 9,
+    "itemName": "Cedar Staff",
+    "partId": 2008,
+    "partName": "Cedar Staff Head"
+  },
+  {
+    "itemId": 40,
+    "itemName": "Leather Boots",
+    "partId": 1931,
+    "partName": "Leather Boots Lining"
+  },
+  {
+    "itemId": 45,
+    "itemName": "Bone Helmet",
+    "partId": 1932,
+    "partName": "Bone Helmet Design"
+  },
+  {
+    "itemId": 60,
+    "itemName": "Composite Armor",
+    "partId": 1977,
+    "partName": "Composite Armor Temper"
+  },
+  {
+    "itemId": 61,
+    "itemName": "Mithril Plate Gloves",
+    "partId": 1949,
+    "partName": "Mithril Gloves Design"
+  },
+  {
+    "itemId": 62,
+    "itemName": "Reinforced Mithril Boots",
+    "partId": 1958,
+    "partName": "Reinforced Mithril Boots Design"
+  },
+  {
+    "itemId": 64,
+    "itemName": "Composite Boots",
+    "partId": 2956,
+    "partName": "Composite Boots Part"
+  },
+  {
+    "itemId": 103,
+    "itemName": "Tower Shield",
+    "partId": 1978,
+    "partName": "Tower Shield Fragment"
+  },
+  {
+    "itemId": 107,
+    "itemName": "Composite Shield",
+    "partId": 4055,
+    "partName": "Composite Shield Fragment"
+  },
+  {
+    "itemId": 110,
+    "itemName": "Doom Shield",
+    "partId": 4077,
+    "partName": "Doom Shield Fragment"
+  },
+  {
+    "itemId": 119,
+    "itemName": "Necklace of Seal",
+    "partId": 1920,
+    "partName": "Necklace of Seal Chain"
+  },
+  {
+    "itemId": 348,
+    "itemName": "Scale Mail",
+    "partId": 1935,
+    "partName": "Scale Mail Fragment"
+  },
+  {
+    "itemId": 352,
+    "itemName": "Brigandine Tunic",
+    "partId": 1941,
+    "partName": "Brigandine Temper"
+  },
+  {
+    "itemId": 353,
+    "itemName": "Half Plate Armor",
+    "partId": 1950,
+    "partName": "Half Plate Temper"
+  },
+  {
+    "itemId": 354,
+    "itemName": "Chain Mail Shirt",
+    "partId": 1959,
+    "partName": "Chain Mail Shirt Material"
+  },
+  {
+    "itemId": 355,
+    "itemName": "Dwarven Chain Mail Shirt",
+    "partId": 1968,
+    "partName": "Dwarven Chain Mail Shirt Material"
+  },
+  {
+    "itemId": 356,
+    "itemName": "Full Plate Armor",
+    "partId": 1986,
+    "partName": "Full Plate Armor Temper"
+  },
+  {
+    "itemId": 357,
+    "itemName": "Zubei's Breastplate",
+    "partId": 4056,
+    "partName": "Zubei's Breastplate Part"
+  },
+  {
+    "itemId": 358,
+    "itemName": "Blue Wolf Breastplate",
+    "partId": 4078,
+    "partName": "Blue Wolf Breastplate Part"
+  },
+  {
+    "itemId": 377,
+    "itemName": "Scale Gaiters",
+    "partId": 1937,
+    "partName": "Scale Gaiters Fragment"
+  },
+  {
+    "itemId": 380,
+    "itemName": "Plate Gaiters",
+    "partId": 1951,
+    "partName": "Plate Gaiters Part"
+  },
+  {
+    "itemId": 381,
+    "itemName": "Chain Gaiters",
+    "partId": 1960,
+    "partName": "Chain Gaiters Part"
+  },
+  {
+    "itemId": 382,
+    "itemName": "Dwarven Chain Gaiters",
+    "partId": 1969,
+    "partName": "Dwarven Chain Gaiters Material"
+  },
+  {
+    "itemId": 383,
+    "itemName": "Zubei's Gaiters",
+    "partId": 4057,
+    "partName": "Zubei's Gaiter Material"
+  },
+  {
+    "itemId": 393,
+    "itemName": "Mithril Banded Mail",
+    "partId": 1938,
+    "partName": "Mithril Banded Mail Material"
+  },
+  {
+    "itemId": 395,
+    "itemName": "Manticore Skin Shirt",
+    "partId": 1942,
+    "partName": "Manticore Skin Shirt Texture"
+  },
+  {
+    "itemId": 396,
+    "itemName": "Salamander Skin Mail",
+    "partId": 1952,
+    "partName": "Salamander Skin Mail Texture"
+  },
+  {
+    "itemId": 397,
+    "itemName": "Mithril Shirt",
+    "partId": 1961,
+    "partName": "Mithril Shirt Fabric"
+  },
+  {
+    "itemId": 398,
+    "itemName": "Plated Leather",
+    "partId": 1966,
+    "partName": "Plated Leather Fragment"
+  },
+  {
+    "itemId": 399,
+    "itemName": "Rind Leather Armor",
+    "partId": 1975,
+    "partName": "Rind Leather Armor Design"
+  },
+  {
+    "itemId": 400,
+    "itemName": "Theca Leather Armor",
+    "partId": 1984,
+    "partName": "Theca Leather Armor Pattern"
+  },
+  {
+    "itemId": 401,
+    "itemName": "Drake Leather Armor",
+    "partId": 1987,
+    "partName": "Drake Leather Armor Texture"
+  },
+  {
+    "itemId": 415,
+    "itemName": "Mithril Banded Gaiters",
+    "partId": 1939,
+    "partName": "Mithril Banded Gaiters Material"
+  },
+  {
+    "itemId": 417,
+    "itemName": "Manticore Skin Gaiters",
+    "partId": 1943,
+    "partName": "Manticore Skin Gaiters Pattern"
+  },
+  {
+    "itemId": 418,
+    "itemName": "Plated Leather Gaiters",
+    "partId": 1967,
+    "partName": "Plated Leather Gaiters Material"
+  },
+  {
+    "itemId": 419,
+    "itemName": "Rind Leather Gaiters",
+    "partId": 1976,
+    "partName": "Rind Leather Gaiters Material"
+  },
+  {
+    "itemId": 420,
+    "itemName": "Theca Leather Gaiters",
+    "partId": 1985,
+    "partName": "Theca Leather Gaiters Pattern"
+  },
+  {
+    "itemId": 434,
+    "itemName": "White Tunic",
+    "partId": 1936,
+    "partName": "White Tunic Pattern"
+  },
+  {
+    "itemId": 437,
+    "itemName": "Mithril Tunic",
+    "partId": 1944,
+    "partName": "Mithril Tunic Fabric"
+  },
+  {
+    "itemId": 438,
+    "itemName": "Sage's Rag",
+    "partId": 1953,
+    "partName": "Sage's Rag Lining"
+  },
+  {
+    "itemId": 439,
+    "itemName": "Karmian Tunic",
+    "partId": 1962,
+    "partName": "Karmian Tunic Pattern"
+  },
+  {
+    "itemId": 440,
+    "itemName": "Robe of Seal",
+    "partId": 1970,
+    "partName": "Robe of Seal Fabric"
+  },
+  {
+    "itemId": 441,
+    "itemName": "Demon's Tunic",
+    "partId": 1979,
+    "partName": "Demon's Tunic Fabric"
+  },
+  {
+    "itemId": 442,
+    "itemName": "Divine Tunic",
+    "partId": 1988,
+    "partName": "Divine Tunic Fabric"
+  },
+  {
+    "itemId": 467,
+    "itemName": "Dark Stockings",
+    "partId": 1933,
+    "partName": "Dark Stockings Fabric"
+  },
+  {
+    "itemId": 470,
+    "itemName": "Mithril Stockings",
+    "partId": 1945,
+    "partName": "Mithril Stocking Design"
+  },
+  {
+    "itemId": 471,
+    "itemName": "Karmian Stockings",
+    "partId": 1954,
+    "partName": "Karmian Stocking Design"
+  },
+  {
+    "itemId": 472,
+    "itemName": "Demon's Stockings",
+    "partId": 1980,
+    "partName": "Demon's Stocking Pattern"
+  },
+  {
+    "itemId": 473,
+    "itemName": "Divine Stockings",
+    "partId": 1989,
+    "partName": "Divine Stocking Pattern"
+  },
+  {
+    "itemId": 497,
+    "itemName": "Chain Helmet",
+    "partId": 1955,
+    "partName": "Chain Helmet Design"
+  },
+  {
+    "itemId": 498,
+    "itemName": "Steel Plate Helmet",
+    "partId": 1965,
+    "partName": "Metal Plate Helmet Material"
+  },
+  {
+    "itemId": 499,
+    "itemName": "Mithril Helmet",
+    "partId": 1990,
+    "partName": "Mithril Helmet Design"
+  },
+  {
+    "itemId": 500,
+    "itemName": "Great Helmet",
+    "partId": 1971,
+    "partName": "Great Helmet Material"
+  },
+  {
+    "itemId": 503,
+    "itemName": "Zubei's Helmet",
+    "partId": 4102,
+    "partName": "Zubei's Helmet Design"
+  },
+  {
+    "itemId": 517,
+    "itemName": "Composite Helmet",
+    "partId": 2957,
+    "partName": "Composite Helmet Design"
+  },
+  {
+    "itemId": 553,
+    "itemName": "Iron Boots",
+    "partId": 1940,
+    "partName": "Iron Boots Design"
+  },
+  {
+    "itemId": 554,
+    "itemName": "Sealed Zubei's Boots",
+    "partId": 4097,
+    "partName": "Sealed Zubei's Boots Design"
+  },
+  {
+    "itemId": 600,
+    "itemName": "Sealed Avadon Boots",
+    "partId": 4098,
+    "partName": "Sealed Avadon Boots Design"
+  },
+  {
+    "itemId": 601,
+    "itemName": "Sealed Doom Boots",
+    "partId": 4099,
+    "partName": "Sealed Doom Boots Part"
+  },
+  {
+    "itemId": 603,
+    "itemName": "Divine Boots",
+    "partId": 2958,
+    "partName": "Divine Boots Fabric"
+  },
+  {
+    "itemId": 604,
+    "itemName": "Crafted Leather Gloves",
+    "partId": 1934,
+    "partName": "Crafted Leather Gloves Lining"
+  },
+  {
+    "itemId": 606,
+    "itemName": "Rip Gauntlets",
+    "partId": 1946,
+    "partName": "Rip Gauntlets Pattern"
+  },
+  {
+    "itemId": 607,
+    "itemName": "Ogre Power Gauntlets",
+    "partId": 1963,
+    "partName": "Ogre Power Gauntlets Part"
+  },
+  {
+    "itemId": 608,
+    "itemName": "Mithril Gauntlets",
+    "partId": 1981,
+    "partName": "Mithril Gauntlets Design"
+  },
+  {
+    "itemId": 629,
+    "itemName": "Kite Shield",
+    "partId": 1947,
+    "partName": "Kite Shield Fragment"
+  },
+  {
+    "itemId": 630,
+    "itemName": "Square Shield",
+    "partId": 1956,
+    "partName": "Square Shield Fragment"
+  },
+  {
+    "itemId": 631,
+    "itemName": "Eldarake",
+    "partId": 1964,
+    "partName": "Eldarake Temper"
+  },
+  {
+    "itemId": 632,
+    "itemName": "Knight's Shield",
+    "partId": 1972,
+    "partName": "Knight's Shield Fragment"
+  },
+  {
+    "itemId": 633,
+    "itemName": "Zubei's Shield",
+    "partId": 4101,
+    "partName": "Zubei's Shield Fragment"
+  },
+  {
+    "itemId": 673,
+    "itemName": "Avadon Shield",
+    "partId": 4439,
+    "partName": "Avadon Shield Fragment"
+  },
+  {
+    "itemId": 849,
+    "itemName": "Tiger's Eye Earring",
+    "partId": 1901,
+    "partName": "Tiger's Eye Earring Stone"
+  },
+  {
+    "itemId": 850,
+    "itemName": "Elven Earring",
+    "partId": 1902,
+    "partName": "Elven Earring Beads"
+  },
+  {
+    "itemId": 851,
+    "itemName": "Omen Beast's Eye Earring",
+    "partId": 1905,
+    "partName": "Omen Beast's Eye Earring Gemstone"
+  },
+  {
+    "itemId": 852,
+    "itemName": "Moonstone Earring",
+    "partId": 1908,
+    "partName": "Moonstone Earring Wire"
+  },
+  {
+    "itemId": 853,
+    "itemName": "Earring of Protection",
+    "partId": 1911,
+    "partName": "Earring of Protection Gemstone"
+  },
+  {
+    "itemId": 854,
+    "itemName": "Earring of Seal",
+    "partId": 1914,
+    "partName": "Earring of Seal Gemstone"
+  },
+  {
+    "itemId": 855,
+    "itemName": "Nassen's Earring",
+    "partId": 1918,
+    "partName": "Nassen's Earring Gemstone"
+  },
+  {
+    "itemId": 856,
+    "itemName": "Adamantite Earring",
+    "partId": 4049,
+    "partName": "Adamantite Earring Gemstone"
+  },
+  {
+    "itemId": 864,
+    "itemName": "Earring of Black Ore",
+    "partId": 4052,
+    "partName": "Earring of Black Ore Piece"
+  },
+  {
+    "itemId": 881,
+    "itemName": "Elven Ring",
+    "partId": 1903,
+    "partName": "Elven Ring Piece"
+  },
+  {
+    "itemId": 882,
+    "itemName": "Mithril Ring",
+    "partId": 1906,
+    "partName": "Mithril Ring Wire"
+  },
+  {
+    "itemId": 883,
+    "itemName": "Aquastone Ring",
+    "partId": 1909,
+    "partName": "Aquastone Ring Wire"
+  },
+  {
+    "itemId": 884,
+    "itemName": "Ring of Protection",
+    "partId": 1912,
+    "partName": "Ring of Protection Gemstone"
+  },
+  {
+    "itemId": 885,
+    "itemName": "Ring of Ages",
+    "partId": 1915,
+    "partName": "Ring of Ages Gemstone"
+  },
+  {
+    "itemId": 886,
+    "itemName": "Ring of Seal",
+    "partId": 2917,
+    "partName": "Ring of Seal Gemstone"
+  },
+  {
+    "itemId": 887,
+    "itemName": "Adamantite Ring",
+    "partId": 4050,
+    "partName": "Adamantite Ring Wire"
+  },
+  {
+    "itemId": 895,
+    "itemName": "Ring of Black Ore",
+    "partId": 4053,
+    "partName": "Ring of Black Ore Gemstone"
+  },
+  {
+    "itemId": 910,
+    "itemName": "Necklace of Devotion",
+    "partId": 1899,
+    "partName": "Necklace of Devotion Chain"
+  },
+  {
+    "itemId": 911,
+    "itemName": "Enchanted Necklace",
+    "partId": 1900,
+    "partName": "Enchanted Necklace Chain"
+  },
+  {
+    "itemId": 913,
+    "itemName": "Elven Necklace",
+    "partId": 1904,
+    "partName": "Elven Necklace Beads"
+  },
+  {
+    "itemId": 914,
+    "itemName": "Necklace of Darkness",
+    "partId": 1907,
+    "partName": "Necklace of Darkness Gem"
+  },
+  {
+    "itemId": 915,
+    "itemName": "Aquastone Necklace",
+    "partId": 1910,
+    "partName": "Aquastone Necklace Chain"
+  },
+  {
+    "itemId": 916,
+    "itemName": "Necklace of Protection",
+    "partId": 1913,
+    "partName": "Necklace of Protection Gemstone"
+  },
+  {
+    "itemId": 917,
+    "itemName": "Necklace of Mermaid",
+    "partId": 1916,
+    "partName": "Necklace of Mermaid Teardrop"
+  },
+  {
+    "itemId": 918,
+    "itemName": "Adamantite Necklace",
+    "partId": 4051,
+    "partName": "Adamantite Necklace Chain"
+  },
+  {
+    "itemId": 926,
+    "itemName": "Necklace of Black Ore",
+    "partId": 4054,
+    "partName": "Necklace of Black Ore Beads"
+  },
+  {
+    "itemId": 1124,
+    "itemName": "Boots of Power",
+    "partId": 1948,
+    "partName": "Boots of Power Pattern"
+  },
+  {
+    "itemId": 1125,
+    "itemName": "Assault Boots",
+    "partId": 1957,
+    "partName": "Assault Boots Part"
+  },
+  {
+    "itemId": 1149,
+    "itemName": "Shining Circlet",
+    "partId": 1983,
+    "partName": "Shining Circlet Pattern"
+  },
+  {
+    "itemId": 9452,
+    "itemName": "Sealed Dynasty Earring",
+    "partId": 9991,
+    "partName": "Sealed Dynasty Earring Gemstone"
+  },
+  {
+    "itemId": 9453,
+    "itemName": "Sealed Dynasty Necklace",
+    "partId": 9992,
+    "partName": "Sealed Dynasty Necklace Gemstone"
+  },
+  {
+    "itemId": 9454,
+    "itemName": "Sealed Dynasty Ring",
+    "partId": 9993,
+    "partName": "Sealed Dynasty Ring Gemstone"
+  },
+  {
+    "itemId": 9514,
+    "itemName": "Sealed Dynasty Breast Plate",
+    "partId": 9530,
+    "partName": "Sealed Dynasty Breast Plate Piece"
+  },
+  {
+    "itemId": 9515,
+    "itemName": "Sealed Dynasty Gaiter",
+    "partId": 9531,
+    "partName": "Sealed Dynasty Gaiters Piece"
+  },
+  {
+    "itemId": 9516,
+    "itemName": "Sealed Dynasty Helmet",
+    "partId": 9532,
+    "partName": "Sealed Dynasty Helmet Piece"
+  },
+  {
+    "itemId": 9517,
+    "itemName": "Sealed Dynasty Gauntlets",
+    "partId": 9533,
+    "partName": "Sealed Dynasty Gauntlet Piece"
+  },
+  {
+    "itemId": 9518,
+    "itemName": "Sealed Dynasty Boots",
+    "partId": 9534,
+    "partName": "Sealed Dynasty Boot Piece"
+  },
+  {
+    "itemId": 9519,
+    "itemName": "Sealed Dynasty Leather Armor",
+    "partId": 9535,
+    "partName": "Sealed Dynasty Leather Armor Piece"
+  },
+  {
+    "itemId": 9520,
+    "itemName": "Sealed Dynasty Leather Leggings",
+    "partId": 9536,
+    "partName": "Sealed Dynasty Leather Leggings Piece"
+  },
+  {
+    "itemId": 9521,
+    "itemName": "Sealed Dynasty Leather Helmet",
+    "partId": 9537,
+    "partName": "Sealed Dynasty Leather Helmet Piece"
+  },
+  {
+    "itemId": 9522,
+    "itemName": "Sealed Dynasty Leather Gloves",
+    "partId": 9538,
+    "partName": "Sealed Dynasty Leather Glove Piece"
+  },
+  {
+    "itemId": 9523,
+    "itemName": "Sealed Dynasty Leather Boots",
+    "partId": 9539,
+    "partName": "Sealed Dynasty Leather Boots Piece"
+  },
+  {
+    "itemId": 9524,
+    "itemName": "Sealed Dynasty Tunic",
+    "partId": 9540,
+    "partName": "Sealed Dynasty Tunic Piece"
+  },
+  {
+    "itemId": 9525,
+    "itemName": "Sealed Dynasty Stockings",
+    "partId": 9541,
+    "partName": "Sealed Dynasty Stocking Piece"
+  },
+  {
+    "itemId": 9526,
+    "itemName": "Sealed Dynasty Circlet",
+    "partId": 9542,
+    "partName": "Sealed Dynasty Circlet Piece"
+  },
+  {
+    "itemId": 9527,
+    "itemName": "Sealed Dynasty Gloves",
+    "partId": 9543,
+    "partName": "Sealed Dynasty Glove Piece"
+  },
+  {
+    "itemId": 9528,
+    "itemName": "Sealed Dynasty Shoes",
+    "partId": 9544,
+    "partName": "Sealed Dynasty Shoes Piece"
+  },
+  {
+    "itemId": 9529,
+    "itemName": "Sealed Dynasty Shield",
+    "partId": 9545,
+    "partName": "Sealed Dynasty Shield Piece"
+  },
+  {
+    "itemId": 2376,
+    "itemName": "Avadon Breastplate",
+    "partId": 4064,
+    "partName": "Avadon Breastplate Part"
+  },
+  {
+    "itemId": 2377,
+    "itemName": "Mithril Scale Gaiters",
+    "partId": 2918,
+    "partName": "Mithril Scale Gaiters Material"
+  },
+  {
+    "itemId": 2378,
+    "itemName": "Brigandine Gaiters",
+    "partId": 2919,
+    "partName": "Brigandine Gaiters Material"
+  },
+  {
+    "itemId": 2379,
+    "itemName": "Avadon Gaiters",
+    "partId": 4065,
+    "partName": "Avadon Gaiters Material"
+  },
+  {
+    "itemId": 2380,
+    "itemName": "Blue Wolf Gaiters",
+    "partId": 4080,
+    "partName": "Blue Wolf Gaiters Material"
+  },
+  {
+    "itemId": 2381,
+    "itemName": "Doom Plate Armor",
+    "partId": 4081,
+    "partName": "Doom Plate Armor Temper"
+  },
+  {
+    "itemId": 2384,
+    "itemName": "Zubei's Leather Shirt",
+    "partId": 4066,
+    "partName": "Zubei's Leather Shirt Fabric"
+  },
+  {
+    "itemId": 2387,
+    "itemName": "Reinforced Mithril Gaiters",
+    "partId": 2935,
+    "partName": "Reinforced Mithril Gaiters Fragment"
+  },
+  {
+    "itemId": 2388,
+    "itemName": "Zubei's Leather Gaiters",
+    "partId": 4067,
+    "partName": "Zubei's Leather Gaiter Texture"
+  },
+  {
+    "itemId": 2390,
+    "itemName": "Avadon Leather Armor",
+    "partId": 4068,
+    "partName": "Avadon Leather Armor Lining"
+  },
+  {
+    "itemId": 2391,
+    "itemName": "Blue Wolf Leather Armor",
+    "partId": 4082,
+    "partName": "Blue Wolf Leather Armor Texture"
+  },
+  {
+    "itemId": 2392,
+    "itemName": "Leather Armor of Doom",
+    "partId": 4083,
+    "partName": "Leather Armor of Doom Design"
+  },
+  {
+    "itemId": 2396,
+    "itemName": "Elven Mithril Tunic",
+    "partId": 2920,
+    "partName": "Elven Mithril Tunic Pattern"
+  },
+  {
+    "itemId": 2397,
+    "itemName": "Tunic of Zubei",
+    "partId": 4069,
+    "partName": "Tunic of Zubei Fabric"
+  },
+  {
+    "itemId": 2398,
+    "itemName": "Blue Wolf Tunic",
+    "partId": 4084,
+    "partName": "Blue Wolf Tunic Fabric"
+  },
+  {
+    "itemId": 2399,
+    "itemName": "Tunic of Doom",
+    "partId": 4085,
+    "partName": "Tunic of Doom Pattern"
+  },
+  {
+    "itemId": 2401,
+    "itemName": "Elven Mithril Stockings",
+    "partId": 2921,
+    "partName": "Elven Mithril Stockings Pattern"
+  },
+  {
+    "itemId": 2402,
+    "itemName": "Stockings of Zubei",
+    "partId": 4070,
+    "partName": "Stockings of Zubei Fabric"
+  },
+  {
+    "itemId": 2403,
+    "itemName": "Blue Wolf Stockings",
+    "partId": 4086,
+    "partName": "Blue Wolf Stockings Pattern"
+  },
+  {
+    "itemId": 2404,
+    "itemName": "Stockings of Doom",
+    "partId": 4087,
+    "partName": "Stockings of Doom Pattern"
+  },
+  {
+    "itemId": 2406,
+    "itemName": "Avadon Robe",
+    "partId": 4071,
+    "partName": "Avadon Robe Fabric"
+  },
+  {
+    "itemId": 2411,
+    "itemName": "Brigandine Helmet",
+    "partId": 2922,
+    "partName": "Brigandine Helmet Design"
+  },
+  {
+    "itemId": 2412,
+    "itemName": "Plate Helmet",
+    "partId": 2930,
+    "partName": "Plate Helmet Design"
+  },
+  {
+    "itemId": 2413,
+    "itemName": "Chain Hood",
+    "partId": 2936,
+    "partName": "Chain Hood Pattern"
+  },
+  {
+    "itemId": 2414,
+    "itemName": "Full Plate Helmet",
+    "partId": 2959,
+    "partName": "Full Plate Helmet Design"
+  },
+  {
+    "itemId": 2415,
+    "itemName": "Avadon Circlet",
+    "partId": 4072,
+    "partName": "Avadon Circlet Pattern"
+  },
+  {
+    "itemId": 2416,
+    "itemName": "Blue Wolf Helmet",
+    "partId": 4088,
+    "partName": "Blue Wolf Helmet Design"
+  },
+  {
+    "itemId": 2417,
+    "itemName": "Doom Helmet",
+    "partId": 4089,
+    "partName": "Doom Helmet Pattern"
+  },
+  {
+    "itemId": 2424,
+    "itemName": "Manticore Skin Boots",
+    "partId": 2923,
+    "partName": "Manticore Skin Boot Lining"
+  },
+  {
+    "itemId": 2425,
+    "itemName": "Brigandine Boots",
+    "partId": 2924,
+    "partName": "Brigandine Boots Design"
+  },
+  {
+    "itemId": 2426,
+    "itemName": "Elven Mithril Boots",
+    "partId": 2925,
+    "partName": "Elven Mithril Boots Design"
+  },
+  {
+    "itemId": 2427,
+    "itemName": "Salamander Skin Boots",
+    "partId": 2931,
+    "partName": "Salamander Skin Boot Lining"
+  },
+  {
+    "itemId": 2428,
+    "itemName": "Plate Boots",
+    "partId": 2932,
+    "partName": "Plate Boots Design"
+  },
+  {
+    "itemId": 2429,
+    "itemName": "Chain Boots",
+    "partId": 2937,
+    "partName": "Chain Boots Part"
+  },
+  {
+    "itemId": 2430,
+    "itemName": "Karmian Boots",
+    "partId": 2938,
+    "partName": "Karmian Boots Fabric"
+  },
+  {
+    "itemId": 2431,
+    "itemName": "Plated Leather Boots",
+    "partId": 2939,
+    "partName": "Plate Leather Boots Lining"
+  },
+  {
+    "itemId": 2432,
+    "itemName": "Dwarven Chain Boots",
+    "partId": 2940,
+    "partName": "Dwarven Chain Boots Part"
+  },
+  {
+    "itemId": 2433,
+    "itemName": "Boots of Seal",
+    "partId": 2941,
+    "partName": "Boots of Seal Pattern"
+  },
+  {
+    "itemId": 2434,
+    "itemName": "Rind Leather Boots",
+    "partId": 2948,
+    "partName": "Rind Leather Boots Lining"
+  },
+  {
+    "itemId": 2435,
+    "itemName": "Demon's Boots",
+    "partId": 2952,
+    "partName": "Demon's Boots Fabric"
+  },
+  {
+    "itemId": 2436,
+    "itemName": "Theca Leather Boots",
+    "partId": 2954,
+    "partName": "Theca Leather Boots Texture"
+  },
+  {
+    "itemId": 2437,
+    "itemName": "Drake Leather Boots",
+    "partId": 2960,
+    "partName": "Drake Leather Boots Design"
+  },
+  {
+    "itemId": 2438,
+    "itemName": "Full Plate Boots",
+    "partId": 2961,
+    "partName": "Full Plate Boots Part"
+  },
+  {
+    "itemId": 2439,
+    "itemName": "Sealed Blue Wolf Boots",
+    "partId": 4090,
+    "partName": "Sealed Blue Wolf Boots Design"
+  },
+  {
+    "itemId": 2448,
+    "itemName": "Manticore Skin Gloves",
+    "partId": 2926,
+    "partName": "Manticore Skin Gloves Lining"
+  },
+  {
+    "itemId": 2449,
+    "itemName": "Brigandine Gauntlets",
+    "partId": 2927,
+    "partName": "Brigandine Gauntlets Pattern"
+  },
+  {
+    "itemId": 2450,
+    "itemName": "Mithril Gloves",
+    "partId": 2928,
+    "partName": "Mithril Gloves Design"
+  },
+  {
+    "itemId": 2451,
+    "itemName": "Sage's Worn Gloves",
+    "partId": 2933,
+    "partName": "Sage's Worn Gloves Lining"
+  },
+  {
+    "itemId": 2452,
+    "itemName": "Reinforced Mithril Gloves",
+    "partId": 2942,
+    "partName": "Reinforced Mithril Gloves Design"
+  },
+  {
+    "itemId": 2453,
+    "itemName": "Chain Gloves",
+    "partId": 2943,
+    "partName": "Chain Gloves Design"
+  },
+  {
+    "itemId": 2454,
+    "itemName": "Karmian Gloves",
+    "partId": 2944,
+    "partName": "Karmian Gloves Fabric"
+  },
+  {
+    "itemId": 2455,
+    "itemName": "Plated Leather Gloves",
+    "partId": 2946,
+    "partName": "Plate Leather Gloves Design"
+  },
+  {
+    "itemId": 2456,
+    "itemName": "Dwarven Chain Gloves",
+    "partId": 2949,
+    "partName": "Dwarven Chain Gloves Design"
+  },
+  {
+    "itemId": 2457,
+    "itemName": "Gloves of Seal",
+    "partId": 2950,
+    "partName": "Gloves of Seal Pattern"
+  },
+  {
+    "itemId": 2458,
+    "itemName": "Rind Leather Gloves",
+    "partId": 2951,
+    "partName": "Rind Leather Gloves Design"
+  },
+  {
+    "itemId": 2459,
+    "itemName": "Demon's Gloves",
+    "partId": 2953,
+    "partName": "Demon's Gloves Fabric"
+  },
+  {
+    "itemId": 2460,
+    "itemName": "Theca Leather Gloves",
+    "partId": 2955,
+    "partName": "Theca Leather Gloves Texture"
+  },
+  {
+    "itemId": 2461,
+    "itemName": "Drake Leather Gloves",
+    "partId": 2962,
+    "partName": "Drake Leather Gloves Design"
+  },
+  {
+    "itemId": 2462,
+    "itemName": "Full Plate Gauntlets",
+    "partId": 2963,
+    "partName": "Full Plate Gauntlets Part"
+  },
+  {
+    "itemId": 2463,
+    "itemName": "Divine Gloves",
+    "partId": 2964,
+    "partName": "Divine Gloves Pattern"
+  },
+  {
+    "itemId": 2464,
+    "itemName": "Sealed Avadon Gloves",
+    "partId": 4073,
+    "partName": "Sealed Avadon Gloves Part"
+  },
+  {
+    "itemId": 2475,
+    "itemName": "Sealed Doom Gloves",
+    "partId": 4091,
+    "partName": "Sealed Doom Gloves Part"
+  },
+  {
+    "itemId": 2487,
+    "itemName": "Sealed Blue Wolf Gloves",
+    "partId": 4096,
+    "partName": "Sealed Blue Wolf Gloves Fabric"
+  },
+  {
+    "itemId": 2493,
+    "itemName": "Brigandine Shield",
+    "partId": 2929,
+    "partName": "Brigandine Shield Fragment"
+  },
+  {
+    "itemId": 2494,
+    "itemName": "Plate Shield",
+    "partId": 2934,
+    "partName": "Plate Shield Fragment"
+  },
+  {
+    "itemId": 2495,
+    "itemName": "Chain Shield",
+    "partId": 2945,
+    "partName": "Chain Shield Fragment"
+  },
+  {
+    "itemId": 2496,
+    "itemName": "Dwarven Chain Shield",
+    "partId": 2947,
+    "partName": "Dwarven Chain Shield Fragment"
+  },
+  {
+    "itemId": 2497,
+    "itemName": "Full Plate Shield",
+    "partId": 2966,
+    "partName": "Full Plate Shield Fragment"
+  },
+  {
+    "itemId": 13143,
+    "itemName": "Sealed Vesper Helmet",
+    "partId": 15660,
+    "partName": "Sealed Vesper Helmet Piece"
+  },
+  {
+    "itemId": 13144,
+    "itemName": "Sealed Vesper Leather Helmet",
+    "partId": 15661,
+    "partName": "Sealed Vesper Leather Helmet Piece"
+  },
+  {
+    "itemId": 13145,
+    "itemName": "Sealed Vesper Circlet",
+    "partId": 15662,
+    "partName": "Sealed Vesper Circlet Piece"
+  },
+  {
+    "itemId": 5287,
+    "itemName": "Sealed Dark Crystal breastplate",
+    "partId": 5520,
+    "partName": "Sealed Dark Crystal Breastplate Pattern"
+  },
+  {
+    "itemId": 5288,
+    "itemName": "Sealed Dark Crystal Gaiters",
+    "partId": 5524,
+    "partName": "Sealed Dark Crystal Gaiters Pattern"
+  },
+  {
+    "itemId": 5289,
+    "itemName": "Sealed Dark Crystal Helmet",
+    "partId": 5525,
+    "partName": "Sealed Dark Crystal Helmet Design"
+  },
+  {
+    "itemId": 5290,
+    "itemName": "Sealed Dark Crystal Gloves",
+    "partId": 5508,
+    "partName": "Sealed Dark Crystal Gloves Design"
+  },
+  {
+    "itemId": 5291,
+    "itemName": "Sealed Dark Crystal Boots",
+    "partId": 5496,
+    "partName": "Sealed Dark Crystal Boots Lining"
+  },
+  {
+    "itemId": 5292,
+    "itemName": "Sealed Dark Crystal Shield",
+    "partId": 5494,
+    "partName": "Sealed Dark Crystal Shield Fragment"
+  },
+  {
+    "itemId": 5293,
+    "itemName": "Sealed Tallum Plate Armor",
+    "partId": 5521,
+    "partName": "Sealed Tallum Plate Armor Pattern"
+  },
+  {
+    "itemId": 5294,
+    "itemName": "Sealed Tallum Helmet",
+    "partId": 5526,
+    "partName": "Sealed Tallum Helm Design"
+  },
+  {
+    "itemId": 5295,
+    "itemName": "Sealed Tallum Gloves",
+    "partId": 5509,
+    "partName": "Sealed Tallum Gloves Design"
+  },
+  {
+    "itemId": 5296,
+    "itemName": "Sealed Tallum Boots",
+    "partId": 5497,
+    "partName": "Sealed Tallum Boots Lining"
+  },
+  {
+    "itemId": 5297,
+    "itemName": "Sealed Dark Crystal Leather Armor",
+    "partId": 5478,
+    "partName": "Sealed Dark Crystal Leather Armor Pattern"
+  },
+  {
+    "itemId": 5298,
+    "itemName": "Sealed Dark Crystal Leggings",
+    "partId": 5482,
+    "partName": "Sealed Dark Crystal Leggings Design"
+  },
+  {
+    "itemId": 5301,
+    "itemName": "Sealed Tallum Leather Armor",
+    "partId": 5479,
+    "partName": "Sealed Tallum Leather Armor Pattern"
+  },
+  {
+    "itemId": 5304,
+    "itemName": "Sealed Tallum Tunic",
+    "partId": 5485,
+    "partName": "Sealed Tallum Tunic Texture"
+  },
+  {
+    "itemId": 5305,
+    "itemName": "Sealed Tallum Stockings",
+    "partId": 5489,
+    "partName": "Sealed Tallum Stockings Fabric"
+  },
+  {
+    "itemId": 5308,
+    "itemName": "Sealed Dark Crystal Robe",
+    "partId": 5486,
+    "partName": "Sealed Dark Crystal Robe Fabric"
+  },
+  {
+    "itemId": 5311,
+    "itemName": "Sealed Armor of Nightmare",
+    "partId": 5522,
+    "partName": "Sealed Armor of Nightmare Pattern"
+  },
+  {
+    "itemId": 5312,
+    "itemName": "Sealed Helm of Nightmare",
+    "partId": 5527,
+    "partName": "Sealed Helm of Nightmare Design"
+  },
+  {
+    "itemId": 5313,
+    "itemName": "Sealed Gauntlets of Nightmare",
+    "partId": 5514,
+    "partName": "Sealed Gauntlets of Nightmare Design"
+  },
+  {
+    "itemId": 5314,
+    "itemName": "Sealed Boots of Nightmare",
+    "partId": 5502,
+    "partName": "Sealed Boots of Nightmare Lining"
+  },
+  {
+    "itemId": 5315,
+    "itemName": "Sealed Shield of Nightmare",
+    "partId": 5495,
+    "partName": "Sealed Shield of Nightmare Fragment"
+  },
+  {
+    "itemId": 5316,
+    "itemName": "Sealed Majestic Plate Armor",
+    "partId": 5523,
+    "partName": "Sealed Majestic Plate Armor Pattern"
+  },
+  {
+    "itemId": 5317,
+    "itemName": "Sealed Majestic Circlet",
+    "partId": 5528,
+    "partName": "Sealed Majestic Circlet Design"
+  },
+  {
+    "itemId": 5318,
+    "itemName": "Sealed Majestic Gauntlets",
+    "partId": 5515,
+    "partName": "Sealed Majestic Gauntlets Design"
+  },
+  {
+    "itemId": 5319,
+    "itemName": "Sealed Majestic Boots",
+    "partId": 5503,
+    "partName": "Sealed Majestic Boots Lining"
+  },
+  {
+    "itemId": 5320,
+    "itemName": "Sealed Leather Armor of Nightmare",
+    "partId": 5480,
+    "partName": "Sealed Leather Armor of Nightmare Fabric"
+  },
+  {
+    "itemId": 5323,
+    "itemName": "Sealed Majestic Leather Armor",
+    "partId": 5481,
+    "partName": "Sealed Majestic Leather Armor Fabric"
+  },
+  {
+    "itemId": 5326,
+    "itemName": "Sealed Robe of Nightmare",
+    "partId": 5487,
+    "partName": "Sealed Robe of Nightmare Fabric"
+  },
+  {
+    "itemId": 5329,
+    "itemName": "Sealed Majestic Robe",
+    "partId": 5488,
+    "partName": "Sealed Majestic Robe Fabric"
+  },
+  {
+    "itemId": 13885,
+    "itemName": "Sealed Arcana Sigil",
+    "partId": 13099,
+    "partName": "Sealed Arcana Sigil Piece"
+  },
+  {
+    "itemId": 13886,
+    "itemName": "Sealed Dynasty Sigil",
+    "partId": 10114,
+    "partName": "Sealed Dynasty Sigil Piece"
+  },
+  {
+    "itemId": 13887,
+    "itemName": "Sealed Vesper Sigil",
+    "partId": 15691,
+    "partName": "Sealed Vesper Sigil Piece"
+  },
+  {
+    "itemId": 14105,
+    "itemName": "Sealed Vesper Breastplate",
+    "partId": 15663,
+    "partName": "Sealed Vesper Breastplate Piece"
+  },
+  {
+    "itemId": 14106,
+    "itemName": "Sealed Vesper Leather Breastplate",
+    "partId": 15664,
+    "partName": "Sealed Vesper Leather Breastplate Piece"
+  },
+  {
+    "itemId": 14107,
+    "itemName": "Sealed Vesper Tunic",
+    "partId": 15665,
+    "partName": "Sealed Vesper Tunic Piece"
+  },
+  {
+    "itemId": 14108,
+    "itemName": "Sealed Vesper Gaiters",
+    "partId": 15666,
+    "partName": "Sealed Vesper Gaiter Piece"
+  },
+  {
+    "itemId": 14109,
+    "itemName": "Sealed Vesper Gauntlet",
+    "partId": 15667,
+    "partName": "Sealed Vesper Gauntlet Piece"
+  },
+  {
+    "itemId": 14110,
+    "itemName": "Sealed Vesper Boots",
+    "partId": 15668,
+    "partName": "Sealed Vesper Boots Piece"
+  },
+  {
+    "itemId": 14111,
+    "itemName": "Sealed Vesper Shield",
+    "partId": 15669,
+    "partName": "Sealed Vesper Verteidiger Piece"
+  },
+  {
+    "itemId": 14112,
+    "itemName": "Sealed Vesper Leather Leggings",
+    "partId": 15670,
+    "partName": "Sealed Vesper Leather Legging Piece"
+  },
+  {
+    "itemId": 14113,
+    "itemName": "Sealed Vesper Leather Gloves",
+    "partId": 15671,
+    "partName": "Sealed Vesper Leather Gloves Piece"
+  },
+  {
+    "itemId": 14114,
+    "itemName": "Sealed Vesper Leather Boots",
+    "partId": 15672,
+    "partName": "Sealed Vesper Leather Boots Piece"
+  },
+  {
+    "itemId": 14115,
+    "itemName": "Sealed Vesper Stockings",
+    "partId": 15673,
+    "partName": "Sealed Vesper Stockings Piece"
+  },
+  {
+    "itemId": 14116,
+    "itemName": "Sealed Vesper Gloves",
+    "partId": 15674,
+    "partName": "Sealed Vesper Gloves Piece"
+  },
+  {
+    "itemId": 14117,
+    "itemName": "Sealed Vesper Shoes",
+    "partId": 15675,
+    "partName": "Sealed Vesper Shoes Piece"
+  },
+  {
+    "itemId": 14160,
+    "itemName": "Sealed Vesper Earring",
+    "partId": 15770,
+    "partName": "Sealed Vesper Earring Gem"
+  },
+  {
+    "itemId": 14161,
+    "itemName": "Sealed Vesper Necklace",
+    "partId": 15771,
+    "partName": "Sealed Vesper Necklace Gem"
+  },
+  {
+    "itemId": 14162,
+    "itemName": "Sealed Vesper Ring",
+    "partId": 15769,
+    "partName": "Sealed Vesper Ring Gem"
+  },
+  {
+    "itemId": 6323,
+    "itemName": "Sealed Phoenix Necklace",
+    "partId": 6343,
+    "partName": "Sealed Phoenix Necklace Beads"
+  },
+  {
+    "itemId": 6324,
+    "itemName": "Sealed Phoenix Earring",
+    "partId": 6341,
+    "partName": "Sealed Phoenix Earring Gemstone"
+  },
+  {
+    "itemId": 6325,
+    "itemName": "Sealed Phoenix Ring",
+    "partId": 6345,
+    "partName": "Sealed Phoenix Ring Gemstone"
+  },
+  {
+    "itemId": 6326,
+    "itemName": "Sealed Majestic Necklace",
+    "partId": 6344,
+    "partName": "Sealed Majestic Necklace Beads"
+  },
+  {
+    "itemId": 6327,
+    "itemName": "Sealed Majestic Earring",
+    "partId": 6342,
+    "partName": "Sealed Majestic Earring Gemstone"
+  },
+  {
+    "itemId": 6328,
+    "itemName": "Sealed Majestic Ring",
+    "partId": 6346,
+    "partName": "Sealed Majestic Ring Gemstone"
+  },
+  {
+    "itemId": 6674,
+    "itemName": "Sealed Imperial Crusader Breastplate",
+    "partId": 6701,
+    "partName": "Sealed Imperial Crusader Breastplate Part"
+  },
+  {
+    "itemId": 6675,
+    "itemName": "Sealed Imperial Crusader Gaiters",
+    "partId": 6702,
+    "partName": "Sealed Imperial Crusader Gaiters Pattern"
+  },
+  {
+    "itemId": 6676,
+    "itemName": "Sealed Imperial Crusader Gauntlet",
+    "partId": 6703,
+    "partName": "Sealed Imperial Crusader Gauntlets Design"
+  },
+  {
+    "itemId": 6677,
+    "itemName": "Sealed Imperial Crusader Boots",
+    "partId": 6704,
+    "partName": "Sealed Imperial Crusader Boots Design"
+  },
+  {
+    "itemId": 6678,
+    "itemName": "Sealed Imperial Crusader Shield",
+    "partId": 6705,
+    "partName": "Sealed Imperial Crusader Shield Part"
+  },
+  {
+    "itemId": 6679,
+    "itemName": "Sealed Imperial Crusader Helmet",
+    "partId": 6706,
+    "partName": "Sealed Imperial Crusader Helmet Pattern"
+  },
+  {
+    "itemId": 6680,
+    "itemName": "Sealed Draconic Leather Armor",
+    "partId": 6707,
+    "partName": "Sealed Draconic Leather Armor Part"
+  },
+  {
+    "itemId": 6681,
+    "itemName": "Sealed Draconic Leather Glove",
+    "partId": 6708,
+    "partName": "Sealed Draconic Leather Gloves Fabric"
+  },
+  {
+    "itemId": 6682,
+    "itemName": "Sealed Draconic Leather Boots",
+    "partId": 6709,
+    "partName": "Sealed Draconic Leather Boots Design"
+  },
+  {
+    "itemId": 6683,
+    "itemName": "Sealed Draconic Leather Helmet",
+    "partId": 6710,
+    "partName": "Sealed Draconic Leather Helmet Pattern"
+  },
+  {
+    "itemId": 6684,
+    "itemName": "Sealed Major Arcana Robe",
+    "partId": 6711,
+    "partName": "Sealed Major Arcana Robe Part"
+  },
+  {
+    "itemId": 6685,
+    "itemName": "Sealed Major Arcana Glove",
+    "partId": 6712,
+    "partName": "Sealed Major Arcana Gloves fabric"
+  },
+  {
+    "itemId": 6686,
+    "itemName": "Sealed Major Arcana Boots",
+    "partId": 6713,
+    "partName": "Sealed Major Arcana Boots Design"
+  },
+  {
+    "itemId": 6687,
+    "itemName": "Sealed Major Arcana Circlet",
+    "partId": 6714,
+    "partName": "Sealed Major Arcana Circlet Pattern"
+  },
+  {
+    "itemId": 6724,
+    "itemName": "Sealed Tateossian Earring",
+    "partId": 6698,
+    "partName": "Sealed Tateossian Earring Part"
+  },
+  {
+    "itemId": 6725,
+    "itemName": "Sealed Tateossian Ring",
+    "partId": 6699,
+    "partName": "Sealed Tateossian Ring Gem"
+  },
+  {
+    "itemId": 6726,
+    "itemName": "Sealed Tateossian Necklace",
+    "partId": 6700,
+    "partName": "Sealed Tateossian Necklace Chain"
+  },
+  {
+    "itemId": 15694,
+    "itemName": "Sealed Moirai Helmet",
+    "partId": 15645,
+    "partName": "Sealed Moirai Helmet Piece"
+  },
+  {
+    "itemId": 15695,
+    "itemName": "Sealed Moirai Leather Helmet",
+    "partId": 15646,
+    "partName": "Sealed Moirai Leather Helmet Piece"
+  },
+  {
+    "itemId": 15696,
+    "itemName": "Sealed Moirai Circlet",
+    "partId": 15647,
+    "partName": "Sealed Moirai Circlet Piece"
+  },
+  {
+    "itemId": 15697,
+    "itemName": "Sealed Moirai Breastplate",
+    "partId": 15648,
+    "partName": "Sealed Moirai Breastplate Piece"
+  },
+  {
+    "itemId": 15698,
+    "itemName": "Sealed Moirai Leather Breastplate",
+    "partId": 15649,
+    "partName": "Sealed Moirai Leather Breastplate Piece"
+  },
+  {
+    "itemId": 15699,
+    "itemName": "Sealed Moirai Tunic",
+    "partId": 15650,
+    "partName": "Sealed Moirai Tunic Piece"
+  },
+  {
+    "itemId": 15700,
+    "itemName": "Sealed Moirai Gaiter",
+    "partId": 15651,
+    "partName": "Sealed Moirai Gaiter Piece"
+  },
+  {
+    "itemId": 15701,
+    "itemName": "Sealed Moirai Leather Legging",
+    "partId": 15652,
+    "partName": "Sealed Moirai Leather Legging Piece"
+  },
+  {
+    "itemId": 15702,
+    "itemName": "Sealed Moirai Stockings",
+    "partId": 15653,
+    "partName": "Sealed Moirai Stockings Piece"
+  },
+  {
+    "itemId": 15703,
+    "itemName": "Sealed Moirai Gauntlet",
+    "partId": 15654,
+    "partName": "Sealed Moirai Gauntlet Piece"
+  },
+  {
+    "itemId": 15704,
+    "itemName": "Sealed Moirai Leather Gloves",
+    "partId": 15655,
+    "partName": "Sealed Moirai Leather Gloves Piece"
+  },
+  {
+    "itemId": 15705,
+    "itemName": "Sealed Moirai Gloves",
+    "partId": 15656,
+    "partName": "Sealed Moirai Gloves Piece"
+  },
+  {
+    "itemId": 15706,
+    "itemName": "Sealed Moirai Boots",
+    "partId": 15657,
+    "partName": "Sealed Moirai Boots Piece"
+  },
+  {
+    "itemId": 15707,
+    "itemName": "Sealed Moirai Leather Boots",
+    "partId": 15658,
+    "partName": "Sealed Moirai Leather Boots Piece"
+  },
+  {
+    "itemId": 15708,
+    "itemName": "Sealed Moirai Shoes",
+    "partId": 15659,
+    "partName": "Sealed Moirai Shoes Piece"
+  },
+  {
+    "itemId": 15709,
+    "itemName": "Sealed Moirai Sigil",
+    "partId": 15692,
+    "partName": "Sealed Moirai Sigil Piece"
+  },
+  {
+    "itemId": 15710,
+    "itemName": "Sealed Moirai Shield",
+    "partId": 15693,
+    "partName": "Sealed Moirai Shield Piece"
+  },
+  {
+    "itemId": 15766,
+    "itemName": "Sealed Moirai Ring",
+    "partId": 15772,
+    "partName": "Sealed Moirai Ring Gem"
+  },
+  {
+    "itemId": 15767,
+    "itemName": "Sealed Moirai Earring",
+    "partId": 15773,
+    "partName": "Sealed Moirai Earring Gem"
+  },
+  {
+    "itemId": 15768,
+    "itemName": "Sealed Moirai Necklace",
+    "partId": 15774,
+    "partName": "Sealed Moirai Necklace Gem"
+  },
+  {
+    "itemId": 25,
+    "itemName": "Piece Bone Breastplate",
+    "partId": 1926,
+    "partName": "Piece Bone Breastplate Fragment"
+  },
+  {
+    "itemId": 33,
+    "itemName": "Hard Leather Gaiters",
+    "partId": 1929,
+    "partName": "Hard Leather Gaiters Material"
+  },
+  {
+    "itemId": 32,
+    "itemName": "Piece Bone Gaiters",
+    "partId": 1928,
+    "partName": "Piece Bone Gaiters Fragment"
+  },
+  {
+    "itemId": 27,
+    "itemName": "Hard Leather Shirt",
+    "partId": 1927,
+    "partName": "Hard Leather Shirt Pattern"
+  },
+  {
+    "itemId": 50,
+    "itemName": "Leather Gloves",
+    "partId": 1925,
+    "partName": "Leather Gloves Lining"
+  },
+  {
+    "itemId": 39,
+    "itemName": "Boots",
+    "partId": 1930,
+    "partName": "Boot Lining"
+  },
+  {
+    "itemId": 44,
+    "itemName": "Leather Helmet",
+    "partId": 1924,
+    "partName": "Leather Helmet Design"
+  },
+  {
+    "itemId": 464,
+    "itemName": "Leather Stockings",
+    "partId": 1923,
+    "partName": "Leather Stockings Pattern"
+  },
+  {
+    "itemId": 429,
+    "itemName": "Leather Tunic",
+    "partId": 1922,
+    "partName": "Leather Tunic Pattern"
+  },
+  {
+    "itemId": 37,
+    "itemName": "Leather Shoes",
+    "partId": 1921,
+    "partName": "Leather Shoes Texture"
+  },
+  {
+    "itemId": 907,
+    "itemName": "Necklace of Anguish",
+    "partId": 1896,
+    "partName": "Necklace of Anguish Chain"
+  },
+  {
+    "itemId": 908,
+    "itemName": "Necklace of Wisdom",
+    "partId": 1897,
+    "partName": "Necklace of Wisdom Chain"
+  },
+  {
+    "itemId": 909,
+    "itemName": "Blue Diamond Necklace",
+    "partId": 1898,
+    "partName": "Blue Diamond Necklace Gem"
+  }
+]
