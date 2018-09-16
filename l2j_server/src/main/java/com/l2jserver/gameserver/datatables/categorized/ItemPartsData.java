@@ -62,5 +62,4 @@ public class ItemPartsData {
         protected static final ItemPartsData _instance = new ItemPartsData();
     }
 
-
 }

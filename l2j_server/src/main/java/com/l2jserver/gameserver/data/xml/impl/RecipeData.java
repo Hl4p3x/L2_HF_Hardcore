@@ -227,20 +227,18 @@ public class RecipeData implements IXmlReader
 		return null;
 	}
 
-	public L2RecipeList getRecipeByProductionItem(int itemId) {
+    public Optional<L2RecipeList> getRecipeByProductionItem(int itemId) {
 		return _recipes.values()
 				.stream()
 				.filter(recipe -> recipe.getItemId() == itemId)
-				.findFirst()
-				.orElse(null);
-	}
+                .findFirst();
+    }
 
-	public L2RecipeList getRecipeByRareItemId(int itemId) {
+    public Optional<L2RecipeList> getRecipeByRareItemId(int itemId) {
 		return _recipes.values()
 				.stream()
 				.filter(recipe -> recipe.getRareItemId() == itemId)
-				.findFirst()
-				.orElse(null);
+                .findFirst();
 	}
 
     public Set<Integer> getAllMasterworkItemIds() {

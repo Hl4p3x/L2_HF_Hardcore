@@ -171,8 +171,8 @@ public class GradedEquipmentGenerator {
         List<ItemPart> weaponAndArmorParts =
                 Stream.concat(craftableWeapons.stream(), craftableArmors.stream())
                         .map(item -> {
-                            L2RecipeList recipeList = RecipeData.getInstance().getRecipeByProductionItem(item.getId());
-                            if (recipeList == null) {
+                            Optional<L2RecipeList> recipeList = RecipeData.getInstance().getRecipeByProductionItem(item.getId());
+                            if (!recipeList.isPresent()) {
                                 return null;
                             }
 
@@ -181,7 +181,7 @@ public class GradedEquipmentGenerator {
                                 return hardcodedPart.get();
                             }
 
-                            Optional<L2RecipeInstance> instance = Stream.of(recipeList.getRecipes())
+                            Optional<L2RecipeInstance> instance = Stream.of(recipeList.get().getRecipes())
                                     .filter(recipe -> {
                                         L2Item recipeItem = ItemTable.getInstance().getTemplate(recipe.getItemId());
                                         return (crossContainsIgnoreCase(removeEndingS(joinLongbowWorkTogether(item.getName())), removeEndingS(joinLongbowWorkTogether(recipeItem.getName())))
