@@ -13,12 +13,14 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class ItemPartsData {
 
     private static final Logger LOG = LoggerFactory.getLogger(ItemPartsData.class);
 
     private List<ItemPart> itemParts = new ArrayList<>();
+    private Set<Integer> itemPartIds = new HashSet<>();
     private Map<GradeInfo, Collection<ItemPart>> itemPartsMap = new HashMap<>();
 
     public ItemPartsData() {
@@ -41,6 +43,7 @@ public class ItemPartsData {
                 }
             });
             itemPartsMap = itemPartMultimap.asMap();
+            itemPartIds = itemParts.stream().map(ItemPart::getPartId).collect(Collectors.toSet());
         } catch (IOException e) {
             throw new IllegalStateException("Could not read graded equipment data: " + e.getMessage());
         }
@@ -50,12 +53,16 @@ public class ItemPartsData {
         return itemParts;
     }
 
-    public Optional<Collection<ItemPart>> getItemPartsByGradeInfo(GradeInfo gradeInfo) {
-        return Optional.ofNullable(itemPartsMap.get(gradeInfo));
+    public Collection<ItemPart> getItemPartsByGradeInfo(GradeInfo gradeInfo) {
+        return Optional.ofNullable(itemPartsMap.get(gradeInfo)).orElse(Collections.emptyList());
     }
 
     public static ItemPartsData getInstance() {
         return ItemPartsData.SingletonHolder._instance;
+    }
+
+    public Set<Integer> getItemPartsIds() {
+        return itemPartIds;
     }
 
     private static class SingletonHolder {

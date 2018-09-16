@@ -55,6 +55,10 @@ public class GradedItemsData {
         return Optional.ofNullable(gradedItemsById.get(itemId));
     }
 
+    public Set<Integer> getGradedItemsIds() {
+        return gradedItemsById.keySet();
+    }
+
     private static class SingletonHolder {
         protected static final GradedItemsData _instance = new GradedItemsData();
     }

@@ -6,16 +6,14 @@ import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ItemRecipesData {
 
     private static final Logger LOG = LoggerFactory.getLogger(ItemRecipesData.class);
 
+    private Set<Integer> recipeIds = new HashSet<>();
     private Map<GradeInfo, List<L2RecipeList>> recipesByGrade = new HashMap<>();
 
     public ItemRecipesData() {
@@ -24,12 +22,12 @@ public class ItemRecipesData {
 
     private void load() {
         GradedItemsData.getInstance().getGradedItemsMap().forEach((gradeInfo, gradedItems) -> {
-            List<L2RecipeList> recipeIds = gradedItems
+            List<L2RecipeList> recipes = gradedItems
                     .stream()
                     .map(gradedItem -> {
                         Optional<L2RecipeList> recipeOption = RecipeData.getInstance().getRecipeByProductionItem(gradedItem.getItemId());
                         if (!recipeOption.isPresent()) {
-                            LOG.warn("Could not find recipe for item ", gradedItem);
+                            LOG.warn("Could not find recipe for item {}", gradedItem);
                         }
                         return recipeOption;
                     })
@@ -39,8 +37,9 @@ public class ItemRecipesData {
 
             recipesByGrade.put(
                     gradeInfo,
-                    recipeIds
+                    recipes
             );
+            recipeIds.addAll(recipes.stream().map(L2RecipeList::getRecipeId).collect(Collectors.toSet()));
         });
     }
 
@@ -50,6 +49,10 @@ public class ItemRecipesData {
 
     public static ItemRecipesData getInstance() {
         return ItemRecipesData.SingletonHolder._instance;
+    }
+
+    public Set<Integer> getRecipeIds() {
+        return recipeIds;
     }
 
     private static class SingletonHolder {
