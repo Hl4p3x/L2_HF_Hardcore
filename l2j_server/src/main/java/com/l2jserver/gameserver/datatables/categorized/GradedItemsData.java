@@ -44,7 +44,7 @@ public class GradedItemsData {
     }
 
     public Map<GradeInfo, Collection<GradedItem>> getGradedItemsMap() {
-        return gradedItemsMap;
+        return Optional.ofNullable(gradedItemsMap).orElse(Collections.emptyMap());
     }
 
     public static GradedItemsData getInstance() {

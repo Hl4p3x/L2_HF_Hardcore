@@ -41,7 +41,7 @@ public class DynamicDropCalculator {
 
         List<ItemHolder> partHolders = ItemPartsData.getInstance().getItemPartsByGradeInfo(gradeInfo).stream().filter(part -> Rnd.getDouble(100) <= 70).map(itemPart -> new ItemHolder(itemPart.getPartId(), Rnd.get(2) + 1)).collect(Collectors.toList());
         List<ItemHolder> itemHolders = possibleDropItems.stream()
-                .filter(gradedItem -> Rnd.getDouble(100) <= Math.max(ItemGradeChanceMods.valueOf(gradedItem.getGradeInfo().getGrade().name()).getMod() * 10, 100))
+                .filter(gradedItem -> Rnd.getDouble(100) <= Math.min(ItemGradeChanceMods.valueOf(gradedItem.getGradeInfo().getGrade().name()).getMod() * 10, 100))
                 .map(gradedItem -> new ItemHolder(gradedItem.getItemId(), 1))
                 .collect(Collectors.toList());
 
