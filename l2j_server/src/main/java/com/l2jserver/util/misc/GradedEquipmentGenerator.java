@@ -26,6 +26,8 @@ import com.l2jserver.gameserver.model.items.type.CrystalType;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.util.CollectionUtil;
 import com.l2jserver.util.StringUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,6 +37,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class GradedEquipmentGenerator {
+
+    private static final Logger LOG = LoggerFactory.getLogger(GradedEquipmentGenerator.class);
 
     private static final List<Integer> blacklistIds = Arrays.asList(
             2465, // Chain Gloves of Silence
@@ -186,9 +190,12 @@ public class GradedEquipmentGenerator {
                                     })
                                     .findFirst();
                             if (instance.isPresent()) {
-                                return instance.map(l2RecipeInstance -> new ItemPart(item.getId(), item.getName(), l2RecipeInstance.getItemId(), ItemTable.getInstance().getTemplate(l2RecipeInstance.getItemId()).getName())).get();
+                                return instance.map(l2RecipeInstance -> new ItemPart(
+                                        item.getId(), item.getName(),
+                                        l2RecipeInstance.getItemId(), ItemTable.getInstance().getTemplate(l2RecipeInstance.getItemId()).getName())
+                                ).orElse(null);
                             } else {
-                                System.out.println("Could not find part for " + item);
+                                LOG.warn("Could not find part for {}", item);
                                 return null;
                             }
                         })
@@ -274,10 +281,10 @@ public class GradedEquipmentGenerator {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_equipment.json"), allItems);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_items.json"), allItems);
 
         List<ItemPart> itemParts = categorizedItems.getWeaponAndArmorParts();
-        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/craftable_item_parts.json"), itemParts);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/item_parts.json"), itemParts);
     }
 
     private static List<GradedItem> regradeDynastyToS80(List<GradedItem> items) {

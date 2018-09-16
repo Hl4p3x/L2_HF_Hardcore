@@ -7,7 +7,7 @@ import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public enum EquipmentGradeRanges {
+public enum ItemGradeRange {
 
     LOW_NG(1, 9, new GradeInfo(Grade.NG, GradeCategory.LOW)), //
     MID_NG(10, 16, new GradeInfo(Grade.NG, GradeCategory.MID)), //
@@ -37,7 +37,7 @@ public enum EquipmentGradeRanges {
     private int highLevel;
     private GradeInfo gradeInfo;
 
-    EquipmentGradeRanges(int lowLevel, int highLevel, GradeInfo gradeInfo) {
+    ItemGradeRange(int lowLevel, int highLevel, GradeInfo gradeInfo) {
         this.lowLevel = lowLevel;
         this.highLevel = highLevel;
         this.gradeInfo = gradeInfo;
@@ -55,7 +55,7 @@ public enum EquipmentGradeRanges {
         return gradeInfo;
     }
 
-    public static Optional<EquipmentGradeRanges> byLevel(int level) {
+    public static Optional<ItemGradeRange> byLevel(int level) {
         return Stream.of(values()).filter(item -> item.getLowLevel() <= level && level <= item.getHighLevel()).findFirst();
     }
 

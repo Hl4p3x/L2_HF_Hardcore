@@ -20,7 +20,7 @@ package handlers.admincommandhandlers;
 
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.categorized.GradedEquipmentDataTable;
+import com.l2jserver.gameserver.datatables.categorized.GradedItemsData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.buylist.L2BuyList;
@@ -69,7 +69,7 @@ public class AdminShop implements IAdminCommandHandler
 		} else if (command.startsWith("admin_categorized")) {
 			String[] commandSplit = command.split(" ");
 
-            Map<GradeInfo, Collection<GradedItem>> items = GradedEquipmentDataTable.getInstance().getGradedItemsMap();
+            Map<GradeInfo, Collection<GradedItem>> items = GradedItemsData.getInstance().getGradedItemsMap();
 
 			if (commandSplit.length == 1) {
                 Set<GradeInfo> categories = items.keySet();

@@ -15,6 +15,10 @@ public class GradeInfo {
         this.category = category;
     }
 
+    public static GradeInfo unset() {
+        return new GradeInfo(Grade.UNSET, GradeCategory.UNSET);
+    }
+
     public void setCategory(GradeCategory category) {
         this.category = category;
     }
