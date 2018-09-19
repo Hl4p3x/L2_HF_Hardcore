@@ -1,13 +1,18 @@
 package com.l2jserver.gameserver.model.items.craft;
 
+import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
+
 import java.util.Objects;
 
-public class CraftResource {
+public class CraftResource implements IIdentifiable {
 
     private int id;
     private String name;
     private double price;
     private ResourceGrade resourceGrade;
+
+    public CraftResource() {
+    }
 
     public CraftResource(int id, String name, double price, ResourceGrade resourceGrade) {
         this.id = id;

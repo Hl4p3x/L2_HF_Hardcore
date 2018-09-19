@@ -29,8 +29,8 @@ public class ItemPartsData {
 
     private void load() {
         try {
-            File gradedEquipment = new File("data/stats/categorized/item_parts.json");
-            itemParts = new ObjectMapper().readValue(gradedEquipment, new TypeReference<List<ItemPart>>() {
+            File itemPartsFile = new File("data/stats/categorized/item_parts.json");
+            itemParts = new ObjectMapper().readValue(itemPartsFile, new TypeReference<List<ItemPart>>() {
             });
 
             Multimap<GradeInfo, ItemPart> itemPartMultimap = HashMultimap.create();
