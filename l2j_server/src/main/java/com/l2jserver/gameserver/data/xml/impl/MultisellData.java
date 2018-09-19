@@ -18,17 +18,6 @@
  */
 package com.l2jserver.gameserver.data.xml.impl;
 
-import java.io.File;
-import java.io.FileFilter;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
-import org.w3c.dom.DOMException;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -45,6 +34,16 @@ import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.data.xml.IXmlReader;
 import com.l2jserver.util.file.filter.NumericNameFilter;
+import org.w3c.dom.DOMException;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
+import java.io.File;
+import java.io.FileFilter;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public final class MultisellData implements IXmlReader
 {
@@ -371,7 +370,11 @@ public final class MultisellData implements IXmlReader
 			}
 		}
 	}
-	
+
+	public Map<Integer, ListContainer> getEntries() {
+		return _entries;
+	}
+
 	private final boolean verifyIngredient(Ingredient ing)
 	{
 		switch (ing.getItemId())

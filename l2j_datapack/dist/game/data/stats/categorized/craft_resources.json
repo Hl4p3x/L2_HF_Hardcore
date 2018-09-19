@@ -1,137 +1,5 @@
 [
   {
-    "id": 9451,
-    "name": "Dynastic Essence",
-    "price": 0.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 10413,
-    "name": "Dynastic Essence II",
-    "price": 0.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 9170,
-    "name": "Magic Reagents",
-    "price": 0.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 9169,
-    "name": "Philosopher's Stone Conversion Formula",
-    "price": 0.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 9168,
-    "name": "Philosopher's Stone Ore",
-    "price": 0.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 13798,
-    "name": "Portion of a Soul",
-    "price": 0.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 13797,
-    "name": "Tear of a Freed Soul",
-    "price": 0.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 5557,
-    "name": "Bead Ornament",
-    "price": 1.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 5558,
-    "name": "Fir Tree Branch",
-    "price": 1.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 5559,
-    "name": "Flower Pot",
-    "price": 1.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 5556,
-    "name": "Star Ornament",
-    "price": 1.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1678,
-    "name": "(Not In Use) Thread",
-    "price": 10.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1676,
-    "name": "Beast Bone",
-    "price": 20.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1675,
-    "name": "Beast Blood",
-    "price": 40.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1680,
-    "name": "Fur",
-    "price": 40.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1677,
-    "name": "Hot Oil",
-    "price": 40.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1692,
-    "name": "(Not In Use) Cord",
-    "price": 45.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 6908,
-    "name": "Fish Oil",
-    "price": 50.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1687,
-    "name": "(Not In Use) Coarse Bone Powder",
-    "price": 80.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1674,
-    "name": "Twig of Treant",
-    "price": 80.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 8353,
-    "name": "Green Colored Fish Scale",
-    "price": 100.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 8658,
-    "name": "Mysterious Solvent",
-    "price": 100.0,
-    "resourceGrade": "LOW"
-  },
-  {
     "id": 1864,
     "name": "Stem",
     "price": 100.0,
@@ -156,18 +24,6 @@
     "resourceGrade": "LOW"
   },
   {
-    "id": 1679,
-    "name": "Bronze",
-    "price": 150.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1704,
-    "name": "Stone of Anguish",
-    "price": 157.0,
-    "resourceGrade": "LOW"
-  },
-  {
     "id": 1871,
     "name": "Charcoal",
     "price": 200.0,
@@ -180,20 +36,8 @@
     "resourceGrade": "LOW"
   },
   {
-    "id": 6911,
-    "name": "Fish Scale",
-    "price": 200.0,
-    "resourceGrade": "LOW"
-  },
-  {
     "id": 1869,
     "name": "Iron Ore",
-    "price": 200.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 8359,
-    "name": "Jade Colored Fish Scale",
     "price": 200.0,
     "resourceGrade": "LOW"
   },
@@ -204,68 +48,14 @@
     "resourceGrade": "LOW"
   },
   {
-    "id": 1684,
-    "name": "Durable Stem",
-    "price": 220.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 2508,
-    "name": "Cursed Bone",
-    "price": 240.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 6909,
-    "name": "Greater Fish Oil",
-    "price": 250.0,
-    "resourceGrade": "LOW"
-  },
-  {
     "id": 1785,
     "name": "Soul Ore",
     "price": 250.0,
     "resourceGrade": "LOW"
   },
   {
-    "id": 1705,
-    "name": "Sprig of Wisdom",
-    "price": 258.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1689,
-    "name": "(Not In Use) Leather",
-    "price": 300.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 8355,
-    "name": "Blue Colored Fish Scale",
-    "price": 300.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1690,
-    "name": "Bowstring",
-    "price": 300.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 6912,
-    "name": "Shiny Fish Scale",
-    "price": 300.0,
-    "resourceGrade": "LOW"
-  },
-  {
     "id": 1866,
     "name": "Suede",
-    "price": 300.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 6915,
-    "name": "Thin Fish Bone",
     "price": 300.0,
     "resourceGrade": "LOW"
   },
@@ -276,80 +66,14 @@
     "resourceGrade": "LOW"
   },
   {
-    "id": 1683,
-    "name": "Mithril",
-    "price": 400.0,
-    "resourceGrade": "LOW"
-  },
-  {
     "id": 3031,
     "name": "Spirit Ore",
     "price": 400.0,
     "resourceGrade": "LOW"
   },
   {
-    "id": 8354,
-    "name": "Yellow Colored Fish Scale",
-    "price": 400.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1711,
-    "name": "Claw of Leopard",
-    "price": 402.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 6916,
-    "name": "Thick Fish Bone",
-    "price": 450.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1706,
-    "name": "Blue Diamond Fragment",
-    "price": 471.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1686,
-    "name": "Bark of Treant",
-    "price": 480.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1688,
-    "name": "Refined Steel",
-    "price": 480.0,
-    "resourceGrade": "LOW"
-  },
-  {
     "id": 1878,
     "name": "Braided Hemp",
-    "price": 500.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 6913,
-    "name": "Fish Gem",
-    "price": 500.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1696,
-    "name": "Flaming Oil",
-    "price": 500.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1721,
-    "name": "Hard Leather Gaiter Material",
-    "price": 500.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 8357,
-    "name": "Orange Colored Fish Scale",
     "price": 500.0,
     "resourceGrade": "LOW"
   },
@@ -360,159 +84,27 @@
     "resourceGrade": "LOW"
   },
   {
-    "id": 1724,
-    "name": "Skull Fragment",
-    "price": 512.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1709,
-    "name": "Blood of Manticore",
-    "price": 568.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1707,
-    "name": "Saint's Molar",
-    "price": 568.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1695,
-    "name": "Spell Paper",
-    "price": 580.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 8358,
-    "name": "Purple Colored Fish Scale",
-    "price": 600.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1738,
-    "name": "Wide Blade",
-    "price": 625.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1718,
-    "name": "Black Bone Fragment",
-    "price": 693.0,
-    "resourceGrade": "LOW"
-  },
-  {
     "id": 1895,
     "name": "Metallic Fiber",
     "price": 700.0,
     "resourceGrade": "LOW"
   },
   {
-    "id": 8352,
-    "name": "Red Colored Fish Scale",
-    "price": 700.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1930,
-    "name": "Boot Lining",
-    "price": 780.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1694,
-    "name": "Treant Potion",
-    "price": 800.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 8356,
-    "name": "White Colored Fish Scale",
-    "price": 800.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1740,
-    "name": "Crafted Willow Branch",
-    "price": 833.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1729,
-    "name": "Pure White Cloth",
-    "price": 833.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1693,
-    "name": "Refined Bronze",
-    "price": 890.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 8351,
-    "name": "Black Colored Fish Scale",
-    "price": 900.0,
-    "resourceGrade": "LOW"
-  },
-  {
     "id": 1882,
     "name": "Leather",
     "price": 900.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1741,
-    "name": "Stave",
-    "price": 900.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1734,
-    "name": "Small Leather Fittings",
-    "price": 952.0,
-    "resourceGrade": "LOW"
+    "resourceGrade": "MID"
   },
   {
     "id": 2130,
     "name": "Gemstone D",
     "price": 1000.0,
-    "resourceGrade": "LOW"
+    "resourceGrade": "MID"
   },
   {
     "id": 1876,
     "name": "Mithril Ore",
     "price": 1000.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 6914,
-    "name": "Shiny Fish Gem",
-    "price": 1000.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1682,
-    "name": "Tear of Holy Spirit",
-    "price": 1000.0,
-    "resourceGrade": "LOW"
-  },
-  {
-    "id": 1708,
-    "name": "Smoky Quartz",
-    "price": 1136.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1731,
-    "name": "Steel Scale Gaiters",
-    "price": 1148.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1735,
-    "name": "Small Sheet Iron",
-    "price": 1190.0,
     "resourceGrade": "MID"
   },
   {
@@ -522,75 +114,9 @@
     "resourceGrade": "MID"
   },
   {
-    "id": 6910,
-    "name": "Premium Fish Oil",
-    "price": 1250.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 2923,
-    "name": "Manticore Skin Boot Lining",
-    "price": 1480.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1720,
-    "name": "Blue-Black Bone Fragment",
-    "price": 1493.0,
-    "resourceGrade": "MID"
-  },
-  {
     "id": 1881,
     "name": "Coarse Bone Powder",
     "price": 1500.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1681,
-    "name": "Elf Stone",
-    "price": 1500.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1732,
-    "name": "Leather Fittings",
-    "price": 1520.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1747,
-    "name": "Shining Blade",
-    "price": 1700.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1728,
-    "name": "Steel Scale",
-    "price": 1790.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 2931,
-    "name": "Salamander Skin Boot Lining",
-    "price": 1792.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1742,
-    "name": "Red Cedar Branch",
-    "price": 1797.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1699,
-    "name": "Reinforced Steel",
-    "price": 1860.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1733,
-    "name": "Large Sheet Iron",
-    "price": 1900.0,
     "resourceGrade": "MID"
   },
   {
@@ -606,57 +132,9 @@
     "resourceGrade": "MID"
   },
   {
-    "id": 1685,
-    "name": "Wooden Frame",
-    "price": 2000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1698,
-    "name": "Refined Mithril",
-    "price": 2100.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 2939,
-    "name": "Plate Leather Boots Lining",
-    "price": 2225.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1750,
-    "name": "Dark Forest Leaf",
-    "price": 2267.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1974,
-    "name": "Crimson Boot Fabric",
-    "price": 2378.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1973,
-    "name": "Pa'agrian Hand Design",
-    "price": 2378.0,
-    "resourceGrade": "MID"
-  },
-  {
     "id": 1885,
     "name": "High-Grade Suede",
     "price": 2400.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1945,
-    "name": "Mithril Stocking Design",
-    "price": 2518.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1965,
-    "name": "Metal Plate Helmet Material",
-    "price": 2967.0,
     "resourceGrade": "MID"
   },
   {
@@ -684,248 +162,14 @@
     "resourceGrade": "MID"
   },
   {
-    "id": 1752,
-    "name": "Piece of Sword Breaker",
-    "price": 3050.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1697,
-    "name": "Magic Powder",
-    "price": 3080.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1710,
-    "name": "Tiger's Eye Crystal",
-    "price": 3215.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1730,
-    "name": "Purifying Potion",
-    "price": 3330.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1982,
-    "name": "Forgotten Boots Pattern",
-    "price": 3400.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1919,
-    "name": "Ring of Sage Gemstone",
-    "price": 3482.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 2946,
-    "name": "Plate Leather Gloves Design",
-    "price": 3578.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 2004,
-    "name": "Adamantite Boots Design",
-    "price": 3673.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 2965,
-    "name": "Blessed Gloves Design",
-    "price": 3673.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 2003,
-    "name": "Gauntlets of Ghost Pattern",
-    "price": 3673.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1703,
-    "name": "Steel of the Highest Grade",
-    "price": 3720.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1954,
-    "name": "Karmian Stocking Design",
-    "price": 3762.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4079,
-    "name": "Boots of Blessing Design",
-    "price": 3843.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4059,
-    "name": "Boots of Silence Fabric",
-    "price": 3843.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4074,
-    "name": "Chain Gloves of Silence Design",
-    "price": 3843.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4076,
-    "name": "Gloves of Blessing Pattern",
-    "price": 3843.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4060,
-    "name": "Guardian's Boots Fabric",
-    "price": 3843.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4075,
-    "name": "Guardian's Gloves Design",
-    "price": 3843.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 5757,
-    "name": "Sealed Zubei's Gauntlet Part",
-    "price": 3843.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4100,
-    "name": "Sealed Zubei's Gauntlets Part",
-    "price": 3843.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1754,
-    "name": "Steel Bow Mold",
-    "price": 4067.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1691,
-    "name": "Steel Frame",
-    "price": 4400.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4063,
-    "name": "Boots of Grace Lining",
-    "price": 4455.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4062,
-    "name": "Elemental Boots Lining",
-    "price": 4455.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4092,
-    "name": "Elemental Gloves Lining",
-    "price": 4455.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4093,
-    "name": "Gloves of Grace Lining",
-    "price": 4455.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4058,
-    "name": "Implosion Boots Part",
-    "price": 4455.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4094,
-    "name": "Implosion Gauntlet Fabric",
-    "price": 4455.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4061,
-    "name": "Paradia Boots Pattern",
-    "price": 4455.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 4095,
-    "name": "Paradia Gloves Pattern",
-    "price": 4455.0,
-    "resourceGrade": "MID"
-  },
-  {
     "id": 1883,
     "name": "Steel Mold",
     "price": 4500.0,
     "resourceGrade": "MID"
   },
   {
-    "id": 1749,
-    "name": "Branch of the Mother Tree",
-    "price": 4533.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1759,
-    "name": "Blood of Assassin",
-    "price": 4544.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1756,
-    "name": "Spirit of the Saber Smith",
-    "price": 4544.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 1980,
-    "name": "Demon's Stocking Pattern",
-    "price": 4700.0,
-    "resourceGrade": "MID"
-  },
-  {
     "id": 1877,
     "name": "Adamantite Nugget",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 7688,
-    "name": "Cat Ears Fabric",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 8378,
-    "name": "Fairy Antennae Piece",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 6905,
-    "name": "Hair Pin Piece",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 8377,
-    "name": "Little Angel Wings Piece",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 7686,
-    "name": "Maiden's Hairpin Piece",
     "price": 5000.0,
     "resourceGrade": "MID"
   },
@@ -936,237 +180,9 @@
     "resourceGrade": "MID"
   },
   {
-    "id": 6907,
-    "name": "Monocle Piece",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 7685,
-    "name": "Outlaw's Eyepatch Strap",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 6904,
-    "name": "Party Mask Fabric",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 7698,
-    "name": "Piece of Daisy Hairpin",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 7697,
-    "name": "Piece of Forget-me-not Hairpin",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 6906,
-    "name": "Pirate's Eye Patch Material",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 7687,
-    "name": "Rabbit Ears Fabric",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 7684,
-    "name": "Raccoon Ears Fabric",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 8376,
-    "name": "Red Horn of Victory Fragment",
-    "price": 5000.0,
-    "resourceGrade": "MID"
-  },
-  {
-    "id": 8553,
-    "name": "Red Mask of Victory, Fabric",
-    "price": 5000.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1941,
-    "name": "Brigandine Temper",
-    "price": 5029.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1763,
-    "name": "Ruby Fragment",
-    "price": 5113.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5492,
-    "name": "Phoenix Ring Gemstone",
-    "price": 5228.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1751,
-    "name": "Lump of Iron",
-    "price": 5278.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1772,
-    "name": "Leaf of the Mother Tree",
-    "price": 5367.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1760,
-    "name": "Assassin Blade",
-    "price": 5453.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 4067,
-    "name": "Zubei's Leather Gaiter Texture",
-    "price": 5587.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1774,
-    "name": "Piece of Two-Handed Sword",
-    "price": 5688.0,
-    "resourceGrade": "HIGH"
-  },
-  {
     "id": 1894,
     "name": "Crafted Leather",
     "price": 5700.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5498,
-    "name": "Sealed Boots of Underworld Lining",
-    "price": 5738.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5512,
-    "name": "Sealed Gloves of Black Ore Design",
-    "price": 5738.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5510,
-    "name": "Sealed Gloves of Underworld Design",
-    "price": 5738.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5499,
-    "name": "Sealed Gust Boots Lining",
-    "price": 5738.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5511,
-    "name": "Sealed Gust Bracer design",
-    "price": 5738.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5501,
-    "name": "Sealed Phoenix Boots Lining",
-    "price": 5738.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5513,
-    "name": "Sealed Phoenix Gloves Design",
-    "price": 5738.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5500,
-    "name": "Sealed Red Flame Boots Lining",
-    "price": 5738.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1991,
-    "name": "Cap of Mana Pattern",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1995,
-    "name": "Elemental Hood Material",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1999,
-    "name": "Flame Helm Design",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 2001,
-    "name": "Helm of Avadon Design",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 2002,
-    "name": "Helmet of Pledge Pattern",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1998,
-    "name": "Hood of Aid Material",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1996,
-    "name": "Hood of Grace Texture",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1993,
-    "name": "Hood of Solar Eclipse Texture",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1994,
-    "name": "Hood of Summoning Texture",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1992,
-    "name": "Paradia Hood Material",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1997,
-    "name": "Phoenix Hood Material",
-    "price": 5782.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1917,
-    "name": "Sage's Necklace Chain",
-    "price": 5845.0,
     "resourceGrade": "HIGH"
   },
   {
@@ -1188,81 +204,9 @@
     "resourceGrade": "HIGH"
   },
   {
-    "id": 1950,
-    "name": "Half Plate Temper",
-    "price": 6162.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1700,
-    "name": "(Not In Use) Oriharukon",
-    "price": 6300.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5493,
-    "name": "Inferno Ring Gemstone",
-    "price": 6414.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1769,
-    "name": "Piece of Conjuror's Staff",
-    "price": 6440.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1765,
-    "name": "Spinebone Fragment",
-    "price": 6440.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1778,
-    "name": "Shilen Bone",
-    "price": 6447.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1777,
-    "name": "Steel Piece of Club",
-    "price": 6447.0,
-    "resourceGrade": "HIGH"
-  },
-  {
     "id": 1888,
     "name": "Synthetic Cokes",
     "price": 6600.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1989,
-    "name": "Divine Stocking Pattern",
-    "price": 6636.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1762,
-    "name": "Piece of Trident",
-    "price": 6850.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 4057,
-    "name": "Zubei's Gaiter Material",
-    "price": 7150.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1767,
-    "name": "Piece of Mace of Judgment",
-    "price": 7156.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5483,
-    "name": "Phoenix Earring Gemstone",
-    "price": 7215.0,
     "resourceGrade": "HIGH"
   },
   {
@@ -1272,116 +216,8 @@
     "resourceGrade": "HIGH"
   },
   {
-    "id": 1755,
-    "name": "Metal Stave",
-    "price": 8133.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1701,
-    "name": "Spell Solution",
-    "price": 8160.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1773,
-    "name": "Piece of Dwarven Trident",
-    "price": 8613.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5505,
-    "name": "Sealed Boots of Phantom Lining",
-    "price": 8993.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5506,
-    "name": "Sealed Cerberus Boots Lining",
-    "price": 8993.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5518,
-    "name": "Sealed Cerberus Gloves Design",
-    "price": 8993.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5504,
-    "name": "Sealed Dark Legion Boots Lining",
-    "price": 8993.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5516,
-    "name": "Sealed Dark Legion Gloves Design",
-    "price": 8993.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5507,
-    "name": "Sealed Dasparion's Boots Lining",
-    "price": 8993.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5519,
-    "name": "Sealed Dasparion's Gloves Design",
-    "price": 8993.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5517,
-    "name": "Sealed Gloves of Phantom Design",
-    "price": 8993.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5484,
-    "name": "Inferno Earring Gemstone",
-    "price": 9100.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5490,
-    "name": "Phoenix Necklace Beads",
-    "price": 9185.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1780,
-    "name": "Purity Bronze",
-    "price": 9210.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 2012,
-    "name": "Sword of Reflection Blade",
-    "price": 9600.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 8375,
-    "name": "Artisan's Goggles Fabric",
-    "price": 10000.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 8374,
-    "name": "Feathered Hat Fabric",
-    "price": 10000.0,
-    "resourceGrade": "HIGH"
-  },
-  {
     "id": 2132,
     "name": "Gemstone B",
-    "price": 10000.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 12374,
-    "name": "Mammon's Varnish Enhancer",
     "price": 10000.0,
     "resourceGrade": "HIGH"
   },
@@ -1392,63 +228,9 @@
     "resourceGrade": "HIGH"
   },
   {
-    "id": 8373,
-    "name": "Party Hat Fabric",
-    "price": 10000.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1764,
-    "name": "Deep Sea Water",
-    "price": 10225.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1768,
-    "name": "Pattern of Judgment",
-    "price": 10733.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1783,
-    "name": "Blood of Fiend",
-    "price": 10744.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1784,
-    "name": "Cursed Leather",
-    "price": 10744.0,
-    "resourceGrade": "HIGH"
-  },
-  {
     "id": 4042,
     "name": "Enria",
     "price": 12000.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1702,
-    "name": "Metal Frame",
-    "price": 12500.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1770,
-    "name": "Magic Flute",
-    "price": 12880.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 1766,
-    "name": "Spinebone Pattern",
-    "price": 12880.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 5526,
-    "name": "Sealed Tallum Helm Design",
-    "price": 12938.0,
     "resourceGrade": "HIGH"
   },
   {
@@ -1458,285 +240,39 @@
     "resourceGrade": "HIGH"
   },
   {
-    "id": 5491,
-    "name": "Inferno Necklace Beads",
-    "price": 13114.0,
-    "resourceGrade": "HIGH"
-  },
-  {
     "id": 1886,
     "name": "Silver Mold",
     "price": 13500.0,
     "resourceGrade": "HIGH"
   },
   {
-    "id": 1748,
-    "name": "Sword of Reflection Mold",
-    "price": 13600.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 6708,
-    "name": "Sealed Draconic Leather Gloves Fabric",
-    "price": 14047.0,
-    "resourceGrade": "HIGH"
-  },
-  {
-    "id": 6703,
-    "name": "Sealed Imperial Crusader Gauntlets Design",
-    "price": 14047.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 6712,
-    "name": "Sealed Major Arcana Gloves fabric",
-    "price": 14047.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
     "id": 5550,
     "name": "Durable Metal Plate",
     "price": 15000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 1771,
-    "name": "Elven Stave",
-    "price": 21467.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2043,
-    "name": "Eye of Infinity Stone",
-    "price": 21643.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2045,
-    "name": "Blue Crystal Skull Part",
-    "price": 21786.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2057,
-    "name": "Ancient Reagent Remnant",
-    "price": 22812.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2056,
-    "name": "Vajra Wand Frame",
-    "price": 22812.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16127,
-    "name": "Fabric of Chic Gold Horn Cap",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16128,
-    "name": "Fabric of Chic Silver Horn Cap",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16130,
-    "name": "Fabric of Refined Brown Turban",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16133,
-    "name": "Fabric of Refined Cow Hat",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16129,
-    "name": "Fabric of Refined Penguin Hat",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16126,
-    "name": "Fabric of Refined Shark Hat",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16132,
-    "name": "Fabric of Refined Turtle Hat",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16131,
-    "name": "Fabric of Refined Yellow Turban",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
+    "resourceGrade": "HIGH"
   },
   {
     "id": 4041,
     "name": "Mold Hardener",
     "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16122,
-    "name": "Refined Black Skeleton Circlet Piece",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16125,
-    "name": "Refined Brown Skeleton Circlet Piece",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16124,
-    "name": "Refined Green Skeleton Circlet Piece",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16123,
-    "name": "Refined Orange Skeleton Circlet Piece",
-    "price": 23000.0,
-    "resourceGrade": "HIGHEST"
+    "resourceGrade": "HIGH"
   },
   {
     "id": 1893,
     "name": "Oriharukon",
     "price": 24600.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2071,
-    "name": "Wolverine Needle Edge",
-    "price": 25188.0,
-    "resourceGrade": "HIGHEST"
+    "resourceGrade": "HIGH"
   },
   {
     "id": 9628,
     "name": "Leonard",
     "price": 25500.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 1761,
-    "name": "Assassin Mold",
-    "price": 27267.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 9534,
-    "name": "Sealed Dynasty Boot Piece",
-    "price": 27870.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 9533,
-    "name": "Sealed Dynasty Gauntlet Piece",
-    "price": 27870.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 9543,
-    "name": "Sealed Dynasty Glove Piece",
-    "price": 27870.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 9538,
-    "name": "Sealed Dynasty Leather Glove Piece",
-    "price": 27870.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2088,
-    "name": "Horn of Glory Fragment",
-    "price": 28378.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2087,
-    "name": "Tears of Fairy Drop",
-    "price": 28378.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2085,
-    "name": "Crossbow Shaft",
-    "price": 28911.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2079,
-    "name": "Bec De Corbin Blade",
-    "price": 29111.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 15669,
-    "name": "Sealed Vesper Verteidiger Piece",
-    "price": 29500.0,
-    "resourceGrade": "HIGHEST"
+    "resourceGrade": "HIGH"
   },
   {
     "id": 2133,
     "name": "Gemstone A",
     "price": 30000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 9531,
-    "name": "Sealed Dynasty Gaiters Piece",
-    "price": 30951.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 5520,
-    "name": "Sealed Dark Crystal Breastplate Pattern",
-    "price": 31015.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 1776,
-    "name": "Piece of Spiked Club",
-    "price": 32233.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 8615,
-    "name": "Summoning Crystal",
-    "price": 35000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 4112,
-    "name": "Dark Elven Longbow Shaft",
-    "price": 35325.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2111,
-    "name": "Hex Doll Fragment",
-    "price": 35480.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2109,
-    "name": "Akat Longbow Shaft",
-    "price": 35670.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2090,
-    "name": "Delusional Blade",
-    "price": 36700.0,
     "resourceGrade": "HIGHEST"
   },
   {
@@ -1746,105 +282,9 @@
     "resourceGrade": "HIGHEST"
   },
   {
-    "id": 2114,
-    "name": "Widowmaker Head",
-    "price": 41300.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 8338,
-    "name": "Axe of Eclipse Head",
-    "price": 41636.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2124,
-    "name": "Blessed Branch Splinter",
-    "price": 42509.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2123,
-    "name": "Candle of Wisdom Model",
-    "price": 42509.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2126,
-    "name": "Cerberus Eye Fragment",
-    "price": 42509.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2128,
-    "name": "Claws of Black Dragon Piece",
-    "price": 42509.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2125,
-    "name": "Phoenix Feather Piece",
-    "price": 42509.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2127,
-    "name": "Scroll of Destruction Page",
-    "price": 42509.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2129,
-    "name": "Three Eyed Crow's Feather Piece",
-    "price": 42509.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 8336,
-    "name": "Blade of the Wizard's Tear",
-    "price": 45692.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 8340,
-    "name": "Bones Head of Kaim Vanul",
-    "price": 45769.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
     "id": 9629,
     "name": "Adamantine",
     "price": 46000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 4118,
-    "name": "Evil Spirit Head",
-    "price": 48308.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 9678,
-    "name": "Magic Gem",
-    "price": 50000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 9541,
-    "name": "Sealed Dynasty Stocking Piece",
-    "price": 50702.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 15670,
-    "name": "Sealed Vesper Leather Legging Piece",
-    "price": 54700.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 8346,
-    "name": "Hammer Piece of Destroyer",
-    "price": 59308.0,
     "resourceGrade": "HIGHEST"
   },
   {
@@ -1854,51 +294,9 @@
     "resourceGrade": "HIGHEST"
   },
   {
-    "id": 1779,
-    "name": "Shilen Mane",
-    "price": 64467.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 5540,
-    "name": "Orcish Halberd Edge",
-    "price": 66231.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 15666,
-    "name": "Sealed Vesper Gaiter Piece",
-    "price": 68600.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 2000,
-    "name": "Tallum Helm Design",
-    "price": 68831.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 9631,
-    "name": "Tough Leather",
-    "price": 90000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
     "id": 4046,
     "name": "Maestro Anvil Lock",
     "price": 90400.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 6696,
-    "name": "Heavens Divider Edge",
-    "price": 91082.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 6692,
-    "name": "Shining Bow Shaft",
-    "price": 91471.0,
     "resourceGrade": "HIGHEST"
   },
   {
@@ -1923,18 +321,6 @@
     "id": 5551,
     "name": "Reorin's Mold",
     "price": 238000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 10406,
-    "name": "Icarus Stinger Piece",
-    "price": 312000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 10407,
-    "name": "Icarus Wingblade Piece",
-    "price": 312000.0,
     "resourceGrade": "HIGHEST"
   },
   {
@@ -1965,12 +351,6 @@
     "id": 5554,
     "name": "Warsmith's Holder",
     "price": 884000.0,
-    "resourceGrade": "HIGHEST"
-  },
-  {
-    "id": 16027,
-    "name": "Bottle of Freya's Soul",
-    "price": 1000000.0,
     "resourceGrade": "HIGHEST"
   }
 ]

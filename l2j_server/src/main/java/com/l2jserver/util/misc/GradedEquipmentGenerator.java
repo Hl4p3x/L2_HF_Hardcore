@@ -6,6 +6,7 @@ import com.google.common.collect.Multimap;
 import com.l2jserver.Config;
 import com.l2jserver.Server;
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;
+import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.categorized.CategorizedItems;
@@ -13,10 +14,7 @@ import com.l2jserver.gameserver.model.L2RecipeInstance;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.buylist.L2BuyList;
 import com.l2jserver.gameserver.model.buylist.Product;
-import com.l2jserver.gameserver.model.items.L2Armor;
-import com.l2jserver.gameserver.model.items.L2EtcItem;
-import com.l2jserver.gameserver.model.items.L2Item;
-import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.*;
 import com.l2jserver.gameserver.model.items.craft.CraftResource;
 import com.l2jserver.gameserver.model.items.craft.ResourceGrade;
 import com.l2jserver.gameserver.model.items.graded.Grade;
@@ -26,15 +24,15 @@ import com.l2jserver.gameserver.model.items.graded.GradedItem;
 import com.l2jserver.gameserver.model.items.parts.ItemPart;
 import com.l2jserver.gameserver.model.items.type.CrystalType;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
+import com.l2jserver.gameserver.model.multisell.Ingredient;
+import com.l2jserver.gameserver.model.multisell.ListContainer;
 import com.l2jserver.util.CollectionUtil;
-import com.l2jserver.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -42,7 +40,7 @@ public class GradedEquipmentGenerator {
 
     private static final Logger LOG = LoggerFactory.getLogger(GradedEquipmentGenerator.class);
 
-    private static final List<Integer> blacklistIds = Arrays.asList(
+    private static final List<Integer> BLACKLISTED_EQUIPMENT = Arrays.asList(
             2465, // Chain Gloves of Silence
             2467, // Gloves of Blessing
             2466, // Guardian's Gloves
@@ -99,6 +97,15 @@ public class GradedEquipmentGenerator {
             9584 // Stripe Linen Shirt
     );
 
+    private static final List<Integer> BLACKLISTED_MATERIALS = Arrays.asList(
+            8658, // Mysterious Solvent
+            8355, // Blue Colored Fish Scale
+            8358, // Purple Colored Fish Scale
+            8351, // Black Colored Fish Scale
+            6905, // Hair Pin Piece
+            8376, // Red Horn of Victory Fragment
+            2012 // Sword of Reflection Blade
+    );
     // Magic constant of full armor 0.616 to chest price ration
     private static final double FULL_TO_CHEST_PRICE_RATION = 0.616;
 
@@ -112,17 +119,22 @@ public class GradedEquipmentGenerator {
         List<L2Weapon> craftableWeapons = weaponsMap.values()
                 .stream()
                 .filter(weapon ->
-                        !blacklistIds.contains(weapon.getId()) &&
+                        !BLACKLISTED_EQUIPMENT.contains(weapon.getId()) &&
                                 craftableIds.contains(weapon.getId()) &&
                         !weapon.getCrystalType().equals(CrystalType.NONE))
                 .collect(Collectors.toList());
         List<L2Armor> craftableArmors = armorsMap.values()
                 .stream()
                 .filter(armor ->
-                        !blacklistIds.contains(armor.getId()) &&
+                        !BLACKLISTED_EQUIPMENT.contains(armor.getId()) &&
                                 (craftableIds.contains(armor.getId()) && !armor.isHair()) &&
                         !armor.isBracelet() && !armor.isCloak() && !armor.isBelt() &&
                         !armor.getCrystalType().equals(CrystalType.NONE))
+                .collect(Collectors.toList());
+
+        List<L2Armor> hairAccessories = armorsMap.values().stream()
+                .filter(armor ->
+                        !BLACKLISTED_EQUIPMENT.contains(armor.getId()) && armor.isHair())
                 .collect(Collectors.toList());
 
         // Add NG
@@ -139,7 +151,7 @@ public class GradedEquipmentGenerator {
         L2BuyList fighterWeaponShopLow = buyListData.getBuyList(3055800);
 
         Stream<L2BuyList> shops = Stream.of(wizardArmorShopTop, fighterArmorShopTop, wizardArmorShopLow, fighterArmorShopLow, accessoryShopLow, accessoryShopTop, fighterWeaponShopLow, fighterWeaponShopTop, wizardWeaponShopLow, wizardWeaponShopTop);
-        List<L2Item> itemsFromShops = shops.flatMap(l2BuyList -> Product.convertToItems(l2BuyList.getProducts()).stream()).filter(item -> !blacklistIds.contains(item.getId())).collect(Collectors.toList());
+        List<L2Item> itemsFromShops = shops.flatMap(l2BuyList -> Product.convertToItems(l2BuyList.getProducts()).stream()).filter(item -> !BLACKLISTED_EQUIPMENT.contains(item.getId())).collect(Collectors.toList());
 
         List<L2Weapon> weaponsFromShops = itemsFromShops.stream()
                 .filter((L2Item item) -> item instanceof L2Weapon)
@@ -162,56 +174,84 @@ public class GradedEquipmentGenerator {
         List<L2Armor> nonMasterworkArmors = craftableArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY != armor.getType2()).collect(Collectors.toList());
         List<L2Armor> nonMasterworkJewels = craftableArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY == armor.getType2()).collect(Collectors.toList());
 
-        Map<String, L2Item> weaponByNames = craftableWeapons.stream().collect(Collectors.toMap(L2Item::getName, Function.identity()));
-        Map<String, L2Item> armorByNames = craftableArmors.stream().collect(Collectors.toMap(L2Item::getName, Function.identity()));
-        Map<String, L2Item> weaponsAndArmorNames = new HashMap<>();
-        weaponsAndArmorNames.putAll(weaponByNames);
-        weaponsAndArmorNames.putAll(armorByNames);
-
-        List<L2EtcItem> allMaterials = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.MATERIAL == etcItem.getItemType()).collect(Collectors.toList());
-
         List<ItemPart> weaponAndArmorParts =
                 Stream.concat(craftableWeapons.stream(), craftableArmors.stream())
-                        .map(item -> {
-                            Optional<L2RecipeList> recipeList = RecipeData.getInstance().getRecipeByProductionItem(item.getId());
-                            if (!recipeList.isPresent()) {
-                                return null;
-                            }
-
-                            Optional<ItemPart> hardcodedPart = HardcodedPartsForMismatchedItems.PARTS.stream().filter(part -> part.getItemId() == item.getId()).findFirst();
-                            if (hardcodedPart.isPresent()) {
-                                return hardcodedPart.get();
-                            }
-
-                            Optional<L2RecipeInstance> instance = Stream.of(recipeList.get().getRecipes())
-                                    .filter(recipe -> {
-                                        L2Item recipeItem = ItemTable.getInstance().getTemplate(recipe.getItemId());
-                                        return (crossContainsIgnoreCase(removeEndingS(joinLongbowWorkTogether(item.getName())), removeEndingS(joinLongbowWorkTogether(recipeItem.getName())))
-                                                || recipeItem.getName().toLowerCase().contains("Sealed".toLowerCase())
-                                        ) && !recipeItem.getName().toLowerCase().contains("Recipe".toLowerCase());
-                                    })
-                                    .findFirst();
-                            if (instance.isPresent()) {
-                                return instance.map(l2RecipeInstance -> new ItemPart(
-                                        item.getId(), item.getName(),
-                                        l2RecipeInstance.getItemId(), ItemTable.getInstance().getTemplate(l2RecipeInstance.getItemId()).getName())
-                                ).orElse(null);
-                            } else {
-                                LOG.warn("Could not find part for {}", item);
-                                return null;
-                            }
-                        })
+                        .map(GradedEquipmentGenerator::findPartByItem)
                         .filter(Objects::nonNull)
                         .collect(Collectors.toList());
 
+        List<ItemPart> blacklistedParts = BLACKLISTED_EQUIPMENT.stream()
+                .map(id -> ItemTable.getInstance().getTemplate(id)).map(GradedEquipmentGenerator::findPartByItem)
+                .filter(Objects::nonNull)
+                .collect(Collectors.toList());
 
-        List<L2EtcItem> craftMaterials = allMaterials.stream().filter(material -> !weaponsAndArmorNames.containsKey(StringUtil.removeLastWord(material.getName()).trim())).collect(Collectors.toList());
+        List<ItemPart> accessoriesParts = hairAccessories.stream()
+                .map(GradedEquipmentGenerator::findPartByItem)
+                .filter(Objects::nonNull)
+                .collect(Collectors.toList());
+
+        ListContainer fishermanMultisell = MultisellData.getInstance().getEntries().get(9);
+        Set<Integer> fishingCraftIds = fishermanMultisell.getEntries()
+                .stream().flatMap(entry -> Stream.concat(
+                        CollectionUtil.extract(entry.getIngredients(), Ingredient::getItemId).stream(), CollectionUtil.extract(entry.getProducts(), Ingredient::getItemId).stream())
+                ).filter(id -> !id.equals(Adena.ID)).collect(Collectors.toSet());
 
         List<L2EtcItem> recipes = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.RECIPE == etcItem.getItemType()).collect(Collectors.toList());
+        Set<Integer> partsIds = CollectionUtil.extract(weaponAndArmorParts, ItemPart::getPartId);
+        Set<Integer> recipeIds = CollectionUtil.extractIds(recipes);
+        Set<Integer> blacklistedPartIds = CollectionUtil.extract(blacklistedParts, ItemPart::getPartId);
+        Set<Integer> accessoriesPartsIds = CollectionUtil.extract(accessoriesParts, ItemPart::getPartId);
+
+        Set<Integer> allNonResourceCraftIds = new HashSet<>(
+                partsIds.size() +
+                        recipeIds.size() +
+                        blacklistedPartIds.size() +
+                        fishingCraftIds.size() +
+                        accessoriesPartsIds.size()
+        );
+        allNonResourceCraftIds.addAll(partsIds);
+        allNonResourceCraftIds.addAll(recipeIds);
+        allNonResourceCraftIds.addAll(blacklistedPartIds);
+        allNonResourceCraftIds.addAll(fishingCraftIds);
+        allNonResourceCraftIds.addAll(accessoriesPartsIds);
+
+        List<L2EtcItem> allIngredients = RecipeData.getInstance().getAllIngredientIds().stream().map(id -> ItemTable.getInstance().getEtcItems().get(id)).collect(Collectors.toList());
+        List<L2EtcItem> craftMaterials = allIngredients.stream().filter(resource -> !BLACKLISTED_MATERIALS.contains(resource.getId()) && resource.getReferencePrice() > 0 && !resource.getName().contains("(Not In Use)") && resource.getItemType() == EtcItemType.MATERIAL && !allNonResourceCraftIds.contains(resource.getId())).collect(Collectors.toList());
+
         List<L2EtcItem> weaponEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_WP == etcItem.getItemType()).collect(Collectors.toList());
         List<L2EtcItem> armorEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_AM == etcItem.getItemType()).collect(Collectors.toList());
 
         return new CategorizedItems(craftableWeapons, nonMasterworkArmors, nonMasterworkJewels, weaponAndArmorParts, craftMaterials, recipes, weaponEnchants, armorEnchants);
+    }
+
+    private static ItemPart findPartByItem(L2Item item) {
+        Optional<L2RecipeList> recipeList = RecipeData.getInstance().getRecipeByProductionItem(item.getId());
+        if (!recipeList.isPresent()) {
+            return null;
+        }
+
+        Optional<ItemPart> hardcodedPart = HardcodedPartsForMismatchedItems.PARTS.stream().filter(part -> part.getItemId() == item.getId()).findFirst();
+        if (hardcodedPart.isPresent()) {
+            return hardcodedPart.get();
+        }
+
+        Optional<L2RecipeInstance> instance = Stream.of(recipeList.get().getRecipes())
+                .filter(recipe -> {
+                    L2Item recipeItem = ItemTable.getInstance().getTemplate(recipe.getItemId());
+                    return (crossContainsIgnoreCase(removeEndingS(joinLongbowWorkTogether(item.getName())), removeEndingS(joinLongbowWorkTogether(recipeItem.getName())))
+                            || recipeItem.getName().toLowerCase().contains("Sealed".toLowerCase())
+                    ) && !recipeItem.getName().toLowerCase().contains("Recipe".toLowerCase());
+                })
+                .findFirst();
+        if (instance.isPresent()) {
+            return instance.map(l2RecipeInstance -> new ItemPart(
+                    item.getId(), item.getName(),
+                    l2RecipeInstance.getItemId(), ItemTable.getInstance().getTemplate(l2RecipeInstance.getItemId()).getName())
+            ).orElse(null);
+        } else {
+            LOG.warn("Could not find part for {}", item);
+            return null;
+        }
     }
 
     private static boolean crossContainsIgnoreCase(String left, String right) {

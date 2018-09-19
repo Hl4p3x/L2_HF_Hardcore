@@ -1,10 +1,13 @@
 package com.l2jserver.util;
 
 import com.google.common.collect.Lists;
+import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 
 import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class CollectionUtil {
 
@@ -38,6 +41,14 @@ public class CollectionUtil {
         }
         return results;
 
+    }
+
+    public static <T extends IIdentifiable> Set<Integer> extractIds(Collection<T> items) {
+        return extract(items, IIdentifiable::getId);
+    }
+
+    public static <T, R> Set<R> extract(Collection<T> items, Function<T, R> extractor) {
+        return items.stream().map(extractor::apply).collect(Collectors.toSet());
     }
 
     public static <T> HeadTail<T> beheaded(Collection<T> collection) {

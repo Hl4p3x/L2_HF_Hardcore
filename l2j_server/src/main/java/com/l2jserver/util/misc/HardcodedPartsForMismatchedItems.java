@@ -20,8 +20,9 @@ public class HardcodedPartsForMismatchedItems {
             new ItemPart(352, 1941), // Brigandine Tunic
             new ItemPart(353, 1950), // Half Plate Armor
             new ItemPart(498, 1965), // Steel Plate Helmet
-            new ItemPart(2431, 2939), // (Plated Leather Boots
-            new ItemPart(2455, 2946) // Plated LeatherGloves
+            new ItemPart(2431, 2939), // Plated Leather Boots
+            new ItemPart(2455, 2946), // Plated LeatherGloves
+            new ItemPart(891, 1919) // Sage's Ring
     );
 
 }
