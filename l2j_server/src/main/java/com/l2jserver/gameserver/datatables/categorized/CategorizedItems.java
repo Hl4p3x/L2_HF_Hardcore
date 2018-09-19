@@ -76,7 +76,7 @@ public class CategorizedItems {
         return weaponAndArmorParts;
     }
 
-    public List<L2EtcItem> getCraftMaterials() {
+    public List<L2EtcItem> getCraftResources() {
         return craftMaterials;
     }
 

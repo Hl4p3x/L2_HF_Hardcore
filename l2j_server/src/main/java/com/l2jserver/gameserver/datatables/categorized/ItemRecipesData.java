@@ -41,6 +41,7 @@ public class ItemRecipesData {
             );
             recipeIds.addAll(recipes.stream().map(L2RecipeList::getRecipeId).collect(Collectors.toSet()));
         });
+        LOG.info("Loaded {} item recipes for dynamic loot", recipeIds.size());
     }
 
     public List<L2RecipeList> getRecipesByGradeInfo(GradeInfo gradeInfo) {

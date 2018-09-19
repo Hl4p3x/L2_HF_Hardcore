@@ -44,6 +44,7 @@ public class ItemPartsData {
             });
             itemPartsMap = itemPartMultimap.asMap();
             itemPartIds = itemParts.stream().map(ItemPart::getPartId).collect(Collectors.toSet());
+            LOG.info("Loaded {} item parts", itemPartIds.size());
         } catch (IOException e) {
             throw new IllegalStateException("Could not read graded equipment data: " + e.getMessage());
         }

@@ -7,6 +7,8 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +16,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class GradedItemsData {
+
+    private static final Logger LOG = LoggerFactory.getLogger(GradedItemsData.class);
 
     private List<GradedItem> gradedItems = new ArrayList<>();
     private Map<Integer, GradedItem> gradedItemsById = new HashMap<>();
@@ -34,6 +38,7 @@ public class GradedItemsData {
             gradedItemsMap = gradedItemMultimap.asMap();
 
             gradedItemsById = gradedItems.stream().collect(Collectors.toMap(GradedItem::getItemId, Functions.identity()));
+            LOG.info("Loaded {} graded items!", gradedItems.size());
         } catch (IOException e) {
             throw new IllegalStateException("Could not read graded equipment data: " + e.getMessage());
         }

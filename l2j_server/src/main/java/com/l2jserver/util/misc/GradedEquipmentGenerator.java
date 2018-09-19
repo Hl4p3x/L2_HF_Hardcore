@@ -17,6 +17,8 @@ import com.l2jserver.gameserver.model.items.L2Armor;
 import com.l2jserver.gameserver.model.items.L2EtcItem;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.craft.CraftResource;
+import com.l2jserver.gameserver.model.items.craft.ResourceGrade;
 import com.l2jserver.gameserver.model.items.graded.Grade;
 import com.l2jserver.gameserver.model.items.graded.GradeCategory;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
@@ -285,6 +287,29 @@ public class GradedEquipmentGenerator {
 
         List<ItemPart> itemParts = categorizedItems.getWeaponAndArmorParts();
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/item_parts.json"), itemParts);
+
+
+        List<CraftResource> gradedCraftResources = gradeCraftResources(categorizedItems.getCraftResources());
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/craft_resources.json"), gradedCraftResources);
+    }
+
+    private static List<CraftResource> gradeCraftResources(List<L2EtcItem> craftResources) {
+        List<ResourceGrade> resourceGrades = Arrays.asList(ResourceGrade.values());
+
+        Comparator<L2EtcItem> priceCompare = Comparator.comparing(L2EtcItem::getReferencePrice);
+        Comparator<L2EtcItem> nameCompare = Comparator.comparing(L2EtcItem::getName);
+        craftResources.sort(priceCompare.thenComparing(nameCompare));
+
+        List<CraftResource> result = new ArrayList<>(craftResources.size());
+        List<List<L2EtcItem>> splitItems = CollectionUtil.splitList(craftResources, resourceGrades.size() - 1);
+        int gradeIndex = 0;
+        for (List<L2EtcItem> items : splitItems) {
+            for (L2EtcItem item : items) {
+                result.add(new CraftResource(item.getId(), item.getName(), item.getReferencePrice(), resourceGrades.get(gradeIndex)));
+            }
+            gradeIndex += 1;
+        }
+        return result;
     }
 
     private static List<GradedItem> regradeDynastyToS80(List<GradedItem> items) {
