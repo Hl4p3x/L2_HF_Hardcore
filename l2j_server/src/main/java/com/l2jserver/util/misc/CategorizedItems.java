@@ -1,4 +1,4 @@
-package com.l2jserver.gameserver.datatables.categorized;
+package com.l2jserver.util.misc;
 
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.items.L2Armor;
@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CategorizedItems {
 
@@ -24,6 +25,7 @@ public class CategorizedItems {
     private final List<L2EtcItem> recipes;
     private final List<L2EtcItem> weaponEnchantScrolls;
     private final List<L2EtcItem> armorEnchantScrolls;
+    private final List<L2Item> resurrectionAndEscapeScrolls;
 
     private final List<L2Item> allItems;
     private final List<L2Item> allEquipment;
@@ -41,6 +43,17 @@ public class CategorizedItems {
         this.recipes = recipes;
         this.weaponEnchantScrolls = weaponEnchantScrolls;
         this.armorEnchantScrolls = armorEnchantScrolls;
+        this.resurrectionAndEscapeScrolls = Stream.of(
+                736, // Scroll of Escape
+                1830, // Scroll of Escape: Castle
+                1829, // Scroll of Escape: Clan Hall
+                1538, // Blessed Scroll of Escape
+                5858, // Blessed Scroll of Escape: Clan Hall
+                5859, // Blessed Scroll of Escape: Castle
+                737, // Scroll of Resurrection
+                6387, // Blessed Scroll of Resurrection for Pets
+                3936// Blessed Scroll of Resurrection
+        ).map(id -> ItemTable.getInstance().getTemplate(id)).collect(Collectors.toList());
 
         allItems = new ArrayList<>();
         allItems.addAll(nonMasterworkWeapons);
@@ -51,6 +64,7 @@ public class CategorizedItems {
         allItems.addAll(recipes);
         allItems.addAll(weaponEnchantScrolls);
         allItems.addAll(armorEnchantScrolls);
+        allItems.addAll(resurrectionAndEscapeScrolls);
 
         allEquipment = new ArrayList<>();
         allEquipment.addAll(nonMasterworkWeapons);
@@ -102,6 +116,10 @@ public class CategorizedItems {
 
     public List<L2Item> getAllEquipment() {
         return allEquipment;
+    }
+
+    public List<L2Item> getResurrectionAndEscapeScrolls() {
+        return resurrectionAndEscapeScrolls;
     }
 
 }

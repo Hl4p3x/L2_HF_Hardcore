@@ -9,7 +9,6 @@ import com.l2jserver.gameserver.data.xml.impl.BuyListData;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.categorized.CategorizedItems;
 import com.l2jserver.gameserver.model.L2RecipeInstance;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.buylist.L2BuyList;
@@ -22,6 +21,10 @@ import com.l2jserver.gameserver.model.items.graded.GradeCategory;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
 import com.l2jserver.gameserver.model.items.parts.ItemPart;
+import com.l2jserver.gameserver.model.items.scrolls.ArmorScroll;
+import com.l2jserver.gameserver.model.items.scrolls.CategorizedScrolls;
+import com.l2jserver.gameserver.model.items.scrolls.MiscScroll;
+import com.l2jserver.gameserver.model.items.scrolls.WeaponScroll;
 import com.l2jserver.gameserver.model.items.type.CrystalType;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.model.multisell.Ingredient;
@@ -218,8 +221,8 @@ public class GradedEquipmentGenerator {
         List<L2EtcItem> allIngredients = RecipeData.getInstance().getAllIngredientIds().stream().map(id -> ItemTable.getInstance().getEtcItems().get(id)).collect(Collectors.toList());
         List<L2EtcItem> craftMaterials = allIngredients.stream().filter(resource -> !BLACKLISTED_MATERIALS.contains(resource.getId()) && resource.getReferencePrice() > 0 && !resource.getName().contains("(Not In Use)") && resource.getItemType() == EtcItemType.MATERIAL && !allNonResourceCraftIds.contains(resource.getId())).collect(Collectors.toList());
 
-        List<L2EtcItem> weaponEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_WP == etcItem.getItemType()).collect(Collectors.toList());
-        List<L2EtcItem> armorEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_AM == etcItem.getItemType()).collect(Collectors.toList());
+        List<L2EtcItem> weaponEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_WP == etcItem.getItemType() || EtcItemType.BLESS_SCRL_ENCHANT_WP == etcItem.getItemType()).collect(Collectors.toList());
+        List<L2EtcItem> armorEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_AM == etcItem.getItemType() || EtcItemType.BLESS_SCRL_ENCHANT_AM == etcItem.getItemType()).collect(Collectors.toList());
 
         return new CategorizedItems(craftableWeapons, nonMasterworkArmors, nonMasterworkJewels, weaponAndArmorParts, craftMaterials, recipes, weaponEnchants, armorEnchants);
     }
@@ -328,9 +331,15 @@ public class GradedEquipmentGenerator {
         List<ItemPart> itemParts = categorizedItems.getWeaponAndArmorParts();
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/item_parts.json"), itemParts);
 
-
         List<CraftResource> gradedCraftResources = gradeCraftResources(categorizedItems.getCraftResources());
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/craft_resources.json"), gradedCraftResources);
+
+        List<ArmorScroll> armorScrolls = categorizedItems.getArmorEnchantScrolls().stream().map(ArmorScroll::fromEtc).filter(scroll -> !scroll.getGrade().equals(Grade.UNSET)).collect(Collectors.toList());
+        List<WeaponScroll> weaponScrolls = categorizedItems.getWeaponEnchantScrolls().stream().map(WeaponScroll::fromEtc).filter(scroll -> !scroll.getGrade().equals(Grade.UNSET)).collect(Collectors.toList());
+        List<MiscScroll> miscScrolls = categorizedItems.getResurrectionAndEscapeScrolls().stream().map(MiscScroll::fromItem).collect(Collectors.toList());
+
+        CategorizedScrolls categorizedScrolls = new CategorizedScrolls(weaponScrolls, armorScrolls, miscScrolls);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/scrolls.json"), categorizedScrolls);
     }
 
     private static List<CraftResource> gradeCraftResources(List<L2EtcItem> craftResources) {
