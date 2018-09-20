@@ -334,8 +334,34 @@ public class GradedEquipmentGenerator {
         List<CraftResource> gradedCraftResources = gradeCraftResources(categorizedItems.getCraftResources());
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/craft_resources.json"), gradedCraftResources);
 
-        List<ArmorScroll> armorScrolls = categorizedItems.getArmorEnchantScrolls().stream().map(ArmorScroll::fromEtc).filter(scroll -> !scroll.getGrade().equals(Grade.UNSET)).collect(Collectors.toList());
-        List<WeaponScroll> weaponScrolls = categorizedItems.getWeaponEnchantScrolls().stream().map(WeaponScroll::fromEtc).filter(scroll -> !scroll.getGrade().equals(Grade.UNSET)).collect(Collectors.toList());
+        Set<Integer> blacklistedWeaponScrolls = new HashSet<>(Arrays.asList(
+                20517, // Scroll: Enchant Weapon (S-Grade)
+                22006, // Scroll: Enchant Weapon (C-Grade)
+                22007, // Scroll: Enchant Weapon (C-Grade)
+                22008, // Scroll: Enchant Weapon (B-Grade)
+                22009 // Scroll: Enchant Weapon (A-Grade)
+        ));
+
+        Set<Integer> blacklistedArmorScrolls = new HashSet<>(Arrays.asList(
+                20518, // Scroll: Enchant Armor (S-Grade)
+                22010, // Scroll: Enchant Armor (C-Grade)
+                22011, // Scroll: Enchant Armor (C-Grade)
+                22012, // Scroll: Enchant Armor (B-Grade)
+                22013 // Scroll: Enchant Armor (A-Grade)
+        ));
+
+        List<ArmorScroll> armorScrolls = categorizedItems.getArmorEnchantScrolls()
+                .stream().map(ArmorScroll::fromEtc)
+                .filter(scroll -> !blacklistedArmorScrolls.contains(scroll.getId()) && !scroll.getGrade().equals(Grade.UNSET))
+                .sorted(Comparator.comparing(ArmorScroll::getId))
+                .collect(Collectors.toList());
+
+        List<WeaponScroll> weaponScrolls = categorizedItems.getWeaponEnchantScrolls()
+                .stream().map(WeaponScroll::fromEtc)
+                .filter(scroll -> !blacklistedWeaponScrolls.contains(scroll.getId()) && !scroll.getGrade().equals(Grade.UNSET))
+                .sorted(Comparator.comparing(WeaponScroll::getId))
+                .collect(Collectors.toList());
+
         List<MiscScroll> miscScrolls = categorizedItems.getResurrectionAndEscapeScrolls().stream().map(MiscScroll::fromItem).collect(Collectors.toList());
 
         CategorizedScrolls categorizedScrolls = new CategorizedScrolls(weaponScrolls, armorScrolls, miscScrolls);

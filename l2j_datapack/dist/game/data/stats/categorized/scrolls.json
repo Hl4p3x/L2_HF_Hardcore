@@ -31,36 +31,6 @@
       "blessed": false
     },
     {
-      "id": 20517,
-      "name": "Scroll: Enchant Weapon (S-Grade)",
-      "grade": "S",
-      "blessed": false
-    },
-    {
-      "id": 22006,
-      "name": "Scroll: Enchant Weapon (C-Grade)",
-      "grade": "C",
-      "blessed": false
-    },
-    {
-      "id": 22007,
-      "name": "Scroll: Enchant Weapon (C-Grade)",
-      "grade": "C",
-      "blessed": false
-    },
-    {
-      "id": 22008,
-      "name": "Scroll: Enchant Weapon (B-Grade)",
-      "grade": "B",
-      "blessed": false
-    },
-    {
-      "id": 22009,
-      "name": "Scroll: Enchant Weapon (A-Grade)",
-      "grade": "A",
-      "blessed": false
-    },
-    {
       "id": 6569,
       "name": "Blessed Scroll: Enchant Weapon (A-Grade)",
       "grade": "A",
@@ -120,36 +90,6 @@
       "id": 960,
       "name": "Scroll: Enchant Armor (S-Grade)",
       "grade": "S",
-      "blessed": false
-    },
-    {
-      "id": 20518,
-      "name": "Scroll: Enchant Armor (S-Grade)",
-      "grade": "S",
-      "blessed": false
-    },
-    {
-      "id": 22010,
-      "name": "Scroll: Enchant Armor (C-Grade)",
-      "grade": "C",
-      "blessed": false
-    },
-    {
-      "id": 22011,
-      "name": "Scroll: Enchant Armor (C-Grade)",
-      "grade": "C",
-      "blessed": false
-    },
-    {
-      "id": 22012,
-      "name": "Scroll: Enchant Armor (B-Grade)",
-      "grade": "B",
-      "blessed": false
-    },
-    {
-      "id": 22013,
-      "name": "Scroll: Enchant Armor (A-Grade)",
-      "grade": "A",
       "blessed": false
     },
     {
