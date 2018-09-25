@@ -1228,7 +1228,7 @@
 					<item id="57" min="1538" max="3132" chance="100"/> <!-- Adena -->
 				</group>
 				<group chance="0.4668999910354614">
-					<item id="12227" min="1" max="1" chance="4.4751"/> <!-- Common Item - Sealed Dark Crystal Breastplate -->
+					<item id="5287" min="1" max="1" chance="4.4751"/> <!-- Sealed Dark Crystal Breastplate -->
 					<item id="5520" min="1" max="1" chance="26.477"/> <!-- Sealed Dark Crystal Breastplate Pattern -->
                     <item id="5293" min="1" max="1" chance="2.7556"/> <!-- Sealed Tallum Plate Armor -->
 					<item id="5521" min="1" max="1" chance="18.6832"/> <!-- Sealed Tallum Plate Armor Pattern -->

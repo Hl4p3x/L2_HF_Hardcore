@@ -1,5 +1,6 @@
-import file_helper as fh
 import lxml.etree as ET
+
+import file_helper as fh
 
 files_to_process = fh.filter_files_by_suffix(fh.files_to_process('../l2j_datapack/dist/game/data/stats/items'), '.xml')
 
@@ -47,15 +48,21 @@ for file in files_to_process:
                         pseudo_masterwork_items[normal_item.get('id')] = item.get('id')
                         normal_items[item.get('name')] = item
                     else:
-                        pseudo_masterwork_items[item.get('id')] = normal_item.get('id') 
+                        pseudo_masterwork_items[item.get('id')] = normal_item.get('id')
+
+hardcoded_common_items = {"12172": "2379",  # Common Item - Avadon Plate Gaiters
+                          "11954": "7884",  # Common Item - Inferno Master
+                          "12227": "5287"}  # Common Item - Sealed Dark Crystal Breastplate
 
 common_to_normal_map = {}
+common_to_normal_map.update(hardcoded_common_items)
 for common_item in common_items:
     item_is_armor = common_item.get('type').lower() == 'armor'
     item_name = common_item.get('name')
     normal_item = None
     normal_item_name = item_name.replace('Common Item - ', '')
     crystal_type = common_item.get('crystal_type')
+
     search_name = normal_item_name
     if item_is_armor and 'Sealed' not in item_name and crystal_type in ['B', 'A', 'S']:
         search_name = 'Sealed ' + normal_item_name

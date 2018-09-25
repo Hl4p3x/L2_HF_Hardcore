@@ -8106,7 +8106,7 @@
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
 					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
-					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
+					<item id="7884" min="1" max="1" chance="2.493"/> <!-- Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
 				</group>
 				<group chance="42.45320129394531">
@@ -8204,7 +8204,7 @@
 					<item id="5548" min="1" max="1" chance="30.8105"/> <!-- Tallum Blade Edge -->
 					<item id="150" min="1" max="1" chance="2.493"/> <!-- Elemental Sword -->
 					<item id="5547" min="1" max="1" chance="30.8105"/> <!-- Elemental Sword Edge -->
-					<item id="11954" min="1" max="1" chance="2.493"/> <!-- Common Item - Inferno Master -->
+					<item id="7884" min="1" max="1" chance="2.493"/> <!-- Inferno Master -->
 					<item id="8331" min="1" max="1" chance="30.9"/> <!-- Infernal Master Blade -->
 				</group>
 				<group chance="43.55009841918945">
