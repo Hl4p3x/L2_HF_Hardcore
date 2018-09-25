@@ -2096,7 +2096,7 @@ public final class Config
 			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 
 			ALT_DROP_ENCHANTED = General.getBoolean("AltDropEnchanted", true);
-			ALT_DROP_ENCHANTED_CHANCES = RangeChanceHolder.parse(General.getString("AltDropEnchantedChance", "[1-3]:50;[4-5]:30;[6-9]:7;[10-13]:2;[14-16]:0.2"));
+			ALT_DROP_ENCHANTED_CHANCES = RangeChanceHolder.parse(General.getString("AltDropEnchantedChances", "[1-3]:50;[4-5]:30;[6-9]:7;[10-13]:2;[14-16]:0.2"));
 
 			// Load FloodProtector L2Properties file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_FILE);
