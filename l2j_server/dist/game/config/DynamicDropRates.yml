@@ -270,3 +270,276 @@ mobs:
       blessed:
         count: '1'
         chance: 5
+
+raid:
+  equipment:
+    weapon:
+      count:
+        ng: '3-7'
+        d: '3-6'
+        c: '2-6'
+        b: '1-5'
+        a: '1-4'
+        s: '1-3'
+        s80-low: '1-2'
+        s80-top: '1-2'
+        s84-low: '1'
+      chance:
+        ng: 90
+        d: 85
+        c: 70
+        b: 60
+        a: 50
+        s: 40
+        s80-low: 30
+        s80-top: 20
+        s84-low: 18
+    armor:
+      count:
+        ng: '6-15'
+        d: '5-12'
+        c: '4-10'
+        b: '3-8'
+        a: '2-6'
+        s: '1-5'
+        s80-low: '1-4'
+        s80-top: '1-4'
+        s84-low: '1-3'
+      chance:
+        ng: 90
+        d: 85
+        c: 80
+        b: 75
+        a: 60
+        s: 50
+        s80-low: 40
+        s80-top: 30
+        s84-low: 25
+    jewels:
+      count:
+        ng: '6-15'
+        d: '5-12'
+        c: '4-10'
+        b: '3-8'
+        a: '2-6'
+        s: '1-5'
+        s80-low: '1-4'
+        s80-top: '1-4'
+        s84-low: '1-3'
+      chance:
+        ng: 90
+        d: 85
+        c: 80
+        b: 75
+        a: 65
+        s: 60
+        s80-low: 45
+        s80-top: 40
+        s84-low: 35
+
+  parts:
+    weapon:
+      count:
+        ng: '10-70'
+        d: '10-70'
+        c: '10-65'
+        b: '10-60'
+        a: '10-55'
+        s: '10-50'
+        s80-low: '1-45'
+        s80-top: '1-35'
+        s84-low: '1-30'
+      chance:
+        ng: 90
+        d: 85
+        c: 80
+        b: 76
+        a: 70
+        s: 68
+        s80-low: 66
+        s80-top: 64
+        s84-low: 60
+    armor:
+      count:
+        ng: '20-100'
+        d: '20-90'
+        c: '20-85'
+        b: '20-70'
+        a: '20-55'
+        s: '20-50'
+        s80-low: '15-45'
+        s80-top: '15-35'
+        s84-low: '10-30'
+      chance:
+        ng: 90
+        d: 85
+        c: 80
+        b: 76
+        a: 70
+        s: 68
+        s80-low: 66
+        s80-top: 64
+        s84-low: 60
+    jewels:
+      count:
+        ng: '20-100'
+        d: '20-90'
+        c: '20-85'
+        b: '20-70'
+        a: '20-55'
+        s: '20-50'
+        s80-low: '15-45'
+        s80-top: '15-35'
+        s84-low: '10-30'
+      chance:
+        ng: 90
+        d: 85
+        c: 82
+        b: 78
+        a: 75
+        s: 72
+        s80-low: 69
+        s80-top: 67
+        s84-low: 65
+
+  recipes:
+    weapon:
+      count:
+        ng: '1-30'
+        d: '1-30'
+        c: '1-25'
+        b: '1-20'
+        a: '1-18'
+        s: '1-16'
+        s80-low: '1-10'
+        s80-top: '1-8'
+        s84-low: '1-7'
+      chance:
+        ng: 90
+        d: 85
+        c: 82
+        b: 78
+        a: 75
+        s: 72
+        s80-low: 69
+        s80-top: 67
+        s84-low: 65
+    armor:
+      count:
+        ng: '1-30'
+        d: '1-30'
+        c: '1-25'
+        b: '1-20'
+        a: '1-18'
+        s: '1-16'
+        s80-low: '1-10'
+        s80-top: '1-8'
+        s84-low: '1-7'
+      chance:
+        ng: 90
+        d: 85
+        c: 82
+        b: 78
+        a: 75
+        s: 72
+        s80-low: 69
+        s80-top: 67
+        s84-low: 65
+    jewels:
+      count:
+        ng: '1-30'
+        d: '1-30'
+        c: '1-25'
+        b: '1-20'
+        a: '1-18'
+        s: '1-16'
+        s80-low: '1-10'
+        s80-top: '1-8'
+        s84-low: '1-7'
+      chance:
+        ng: 90
+        d: 85
+        c: 82
+        b: 78
+        a: 75
+        s: 72
+        s80-low: 69
+        s80-top: 67
+        s84-low: 65
+
+  resources:
+    overgrade-multiplier: 1.5
+    count:
+      low: '80-400'
+      mid: '60-300'
+      high: '50-230'
+      highest: '30-140'
+    chance:
+      low: 90
+      mid: 80
+      high: 60
+      highest: 50
+
+  scrolls:
+    weapon:
+      normal:
+        count:
+          d: '4-20'
+          c: '3-17'
+          b: '2-14'
+          a: '1-10'
+          s: '1-6'
+        chance:
+          d: 70
+          c: 60
+          b: 55
+          a: 50
+          s: 40
+      blessed:
+        count:
+          d: '2-14'
+          c: '2-10'
+          b: '1-8'
+          a: '1-4'
+          s: '1-2'
+        chance:
+          d: 50
+          c: 40
+          b: 30
+          a: 20
+          s: 10
+    armor:
+      normal:
+        count:
+          d: '8-40'
+          c: '6-37'
+          b: '4-30'
+          a: '3-25'
+          s: '2-20'
+        chance:
+          d: 80
+          c: 70
+          b: 65
+          a: 55
+          s: 45
+      blessed:
+        count:
+          d: '3-18'
+          c: '2-14'
+          b: '1-10'
+          a: '1-6'
+          s: '1-3'
+        chance:
+          d: 60
+          c: 50
+          b: 40
+          a: 30
+          s: 20
+
+    misc:
+      normal:
+        count: '5-15'
+        chance: 70
+      blessed:
+        count: '2-8'
+        chance: 25
