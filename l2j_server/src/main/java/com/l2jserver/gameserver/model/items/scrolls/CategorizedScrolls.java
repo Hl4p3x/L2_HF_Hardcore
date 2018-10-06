@@ -4,24 +4,24 @@ import java.util.List;
 
 public class CategorizedScrolls {
 
-    private List<WeaponScroll> weaponScrolls;
-    private List<ArmorScroll> armorScrolls;
+    private List<Scroll> weaponScrolls;
+    private List<Scroll> armorScrolls;
     private List<MiscScroll> miscScrolls;
 
     public CategorizedScrolls() {
     }
 
-    public CategorizedScrolls(List<WeaponScroll> weaponScrolls, List<ArmorScroll> armorScrolls, List<MiscScroll> miscScrolls) {
+    public CategorizedScrolls(List<Scroll> weaponScrolls, List<Scroll> armorScrolls, List<MiscScroll> miscScrolls) {
         this.weaponScrolls = weaponScrolls;
         this.armorScrolls = armorScrolls;
         this.miscScrolls = miscScrolls;
     }
 
-    public List<WeaponScroll> getWeaponScrolls() {
+    public List<Scroll> getWeaponScrolls() {
         return weaponScrolls;
     }
 
-    public List<ArmorScroll> getArmorScrolls() {
+    public List<Scroll> getArmorScrolls() {
         return armorScrolls;
     }
 

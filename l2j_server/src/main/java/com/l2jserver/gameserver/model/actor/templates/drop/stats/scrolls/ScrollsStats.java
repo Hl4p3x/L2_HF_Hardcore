@@ -1,28 +1,26 @@
 package com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls;
 
-import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.ChanceCountStats;
-
 import java.util.Objects;
 import java.util.StringJoiner;
 
 public class ScrollsStats {
 
-    private ChanceCountStats normal;
-    private ChanceCountStats blessed;
+    private ScrollChanceCountStats normal;
+    private ScrollChanceCountStats blessed;
 
     public ScrollsStats() {
     }
 
-    public ScrollsStats(ChanceCountStats normal, ChanceCountStats blessed) {
+    public ScrollsStats(ScrollChanceCountStats normal, ScrollChanceCountStats blessed) {
         this.normal = normal;
         this.blessed = blessed;
     }
 
-    public ChanceCountStats getNormal() {
+    public ScrollChanceCountStats getNormal() {
         return normal;
     }
 
-    public ChanceCountStats getBlessed() {
+    public ScrollChanceCountStats getBlessed() {
         return blessed;
     }
 

@@ -19,6 +19,17 @@ public class GradeInfo {
         return new GradeInfo(Grade.UNSET, GradeCategory.UNSET);
     }
 
+    public static GradeInfo fromString(String text) {
+        String[] split = text.split("-");
+        if (split.length == 2) {
+            return new GradeInfo(Grade.fromString(split[0]), GradeCategory.fromString(split[1]));
+        } else if (split.length == 1) {
+            return new GradeInfo(Grade.fromString(split[0]), GradeCategory.ALL);
+        } else {
+            return unset();
+        }
+    }
+
     public void setCategory(GradeCategory category) {
         this.category = category;
     }

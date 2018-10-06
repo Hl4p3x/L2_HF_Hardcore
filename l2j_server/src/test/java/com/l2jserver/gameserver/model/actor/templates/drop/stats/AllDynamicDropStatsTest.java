@@ -24,7 +24,7 @@ class AllDynamicDropStatsTest {
                 AllDynamicDropStats.class
         );
 
-        assertThat(allDynamicDropStats.getMobs().getEquipment().getArmor().getChances().getChanceByGradeInfo()).isNotEmpty();
+        assertThat(allDynamicDropStats.getMobs().getEquipment().getArmor().getChances()).isNotEmpty();
     }
 
 }

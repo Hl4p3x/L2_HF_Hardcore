@@ -11,6 +11,7 @@ import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.L2RecipeInstance;
 import com.l2jserver.gameserver.model.L2RecipeList;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.ScrollGrade;
 import com.l2jserver.gameserver.model.buylist.L2BuyList;
 import com.l2jserver.gameserver.model.buylist.Product;
 import com.l2jserver.gameserver.model.items.*;
@@ -21,10 +22,9 @@ import com.l2jserver.gameserver.model.items.graded.GradeCategory;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
 import com.l2jserver.gameserver.model.items.parts.ItemPart;
-import com.l2jserver.gameserver.model.items.scrolls.ArmorScroll;
 import com.l2jserver.gameserver.model.items.scrolls.CategorizedScrolls;
 import com.l2jserver.gameserver.model.items.scrolls.MiscScroll;
-import com.l2jserver.gameserver.model.items.scrolls.WeaponScroll;
+import com.l2jserver.gameserver.model.items.scrolls.Scroll;
 import com.l2jserver.gameserver.model.items.type.CrystalType;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.model.multisell.Ingredient;
@@ -350,16 +350,16 @@ public class GradedEquipmentGenerator {
                 22013 // Scroll: Enchant Armor (A-Grade)
         ));
 
-        List<ArmorScroll> armorScrolls = categorizedItems.getArmorEnchantScrolls()
-                .stream().map(ArmorScroll::fromEtc)
-                .filter(scroll -> !blacklistedArmorScrolls.contains(scroll.getId()) && !scroll.getGrade().equals(Grade.UNSET))
-                .sorted(Comparator.comparing(ArmorScroll::getId))
+        List<Scroll> armorScrolls = categorizedItems.getArmorEnchantScrolls()
+                .stream().map(Scroll::armorScrollFromEtc)
+                .filter(scroll -> !blacklistedArmorScrolls.contains(scroll.getId()) && !scroll.getGrade().equals(ScrollGrade.UNSET))
+                .sorted(Comparator.comparing(Scroll::getId))
                 .collect(Collectors.toList());
 
-        List<WeaponScroll> weaponScrolls = categorizedItems.getWeaponEnchantScrolls()
-                .stream().map(WeaponScroll::fromEtc)
-                .filter(scroll -> !blacklistedWeaponScrolls.contains(scroll.getId()) && !scroll.getGrade().equals(Grade.UNSET))
-                .sorted(Comparator.comparing(WeaponScroll::getId))
+        List<Scroll> weaponScrolls = categorizedItems.getWeaponEnchantScrolls()
+                .stream().map(Scroll::weaponScrollFromEtc)
+                .filter(scroll -> !blacklistedWeaponScrolls.contains(scroll.getId()) && !scroll.getGrade().equals(ScrollGrade.UNSET))
+                .sorted(Comparator.comparing(Scroll::getId))
                 .collect(Collectors.toList());
 
         List<MiscScroll> miscScrolls = categorizedItems.getResurrectionAndEscapeScrolls().stream().map(MiscScroll::fromItem).collect(Collectors.toList());

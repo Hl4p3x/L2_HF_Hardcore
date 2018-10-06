@@ -11,7 +11,7 @@ public enum Grade {
             return UNSET;
         }
 
-        return valueOf(text.substring(0, 1));
+        return valueOf(text.toUpperCase());
     }
 
     public static Grade fromCrystalType(CrystalType crystalType) {
