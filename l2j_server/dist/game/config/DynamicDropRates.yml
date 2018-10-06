@@ -195,7 +195,7 @@ mobs:
         s84-vesper: 5
 
   resources:
-    overlevel-multiplier: 1.5
+    overgrade-multiplier: 1.5
     count:
       low: '5-40'
       mid: '1-25'
