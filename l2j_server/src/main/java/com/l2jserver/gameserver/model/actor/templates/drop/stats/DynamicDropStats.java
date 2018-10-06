@@ -1,7 +1,6 @@
 package com.l2jserver.gameserver.model.actor.templates.drop.stats;
 
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment.WeaponArmorJewelStats;
-import com.l2jserver.gameserver.model.actor.templates.drop.stats.misc.MiscStats;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.resources.ResourcesStats;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.AllScrollsStats;
 
@@ -15,18 +14,16 @@ public class DynamicDropStats {
     private WeaponArmorJewelStats recipes;
     private ResourcesStats resources;
     private AllScrollsStats scrolls;
-    private MiscStats misc;
 
     public DynamicDropStats() {
     }
 
-    public DynamicDropStats(WeaponArmorJewelStats equipment, WeaponArmorJewelStats parts, WeaponArmorJewelStats recipes, ResourcesStats resources, AllScrollsStats scrolls, MiscStats misc) {
+    public DynamicDropStats(WeaponArmorJewelStats equipment, WeaponArmorJewelStats parts, WeaponArmorJewelStats recipes, ResourcesStats resources, AllScrollsStats scrolls) {
         this.equipment = equipment;
         this.parts = parts;
         this.recipes = recipes;
         this.resources = resources;
         this.scrolls = scrolls;
-        this.misc = misc;
     }
 
     public WeaponArmorJewelStats getEquipment() {
@@ -49,10 +46,6 @@ public class DynamicDropStats {
         return scrolls;
     }
 
-    public MiscStats getMisc() {
-        return misc;
-    }
-
     @Override
     public String toString() {
         return new StringJoiner(", ", DynamicDropStats.class.getSimpleName() + "[", "]")
@@ -61,7 +54,6 @@ public class DynamicDropStats {
                 .add(Objects.toString(recipes))
                 .add(Objects.toString(resources))
                 .add(Objects.toString(scrolls))
-                .add(Objects.toString(misc))
                 .toString();
     }
 
