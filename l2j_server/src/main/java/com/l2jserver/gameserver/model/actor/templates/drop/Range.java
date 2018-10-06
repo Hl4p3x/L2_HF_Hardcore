@@ -9,6 +9,9 @@ public class Range {
     private int low;
     private int high;
 
+    public Range() {
+    }
+
     public Range(int low, int high) {
         this.low = low;
         this.high = high;

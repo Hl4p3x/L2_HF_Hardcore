@@ -1,4 +1,4 @@
-package com.l2jserver.gameserver.model.actor.templates.drop;
+package com.l2jserver.gameserver.model.actor.templates.drop.calculators;
 
 import com.google.common.collect.Lists;
 import com.l2jserver.gameserver.datatables.categorized.CraftResourcesData;
@@ -7,6 +7,8 @@ import com.l2jserver.gameserver.datatables.categorized.ItemPartsData;
 import com.l2jserver.gameserver.datatables.categorized.ItemRecipesData;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.templates.drop.ItemGradeRange;
+import com.l2jserver.gameserver.model.actor.templates.drop.ResourceGradeRange;
 import com.l2jserver.gameserver.model.actor.templates.drop.chances.ItemGradeChanceMods;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.items.craft.CraftResource;

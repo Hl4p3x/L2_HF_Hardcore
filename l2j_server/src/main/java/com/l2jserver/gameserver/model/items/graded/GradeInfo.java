@@ -53,4 +53,5 @@ public class GradeInfo {
     public String toString() {
         return String.format("GradeInfo[%s, %s]", grade, category);
     }
+
 }

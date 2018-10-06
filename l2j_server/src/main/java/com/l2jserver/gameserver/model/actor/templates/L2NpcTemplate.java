@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.Sex;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.templates.drop.DynamicDropCalculator;
+import com.l2jserver.gameserver.model.actor.templates.drop.calculators.DynamicDropCalculator;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.drops.DropListScope;
 import com.l2jserver.gameserver.model.drops.IDropItem;
