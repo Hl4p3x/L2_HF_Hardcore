@@ -1,6 +1,7 @@
 package com.l2jserver.gameserver.model.actor.templates.drop;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.util.Objects;
 
@@ -26,13 +27,22 @@ public class Range {
     }
 
     @JsonCreator
-    public static Range from(String raw) {
+    public static Range fromString(String raw) {
         String[] parts = raw.split("-");
         if (parts.length == 2) {
             return new Range(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]));
         } else {
             int singleValue = Integer.parseInt(raw);
             return new Range(singleValue, singleValue);
+        }
+    }
+
+    @JsonValue
+    public String asString() {
+        if (low == high) {
+            return String.valueOf(low);
+        } else {
+            return low + "-" + high;
         }
     }
 

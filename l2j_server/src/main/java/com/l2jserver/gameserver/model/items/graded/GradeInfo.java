@@ -1,5 +1,7 @@
 package com.l2jserver.gameserver.model.items.graded;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import java.util.Objects;
 
 public class GradeInfo {
@@ -63,6 +65,15 @@ public class GradeInfo {
     @Override
     public String toString() {
         return String.format("GradeInfo[%s, %s]", grade, category);
+    }
+
+    @JsonValue
+    public String asString() {
+        if (category == GradeCategory.ALL || category == GradeCategory.UNSET) {
+            return grade.name().toLowerCase();
+        } else {
+            return grade.name().toLowerCase() + '-' + category.name().toLowerCase();
+        }
     }
 
 }

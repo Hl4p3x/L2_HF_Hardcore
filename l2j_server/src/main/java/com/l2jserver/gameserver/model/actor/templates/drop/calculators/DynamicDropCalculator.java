@@ -32,7 +32,10 @@ public class DynamicDropCalculator {
         managedItemIds.addAll(ItemPartsData.getInstance().getItemPartsIds());
         managedItemIds.addAll(ItemRecipesData.getInstance().getRecipeIds());
         managedItemIds.addAll(CraftResourcesData.getInstance().getResourceIds());
+        // Add Scrolls
     }
+
+    // Add Dynasty Essence, Attribute Stones, Dual Craft Stamp, SA Stones
 
     public List<ItemHolder> calculate(L2Character victim, L2Character killer) {
         Optional<ItemGradeRange> range = ItemGradeRange.byLevel(victim.getLevel());

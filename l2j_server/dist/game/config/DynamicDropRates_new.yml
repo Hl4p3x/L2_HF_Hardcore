@@ -1,0 +1,691 @@
+---
+mobs:
+  equipment:
+    weapon:
+      ng:
+        chance: 30.0
+        count: "1"
+      d:
+        chance: 25.0
+        count: "1"
+      c:
+        chance: 20.0
+        count: "1"
+      b:
+        chance: 15.0
+        count: "1"
+      a:
+        chance: 10.0
+        count: "1"
+      s:
+        chance: 5.0
+        count: "1"
+      s80-low:
+        chance: 0.9
+        count: "1"
+      s80-top:
+        chance: 0.6
+        count: "1"
+      s84-low:
+        chance: 0.2
+        count: "1"
+    armor:
+      ng:
+        chance: 50.0
+        count: "1-5"
+      d:
+        chance: 35.0
+        count: "1-5"
+      c:
+        chance: 25.0
+        count: "1-4"
+      b:
+        chance: 20.0
+        count: "1-3"
+      a:
+        chance: 15.0
+        count: "1-2"
+      s:
+        chance: 9.0
+        count: "1"
+      s80-low:
+        chance: 1.0
+        count: "1"
+      s80-top:
+        chance: 0.7
+        count: "1"
+      s84-low:
+        chance: 0.3
+        count: "1"
+    jewels:
+      ng:
+        chance: 60.0
+        count: "1-5"
+      d:
+        chance: 45.0
+        count: "1-5"
+      c:
+        chance: 35.0
+        count: "1-4"
+      b:
+        chance: 25.0
+        count: "1-3"
+      a:
+        chance: 18.0
+        count: "1-2"
+      s:
+        chance: 12.0
+        count: "1"
+      s80-low:
+        chance: 1.2
+        count: "1"
+      s80-top:
+        chance: 0.8
+        count: "1"
+      s84-low:
+        chance: 0.3
+        count: "1"
+  parts:
+    weapon:
+      ng:
+        chance: 90.0
+        count: "1-7"
+      d:
+        chance: 85.0
+        count: "1-7"
+      c:
+        chance: 80.0
+        count: "1-7"
+      b:
+        chance: 76.0
+        count: "1-7"
+      a:
+        chance: 70.0
+        count: "1-7"
+      s:
+        chance: 68.0
+        count: "1-7"
+      s80-low:
+        chance: 64.0
+        count: "1-6"
+      s80-top:
+        chance: 60.0
+        count: "1-5"
+      s84-low:
+        chance: 50.0
+        count: "1-3"
+    armor:
+      ng:
+        chance: 95.0
+        count: "1-10"
+      d:
+        chance: 90.0
+        count: "1-9"
+      c:
+        chance: 85.0
+        count: "1-9"
+      b:
+        chance: 79.0
+        count: "1-9"
+      a:
+        chance: 75.0
+        count: "1-9"
+      s:
+        chance: 72.0
+        count: "1-8"
+      s80-low:
+        chance: 68.0
+        count: "1-7"
+      s80-top:
+        chance: 64.0
+        count: "1-6"
+      s84-low:
+        chance: 55.0
+        count: "1-4"
+    jewels:
+      ng:
+        chance: 95.0
+        count: "1-10"
+      d:
+        chance: 90.0
+        count: "1-9"
+      c:
+        chance: 85.0
+        count: "1-9"
+      b:
+        chance: 79.0
+        count: "1-9"
+      a:
+        chance: 75.0
+        count: "1-9"
+      s:
+        chance: 72.0
+        count: "1-8"
+      s80-low:
+        chance: 68.0
+        count: "1-7"
+      s80-top:
+        chance: 64.0
+        count: "1-6"
+      s84-low:
+        chance: 55.0
+        count: "1-4"
+  recipes:
+    weapon:
+      ng:
+        chance: 50.0
+        count: "1"
+      d:
+        chance: 45.0
+        count: "1"
+      c:
+        chance: 30.0
+        count: "1"
+      b:
+        chance: 25.0
+        count: "1"
+      a:
+        chance: 20.0
+        count: "1"
+      s:
+        chance: 15.0
+        count: "1"
+      s80-low:
+        chance: 9.0
+        count: "1"
+      s80-top:
+        chance: 5.0
+        count: "1"
+      s84-low:
+        chance: 2.0
+        count: "1"
+    armor:
+      ng:
+        chance: 70.0
+        count: "1"
+      d:
+        chance: 65.0
+        count: "1"
+      c:
+        chance: 55.0
+        count: "1"
+      b:
+        chance: 50.0
+        count: "1"
+      a:
+        chance: 45.0
+        count: "1"
+      s:
+        chance: 30.0
+        count: "1"
+      s80-low:
+        chance: 12.0
+        count: "1"
+      s80-top:
+        chance: 7.0
+        count: "1"
+      s84-low:
+        chance: 5.0
+        count: "1"
+    jewels:
+      ng:
+        chance: 70.0
+        count: "1"
+      d:
+        chance: 65.0
+        count: "1"
+      c:
+        chance: 55.0
+        count: "1"
+      b:
+        chance: 50.0
+        count: "1"
+      a:
+        chance: 45.0
+        count: "1"
+      s:
+        chance: 30.0
+        count: "1"
+      s80-low:
+        chance: 12.0
+        count: "1"
+      s80-top:
+        chance: 7.0
+        count: "1"
+      s84-low:
+        chance: 5.0
+        count: "1"
+  resources:
+    drop:
+      low:
+        chance: 75.0
+        count: "5-40"
+      mid:
+        chance: 50.0
+        count: "1-25"
+      high:
+        chance: 25.0
+        count: "1-10"
+      highest:
+        chance: 6.0
+        count: "1-2"
+    overgrade-multiplier: 1.5
+  scrolls:
+    weapon:
+      normal:
+        d:
+          chance: 40.0
+          count: "1"
+        c:
+          chance: 30.0
+          count: "1"
+        b:
+          chance: 25.0
+          count: "1"
+        a:
+          chance: 10.0
+          count: "1"
+        s:
+          chance: 5.0
+          count: "1"
+      blessed:
+        d:
+          chance: 5.0
+          count: "1"
+        c:
+          chance: 4.0
+          count: "1"
+        b:
+          chance: 2.0
+          count: "1"
+        a:
+          chance: 1.0
+          count: "1"
+        s:
+          chance: 0.3
+          count: "1"
+    armor:
+      normal:
+        d:
+          chance: 60.0
+          count: "1-3"
+        c:
+          chance: 40.0
+          count: "1-3"
+        b:
+          chance: 35.0
+          count: "1-2"
+        a:
+          chance: 15.0
+          count: "1-2"
+        s:
+          chance: 8.0
+          count: "1"
+      blessed:
+        d:
+          chance: 5.0
+          count: "1"
+        c:
+          chance: 4.0
+          count: "1"
+        b:
+          chance: 2.0
+          count: "1"
+        a:
+          chance: 1.0
+          count: "1"
+        s:
+          chance: 0.3
+          count: "1"
+    misc:
+      normal:
+        chance: 30.0
+        count: "1-3"
+      blessed:
+        chance: 5.0
+        count: "1"
+raid:
+  equipment:
+    weapon:
+      ng:
+        chance: 90.0
+        count: "3-7"
+      d:
+        chance: 85.0
+        count: "3-6"
+      c:
+        chance: 70.0
+        count: "2-6"
+      b:
+        chance: 60.0
+        count: "1-5"
+      a:
+        chance: 50.0
+        count: "1-4"
+      s:
+        chance: 40.0
+        count: "1-3"
+      s80-low:
+        chance: 30.0
+        count: "1-2"
+      s80-top:
+        chance: 20.0
+        count: "1-2"
+      s84-low:
+        chance: 18.0
+        count: "1"
+    armor:
+      ng:
+        chance: 90.0
+        count: "6-15"
+      d:
+        chance: 85.0
+        count: "5-12"
+      c:
+        chance: 80.0
+        count: "4-10"
+      b:
+        chance: 75.0
+        count: "3-8"
+      a:
+        chance: 60.0
+        count: "2-6"
+      s:
+        chance: 50.0
+        count: "1-5"
+      s80-low:
+        chance: 40.0
+        count: "1-4"
+      s80-top:
+        chance: 30.0
+        count: "1-4"
+      s84-low:
+        chance: 25.0
+        count: "1-3"
+    jewels:
+      ng:
+        chance: 90.0
+        count: "6-15"
+      d:
+        chance: 85.0
+        count: "5-12"
+      c:
+        chance: 80.0
+        count: "4-10"
+      b:
+        chance: 75.0
+        count: "3-8"
+      a:
+        chance: 65.0
+        count: "2-6"
+      s:
+        chance: 60.0
+        count: "1-5"
+      s80-low:
+        chance: 45.0
+        count: "1-4"
+      s80-top:
+        chance: 40.0
+        count: "1-4"
+      s84-low:
+        chance: 35.0
+        count: "1-3"
+  parts:
+    weapon:
+      ng:
+        chance: 90.0
+        count: "10-70"
+      d:
+        chance: 85.0
+        count: "10-70"
+      c:
+        chance: 80.0
+        count: "10-65"
+      b:
+        chance: 76.0
+        count: "10-60"
+      a:
+        chance: 70.0
+        count: "10-55"
+      s:
+        chance: 68.0
+        count: "10-50"
+      s80-low:
+        chance: 66.0
+        count: "1-45"
+      s80-top:
+        chance: 64.0
+        count: "1-35"
+      s84-low:
+        chance: 60.0
+        count: "1-30"
+    armor:
+      ng:
+        chance: 90.0
+        count: "20-100"
+      d:
+        chance: 85.0
+        count: "20-90"
+      c:
+        chance: 80.0
+        count: "20-85"
+      b:
+        chance: 76.0
+        count: "20-70"
+      a:
+        chance: 70.0
+        count: "20-55"
+      s:
+        chance: 68.0
+        count: "20-50"
+      s80-low:
+        chance: 66.0
+        count: "15-45"
+      s80-top:
+        chance: 64.0
+        count: "15-35"
+      s84-low:
+        chance: 60.0
+        count: "10-30"
+    jewels:
+      ng:
+        chance: 90.0
+        count: "20-100"
+      d:
+        chance: 85.0
+        count: "20-90"
+      c:
+        chance: 82.0
+        count: "20-85"
+      b:
+        chance: 78.0
+        count: "20-70"
+      a:
+        chance: 75.0
+        count: "20-55"
+      s:
+        chance: 72.0
+        count: "20-50"
+      s80-low:
+        chance: 69.0
+        count: "15-45"
+      s80-top:
+        chance: 67.0
+        count: "15-35"
+      s84-low:
+        chance: 65.0
+        count: "10-30"
+  recipes:
+    weapon:
+      ng:
+        chance: 90.0
+        count: "1-30"
+      d:
+        chance: 85.0
+        count: "1-30"
+      c:
+        chance: 82.0
+        count: "1-25"
+      b:
+        chance: 78.0
+        count: "1-20"
+      a:
+        chance: 75.0
+        count: "1-18"
+      s:
+        chance: 72.0
+        count: "1-16"
+      s80-low:
+        chance: 69.0
+        count: "1-10"
+      s80-top:
+        chance: 67.0
+        count: "1-8"
+      s84-low:
+        chance: 65.0
+        count: "1-7"
+    armor:
+      ng:
+        chance: 90.0
+        count: "1-30"
+      d:
+        chance: 85.0
+        count: "1-30"
+      c:
+        chance: 82.0
+        count: "1-25"
+      b:
+        chance: 78.0
+        count: "1-20"
+      a:
+        chance: 75.0
+        count: "1-18"
+      s:
+        chance: 72.0
+        count: "1-16"
+      s80-low:
+        chance: 69.0
+        count: "1-10"
+      s80-top:
+        chance: 67.0
+        count: "1-8"
+      s84-low:
+        chance: 65.0
+        count: "1-7"
+    jewels:
+      ng:
+        chance: 90.0
+        count: "1-30"
+      d:
+        chance: 85.0
+        count: "1-30"
+      c:
+        chance: 82.0
+        count: "1-25"
+      b:
+        chance: 78.0
+        count: "1-20"
+      a:
+        chance: 75.0
+        count: "1-18"
+      s:
+        chance: 72.0
+        count: "1-16"
+      s80-low:
+        chance: 69.0
+        count: "1-10"
+      s80-top:
+        chance: 67.0
+        count: "1-8"
+      s84-low:
+        chance: 65.0
+        count: "1-7"
+  resources:
+    drop:
+      low:
+        chance: 90.0
+        count: "80-400"
+      mid:
+        chance: 80.0
+        count: "60-300"
+      high:
+        chance: 60.0
+        count: "50-230"
+      highest:
+        chance: 50.0
+        count: "30-140"
+    overgrade-multiplier: 1.5
+  scrolls:
+    weapon:
+      normal:
+        d:
+          chance: 70.0
+          count: "4-20"
+        c:
+          chance: 60.0
+          count: "3-17"
+        b:
+          chance: 55.0
+          count: "2-14"
+        a:
+          chance: 50.0
+          count: "1-10"
+        s:
+          chance: 40.0
+          count: "1-6"
+      blessed:
+        d:
+          chance: 50.0
+          count: "2-14"
+        c:
+          chance: 40.0
+          count: "2-10"
+        b:
+          chance: 30.0
+          count: "1-8"
+        a:
+          chance: 20.0
+          count: "1-4"
+        s:
+          chance: 10.0
+          count: "1-2"
+    armor:
+      normal:
+        d:
+          chance: 80.0
+          count: "8-40"
+        c:
+          chance: 70.0
+          count: "6-37"
+        b:
+          chance: 65.0
+          count: "4-30"
+        a:
+          chance: 55.0
+          count: "3-25"
+        s:
+          chance: 45.0
+          count: "2-20"
+      blessed:
+        d:
+          chance: 60.0
+          count: "3-18"
+        c:
+          chance: 50.0
+          count: "2-14"
+        b:
+          chance: 40.0
+          count: "1-10"
+        a:
+          chance: 30.0
+          count: "1-6"
+        s:
+          chance: 20.0
+          count: "1-3"
+    misc:
+      normal:
+        chance: 70.0
+        count: "5-15"
+      blessed:
+        chance: 25.0
+        count: "2-8"

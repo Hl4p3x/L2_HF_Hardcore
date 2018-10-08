@@ -7,15 +7,15 @@ import java.util.StringJoiner;
 
 public class ChanceCountPair {
 
-    private Range count;
     private Double chance;
+    private Range count;
 
     public ChanceCountPair() {
     }
 
-    public ChanceCountPair(Range count, Double chance) {
-        this.count = count;
+    public ChanceCountPair(Double chance, Range count) {
         this.chance = chance;
+        this.count = count;
     }
 
     public Range getCount() {

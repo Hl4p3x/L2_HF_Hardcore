@@ -1,6 +1,7 @@
 package com.l2jserver.gameserver.model.items.craft;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ResourceGrade {
 
@@ -9,6 +10,11 @@ public enum ResourceGrade {
     @JsonCreator
     public static ResourceGrade fromString(String text) {
         return valueOf(text.toUpperCase());
+    }
+
+    @JsonValue
+    public String asString() {
+        return name().toLowerCase();
     }
 
 }
