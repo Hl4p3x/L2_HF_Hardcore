@@ -9,7 +9,7 @@ import java.io.InputStream;
 
 public class DynamicDropTable {
 
-    private AllDynamicDropStats allDynamicDropStats;
+    private AllDynamicDropData allDynamicDropData;
 
     public DynamicDropTable() {
         load();
@@ -20,17 +20,17 @@ public class DynamicDropTable {
         try {
             InputStream configStream = new FileInputStream(new File(path));
 
-            allDynamicDropStats = ObjectMapperYamlSingleton.getInstance().readValue(
+            allDynamicDropData = ObjectMapperYamlSingleton.getInstance().readValue(
                     configStream,
-                    AllDynamicDropStats.class
+                    AllDynamicDropData.class
             );
         } catch (IOException e) {
             throw new IllegalStateException("Could not load Dynamic Drop Rates configuration from " + path);
         }
     }
 
-    public AllDynamicDropStats getAllDynamicDropStats() {
-        return allDynamicDropStats;
+    public AllDynamicDropData getAllDynamicDropData() {
+        return allDynamicDropData;
     }
 
     public static DynamicDropTable getInstance() {

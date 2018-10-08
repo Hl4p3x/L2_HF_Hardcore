@@ -2,28 +2,28 @@ package com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.ChanceCountPair;
-import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.deserializer.ScrollGradeKeyDeserializer;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
+import com.l2jserver.gameserver.model.items.graded.deserializer.GradeInfoKeyDeserializer;
 
 import java.util.Map;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class NewEquipmentDropData {
+public class EquipmentDropData {
 
-    @JsonDeserialize(keyUsing = ScrollGradeKeyDeserializer.class)
+    @JsonDeserialize(keyUsing = GradeInfoKeyDeserializer.class)
     private Map<GradeInfo, ChanceCountPair> weapon;
 
-    @JsonDeserialize(keyUsing = ScrollGradeKeyDeserializer.class)
+    @JsonDeserialize(keyUsing = GradeInfoKeyDeserializer.class)
     private Map<GradeInfo, ChanceCountPair> armor;
 
-    @JsonDeserialize(keyUsing = ScrollGradeKeyDeserializer.class)
+    @JsonDeserialize(keyUsing = GradeInfoKeyDeserializer.class)
     private Map<GradeInfo, ChanceCountPair> jewels;
 
-    public NewEquipmentDropData() {
+    public EquipmentDropData() {
     }
 
-    public NewEquipmentDropData(Map<GradeInfo, ChanceCountPair> weapon, Map<GradeInfo, ChanceCountPair> armor, Map<GradeInfo, ChanceCountPair> jewels) {
+    public EquipmentDropData(Map<GradeInfo, ChanceCountPair> weapon, Map<GradeInfo, ChanceCountPair> armor, Map<GradeInfo, ChanceCountPair> jewels) {
         this.weapon = weapon;
         this.armor = armor;
         this.jewels = jewels;
@@ -43,7 +43,7 @@ public class NewEquipmentDropData {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", NewEquipmentDropData.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", EquipmentDropData.class.getSimpleName() + "[", "]")
                 .add(Objects.toString(weapon))
                 .add(Objects.toString(armor))
                 .add(Objects.toString(jewels))

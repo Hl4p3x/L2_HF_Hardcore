@@ -3,33 +3,33 @@ package com.l2jserver.gameserver.model.actor.templates.drop.stats;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class AllDynamicDropStats {
+public class AllDynamicDropData {
 
-    private DynamicDropStats mobs;
-    private DynamicDropStats raid;
+    private DynamicDropData mobs;
+    private DynamicDropData raid;
 
-    public AllDynamicDropStats() {
+    public AllDynamicDropData() {
     }
 
-    public AllDynamicDropStats(DynamicDropStats mobs, DynamicDropStats raid) {
+    public AllDynamicDropData(DynamicDropData mobs, DynamicDropData raid) {
         this.mobs = mobs;
         this.raid = raid;
     }
 
-    public DynamicDropStats getMobs() {
+    public DynamicDropData getMobs() {
         return mobs;
     }
 
-    public DynamicDropStats getRaid() {
+    public DynamicDropData getRaid() {
         return raid;
     }
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", AllDynamicDropStats.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", AllDynamicDropData.class.getSimpleName() + "[", "]")
                 .add(Objects.toString(mobs))
                 .add(Objects.toString(raid))
                 .toString();
     }
-    
+
 }

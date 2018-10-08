@@ -531,7 +531,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 			}
 
 			List<ItemHolder> normalNonDynamicDrop = normalDropList.stream().filter(drop -> !DynamicDropCalculator.getInstance().getAllDynamicItemsIds().contains(drop.getId())).collect(Collectors.toList());
-			List<ItemHolder> dynamicDrop = DynamicDropCalculator.getInstance().calculate(victim, killer);
+			List<ItemHolder> dynamicDrop = DynamicDropCalculator.getInstance().calculate(victim);
 
 			return Stream.concat(normalNonDynamicDrop.stream(), dynamicDrop.stream()).collect(Collectors.toList());
 		} else {

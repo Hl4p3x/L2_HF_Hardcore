@@ -1,24 +1,24 @@
 package com.l2jserver.gameserver.model.actor.templates.drop.stats;
 
-import com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment.NewEquipmentDropData;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment.EquipmentDropData;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.resources.ResourceDropData;
-import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.NewAllScrollsDropData;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.AllScrollsDropData;
 
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class NewDynamicDropData {
+public class DynamicDropData {
 
-    private NewEquipmentDropData equipment;
-    private NewEquipmentDropData parts;
-    private NewEquipmentDropData recipes;
+    private EquipmentDropData equipment;
+    private EquipmentDropData parts;
+    private EquipmentDropData recipes;
     private ResourceDropData resources;
-    private NewAllScrollsDropData scrolls;
+    private AllScrollsDropData scrolls;
 
-    public NewDynamicDropData() {
+    public DynamicDropData() {
     }
 
-    public NewDynamicDropData(NewEquipmentDropData equipment, NewEquipmentDropData parts, NewEquipmentDropData recipes, ResourceDropData resources, NewAllScrollsDropData scrolls) {
+    public DynamicDropData(EquipmentDropData equipment, EquipmentDropData parts, EquipmentDropData recipes, ResourceDropData resources, AllScrollsDropData scrolls) {
         this.equipment = equipment;
         this.parts = parts;
         this.recipes = recipes;
@@ -26,15 +26,15 @@ public class NewDynamicDropData {
         this.scrolls = scrolls;
     }
 
-    public NewEquipmentDropData getEquipment() {
+    public EquipmentDropData getEquipment() {
         return equipment;
     }
 
-    public NewEquipmentDropData getParts() {
+    public EquipmentDropData getParts() {
         return parts;
     }
 
-    public NewEquipmentDropData getRecipes() {
+    public EquipmentDropData getRecipes() {
         return recipes;
     }
 
@@ -42,13 +42,13 @@ public class NewDynamicDropData {
         return resources;
     }
 
-    public NewAllScrollsDropData getScrolls() {
+    public AllScrollsDropData getScrolls() {
         return scrolls;
     }
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", NewDynamicDropData.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", DynamicDropData.class.getSimpleName() + "[", "]")
                 .add(Objects.toString(equipment))
                 .add(Objects.toString(parts))
                 .add(Objects.toString(recipes))

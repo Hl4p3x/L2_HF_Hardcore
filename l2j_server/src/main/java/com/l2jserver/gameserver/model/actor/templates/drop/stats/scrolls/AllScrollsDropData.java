@@ -3,36 +3,36 @@ package com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class AllScrollsStats {
+public class AllScrollsDropData {
 
-    private ScrollsStats weapon;
-    private ScrollsStats armor;
+    private ScrollDropData weapon;
+    private ScrollDropData armor;
     private MiscScrollStats misc;
 
-    public AllScrollsStats() {
+    public AllScrollsDropData() {
     }
 
-    public AllScrollsStats(ScrollsStats weapon, ScrollsStats armor, MiscScrollStats misc) {
+    public AllScrollsDropData(ScrollDropData weapon, ScrollDropData armor, MiscScrollStats misc) {
         this.weapon = weapon;
         this.armor = armor;
         this.misc = misc;
+    }
+
+    public ScrollDropData getWeapon() {
+        return weapon;
+    }
+
+    public ScrollDropData getArmor() {
+        return armor;
     }
 
     public MiscScrollStats getMisc() {
         return misc;
     }
 
-    public ScrollsStats getWeapon() {
-        return weapon;
-    }
-
-    public ScrollsStats getArmor() {
-        return armor;
-    }
-
     @Override
     public String toString() {
-        return new StringJoiner(", ", AllScrollsStats.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", AllScrollsDropData.class.getSimpleName() + "[", "]")
                 .add(Objects.toString(weapon))
                 .add(Objects.toString(armor))
                 .add(Objects.toString(misc))
