@@ -2,6 +2,7 @@ package com.l2jserver.gameserver.model.actor.templates.drop;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.l2jserver.util.Rnd;
 
 import java.util.Objects;
 
@@ -24,6 +25,10 @@ public class Range {
 
     public int getHigh() {
         return high;
+    }
+
+    public int randomWithin() {
+        return Rnd.get(low, high);
     }
 
     @JsonCreator

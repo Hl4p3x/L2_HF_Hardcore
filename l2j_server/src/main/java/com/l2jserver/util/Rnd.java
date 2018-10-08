@@ -335,6 +335,10 @@ public final class Rnd
 	public static final double getDouble(final int n) {
 		return rnd.get(n) + get();
 	}
+
+	public static boolean rollAgainst(double limit) {
+		return Rnd.getDouble(100) <= limit;
+	}
 	
 	/**
 	 * Gets a random integer number from min(inclusive) to max(inclusive)
@@ -477,6 +481,10 @@ public final class Rnd
 			}
 		}
 		return result;
+	}
+
+	public static final <T> Optional<T> getOneRandom(List<T> items) {
+		return getFewRandom(items, 1).stream().findFirst();
 	}
 
 	public static final <T> List<T> getFewRandom(List<T> items, int amount) {

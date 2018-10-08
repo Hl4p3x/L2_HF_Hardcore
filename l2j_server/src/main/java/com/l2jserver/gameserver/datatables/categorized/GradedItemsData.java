@@ -21,7 +21,7 @@ public class GradedItemsData {
 
     private List<GradedItem> gradedItems = new ArrayList<>();
     private Map<Integer, GradedItem> gradedItemsById = new HashMap<>();
-    private Map<GradeInfo, Collection<GradedItem>> gradedItemsMap = new HashMap<>();
+    private Map<GradeInfo, List<GradedItem>> gradedItemsMap = new HashMap<>();
 
     public GradedItemsData() {
         load();
@@ -35,8 +35,9 @@ public class GradedItemsData {
 
             Multimap<GradeInfo, GradedItem> gradedItemMultimap = HashMultimap.create();
             gradedItems.forEach(item -> gradedItemMultimap.put(item.getGradeInfo(), item));
-            gradedItemsMap = gradedItemMultimap.asMap();
-
+            gradedItemMultimap.asMap().forEach((key, value) -> {
+                gradedItemsMap.put(key, new ArrayList<>(value));
+            });
             gradedItemsById = gradedItems.stream().collect(Collectors.toMap(GradedItem::getItemId, Functions.identity()));
             LOG.info("Loaded {} graded items!", gradedItems.size());
         } catch (IOException e) {
@@ -48,7 +49,7 @@ public class GradedItemsData {
         return gradedItems;
     }
 
-    public Map<GradeInfo, Collection<GradedItem>> getGradedItemsMap() {
+    public Map<GradeInfo, List<GradedItem>> getGradedItemsMap() {
         return Optional.ofNullable(gradedItemsMap).orElse(Collections.emptyMap());
     }
 

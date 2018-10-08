@@ -21,7 +21,7 @@ public class CraftResourcesData {
 
     private List<CraftResource> resources = new ArrayList<>();
     private Set<Integer> resourceIds = new HashSet<>();
-    private Map<ResourceGrade, Collection<CraftResource>> resourceMap = new HashMap<>();
+    private Map<ResourceGrade, List<CraftResource>> resourceMap = new HashMap<>();
 
     public CraftResourcesData() {
         load();
@@ -35,7 +35,9 @@ public class CraftResourcesData {
 
             Multimap<ResourceGrade, CraftResource> resourcesMultimap = HashMultimap.create();
             resources.forEach(craftResource -> resourcesMultimap.put(craftResource.getResourceGrade(), craftResource));
-            resourceMap = resourcesMultimap.asMap();
+            resourcesMultimap.asMap().forEach((key, value) -> {
+                resourceMap.put(key, new ArrayList<>(value));
+            });
             resourceIds = CollectionUtil.extractIds(resources);
             LOG.info("Loaded {} craft resources parts", resourceIds.size());
         } catch (IOException e) {
@@ -47,7 +49,7 @@ public class CraftResourcesData {
         return resources;
     }
 
-    public Collection<CraftResource> getResourcesByGrade(ResourceGrade resourceGrade) {
+    public List<CraftResource> getResourcesByGrade(ResourceGrade resourceGrade) {
         return Optional.ofNullable(resourceMap.get(resourceGrade)).orElse(Collections.emptyList());
     }
 

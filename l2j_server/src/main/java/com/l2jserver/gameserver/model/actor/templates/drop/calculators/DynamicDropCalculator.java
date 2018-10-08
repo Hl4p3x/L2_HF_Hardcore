@@ -15,8 +15,7 @@ import java.util.Set;
 public class DynamicDropCalculator {
 
     private Set<Integer> managedItemIds = new HashSet<>();
-    private MobsDropCalculator mobsDropCalculator = new MobsDropCalculator();
-    private RaidBossDropCalculator raidBossDropCalculator = new RaidBossDropCalculator();
+    private BasicDropCalculator basicDropCalculator = new BasicDropCalculator();
 
     public DynamicDropCalculator() {
         load();
@@ -34,9 +33,9 @@ public class DynamicDropCalculator {
 
     public List<ItemHolder> calculate(L2Character victim) {
         if (victim.isRaid()) {
-            return raidBossDropCalculator.calculate(victim, DynamicDropTable.getInstance().getAllDynamicDropData().getRaid());
+            return basicDropCalculator.calculate(victim, DynamicDropTable.getInstance().getAllDynamicDropData().getRaid());
         } else {
-            return mobsDropCalculator.calculate(victim, DynamicDropTable.getInstance().getAllDynamicDropData().getMobs());
+            return basicDropCalculator.calculate(victim, DynamicDropTable.getInstance().getAllDynamicDropData().getMobs());
         }
     }
 
