@@ -1,7 +1,11 @@
 package com.l2jserver.gameserver.model.items.scrolls;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 import com.l2jserver.gameserver.model.items.L2Item;
+
+import java.util.Objects;
+import java.util.StringJoiner;
 
 public class MiscScroll implements IIdentifiable {
 
@@ -36,13 +40,19 @@ public class MiscScroll implements IIdentifiable {
         return blessed;
     }
 
+    @JsonIgnore
     public boolean isNotBlessed() {
         return !isBlessed();
     }
 
     @Override
     public String toString() {
-        return String.format("%s (%s, %s, %s)", name, id, type, blessed);
+        return new StringJoiner(", ", MiscScroll.class.getSimpleName() + "[", "]")
+                .add(Objects.toString(id))
+                .add(name)
+                .add(Objects.toString(type))
+                .add(Objects.toString(blessed))
+                .toString();
     }
 
     public static MiscScroll fromItem(L2Item item) {

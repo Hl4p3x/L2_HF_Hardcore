@@ -1,5 +1,8 @@
 package com.l2jserver.gameserver.model.items.scrolls;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 public enum MiscScrollType {
 
     UNKNOWN, SOE, RESURRECT;
@@ -12,6 +15,16 @@ public enum MiscScrollType {
         } else {
             return UNKNOWN;
         }
+    }
+
+    @JsonCreator
+    public static MiscScrollType fromString(String text) {
+        return valueOf(text.toUpperCase());
+    }
+
+    @JsonValue
+    public String asString() {
+        return name().toLowerCase();
     }
 
 }

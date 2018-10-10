@@ -1,0 +1,1778 @@
+[
+  {
+    "itemId": 7,
+    "itemName": "Apprentice's Rod",
+    "itemPrice": 590,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 11,
+    "itemName": "Bone Dagger",
+    "itemPrice": 590,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 308,
+    "itemName": "Buffalo's Horn",
+    "itemPrice": 590,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 4,
+    "itemName": "Club",
+    "itemPrice": 590,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 1,
+    "itemName": "Short Sword",
+    "itemPrice": 590,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 13,
+    "itemName": "Short Bow",
+    "itemPrice": 590,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 253,
+    "itemName": "Spiked Gloves",
+    "itemPrice": 590,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 152,
+    "itemName": "Heavy Chisel",
+    "itemPrice": 6200,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 99,
+    "itemName": "Apprentice's Spellbook",
+    "itemPrice": 9600,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 3,
+    "itemName": "Broadsword",
+    "itemPrice": 9600,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 215,
+    "itemName": "Doom Dagger",
+    "itemPrice": 9600,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 12,
+    "itemName": "Knife",
+    "itemPrice": 9600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 5,
+    "itemName": "Mace",
+    "itemPrice": 9600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 14,
+    "itemName": "Bow",
+    "itemPrice": 9600,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 254,
+    "itemName": "Iron Gloves",
+    "itemPrice": 9600,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 8,
+    "itemName": "Willow Staff",
+    "itemPrice": 9600,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 153,
+    "itemName": "Sigil",
+    "itemPrice": 14200,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 216,
+    "itemName": "Dirk",
+    "itemPrice": 41600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 154,
+    "itemName": "Dwarven Mace",
+    "itemPrice": 41600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 66,
+    "itemName": "Gladius",
+    "itemPrice": 41600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 122,
+    "itemName": "Handmade Sword",
+    "itemPrice": 41600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 67,
+    "itemName": "Orcish Sword",
+    "itemPrice": 41600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 1333,
+    "itemName": "Brandish",
+    "itemPrice": 41600,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 9,
+    "itemName": "Cedar Staff",
+    "itemPrice": 41600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 255,
+    "itemName": "Fox Claw Gloves",
+    "itemPrice": 41600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 271,
+    "itemName": "Hunting Bow",
+    "itemPrice": 41600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 2,
+    "itemName": "Long Sword",
+    "itemPrice": 105000,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 310,
+    "itemName": "Relic of the Saints",
+    "itemPrice": 105000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 218,
+    "itemName": "Throwing Knife",
+    "itemPrice": 105000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 176,
+    "itemName": "Apprentice's Staff",
+    "itemPrice": 105000,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 256,
+    "itemName": "Cestus",
+    "itemPrice": 105000,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 272,
+    "itemName": "Forest Bow",
+    "itemPrice": 105000,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 15,
+    "itemName": "Short Spear",
+    "itemPrice": 105000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 311,
+    "itemName": "Crucifix of Blessing",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 68,
+    "itemName": "Falchion",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 155,
+    "itemName": "Flanged Mace",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 87,
+    "itemName": "Iron Hammer",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 219,
+    "itemName": "Sword Breaker",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 100,
+    "itemName": "Voodoo Doll",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 273,
+    "itemName": "Composite Bow",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 16,
+    "itemName": "Great Spear",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 177,
+    "itemName": "Mage Staff",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 257,
+    "itemName": "Viper Fang",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 5284,
+    "itemName": "Zweihander",
+    "itemPrice": 188000,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 221,
+    "itemName": "Assassin Knife",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 312,
+    "itemName": "Branch of Life",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 220,
+    "itemName": "Crafted Dagger",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 156,
+    "itemName": "Hand Axe",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 166,
+    "itemName": "Heavy Mace",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 7885,
+    "itemName": "Priest Sword",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 314,
+    "itemName": "Proof of Revenge",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 123,
+    "itemName": "Saber",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 101,
+    "itemName": "Scroll of Wisdom",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 313,
+    "itemName": "Temptation of Abyss",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 168,
+    "itemName": "Work Hammer",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 258,
+    "itemName": "Bagh-Nakh",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 178,
+    "itemName": "Bone Staff",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 5285,
+    "itemName": "Heavy Sword",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 274,
+    "itemName": "Reinforced Bow",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 7880,
+    "itemName": "Steel Sword",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 291,
+    "itemName": "Trident",
+    "itemPrice": 315000,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 126,
+    "itemName": "Artisan's Sword",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 69,
+    "itemName": "Bastard Sword",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 315,
+    "itemName": "Divine Tome",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 182,
+    "itemName": "Doom Hammer",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 180,
+    "itemName": "Mace of Judgment",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 179,
+    "itemName": "Mace of Prayer",
+    "itemPrice": 495500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 222,
+    "itemName": "Poniard Dagger",
+    "itemPrice": 495500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 125,
+    "itemName": "Spinebone Sword",
+    "itemPrice": 495500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 86,
+    "itemName": "Tomahawk",
+    "itemPrice": 495500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 184,
+    "itemName": "Conjuror's Staff",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 277,
+    "itemName": "Dark Elven Bow",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 295,
+    "itemName": "Dwarven Trident",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 276,
+    "itemName": "Elven Bow",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 275,
+    "itemName": "Long Bow",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 183,
+    "itemName": "Mystic Staff",
+    "itemPrice": 495500,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 292,
+    "itemName": "Pike",
+    "itemPrice": 495500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 259,
+    "itemName": "Single-Edged Jamadhr",
+    "itemPrice": 495500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 185,
+    "itemName": "Staff of Mana",
+    "itemPrice": 495500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 83,
+    "itemName": "Sword of Magic",
+    "itemPrice": 550800,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 143,
+    "itemName": "Sword of Mystic",
+    "itemPrice": 550800,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 144,
+    "itemName": "Sword of Occult",
+    "itemPrice": 550800,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 240,
+    "itemName": "Conjurer's Knife",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 127,
+    "itemName": "Crimson Sword",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 238,
+    "itemName": "Dagger of Mana",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 130,
+    "itemName": "Elven Sword",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 223,
+    "itemName": "Kukuri",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 239,
+    "itemName": "Mystic Knife",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 316,
+    "itemName": "Sage's Blood",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 241,
+    "itemName": "Shilen Knife",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 157,
+    "itemName": "Spiked Club",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 317,
+    "itemName": "Tome of Blood",
+    "itemPrice": 743500,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 296,
+    "itemName": "Dwarven Pike",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 278,
+    "itemName": "Gastraphetes",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 186,
+    "itemName": "Staff of Magic",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 260,
+    "itemName": "Triple-Edged Jamadhr",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 124,
+    "itemName": "Two-Handed Sword",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 293,
+    "itemName": "War Hammer",
+    "itemPrice": 743500,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 318,
+    "itemName": "Crucifix of Blood",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 1660,
+    "itemName": "Cursed Maingauche",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 172,
+    "itemName": "Heavy Bone Club",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 224,
+    "itemName": "Maingauche",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 88,
+    "itemName": "Morning Star",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 7890,
+    "itemName": "Priest Mace",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 169,
+    "itemName": "Skull Breaker",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 7886,
+    "itemName": "Sword of Magic Fog",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 129,
+    "itemName": "Sword of Revolution",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 158,
+    "itemName": "Tarbar",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 261,
+    "itemName": "Bich'Hwa",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 90,
+    "itemName": "Goat Head Staff",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 279,
+    "itemName": "Reinforced Long Bow",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 7896,
+    "itemName": "Titan Hammer",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 7881,
+    "itemName": "Titan Sword",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 294,
+    "itemName": "War Pick",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 93,
+    "itemName": "Winged Spear",
+    "itemPrice": 1074000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 321,
+    "itemName": "Demon Fangs",
+    "itemPrice": 1171900,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 159,
+    "itemName": "Bonebreaker",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 2499,
+    "itemName": "Elven Long Sword",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 225,
+    "itemName": "Mithril Dagger",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 189,
+    "itemName": "Staff of Life",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 187,
+    "itemName": "Atuba Hammer",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 190,
+    "itemName": "Atuba Mace",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 70,
+    "itemName": "Claymore",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 188,
+    "itemName": "Ghost Staff",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 297,
+    "itemName": "Glaive",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 280,
+    "itemName": "Light Crossbow",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 262,
+    "itemName": "Scallop Jamadhr",
+    "itemPrice": 1387000,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 160,
+    "itemName": "Battle Axe",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 89,
+    "itemName": "Big Hammer",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 226,
+    "itemName": "Cursed Dagger",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 232,
+    "itemName": "Dark Elven Dagger",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 7887,
+    "itemName": "Mysterious Sword",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 161,
+    "itemName": "Silver Axe",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 173,
+    "itemName": "Skull Graver",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 193,
+    "itemName": "Stick of Faith",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 72,
+    "itemName": "Stormbringer",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 302,
+    "itemName": "Body Slasher",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 263,
+    "itemName": "Chakram",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 192,
+    "itemName": "Crystal Staff",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 281,
+    "itemName": "Crystallized Ice Bow",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 71,
+    "itemName": "Flamberge",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 194,
+    "itemName": "Heavy Doom Axe",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 191,
+    "itemName": "Heavy Doom Hammer",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 298,
+    "itemName": "Orcish Glaive",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 96,
+    "itemName": "Scythe",
+    "itemPrice": 1762900,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 2502,
+    "itemName": "Dwarven War Hammer",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 74,
+    "itemName": "Katana",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 133,
+    "itemName": "Raid Sword",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 73,
+    "itemName": "Shamshir",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 242,
+    "itemName": "Soulfire Dirk",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 131,
+    "itemName": "Spirit Sword",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 227,
+    "itemName": "Stiletto",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 94,
+    "itemName": "Bec de Corbin",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 195,
+    "itemName": "Cursed Staff",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 282,
+    "itemName": "Elemental Bow",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 4233,
+    "itemName": "Knuckle Duster",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 285,
+    "itemName": "Noble Elven Bow",
+    "itemPrice": 2209700,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 75,
+    "itemName": "Caliburs",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 201,
+    "itemName": "Club of Nature",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 233,
+    "itemName": "Dark Screamer",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 231,
+    "itemName": "Grace Dagger",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 326,
+    "itemName": "Heathen's Book",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 84,
+    "itemName": "Homunkulus's Sword",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 202,
+    "itemName": "Mace of Underworld",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 174,
+    "itemName": "Nirvana Axe",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 196,
+    "itemName": "Stick of Eternity",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 76,
+    "itemName": "Sword of Delusion",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 132,
+    "itemName": "Sword of Limit",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 134,
+    "itemName": "Sword of Nightmare",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 145,
+    "itemName": "Sword of Whispering Death",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 77,
+    "itemName": "Tsurugi",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 162,
+    "itemName": "War Axe",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 283,
+    "itemName": "Akat Long Bow",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 265,
+    "itemName": "Fisted Blade",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 198,
+    "itemName": "Inferno Staff",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 7898,
+    "itemName": "Karik Horn",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 199,
+    "itemName": "Pa'agrian Hammer",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 7882,
+    "itemName": "Pa'agrian Sword",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 197,
+    "itemName": "Paradia Staff",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 95,
+    "itemName": "Poleaxe",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 200,
+    "itemName": "Sage's Staff",
+    "itemPrice": 3304300,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 203,
+    "itemName": "Pa'agrian Axe",
+    "itemPrice": 3677700,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 301,
+    "itemName": "Scorpion",
+    "itemPrice": 3677700,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 303,
+    "itemName": "Widow Maker",
+    "itemPrice": 3677700,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 228,
+    "itemName": "Crystal Dagger",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 7891,
+    "itemName": "Ecliptic Axe",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 7888,
+    "itemName": "Ecliptic Sword",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 135,
+    "itemName": "Samurai Longsword",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 2503,
+    "itemName": "Yaksa Mace",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 5286,
+    "itemName": "Berserker Blade",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 204,
+    "itemName": "Deadman's Staff",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 206,
+    "itemName": "Demon's Staff",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 7897,
+    "itemName": "Dwarven Hammer",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 286,
+    "itemName": "Eminence Bow",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 205,
+    "itemName": "Ghoul's Staff",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 266,
+    "itemName": "Great Pata",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 299,
+    "itemName": "Orcish Poleaxe",
+    "itemPrice": 4713500,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 91,
+    "itemName": "Heavy War Axe",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 243,
+    "itemName": "Hell Knife",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 142,
+    "itemName": "Keshanberk",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 229,
+    "itemName": "Kris",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 7892,
+    "itemName": "Spell Breaker",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 148,
+    "itemName": "Sword of Valhalla",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 267,
+    "itemName": "Arthro Nail",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 284,
+    "itemName": "Dark Elven Long Bow",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 300,
+    "itemName": "Great Axe",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 78,
+    "itemName": "Great Sword",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 7900,
+    "itemName": "Ice Storm Hammer",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 92,
+    "itemName": "Sprite's Staff",
+    "itemPrice": 6680500,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 264,
+    "itemName": "Pata",
+    "itemPrice": 7830000,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 175,
+    "itemName": "Art of Battle Axe",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 171,
+    "itemName": "Deadman's Glory",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 234,
+    "itemName": "Demon's Dagger",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 7893,
+    "itemName": "Kaim Vanul's Bones",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 79,
+    "itemName": "Sword of Damascus",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 7889,
+    "itemName": "Wizard's Tear",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 268,
+    "itemName": "Bellion Cestus",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 287,
+    "itemName": "Bow of Peril",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 7883,
+    "itemName": "Guardian Sword",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 97,
+    "itemName": "Lance",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 210,
+    "itemName": "Staff of Evil Spirits",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 7901,
+    "itemName": "Star Buster",
+    "itemPrice": 10091400,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 235,
+    "itemName": "Bloody Orchid",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 150,
+    "itemName": "Elemental Sword",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 2504,
+    "itemName": "Meteor Shower",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 7894,
+    "itemName": "Spiritual Eye",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 80,
+    "itemName": "Tallum Blade",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 269,
+    "itemName": "Blood Tornado",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 288,
+    "itemName": "Carnage Bow",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 212,
+    "itemName": "Dasparion's Staff",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 7899,
+    "itemName": "Destroyer Hammer",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 98,
+    "itemName": "Halberd",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 7884,
+    "itemName": "Infernal Master",
+    "itemPrice": 14098000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 2500,
+    "itemName": "Dark Legion's Edge",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 164,
+    "itemName": "Elysian",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 7895,
+    "itemName": "Flaming Dragon Skull",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 236,
+    "itemName": "Soul Separator",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 151,
+    "itemName": "Sword of Miracles",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 213,
+    "itemName": "Branch of the Mother Tree",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 7902,
+    "itemName": "Doom Crusher",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 270,
+    "itemName": "Dragon Grinder",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 81,
+    "itemName": "Dragon Slayer",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 289,
+    "itemName": "Soul Bow",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 305,
+    "itemName": "Tallum Glaive",
+    "itemPrice": 20741000,
+    "gradeInfo": "a-mid"
+  },
+  {
+    "itemId": 8680,
+    "itemName": "Barakiel's Axe",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 8687,
+    "itemName": "Cabrio's Hand",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 8682,
+    "itemName": "Naga Storm",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 8678,
+    "itemName": "Sirra's Blade",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 8686,
+    "itemName": "Themis' Tongue",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 8681,
+    "itemName": "Behemoth's Tuning Fork",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 8688,
+    "itemName": "Daimon Crystal",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 8684,
+    "itemName": "Shyeed's Bow",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 8685,
+    "itemName": "Sobekk's Hurricane",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 8679,
+    "itemName": "Sword of Ipos",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 8683,
+    "itemName": "Tiphon's Spear",
+    "itemPrice": 26968400,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 6367,
+    "itemName": "Angel Slayer",
+    "itemPrice": 42759400,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 6579,
+    "itemName": "Arcana Mace",
+    "itemPrice": 42759400,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 6365,
+    "itemName": "Basalt Battlehammer",
+    "itemPrice": 42759400,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 6364,
+    "itemName": "Forgotten Blade",
+    "itemPrice": 42759400,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 6371,
+    "itemName": "Demon Splinter",
+    "itemPrice": 42759400,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 7575,
+    "itemName": "Draconic Bow",
+    "itemPrice": 42759400,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 6369,
+    "itemName": "Dragon Hunter Axe",
+    "itemPrice": 42759400,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 6372,
+    "itemName": "Heaven's Divider",
+    "itemPrice": 42759400,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 6366,
+    "itemName": "Imperial Staff",
+    "itemPrice": 42759400,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 6370,
+    "itemName": "Saint Spear",
+    "itemPrice": 42759400,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 9448,
+    "itemName": "Dynasty Cudgel",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 9446,
+    "itemName": "Dynasty Knife",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 9449,
+    "itemName": "Dynasty Mace",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 9444,
+    "itemName": "Dynasty Phantom",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 9442,
+    "itemName": "Dynasty Sword",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 9450,
+    "itemName": "Dynasty Bagh-Nakh",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 9443,
+    "itemName": "Dynasty Blade",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 9445,
+    "itemName": "Dynasty Bow",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 10253,
+    "itemName": "Dynasty Crusher",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 9447,
+    "itemName": "Dynasty Halberd",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 10252,
+    "itemName": "Dynasty Staff",
+    "itemPrice": 74946000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 10216,
+    "itemName": "Icarus Disperser",
+    "itemPrice": 103439000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 10222,
+    "itemName": "Icarus Hall",
+    "itemPrice": 103439000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 10220,
+    "itemName": "Icarus Hammer",
+    "itemPrice": 103439000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 10215,
+    "itemName": "Icarus Sawsword",
+    "itemPrice": 103439000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 10217,
+    "itemName": "Icarus Spirit",
+    "itemPrice": 103439000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 10221,
+    "itemName": "Icarus Hand",
+    "itemPrice": 103439000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 10218,
+    "itemName": "Icarus Heavy Arms",
+    "itemPrice": 103439000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 10223,
+    "itemName": "Icarus Spitter",
+    "itemPrice": 103439000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 10219,
+    "itemName": "Icarus Trident",
+    "itemPrice": 103439000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 13463,
+    "itemName": "Vesper Avenger",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 13459,
+    "itemName": "Vesper Buster",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 13465,
+    "itemName": "Vesper Caster",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 13457,
+    "itemName": "Vesper Cutter",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 13460,
+    "itemName": "Vesper Shaper",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 13461,
+    "itemName": "Vesper Fighter",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 13464,
+    "itemName": "Vesper Retributer",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 13466,
+    "itemName": "Vesper Singer",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 13458,
+    "itemName": "Vesper Slasher",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 13462,
+    "itemName": "Vesper Stormer",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 13467,
+    "itemName": "Vesper Thrower",
+    "itemPrice": 143356000,
+    "gradeInfo": "s84"
+  }
+]

@@ -19,16 +19,21 @@ import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.ScrollG
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.items.craft.CraftResource;
 import com.l2jserver.gameserver.model.items.craft.ResourceGrade;
+import com.l2jserver.gameserver.model.items.graded.GradeCategory;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
 import com.l2jserver.gameserver.model.items.scrolls.CategorizedScrolls;
 import com.l2jserver.gameserver.model.items.scrolls.MiscScroll;
 import com.l2jserver.gameserver.model.items.scrolls.Scroll;
 import com.l2jserver.util.Rnd;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
 public class BasicDropCalculator {
+
+    private static final Logger LOG = LoggerFactory.getLogger(BasicDropCalculator.class);
 
     public List<ItemHolder> calculate(L2Character victim, DynamicDropData dynamicDropData) {
         Optional<ItemGradeRange> range = ItemGradeRange.byLevel(victim.getLevel());
@@ -139,16 +144,50 @@ public class BasicDropCalculator {
 
     private List<ItemHolder> calculateEquipmentDrop(GradeInfo gradeInfo, EquipmentDropData equipmentDropData) {
         List<ItemHolder> drop = new ArrayList<>();
-        drop.addAll(calculateChanceCountPairDrop(gradeInfo, equipmentDropData.getWeapon()));
-        drop.addAll(calculateChanceCountPairDrop(gradeInfo, equipmentDropData.getArmor()));
-        drop.addAll(calculateChanceCountPairDrop(gradeInfo, equipmentDropData.getJewels()));
+        drop.addAll(calculateChanceCountPairDrop(
+                gradeInfo,
+                findItemsByGradeInfo(
+                        gradeInfo, GradedItemsDropDataTable.getInstance().getGradedWeaponsMap()
+                ),
+                findChanceCountByGradeInfo(gradeInfo, equipmentDropData.getWeapon())
+        ));
+        drop.addAll(calculateChanceCountPairDrop(
+                gradeInfo,
+                findItemsByGradeInfo(
+                        gradeInfo, GradedItemsDropDataTable.getInstance().getGradedArmorMap()
+                ),
+                findChanceCountByGradeInfo(gradeInfo, equipmentDropData.getArmor())
+        ));
+        drop.addAll(calculateChanceCountPairDrop(
+                gradeInfo,
+                findItemsByGradeInfo(
+                        gradeInfo, GradedItemsDropDataTable.getInstance().getGradedJewelsMap()
+                ),
+                findChanceCountByGradeInfo(gradeInfo, equipmentDropData.getJewels())
+        ));
         return drop;
     }
 
-    private List<ItemHolder> calculateChanceCountPairDrop(GradeInfo gradeInfo, Map<GradeInfo, ChanceCountPair> chanceCountPairs) {
+    private List<GradedItem> findItemsByGradeInfo(GradeInfo gradeInfo, Map<GradeInfo, List<GradedItem>> gradedItemsMap) {
+        List<GradedItem> gradedItems = Optional.ofNullable(gradedItemsMap.get(gradeInfo)).orElse(new ArrayList<>());
+        if (gradeInfo.getCategory() != GradeCategory.ALL) {
+            Optional.ofNullable(gradedItemsMap.get(new GradeInfo(gradeInfo.getGrade(), GradeCategory.ALL))).ifPresent(gradedItems::addAll);
+        }
+        return gradedItems;
+    }
+
+    private ChanceCountPair findChanceCountByGradeInfo(GradeInfo gradeInfo, Map<GradeInfo, ChanceCountPair> chanceCountPairs) {
         ChanceCountPair chanceCountPair = chanceCountPairs.get(gradeInfo);
-        List<GradedItem> gradedItems = GradedItemsDropDataTable.getInstance().getGradedItemsMap().get(gradeInfo);
+        if (chanceCountPair == null && gradeInfo.getCategory() != GradeCategory.ALL) {
+            LOG.debug("Could not find drop stats for {}, trying to search for All category", gradeInfo);
+            chanceCountPair = chanceCountPairs.get(new GradeInfo(gradeInfo.getGrade(), GradeCategory.ALL));
+        }
+        return chanceCountPair;
+    }
+
+    private List<ItemHolder> calculateChanceCountPairDrop(GradeInfo gradeInfo, List<GradedItem> gradedItems, ChanceCountPair chanceCountPair) {
         if (chanceCountPair == null || gradedItems.isEmpty()) {
+            LOG.warn("Skipping drop calculation for grade {} because there was drop no chances or items found", gradeInfo);
             return new ArrayList<>();
         }
 

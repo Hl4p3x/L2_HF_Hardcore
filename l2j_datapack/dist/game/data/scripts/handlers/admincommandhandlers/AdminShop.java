@@ -70,7 +70,7 @@ public class AdminShop implements IAdminCommandHandler
 		} else if (command.startsWith("admin_categorized")) {
 			String[] commandSplit = command.split(" ");
 
-            Map<GradeInfo, List<GradedItem>> items = GradedItemsDropDataTable.getInstance().getGradedItemsMap();
+            Map<GradeInfo, List<GradedItem>> items = GradedItemsDropDataTable.getInstance().getAllGradedItemsMap();
 
 			if (commandSplit.length == 1) {
                 Set<GradeInfo> categories = items.keySet();

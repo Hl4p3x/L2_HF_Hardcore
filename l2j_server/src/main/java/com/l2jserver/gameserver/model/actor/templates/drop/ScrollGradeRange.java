@@ -36,7 +36,7 @@ public enum ScrollGradeRange {
     }
 
     public static Optional<ScrollGrade> byLevel(int level) {
-        return Stream.of(values()).filter(item -> item.getLowLevel() <= level).map(ScrollGradeRange::getScrollGrade).findFirst();
+        return Stream.of(values()).filter(item -> item.getLowLevel() <= level && level >= item.getHighLevel()).map(ScrollGradeRange::getScrollGrade).findFirst();
     }
 
 }

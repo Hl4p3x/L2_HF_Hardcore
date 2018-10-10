@@ -1,0 +1,404 @@
+[
+  {
+    "itemId": 116,
+    "itemName": "Magic Ring",
+    "itemPrice": 25,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 112,
+    "itemName": "Apprentice's Earring",
+    "itemPrice": 38,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 118,
+    "itemName": "Necklace of Magic",
+    "itemPrice": 51,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 875,
+    "itemName": "Ring of Knowledge",
+    "itemPrice": 420,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 113,
+    "itemName": "Mystic's Earring",
+    "itemPrice": 620,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 906,
+    "itemName": "Necklace of Knowledge",
+    "itemPrice": 830,
+    "gradeInfo": "ng-low"
+  },
+  {
+    "itemId": 876,
+    "itemName": "Ring of Anguish",
+    "itemPrice": 1800,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 114,
+    "itemName": "Earring of Strength",
+    "itemPrice": 2700,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 115,
+    "itemName": "Earring of Wisdom",
+    "itemPrice": 2700,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 907,
+    "itemName": "Necklace of Anguish",
+    "itemPrice": 3600,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 877,
+    "itemName": "Ring of Wisdom",
+    "itemPrice": 4560,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 845,
+    "itemName": "Cat's Eye Earring",
+    "itemPrice": 6840,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 878,
+    "itemName": "Blue Coral Ring",
+    "itemPrice": 8200,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 908,
+    "itemName": "Necklace of Wisdom",
+    "itemPrice": 9120,
+    "gradeInfo": "ng-mid"
+  },
+  {
+    "itemId": 846,
+    "itemName": "Coral Earring",
+    "itemPrice": 12300,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 909,
+    "itemName": "Blue Diamond Necklace",
+    "itemPrice": 16400,
+    "gradeInfo": "ng-top"
+  },
+  {
+    "itemId": 890,
+    "itemName": "Ring of Devotion",
+    "itemPrice": 13800,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 847,
+    "itemName": "Red Crescent Earring",
+    "itemPrice": 20700,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 879,
+    "itemName": "Enchanted Ring",
+    "itemPrice": 21800,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 910,
+    "itemName": "Necklace of Devotion",
+    "itemPrice": 27600,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 848,
+    "itemName": "Enchanted Earring",
+    "itemPrice": 32800,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 880,
+    "itemName": "Black Pearl Ring",
+    "itemPrice": 33000,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 911,
+    "itemName": "Enchanted Necklace",
+    "itemPrice": 43700,
+    "gradeInfo": "d-low"
+  },
+  {
+    "itemId": 881,
+    "itemName": "Elven Ring",
+    "itemPrice": 47900,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 849,
+    "itemName": "Tiger's Eye Earring",
+    "itemPrice": 49400,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 882,
+    "itemName": "Mithril Ring",
+    "itemPrice": 62200,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 912,
+    "itemName": "Near Forest Necklace",
+    "itemPrice": 65900,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 850,
+    "itemName": "Elven Earring",
+    "itemPrice": 71900,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 851,
+    "itemName": "Omen Beast's Eye Earring",
+    "itemPrice": 93300,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 913,
+    "itemName": "Elven Necklace",
+    "itemPrice": 95800,
+    "gradeInfo": "d-mid"
+  },
+  {
+    "itemId": 914,
+    "itemName": "Necklace of Darkness",
+    "itemPrice": 124400,
+    "gradeInfo": "d-top"
+  },
+  {
+    "itemId": 883,
+    "itemName": "Aquastone Ring",
+    "itemPrice": 79500,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 884,
+    "itemName": "Ring of Protection",
+    "itemPrice": 100300,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 852,
+    "itemName": "Moonstone Earring",
+    "itemPrice": 119300,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 853,
+    "itemName": "Earring of Protection",
+    "itemPrice": 150500,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 885,
+    "itemName": "Ring of Ages",
+    "itemPrice": 151100,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 915,
+    "itemName": "Aquastone Necklace",
+    "itemPrice": 159000,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 916,
+    "itemName": "Necklace of Protection",
+    "itemPrice": 200600,
+    "gradeInfo": "c-low"
+  },
+  {
+    "itemId": 886,
+    "itemName": "Ring of Seal",
+    "itemPrice": 217200,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 854,
+    "itemName": "Earring of Seal",
+    "itemPrice": 226600,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 917,
+    "itemName": "Necklace of Mermaid",
+    "itemPrice": 302100,
+    "gradeInfo": "c-mid"
+  },
+  {
+    "itemId": 855,
+    "itemName": "Nassen's Earring",
+    "itemPrice": 325800,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 119,
+    "itemName": "Necklace of Seal",
+    "itemPrice": 434400,
+    "gradeInfo": "c-top"
+  },
+  {
+    "itemId": 887,
+    "itemName": "Adamantite Ring",
+    "itemPrice": 310600,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 856,
+    "itemName": "Adamantite Earring",
+    "itemPrice": 465900,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 895,
+    "itemName": "Ring of Black Ore",
+    "itemPrice": 474000,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 918,
+    "itemName": "Adamantite Necklace",
+    "itemPrice": 621200,
+    "gradeInfo": "b-low"
+  },
+  {
+    "itemId": 864,
+    "itemName": "Earring of Black Ore",
+    "itemPrice": 711000,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 926,
+    "itemName": "Necklace of Black Ore",
+    "itemPrice": 948000,
+    "gradeInfo": "b-top"
+  },
+  {
+    "itemId": 6325,
+    "itemName": "Sealed Phoenix Ring",
+    "itemPrice": 670000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 6328,
+    "itemName": "Sealed Majestic Ring",
+    "itemPrice": 999000,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 6324,
+    "itemName": "Sealed Phoenix Earring",
+    "itemPrice": 1005000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 6323,
+    "itemName": "Sealed Phoenix Necklace",
+    "itemPrice": 1340000,
+    "gradeInfo": "a-low"
+  },
+  {
+    "itemId": 6327,
+    "itemName": "Sealed Majestic Earring",
+    "itemPrice": 1498000,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 6326,
+    "itemName": "Sealed Majestic Necklace",
+    "itemPrice": 1998000,
+    "gradeInfo": "a-top"
+  },
+  {
+    "itemId": 6725,
+    "itemName": "Sealed Tateossian Ring",
+    "itemPrice": 2180000,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 9454,
+    "itemName": "Sealed Dynasty Ring",
+    "itemPrice": 2688000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 6724,
+    "itemName": "Sealed Tateossian Earring",
+    "itemPrice": 3270000,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 9452,
+    "itemName": "Sealed Dynasty Earring",
+    "itemPrice": 4032000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 6726,
+    "itemName": "Sealed Tateossian Necklace",
+    "itemPrice": 4361000,
+    "gradeInfo": "s"
+  },
+  {
+    "itemId": 9453,
+    "itemName": "Sealed Dynasty Necklace",
+    "itemPrice": 5376000,
+    "gradeInfo": "s80-low"
+  },
+  {
+    "itemId": 15766,
+    "itemName": "Sealed Moirai Ring",
+    "itemPrice": 3710000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 15767,
+    "itemName": "Sealed Moirai Earring",
+    "itemPrice": 5565000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 15768,
+    "itemName": "Sealed Moirai Necklace",
+    "itemPrice": 7420000,
+    "gradeInfo": "s80-top"
+  },
+  {
+    "itemId": 14162,
+    "itemName": "Sealed Vesper Ring",
+    "itemPrice": 5142000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 14160,
+    "itemName": "Sealed Vesper Earring",
+    "itemPrice": 7713000,
+    "gradeInfo": "s84"
+  },
+  {
+    "itemId": 14161,
+    "itemName": "Sealed Vesper Necklace",
+    "itemPrice": 10284000,
+    "gradeInfo": "s84"
+  }
+]

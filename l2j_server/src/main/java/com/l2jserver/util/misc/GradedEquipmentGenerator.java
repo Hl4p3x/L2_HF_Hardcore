@@ -319,14 +319,10 @@ public class GradedEquipmentGenerator {
         gradeItems(allArmor, commonGradeParts());
         gradeItems(allJewels, commonGradeParts());
 
-        List<GradedItem> allItems = new ArrayList<>();
-        allItems.addAll(allWeapon);
-        allItems.addAll(allArmor);
-        allItems.addAll(allJewels);
-
         ObjectMapper objectMapper = new ObjectMapper();
-
-        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_items.json"), allItems);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_weapon.json"), allWeapon);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_armor.json"), allArmor);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_jewels.json"), allJewels);
 
         List<ItemPart> itemParts = categorizedItems.getWeaponAndArmorParts();
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/item_parts.json"), itemParts);

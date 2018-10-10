@@ -21,7 +21,7 @@ public class ItemRecipesDropDataTable {
     }
 
     private void load() {
-        GradedItemsDropDataTable.getInstance().getGradedItemsMap().forEach((gradeInfo, gradedItems) -> {
+        GradedItemsDropDataTable.getInstance().getAllGradedItemsMap().forEach((gradeInfo, gradedItems) -> {
             List<L2RecipeList> recipes = gradedItems
                     .stream()
                     .map(gradedItem -> {

@@ -1,5 +1,6 @@
 package com.l2jserver.gameserver.model.items.scrolls;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.ScrollGrade;
 import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 import com.l2jserver.gameserver.model.items.L2EtcItem;
@@ -43,6 +44,7 @@ public class Scroll implements IIdentifiable {
         return blessed;
     }
 
+    @JsonIgnore
     public boolean isNotBlessed() {
         return !isBlessed();
     }
