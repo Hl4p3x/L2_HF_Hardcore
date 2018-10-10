@@ -15,15 +15,15 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class CraftResourcesData {
+public class CraftResourcesDropDataTable {
 
-    private static final Logger LOG = LoggerFactory.getLogger(CraftResourcesData.class);
+    private static final Logger LOG = LoggerFactory.getLogger(CraftResourcesDropDataTable.class);
 
     private List<CraftResource> resources = new ArrayList<>();
     private Set<Integer> resourceIds = new HashSet<>();
     private Map<ResourceGrade, List<CraftResource>> resourceMap = new HashMap<>();
 
-    public CraftResourcesData() {
+    public CraftResourcesDropDataTable() {
         load();
     }
 
@@ -57,8 +57,8 @@ public class CraftResourcesData {
         return resources.stream().filter(resource -> resourceGrade.contains(resource.getResourceGrade())).collect(Collectors.toList());
     }
 
-    public static CraftResourcesData getInstance() {
-        return CraftResourcesData.SingletonHolder._instance;
+    public static CraftResourcesDropDataTable getInstance() {
+        return CraftResourcesDropDataTable.SingletonHolder._instance;
     }
 
     public Set<Integer> getResourceIds() {
@@ -66,7 +66,7 @@ public class CraftResourcesData {
     }
 
     private static class SingletonHolder {
-        protected static final CraftResourcesData _instance = new CraftResourcesData();
+        protected static final CraftResourcesDropDataTable _instance = new CraftResourcesDropDataTable();
     }
 
 }

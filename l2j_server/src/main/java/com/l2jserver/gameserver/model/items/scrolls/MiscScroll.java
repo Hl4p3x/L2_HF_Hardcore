@@ -36,6 +36,10 @@ public class MiscScroll implements IIdentifiable {
         return blessed;
     }
 
+    public boolean isNotBlessed() {
+        return !isBlessed();
+    }
+
     @Override
     public String toString() {
         return String.format("%s (%s, %s, %s)", name, id, type, blessed);

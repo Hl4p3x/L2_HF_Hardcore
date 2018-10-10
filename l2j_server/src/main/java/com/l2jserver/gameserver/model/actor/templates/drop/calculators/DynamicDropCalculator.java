@@ -1,9 +1,6 @@
 package com.l2jserver.gameserver.model.actor.templates.drop.calculators;
 
-import com.l2jserver.gameserver.datatables.categorized.CraftResourcesData;
-import com.l2jserver.gameserver.datatables.categorized.GradedItemsData;
-import com.l2jserver.gameserver.datatables.categorized.ItemPartsData;
-import com.l2jserver.gameserver.datatables.categorized.ItemRecipesData;
+import com.l2jserver.gameserver.datatables.categorized.*;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.DynamicDropTable;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -22,11 +19,11 @@ public class DynamicDropCalculator {
     }
 
     private void load() {
-        managedItemIds.addAll(GradedItemsData.getInstance().getGradedItemsIds());
-        managedItemIds.addAll(ItemPartsData.getInstance().getItemPartsIds());
-        managedItemIds.addAll(ItemRecipesData.getInstance().getRecipeIds());
-        managedItemIds.addAll(CraftResourcesData.getInstance().getResourceIds());
-        // Add Scrolls
+        managedItemIds.addAll(GradedItemsDropDataTable.getInstance().getGradedItemsIds());
+        managedItemIds.addAll(ItemPartsDropDataTable.getInstance().getItemPartsIds());
+        managedItemIds.addAll(ItemRecipesDropDataTable.getInstance().getRecipeIds());
+        managedItemIds.addAll(CraftResourcesDropDataTable.getInstance().getResourceIds());
+        managedItemIds.addAll(ScrollDropDataTable.getInstance().getScrollIds());
     }
 
     // Add Dynasty Essence, Attribute Stones, Dual Craft Stamp, SA Stones

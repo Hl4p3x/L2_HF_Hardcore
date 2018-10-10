@@ -15,15 +15,15 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class GradedItemsData {
+public class GradedItemsDropDataTable {
 
-    private static final Logger LOG = LoggerFactory.getLogger(GradedItemsData.class);
+    private static final Logger LOG = LoggerFactory.getLogger(GradedItemsDropDataTable.class);
 
     private List<GradedItem> gradedItems = new ArrayList<>();
     private Map<Integer, GradedItem> gradedItemsById = new HashMap<>();
     private Map<GradeInfo, List<GradedItem>> gradedItemsMap = new HashMap<>();
 
-    public GradedItemsData() {
+    public GradedItemsDropDataTable() {
         load();
     }
 
@@ -53,8 +53,8 @@ public class GradedItemsData {
         return Optional.ofNullable(gradedItemsMap).orElse(Collections.emptyMap());
     }
 
-    public static GradedItemsData getInstance() {
-        return GradedItemsData.SingletonHolder._instance;
+    public static GradedItemsDropDataTable getInstance() {
+        return GradedItemsDropDataTable.SingletonHolder._instance;
     }
 
     public Optional<GradedItem> getItemById(int itemId) {
@@ -66,7 +66,7 @@ public class GradedItemsData {
     }
 
     private static class SingletonHolder {
-        protected static final GradedItemsData _instance = new GradedItemsData();
+        protected static final GradedItemsDropDataTable _instance = new GradedItemsDropDataTable();
     }
 
 }

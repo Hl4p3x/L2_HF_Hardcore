@@ -15,15 +15,15 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class ItemPartsData {
+public class ItemPartsDropDataTable {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ItemPartsData.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ItemPartsDropDataTable.class);
 
     private List<ItemPart> itemParts = new ArrayList<>();
     private Set<Integer> itemPartIds = new HashSet<>();
     private Map<GradeInfo, Collection<ItemPart>> itemPartsMap = new HashMap<>();
 
-    public ItemPartsData() {
+    public ItemPartsDropDataTable() {
         load();
     }
 
@@ -35,7 +35,7 @@ public class ItemPartsData {
 
             Multimap<GradeInfo, ItemPart> itemPartMultimap = HashMultimap.create();
             itemParts.forEach(itemPart -> {
-                Optional<GradedItem> gradedItemOption = GradedItemsData.getInstance().getItemById(itemPart.getItemId());
+                Optional<GradedItem> gradedItemOption = GradedItemsDropDataTable.getInstance().getItemById(itemPart.getItemId());
                 if (gradedItemOption.isPresent()) {
                     itemPartMultimap.put(gradedItemOption.get().getGradeInfo(), itemPart);
                 } else {
@@ -58,8 +58,8 @@ public class ItemPartsData {
         return Optional.ofNullable(itemPartsMap.get(gradeInfo)).orElse(Collections.emptyList());
     }
 
-    public static ItemPartsData getInstance() {
-        return ItemPartsData.SingletonHolder._instance;
+    public static ItemPartsDropDataTable getInstance() {
+        return ItemPartsDropDataTable.SingletonHolder._instance;
     }
 
     public Set<Integer> getItemPartsIds() {
@@ -67,7 +67,7 @@ public class ItemPartsData {
     }
 
     private static class SingletonHolder {
-        protected static final ItemPartsData _instance = new ItemPartsData();
+        protected static final ItemPartsDropDataTable _instance = new ItemPartsDropDataTable();
     }
 
 }

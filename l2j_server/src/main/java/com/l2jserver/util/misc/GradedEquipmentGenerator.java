@@ -364,7 +364,14 @@ public class GradedEquipmentGenerator {
 
         List<MiscScroll> miscScrolls = categorizedItems.getResurrectionAndEscapeScrolls().stream().map(MiscScroll::fromItem).collect(Collectors.toList());
 
-        CategorizedScrolls categorizedScrolls = new CategorizedScrolls(weaponScrolls, armorScrolls, miscScrolls);
+        CategorizedScrolls categorizedScrolls = new CategorizedScrolls(
+                weaponScrolls.stream().filter(Scroll::isNotBlessed).collect(Collectors.toList()),
+                weaponScrolls.stream().filter(Scroll::isBlessed).collect(Collectors.toList()),
+                armorScrolls.stream().filter(Scroll::isNotBlessed).collect(Collectors.toList()),
+                armorScrolls.stream().filter(Scroll::isBlessed).collect(Collectors.toList()),
+                miscScrolls.stream().filter(MiscScroll::isNotBlessed).collect(Collectors.toList()),
+                miscScrolls.stream().filter(MiscScroll::isBlessed).collect(Collectors.toList())
+        );
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/scrolls.json"), categorizedScrolls);
     }
 

@@ -272,69 +272,75 @@ mobs:
     overgrade-multiplier: 1.5
   scrolls:
     weapon:
-      normal:
-        d:
+      d:
+        normal:
           chance: 40.0
           count: "1"
-        c:
+        blessed:
+          chance: 5.0
+          count: "1"
+      c:
+        normal:
           chance: 30.0
           count: "1"
-        b:
-          chance: 25.0
-          count: "1"
-        a:
-          chance: 10.0
-          count: "1"
-        s:
-          chance: 5.0
-          count: "1"
-      blessed:
-        d:
-          chance: 5.0
-          count: "1"
-        c:
+        blessed:
           chance: 4.0
           count: "1"
-        b:
+      b:
+        normal:
+          chance: 25.0
+          count: "1"
+        blessed:
           chance: 2.0
           count: "1"
-        a:
+      a:
+        normal:
+          chance: 10.0
+          count: "1"
+        blessed:
           chance: 1.0
           count: "1"
-        s:
+      s:
+        normal:
+          chance: 5.0
+          count: "1"
+        blessed:
           chance: 0.3
           count: "1"
     armor:
-      normal:
-        d:
+      d:
+        normal:
           chance: 60.0
           count: "1-3"
-        c:
-          chance: 40.0
-          count: "1-3"
-        b:
-          chance: 35.0
-          count: "1-2"
-        a:
-          chance: 15.0
-          count: "1-2"
-        s:
-          chance: 8.0
-          count: "1"
-      blessed:
-        d:
+        blessed:
           chance: 5.0
           count: "1"
-        c:
+      c:
+        normal:
+          chance: 40.0
+          count: "1-3"
+        blessed:
           chance: 4.0
           count: "1"
-        b:
+      b:
+        normal:
+          chance: 35.0
+          count: "1-2"
+        blessed:
           chance: 2.0
           count: "1"
-        a:
+      a:
+        normal:
+          chance: 15.0
+          count: "1-2"
+        blessed:
           chance: 1.0
           count: "1"
-        s:
+      s:
+        normal:
+          chance: 8.0
+          count: "1"
+        blessed:
           chance: 0.3
           count: "1"
     misc:
@@ -618,71 +624,78 @@ raid:
     overgrade-multiplier: 1.5
   scrolls:
     weapon:
-      normal:
-        d:
+      d:
+        normal:
           chance: 70.0
           count: "4-20"
-        c:
+        blessed:
+          chance: 50.0
+          count: "2-14"
+      c:
+        normal:
           chance: 60.0
           count: "3-17"
-        b:
-          chance: 55.0
-          count: "2-14"
-        a:
-          chance: 50.0
-          count: "1-10"
-        s:
-          chance: 40.0
-          count: "1-6"
-      blessed:
-        d:
-          chance: 50.0
-          count: "2-14"
-        c:
+        blessed:
           chance: 40.0
           count: "2-10"
-        b:
+      b:
+        normal:
+          chance: 55.0
+          count: "2-14"
+        blessed:
           chance: 30.0
           count: "1-8"
-        a:
+      a:
+        normal:
+          chance: 50.0
+          count: "1-10"
+        blessed:
           chance: 20.0
           count: "1-4"
-        s:
+      s:
+        normal:
+          chance: 40.0
+          count: "1-6"
+        blessed:
           chance: 10.0
           count: "1-2"
     armor:
-      normal:
-        d:
+      d:
+        normal:
           chance: 80.0
           count: "8-40"
-        c:
-          chance: 70.0
-          count: "6-37"
-        b:
-          chance: 65.0
-          count: "4-30"
-        a:
-          chance: 55.0
-          count: "3-25"
-        s:
-          chance: 45.0
-          count: "2-20"
-      blessed:
-        d:
+        blessed:
           chance: 60.0
           count: "3-18"
-        c:
+      c:
+        normal:
+          chance: 70.0
+          count: "6-37"
+        blessed:
           chance: 50.0
           count: "2-14"
-        b:
+      b:
+        normal:
+          chance: 65.0
+          count: "4-30"
+        blessed:
           chance: 40.0
           count: "1-10"
-        a:
+      a:
+        normal:
+          chance: 55.0
+          count: "3-25"
+        blessed:
           chance: 30.0
           count: "1-6"
-        s:
+      s:
+        normal:
+          chance: 45.0
+          count: "2-20"
+        blessed:
           chance: 20.0
           count: "1-3"
+
     misc:
       normal:
         chance: 70.0

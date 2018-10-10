@@ -9,19 +9,19 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class ItemRecipesData {
+public class ItemRecipesDropDataTable {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ItemRecipesData.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ItemRecipesDropDataTable.class);
 
     private Set<Integer> recipeIds = new HashSet<>();
     private Map<GradeInfo, List<L2RecipeList>> recipesByGrade = new HashMap<>();
 
-    public ItemRecipesData() {
+    public ItemRecipesDropDataTable() {
         load();
     }
 
     private void load() {
-        GradedItemsData.getInstance().getGradedItemsMap().forEach((gradeInfo, gradedItems) -> {
+        GradedItemsDropDataTable.getInstance().getGradedItemsMap().forEach((gradeInfo, gradedItems) -> {
             List<L2RecipeList> recipes = gradedItems
                     .stream()
                     .map(gradedItem -> {
@@ -48,8 +48,8 @@ public class ItemRecipesData {
         return recipesByGrade.get(gradeInfo);
     }
 
-    public static ItemRecipesData getInstance() {
-        return ItemRecipesData.SingletonHolder._instance;
+    public static ItemRecipesDropDataTable getInstance() {
+        return ItemRecipesDropDataTable.SingletonHolder._instance;
     }
 
     public Set<Integer> getRecipeIds() {
@@ -57,7 +57,7 @@ public class ItemRecipesData {
     }
 
     private static class SingletonHolder {
-        protected static final ItemRecipesData _instance = new ItemRecipesData();
+        protected static final ItemRecipesDropDataTable _instance = new ItemRecipesDropDataTable();
     }
 
 }
