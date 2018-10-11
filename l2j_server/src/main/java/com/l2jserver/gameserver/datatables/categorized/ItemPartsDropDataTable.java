@@ -14,24 +14,40 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ItemPartsDropDataTable {
 
     private static final Logger LOG = LoggerFactory.getLogger(ItemPartsDropDataTable.class);
 
-    private List<ItemPart> itemParts = new ArrayList<>();
-    private Set<Integer> itemPartIds = new HashSet<>();
-    private Map<GradeInfo, Collection<ItemPart>> itemPartsMap = new HashMap<>();
+    private Set<Integer> allItemPartIds = new HashSet<>();
+    private Map<GradeInfo, List<ItemPart>> weaponPartsMap = new HashMap<>();
+    private Map<GradeInfo, List<ItemPart>> armorPartsMap = new HashMap<>();
+    private Map<GradeInfo, List<ItemPart>> jewelPartsMap = new HashMap<>();
 
     public ItemPartsDropDataTable() {
         load();
     }
 
     private void load() {
+        weaponPartsMap = loadCategory("data/stats/categorized/parts/weapon_parts.json");
+        armorPartsMap = loadCategory("data/stats/categorized/parts/armor_parts.json");
+        jewelPartsMap = loadCategory("data/stats/categorized/parts/jewel_parts.json");
+
+        allItemPartIds = Stream.of(weaponPartsMap, armorPartsMap, jewelPartsMap)
+                .flatMap(map -> map.values().stream().flatMap(Collection::stream))
+                .map(ItemPart::getPartId)
+                .collect(Collectors.toSet());
+
+        LOG.info("Loaded {} item parts", allItemPartIds.size());
+    }
+
+    private Map<GradeInfo, List<ItemPart>> loadCategory(String path) {
         try {
-            File itemPartsFile = new File("data/stats/categorized/item_parts.json");
-            itemParts = new ObjectMapper().readValue(itemPartsFile, new TypeReference<List<ItemPart>>() {
+            File itemPartsFile = new File(path);
+            List<ItemPart> itemParts = new ObjectMapper().readValue(itemPartsFile, new TypeReference<List<ItemPart>>() {
             });
+
 
             Multimap<GradeInfo, ItemPart> itemPartMultimap = HashMultimap.create();
             itemParts.forEach(itemPart -> {
@@ -39,31 +55,39 @@ public class ItemPartsDropDataTable {
                 if (gradedItemOption.isPresent()) {
                     itemPartMultimap.put(gradedItemOption.get().getGradeInfo(), itemPart);
                 } else {
-                    LOG.warn("Part {} is missing graded item and cannot added to grade cache", itemPart);
+                    LOG.warn("Part {} is missing graded item and cannot added to data table", itemPart);
                 }
             });
-            itemPartsMap = itemPartMultimap.asMap();
-            itemPartIds = itemParts.stream().map(ItemPart::getPartId).collect(Collectors.toSet());
-            LOG.info("Loaded {} item parts", itemPartIds.size());
+
+            Map<GradeInfo, List<ItemPart>> itemPartsMap = new HashMap<>();
+            itemPartMultimap.asMap().forEach((key, value) -> {
+                itemPartsMap.put(key, new ArrayList<>(value));
+            });
+
+            return itemPartsMap;
         } catch (IOException e) {
-            throw new IllegalStateException("Could not read graded equipment data: " + e.getMessage());
+            throw new IllegalStateException("Could not read parts data from " + path + ": " + e.getMessage());
         }
     }
 
-    public List<ItemPart> getItemParts() {
-        return itemParts;
+    public List<ItemPart> getWeaponPartsByGradeInfo(GradeInfo gradeInfo) {
+        return weaponPartsMap.getOrDefault(gradeInfo, new ArrayList<>());
     }
 
-    public Collection<ItemPart> getItemPartsByGradeInfo(GradeInfo gradeInfo) {
-        return Optional.ofNullable(itemPartsMap.get(gradeInfo)).orElse(Collections.emptyList());
+    public List<ItemPart> getArmorPartsByGradeInfo(GradeInfo gradeInfo) {
+        return armorPartsMap.getOrDefault(gradeInfo, new ArrayList<>());
+    }
+
+    public List<ItemPart> getJewelPartsByGradeInfo(GradeInfo gradeInfo) {
+        return jewelPartsMap.getOrDefault(gradeInfo, new ArrayList<>());
+    }
+
+    public Set<Integer> getAllItemPartsIds() {
+        return allItemPartIds;
     }
 
     public static ItemPartsDropDataTable getInstance() {
         return ItemPartsDropDataTable.SingletonHolder._instance;
-    }
-
-    public Set<Integer> getItemPartsIds() {
-        return itemPartIds;
     }
 
     private static class SingletonHolder {

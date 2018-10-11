@@ -12,7 +12,7 @@ import java.util.Set;
 public class DynamicDropCalculator {
 
     private Set<Integer> managedItemIds = new HashSet<>();
-    private BasicDropCalculator basicDropCalculator = new BasicDropCalculator();
+    private GeneralDropCalculator generalDropCalculator = new GeneralDropCalculator();
 
     public DynamicDropCalculator() {
         load();
@@ -20,7 +20,7 @@ public class DynamicDropCalculator {
 
     private void load() {
         managedItemIds.addAll(GradedItemsDropDataTable.getInstance().getGradedItemsIds());
-        managedItemIds.addAll(ItemPartsDropDataTable.getInstance().getItemPartsIds());
+        managedItemIds.addAll(ItemPartsDropDataTable.getInstance().getAllItemPartsIds());
         managedItemIds.addAll(ItemRecipesDropDataTable.getInstance().getRecipeIds());
         managedItemIds.addAll(CraftResourcesDropDataTable.getInstance().getResourceIds());
         managedItemIds.addAll(ScrollDropDataTable.getInstance().getScrollIds());
@@ -30,9 +30,9 @@ public class DynamicDropCalculator {
 
     public List<ItemHolder> calculate(L2Character victim) {
         if (victim.isRaid()) {
-            return basicDropCalculator.calculate(victim, DynamicDropTable.getInstance().getAllDynamicDropData().getRaid());
+            return generalDropCalculator.calculate(victim, DynamicDropTable.getInstance().getAllDynamicDropData().getRaid());
         } else {
-            return basicDropCalculator.calculate(victim, DynamicDropTable.getInstance().getAllDynamicDropData().getMobs());
+            return generalDropCalculator.calculate(victim, DynamicDropTable.getInstance().getAllDynamicDropData().getMobs());
         }
     }
 

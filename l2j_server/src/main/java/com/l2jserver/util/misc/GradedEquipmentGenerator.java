@@ -126,7 +126,8 @@ public class GradedEquipmentGenerator {
                                 craftableIds.contains(weapon.getId()) &&
                         !weapon.getCrystalType().equals(CrystalType.NONE))
                 .collect(Collectors.toList());
-        List<L2Armor> craftableArmors = armorsMap.values()
+
+        List<L2Armor> craftableEquipment = armorsMap.values()
                 .stream()
                 .filter(armor ->
                         !BLACKLISTED_EQUIPMENT.contains(armor.getId()) &&
@@ -171,14 +172,26 @@ public class GradedEquipmentGenerator {
         craftableWeapons.addAll(weaponsFromShops);
         craftableWeapons = craftableWeapons.stream().distinct().collect(Collectors.toList());
 
-        craftableArmors.addAll(armorFromShops);
-        craftableArmors = craftableArmors.stream().distinct().collect(Collectors.toList());
+        craftableEquipment.addAll(armorFromShops);
+        craftableEquipment = craftableEquipment.stream().distinct().collect(Collectors.toList());
 
-        List<L2Armor> nonMasterworkArmors = craftableArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY != armor.getType2()).collect(Collectors.toList());
-        List<L2Armor> nonMasterworkJewels = craftableArmors.stream().filter(armor -> L2Item.TYPE2_ACCESSORY == armor.getType2()).collect(Collectors.toList());
+        List<L2Armor> craftableArmor = craftableEquipment.stream().filter(armor -> L2Item.TYPE2_ACCESSORY != armor.getType2()).collect(Collectors.toList());
+        List<L2Armor> craftableJewels = craftableEquipment.stream().filter(armor -> L2Item.TYPE2_ACCESSORY == armor.getType2()).collect(Collectors.toList());
 
-        List<ItemPart> weaponAndArmorParts =
-                Stream.concat(craftableWeapons.stream(), craftableArmors.stream())
+        List<ItemPart> weaponParts =
+                Stream.concat(craftableWeapons.stream(), craftableWeapons.stream())
+                        .map(GradedEquipmentGenerator::findPartByItem)
+                        .filter(Objects::nonNull)
+                        .collect(Collectors.toList());
+
+        List<ItemPart> armorParts =
+                Stream.concat(craftableWeapons.stream(), craftableArmor.stream())
+                        .map(GradedEquipmentGenerator::findPartByItem)
+                        .filter(Objects::nonNull)
+                        .collect(Collectors.toList());
+
+        List<ItemPart> jewelParts =
+                Stream.concat(craftableWeapons.stream(), craftableJewels.stream())
                         .map(GradedEquipmentGenerator::findPartByItem)
                         .filter(Objects::nonNull)
                         .collect(Collectors.toList());
@@ -200,7 +213,7 @@ public class GradedEquipmentGenerator {
                 ).filter(id -> !id.equals(Adena.ID)).collect(Collectors.toSet());
 
         List<L2EtcItem> recipes = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.RECIPE == etcItem.getItemType()).collect(Collectors.toList());
-        Set<Integer> partsIds = CollectionUtil.extract(weaponAndArmorParts, ItemPart::getPartId);
+        Set<Integer> partsIds = CollectionUtil.extract(Stream.of(weaponParts, armorParts, jewelParts).flatMap(List::stream).collect(Collectors.toList()), ItemPart::getPartId);
         Set<Integer> recipeIds = CollectionUtil.extractIds(recipes);
         Set<Integer> blacklistedPartIds = CollectionUtil.extract(blacklistedParts, ItemPart::getPartId);
         Set<Integer> accessoriesPartsIds = CollectionUtil.extract(accessoriesParts, ItemPart::getPartId);
@@ -224,7 +237,7 @@ public class GradedEquipmentGenerator {
         List<L2EtcItem> weaponEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_WP == etcItem.getItemType() || EtcItemType.BLESS_SCRL_ENCHANT_WP == etcItem.getItemType()).collect(Collectors.toList());
         List<L2EtcItem> armorEnchants = etcItemsMap.values().stream().filter(etcItem -> EtcItemType.SCRL_ENCHANT_AM == etcItem.getItemType() || EtcItemType.BLESS_SCRL_ENCHANT_AM == etcItem.getItemType()).collect(Collectors.toList());
 
-        return new CategorizedItems(craftableWeapons, nonMasterworkArmors, nonMasterworkJewels, weaponAndArmorParts, craftMaterials, recipes, weaponEnchants, armorEnchants);
+        return new CategorizedItems(craftableWeapons, craftableArmor, craftableJewels, weaponParts, armorParts, jewelParts, craftMaterials, recipes, weaponEnchants, armorEnchants);
     }
 
     private static ItemPart findPartByItem(L2Item item) {
@@ -324,8 +337,9 @@ public class GradedEquipmentGenerator {
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_armor.json"), allArmor);
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_jewels.json"), allJewels);
 
-        List<ItemPart> itemParts = categorizedItems.getWeaponAndArmorParts();
-        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/item_parts.json"), itemParts);
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/parts/weapon_parts.json"), categorizedItems.getWeaponParts());
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/parts/armor_parts.json"), categorizedItems.getArmorParts());
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/parts/jewel_parts.json"), categorizedItems.getJewelParts());
 
         List<CraftResource> gradedCraftResources = gradeCraftResources(categorizedItems.getCraftResources());
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/craft_resources.json"), gradedCraftResources);

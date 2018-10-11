@@ -19,8 +19,12 @@ public class CategorizedItems {
     private final List<L2Armor> nonMasterworkArmors;
     private final List<L2Armor> nonMasterworkJewels;
 
-    private final List<ItemPart> weaponAndArmorParts;
-    private final List<L2EtcItem> craftMaterials;
+    private final List<ItemPart> weaponParts;
+    private final List<ItemPart> armorParts;
+    private final List<ItemPart> jewelParts;
+
+
+    private final List<L2EtcItem> craftResources;
 
     private final List<L2EtcItem> recipes;
     private final List<L2EtcItem> weaponEnchantScrolls;
@@ -31,18 +35,25 @@ public class CategorizedItems {
     private final List<L2Item> allEquipment;
     private final Set<Integer> allIds;
 
-    public CategorizedItems(List<L2Weapon> nonMasterworkWeapons, List<L2Armor> nonMasterworkArmors,
-                            List<L2Armor> nonMasterworkJewels, List<ItemPart> weaponAndArmorParts,
-                            List<L2EtcItem> craftMaterials, List<L2EtcItem> recipes,
+    public CategorizedItems(List<L2Weapon> nonMasterworkWeapons,
+                            List<L2Armor> nonMasterworkArmors,
+                            List<L2Armor> nonMasterworkJewels,
+                            List<ItemPart> weaponParts,
+                            List<ItemPart> armorParts,
+                            List<ItemPart> jewelParts,
+                            List<L2EtcItem> craftResources, List<L2EtcItem> recipes,
                             List<L2EtcItem> weaponEnchantScrolls, List<L2EtcItem> armorEnchantScrolls) {
         this.nonMasterworkWeapons = nonMasterworkWeapons;
         this.nonMasterworkArmors = nonMasterworkArmors;
         this.nonMasterworkJewels = nonMasterworkJewels;
-        this.weaponAndArmorParts = weaponAndArmorParts;
-        this.craftMaterials = craftMaterials;
+        this.weaponParts = weaponParts;
+        this.armorParts = armorParts;
+        this.jewelParts = jewelParts;
+        this.craftResources = craftResources;
         this.recipes = recipes;
         this.weaponEnchantScrolls = weaponEnchantScrolls;
         this.armorEnchantScrolls = armorEnchantScrolls;
+
         this.resurrectionAndEscapeScrolls = Stream.of(
                 736, // Scroll of Escape
                 1830, // Scroll of Escape: Castle
@@ -59,8 +70,10 @@ public class CategorizedItems {
         allItems.addAll(nonMasterworkWeapons);
         allItems.addAll(nonMasterworkArmors);
         allItems.addAll(nonMasterworkJewels);
-        allItems.addAll(weaponAndArmorParts.stream().map(part -> ItemTable.getInstance().getTemplate(part.getPartId())).collect(Collectors.toList()));
-        allItems.addAll(craftMaterials);
+        allItems.addAll(weaponParts.stream().map(part -> ItemTable.getInstance().getTemplate(part.getPartId())).collect(Collectors.toList()));
+        allItems.addAll(armorParts.stream().map(part -> ItemTable.getInstance().getTemplate(part.getPartId())).collect(Collectors.toList()));
+        allItems.addAll(jewelParts.stream().map(part -> ItemTable.getInstance().getTemplate(part.getPartId())).collect(Collectors.toList()));
+        allItems.addAll(craftResources);
         allItems.addAll(recipes);
         allItems.addAll(weaponEnchantScrolls);
         allItems.addAll(armorEnchantScrolls);
@@ -86,12 +99,20 @@ public class CategorizedItems {
         return nonMasterworkJewels;
     }
 
-    public List<ItemPart> getWeaponAndArmorParts() {
-        return weaponAndArmorParts;
+    public List<ItemPart> getWeaponParts() {
+        return weaponParts;
+    }
+
+    public List<ItemPart> getArmorParts() {
+        return armorParts;
+    }
+
+    public List<ItemPart> getJewelParts() {
+        return jewelParts;
     }
 
     public List<L2EtcItem> getCraftResources() {
-        return craftMaterials;
+        return craftResources;
     }
 
     public List<L2EtcItem> getRecipes() {
