@@ -179,19 +179,19 @@ public class GradedEquipmentGenerator {
         List<L2Armor> craftableJewels = craftableEquipment.stream().filter(armor -> L2Item.TYPE2_ACCESSORY == armor.getType2()).collect(Collectors.toList());
 
         List<ItemPart> weaponParts =
-                Stream.concat(craftableWeapons.stream(), craftableWeapons.stream())
+                craftableWeapons.stream()
                         .map(GradedEquipmentGenerator::findPartByItem)
                         .filter(Objects::nonNull)
                         .collect(Collectors.toList());
 
         List<ItemPart> armorParts =
-                Stream.concat(craftableWeapons.stream(), craftableArmor.stream())
+                craftableArmor.stream()
                         .map(GradedEquipmentGenerator::findPartByItem)
                         .filter(Objects::nonNull)
                         .collect(Collectors.toList());
 
         List<ItemPart> jewelParts =
-                Stream.concat(craftableWeapons.stream(), craftableJewels.stream())
+                craftableJewels.stream()
                         .map(GradedEquipmentGenerator::findPartByItem)
                         .filter(Objects::nonNull)
                         .collect(Collectors.toList());
