@@ -1,7 +1,10 @@
 package com.l2jserver.gameserver.model.items.scrolls;
 
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.ScrollGrade;
+
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.StringJoiner;
 
 public class CategorizedScrolls {
@@ -49,6 +52,26 @@ public class CategorizedScrolls {
 
     public List<MiscScroll> getBlessedMiscScrolls() {
         return blessedMiscScrolls;
+    }
+
+    private Optional<Scroll> findScrollByGrade(List<Scroll> scrolls, ScrollGrade scrollGrade) {
+        return scrolls.stream().filter(scroll -> scroll.getGrade().equals(scrollGrade)).findFirst();
+    }
+
+    public Optional<Scroll> findNormalWeaponScroll(ScrollGrade scrollGrade) {
+        return findScrollByGrade(normalWeaponScrolls, scrollGrade);
+    }
+
+    public Optional<Scroll> findBlessedWeaponScroll(ScrollGrade scrollGrade) {
+        return findScrollByGrade(blessedWeaponScrolls, scrollGrade);
+    }
+
+    public Optional<Scroll> findNormalArmorScroll(ScrollGrade scrollGrade) {
+        return findScrollByGrade(normalArmorScrolls, scrollGrade);
+    }
+
+    public Optional<Scroll> findBlessedArmorScroll(ScrollGrade scrollGrade) {
+        return findScrollByGrade(blessedArmorScrolls, scrollGrade);
     }
 
     @Override

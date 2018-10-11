@@ -26,8 +26,6 @@ public class GeneralDropCalculator {
         GradeInfo gradeInfo = range.get().getGradeInfo();
         List<ItemHolder> drop = new ArrayList<>();
         drop.addAll(equipmentDropCalculator.calculate(gradeInfo, dynamicDropData));
-        drop.addAll(equipmentDropCalculator.calculate(gradeInfo, dynamicDropData));
-        drop.addAll(equipmentDropCalculator.calculate(gradeInfo, dynamicDropData));
         drop.addAll(resourcesDropCalculator.calculate(victim, dynamicDropData));
         drop.addAll(scrollsDropCalculator.calculate(victim, dynamicDropData));
 

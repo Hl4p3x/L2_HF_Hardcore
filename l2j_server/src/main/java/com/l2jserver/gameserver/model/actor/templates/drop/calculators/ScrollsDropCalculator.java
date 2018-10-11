@@ -18,37 +18,61 @@ import com.l2jserver.util.Rnd;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 
 public class ScrollsDropCalculator {
 
     public List<ItemHolder> calculate(L2Character victim, DynamicDropData dynamicDropData) {
-        Optional<ScrollGrade> grade = ScrollGradeRange.byLevel(victim.getLevel());
-        if (!grade.isPresent()) {
+        Optional<ScrollGrade> gradeOptional = ScrollGradeRange.byLevel(victim.getLevel());
+        if (!gradeOptional.isPresent()) {
             return Lists.newArrayList();
         }
 
-        List<ItemHolder> drop = new ArrayList<>();
-
         CategorizedScrolls categorizedScrolls = ScrollDropDataTable.getInstance().getCategorizedScrolls();
 
-        drop.addAll(calculateScrollDropData(
-                categorizedScrolls.getNormalWeaponScrolls(), categorizedScrolls.getBlessedWeaponScrolls(),
-                dynamicDropData.getScrolls().getWeapon().get(grade.get()))
-        );
-        drop.addAll(calculateScrollDropData(
-                categorizedScrolls.getNormalArmorScrolls(), categorizedScrolls.getBlessedArmorScrolls(),
-                dynamicDropData.getScrolls().getArmor().get(grade.get()))
-        );
-        drop.addAll(calculateMiscScrolls(categorizedScrolls, dynamicDropData.getScrolls().getMisc()));
+        ScrollDropData weaponScrollDropData = dynamicDropData.getScrolls().getWeapon().get(gradeOptional.get());
+        ScrollDropData armorScrollDropData = dynamicDropData.getScrolls().getArmor().get(gradeOptional.get());
 
+        List<ItemHolder> drop = new ArrayList<>();
+
+        calculateScrollDrop(
+                categorizedScrolls::findNormalWeaponScroll,
+                gradeOptional.get(),
+                weaponScrollDropData.getNormal()
+        ).ifPresent(drop::add);
+
+        calculateScrollDrop(
+                categorizedScrolls::findBlessedWeaponScroll,
+                gradeOptional.get(),
+                weaponScrollDropData.getBlessed()
+        ).ifPresent(drop::add);
+
+        calculateScrollDrop(
+                categorizedScrolls::findNormalArmorScroll,
+                gradeOptional.get(),
+                armorScrollDropData.getNormal()
+        ).ifPresent(drop::add);
+
+        calculateScrollDrop(
+                categorizedScrolls::findBlessedArmorScroll,
+                gradeOptional.get(),
+                armorScrollDropData.getBlessed()
+        ).ifPresent(drop::add);
+
+        drop.addAll(calculateMiscScrolls(categorizedScrolls, dynamicDropData.getScrolls().getMisc()));
         return drop;
     }
 
-    private List<ItemHolder> calculateScrollDropData(List<Scroll> normalScrolls, List<Scroll> blessedScrolls, ScrollDropData scrollDropData) {
-        List<ItemHolder> drop = new ArrayList<>();
-        calculateSingleScroll(normalScrolls, scrollDropData.getNormal()).ifPresent(drop::add);
-        calculateSingleScroll(blessedScrolls, scrollDropData.getBlessed()).ifPresent(drop::add);
-        return drop;
+    private Optional<ItemHolder> calculateScrollDrop(Function<ScrollGrade, Optional<Scroll>> findScroll, ScrollGrade scrollGrade, ChanceCountPair dropStats) {
+        return findScroll.apply(scrollGrade).flatMap(scroll -> calculateSingleScrollDrop(scroll, dropStats));
+    }
+
+    private Optional<ItemHolder> calculateSingleScrollDrop(Scroll scroll, ChanceCountPair dropStats) {
+        if (Rnd.rollAgainst(dropStats.getChance())) {
+            return Optional.of(new ItemHolder(scroll.getId(), dropStats.getCount().randomWithin()));
+        } else {
+            return Optional.empty();
+        }
     }
 
     private List<ItemHolder> calculateMiscScrolls(CategorizedScrolls categorizedScrolls, MiscScrollStats miscScrollStats) {
@@ -73,19 +97,5 @@ public class ScrollsDropCalculator {
             return Optional.empty();
         }
     }
-
-    private Optional<ItemHolder> calculateSingleScroll(List<Scroll> scrolls, ChanceCountPair chanceCountPair) {
-        Optional<Scroll> randomScrollOption = Rnd.getOneRandom(scrolls);
-        if (!randomScrollOption.isPresent()) {
-            return Optional.empty();
-        }
-
-        if (Rnd.rollAgainst(chanceCountPair.getChance())) {
-            return Optional.of(new ItemHolder(randomScrollOption.get().getId(), chanceCountPair.getCount().randomWithin()));
-        } else {
-            return Optional.empty();
-        }
-    }
-
 
 }
