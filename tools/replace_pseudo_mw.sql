@@ -1,5 +1,6 @@
 UPDATE items SET item_id=2379 WHERE item_id=12172;
 UPDATE items SET item_id=7884 WHERE item_id=11954;
+UPDATE items SET item_id=5313 WHERE item_id=11465;
 UPDATE items SET item_id=5287 WHERE item_id=12227;
 UPDATE items SET item_id=2534 WHERE item_id=11700;
 UPDATE items SET item_id=9224 WHERE item_id=11701;

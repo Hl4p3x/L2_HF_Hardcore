@@ -52,6 +52,7 @@ for file in files_to_process:
 
 hardcoded_common_items = {"12172": "2379",  # Common Item - Avadon Plate Gaiters
                           "11954": "7884",  # Common Item - Inferno Master
+                          "11465": "5313",  # Sealed Gauntlet of Nightmare Masterwork
                           "12227": "5287"}  # Common Item - Sealed Dark Crystal Breastplate
 
 common_to_normal_map = {}
