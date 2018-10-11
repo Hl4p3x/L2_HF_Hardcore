@@ -21,13 +21,13 @@ public class CraftResourcesDropDataTable {
 
     private List<CraftResource> resources = new ArrayList<>();
     private Set<Integer> resourceIds = new HashSet<>();
-    private Map<ResourceGrade, List<CraftResource>> resourceMap = new HashMap<>();
+    private Map<ResourceGrade, List<CraftResource>> resourceMap;
 
     public CraftResourcesDropDataTable() {
         load();
     }
 
-    private void load() {
+    public void load() {
         try {
             File craftResourcesFile = new File("data/stats/categorized/craft_resources.json");
             resources = new ObjectMapper().readValue(craftResourcesFile, new TypeReference<List<CraftResource>>() {
@@ -35,6 +35,7 @@ public class CraftResourcesDropDataTable {
 
             Multimap<ResourceGrade, CraftResource> resourcesMultimap = HashMultimap.create();
             resources.forEach(craftResource -> resourcesMultimap.put(craftResource.getResourceGrade(), craftResource));
+            resourceMap = new HashMap<>();
             resourcesMultimap.asMap().forEach((key, value) -> {
                 resourceMap.put(key, new ArrayList<>(value));
             });

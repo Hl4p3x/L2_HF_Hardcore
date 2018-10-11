@@ -29,7 +29,7 @@ public class ItemPartsDropDataTable {
         load();
     }
 
-    private void load() {
+    public void load() {
         weaponPartsMap = loadCategory("data/stats/categorized/parts/weapon_parts.json");
         armorPartsMap = loadCategory("data/stats/categorized/parts/armor_parts.json");
         jewelPartsMap = loadCategory("data/stats/categorized/parts/jewel_parts.json");

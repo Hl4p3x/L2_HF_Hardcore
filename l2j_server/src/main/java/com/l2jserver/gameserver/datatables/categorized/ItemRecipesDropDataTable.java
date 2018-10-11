@@ -24,7 +24,7 @@ public class ItemRecipesDropDataTable {
         load();
     }
 
-    private void load() {
+    public void load() {
         weaponRecipesByGrade = buildRecipeData(GradedItemsDropDataTable.getInstance().getGradedWeaponsMap());
         armorRecipesByGrade = buildRecipeData(GradedItemsDropDataTable.getInstance().getGradedArmorMap());
         jewelRecipesByGrade = buildRecipeData(GradedItemsDropDataTable.getInstance().getGradedJewelsMap());

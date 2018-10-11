@@ -18,23 +18,11 @@
  */
 package handlers.admincommandhandlers;
 
-import java.io.File;
-import java.util.StringTokenizer;
-
-import javax.script.ScriptException;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.CrestTable;
 import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
-import com.l2jserver.gameserver.data.xml.impl.AdminData;
-import com.l2jserver.gameserver.data.xml.impl.BuyListData;
-import com.l2jserver.gameserver.data.xml.impl.DoorData;
-import com.l2jserver.gameserver.data.xml.impl.EnchantItemData;
-import com.l2jserver.gameserver.data.xml.impl.EnchantItemGroupsData;
-import com.l2jserver.gameserver.data.xml.impl.MultisellData;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
-import com.l2jserver.gameserver.data.xml.impl.TransformData;
+import com.l2jserver.gameserver.data.xml.impl.*;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -43,8 +31,13 @@ import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.templates.drop.calculators.DynamicDropCalculator;
 import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jserver.gameserver.util.Util;
+
+import javax.script.ScriptException;
+import java.io.File;
+import java.util.StringTokenizer;
 
 /**
  * @author NosBit
@@ -75,6 +68,11 @@ public class AdminReload implements IAdminCommandHandler
 			final String type = st.nextToken();
 			switch (type.toLowerCase())
 			{
+                case "dynamic_drop": {
+                    DynamicDropCalculator.getInstance().load();
+                    AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Dynamic Drop Data.");
+                    break;
+                }
 				case "config":
 				{
 					Config.load();

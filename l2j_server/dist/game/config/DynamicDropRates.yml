@@ -350,7 +350,6 @@ mobs:
       blessed:
         chance: 5.0
         count: "1"
----
 raid:
   equipment:
     weapon:

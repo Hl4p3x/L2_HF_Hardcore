@@ -16,18 +16,19 @@ public class ScrollDropDataTable {
 
     private static final Logger LOG = LoggerFactory.getLogger(ScrollDropDataTable.class);
 
-    private Set<Integer> scrollIds = new HashSet<>();
+    private Set<Integer> scrollIds;
     private CategorizedScrolls categorizedScrolls;
 
     public ScrollDropDataTable() {
         load();
     }
 
-    private void load() {
+    public void load() {
         try {
             File itemPartsFile = new File("data/stats/categorized/scrolls.json");
             categorizedScrolls = new ObjectMapper().readValue(itemPartsFile, CategorizedScrolls.class);
 
+            scrollIds = new HashSet<>();
             scrollIds.addAll(CollectionUtil.extractIds(categorizedScrolls.getNormalWeaponScrolls()));
             scrollIds.addAll(CollectionUtil.extractIds(categorizedScrolls.getBlessedWeaponScrolls()));
             scrollIds.addAll(CollectionUtil.extractIds(categorizedScrolls.getNormalArmorScrolls()));

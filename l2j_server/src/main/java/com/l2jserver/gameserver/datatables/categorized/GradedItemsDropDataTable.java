@@ -20,7 +20,6 @@ public class GradedItemsDropDataTable {
 
     private static final Logger LOG = LoggerFactory.getLogger(GradedItemsDropDataTable.class);
 
-    private List<GradedItem> allGradedItems = new ArrayList<>();
     private Map<GradeInfo, List<GradedItem>> allGradedItemsMap = new HashMap<>();
     private Map<Integer, GradedItem> allGradedItemById = new HashMap<>();
 
@@ -35,7 +34,7 @@ public class GradedItemsDropDataTable {
         load();
     }
 
-    private void load() {
+    public void load() {
         List<GradedItem> gradedWeapons = loadGraded("data/stats/categorized/graded_weapon.json");
         gradedWeaponsMap = buildGradeMap(gradedWeapons);
 
@@ -45,6 +44,7 @@ public class GradedItemsDropDataTable {
         List<GradedItem> gradedJewels = loadGraded("data/stats/categorized/graded_jewels.json");
         gradedJewelsMap = buildGradeMap(gradedJewels);
 
+        List<GradedItem> allGradedItems = new ArrayList<>();
         allGradedItems.addAll(gradedWeapons);
         allGradedItems.addAll(gradedArmor);
         allGradedItems.addAll(gradedJewels);
