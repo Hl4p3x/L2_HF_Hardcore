@@ -18,115 +18,23 @@
  */
 package com.l2jserver.gameserver;
 
-import java.awt.Toolkit;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.util.Calendar;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.LogManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.Config;
 import com.l2jserver.Server;
 import com.l2jserver.UPnPService;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
-import com.l2jserver.gameserver.data.sql.impl.AnnouncementsTable;
-import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
-import com.l2jserver.gameserver.data.sql.impl.CharSummonTable;
-import com.l2jserver.gameserver.data.sql.impl.ClanTable;
-import com.l2jserver.gameserver.data.sql.impl.CrestTable;
-import com.l2jserver.gameserver.data.sql.impl.NpcBufferTable;
-import com.l2jserver.gameserver.data.sql.impl.OfflineTradersTable;
-import com.l2jserver.gameserver.data.sql.impl.SummonSkillsTable;
-import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
-import com.l2jserver.gameserver.data.xml.impl.AdminData;
-import com.l2jserver.gameserver.data.xml.impl.ArmorSetsData;
-import com.l2jserver.gameserver.data.xml.impl.BuyListData;
-import com.l2jserver.gameserver.data.xml.impl.CategoryData;
-import com.l2jserver.gameserver.data.xml.impl.ClassListData;
-import com.l2jserver.gameserver.data.xml.impl.DoorData;
-import com.l2jserver.gameserver.data.xml.impl.EnchantItemData;
-import com.l2jserver.gameserver.data.xml.impl.EnchantItemGroupsData;
-import com.l2jserver.gameserver.data.xml.impl.EnchantItemHPBonusData;
-import com.l2jserver.gameserver.data.xml.impl.EnchantItemOptionsData;
-import com.l2jserver.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
-import com.l2jserver.gameserver.data.xml.impl.FishData;
-import com.l2jserver.gameserver.data.xml.impl.FishingMonstersData;
-import com.l2jserver.gameserver.data.xml.impl.FishingRodsData;
-import com.l2jserver.gameserver.data.xml.impl.HennaData;
-import com.l2jserver.gameserver.data.xml.impl.HitConditionBonusData;
-import com.l2jserver.gameserver.data.xml.impl.InitialEquipmentData;
-import com.l2jserver.gameserver.data.xml.impl.InitialShortcutData;
-import com.l2jserver.gameserver.data.xml.impl.KarmaData;
-import com.l2jserver.gameserver.data.xml.impl.MultisellData;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
-import com.l2jserver.gameserver.data.xml.impl.OptionData;
-import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
-import com.l2jserver.gameserver.data.xml.impl.PlayerTemplateData;
-import com.l2jserver.gameserver.data.xml.impl.PlayerXpPercentLostData;
-import com.l2jserver.gameserver.data.xml.impl.RecipeData;
-import com.l2jserver.gameserver.data.xml.impl.SecondaryAuthData;
-import com.l2jserver.gameserver.data.xml.impl.SiegeScheduleData;
-import com.l2jserver.gameserver.data.xml.impl.SkillLearnData;
-import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jserver.gameserver.data.xml.impl.StaticObjectData;
-import com.l2jserver.gameserver.data.xml.impl.TransformData;
-import com.l2jserver.gameserver.data.xml.impl.UIData;
-import com.l2jserver.gameserver.datatables.AugmentationData;
-import com.l2jserver.gameserver.datatables.BotReportTable;
-import com.l2jserver.gameserver.datatables.EventDroplist;
-import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.MerchantPriceConfigTable;
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.data.sql.impl.*;
+import com.l2jserver.gameserver.data.xml.impl.*;
+import com.l2jserver.gameserver.datatables.*;
 import com.l2jserver.gameserver.handler.EffectHandler;
 import com.l2jserver.gameserver.idfactory.IdFactory;
-import com.l2jserver.gameserver.instancemanager.AirShipManager;
-import com.l2jserver.gameserver.instancemanager.AntiFeedManager;
-import com.l2jserver.gameserver.instancemanager.AuctionManager;
-import com.l2jserver.gameserver.instancemanager.BoatManager;
-import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
-import com.l2jserver.gameserver.instancemanager.CastleManager;
-import com.l2jserver.gameserver.instancemanager.CastleManorManager;
-import com.l2jserver.gameserver.instancemanager.ClanHallManager;
-import com.l2jserver.gameserver.instancemanager.CoupleManager;
-import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
-import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
-import com.l2jserver.gameserver.instancemanager.DimensionalRiftManager;
-import com.l2jserver.gameserver.instancemanager.FortManager;
-import com.l2jserver.gameserver.instancemanager.FortSiegeManager;
-import com.l2jserver.gameserver.instancemanager.FourSepulchersManager;
-import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
-import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
-import com.l2jserver.gameserver.instancemanager.GrandBossManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.ItemAuctionManager;
-import com.l2jserver.gameserver.instancemanager.ItemsOnGroundManager;
-import com.l2jserver.gameserver.instancemanager.MailManager;
-import com.l2jserver.gameserver.instancemanager.MapRegionManager;
-import com.l2jserver.gameserver.instancemanager.MercTicketManager;
-import com.l2jserver.gameserver.instancemanager.PetitionManager;
-import com.l2jserver.gameserver.instancemanager.PunishmentManager;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
-import com.l2jserver.gameserver.instancemanager.RaidBossPointsManager;
-import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
-import com.l2jserver.gameserver.instancemanager.SiegeManager;
-import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jserver.gameserver.instancemanager.WalkingManager;
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
+import com.l2jserver.gameserver.instancemanager.*;
 import com.l2jserver.gameserver.model.AutoSpawnHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.PartyMatchRoomList;
 import com.l2jserver.gameserver.model.PartyMatchWaitingList;
+import com.l2jserver.gameserver.model.actor.templates.drop.calculators.DynamicDropCalculator;
 import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.model.entity.TvTManager;
 import com.l2jserver.gameserver.model.events.EventDispatcher;
@@ -143,6 +51,19 @@ import com.l2jserver.mmocore.SelectorThread;
 import com.l2jserver.status.Status;
 import com.l2jserver.util.DeadLockDetector;
 import com.l2jserver.util.IPv4Filter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.awt.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.LogManager;
 
 public final class GameServer
 {
@@ -305,7 +226,13 @@ public final class GameServer
 		FourSepulchersManager.getInstance().init();
 		DimensionalRiftManager.getInstance();
 		RaidBossSpawnManager.getInstance();
-		
+
+		printSection("Dynamic Drop:" + Config.DYNAMIC_LOOT);
+		if (Config.DYNAMIC_LOOT) {
+			DynamicDropCalculator.getInstance().load();
+
+		}
+
 		printSection("Siege");
 		SiegeManager.getInstance().getSieges();
 		CastleManager.getInstance().activateInstances();
