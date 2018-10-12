@@ -793,7 +793,7 @@ public final class Formulas {
         damage -= calculateDmgPenalty(levelDiff, damage);
         damage += calculateDmgBenefit(levelDiff, damage);
 
-        return damage;
+        return Math.max(damage, 1);
     }
 
     private static double calculateDmgBenefit(int levelDiff, double damage) {
@@ -901,7 +901,7 @@ public final class Formulas {
         damage -= calculateDmgPenalty(levelDiff, damage);
         damage += calculateDmgBenefit(levelDiff, damage);
 
-        return damage;
+        return Math.max(damage, 1);
     }
 
     public static final double calcMagicDam(L2CubicInstance attacker, L2Character target, Skill skill, boolean mcrit, byte shld) {
@@ -972,7 +972,7 @@ public final class Formulas {
         damage -= calculateDmgPenalty(levelDiff, damage);
         damage += calculateDmgBenefit(levelDiff, damage);
 
-        return damage;
+        return Math.max(damage, 1);
     }
 
     public static final boolean calcCrit(L2Character attacker, L2Character target) {
@@ -1470,7 +1470,7 @@ public final class Formulas {
             damage *= 3;
             attacker.sendPacket(SystemMessageId.CRITICAL_HIT_MAGIC);
         }
-        return damage;
+        return Math.max(damage, 1);
     }
 
     public static double calculateSkillResurrectRestorePercent(double baseRestorePercent, L2Character caster) {
