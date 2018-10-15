@@ -14,6 +14,11 @@ public class Range {
     public Range() {
     }
 
+    public Range(int value) {
+        this.low = value;
+        this.high = value;
+    }
+
     public Range(int low, int high) {
         this.low = low;
         this.high = high;

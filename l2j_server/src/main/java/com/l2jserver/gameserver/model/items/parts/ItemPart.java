@@ -1,8 +1,9 @@
 package com.l2jserver.gameserver.model.items.parts;
 
 import com.l2jserver.gameserver.datatables.ItemTable;
+import com.l2jserver.gameserver.model.items.interfaces.HasItemId;
 
-public class ItemPart {
+public class ItemPart implements HasItemId {
 
     private int itemId;
     private String itemName;

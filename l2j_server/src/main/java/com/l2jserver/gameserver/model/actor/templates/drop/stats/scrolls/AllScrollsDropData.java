@@ -5,33 +5,42 @@ import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.deseria
 
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.StringJoiner;
 
 public class AllScrollsDropData {
 
     @JsonDeserialize(keyUsing = ScrollGradeKeyDeserializer.class)
-    private Map<ScrollGrade, ScrollDropData> weapon;
+    private Map<ScrollGrade, ScrollDropStats> weapon;
 
     @JsonDeserialize(keyUsing = ScrollGradeKeyDeserializer.class)
-    private Map<ScrollGrade, ScrollDropData> armor;
+    private Map<ScrollGrade, ScrollDropStats> armor;
 
     private MiscScrollStats misc;
 
     public AllScrollsDropData() {
     }
 
-    public AllScrollsDropData(Map<ScrollGrade, ScrollDropData> weapon, Map<ScrollGrade, ScrollDropData> armor, MiscScrollStats misc) {
+    public AllScrollsDropData(Map<ScrollGrade, ScrollDropStats> weapon, Map<ScrollGrade, ScrollDropStats> armor, MiscScrollStats misc) {
         this.weapon = weapon;
         this.armor = armor;
         this.misc = misc;
     }
 
-    public Map<ScrollGrade, ScrollDropData> getWeapon() {
+    public Map<ScrollGrade, ScrollDropStats> getWeapon() {
         return weapon;
     }
 
-    public Map<ScrollGrade, ScrollDropData> getArmor() {
+    public Optional<ScrollDropStats> getWeaponByGrade(ScrollGrade scrollGrade) {
+        return Optional.ofNullable(weapon.get(scrollGrade));
+    }
+
+    public Map<ScrollGrade, ScrollDropStats> getArmor() {
         return armor;
+    }
+
+    public Optional<ScrollDropStats> getArmorByGrade(ScrollGrade scrollGrade) {
+        return Optional.ofNullable(armor.get(scrollGrade));
     }
 
     public MiscScrollStats getMisc() {

@@ -1,49 +1,50 @@
 package com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.ChanceCountPair;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.deserializer.GradeInfoKeyDeserializer;
 
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.StringJoiner;
 
-public class EquipmentDropData {
+public class EquipmentDropStats {
 
     @JsonDeserialize(keyUsing = GradeInfoKeyDeserializer.class)
-    private Map<GradeInfo, ChanceCountPair> weapon;
+    private Map<GradeInfo, DropStats> weapon;
 
     @JsonDeserialize(keyUsing = GradeInfoKeyDeserializer.class)
-    private Map<GradeInfo, ChanceCountPair> armor;
+    private Map<GradeInfo, DropStats> armor;
 
     @JsonDeserialize(keyUsing = GradeInfoKeyDeserializer.class)
-    private Map<GradeInfo, ChanceCountPair> jewels;
+    private Map<GradeInfo, DropStats> jewels;
 
-    public EquipmentDropData() {
+    public EquipmentDropStats() {
     }
 
-    public EquipmentDropData(Map<GradeInfo, ChanceCountPair> weapon, Map<GradeInfo, ChanceCountPair> armor, Map<GradeInfo, ChanceCountPair> jewels) {
+    public EquipmentDropStats(Map<GradeInfo, DropStats> weapon, Map<GradeInfo, DropStats> armor, Map<GradeInfo, DropStats> jewels) {
         this.weapon = weapon;
         this.armor = armor;
         this.jewels = jewels;
     }
 
-    public Map<GradeInfo, ChanceCountPair> getWeapon() {
-        return weapon;
+    public Optional<DropStats> getWeapon(GradeInfo gradeInfo) {
+        return Optional.ofNullable(weapon.get(gradeInfo));
     }
 
-    public Map<GradeInfo, ChanceCountPair> getArmor() {
-        return armor;
+    public Optional<DropStats> getArmor(GradeInfo gradeInfo) {
+        return Optional.ofNullable(armor.get(gradeInfo));
     }
 
-    public Map<GradeInfo, ChanceCountPair> getJewels() {
-        return jewels;
+    public Optional<DropStats> getJewels(GradeInfo gradeInfo) {
+        return Optional.ofNullable(jewels.get(gradeInfo));
     }
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", EquipmentDropData.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", EquipmentDropStats.class.getSimpleName() + "[", "]")
                 .add(Objects.toString(weapon))
                 .add(Objects.toString(armor))
                 .add(Objects.toString(jewels))

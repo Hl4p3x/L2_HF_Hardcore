@@ -1,7 +1,7 @@
 package com.l2jserver.gameserver.model.actor.templates.drop.stats;
 
-import com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment.EquipmentDropData;
-import com.l2jserver.gameserver.model.actor.templates.drop.stats.resources.ResourceDropData;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment.EquipmentDropStats;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.resources.ResourceDropStats;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.AllScrollsDropData;
 
 import java.util.Objects;
@@ -9,16 +9,16 @@ import java.util.StringJoiner;
 
 public class DynamicDropData {
 
-    private EquipmentDropData equipment;
-    private EquipmentDropData parts;
-    private EquipmentDropData recipes;
-    private ResourceDropData resources;
+    private EquipmentDropStats equipment;
+    private EquipmentDropStats parts;
+    private EquipmentDropStats recipes;
+    private ResourceDropStats resources;
     private AllScrollsDropData scrolls;
 
     public DynamicDropData() {
     }
 
-    public DynamicDropData(EquipmentDropData equipment, EquipmentDropData parts, EquipmentDropData recipes, ResourceDropData resources, AllScrollsDropData scrolls) {
+    public DynamicDropData(EquipmentDropStats equipment, EquipmentDropStats parts, EquipmentDropStats recipes, ResourceDropStats resources, AllScrollsDropData scrolls) {
         this.equipment = equipment;
         this.parts = parts;
         this.recipes = recipes;
@@ -26,19 +26,19 @@ public class DynamicDropData {
         this.scrolls = scrolls;
     }
 
-    public EquipmentDropData getEquipment() {
+    public EquipmentDropStats getEquipment() {
         return equipment;
     }
 
-    public EquipmentDropData getParts() {
+    public EquipmentDropStats getParts() {
         return parts;
     }
 
-    public EquipmentDropData getRecipes() {
+    public EquipmentDropStats getRecipes() {
         return recipes;
     }
 
-    public ResourceDropData getResources() {
+    public ResourceDropStats getResources() {
         return resources;
     }
 

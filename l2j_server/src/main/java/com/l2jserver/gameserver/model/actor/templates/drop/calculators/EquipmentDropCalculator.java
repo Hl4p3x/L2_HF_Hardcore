@@ -5,7 +5,7 @@ import com.l2jserver.gameserver.datatables.categorized.ItemPartsDropDataTable;
 import com.l2jserver.gameserver.datatables.categorized.ItemRecipesDropDataTable;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.DynamicDropData;
-import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.ChanceCountPair;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.items.graded.GradeCategory;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
@@ -79,7 +79,7 @@ public class EquipmentDropCalculator {
         return drop;
     }
 
-    private Optional<ItemHolder> calculateRecipesDrop(List<L2RecipeList> itemsByGradeInfo, ChanceCountPair dropStats) {
+    private Optional<ItemHolder> calculateRecipesDrop(List<L2RecipeList> itemsByGradeInfo, DropStats dropStats) {
         Optional<L2RecipeList> part = Rnd.getOneRandom(itemsByGradeInfo);
         if (part.isPresent() && Rnd.rollAgainst(dropStats.getChance())) {
             return Optional.of(new ItemHolder(part.get().getRecipeId(), dropStats.getCount().randomWithin()));
@@ -88,7 +88,7 @@ public class EquipmentDropCalculator {
         }
     }
 
-    private Optional<ItemHolder> calculatePartsDrop(List<ItemPart> parts, ChanceCountPair dropStats) {
+    private Optional<ItemHolder> calculatePartsDrop(List<ItemPart> parts, DropStats dropStats) {
         Optional<ItemPart> part = Rnd.getOneRandom(parts);
         if (part.isPresent() && Rnd.rollAgainst(dropStats.getChance())) {
             return Optional.of(new ItemHolder(part.get().getPartId(), dropStats.getCount().randomWithin()));
@@ -105,25 +105,25 @@ public class EquipmentDropCalculator {
         return gradedItems;
     }
 
-    private ChanceCountPair findChanceCountByGradeInfo(GradeInfo gradeInfo, Map<GradeInfo, ChanceCountPair> chanceCountPairs) {
-        ChanceCountPair chanceCountPair = chanceCountPairs.get(gradeInfo);
-        if (chanceCountPair == null && gradeInfo.getCategory() != GradeCategory.ALL) {
+    private DropStats findChanceCountByGradeInfo(GradeInfo gradeInfo, Map<GradeInfo, DropStats> DropStatss) {
+        DropStats DropStats = DropStatss.get(gradeInfo);
+        if (DropStats == null && gradeInfo.getCategory() != GradeCategory.ALL) {
             LOG.debug("Could not find drop stats for {}, trying to search for All category", gradeInfo);
-            chanceCountPair = chanceCountPairs.get(new GradeInfo(gradeInfo.getGrade(), GradeCategory.ALL));
+            DropStats = DropStatss.get(new GradeInfo(gradeInfo.getGrade(), GradeCategory.ALL));
         }
-        return chanceCountPair;
+        return DropStats;
     }
 
-    private List<ItemHolder> calculateEquipmentDrop(GradeInfo gradeInfo, List<GradedItem> gradedItems, ChanceCountPair chanceCountPair) {
-        if (chanceCountPair == null || gradedItems.isEmpty()) {
+    private List<ItemHolder> calculateEquipmentDrop(GradeInfo gradeInfo, List<GradedItem> gradedItems, DropStats DropStats) {
+        if (DropStats == null || gradedItems.isEmpty()) {
             LOG.warn("Skipping drop calculation for grade {} because there was drop no chances or items found", gradeInfo);
             return new ArrayList<>();
         }
 
         List<ItemHolder> drop = new ArrayList<>();
-        Collection<GradedItem> randomItems = Rnd.getFewRandom(gradedItems, chanceCountPair.getCount().randomWithin());
+        Collection<GradedItem> randomItems = Rnd.getFewRandom(gradedItems, DropStats.getCount().randomWithin());
         for (GradedItem item : randomItems) {
-            if (Rnd.rollAgainst(chanceCountPair.getChance())) {
+            if (Rnd.rollAgainst(DropStats.getChance())) {
                 drop.add(new ItemHolder(item.getItemId(), 1));
             }
         }

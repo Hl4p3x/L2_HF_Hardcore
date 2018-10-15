@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvider;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
 import com.l2jserver.gameserver.model.items.parts.ItemPart;
@@ -16,7 +17,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class ItemPartsDropDataTable {
+public class ItemPartsDropDataTable implements EquipmentProvider<ItemPart> {
 
     private static final Logger LOG = LoggerFactory.getLogger(ItemPartsDropDataTable.class);
 
@@ -70,15 +71,15 @@ public class ItemPartsDropDataTable {
         }
     }
 
-    public List<ItemPart> getWeaponPartsByGradeInfo(GradeInfo gradeInfo) {
+    public List<ItemPart> getWeaponsByGrade(GradeInfo gradeInfo) {
         return weaponPartsMap.getOrDefault(gradeInfo, new ArrayList<>());
     }
 
-    public List<ItemPart> getArmorPartsByGradeInfo(GradeInfo gradeInfo) {
+    public List<ItemPart> getArmorByGrade(GradeInfo gradeInfo) {
         return armorPartsMap.getOrDefault(gradeInfo, new ArrayList<>());
     }
 
-    public List<ItemPart> getJewelPartsByGradeInfo(GradeInfo gradeInfo) {
+    public List<ItemPart> getJewelsByGrade(GradeInfo gradeInfo) {
         return jewelPartsMap.getOrDefault(gradeInfo, new ArrayList<>());
     }
 

@@ -1,10 +1,11 @@
 package com.l2jserver.gameserver.model.items.graded;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.l2jserver.gameserver.model.items.interfaces.HasItemId;
 
-public class GradedItem {
+public class GradedItem implements HasItemId {
 
-    private Integer itemId;
+    private int itemId;
     private String itemName;
     private int itemPrice;
     @JsonIgnore
@@ -14,7 +15,7 @@ public class GradedItem {
     public GradedItem() {
     }
 
-    public GradedItem(Integer itemId, String itemName, int itemPrice, int itemSlot, GradeInfo gradeInfo) {
+    public GradedItem(int itemId, String itemName, int itemPrice, int itemSlot, GradeInfo gradeInfo) {
         this.itemId = itemId;
         this.itemName = itemName;
         this.itemPrice = itemPrice;
@@ -22,11 +23,12 @@ public class GradedItem {
         this.gradeInfo = gradeInfo;
     }
 
+
     public int getItemSlot() {
         return itemSlot;
     }
 
-    public Integer getItemId() {
+    public int getItemId() {
         return itemId;
     }
 

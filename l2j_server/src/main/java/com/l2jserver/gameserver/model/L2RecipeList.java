@@ -18,10 +18,12 @@
  */
 package com.l2jserver.gameserver.model;
 
+import com.l2jserver.gameserver.model.items.interfaces.HasItemId;
+
 /**
  * This class describes a Recipe used by Dwarf to craft Item. All L2RecipeList are made of L2RecipeInstance (1 line of the recipe : Item-Quantity needed).
  */
-public class L2RecipeList
+public class L2RecipeList implements HasItemId
 {
 	/** The table containing all L2RecipeInstance (1 line of the recipe : Item-Quantity needed) of the L2RecipeList */
 	private L2RecipeInstance[] _recipes;

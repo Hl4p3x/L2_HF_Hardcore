@@ -5,15 +5,15 @@ import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class MiscScrollStats {
+public class ScrollDropStats {
 
     private DropStats normal;
     private DropStats blessed;
 
-    public MiscScrollStats() {
+    public ScrollDropStats() {
     }
 
-    public MiscScrollStats(DropStats normal, DropStats blessed) {
+    public ScrollDropStats(DropStats normal, DropStats blessed) {
         this.normal = normal;
         this.blessed = blessed;
     }
@@ -28,7 +28,7 @@ public class MiscScrollStats {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", MiscScrollStats.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", ScrollDropStats.class.getSimpleName() + "[", "]")
                 .add(Objects.toString(normal))
                 .add(Objects.toString(blessed))
                 .toString();

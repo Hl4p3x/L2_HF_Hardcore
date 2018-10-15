@@ -25,13 +25,13 @@ public class ResourcesDropCalculator {
 
         List<ItemHolder> drop = new ArrayList<>();
         for (ResourceGrade resourceGrade : resourceGrades) {
-            ResourceDropStats chanceCountPair = dynamicDropData.getResources().getDrop().get(resourceGrade);
+            ResourceDropStats DropStats = dynamicDropData.getResources().getDrop().get(resourceGrade);
             List<CraftResource> resources = CraftResourcesDropDataTable.getInstance().getResourcesByGrade(resourceGrade);
-            List<CraftResource> randomResources = Rnd.getFewRandom(resources, chanceCountPair.getStacks().randomWithin());
+            List<CraftResource> randomResources = Rnd.getFewRandom(resources, DropStats.getStacks().randomWithin());
 
             for (CraftResource craftResource : randomResources) {
-                if (Rnd.rollAgainst(chanceCountPair.getChance())) {
-                    drop.add(new ItemHolder(craftResource.getId(), chanceCountPair.getCount().randomWithin()));
+                if (Rnd.rollAgainst(DropStats.getChance())) {
+                    drop.add(new ItemHolder(craftResource.getId(), DropStats.getCount().randomWithin()));
                 }
             }
         }

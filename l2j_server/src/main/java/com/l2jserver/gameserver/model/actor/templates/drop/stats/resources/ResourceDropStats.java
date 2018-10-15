@@ -1,44 +1,35 @@
 package com.l2jserver.gameserver.model.actor.templates.drop.stats.resources;
 
-import com.l2jserver.gameserver.model.actor.templates.drop.Range;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
+import com.l2jserver.gameserver.model.items.craft.ResourceGrade;
 
+import java.util.Map;
 import java.util.Objects;
 import java.util.StringJoiner;
 
 public class ResourceDropStats {
 
-    private Range stacks;
-    private Double chance;
-    private Range count;
+    private Map<ResourceGrade, DropStats> drop;
 
     public ResourceDropStats() {
     }
 
-    public ResourceDropStats(Range stacks, Double chance, Range count) {
-        this.stacks = stacks;
-        this.chance = chance;
-        this.count = count;
+    public ResourceDropStats(Map<ResourceGrade, DropStats> drop) {
+        this.drop = drop;
     }
 
-    public Range getStacks() {
-        return stacks;
+    public Map<ResourceGrade, DropStats> getDrop() {
+        return drop;
     }
 
-    public Double getChance() {
-        return chance;
-    }
-
-    public Range getCount() {
-        return count;
+    public DropStats getDropByResourceGrade(ResourceGrade resourceGrade) {
+        return drop.getOrDefault(resourceGrade, DropStats.empty());
     }
 
     @Override
     public String toString() {
         return new StringJoiner(", ", ResourceDropStats.class.getSimpleName() + "[", "]")
-                .add(Objects.toString(stacks))
-                .add(Objects.toString(chance))
-                .add(Objects.toString(count))
+                .add(Objects.toString(drop))
                 .toString();
     }
-
 }

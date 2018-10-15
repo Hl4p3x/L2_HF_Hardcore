@@ -1,6 +1,7 @@
 package com.l2jserver.gameserver.datatables.categorized;
 
 import com.l2jserver.gameserver.data.xml.impl.RecipeData;
+import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvider;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
@@ -11,7 +12,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class ItemRecipesDropDataTable {
+public class ItemRecipesDropDataTable implements EquipmentProvider<L2RecipeList> {
 
     private static final Logger LOG = LoggerFactory.getLogger(ItemRecipesDropDataTable.class);
 
@@ -66,15 +67,15 @@ public class ItemRecipesDropDataTable {
         return recipesByGrade;
     }
 
-    public List<L2RecipeList> getWeaponRecipesByGradeInfo(GradeInfo gradeInfo) {
+    public List<L2RecipeList> getWeaponsByGrade(GradeInfo gradeInfo) {
         return weaponRecipesByGrade.getOrDefault(gradeInfo, new ArrayList<>());
     }
 
-    public List<L2RecipeList> getArmorRecipesByGrade(GradeInfo gradeInfo) {
+    public List<L2RecipeList> getArmorByGrade(GradeInfo gradeInfo) {
         return armorRecipesByGrade.getOrDefault(gradeInfo, new ArrayList<>());
     }
 
-    public List<L2RecipeList> getJewelRecipesByGrade(GradeInfo gradeInfo) {
+    public List<L2RecipeList> getJewelsByGrade(GradeInfo gradeInfo) {
         return jewelRecipesByGrade.getOrDefault(gradeInfo, new ArrayList<>());
     }
 
