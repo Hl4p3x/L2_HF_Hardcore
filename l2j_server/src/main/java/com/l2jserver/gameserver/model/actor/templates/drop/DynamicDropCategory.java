@@ -2,6 +2,7 @@ package com.l2jserver.gameserver.model.actor.templates.drop;
 
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import java.util.StringJoiner;
@@ -25,6 +26,10 @@ public class DynamicDropCategory {
 
     public DropStats getStats() {
         return stats;
+    }
+
+    public static DynamicDropCategory empty() {
+        return new DynamicDropCategory(new HashSet<>(), DropStats.empty());
     }
 
     @Override

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 public class CategorizedScrolls {
 
@@ -56,6 +57,26 @@ public class CategorizedScrolls {
 
     private Optional<Scroll> findScrollByGrade(List<Scroll> scrolls, ScrollGrade scrollGrade) {
         return scrolls.stream().filter(scroll -> scroll.getGrade().equals(scrollGrade)).findFirst();
+    }
+
+    private List<Scroll> findAllScrollsByGrade(List<Scroll> scrolls, ScrollGrade scrollGrade) {
+        return scrolls.stream().filter(scroll -> scroll.getGrade().equals(scrollGrade)).collect(Collectors.toList());
+    }
+
+    public List<Scroll> findAllNormalWeaponScroll(ScrollGrade scrollGrade) {
+        return findAllScrollsByGrade(normalWeaponScrolls, scrollGrade);
+    }
+
+    public List<Scroll> findAllBlessedWeaponScroll(ScrollGrade scrollGrade) {
+        return findAllScrollsByGrade(blessedWeaponScrolls, scrollGrade);
+    }
+
+    public List<Scroll> findAllNormalArmorScroll(ScrollGrade scrollGrade) {
+        return findAllScrollsByGrade(normalArmorScrolls, scrollGrade);
+    }
+
+    public List<Scroll> findAllBlessedArmorScroll(ScrollGrade scrollGrade) {
+        return findAllScrollsByGrade(blessedArmorScrolls, scrollGrade);
     }
 
     public Optional<Scroll> findNormalWeaponScroll(ScrollGrade scrollGrade) {

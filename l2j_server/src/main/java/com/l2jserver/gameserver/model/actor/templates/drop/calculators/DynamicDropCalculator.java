@@ -42,9 +42,9 @@ public class DynamicDropCalculator {
 
     public List<ItemHolder> calculate(L2Character victim) {
         if (victim.isRaid()) {
-            return generalDropCalculator.calculate(victim, DynamicDropTable.getInstance().getAllDynamicDropData().getRaid());
+            return generalDropCalculator.calculate(DynamicDropTable.getInstance().getDynamicRaidDropData(victim.getLevel()));
         } else {
-            return generalDropCalculator.calculate(victim, DynamicDropTable.getInstance().getAllDynamicDropData().getMobs());
+            return generalDropCalculator.calculate(DynamicDropTable.getInstance().getDynamicMobDropData(victim.getLevel()));
         }
     }
 

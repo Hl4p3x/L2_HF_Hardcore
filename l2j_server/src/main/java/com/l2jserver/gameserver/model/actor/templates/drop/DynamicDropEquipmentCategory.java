@@ -18,6 +18,10 @@ public class DynamicDropEquipmentCategory {
         this.jewels = jewels;
     }
 
+    public static DynamicDropEquipmentCategory empty() {
+        return new DynamicDropEquipmentCategory(DynamicDropCategory.empty(), DynamicDropCategory.empty(), DynamicDropCategory.empty());
+    }
+
     public DynamicDropCategory getWeapons() {
         return weapons;
     }

@@ -26,6 +26,10 @@ public class ScrollDropStats {
         return blessed;
     }
 
+    public static ScrollDropStats empty() {
+        return new ScrollDropStats(DropStats.empty(), DropStats.empty());
+    }
+
     @Override
     public String toString() {
         return new StringJoiner(", ", ScrollDropStats.class.getSimpleName() + "[", "]")

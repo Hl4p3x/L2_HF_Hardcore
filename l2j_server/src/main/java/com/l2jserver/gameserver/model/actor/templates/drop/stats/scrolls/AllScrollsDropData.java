@@ -5,7 +5,6 @@ import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.deseria
 
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.StringJoiner;
 
 public class AllScrollsDropData {
@@ -31,16 +30,16 @@ public class AllScrollsDropData {
         return weapon;
     }
 
-    public Optional<ScrollDropStats> getWeaponByGrade(ScrollGrade scrollGrade) {
-        return Optional.ofNullable(weapon.get(scrollGrade));
+    public ScrollDropStats getWeaponByGrade(ScrollGrade scrollGrade) {
+        return weapon.getOrDefault(scrollGrade, ScrollDropStats.empty());
     }
 
     public Map<ScrollGrade, ScrollDropStats> getArmor() {
         return armor;
     }
 
-    public Optional<ScrollDropStats> getArmorByGrade(ScrollGrade scrollGrade) {
-        return Optional.ofNullable(armor.get(scrollGrade));
+    public ScrollDropStats getArmorByGrade(ScrollGrade scrollGrade) {
+        return armor.getOrDefault(scrollGrade, ScrollDropStats.empty());
     }
 
     public MiscScrollStats getMisc() {

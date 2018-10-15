@@ -16,6 +16,10 @@ public class DynamicDropScrollCategory {
         this.blessed = blessed;
     }
 
+    public static DynamicDropScrollCategory empty() {
+        return new DynamicDropScrollCategory(DynamicDropCategory.empty(), DynamicDropCategory.empty());
+    }
+
     public DynamicDropCategory getNormal() {
         return normal;
     }
