@@ -1,6 +1,7 @@
 package com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.GradeInfoHelper;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.deserializer.GradeInfoKeyDeserializer;
@@ -31,15 +32,15 @@ public class EquipmentDropStats {
     }
 
     public Optional<DropStats> getWeapon(GradeInfo gradeInfo) {
-        return Optional.ofNullable(weapon.get(gradeInfo));
+        return GradeInfoHelper.findByGradeInfo(gradeInfo, weapon);
     }
 
     public Optional<DropStats> getArmor(GradeInfo gradeInfo) {
-        return Optional.ofNullable(armor.get(gradeInfo));
+        return GradeInfoHelper.findByGradeInfo(gradeInfo, armor);
     }
 
     public Optional<DropStats> getJewels(GradeInfo gradeInfo) {
-        return Optional.ofNullable(jewels.get(gradeInfo));
+        return GradeInfoHelper.findByGradeInfo(gradeInfo, jewels);
     }
 
     @Override
