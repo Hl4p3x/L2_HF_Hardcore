@@ -227,10 +227,9 @@ public final class GameServer
 		DimensionalRiftManager.getInstance();
 		RaidBossSpawnManager.getInstance();
 
-		printSection("Dynamic Drop:" + Config.DYNAMIC_LOOT);
+		printSection("Dynamic Drop : " + Config.DYNAMIC_LOOT);
 		if (Config.DYNAMIC_LOOT) {
-			DynamicDropCalculator.getInstance().load();
-
+			DynamicDropCalculator.getInstance();
 		}
 
 		printSection("Siege");

@@ -4,10 +4,12 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvider;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
 import com.l2jserver.gameserver.model.items.parts.ItemPart;
+import com.l2jserver.gameserver.model.items.type.CrystalType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -55,7 +57,7 @@ public class ItemPartsDropDataTable implements EquipmentProvider<ItemPart> {
                 Optional<GradedItem> gradedItemOption = GradedItemsDropDataTable.getInstance().getItemById(itemPart.getItemId());
                 if (gradedItemOption.isPresent()) {
                     itemPartMultimap.put(gradedItemOption.get().getGradeInfo(), itemPart);
-                } else {
+                } else if (ItemTable.getInstance().getTemplate(itemPart.getItemId()).getCrystalType() != CrystalType.NONE) {
                     LOG.warn("Part {} is missing graded item and cannot added to data table", itemPart);
                 }
             });

@@ -10,7 +10,7 @@ public class DynamicDropGradeData {
     private DynamicDropEquipmentCategory parts;
     private DynamicDropEquipmentCategory recipes;
 
-    private List<DynamicDropCategory> resources;
+    private List<DynamicDropResourcesCategory> resources;
     private DynamicDropScrollCategory weaponScrolls;
     private DynamicDropScrollCategory armorScrolls;
     private DynamicDropScrollCategory miscScrolls;
@@ -18,7 +18,7 @@ public class DynamicDropGradeData {
     public DynamicDropGradeData() {
     }
 
-    public DynamicDropGradeData(DynamicDropEquipmentCategory equipment, DynamicDropEquipmentCategory parts, DynamicDropEquipmentCategory recipes, List<DynamicDropCategory> resources, DynamicDropScrollCategory weaponScrolls, DynamicDropScrollCategory armorScrolls, DynamicDropScrollCategory miscScrolls) {
+    public DynamicDropGradeData(DynamicDropEquipmentCategory equipment, DynamicDropEquipmentCategory parts, DynamicDropEquipmentCategory recipes, List<DynamicDropResourcesCategory> resources, DynamicDropScrollCategory weaponScrolls, DynamicDropScrollCategory armorScrolls, DynamicDropScrollCategory miscScrolls) {
         this.equipment = equipment;
         this.parts = parts;
         this.recipes = recipes;
@@ -40,7 +40,7 @@ public class DynamicDropGradeData {
         return recipes;
     }
 
-    public List<DynamicDropCategory> getResources() {
+    public List<DynamicDropResourcesCategory> getResources() {
         return resources;
     }
 

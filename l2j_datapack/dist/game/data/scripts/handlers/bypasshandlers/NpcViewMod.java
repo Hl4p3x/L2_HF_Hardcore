@@ -18,6 +18,7 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.*;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -30,6 +31,8 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.HtmlUtil;
 import com.l2jserver.gameserver.util.Util;
 import handlers.bypasshandlers.npcviewmod.DropListButtonsView;
+import handlers.bypasshandlers.npcviewmod.DropView;
+import handlers.bypasshandlers.npcviewmod.DynamicDropView;
 import handlers.bypasshandlers.npcviewmod.RegularDropView;
 
 import java.util.*;
@@ -48,6 +51,7 @@ public class NpcViewMod implements IBypassHandler
 	};
 
 	private static final RegularDropView REGULAR_DROP_VIEW = new RegularDropView();
+	private static final DynamicDropView DYNAMIC_DROP_VIEW = new DynamicDropView();
 
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character bypassOrigin)
@@ -335,7 +339,14 @@ public class NpcViewMod implements IBypassHandler
 	}
 
 	public static void sendNpcDropList(L2PcInstance activeChar, L2Npc npc, DropListScope dropListScope, int page) {
-		Optional<String> htmlOptional = REGULAR_DROP_VIEW.renderHtml(activeChar, npc, dropListScope, page);
+		DropView dropView;
+		if (Config.DYNAMIC_LOOT) {
+			dropView = DYNAMIC_DROP_VIEW;
+		} else {
+			dropView = REGULAR_DROP_VIEW;
+		}
+
+		Optional<String> htmlOptional = dropView.render(activeChar, npc, dropListScope, page);
 		htmlOptional.ifPresent(html -> Util.sendCBHtml(activeChar, html));
 	}
 

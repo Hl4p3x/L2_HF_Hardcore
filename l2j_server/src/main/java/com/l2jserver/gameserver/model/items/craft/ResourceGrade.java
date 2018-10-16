@@ -2,6 +2,7 @@ package com.l2jserver.gameserver.model.items.craft;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.l2jserver.util.StringUtil;
 
 public enum ResourceGrade {
 
@@ -15,6 +16,10 @@ public enum ResourceGrade {
     @JsonValue
     public String asString() {
         return name().toLowerCase();
+    }
+
+    public String toString() {
+        return StringUtil.capitalize(name());
     }
 
 }

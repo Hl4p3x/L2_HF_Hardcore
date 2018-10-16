@@ -51,10 +51,6 @@ public class CollectionUtil {
         return items.stream().map(extractor::apply).collect(Collectors.toSet());
     }
 
-    public static <T> void addIfPresent(Collection<T> items, Optional<T> item) {
-        item.ifPresent(items::add);
-    }
-
     public static <T> HeadTail<T> beheaded(Collection<T> collection) {
         if (collection.isEmpty()) {
             return HeadTail.empty();

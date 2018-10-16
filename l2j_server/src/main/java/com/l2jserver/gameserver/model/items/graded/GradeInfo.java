@@ -64,7 +64,7 @@ public class GradeInfo {
 
     @Override
     public String toString() {
-        return String.format("GradeInfo[%s, %s]", grade, category);
+        return category + " " + grade;
     }
 
     @JsonValue

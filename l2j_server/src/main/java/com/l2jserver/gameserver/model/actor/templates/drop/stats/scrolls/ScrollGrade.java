@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ScrollGrade {
 
-    UNSET, D, C, B, A, S;
+    UNSET, D, C, B, A, S, ALL;
 
     @JsonCreator
     public static ScrollGrade fromString(String text) {

@@ -36,6 +36,14 @@ public class Range {
         return Rnd.get(low, high);
     }
 
+    public boolean equalsTo(int single) {
+        return low == single && high == single;
+    }
+
+    public boolean isPositive() {
+        return high - low >= 0;
+    }
+
     @JsonCreator
     public static Range fromString(String raw) {
         String[] parts = raw.split("-");
@@ -72,11 +80,7 @@ public class Range {
 
     @Override
     public String toString() {
-        if (low == high) {
-            return String.valueOf(low);
-        } else {
-            return String.format("%s-%s", low, high);
-        }
+        return asString();
     }
 
 }

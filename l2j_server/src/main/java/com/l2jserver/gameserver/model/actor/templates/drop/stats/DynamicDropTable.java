@@ -2,6 +2,8 @@ package com.l2jserver.gameserver.model.actor.templates.drop.stats;
 
 import com.l2jserver.gameserver.datatables.categorized.*;
 import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvider;
+import com.l2jserver.gameserver.model.L2RecipeList;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.templates.drop.*;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment.EquipmentDropStats;
@@ -12,7 +14,8 @@ import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.ScrollG
 import com.l2jserver.gameserver.model.items.craft.CraftResource;
 import com.l2jserver.gameserver.model.items.craft.ResourceGrade;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
-import com.l2jserver.gameserver.model.items.interfaces.HasItemId;
+import com.l2jserver.gameserver.model.items.graded.GradedItem;
+import com.l2jserver.gameserver.model.items.parts.ItemPart;
 import com.l2jserver.gameserver.model.items.scrolls.CategorizedScrolls;
 import com.l2jserver.gameserver.model.items.scrolls.Scroll;
 import com.l2jserver.util.CollectionUtil;
@@ -58,23 +61,25 @@ public class DynamicDropTable {
         return allDynamicDropData;
     }
 
-    public <T extends HasItemId> DynamicDropEquipmentCategory convertEquipmentCategory(int level, EquipmentProvider<T> equipmentProvider, EquipmentDropStats equipmentDropStats) {
+    public <T> DynamicDropEquipmentCategory convertEquipmentCategory(int level, EquipmentProvider<T> equipmentProvider, EquipmentDropStats equipmentDropStats, Function<T, Integer> idExtractor) {
         Optional<ItemGradeRange> itemGradeRange = ItemGradeRange.byLevel(level);
         if (!itemGradeRange.isPresent()) {
             return DynamicDropEquipmentCategory.empty();
         }
 
         GradeInfo gradeInfo = itemGradeRange.get().getGradeInfo();
-        DynamicDropCategory weaponsCategory = convertDropCategory(gradeInfo, equipmentDropStats::getWeapon, equipmentProvider::getWeaponsByGrade);
-        DynamicDropCategory armorCategory = convertDropCategory(gradeInfo, equipmentDropStats::getArmor, equipmentProvider::getArmorByGrade);
-        DynamicDropCategory jewelsCategory = convertDropCategory(gradeInfo, equipmentDropStats::getJewels, equipmentProvider::getJewelsByGrade);
-        return new DynamicDropEquipmentCategory(weaponsCategory, armorCategory, jewelsCategory);
+        DynamicDropCategory weaponsCategory = convertDropCategory(gradeInfo, equipmentDropStats::getWeapon, equipmentProvider::getWeaponsByGrade, idExtractor);
+        DynamicDropCategory armorCategory = convertDropCategory(gradeInfo, equipmentDropStats::getArmor, equipmentProvider::getArmorByGrade, idExtractor);
+        DynamicDropCategory jewelsCategory = convertDropCategory(gradeInfo, equipmentDropStats::getJewels, equipmentProvider::getJewelsByGrade, idExtractor);
+        return new DynamicDropEquipmentCategory(gradeInfo, weaponsCategory, armorCategory, jewelsCategory);
     }
 
-    private <T extends HasItemId> DynamicDropCategory convertDropCategory(
+    private <T> DynamicDropCategory convertDropCategory(
             GradeInfo gradeInfo,
             Function<GradeInfo, Optional<DropStats>> findDropStats,
-            Function<GradeInfo, List<T>> itemsProvider) {
+            Function<GradeInfo, List<T>> itemsProvider,
+            Function<T, Integer> idExtractor
+    ) {
         Optional<DropStats> dropStatsOptional = findDropStats.apply(gradeInfo);
         if (!dropStatsOptional.isPresent()) {
             LOG.warn("Could not find drop data for {}", gradeInfo);
@@ -82,19 +87,19 @@ public class DynamicDropTable {
         }
 
         List<T> items = itemsProvider.apply(gradeInfo);
-        Set<Integer> ids = CollectionUtil.extract(items, HasItemId::getItemId);
+        Set<Integer> ids = CollectionUtil.extract(items, idExtractor);
 
         return new DynamicDropCategory(ids, dropStatsOptional.get());
     }
 
-    private List<DynamicDropCategory> convertResourcesCategory(int level, ResourceDropStats resourceDropStats) {
+    private List<DynamicDropResourcesCategory> convertResourcesCategory(int level, ResourceDropStats resourceDropStats) {
         Set<ResourceGrade> resourceGrades = ResourceGradeRange.byLevel(level);
 
-        List<DynamicDropCategory> drop = new ArrayList<>();
+        List<DynamicDropResourcesCategory> drop = new ArrayList<>();
         for (ResourceGrade resourceGrade : resourceGrades) {
             DropStats dropStats = resourceDropStats.getDropByResourceGrade(resourceGrade);
             List<CraftResource> craftResources = CraftResourcesDropDataTable.getInstance().getResourcesByGrade(resourceGrade);
-            drop.add(new DynamicDropCategory(CollectionUtil.extractIds(craftResources), dropStats));
+            drop.add(new DynamicDropResourcesCategory(resourceGrade, new DynamicDropCategory(CollectionUtil.extractIds(craftResources), dropStats)));
         }
         return drop;
     }
@@ -111,12 +116,21 @@ public class DynamicDropTable {
             Set<Integer> normalScrollsIds = CollectionUtil.extractIds(normalScrollProvider.apply(scrollGrade));
             Set<Integer> blessedScrollsIds = CollectionUtil.extractIds(blessedScrollProvider.apply(scrollGrade));
             return new DynamicDropScrollCategory(
+                    scrollGrade,
                     new DynamicDropCategory(normalScrollsIds, scrollDropStats.getNormal()),
                     new DynamicDropCategory(blessedScrollsIds, scrollDropStats.getBlessed())
             );
         } else {
             LOG.warn("Could not find scroll drop data for level {}", level);
             return DynamicDropScrollCategory.empty();
+        }
+    }
+
+    public DynamicDropGradeData getDynamicNpcDropData(L2Character victim) {
+        if (victim.isRaid()) {
+            return getDynamicRaidDropData(victim.getLevel());
+        } else {
+            return getDynamicMobDropData(victim.getLevel());
         }
     }
 
@@ -132,19 +146,25 @@ public class DynamicDropTable {
         DynamicDropEquipmentCategory equipment = convertEquipmentCategory(
                 level,
                 GradedItemsDropDataTable.getInstance(),
-                dynamicDropData.getEquipment());
+                dynamicDropData.getEquipment(),
+                GradedItem::getItemId
+        );
 
         DynamicDropEquipmentCategory parts = convertEquipmentCategory(
                 level,
                 ItemPartsDropDataTable.getInstance(),
-                dynamicDropData.getParts());
+                dynamicDropData.getParts(),
+                ItemPart::getPartId
+        );
 
         DynamicDropEquipmentCategory recipes = convertEquipmentCategory(
                 level,
                 ItemRecipesDropDataTable.getInstance(),
-                dynamicDropData.getRecipes());
+                dynamicDropData.getRecipes(),
+                L2RecipeList::getRecipeId
+        );
 
-        List<DynamicDropCategory> resources = convertResourcesCategory(level, dynamicDropData.getResources());
+        List<DynamicDropResourcesCategory> resources = convertResourcesCategory(level, dynamicDropData.getResources());
 
         CategorizedScrolls categorizedScrolls = ScrollDropDataTable.getInstance().getCategorizedScrolls();
 
@@ -175,7 +195,7 @@ public class DynamicDropTable {
     private DynamicDropScrollCategory convertMiscScrollCategory(CategorizedScrolls categorizedScrolls, MiscScrollStats misc) {
         Set<Integer> normalScrollIds = CollectionUtil.extractIds(categorizedScrolls.getNormalMiscScrolls());
         Set<Integer> blessedScrollIds = CollectionUtil.extractIds(categorizedScrolls.getBlessedMiscScrolls());
-        return new DynamicDropScrollCategory(new DynamicDropCategory(normalScrollIds, misc.getNormal()), new DynamicDropCategory(blessedScrollIds, misc.getBlessed()));
+        return new DynamicDropScrollCategory(ScrollGrade.ALL, new DynamicDropCategory(normalScrollIds, misc.getNormal()), new DynamicDropCategory(blessedScrollIds, misc.getBlessed()));
     }
 
     public static DynamicDropTable getInstance() {

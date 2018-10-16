@@ -69,7 +69,7 @@ public class AdminReload implements IAdminCommandHandler
 			switch (type.toLowerCase())
 			{
                 case "dynamic_drop": {
-                    DynamicDropCalculator.getInstance().load();
+					DynamicDropCalculator.getInstance().reload();
                     AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Dynamic Drop Data.");
                     break;
                 }

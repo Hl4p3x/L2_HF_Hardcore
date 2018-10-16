@@ -1,23 +1,27 @@
 package com.l2jserver.gameserver.model.actor.templates.drop;
 
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.ScrollGrade;
+
 import java.util.Objects;
 import java.util.StringJoiner;
 
 public class DynamicDropScrollCategory {
 
+    private ScrollGrade scrollGrade;
     private DynamicDropCategory normal;
     private DynamicDropCategory blessed;
 
     public DynamicDropScrollCategory() {
     }
 
-    public DynamicDropScrollCategory(DynamicDropCategory normal, DynamicDropCategory blessed) {
+    public DynamicDropScrollCategory(ScrollGrade scrollGrade, DynamicDropCategory normal, DynamicDropCategory blessed) {
+        this.scrollGrade = scrollGrade;
         this.normal = normal;
         this.blessed = blessed;
     }
 
     public static DynamicDropScrollCategory empty() {
-        return new DynamicDropScrollCategory(DynamicDropCategory.empty(), DynamicDropCategory.empty());
+        return new DynamicDropScrollCategory(ScrollGrade.UNSET, DynamicDropCategory.empty(), DynamicDropCategory.empty());
     }
 
     public DynamicDropCategory getNormal() {
@@ -31,6 +35,7 @@ public class DynamicDropScrollCategory {
     @Override
     public String toString() {
         return new StringJoiner(", ", DynamicDropScrollCategory.class.getSimpleName() + "[", "]")
+                .add(Objects.toString(scrollGrade))
                 .add(Objects.toString(normal))
                 .add(Objects.toString(blessed))
                 .toString();

@@ -22,13 +22,17 @@ public class DynamicDropCalculator {
         load();
     }
 
-    public void load() {
+    public void reload() {
         GradedItemsDropDataTable.getInstance().load();
         ItemPartsDropDataTable.getInstance().load();
         ItemRecipesDropDataTable.getInstance().load();
         CraftResourcesDropDataTable.getInstance().load();
         ScrollDropDataTable.getInstance().load();
 
+        load();
+    }
+
+    public void load() {
         managedItemIds = new HashSet<>();
         managedItemIds.addAll(GradedItemsDropDataTable.getInstance().getGradedItemsIds());
         managedItemIds.addAll(ItemPartsDropDataTable.getInstance().getAllItemPartsIds());
@@ -41,11 +45,7 @@ public class DynamicDropCalculator {
     // Add Dynasty Essence, Attribute Stones, Dual Craft Stamp, SA Stones
 
     public List<ItemHolder> calculate(L2Character victim) {
-        if (victim.isRaid()) {
-            return generalDropCalculator.calculate(DynamicDropTable.getInstance().getDynamicRaidDropData(victim.getLevel()));
-        } else {
-            return generalDropCalculator.calculate(DynamicDropTable.getInstance().getDynamicMobDropData(victim.getLevel()));
-        }
+        return generalDropCalculator.calculate(DynamicDropTable.getInstance().getDynamicNpcDropData(victim));
     }
 
     public Set<Integer> getAllDynamicItemsIds() {

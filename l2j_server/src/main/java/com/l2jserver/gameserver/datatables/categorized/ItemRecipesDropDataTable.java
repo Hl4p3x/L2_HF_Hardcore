@@ -3,6 +3,7 @@ package com.l2jserver.gameserver.datatables.categorized;
 import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvider;
 import com.l2jserver.gameserver.model.L2RecipeList;
+import com.l2jserver.gameserver.model.items.graded.Grade;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
 import org.slf4j.Logger;
@@ -49,7 +50,7 @@ public class ItemRecipesDropDataTable implements EquipmentProvider<L2RecipeList>
                     .stream()
                     .map(gradedItem -> {
                         Optional<L2RecipeList> recipeOption = RecipeData.getInstance().getRecipeByProductionItem(gradedItem.getItemId());
-                        if (!recipeOption.isPresent()) {
+                        if (!recipeOption.isPresent() && !gradedItem.getGradeInfo().getGrade().equals(Grade.NG)) {
                             LOG.warn("Could not find recipe for item {}", gradedItem);
                         }
                         return recipeOption;

@@ -18,13 +18,13 @@ import java.util.List;
 import java.util.Optional;
 
 
-public class RegularDropView {
+public class RegularDropView implements DropView {
 
     private static final Logger LOG = LoggerFactory.getLogger(RegularDropView.class);
 
     private static final int DROP_LIST_ITEMS_PER_PAGE = 10;
 
-    public Optional<String> renderHtml(L2PcInstance activeChar, L2Npc npc, DropListScope dropListScope, int page) {
+    public Optional<String> render(L2PcInstance activeChar, L2Npc npc, DropListScope dropListScope, int page) {
         final List<IDropItem> dropList = npc.getTemplate().getDropList(dropListScope);
         if ((dropList == null) || dropList.isEmpty()) {
             return Optional.empty();

@@ -45,4 +45,8 @@ public class DropStats {
                 .toString();
     }
 
+    public boolean isSingleStack() {
+        return stacks.equalsTo(1);
+    }
+
 }

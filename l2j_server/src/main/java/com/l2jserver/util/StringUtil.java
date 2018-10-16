@@ -306,4 +306,14 @@ public final class StringUtil
 		return text.contains(" ");
 	}
 
+	public static String capitalize(String text) {
+		if (text.length() > 0) {
+			String result = text.toLowerCase();
+			char first = result.charAt(0);
+			char capital = Character.toUpperCase(first);
+			return capital + result.substring(1);
+		} else {
+			return text;
+		}
+	}
 }
