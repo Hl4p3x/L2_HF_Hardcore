@@ -27,7 +27,7 @@ public class DynamicDropView implements DropView {
 
     private static final Logger LOG = LoggerFactory.getLogger(DynamicDropView.class);
 
-    private static final int DROP_LIST_ITEMS_PER_PAGE = 10;
+    private static final int DROP_LIST_ITEMS_PER_PAGE = 30;
 
     public Optional<String> render(L2PcInstance activeChar, L2Npc npc, DropListScope dropListScope, int page) {
         String htmlTemplate = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/mods/NpcView/DropList.htm");
@@ -158,7 +158,7 @@ public class DynamicDropView implements DropView {
     private List<ItemGroupView> convertResourceCategoryToView(List<DynamicDropResourcesCategory> resourcesCategories) {
         List<ItemGroupView> result = new ArrayList<>();
         for (DynamicDropResourcesCategory dynamicDropResourcesCategory : resourcesCategories) {
-            result.add(convertDynamicDropCategory(dynamicDropResourcesCategory.getResourceGrade().toString(), dynamicDropResourcesCategory.getDynamicDropCategory()));
+            result.add(convertDynamicDropCategory(dynamicDropResourcesCategory.getResourceGrade().toString() + " Grade Resources", dynamicDropResourcesCategory.getDynamicDropCategory()));
         }
         return result;
     }

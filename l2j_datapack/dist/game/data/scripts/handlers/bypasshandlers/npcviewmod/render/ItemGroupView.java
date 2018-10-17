@@ -42,49 +42,46 @@ public class ItemGroupView implements PageRenderable {
             throw new IllegalArgumentException("Cannot render a negative item range " + range);
         }
 
+        int itemsPerRow = 3;
+
         StringBuilder sb = new StringBuilder();
-        sb.append("<table width=500 cellpadding=2 cellspacing=1 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
+        sb.append("<table width=600 cellpadding=2 cellspacing=1 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
         sb.append("<tr>");
-        sb.append("<td width=32><img src=\"L2UI_CT1.ICON_DF_premiumItem\" width=32 height=32></td>");
-        sb.append("<td width=300 align=left valign=middle><font color=\"LEVEL\">").append(name).append("</font></td>");
+        sb.append("<td align=center><font color=\"LEVEL\">").append(name).append("</font></td>");
         sb.append("</tr>");
 
-        sb.append("<tr><td width=32></td><td width=300>");
-        sb.append(renderStats(dropStats));
+        sb.append("<tr><td>");
+        sb.append(DropStatsView.renderStats(432, dropStats));
         sb.append("</td></tr>");
 
-        sb.append("<tr><td width=32></td><td width=300>");
+        sb.append("<tr><td align=center>");
+
+        sb.append("<table>");
+        sb.append("<tr>");
+
+        int itemPerRowCounter = 0;
         for (int i = range.getLow(); i <= range.getHigh(); i++) {
+            if (itemPerRowCounter >= 3) {
+                sb.append("</tr><tr>");
+                itemPerRowCounter = 0;
+            }
+            sb.append("<td>");
             sb.append(items.get(i).render());
+            sb.append("</td>");
+
+            itemPerRowCounter += 1;
         }
+
+        for (int i = 0; i < itemsPerRow - itemPerRowCounter; i++) {
+            sb.append("<td width=172></td>");
+        }
+
+        sb.append("</tr>");
+        sb.append("</table>");
+
         sb.append("</td></tr>");
 
-        sb.append("<tr><td width=32></td><td width=300>&nbsp;</td></tr>");
-        sb.append("</table>");
-        return sb.toString();
-    }
-
-    private String renderStats(DropStats dropStats) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("<table width=300 cellpadding=0 cellspacing=0>");
-
-        sb.append("<tr>");
-        sb.append("<td width=50 align=right><font color=\"LEVEL\">Amount: </font></td>");
-        sb.append("<td width=250 align=left>");
-        if (dropStats.isSingleStack()) {
-            sb.append(dropStats.getCount());
-        } else {
-            sb.append(dropStats.getStacks()).append(" stacks by ").append(dropStats.getCount()).append(" items");
-        }
-        sb.append("</td>");
-        sb.append("</tr>");
-
-        if (dropStats.getChance() > 0) {
-            sb.append("<tr><td width=50 align=right><font color=\"LEVEL\">Chance: </font></td>");
-            sb.append("<td width=250 align=left>");
-            sb.append(dropStats.getChance()).append("%");
-            sb.append("</td></tr>");
-        }
+        sb.append("<tr><td>&nbsp;</td></tr>");
         sb.append("</table>");
         return sb.toString();
     }
