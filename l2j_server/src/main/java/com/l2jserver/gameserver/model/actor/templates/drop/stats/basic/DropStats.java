@@ -14,6 +14,10 @@ public class DropStats {
     public DropStats() {
     }
 
+    public DropStats(Double chance) {
+        this.chance = chance;
+    }
+
     public DropStats(Range stacks, Double chance, Range count) {
         this.stacks = stacks;
         this.chance = chance;

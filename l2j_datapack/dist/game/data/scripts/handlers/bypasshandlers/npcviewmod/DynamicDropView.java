@@ -5,8 +5,13 @@ import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.drop.*;
+import com.l2jserver.gameserver.model.actor.templates.drop.calculators.DynamicDropCalculator;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.DynamicDropTable;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
 import com.l2jserver.gameserver.model.drops.DropListScope;
+import com.l2jserver.gameserver.model.drops.GeneralDropItem;
+import com.l2jserver.gameserver.model.drops.GroupedGeneralDropItem;
+import com.l2jserver.gameserver.model.drops.IDropItem;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import handlers.bypasshandlers.NpcViewMod;
@@ -15,10 +20,7 @@ import handlers.bypasshandlers.npcviewmod.render.ItemView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class DynamicDropView implements DropView {
@@ -27,7 +29,7 @@ public class DynamicDropView implements DropView {
 
     private static final int DROP_LIST_ITEMS_PER_PAGE = 10;
 
-    public Optional<String> render(L2PcInstance activeChar, L2Npc npc, DropListScope dropListScop, int page) {
+    public Optional<String> render(L2PcInstance activeChar, L2Npc npc, DropListScope dropListScope, int page) {
         String htmlTemplate = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/mods/NpcView/DropList.htm");
         if (htmlTemplate == null) {
             LOG.warn(NpcViewMod.class.getSimpleName() + ": The html file data/html/mods/NpcView/DropList.htm could not be found.");
@@ -41,6 +43,7 @@ public class DynamicDropView implements DropView {
         List<ItemGroupView> recipesGroupViews = convertEquipmentCategoryToView("Recipes", dynamicDropGradeData.getRecipes());
         List<ItemGroupView> resourceGroupViews = convertResourceCategoryToView(dynamicDropGradeData.getResources());
         List<ItemGroupView> scrollsGroupViews = convertScrollsGroupCategoryToView(dynamicDropGradeData);
+        List<ItemGroupView> regularDropGroupViews = convertRegularDropList(npc, dropListScope);
 
         List<ItemGroupView> allGroupViews = new ArrayList<>();
         allGroupViews.addAll(equipmentGroupViews);
@@ -48,6 +51,7 @@ public class DynamicDropView implements DropView {
         allGroupViews.addAll(recipesGroupViews);
         allGroupViews.addAll(resourceGroupViews);
         allGroupViews.addAll(scrollsGroupViews);
+        allGroupViews.addAll(regularDropGroupViews);
 
         int totalItems = allGroupViews.stream().mapToInt(ItemGroupView::getSize).sum();
         int pages = (int) Math.ceil((double) totalItems / DROP_LIST_ITEMS_PER_PAGE);
@@ -59,6 +63,53 @@ public class DynamicDropView implements DropView {
         htmlTemplate = htmlTemplate.replaceAll("%items%", renderItems(pageOffset, DROP_LIST_ITEMS_PER_PAGE, allGroupViews));
 
         return Optional.of(htmlTemplate);
+    }
+
+    private List<ItemGroupView> convertRegularDropList(L2Npc npc, DropListScope dropListScope) {
+        List<IDropItem> dropItems = npc.getTemplate().getDropList(dropListScope);
+        if (dropItems == null || dropItems.isEmpty()) {
+            return new ArrayList<>();
+        }
+
+        List<ItemGroupView> result = new ArrayList<>();
+        for (IDropItem dropItem : dropItems) {
+            if (dropItem instanceof GeneralDropItem) {
+                GeneralDropItem generalDropItem = (GeneralDropItem) dropItem;
+                if (DynamicDropCalculator.getInstance().getAllDynamicItemsIds().contains(generalDropItem.getItemId())) {
+                    continue;
+                }
+
+                List<ItemView> views = Collections.singletonList(convertGeneralDropToView(npc, generalDropItem));
+                result.add(new ItemGroupView(
+                        "Other",
+                        DropStats.empty(),
+                        views
+                ));
+            } else if (dropItem instanceof GroupedGeneralDropItem) {
+                GroupedGeneralDropItem generalGroupedDropItem = (GroupedGeneralDropItem) dropItem;
+
+                List<ItemView> views = generalGroupedDropItem.getItems()
+                        .stream()
+                        .filter(item -> !DynamicDropCalculator.getInstance().getAllDynamicItemsIds().contains(item.getItemId()))
+                        .map(generalDropItem -> convertGeneralDropToView(npc, generalDropItem))
+                        .collect(Collectors.toList());
+                result.add(new ItemGroupView("Other", new DropStats(generalGroupedDropItem.getChance()), views));
+            }
+        }
+
+        return result;
+    }
+
+    private DropStats convertGeneralDropToStats(L2Npc npc, GeneralDropItem generalDropItem) {
+        DropCountViewCalculator.MinMax minMax = DropCountViewCalculator.getPreciseMinMax(generalDropItem.getChance(), generalDropItem.getMin(npc), generalDropItem.getMax(npc), generalDropItem.isPreciseCalculated());
+        //TODO precision
+        Range countRange = new Range((int) minMax.getMin(), (int) minMax.getMax());
+        return new DropStats(new Range(1), Math.min(generalDropItem.getChance(), 100), countRange);
+    }
+
+    private ItemView convertGeneralDropToView(L2Npc npc, GeneralDropItem generalDropItem) {
+        L2Item l2Item = ItemTable.getInstance().getTemplate(generalDropItem.getItemId());
+        return new ItemView(l2Item.getId(), l2Item.getName(), l2Item.getIcon(), convertGeneralDropToStats(npc, generalDropItem));
     }
 
     public String renderItems(int pageOffset, int itemsToRender, List<ItemGroupView> allGroupViews) {

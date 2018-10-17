@@ -90,9 +90,9 @@ public class RegularDropView implements DropView {
                         sb.append(item.getName());
                         sb.append("</font></td></tr><tr><td width=32></td><td width=259><table width=253 cellpadding=0 cellspacing=0>");
                         sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount:</font></td><td width=205 align=center>");
-                        RegularDropView.MinMax minMax = getPreciseMinMax(normalized.getChance(), generalDropItem.getMin(npc), generalDropItem.getMax(npc), generalDropItem.isPreciseCalculated());
-                        final long min = minMax.min;
-                        final long max = minMax.max;
+                        DropCountViewCalculator.MinMax minMax = DropCountViewCalculator.getPreciseMinMax(normalized.getChance(), generalDropItem.getMin(npc), generalDropItem.getMax(npc), generalDropItem.isPreciseCalculated());
+                        final long min = minMax.getMin();
+                        final long max = minMax.getMax();
                         if (min == max) {
                             sb.append(amountFormat.format(min));
                         } else {
@@ -154,10 +154,10 @@ public class RegularDropView implements DropView {
         sb.append("</font></td></tr><tr><td width=32></td><td width=300><table width=295 cellpadding=0 cellspacing=0>");
         sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount:</font></td>");
         sb.append("<td width=247 align=center>");
-        RegularDropView.MinMax minMax = getPreciseMinMax(dropItem.getChance(npc, activeChar), dropItem.getMin(npc), dropItem.getMax(npc), dropItem.isPreciseCalculated());
+        DropCountViewCalculator.MinMax minMax = DropCountViewCalculator.getPreciseMinMax(dropItem.getChance(npc, activeChar), dropItem.getMin(npc), dropItem.getMax(npc), dropItem.isPreciseCalculated());
 
-        final long min = minMax.min;
-        final long max = minMax.max;
+        final long min = minMax.getMin();
+        final long max = minMax.getMax();
         if (min == max) {
             sb.append(amountFormat.format(min));
         } else {
@@ -170,26 +170,6 @@ public class RegularDropView implements DropView {
         sb.append("<td width=247 align=center>");
         sb.append(chanceFormat.format(Math.min(dropItem.getChance(npc, activeChar), 100)));
         sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=300>&nbsp;</td></tr></table>");
-    }
-
-    private static RegularDropView.MinMax getPreciseMinMax(double chance, long min, long max, boolean isPrecise) {
-        if (!isPrecise || (chance <= 100)) {
-            return new RegularDropView.MinMax(min, max);
-        }
-
-        int mult = (int) (chance) / 100;
-        return new RegularDropView.MinMax(mult * min, (chance % 100) > 0 ? (mult + 1) * max : mult * max);
-    }
-
-    private static class MinMax {
-
-        public final long min, max;
-
-        MinMax(long min, long max) {
-            this.min = min;
-            this.max = max;
-        }
-
     }
 
 }

@@ -1,5 +1,6 @@
 package handlers.bypasshandlers.npcviewmod.render;
 
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
 import handlers.bypasshandlers.npcviewmod.Rendrable;
 
 import java.util.Objects;
@@ -10,11 +11,19 @@ public class ItemView implements Rendrable {
     private Integer id;
     private String name;
     private String icon;
+    private DropStats dropStats = DropStats.empty();
 
     public ItemView(Integer id, String name, String icon) {
         this.id = id;
         this.name = name;
         this.icon = icon;
+    }
+
+    public ItemView(Integer id, String name, String icon, DropStats dropStats) {
+        this.id = id;
+        this.name = name;
+        this.icon = icon;
+        this.dropStats = dropStats;
     }
 
     public Integer getId() {
@@ -27,6 +36,10 @@ public class ItemView implements Rendrable {
 
     public String getIcon() {
         return icon;
+    }
+
+    public DropStats getDropStats() {
+        return dropStats;
     }
 
     public String render() {

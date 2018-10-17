@@ -79,10 +79,13 @@ public class ItemGroupView implements PageRenderable {
         sb.append("</td>");
         sb.append("</tr>");
 
-        sb.append("<tr><td width=50 align=right><font color=\"LEVEL\">Chance: </font></td>");
-        sb.append("<td width=250 align=left>");
-        sb.append(dropStats.getChance()).append("%");
-        sb.append("</td></tr></table>");
+        if (dropStats.getChance() > 0) {
+            sb.append("<tr><td width=50 align=right><font color=\"LEVEL\">Chance: </font></td>");
+            sb.append("<td width=250 align=left>");
+            sb.append(dropStats.getChance()).append("%");
+            sb.append("</td></tr>");
+        }
+        sb.append("</table>");
         return sb.toString();
     }
 
