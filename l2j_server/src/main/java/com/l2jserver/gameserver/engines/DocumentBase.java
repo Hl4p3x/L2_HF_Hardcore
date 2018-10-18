@@ -508,6 +508,16 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerMp(hp));
 					break;
 				}
+				case "pvp_flag": {
+					boolean flagged = Boolean.parseBoolean(getValue(a.getNodeValue(), null));
+					cond = joinAnd(cond, new ConditionPlayerPvpFlag(flagged));
+					break;
+				}
+				case "has_karma": {
+					boolean hasKarma = Boolean.parseBoolean(getValue(a.getNodeValue(), null));
+					cond = joinAnd(cond, new ConditionPlayerHasKarma(hasKarma));
+					break;
+				}
 				case "cp":
 				{
 					int cp = Integer.decode(getValue(a.getNodeValue(), null));

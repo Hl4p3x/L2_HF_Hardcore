@@ -33,30 +33,27 @@ public final class ManaHealOverTime extends AbstractEffect
 	public ManaHealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
-		
 		_power = params.getDouble("power", 0);
 	}
-	
+
 	@Override
-	public boolean onActionTime(BuffInfo info)
-	{
-		if (info.getEffected().isDead())
-		{
+    public boolean onActionTime(BuffInfo info) {
+        if (info.getEffected().isDead()) {
 			return false;
 		}
-		
-		double mp = info.getEffected().getCurrentMp();
+
+        double mp = info.getEffected().getCurrentMp();
 		double maxmp = info.getEffected().getMaxRecoverableMp();
-		
-		// Not needed to set the MP and send update packet if player is already at max MP
-		if (mp >= maxmp)
-		{
+
+        // Not needed to set the MP and send update packet if player is already at max MP
+        if (mp >= maxmp) {
 			return true;
 		}
-		
-		mp += _power * getTicksMultiplier();
+
+        mp += _power * getTicksMultiplier();
 		mp = Math.min(mp, maxmp);
 		info.getEffected().setCurrentMp(mp);
 		return info.getSkill().isToggle();
 	}
+
 }

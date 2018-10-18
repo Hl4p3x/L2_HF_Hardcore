@@ -359,15 +359,19 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="weight" val="180" />
-		<set name="price" val="80" />
+		<set name="weight" val="240"/>
+		<set name="price" val="30000"/>
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ManaPotion" />
 		<set name="item_skill" val="10000-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
+			<and>
+				<player flyMounted="false"/>
+				<player has_karma="false"/>
+				<player pvp_flag="false"/>
+			</and>
 		</cond>
 	</item>
 	<item id="727" type="EtcItem" name="Healing Potion">
@@ -390,15 +394,19 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="weight" val="180" />
-		<set name="price" val="2000" />
+		<set name="weight" val="300"/>
+		<set name="price" val="200000"/>
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ManaPotion" />
 		<set name="item_skill" val="10001-1" />
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
-			<player flyMounted="false" />
+			<and>
+				<player flyMounted="false"/>
+				<player has_karma="false"/>
+				<player pvp_flag="false"/>
+			</and>
 		</cond>
 	</item>
 	<item id="729" type="EtcItem" name="Scroll: Enchant Weapon (A-Grade)">
