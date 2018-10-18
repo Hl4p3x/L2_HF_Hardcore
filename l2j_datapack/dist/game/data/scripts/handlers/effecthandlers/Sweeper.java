@@ -18,8 +18,7 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Collection;
-
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -27,6 +26,8 @@ import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+
+import java.util.Collection;
 
 /**
  * Sweeper effect implementation.
@@ -48,6 +49,11 @@ public final class Sweeper extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
+		if (!Config.SPOIL_ENABLED) {
+			info.getEffector().sendScreenMessage("Spoil is disabled on this server");
+			return;
+		}
+
 		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isAttackable())
 		{
 			return;

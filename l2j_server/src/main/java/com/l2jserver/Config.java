@@ -94,6 +94,7 @@ public final class Config
 	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.properties";
 	public static final String GEODATA_FILE = "./config/GeoData.properties";
 	public static final String CUSTOM_COMMUNITY_FILE = "./config/CustomCommunity.properties";
+	public static final String DROP_CONFIG_FILE = "./config/Drop.properties";
 	// --------------------------------------------------
 	// L2J Variable Definitions
 	// --------------------------------------------------
@@ -1229,6 +1230,8 @@ public final class Config
 	public static int DISPLAY_NUMBER_OF_BUFFS_IN_ROW;
 	public static long COMMUNITY_SINGLE_BUFF_PRICE;
 	public static int MAX_CUSTOM_PRESET_BUFFS;
+
+	public static boolean SPOIL_ENABLED;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -3035,6 +3038,10 @@ public final class Config
 			EMAIL_SYS_ADDRESS = emailSettings.getString("EmailSystemAddress", "noreply@myl2jserver.com");
 			EMAIL_SYS_SELECTQUERY = emailSettings.getString("EmailDBSelectQuery", "SELECT value FROM account_data WHERE account_name=? AND var='email_addr'");
 			EMAIL_SYS_DBFIELD = emailSettings.getString("EmailDBField", "value");
+
+
+			PropertiesParser drop = new PropertiesParser(DROP_CONFIG_FILE);
+			SPOIL_ENABLED = drop.getBoolean("SpoilEnabled", false);
 		}
 		else
 		{

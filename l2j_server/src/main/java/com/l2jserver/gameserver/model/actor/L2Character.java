@@ -633,6 +633,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		// default implementation
 	}
+
+	public void sendScreenMessage(String message) {
+		sendScreenMessage(message, 2000);
+	}
+
+	public void sendScreenMessage(String message, int time) {
+		sendPacket(new ExShowScreenMessage(message, time));
+	}
 	
 	/**
 	 * Teleport a L2Character and its pet if necessary.<br>

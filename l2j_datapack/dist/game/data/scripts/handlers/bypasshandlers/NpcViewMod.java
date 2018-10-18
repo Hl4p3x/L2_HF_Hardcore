@@ -108,6 +108,11 @@ public class NpcViewMod implements IBypassHandler
 				try
 				{
 					final DropListScope dropListScope = Enum.valueOf(DropListScope.class, dropListScopeString);
+                    if (!Config.SPOIL_ENABLED && dropListScope.equals(DropListScope.CORPSE)) {
+                        activeChar.sendScreenMessage("Spoil is disabled on this server");
+                        return false;
+                    }
+
 					final L2Object target = L2World.getInstance().findObject(Integer.parseInt(st.nextToken()));
 					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
 					if (npc == null)

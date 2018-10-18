@@ -18,6 +18,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -53,6 +54,11 @@ public final class Spoil extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
+		if (!Config.SPOIL_ENABLED) {
+			info.getEffector().sendScreenMessage("Spoil is disabled on this server");
+			return;
+		}
+
 		if (!info.getEffected().isMonster() || info.getEffected().isDead())
 		{
 			info.getEffector().sendPacket(SystemMessageId.INCORRECT_TARGET);
