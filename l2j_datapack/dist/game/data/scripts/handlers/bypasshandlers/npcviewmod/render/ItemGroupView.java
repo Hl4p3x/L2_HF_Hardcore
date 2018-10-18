@@ -14,6 +14,10 @@ public class ItemGroupView implements PageRenderable {
     private DropStats dropStats;
     private List<ItemView> items;
 
+    public ItemGroupView(String name, List<ItemView> items) {
+        this(name, DropStats.empty(), items);
+    }
+
     public ItemGroupView(String name, DropStats dropStats, List<ItemView> items) {
         this.name = name;
         this.dropStats = dropStats;

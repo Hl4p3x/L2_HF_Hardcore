@@ -20,9 +20,7 @@ public class ItemView implements Rendrable {
     }
 
     public ItemView(Integer id, String name, String icon, DropStats dropStats) {
-        this.id = id;
-        this.name = name;
-        this.icon = icon;
+        this(id, name, icon);
         this.dropStats = dropStats;
     }
 

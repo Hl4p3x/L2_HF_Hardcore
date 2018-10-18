@@ -121,7 +121,9 @@ public class DynamicDropTable {
                     new DynamicDropCategory(blessedScrollsIds, scrollDropStats.getBlessed())
             );
         } else {
-            LOG.warn("Could not find scroll drop data for level {}", level);
+            if (level > ScrollGradeRange.D.getLowLevel()) {
+                LOG.warn("Could not find scroll drop data for level {}", level);
+            }
             return DynamicDropScrollCategory.empty();
         }
     }
