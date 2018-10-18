@@ -1601,7 +1601,7 @@ public class L2Attackable extends L2Npc
 			return 0;
 		}
 
-		final float divider = (getLevel() > 0) && (getExpReward() > 0) ? (getTemplate().getBaseHpMax() * 9 * getLevel() * getLevel()) / (100 * getExpReward()) : 0;
+		final float divider = (getLevel() > 0) && (getExpReward() > 0) ? (getTemplate().getBaseHpMax() * 9 * getLevel() * getLevel()) / (Config.VITALITY_LOSS_EXP_PERCENT * getExpReward()) : 0;
 		if (divider == 0)
 		{
 			return 0;

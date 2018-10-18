@@ -1051,6 +1051,7 @@ public final class Config
 	public static float RATE_VITALITY_LEVEL_4;
 	public static float RATE_DROP_VITALITY_HERBS;
 	public static float RATE_RECOVERY_VITALITY_PEACE_ZONE;
+	public static float VITALITY_LOSS_EXP_PERCENT;
 	public static float RATE_VITALITY_LOST;
 	public static float RATE_VITALITY_GAIN;
 	public static float RATE_RECOVERY_ON_RECONNECT;
@@ -2273,6 +2274,7 @@ public final class Config
 			RATE_RECOVERY_VITALITY_PEACE_ZONE = RatesSettings.getFloat("RateRecoveryPeaceZone", 1);
 			RATE_VITALITY_LOST = RatesSettings.getFloat("RateVitalityLost", 1);
 			RATE_VITALITY_GAIN = RatesSettings.getFloat("RateVitalityGain", 1);
+			VITALITY_LOSS_EXP_PERCENT = RatesSettings.getFloat("RateVitalityExpPercentLost", 30);
 			RATE_RECOVERY_ON_RECONNECT = RatesSettings.getFloat("RateRecoveryOnReconnect", 4);
 			RATE_KARMA_LOST = RatesSettings.getFloat("RateKarmaLost", -1);
 			if (RATE_KARMA_LOST == -1)
