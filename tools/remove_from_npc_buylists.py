@@ -1,13 +1,13 @@
-import sys
-import os
-import file_helper as fh
 import lxml.etree as ET
-import xml_helper as xh
+import os
+import sys
 
-script_name, workdir, file_extension, recursive, ids_file = sys.argv
+import file_helper as fh
+
+script_name, workdir, ids_file = sys.argv
 
 ids_to_remove = fh.parse_ids_file(ids_file)
-files_to_process = fh.filter_files_by_suffix(fh.files_to_process(workdir), file_extension)
+files_to_process = fh.filter_files_by_suffix(fh.files_to_process("../l2j_datapack/dist/game/data/buylists"), ".xml")
 
 print('Ids to remove:', ids_to_remove)
 

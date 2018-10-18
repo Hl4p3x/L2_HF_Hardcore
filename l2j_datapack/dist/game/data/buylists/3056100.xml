@@ -2,7 +2,8 @@
 	<npcs>
 		<npc>30561</npc> <!-- Papuma -->
 	</npcs>
-	<item id="1835"/> <!-- Soulshot: No Grade -->
+    <item id="726"/><!--Mana Drug-->
+    <item id="1835"/> <!-- Soulshot: No Grade -->
 	<item id="2509"/> <!-- Spiritshot: No Grade -->
 	<item id="3947"/> <!-- Blessed Spiritshot: No Grade -->
 
