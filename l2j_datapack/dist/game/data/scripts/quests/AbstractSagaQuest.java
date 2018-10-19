@@ -18,11 +18,6 @@
  */
 package quests;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2Object;
@@ -38,6 +33,11 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Abstract Saga quest.
@@ -149,7 +149,7 @@ public abstract class AbstractSagaQuest extends Quest
 			}
 			else
 			{
-				st2.giveItems(Items[3], getRandom(1, 4));
+                st2.giveItems(Items[3], getRandom(2, (int) (5 * Config.RATE_QUEST_DROP)));
 			}
 		}
 	}
