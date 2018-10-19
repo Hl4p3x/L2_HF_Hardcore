@@ -149,7 +149,7 @@ public abstract class AbstractSagaQuest extends Quest
 			}
 			else
 			{
-                st2.giveItems(Items[3], getRandom(2, (int) (5 * Config.RATE_QUEST_DROP)));
+                st2.giveItems(Items[3], getRandom(2, (int) (4 * Config.RATE_QUEST_DROP)));
 			}
 		}
 	}
