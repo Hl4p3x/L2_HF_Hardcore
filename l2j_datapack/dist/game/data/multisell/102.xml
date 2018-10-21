@@ -133,7 +133,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="314100" id="13722" />
 		<!-- Adena -->
-		<ingredient count="10470000" id="57" />
+        <ingredient count="1047000" id="57"/>
 		<!-- Vorpal Helmet -->
 		<production count="1" id="15589" />
 	</item>
@@ -141,7 +141,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="314100" id="13722" />
 		<!-- Adena -->
-		<ingredient count="10470000" id="57" />
+        <ingredient count="1047000" id="57"/>
 		<!-- Vorpal Leather Helmet -->
 		<production count="1" id="15590" />
 	</item>
@@ -149,7 +149,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="314100" id="13722" />
 		<!-- Adena -->
-		<ingredient count="10470000" id="57" />
+        <ingredient count="1047000" id="57"/>
 		<!-- Vorpal Circlet -->
 		<production count="1" id="15591" />
 	</item>
@@ -157,7 +157,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="837600" id="13722" />
 		<!-- Adena -->
-		<ingredient count="27920000" id="57" />
+        <ingredient count="2792000" id="57"/>
 		<!-- Vorpal Breastplate -->
 		<production count="1" id="15592" />
 	</item>
@@ -165,7 +165,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="628200" id="13722" />
 		<!-- Adena -->
-		<ingredient count="20940000" id="57" />
+        <ingredient count="2094000" id="57"/>
 		<!-- Vorpal Leather Breastplate -->
 		<production count="1" id="15593" />
 	</item>
@@ -173,7 +173,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="628200" id="13722" />
 		<!-- Adena -->
-		<ingredient count="20940000" id="57" />
+        <ingredient count="2094000" id="57"/>
 		<!-- Vorpal Tunic -->
 		<production count="1" id="15594" />
 	</item>
@@ -181,7 +181,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="523500" id="13722" />
 		<!-- Adena -->
-		<ingredient count="17450000" id="57" />
+        <ingredient count="1745000" id="57"/>
 		<!-- Vorpal Gaiter -->
 		<production count="1" id="15595" />
 	</item>
@@ -189,7 +189,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="392625" id="13722" />
 		<!-- Adena -->
-		<ingredient count="13087500" id="57" />
+        <ingredient count="1308750" id="57"/>
 		<!-- Vorpal Leather Legging -->
 		<production count="1" id="15596" />
 	</item>
@@ -197,7 +197,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="392625" id="13722" />
 		<!-- Adena -->
-		<ingredient count="13087500" id="57" />
+        <ingredient count="1308750" id="57"/>
 		<!-- Vorpal Stockings -->
 		<production count="1" id="15597" />
 	</item>
@@ -205,7 +205,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="209400" id="13722" />
 		<!-- Adena -->
-		<ingredient count="6980000" id="57" />
+        <ingredient count="698000" id="57"/>
 		<!-- Vorpal Gauntlet -->
 		<production count="1" id="15598" />
 	</item>
@@ -213,7 +213,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="209400" id="13722" />
 		<!-- Adena -->
-		<ingredient count="6980000" id="57" />
+        <ingredient count="698000" id="57"/>
 		<!-- Vorpal Leather Gloves -->
 		<production count="1" id="15599" />
 	</item>
@@ -221,7 +221,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="209400" id="13722" />
 		<!-- Adena -->
-		<ingredient count="6980000" id="57" />
+        <ingredient count="698000" id="57"/>
 		<!-- Vorpal Gloves -->
 		<production count="1" id="15600" />
 	</item>
@@ -229,7 +229,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="209400" id="13722" />
 		<!-- Adena -->
-		<ingredient count="6980000" id="57" />
+        <ingredient count="698000" id="57"/>
 		<!-- Vorpal Boots -->
 		<production count="1" id="15601" />
 	</item>
@@ -237,7 +237,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="209400" id="13722" />
 		<!-- Adena -->
-		<ingredient count="6980000" id="57" />
+        <ingredient count="698000" id="57"/>
 		<!-- Vorpal Leather Boots -->
 		<production count="1" id="15602" />
 	</item>
@@ -245,7 +245,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="209400" id="13722" />
 		<!-- Adena -->
-		<ingredient count="6980000" id="57" />
+        <ingredient count="698000" id="57"/>
 		<!-- Vorpal Shoes -->
 		<production count="1" id="15603" />
 	</item>
@@ -253,7 +253,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="219870" id="13722" />
 		<!-- Adena -->
-		<ingredient count="7329000" id="57" />
+        <ingredient count="732900" id="57"/>
 		<!-- Vorpal Shield -->
 		<production count="1" id="15604" />
 	</item>
@@ -261,7 +261,7 @@
 		<!-- Olympiad Token -->
 		<ingredient count="219870" id="13722" />
 		<!-- Adena -->
-		<ingredient count="7329000" id="57" />
+        <ingredient count="732900" id="57"/>
 		<!-- Vorpal Sigil -->
 		<production count="1" id="15605" />
 	</item>
