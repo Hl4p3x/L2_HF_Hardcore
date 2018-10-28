@@ -86,6 +86,14 @@ public abstract class ItemContainer
 		return _items.toArray(new L2ItemInstance[0]);
 	}
 
+    public List<L2ItemInstance> getUnequippedWeapons() {
+        return Stream.of(getItems()).filter(item -> item.isWeapon() && !item.isEquipped()).collect(Collectors.toList());
+    }
+
+    public List<L2ItemInstance> getWeapons() {
+        return Stream.of(getItems()).filter(L2ItemInstance::isWeapon).collect(Collectors.toList());
+    }
+
 	public ItemsByCategory getCategorizedItems() {
 		List<L2ItemInstance> weapons = Stream.of(getItems()).filter(L2ItemInstance::isWeapon).collect(Collectors.toList());
 		List<L2ItemInstance> armor = Stream.of(getItems()).filter(L2ItemInstance::isArmor).collect(Collectors.toList());

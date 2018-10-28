@@ -73,7 +73,7 @@ import com.l2jserver.gameserver.model.items.type.ActionType;
 import com.l2jserver.gameserver.model.items.type.ArmorType;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.model.items.type.WeaponType;
-import com.l2jserver.gameserver.model.multisell.PreparedListContainer;
+import com.l2jserver.gameserver.model.multisell.ListContainer;
 import com.l2jserver.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jserver.gameserver.model.olympiad.OlympiadGameTask;
 import com.l2jserver.gameserver.model.olympiad.OlympiadManager;
@@ -337,7 +337,7 @@ public final class L2PcInstance extends L2Playable {
     private TradeList _sellList;
     private TradeList _buyList;
     // Multisell
-    private PreparedListContainer _currentMultiSell = null;
+    private ListContainer _currentMultiSell = null;
     /**
      * Bitmask used to keep track of one-time/newbie quest rewards
      */
@@ -3856,11 +3856,11 @@ public final class L2PcInstance extends L2Playable {
         }
     }
 
-    public final PreparedListContainer getMultiSell() {
+    public final ListContainer getMultiSell() {
         return _currentMultiSell;
     }
 
-    public final void setMultiSell(PreparedListContainer list) {
+    public final void setMultiSell(ListContainer list) {
         _currentMultiSell = list;
     }
 

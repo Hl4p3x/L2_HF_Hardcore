@@ -1,4 +1,6 @@
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" applyTaxes="true" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+<list dualcraft="true" maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      applyTaxes="true"
+      xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<npcs>
 		<npc>30283</npc> <!-- Altran -->
 		<npc>30298</npc> <!-- Pinter -->

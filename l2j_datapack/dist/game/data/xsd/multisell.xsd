@@ -40,6 +40,7 @@
 			<xs:attribute name="applyTaxes" type="xs:boolean" />
 			<xs:attribute name="maintainEnchantment" type="xs:boolean" />
 			<xs:attribute name="useRate" type="xs:token" />
+			<xs:attribute name="dualcraft" type="xs:boolean"/>
 		</xs:complexType>
 	</xs:element>
 </xs:schema>

@@ -7,9 +7,22 @@ import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class CollectionUtil {
+
+    public static <T> Pair<List<T>, List<T>> splitBy(List<T> items, Predicate<T> splitPredicate) {
+        Pair<List<T>, List<T>> result = new Pair<>(new ArrayList<>(), new ArrayList<>());
+        for (T item : items) {
+            if (splitPredicate.test(item)) {
+                result.getLeft().add(item);
+            } else {
+                result.getRight().add(item);
+            }
+        }
+        return result;
+    }
 
     public static <T> List<List<T>> splitList(List<T> items, int parts) {
         if (items.size() < parts) {

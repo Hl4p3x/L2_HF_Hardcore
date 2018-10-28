@@ -92,6 +92,9 @@ public final class MultisellData implements IXmlReader
 				{
 					att = n.getAttributes().getNamedItem("applyTaxes");
 					list.setApplyTaxes((att != null) && Boolean.parseBoolean(att.getNodeValue()));
+
+					Node dualcraftNode = n.getAttributes().getNamedItem("dualcraft");
+					list.setApplyTaxes((dualcraftNode != null) && Boolean.parseBoolean(dualcraftNode.getNodeValue()));
 					
 					att = n.getAttributes().getNamedItem("useRate");
 					if (att != null)
@@ -239,8 +242,8 @@ public final class MultisellData implements IXmlReader
 			LOG.warn("{}: Cannot find list ID: {} requested by player: {}, NPC ID: {}!", getClass().getSimpleName(), listId, player, (npc != null ? npc.getId() : 0));
 			return;
 		}
-		
-		if (((npc != null) && !template.isNpcAllowed(npc.getId())) || ((npc == null) && template.isNpcOnly()))
+
+		if (((npc != null) && template.isNpcNotAllowed(npc.getId())) || ((npc == null) && template.isNpcOnly()))
 		{
 			LOG.warn("{}: Player {} attempted to open multisell {} from npc {} which is not allowed!", getClass().getSimpleName(), player, listId, npc);
 			return;

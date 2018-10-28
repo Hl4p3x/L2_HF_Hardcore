@@ -18,57 +18,76 @@
  */
 package com.l2jserver.gameserver.model.multisell;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+
+import java.util.*;
 
 /**
  * @author DS
  */
 public class ListContainer
 {
-	private final int _listId;
-	private boolean _applyTaxes = false;
-	private boolean _maintainEnchantment = false;
-	private double _useRate = 1.0;
-	
-	protected List<Entry> _entries = new ArrayList<>();
-	protected Set<Integer> _npcsAllowed = null;
+	private final int listId;
+	private boolean applyTaxes = false;
+	private boolean maintainEnchantment = false;
+	private double useRate = 1.0;
+
+	private List<Entry> entries = new ArrayList<>();
+	private Set<Integer> npcsAllowed = new HashSet<>();
+
+	private boolean dualcraft = false;
 	
 	public ListContainer(int listId)
 	{
-		_listId = listId;
+		this.listId = listId;
 	}
-	
+
+	public ListContainer(int listId, boolean applyTaxes, boolean maintainEnchantment, double useRate, List<Entry> entries) {
+		this.listId = listId;
+		this.applyTaxes = applyTaxes;
+		this.maintainEnchantment = maintainEnchantment;
+		this.useRate = useRate;
+		this.entries = entries;
+	}
+
+	public boolean isDualcraft() {
+		return dualcraft;
+	}
+
+	public void setDualcraft(boolean dualcraft) {
+		this.dualcraft = dualcraft;
+	}
+
 	public final List<Entry> getEntries()
 	{
-		return _entries;
+		return entries;
 	}
 	
 	public final int getListId()
 	{
-		return _listId;
+		return listId;
 	}
 	
 	public final void setApplyTaxes(boolean applyTaxes)
 	{
-		_applyTaxes = applyTaxes;
+		this.applyTaxes = applyTaxes;
 	}
 	
 	public final boolean getApplyTaxes()
 	{
-		return _applyTaxes;
+		return applyTaxes;
 	}
 	
 	public final void setMaintainEnchantment(boolean maintainEnchantment)
 	{
-		_maintainEnchantment = maintainEnchantment;
+		this.maintainEnchantment = maintainEnchantment;
 	}
 	
 	public double getUseRate()
 	{
-		return _useRate;
+		return useRate;
 	}
 	
 	/**
@@ -78,30 +97,83 @@ public class ListContainer
 	 */
 	public void setUseRate(double rate)
 	{
-		_useRate = rate;
+		this.useRate = rate;
 	}
 	
 	public final boolean getMaintainEnchantment()
 	{
-		return _maintainEnchantment;
+		return maintainEnchantment;
 	}
-	
-	public void allowNpc(int npcId)
-	{
-		if (_npcsAllowed == null)
-		{
-			_npcsAllowed = new HashSet<>();
+
+	public void allowNpc(int npcId) {
+		npcsAllowed.add(npcId);
+	}
+
+	public boolean isNpcNotAllowed(int npcId) {
+		return !npcsAllowed.contains(npcId);
+	}
+
+	public boolean isNpcOnly() {
+		return !npcsAllowed.isEmpty();
+	}
+
+	private static double calculateTaxRate(ListContainer template, L2Npc npc) {
+		if (npc != null &&
+				template.getApplyTaxes() &&
+				npc.getIsInTown() &&
+				(npc.getCastle() != null && npc.getCastle().getOwnerId() > 0)) {
+			return npc.getCastle().getTaxRate();
+		} else {
+			return 0D;
 		}
-		_npcsAllowed.add(npcId);
 	}
-	
-	public boolean isNpcAllowed(int npcId)
-	{
-		return (_npcsAllowed == null) || _npcsAllowed.contains(npcId);
+
+	public static ListContainer prepareInventoryOnlyMultisell(ListContainer template, L2PcInstance player, L2Npc npc) {
+		if (player == null) {
+			return template;
+		}
+
+		final L2ItemInstance[] items;
+		if (template.getMaintainEnchantment()) {
+			items = player.getInventory().getUniqueItemsByEnchantLevel(false, false, false);
+		} else {
+			items = player.getInventory().getUniqueItems(false, false, false);
+		}
+
+		double taxRate = calculateTaxRate(template, npc);
+		boolean applyTaxes = calculateApplyTaxes(taxRate);
+
+		List<Entry> entries = new LinkedList<>();
+		for (L2ItemInstance item : items) {
+			if (!item.isEquipped() && (item.isArmor() || item.isWeapon())) {
+				for (Entry ent : template.getEntries()) {
+					for (Ingredient ing : ent.getIngredients()) {
+						if (item.getId() == ing.getItemId()) {
+							entries.add(Entry.prepareEntry(ent, item, applyTaxes, template.getMaintainEnchantment(), taxRate));
+							break; // next entry
+						}
+					}
+				}
+			}
+		}
+
+		return new ListContainer(template.getListId(), applyTaxes, template.getMaintainEnchantment(), template.getUseRate(), entries);
 	}
-	
-	public boolean isNpcOnly()
-	{
-		return _npcsAllowed != null;
+
+	public static ListContainer prepareFullMultisell(ListContainer template, L2Npc npc) {
+		double taxRate = calculateTaxRate(template, npc);
+		boolean applyTaxes = calculateApplyTaxes(taxRate);
+
+		List<Entry> entries = new ArrayList<>(template.getEntries().size());
+		for (Entry ent : template.getEntries()) {
+			entries.add(Entry.prepareEntry(ent, null, applyTaxes, false, taxRate));
+		}
+
+		return new ListContainer(template.getListId(), applyTaxes, template.getMaintainEnchantment(), template.getUseRate(), entries);
 	}
+
+	private static boolean calculateApplyTaxes(double taxRate) {
+		return taxRate > 0D;
+	}
+
 }

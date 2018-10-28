@@ -18,76 +18,137 @@
  */
 package com.l2jserver.gameserver.model.multisell;
 
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
 /**
  * @author DS
  */
 public class Entry
 {
-	protected int _entryId;
-	protected boolean _stackable = true;
-	
-	protected List<Ingredient> _products;
-	protected List<Ingredient> _ingredients;
-	
-	public Entry(int entryId)
-	{
-		_entryId = entryId;
-		_products = new ArrayList<>();
-		_ingredients = new ArrayList<>();
+	protected int entryId;
+	protected boolean stackable = true;
+
+	protected List<Ingredient> products = new ArrayList<>();
+	protected List<Ingredient> ingredients = new ArrayList<>();
+
+	private long taxAmount = 0;
+
+	public Entry(int entryId) {
+		this.entryId = entryId;
 	}
-	
-	/**
-	 * This constructor used in PreparedEntry only, ArrayLists not created.
-	 */
-	protected Entry()
-	{
+
+	public Entry(int entryId, boolean stackable, List<Ingredient> products, List<Ingredient> ingredients, long taxAmount) {
+		this.entryId = entryId;
+		this.stackable = stackable;
+		this.products = products;
+		this.ingredients = ingredients;
+		this.taxAmount = taxAmount;
 	}
-	
+
 	public final void setEntryId(int id)
 	{
-		_entryId = id;
+		entryId = id;
 	}
 	
 	public final int getEntryId()
 	{
-		return _entryId;
+		return entryId;
 	}
 	
 	public final void addProduct(Ingredient product)
 	{
-		_products.add(product);
+		products.add(product);
 		
 		if (!product.isStackable())
 		{
-			_stackable = false;
+			stackable = false;
 		}
 	}
 	
 	public final List<Ingredient> getProducts()
 	{
-		return _products;
+		return products;
 	}
 	
 	public final void addIngredient(Ingredient ingredient)
 	{
-		_ingredients.add(ingredient);
+		ingredients.add(ingredient);
 	}
 	
 	public final List<Ingredient> getIngredients()
 	{
-		return _ingredients;
+		return ingredients;
 	}
 	
 	public final boolean isStackable()
 	{
-		return _stackable;
+		return stackable;
 	}
-	
-	public long getTaxAmount()
-	{
-		return 0;
+
+
+	public final long getTaxAmount() {
+		return taxAmount;
+	}
+
+	public static Entry prepareEntry(Entry template, L2ItemInstance item, boolean applyTaxes, boolean maintainEnchantment, double taxRate) {
+		int entryId = template.getEntryId() * 100000;
+		if (maintainEnchantment && (item != null)) {
+			entryId += item.getEnchantLevel();
+		}
+
+		ItemInfo info = null;
+		long adenaAmount = 0;
+		long taxAmount = 0;
+
+		List<Ingredient> ingredients = new ArrayList<>(template.getIngredients().size());
+		for (Ingredient ing : template.getIngredients()) {
+			if (ing.getItemId() == ADENA_ID) {
+				// Tax ingredients added only if taxes enabled
+				if (ing.isTaxIngredient() && applyTaxes) {
+					// if taxes are to be applied, modify/add the adena count based on the template adena/ancient adena count
+					taxAmount += Math.round(ing.getItemCount() * taxRate);
+				} else {
+					adenaAmount += ing.getItemCount();
+				}
+			} else if (maintainEnchantment && item != null && ing.isArmorOrWeapon()) {
+				info = new ItemInfo(item);
+				final Ingredient newIngredient = ing.getCopy();
+				newIngredient.setItemInfo(info);
+				ingredients.add(newIngredient);
+			} else {
+				ingredients.add(ing.getCopy());
+			}
+		}
+
+		// now add the adena, if any.
+		adenaAmount += taxAmount; // do not forget tax
+		if (adenaAmount > 0) {
+			ingredients.add(new Ingredient(ADENA_ID, adenaAmount, false, false));
+		}
+
+		boolean stackable = true;
+		// now copy products
+		List<Ingredient> products = new ArrayList<>(template.getProducts().size());
+		for (Ingredient ing : template.getProducts()) {
+			if (!ing.isStackable()) {
+				stackable = false;
+			}
+
+			final Ingredient newProduct = ing.getCopy();
+			if (maintainEnchantment && ing.isArmorOrWeapon()) {
+				newProduct.setItemInfo(info);
+			} else if (ing.isArmorOrWeapon() && (ing.getTemplate().getDefaultEnchantLevel() > 0)) {
+				info = new ItemInfo(ing.getTemplate().getDefaultEnchantLevel());
+				newProduct.setItemInfo(info);
+			}
+			products.add(newProduct);
+		}
+
+		return new Entry(entryId, stackable, products, ingredients, taxAmount);
 	}
 }

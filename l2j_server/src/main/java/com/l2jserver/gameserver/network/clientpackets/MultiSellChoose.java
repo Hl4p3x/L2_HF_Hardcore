@@ -18,11 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import static com.l2jserver.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.model.Elementals;
@@ -33,11 +28,16 @@ import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.multisell.Entry;
 import com.l2jserver.gameserver.model.multisell.Ingredient;
-import com.l2jserver.gameserver.model.multisell.PreparedListContainer;
+import com.l2jserver.gameserver.model.multisell.ListContainer;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.l2jserver.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 
 /**
  * The Class MultiSellChoose.
@@ -111,8 +111,8 @@ public class MultiSellChoose extends L2GameClientPacket
 			player.setMultiSell(null);
 			return;
 		}
-		
-		PreparedListContainer list = player.getMultiSell();
+
+		ListContainer list = player.getMultiSell();
 		if ((list == null) || (list.getListId() != _listId))
 		{
 			player.setMultiSell(null);
@@ -120,7 +120,7 @@ public class MultiSellChoose extends L2GameClientPacket
 		}
 		
 		final L2Npc npc = player.getLastFolkNPC();
-		if (((npc != null) && !list.isNpcAllowed(npc.getId())) || ((npc == null) && list.isNpcOnly()))
+		if (((npc != null) && list.isNpcNotAllowed(npc.getId())) || ((npc == null) && list.isNpcOnly()))
 		{
 			player.setMultiSell(null);
 			return;

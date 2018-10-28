@@ -662,6 +662,19 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	{
 		return (getItemType() == EtcItemType.SCROLL);
 	}
+
+	public boolean isWeapon() {
+		return getType2() == TYPE2_WEAPON;
+	}
+
+	public boolean isRightHandWeapon() {
+		return isWeapon() && getBodyPart() == SLOT_R_HAND;
+	}
+
+
+	public boolean isLeftHandWeapon() {
+		return isWeapon() && getBodyPart() == SLOT_L_HAND;
+	}
 	
 	/**
 	 * Get the functions used by this item.
