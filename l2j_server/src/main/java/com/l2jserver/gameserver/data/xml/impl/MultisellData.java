@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.multisell.Entry;
 import com.l2jserver.gameserver.model.multisell.Ingredient;
 import com.l2jserver.gameserver.model.multisell.ListContainer;
-import com.l2jserver.gameserver.model.multisell.PreparedListContainer;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.MultiSellList;
@@ -248,8 +247,13 @@ public final class MultisellData implements IXmlReader
 			LOG.warn("{}: Player {} attempted to open multisell {} from npc {} which is not allowed!", getClass().getSimpleName(), player, listId, npc);
 			return;
 		}
-		
-		final PreparedListContainer list = new PreparedListContainer(template, inventoryOnly, player, npc);
+
+        ListContainer list;
+        if (inventoryOnly) {
+            list = ListContainer.prepareInventoryOnlyMultisell(template, player, npc);
+        } else {
+            list = ListContainer.prepareFullMultisell(template, npc);
+        }
 		
 		// Pass through this only when multipliers are different from 1
 		if ((productMultiplier != 1) || (ingredientMultiplier != 1))

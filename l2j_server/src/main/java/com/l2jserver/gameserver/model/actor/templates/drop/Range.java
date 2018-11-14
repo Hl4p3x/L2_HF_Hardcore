@@ -4,7 +4,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.l2jserver.util.Rnd;
 
+import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
+import java.util.function.Function;
 
 public class Range {
 
@@ -83,4 +86,20 @@ public class Range {
         return asString();
     }
 
+    public Set<Integer> asSet() {
+        Function<Integer, Integer> inc = (i) -> i + 1;
+        Function<Integer, Integer> dec = (i) -> i - 1;
+        Function<Integer, Integer> op;
+        if (low <= high) {
+            op = inc;
+        } else {
+            op = dec;
+        }
+
+        Set<Integer> result = new LinkedHashSet<>();
+        for (int i = low; i < high; i = op.apply(i)) {
+            result.add(i);
+        }
+        return result;
+    }
 }

@@ -18,11 +18,14 @@
  */
 package com.l2jserver.gameserver.model.multisell;
 
+import com.google.common.base.Functions;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author DS
@@ -128,6 +131,7 @@ public class ListContainer
 		}
 	}
 
+
 	public static ListContainer prepareInventoryOnlyMultisell(ListContainer template, L2PcInstance player, L2Npc npc) {
 		if (player == null) {
 			return template;
@@ -144,16 +148,14 @@ public class ListContainer
 		boolean applyTaxes = calculateApplyTaxes(taxRate);
 
 		List<Entry> entries = new LinkedList<>();
-		for (L2ItemInstance item : items) {
-			if (!item.isEquipped() && (item.isArmor() || item.isWeapon())) {
-				for (Entry ent : template.getEntries()) {
-					for (Ingredient ing : ent.getIngredients()) {
-						if (item.getId() == ing.getItemId()) {
-							entries.add(Entry.prepareEntry(ent, item, applyTaxes, template.getMaintainEnchantment(), taxRate));
-							break; // next entry
-						}
-					}
-				}
+        Map<Integer, L2ItemInstance> inventoryItems = Stream.of(items)
+                .filter(item -> !item.isEquipped() && (item.isArmor() || item.isWeapon()))
+                .collect(Collectors.toMap(L2ItemInstance::getId, Functions.identity()));
+
+        for (Entry ent : template.getEntries()) {
+            for (Ingredient ing : ent.getIngredients()) {
+                Optional.ofNullable(inventoryItems.get(ing.getItemId()))
+                        .map(item -> entries.add(Entry.prepareEntry(ent, item, applyTaxes, template.getMaintainEnchantment(), taxRate)));
 			}
 		}
 

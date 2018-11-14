@@ -1,5 +1,6 @@
 plugins {
-  id "com.github.johnrengelman.shadow" version "2.0.4"
+    id "com.github.johnrengelman.shadow" version "2.0.4"
+    id "me.champeau.gradle.jmh" version "0.4.7"
 }
 
 apply plugin: 'java'
@@ -16,167 +17,170 @@ repositories {
 }
 
 dependencies {
-	compile 'com.mchange:c3p0:0.9.5.2'
-	compile 'com.jolbox:bonecp:0.8.0.RELEASE'
-	compile 'com.sun.mail:javax.mail:1.5.6'
-	compile 'com.zaxxer:HikariCP:3.2.0'
-	compile 'mysql:mysql-connector-java:8.0.11'
-	compile 'org.mariadb.jdbc:mariadb-java-client:2.2.6'
-	compile 'org.bitlet:weupnp:0.1.4'
-	compile 'org.eclipse.jdt.core.compiler:ecj:4.4.2'
-	compile 'com.google.guava:guava:21.0'
-	compile 'org.python:jython:2.2.1'
-	compile 'org.slf4j:slf4j-api:1.7.25'
-	compile 'org.slf4j:slf4j-jdk14:1.7.25'
-	compile 'org.mindrot:jbcrypt:0.4'
+    compile 'com.mchange:c3p0:0.9.5.2'
+    compile 'com.jolbox:bonecp:0.8.0.RELEASE'
+    compile 'com.sun.mail:javax.mail:1.5.6'
+    compile 'com.zaxxer:HikariCP:3.2.0'
+    compile 'mysql:mysql-connector-java:8.0.11'
+    compile 'org.mariadb.jdbc:mariadb-java-client:2.2.6'
+    compile 'org.bitlet:weupnp:0.1.4'
+    compile 'org.eclipse.jdt.core.compiler:ecj:4.4.2'
+    compile 'com.google.guava:guava:21.0'
+    compile 'org.python:jython:2.2.1'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'org.slf4j:slf4j-jdk14:1.7.25'
+    compile 'org.mindrot:jbcrypt:0.4'
 
-	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.6'
-	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
-	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.6'
-	compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.9.6'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.6'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.6'
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.9.6'
 
-	compile fileTree(dir: 'dist/libs', include: '*.jar')
-	compile group: 'org.jdbi', name: 'jdbi3-core', version: '3.4.0'
-	compile group: 'org.jdbi', name: 'jdbi3-sqlobject', version: '3.4.0'
-	testCompile("org.assertj:assertj-core:3.11.0")
-	testCompile "org.mockito:mockito-core:2.+"
-	testCompile('org.junit.jupiter:junit-jupiter-api:5.2.0')
-	testImplementation('org.junit.jupiter:junit-jupiter-engine:5.2.0')
+    compile fileTree(dir: 'dist/libs', include: '*.jar')
+    compile group: 'org.jdbi', name: 'jdbi3-core', version: '3.4.0'
+    compile group: 'org.jdbi', name: 'jdbi3-sqlobject', version: '3.4.0'
+    testCompile("org.assertj:assertj-core:3.11.0")
+    testCompile "org.mockito:mockito-core:2.+"
+    testCompile('org.junit.jupiter:junit-jupiter-api:5.2.0')
+
+    testCompile group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.21'
+
+    testImplementation('org.junit.jupiter:junit-jupiter-engine:5.2.0')
 }
 
 
 test {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
 
 def generalManifest = manifest {
-	attributes('Built-By': System.getProperty('user.name'),
-			'Built-Date': new Date().format("yyyy-MM-dd HH:mm:ss"),
-			'Implementation-URL': 'http://www.l2jserver.com/',
-			'Class-Path': configurations.runtime.collect { '../libs/' + it.name }.join(' '))
+    attributes('Built-By': System.getProperty('user.name'),
+            'Built-Date': new Date().format("yyyy-MM-dd HH:mm:ss"),
+            'Implementation-URL': 'http://www.l2jserver.com/',
+            'Class-Path': configurations.runtime.collect { '../libs/' + it.name }.join(' '))
 }
 
 jar {
-	archiveName = 'l2jserver.jar'
-	exclude('**/dbinstaller/**')
-	exclude('**/loginserver/**')
-	exclude('**/accountmanager/**')
-	exclude('**/gsregistering/**')
-	manifest {
-		from(generalManifest)
-		attributes('Main-Class': 'com.l2jserver.gameserver.GameServer')
-	}
+    archiveName = 'l2jserver.jar'
+    exclude('**/dbinstaller/**')
+    exclude('**/loginserver/**')
+    exclude('**/accountmanager/**')
+    exclude('**/gsregistering/**')
+    manifest {
+        from(generalManifest)
+        attributes('Main-Class': 'com.l2jserver.gameserver.GameServer')
+    }
 }
 
 task loginJar(type: Jar, dependsOn: classes) {
-	from(sourceSets.main.output)
-	archiveName = 'l2jlogin.jar'
-	exclude('**/dbinstaller/**')
-	exclude('**/gameserver/**')
-	manifest {
-		from(generalManifest)
-		attributes('Main-Class': 'com.l2jserver.loginserver.L2LoginServer')
-	}
+    from(sourceSets.main.output)
+    archiveName = 'l2jlogin.jar'
+    exclude('**/dbinstaller/**')
+    exclude('**/gameserver/**')
+    manifest {
+        from(generalManifest)
+        attributes('Main-Class': 'com.l2jserver.loginserver.L2LoginServer')
+    }
 }
 
 task configuratorJar(type: Jar, dependsOn: classes) {
-	from(sourceSets.main.output)
-	archiveName = 'L2J_Configurator.jar'
-	include('**/configurator/**')
-	include('**/i18n/**')
-	include('**/images/**')
-	exclude('**/accountmanager/**')
-	exclude('**/dbinstaller/**')
-	exclude('**/gameserver/**')
-	exclude('**/gsregistering/**')
-	exclude('**/log/**')
-	exclude('**/loginserver/**')
-	exclude('**/status/**')
-	exclude('**/util/**')
-	exclude('**/Config/**')
-	exclude('**/ConnectionFactory/**')
-	exclude('**/Server/**')
-	manifest {
-		from(generalManifest)
-		attributes('Main-Class': 'com.l2jserver.tools.configurator.ConfigUserInterface')
-	}
+    from(sourceSets.main.output)
+    archiveName = 'L2J_Configurator.jar'
+    include('**/configurator/**')
+    include('**/i18n/**')
+    include('**/images/**')
+    exclude('**/accountmanager/**')
+    exclude('**/dbinstaller/**')
+    exclude('**/gameserver/**')
+    exclude('**/gsregistering/**')
+    exclude('**/log/**')
+    exclude('**/loginserver/**')
+    exclude('**/status/**')
+    exclude('**/util/**')
+    exclude('**/Config/**')
+    exclude('**/ConnectionFactory/**')
+    exclude('**/Server/**')
+    manifest {
+        from(generalManifest)
+        attributes('Main-Class': 'com.l2jserver.tools.configurator.ConfigUserInterface')
+    }
 }
 
 task dbInstLsJar(type: Jar, dependsOn: classes) {
-	from(sourceSets.main.output)
-	archiveName = 'dbinst_ls.jar'
-	include '**/dbinstaller/**'
-	include '**/images/**'
-	include '**/util/**'
-	include '**/SQLFilter**'
-	exclude '**/LauncherGS*'
-	manifest {
-		from(generalManifest)
-		attributes('Main-Class': 'com.l2jserver.tools.dbinstaller.LauncherLS')
-	}
+    from(sourceSets.main.output)
+    archiveName = 'dbinst_ls.jar'
+    include '**/dbinstaller/**'
+    include '**/images/**'
+    include '**/util/**'
+    include '**/SQLFilter**'
+    exclude '**/LauncherGS*'
+    manifest {
+        from(generalManifest)
+        attributes('Main-Class': 'com.l2jserver.tools.dbinstaller.LauncherLS')
+    }
 }
 
 task dbInstGsJar(type: Jar, dependsOn: classes) {
-	from(sourceSets.main.output)
-	archiveName = 'dbinst_gs.jar'
-	include('**/dbinstaller/**')
-	include('**/images/**')
-	include('**/util/**')
-	include('**/SQLFilter**')
-	exclude('**/LauncherLS*')
-	manifest {
-		from(generalManifest)
-		attributes 'Main-Class': 'com.l2jserver.tools.dbinstaller.LauncherGS'
-	}
+    from(sourceSets.main.output)
+    archiveName = 'dbinst_gs.jar'
+    include('**/dbinstaller/**')
+    include('**/images/**')
+    include('**/util/**')
+    include('**/SQLFilter**')
+    exclude('**/LauncherLS*')
+    manifest {
+        from(generalManifest)
+        attributes 'Main-Class': 'com.l2jserver.tools.dbinstaller.LauncherGS'
+    }
 }
 
 artifacts {
-	archives loginJar, configuratorJar, dbInstLsJar, dbInstGsJar
+    archives loginJar, configuratorJar, dbInstLsJar, dbInstGsJar
 }
 
 task zip(type: Zip, dependsOn: build) {
-	from('dist') {
-		exclude('libs')
-	}
-	into('libs') {
-		from(configurations.runtime)
-	}
-	into('game') {
-		from(jar)
-		from(configuratorJar)
-	}
-	into('login') {
-		from(loginJar)
-	}
-	into('tools') {
-		from(dbInstLsJar)
-		from(dbInstGsJar)
-	}
-	
-	baseName = 'L2J_Server_' + new Date().format("yyyy-MM-dd")
-	println 'Build in build/distributions/' + baseName + '.zip'
+    from('dist') {
+        exclude('libs')
+    }
+    into('libs') {
+        from(configurations.runtime)
+    }
+    into('game') {
+        from(jar)
+        from(configuratorJar)
+    }
+    into('login') {
+        from(loginJar)
+    }
+    into('tools') {
+        from(dbInstLsJar)
+        from(dbInstGsJar)
+    }
+
+    baseName = 'L2J_Server_' + new Date().format("yyyy-MM-dd")
+    println 'Build in build/distributions/' + baseName + '.zip'
 }
 
 build.finalizedBy(zip)
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '4.7'
+    gradleVersion = '4.7'
 }
 
 eclipse {
-	project {
-		name = 'L2J_Server'
-		comment 'L2J Server Project'
-		natures 'org.eclipse.buildship.core.gradleprojectbuilde'
-	}
-	jdt {
-		file {
-			whenMerged {jdt ->
-				def propertiesField = org.gradle.plugins.ide.internal.generator.PropertiesPersistableConfigurationObject.getDeclaredField('properties')
-				propertiesField.accessible = true
-				Properties properties = propertiesField.get(jdt)
-				properties.setProperty 'org.eclipse.jdt.core.compiler.problem.incompleteEnumSwitch', 'ignore'
-			}
-		}
-	}
+    project {
+        name = 'L2J_Server'
+        comment 'L2J Server Project'
+        natures 'org.eclipse.buildship.core.gradleprojectbuilde'
+    }
+    jdt {
+        file {
+            whenMerged { jdt ->
+                def propertiesField = org.gradle.plugins.ide.internal.generator.PropertiesPersistableConfigurationObject.getDeclaredField('properties')
+                propertiesField.accessible = true
+                Properties properties = propertiesField.get(jdt)
+                properties.setProperty 'org.eclipse.jdt.core.compiler.problem.incompleteEnumSwitch', 'ignore'
+            }
+        }
+    }
 }

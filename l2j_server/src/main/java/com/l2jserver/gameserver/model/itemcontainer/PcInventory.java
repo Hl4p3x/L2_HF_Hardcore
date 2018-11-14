@@ -983,8 +983,8 @@ public class PcInventory extends Inventory
 		}
 		return true;
 	}
-	
-	@Override
+
+    @Override
 	protected void addItem(L2ItemInstance item)
 	{
 		if (item.isQuestItem())
