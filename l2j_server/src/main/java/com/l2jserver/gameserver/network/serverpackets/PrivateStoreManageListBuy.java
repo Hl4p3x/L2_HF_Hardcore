@@ -33,7 +33,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 	{
 		_objId = player.getObjectId();
 		_playerAdena = player.getAdena();
-		_itemList = player.getInventory().getUniqueItems(false, true);
+		_itemList = player.getInventory().getUniqueItems(false, true).toArray(new L2ItemInstance[]{});
 		_buyList = player.getBuyList().getItems();
 	}
 	

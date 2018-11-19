@@ -120,12 +120,12 @@ public class PcInventory extends Inventory
 	 * @param allowAncientAdena
 	 * @return L2ItemInstance : items in inventory
 	 */
-	public L2ItemInstance[] getUniqueItems(boolean allowAdena, boolean allowAncientAdena)
+    public List<L2ItemInstance> getUniqueItems(boolean allowAdena, boolean allowAncientAdena)
 	{
 		return getUniqueItems(allowAdena, allowAncientAdena, true);
 	}
-	
-	public L2ItemInstance[] getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
+
+    public List<L2ItemInstance> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
 		List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
@@ -156,7 +156,7 @@ public class PcInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new L2ItemInstance[list.size()]);
+        return list;
 	}
 	
 	/**
@@ -165,12 +165,12 @@ public class PcInventory extends Inventory
 	 * @param allowAncientAdena
 	 * @return L2ItemInstance : items in inventory
 	 */
-	public L2ItemInstance[] getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena)
+    public List<L2ItemInstance> getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena)
 	{
 		return getUniqueItemsByEnchantLevel(allowAdena, allowAncientAdena, true);
 	}
-	
-	public L2ItemInstance[] getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
+
+    public List<L2ItemInstance> getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
 		List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
@@ -203,7 +203,7 @@ public class PcInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new L2ItemInstance[list.size()]);
+        return list;
 	}
 	
 	/**

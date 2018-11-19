@@ -47,6 +47,7 @@ import com.l2jserver.gameserver.model.items.L2Armor;
 import com.l2jserver.gameserver.model.items.L2EtcItem;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.interfaces.EnchantableItemObject;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.model.items.type.ItemType;
 import com.l2jserver.gameserver.model.options.EnchantOptions;
@@ -77,7 +78,7 @@ import static com.l2jserver.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
  * This class manages items.
  * @version $Revision: 1.4.2.1.2.11 $ $Date: 2005/03/31 16:07:50 $
  */
-public class L2ItemInstance extends L2Object
+public class L2ItemInstance extends L2Object implements EnchantableItemObject
 {
 	private static final Logger _log = Logger.getLogger(L2ItemInstance.class.getName());
 	private static final Logger _logItems = Logger.getLogger("item");
@@ -2246,5 +2247,10 @@ public class L2ItemInstance extends L2Object
 			_lifeTimeTask.cancel(false);
 			_lifeTimeTask = null;
 		}
+	}
+
+
+	public int getItemId() {
+		return _itemId;
 	}
 }

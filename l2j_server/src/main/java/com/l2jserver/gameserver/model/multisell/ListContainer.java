@@ -22,16 +22,20 @@ import com.google.common.base.Functions;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @author DS
  */
 public class ListContainer
 {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ListContainer.class);
+
 	private final int listId;
 	private boolean applyTaxes = false;
 	private boolean maintainEnchantment = false;
@@ -120,9 +124,8 @@ public class ListContainer
 		return !npcsAllowed.isEmpty();
 	}
 
-	private static double calculateTaxRate(ListContainer template, L2Npc npc) {
+	private static double calculateTaxRate(L2Npc npc) {
 		if (npc != null &&
-				template.getApplyTaxes() &&
 				npc.getIsInTown() &&
 				(npc.getCastle() != null && npc.getCastle().getOwnerId() > 0)) {
 			return npc.getCastle().getTaxRate();
@@ -131,24 +134,47 @@ public class ListContainer
 		}
 	}
 
+	private static ListContainer prepareDualcraftMultisell(ListContainer template, L2PcInstance player, L2Npc npc) {
+		if (player == null) {
+			throw new IllegalStateException("Cannot prepare multisell " + template + " for null player");
+		}
+
+		List<L2ItemInstance> uniqueItems = player.getInventory().getUniqueItemsByEnchantLevel(false, false, false);
+
+		double taxRate = calculateTaxRate(npc);
+		boolean applyTaxes = calculateApplyTaxes(taxRate);
+
+
+		List<L2ItemInstance> craftableDuals = new ArrayList<>();
+		for (Entry entry : template.getEntries()) {
+			List<Ingredient> dualWeaponIngredients = entry.getIngredients().stream().filter(Ingredient::isArmorOrWeapon).collect(Collectors.toList());
+			if (dualWeaponIngredients.size() != 2) {
+				LOG.warn("Dual Weapon craft {} has incorrect weapon ingredient count {}", entry, dualWeaponIngredients.size());
+				continue;
+			}
+
+
+		}
+		return craftableDuals;
+	}
 
 	public static ListContainer prepareInventoryOnlyMultisell(ListContainer template, L2PcInstance player, L2Npc npc) {
 		if (player == null) {
-			return template;
+			throw new IllegalStateException("Cannot prepare multisell " + template + " for null player");
 		}
 
-		final L2ItemInstance[] items;
+		final List<L2ItemInstance> items;
 		if (template.getMaintainEnchantment()) {
 			items = player.getInventory().getUniqueItemsByEnchantLevel(false, false, false);
 		} else {
 			items = player.getInventory().getUniqueItems(false, false, false);
 		}
 
-		double taxRate = calculateTaxRate(template, npc);
+		double taxRate = calculateTaxRate(npc);
 		boolean applyTaxes = calculateApplyTaxes(taxRate);
 
 		List<Entry> entries = new LinkedList<>();
-        Map<Integer, L2ItemInstance> inventoryItems = Stream.of(items)
+		Map<Integer, L2ItemInstance> inventoryItems = items.stream()
                 .filter(item -> !item.isEquipped() && (item.isArmor() || item.isWeapon()))
                 .collect(Collectors.toMap(L2ItemInstance::getId, Functions.identity()));
 
@@ -163,7 +189,7 @@ public class ListContainer
 	}
 
 	public static ListContainer prepareFullMultisell(ListContainer template, L2Npc npc) {
-		double taxRate = calculateTaxRate(template, npc);
+		double taxRate = calculateTaxRate(npc);
 		boolean applyTaxes = calculateApplyTaxes(taxRate);
 
 		List<Entry> entries = new ArrayList<>(template.getEntries().size());
