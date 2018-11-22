@@ -26,7 +26,7 @@ class DualcraftCombinatorTest {
                 )
         );
         assertThat(result).hasSize(1);
-        assertThat(result).isEqualTo(Collections.singletonList(new DualcraftWeaponObject(testFirstWeaponObjectId, testSecondWeaponObjectId, testDualsId, testEnchantmentLevel)));
+        assertThat(result).isEqualTo(Collections.singletonList(new DualcraftWeaponObject(new TestEnchantableItem(testFirstWeaponObjectId, testWeaponId, testEnchantmentLevel), new TestEnchantableItem(testSecondWeaponObjectId, testWeaponId, testEnchantmentLevel), testDualsId, testEnchantmentLevel)));
     }
 
     @Test
@@ -47,7 +47,7 @@ class DualcraftCombinatorTest {
         );
 
         assertThat(result).hasSize(1);
-        assertThat(result).isEqualTo(Collections.singletonList(new DualcraftWeaponObject(testSecondWeaponObjectId, testFirstWeaponObjectId, testDualsId, expectedEnchantmentLevel)));
+        assertThat(result).isEqualTo(Collections.singletonList(new DualcraftWeaponObject(new TestEnchantableItem(testSecondWeaponObjectId, testWeaponId, rightWeaponEnchantLevel), new TestEnchantableItem(testFirstWeaponObjectId, testWeaponId, leftWeaponEnchantLevel), testDualsId, expectedEnchantmentLevel)));
     }
 
     @Test
@@ -66,7 +66,7 @@ class DualcraftCombinatorTest {
         );
 
         assertThat(result).hasSize(1);
-        assertThat(result).isEqualTo(Collections.singletonList(new DualcraftWeaponObject(1, 2, testDualWeaponId, testEnchantmentLevel)));
+        assertThat(result).isEqualTo(Collections.singletonList(new DualcraftWeaponObject(new TestEnchantableItem(1, testLeftWeaponId, testEnchantmentLevel), new TestEnchantableItem(2, testRightWeaponId, testEnchantmentLevel), testDualWeaponId, testEnchantmentLevel)));
     }
 
     @Test
@@ -91,12 +91,12 @@ class DualcraftCombinatorTest {
         assertThat(result).hasSize(6);
         assertThat(result).isEqualTo(
                 Arrays.asList(
-                        new DualcraftWeaponObject(1, 5, 300, 8),
-                        new DualcraftWeaponObject(1, 6, 300, 6),
-                        new DualcraftWeaponObject(2, 6, 300, 5),
-                        new DualcraftWeaponObject(3, 6, 300, 3),
-                        new DualcraftWeaponObject(3, 7, 300, 2),
-                        new DualcraftWeaponObject(4, 7, 300, 1)
+                        new DualcraftWeaponObject(new TestEnchantableItem(1, testLeftWeaponId, 8), new TestEnchantableItem(5, testRightWeaponId, 8), 300, 8),
+                        new DualcraftWeaponObject(new TestEnchantableItem(1, testLeftWeaponId, 8), new TestEnchantableItem(6, testRightWeaponId, 6), 300, 6),
+                        new DualcraftWeaponObject(new TestEnchantableItem(2, testLeftWeaponId, 5), new TestEnchantableItem(6, testRightWeaponId, 6), 300, 5),
+                        new DualcraftWeaponObject(new TestEnchantableItem(3, testLeftWeaponId, 3), new TestEnchantableItem(6, testRightWeaponId, 6), 300, 3),
+                        new DualcraftWeaponObject(new TestEnchantableItem(3, testLeftWeaponId, 3), new TestEnchantableItem(7, testRightWeaponId, 2), 300, 2),
+                        new DualcraftWeaponObject(new TestEnchantableItem(4, testLeftWeaponId, 1), new TestEnchantableItem(7, testRightWeaponId, 2), 300, 1)
                 )
         );
     }

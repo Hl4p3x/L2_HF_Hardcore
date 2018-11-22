@@ -19,9 +19,15 @@
 package com.l2jserver.gameserver.model.multisell;
 
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.interfaces.EnchantableItemObject;
+import com.l2jserver.gameserver.model.multisell.dualcraft.DualcraftWeaponObject;
+import com.l2jserver.util.CollectionUtil;
+import com.l2jserver.util.Pair;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
@@ -95,6 +101,76 @@ public class Entry
 		return taxAmount;
 	}
 
+	private static Optional<Ingredient> calculateTaxAdena(List<Ingredient> ingredients, double taxRate) {
+		long adenaAmount = 0;
+		long taxAmount = 0;
+
+		for (Ingredient ing : ingredients) {
+			if (ing.getItemId() == ADENA_ID) {
+				if (ing.isTaxIngredient()) {
+					taxAmount += Math.round(ing.getItemCount() * taxRate);
+				} else {
+					adenaAmount += ing.getItemCount();
+				}
+			}
+		}
+
+		adenaAmount += taxAmount; // do not forget tax
+		if (adenaAmount > 0) {
+			return Optional.of(new Ingredient(ADENA_ID, adenaAmount, false, false));
+		}
+		return Optional.empty();
+	}
+
+	private static Ingredient findAndSetEnchant(Ingredient ingredient, EnchantableItemObject enchantableItemObject) {
+		Ingredient newIngredient = ingredient.getCopy();
+		if (newIngredient.getItemId() == enchantableItemObject.getItemId()) {
+			newIngredient.setItemInfo(new ItemInfo(enchantableItemObject.getEnchantLevel()));
+		}
+		return newIngredient;
+	}
+
+	public static Entry dualcraftEntry(Entry template, DualcraftWeaponObject dualcraftWeaponObject, boolean applyTaxes, double taxRate) {
+		int entryId = template.getEntryId() * 100000;
+		entryId += dualcraftWeaponObject.getEnchantLevel();
+
+		Pair<List<Ingredient>, List<Ingredient>> ingredients = CollectionUtil.splitBy(template.ingredients, (Ingredient item) -> item.getItemId() == dualcraftWeaponObject.getLeftWeaponObject().getItemId() ||
+				item.getItemId() == dualcraftWeaponObject.getRightWeaponObject().getItemId());
+
+		List<Ingredient> dualWeaponIngredients = ingredients.getLeft();
+		if (dualWeaponIngredients.size() != 2) {
+			throw new IllegalStateException("Dualcraft has to have exactly two weapon ingredients");
+		}
+
+		List<Ingredient> newDualWeaponIngredients = new ArrayList<>();
+		newDualWeaponIngredients.add(findAndSetEnchant(dualWeaponIngredients.get(0), dualcraftWeaponObject.getLeftWeaponObject()));
+		newDualWeaponIngredients.add(findAndSetEnchant(dualWeaponIngredients.get(1), dualcraftWeaponObject.getRightWeaponObject()));
+
+		List<Ingredient> newIngredients = new ArrayList<>(newDualWeaponIngredients);
+		for (Ingredient ing : ingredients.getRight()) {
+			Ingredient ingredientCopy = ing.getCopy();
+			newIngredients.add(ingredientCopy);
+		}
+
+		long taxAmount = 0L;
+		if (applyTaxes) {
+			Optional<Ingredient> optionalTax = calculateTaxAdena(template.getIngredients(), taxRate);
+			if (optionalTax.isPresent()) {
+				taxAmount = optionalTax.get().getItemCount();
+				newIngredients.add(optionalTax.get());
+			}
+		}
+
+		Ingredient product = template.getProducts().stream()
+				.filter(templateProduct -> templateProduct.getItemId() == dualcraftWeaponObject.getDualTemplateId()).findFirst().orElseThrow(() -> new IllegalStateException("Could not find matching product item " + dualcraftWeaponObject.getDualTemplateId()));
+		Ingredient newProduct = product.getCopy();
+		newProduct.setItemInfo(new ItemInfo(dualcraftWeaponObject.getEnchantLevel()));
+
+		List<Ingredient> newProducts = Collections.singletonList(newProduct);
+
+		return new Entry(entryId, false, newProducts, newIngredients, taxAmount);
+	}
+
 	public static Entry prepareEntry(Entry template, L2ItemInstance item, boolean applyTaxes, boolean maintainEnchantment, double taxRate) {
 		int entryId = template.getEntryId() * 100000;
 		if (maintainEnchantment && (item != null)) {
@@ -102,20 +178,10 @@ public class Entry
 		}
 
 		ItemInfo info = null;
-		long adenaAmount = 0;
-		long taxAmount = 0;
 
 		List<Ingredient> ingredients = new ArrayList<>(template.getIngredients().size());
 		for (Ingredient ing : template.getIngredients()) {
-			if (ing.getItemId() == ADENA_ID) {
-				// Tax ingredients added only if taxes enabled
-				if (ing.isTaxIngredient() && applyTaxes) {
-					// if taxes are to be applied, modify/add the adena count based on the template adena/ancient adena count
-					taxAmount += Math.round(ing.getItemCount() * taxRate);
-				} else {
-					adenaAmount += ing.getItemCount();
-				}
-			} else if (maintainEnchantment && item != null && ing.isArmorOrWeapon()) {
+			if (maintainEnchantment && item != null && ing.isArmorOrWeapon()) {
 				info = new ItemInfo(item);
 				final Ingredient newIngredient = ing.getCopy();
 				newIngredient.setItemInfo(info);
@@ -125,10 +191,13 @@ public class Entry
 			}
 		}
 
-		// now add the adena, if any.
-		adenaAmount += taxAmount; // do not forget tax
-		if (adenaAmount > 0) {
-			ingredients.add(new Ingredient(ADENA_ID, adenaAmount, false, false));
+		long taxAmount = 0L;
+		if (applyTaxes) {
+			Optional<Ingredient> optionalTax = calculateTaxAdena(ingredients, taxRate);
+			if (optionalTax.isPresent()) {
+				taxAmount = optionalTax.get().getItemCount();
+				ingredients.add(optionalTax.get());
+			}
 		}
 
 		boolean stackable = true;

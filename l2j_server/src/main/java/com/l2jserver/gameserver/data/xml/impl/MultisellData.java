@@ -93,7 +93,7 @@ public final class MultisellData implements IXmlReader
 					list.setApplyTaxes((att != null) && Boolean.parseBoolean(att.getNodeValue()));
 
 					Node dualcraftNode = n.getAttributes().getNamedItem("dualcraft");
-					list.setApplyTaxes((dualcraftNode != null) && Boolean.parseBoolean(dualcraftNode.getNodeValue()));
+                    list.setDualcraft((dualcraftNode != null) && Boolean.parseBoolean(dualcraftNode.getNodeValue()));
 					
 					att = n.getAttributes().getNamedItem("useRate");
 					if (att != null)
@@ -249,7 +249,9 @@ public final class MultisellData implements IXmlReader
 		}
 
         ListContainer list;
-        if (inventoryOnly) {
+        if (template.isDualcraft()) {
+            list = ListContainer.prepareDualcraftMultisell(template, player, npc);
+        } else if (inventoryOnly) {
             list = ListContainer.prepareInventoryOnlyMultisell(template, player, npc);
         } else {
             list = ListContainer.prepareFullMultisell(template, npc);
@@ -283,8 +285,8 @@ public final class MultisellData implements IXmlReader
 	{
 		separateAndSend(listId, player, npc, inventoryOnly, 1, 1);
 	}
-	
-	public static final boolean hasSpecialIngredient(int id, long amount, L2PcInstance player)
+
+    public static final boolean hasSpecialIngredient(int id, long amount, L2PcInstance player)
 	{
 		switch (id)
 		{

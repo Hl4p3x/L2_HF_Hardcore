@@ -45,6 +45,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 public class PcInventory extends Inventory
 {
@@ -157,6 +158,14 @@ public class PcInventory extends Inventory
 			}
 		}
         return list;
+	}
+
+	public List<L2ItemInstance> getAllInventoryItems() {
+		return _items.stream().filter(item -> !item.isEquipped() && item.isAvailable(getOwner(), false, false)).collect(Collectors.toList());
+	}
+
+	public List<L2ItemInstance> getAllInventoryWeapons() {
+		return _items.stream().filter(item -> item.isWeapon() && !item.isEquipped() && item.isAvailable(getOwner(), false, false)).collect(Collectors.toList());
 	}
 	
 	/**

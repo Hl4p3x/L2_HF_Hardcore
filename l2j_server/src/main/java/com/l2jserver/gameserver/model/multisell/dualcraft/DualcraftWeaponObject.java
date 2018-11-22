@@ -1,5 +1,6 @@
 package com.l2jserver.gameserver.model.multisell.dualcraft;
 
+import com.l2jserver.gameserver.model.items.interfaces.EnchantableItemObject;
 import com.l2jserver.gameserver.model.items.interfaces.HasEnchantLevel;
 
 import java.util.Objects;
@@ -7,24 +8,24 @@ import java.util.StringJoiner;
 
 public class DualcraftWeaponObject implements HasEnchantLevel {
 
-    private int leftWeaponObjectId;
-    private int rightWeaponObjectId;
+    private EnchantableItemObject leftWeaponObject;
+    private EnchantableItemObject rightWeaponObject;
     private int dualTemplateId;
     private int dualEnchantLevel;
 
-    public DualcraftWeaponObject(int leftWeaponObjectId, int rightWeaponObjectId, int dualTemplateId, int dualEnchantLevel) {
-        this.leftWeaponObjectId = leftWeaponObjectId;
-        this.rightWeaponObjectId = rightWeaponObjectId;
+    public DualcraftWeaponObject(EnchantableItemObject leftWeaponObject, EnchantableItemObject rightWeaponObject, int dualTemplateId, int dualEnchantLevel) {
+        this.leftWeaponObject = leftWeaponObject;
+        this.rightWeaponObject = rightWeaponObject;
         this.dualTemplateId = dualTemplateId;
         this.dualEnchantLevel = dualEnchantLevel;
     }
 
-    public int getLeftWeaponObjectId() {
-        return leftWeaponObjectId;
+    public EnchantableItemObject getLeftWeaponObject() {
+        return leftWeaponObject;
     }
 
-    public int getRightWeaponObjectId() {
-        return rightWeaponObjectId;
+    public EnchantableItemObject getRightWeaponObject() {
+        return rightWeaponObject;
     }
 
     @Override
@@ -41,22 +42,22 @@ public class DualcraftWeaponObject implements HasEnchantLevel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         DualcraftWeaponObject that = (DualcraftWeaponObject) o;
-        return leftWeaponObjectId == that.leftWeaponObjectId &&
-                rightWeaponObjectId == that.rightWeaponObjectId &&
+        return leftWeaponObject.equals(that.leftWeaponObject) &&
+                rightWeaponObject.equals(that.rightWeaponObject) &&
                 dualEnchantLevel == that.dualEnchantLevel &&
                 dualTemplateId == that.dualTemplateId;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(leftWeaponObjectId, rightWeaponObjectId, dualEnchantLevel, dualTemplateId);
+        return Objects.hash(leftWeaponObject, rightWeaponObject, dualEnchantLevel, dualTemplateId);
     }
 
     @Override
     public String toString() {
         return new StringJoiner(", ", DualcraftWeaponObject.class.getSimpleName() + "[", "]")
-                .add(Objects.toString(leftWeaponObjectId))
-                .add(Objects.toString(rightWeaponObjectId))
+                .add(Objects.toString(leftWeaponObject))
+                .add(Objects.toString(rightWeaponObject))
                 .add(Objects.toString(dualTemplateId))
                 .add(Objects.toString(dualEnchantLevel))
                 .toString();

@@ -27,7 +27,7 @@ public class DualcraftCombinator {
                 int combinationEnchantLevel = Math.min(current.getEnchantLevel(), next.getEnchantLevel());
                 if (!uniqueEnchantLevels.contains(combinationEnchantLevel)) {
                     uniqueEnchantLevels.add(combinationEnchantLevel);
-                    dualcraftWeaponObjects.add(new DualcraftWeaponObject(current.getObjectId(), next.getObjectId(), dualcraftTemplate.getDualWeaponId(), combinationEnchantLevel));
+                    dualcraftWeaponObjects.add(new DualcraftWeaponObject(current, next, dualcraftTemplate.getDualWeaponId(), combinationEnchantLevel));
                 }
             }
         }
@@ -50,7 +50,7 @@ public class DualcraftCombinator {
             Optional<EnchantableItemObject> leftWeaponOptional = leftHandItems.stream().filter(item -> enchantLevel <= item.getEnchantLevel()).min(Comparator.comparing(EnchantableItemObject::getEnchantLevel));
             Optional<EnchantableItemObject> rightWeaponOptional = rightHandItems.stream().filter(item -> enchantLevel <= item.getEnchantLevel()).min(Comparator.comparing(EnchantableItemObject::getEnchantLevel));
             if (leftWeaponOptional.isPresent() && rightWeaponOptional.isPresent()) {
-                dualcraftWeaponObjects.add(new DualcraftWeaponObject(leftWeaponOptional.get().getObjectId(), rightWeaponOptional.get().getObjectId(), dualcraftTemplate.getDualWeaponId(), enchantLevel));
+                dualcraftWeaponObjects.add(new DualcraftWeaponObject(leftWeaponOptional.get(), rightWeaponOptional.get(), dualcraftTemplate.getDualWeaponId(), enchantLevel));
             }
         }
 
@@ -64,7 +64,9 @@ public class DualcraftCombinator {
         } else {
             result = processDifferentWeaponDuals(dualcraftTemplate, items);
         }
-        return result.stream().sorted(Comparator.comparing(DualcraftWeaponObject::getEnchantLevel).reversed()).collect(Collectors.toList());
+
+        return result.stream()
+                .sorted(Comparator.comparing(DualcraftWeaponObject::getEnchantLevel).reversed()).collect(Collectors.toList());
     }
 
 }

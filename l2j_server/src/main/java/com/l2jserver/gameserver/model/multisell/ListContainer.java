@@ -22,6 +22,10 @@ import com.google.common.base.Functions;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.interfaces.EnchantableItemObject;
+import com.l2jserver.gameserver.model.multisell.dualcraft.DualcraftCombinator;
+import com.l2jserver.gameserver.model.multisell.dualcraft.DualcraftTemplate;
+import com.l2jserver.gameserver.model.multisell.dualcraft.DualcraftWeaponObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -134,28 +138,50 @@ public class ListContainer
 		}
 	}
 
-	private static ListContainer prepareDualcraftMultisell(ListContainer template, L2PcInstance player, L2Npc npc) {
+	public static ListContainer prepareDualcraftMultisell(ListContainer template, L2PcInstance player, L2Npc npc) {
 		if (player == null) {
 			throw new IllegalStateException("Cannot prepare multisell " + template + " for null player");
 		}
 
-		List<L2ItemInstance> uniqueItems = player.getInventory().getUniqueItemsByEnchantLevel(false, false, false);
+		DualcraftCombinator dualcraftCombinator = new DualcraftCombinator();
 
+		List<L2ItemInstance> uniqueItemInstances = player.getInventory().getAllInventoryWeapons();
+		Set<Integer> inventoryItemTemplateIds = uniqueItemInstances.stream().map(L2ItemInstance::getId).collect(Collectors.toSet());
+
+		List<EnchantableItemObject> uniqueItemInstancesWrapped = new ArrayList<>(uniqueItemInstances);
 		double taxRate = calculateTaxRate(npc);
 		boolean applyTaxes = calculateApplyTaxes(taxRate);
 
-
-		List<L2ItemInstance> craftableDuals = new ArrayList<>();
+		List<Entry> entries = new LinkedList<>();
 		for (Entry entry : template.getEntries()) {
 			List<Ingredient> dualWeaponIngredients = entry.getIngredients().stream().filter(Ingredient::isArmorOrWeapon).collect(Collectors.toList());
 			if (dualWeaponIngredients.size() != 2) {
-				LOG.warn("Dual Weapon craft {} has incorrect weapon ingredient count {}", entry, dualWeaponIngredients.size());
+				LOG.warn("Dual Weapon Craft {} has incorrect weapon ingredient count {}", entry, dualWeaponIngredients.size());
 				continue;
 			}
 
+			if (entry.getProducts().size() != 1) {
+				LOG.warn("Dual Weapon Craft {} has incorrect product count {}", entry.getProducts().size());
+				continue;
+			}
 
+			int leftWeaponTemplateId = dualWeaponIngredients.get(0).getItemId();
+			int rightWeaponTemplateId = dualWeaponIngredients.get(1).getItemId();
+
+			if (!inventoryItemTemplateIds.contains(leftWeaponTemplateId) || !inventoryItemTemplateIds.contains(rightWeaponTemplateId)) {
+				LOG.debug("Skipping Dual Weapon Craft {} because player does not have relative ingredients", entry);
+				continue;
+			}
+
+			DualcraftTemplate dualcraftTemplate = new DualcraftTemplate(leftWeaponTemplateId, rightWeaponTemplateId, entry.getProducts().get(0).getItemId());
+			List<DualcraftWeaponObject> dualcraftWeaponObjects = dualcraftCombinator.findPossibleEnchantmentLevels(dualcraftTemplate, uniqueItemInstancesWrapped);
+
+			for (DualcraftWeaponObject dualcraftWeaponObject : dualcraftWeaponObjects) {
+				entries.add(Entry.dualcraftEntry(entry, dualcraftWeaponObject, applyTaxes, taxRate));
+			}
 		}
-		return craftableDuals;
+
+		return new ListContainer(template.getListId(), applyTaxes, template.getMaintainEnchantment(), template.getUseRate(), entries);
 	}
 
 	public static ListContainer prepareInventoryOnlyMultisell(ListContainer template, L2PcInstance player, L2Npc npc) {
@@ -174,6 +200,7 @@ public class ListContainer
 		boolean applyTaxes = calculateApplyTaxes(taxRate);
 
 		List<Entry> entries = new LinkedList<>();
+		// Item ID is not unique
 		Map<Integer, L2ItemInstance> inventoryItems = items.stream()
                 .filter(item -> !item.isEquipped() && (item.isArmor() || item.isWeapon()))
                 .collect(Collectors.toMap(L2ItemInstance::getId, Functions.identity()));
