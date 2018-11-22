@@ -56,6 +56,16 @@ public class ListContainer
 		this.listId = listId;
 	}
 
+    public ListContainer(int listId, boolean applyTaxes, boolean maintainEnchantment, double useRate, List<Entry> entries, Set<Integer> npcsAllowed, boolean dualcraft) {
+        this.listId = listId;
+        this.applyTaxes = applyTaxes;
+        this.maintainEnchantment = maintainEnchantment;
+        this.useRate = useRate;
+        this.entries = entries;
+        this.npcsAllowed = npcsAllowed;
+        this.dualcraft = dualcraft;
+    }
+
 	public ListContainer(int listId, boolean applyTaxes, boolean maintainEnchantment, double useRate, List<Entry> entries) {
 		this.listId = listId;
 		this.applyTaxes = applyTaxes;
@@ -125,6 +135,10 @@ public class ListContainer
 		return !npcsAllowed.contains(npcId);
 	}
 
+    public Set<Integer> getNpcsAllowed() {
+        return npcsAllowed;
+    }
+
 	public boolean isNpcOnly() {
 		return !npcsAllowed.isEmpty();
 	}
@@ -182,7 +196,7 @@ public class ListContainer
 			}
 		}
 
-		return new ListContainer(template.getListId(), applyTaxes, template.getMaintainEnchantment(), template.getUseRate(), entries);
+        return new ListContainer(template.getListId(), applyTaxes, template.getMaintainEnchantment(), template.getUseRate(), entries, template.getNpcsAllowed(), template.isDualcraft());
 	}
 
 	public static ListContainer prepareInventoryOnlyMultisell(ListContainer template, L2PcInstance player, L2Npc npc) {
@@ -214,7 +228,7 @@ public class ListContainer
 			}
 		}
 
-		return new ListContainer(template.getListId(), applyTaxes, template.getMaintainEnchantment(), template.getUseRate(), entries);
+        return new ListContainer(template.getListId(), applyTaxes, template.getMaintainEnchantment(), template.getUseRate(), entries, template.getNpcsAllowed(), template.isDualcraft());
 	}
 
 	public static ListContainer prepareFullMultisell(ListContainer template, L2Npc npc) {
@@ -226,7 +240,7 @@ public class ListContainer
 			entries.add(Entry.prepareEntry(ent, null, applyTaxes, false, taxRate));
 		}
 
-		return new ListContainer(template.getListId(), applyTaxes, template.getMaintainEnchantment(), template.getUseRate(), entries);
+        return new ListContainer(template.getListId(), applyTaxes, template.getMaintainEnchantment(), template.getUseRate(), entries, template.getNpcsAllowed(), template.isDualcraft());
 	}
 
 	private static boolean calculateApplyTaxes(double taxRate) {
