@@ -18,7 +18,8 @@
  */
 package com.l2jserver.gameserver.model.multisell;
 
-import com.google.common.base.Functions;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -201,13 +202,14 @@ public class ListContainer
 
 		List<Entry> entries = new LinkedList<>();
 		// Item ID is not unique
-		Map<Integer, L2ItemInstance> inventoryItems = items.stream()
+
+        Multimap<Integer, L2ItemInstance> inventoryItems = Multimaps.index(items.stream()
                 .filter(item -> !item.isEquipped() && (item.isArmor() || item.isWeapon()))
-                .collect(Collectors.toMap(L2ItemInstance::getId, Functions.identity()));
+                .collect(Collectors.toList()), L2ItemInstance::getId);
 
         for (Entry ent : template.getEntries()) {
             for (Ingredient ing : ent.getIngredients()) {
-                Optional.ofNullable(inventoryItems.get(ing.getItemId()))
+                inventoryItems.get(ing.getItemId()).stream().findFirst()
                         .map(item -> entries.add(Entry.prepareEntry(ent, item, applyTaxes, template.getMaintainEnchantment(), taxRate)));
 			}
 		}
