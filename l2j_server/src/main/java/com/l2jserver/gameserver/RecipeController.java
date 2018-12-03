@@ -581,7 +581,7 @@ public class RecipeController
 				else
 				{
 					// there is an unknown StatUse value
-					_target.sendMessage("Recipe error!!!, please tell this to your GM.");
+					_target.sendMessage("Recipe error! Please report this to your GM.");
 					ret = false;
 					abort();
 				}

@@ -34,6 +34,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -181,7 +182,11 @@ public abstract class ItemContainer
 		}
 		return null;
 	}
-	
+
+	public Optional<L2ItemInstance> getItemByObjectIdPossibly(int objectId) {
+		return _items.stream().filter(item -> item.getId() == objectId).findFirst();
+	}
+
 	/**
 	 * Gets the inventory item count by item Id and enchant level including equipped items.
 	 * @param itemId the item Id
