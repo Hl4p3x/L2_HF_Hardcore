@@ -93,9 +93,8 @@ public final class Rnd
 		 * @param n The superior limit (exclusive)
 		 * @return A random integer number from 0 to n-1
 		 */
-		public final int get(final int n)
-		{
-			return (int) (_random.nextDouble() * n);
+        public final int get(final int n) {
+            return _random.nextInt(n);
 		}
 		
 		/**
@@ -333,7 +332,7 @@ public final class Rnd
 	}
 
 	public static final double getDouble(final int n) {
-		return rnd.get(n) + get();
+        return rnd.get(n * 100) / 100D;
 	}
 
 	public static boolean rollAgainst(double limit) {
