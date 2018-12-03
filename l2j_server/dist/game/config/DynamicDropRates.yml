@@ -27,7 +27,7 @@ mobs:
         chance: 0.6
         stacks: "1"
       s84-low:
-        chance: 0.2
+        chance: 0.1
         stacks: "1"
     armor:
       ng:
@@ -55,7 +55,7 @@ mobs:
         chance: 0.7
         stacks: "1"
       s84-low:
-        chance: 0.3
+        chance: 0.2
         stacks: "1"
     jewels:
       ng:
@@ -358,273 +358,273 @@ raid:
     weapon:
       ng:
         chance: 90.0
-        stacks: "3-7"
+        stacks: "3-9"
       d:
         chance: 85.0
-        stacks: "3-6"
+        stacks: "3-7"
       c:
         chance: 70.0
-        stacks: "2-6"
+        stacks: "2-7"
       b:
         chance: 60.0
-        stacks: "1-5"
+        stacks: "2-6"
       a:
         chance: 50.0
-        stacks: "1-4"
+        stacks: "2-5"
       s:
         chance: 40.0
-        stacks: "1-3"
+        stacks: "1-5"
       s80-low:
         chance: 30.0
-        stacks: "1-2"
+        stacks: "1-4"
       s80-top:
         chance: 20.0
-        stacks: "1-2"
+        stacks: "1-4"
       s84-low:
         chance: 18.0
-        stacks: "1"
+        stacks: "1-3"
     armor:
       ng:
         chance: 90.0
-        stacks: "6-15"
+        stacks: "6-17"
       d:
         chance: 85.0
-        stacks: "5-12"
+        stacks: "5-15"
       c:
         chance: 80.0
-        stacks: "4-10"
+        stacks: "5-14"
       b:
         chance: 75.0
-        stacks: "3-8"
+        stacks: "4-12"
       a:
         chance: 60.0
-        stacks: "2-6"
+        stacks: "4-10"
       s:
         chance: 50.0
-        stacks: "1-5"
+        stacks: "3-9"
       s80-low:
         chance: 40.0
-        stacks: "1-4"
+        stacks: "2-7"
       s80-top:
         chance: 30.0
-        stacks: "1-4"
+        stacks: "2-6"
       s84-low:
         chance: 25.0
-        stacks: "1-3"
+        stacks: "1-5"
     jewels:
       ng:
         chance: 90.0
-        stacks: "6-15"
+        stacks: "6-19"
       d:
         chance: 85.0
-        stacks: "5-12"
+        stacks: "6-16"
       c:
         chance: 80.0
-        stacks: "4-10"
+        stacks: "5-15"
       b:
         chance: 75.0
-        stacks: "3-8"
+        stacks: "4-14"
       a:
         chance: 65.0
-        stacks: "2-6"
+        stacks: "4-12"
       s:
         chance: 60.0
-        stacks: "1-5"
+        stacks: "3-11"
       s80-low:
         chance: 45.0
-        stacks: "1-4"
+        stacks: "2-10"
       s80-top:
         chance: 40.0
-        stacks: "1-4"
+        stacks: "2-8"
       s84-low:
         chance: 35.0
-        stacks: "1-3"
+        stacks: "1-7"
   parts:
     weapon:
       ng:
         chance: 90.0
-        count: "10-70"
+        count: "10-180"
       d:
         chance: 85.0
-        count: "10-70"
+        count: "10-160"
       c:
         chance: 80.0
-        count: "10-65"
+        count: "10-140"
       b:
         chance: 76.0
-        count: "10-60"
+        count: "10-120"
       a:
         chance: 70.0
-        count: "10-55"
+        count: "10-110"
       s:
         chance: 68.0
-        count: "10-50"
+        count: "10-100"
       s80-low:
         chance: 66.0
-        count: "1-45"
+        count: "1-93"
       s80-top:
         chance: 64.0
-        count: "1-35"
+        count: "1-85"
       s84-low:
         chance: 60.0
-        count: "1-30"
+        count: "1-76"
     armor:
       ng:
         chance: 90.0
-        count: "20-100"
+        count: "20-220"
       d:
         chance: 85.0
-        count: "20-90"
+        count: "20-210"
       c:
         chance: 80.0
-        count: "20-85"
+        count: "20-200"
       b:
         chance: 76.0
-        count: "20-70"
+        count: "20-180"
       a:
         chance: 70.0
-        count: "20-55"
+        count: "20-170"
       s:
         chance: 68.0
-        count: "20-50"
+        count: "20-150"
       s80-low:
         chance: 66.0
-        count: "15-45"
+        count: "15-133"
       s80-top:
         chance: 64.0
-        count: "15-35"
+        count: "15-125"
       s84-low:
         chance: 60.0
-        count: "10-30"
+        count: "10-100"
     jewels:
       ng:
         chance: 90.0
-        count: "20-100"
+        count: "20-230"
       d:
         chance: 85.0
-        count: "20-90"
+        count: "20-220"
       c:
         chance: 82.0
-        count: "20-85"
+        count: "20-210"
       b:
         chance: 78.0
-        count: "20-70"
+        count: "20-200"
       a:
         chance: 75.0
-        count: "20-55"
+        count: "20-190"
       s:
         chance: 72.0
-        count: "20-50"
+        count: "20-170"
       s80-low:
         chance: 69.0
-        count: "15-45"
+        count: "15-150"
       s80-top:
         chance: 67.0
-        count: "15-35"
+        count: "15-140"
       s84-low:
         chance: 65.0
-        count: "10-30"
+        count: "10-120"
   recipes:
     weapon:
       ng:
         chance: 90.0
-        count: "1-30"
+        count: "1-40"
       d:
         chance: 85.0
-        count: "1-30"
+        count: "1-35"
       c:
         chance: 82.0
-        count: "1-25"
+        count: "1-30"
       b:
         chance: 78.0
-        count: "1-20"
+        count: "1-25"
       a:
         chance: 75.0
-        count: "1-18"
+        count: "1-24"
       s:
         chance: 72.0
-        count: "1-16"
+        count: "1-20"
       s80-low:
         chance: 69.0
-        count: "1-10"
+        count: "1-16"
       s80-top:
         chance: 67.0
-        count: "1-8"
+        count: "1-12"
       s84-low:
         chance: 65.0
-        count: "1-7"
+        count: "1-10"
     armor:
       ng:
         chance: 90.0
-        count: "1-30"
+        count: "1-40"
       d:
         chance: 85.0
-        count: "1-30"
+        count: "1-35"
       c:
         chance: 82.0
-        count: "1-25"
+        count: "1-30"
       b:
         chance: 78.0
-        count: "1-20"
+        count: "1-25"
       a:
         chance: 75.0
-        count: "1-18"
+        count: "1-25"
       s:
         chance: 72.0
-        count: "1-16"
+        count: "1-22"
       s80-low:
         chance: 69.0
-        count: "1-10"
+        count: "1-20"
       s80-top:
         chance: 67.0
-        count: "1-8"
+        count: "1-18"
       s84-low:
         chance: 65.0
-        count: "1-7"
+        count: "1-16"
     jewels:
       ng:
-        chance: 90.0
-        count: "1-30"
+        chance: 95.0
+        count: "1-43"
       d:
         chance: 85.0
-        count: "1-30"
+        count: "1-37"
       c:
         chance: 82.0
-        count: "1-25"
+        count: "1-32"
       b:
         chance: 78.0
-        count: "1-20"
+        count: "1-26"
       a:
         chance: 75.0
-        count: "1-18"
+        count: "1-25"
       s:
-        chance: 72.0
-        count: "1-16"
+        chance: 73.0
+        count: "1-23"
       s80-low:
-        chance: 69.0
-        count: "1-10"
+        chance: 72.0
+        count: "1-22"
       s80-top:
-        chance: 67.0
-        count: "1-8"
+        chance: 71.0
+        count: "1-19"
       s84-low:
-        chance: 65.0
-        count: "1-7"
+        chance: 70.0
+        count: "1-17"
   resources:
     drop:
       low:
-        stacks: "3-7"
+        stacks: "3-8"
         chance: 90.0
         count: "80-437"
       mid:
-        stacks: "2-5"
+        stacks: "2-6"
         chance: 80.0
         count: "60-300"
       high:
-        stacks: "1-4"
+        stacks: "2-5"
         chance: 60.0
         count: "50-230"
       highest:
-        stacks: "1-2"
+        stacks: "1-4"
         chance: 50.0
         count: "30-140"
   scrolls:
