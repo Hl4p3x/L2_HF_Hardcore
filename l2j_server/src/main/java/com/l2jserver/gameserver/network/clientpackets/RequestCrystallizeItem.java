@@ -58,6 +58,7 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 
 		Optional<L2ItemInstance> itemToRemoveOptional = activeChar.getInventory().getItemByObjectIdPossibly(_objectId);
 		if (!itemToRemoveOptional.isPresent()) {
+			_log.warning("Player " + activeChar + " is trying to crystallize non existent object " + _objectId);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

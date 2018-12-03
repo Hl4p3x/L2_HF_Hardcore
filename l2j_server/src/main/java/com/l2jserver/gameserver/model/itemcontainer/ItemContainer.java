@@ -184,7 +184,7 @@ public abstract class ItemContainer
 	}
 
 	public Optional<L2ItemInstance> getItemByObjectIdPossibly(int objectId) {
-		return _items.stream().filter(item -> item.getId() == objectId).findFirst();
+		return _items.stream().filter(item -> item.getObjectId() == objectId).findFirst();
 	}
 
 	/**

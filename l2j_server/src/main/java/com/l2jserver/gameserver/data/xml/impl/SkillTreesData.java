@@ -1129,8 +1129,8 @@ public final class SkillTreesData implements IXmlReader
 	{
 		if (skillLevel <= 0)
 		{
-			return _gameMasterSkillTree.values().stream().filter(s -> s.getSkillId() == skillId).findAny().isPresent() //
-				|| _gameMasterAuraSkillTree.values().stream().filter(s -> s.getSkillId() == skillId).findAny().isPresent();
+			return _gameMasterSkillTree.values().stream().anyMatch(s -> s.getSkillId() == skillId) //
+					|| _gameMasterAuraSkillTree.values().stream().anyMatch(s -> s.getSkillId() == skillId);
 		}
 		final int hashCode = SkillData.getSkillHashCode(skillId, skillLevel);
 		return _gameMasterSkillTree.containsKey(hashCode) || _gameMasterAuraSkillTree.containsKey(hashCode);
