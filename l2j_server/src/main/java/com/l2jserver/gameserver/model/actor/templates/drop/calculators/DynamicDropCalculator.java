@@ -7,6 +7,7 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -17,6 +18,7 @@ public class DynamicDropCalculator {
 
     private Set<Integer> managedItemIds = new HashSet<>();
     private GeneralDropCalculator generalDropCalculator = new GeneralDropCalculator();
+    private CustomDropCalculator customDropCalculator = new CustomDropCalculator();
 
     public DynamicDropCalculator() {
         load();
@@ -45,7 +47,9 @@ public class DynamicDropCalculator {
     // Add Dynasty Essence, Attribute Stones, Dual Craft Stamp, SA Stones
 
     public List<ItemHolder> calculate(L2Character victim) {
-        return generalDropCalculator.calculate(DynamicDropTable.getInstance().getDynamicNpcDropData(victim));
+        List<ItemHolder> drop = new ArrayList<>(generalDropCalculator.calculate(DynamicDropTable.getInstance().getDynamicNpcDropData(victim)));
+        drop.addAll(customDropCalculator.calculate(DynamicDropTable.getInstance().getCustomDrop(victim)));
+        return drop;
     }
 
     public Set<Integer> getAllDynamicItemsIds() {

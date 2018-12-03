@@ -39,6 +39,10 @@ public class Range {
         return Rnd.get(low, high);
     }
 
+    public boolean isWithin(int value) {
+        return low <= value && value <= high;
+    }
+
     public boolean equalsTo(int single) {
         return low == single && high == single;
     }

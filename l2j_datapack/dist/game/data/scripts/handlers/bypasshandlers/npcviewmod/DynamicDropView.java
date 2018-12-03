@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.drop.*;
 import com.l2jserver.gameserver.model.actor.templates.drop.calculators.DynamicDropCalculator;
+import com.l2jserver.gameserver.model.actor.templates.drop.custom.CustomDropEntry;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.DynamicDropTable;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
 import com.l2jserver.gameserver.model.drops.DropListScope;
@@ -37,13 +38,16 @@ public class DynamicDropView implements DropView {
         }
 
         DynamicDropGradeData dynamicDropGradeData = DynamicDropTable.getInstance().getDynamicNpcDropData(npc);
+        List<CustomDropEntry> customDropEntries = DynamicDropTable.getInstance().getCustomDrop(npc);
 
         List<ItemGroupView> equipmentGroupViews = convertEquipmentCategoryToView("Equipment", dynamicDropGradeData.getEquipment());
         List<ItemGroupView> partsGroupViews = convertEquipmentCategoryToView("Parts", dynamicDropGradeData.getParts());
         List<ItemGroupView> recipesGroupViews = convertEquipmentCategoryToView("Recipes", dynamicDropGradeData.getRecipes());
         List<ItemGroupView> resourceGroupViews = convertResourceCategoryToView(dynamicDropGradeData.getResources());
         List<ItemGroupView> scrollsGroupViews = convertScrollsGroupCategoryToView(dynamicDropGradeData);
+        List<ItemGroupView> customDropGroupViews = convertCustomDropCategories(customDropEntries);
         List<ItemGroupView> regularDropGroupViews = convertRegularDropList(npc, dropListScope);
+
 
         List<ItemGroupView> allGroupViews = new ArrayList<>();
         allGroupViews.addAll(equipmentGroupViews);
@@ -51,6 +55,7 @@ public class DynamicDropView implements DropView {
         allGroupViews.addAll(recipesGroupViews);
         allGroupViews.addAll(resourceGroupViews);
         allGroupViews.addAll(scrollsGroupViews);
+        allGroupViews.addAll(customDropGroupViews);
         allGroupViews.addAll(regularDropGroupViews);
 
         int totalItems = allGroupViews.stream().mapToInt(ItemGroupView::getSize).sum();
@@ -63,6 +68,14 @@ public class DynamicDropView implements DropView {
         htmlTemplate = htmlTemplate.replaceAll("%items%", renderItems(pageOffset, DROP_LIST_ITEMS_PER_PAGE, allGroupViews));
 
         return Optional.of(htmlTemplate);
+    }
+
+    private List<ItemGroupView> convertCustomDropCategories(List<CustomDropEntry> customDropEntries) {
+        List<ItemGroupView> result = new ArrayList<>();
+        for (CustomDropEntry customDropEntry : customDropEntries) {
+            result.add(convertDynamicDropCategory("Other", customDropEntry.getDrop()));
+        }
+        return result;
     }
 
     private List<ItemGroupView> convertRegularDropList(L2Npc npc, DropListScope dropListScope) {

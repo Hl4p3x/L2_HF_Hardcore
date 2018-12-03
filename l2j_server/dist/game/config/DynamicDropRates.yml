@@ -353,6 +353,15 @@ mobs:
       blessed:
         chance: 2.0
         count: "1"
+  custom-drop:
+  - level-range: "80-84"
+    drop:
+      stats:
+        count: "1"
+        chance: 8.0
+      ids:
+      - 9451 # Dynastic Essence
+      - 10413 # Dynastic Essence II
 raid:
   equipment:
     weapon:
@@ -708,3 +717,14 @@ raid:
       blessed:
         chance: 25.0
         count: "2-8"
+
+  custom-drop:
+  - level-range: "80-84"
+    drop:
+      stats:
+        count: "1-4"
+        chance: 30.0
+      ids:
+      - 9451 # Dynastic Essence
+      - 10413 # Dynastic Essence II
+

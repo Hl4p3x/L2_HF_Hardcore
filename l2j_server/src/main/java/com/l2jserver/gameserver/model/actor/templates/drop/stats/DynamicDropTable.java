@@ -5,6 +5,7 @@ import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvi
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.templates.drop.*;
+import com.l2jserver.gameserver.model.actor.templates.drop.custom.CustomDropEntry;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment.EquipmentDropStats;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.resources.ResourceDropStats;
@@ -32,6 +33,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class DynamicDropTable {
 
@@ -134,6 +136,16 @@ public class DynamicDropTable {
         } else {
             return getDynamicMobDropData(victim.getLevel());
         }
+    }
+
+    public List<CustomDropEntry> getCustomDrop(L2Character victim) {
+        DynamicDropData dynamicDropData;
+        if (victim.isRaid()) {
+            dynamicDropData = allDynamicDropData.getRaid();
+        } else {
+            dynamicDropData = allDynamicDropData.getMobs();
+        }
+        return dynamicDropData.getCustomDropEntries().stream().filter(drop -> drop.getLevelRange().isWithin(victim.getLevel())).collect(Collectors.toList());
     }
 
     public DynamicDropGradeData getDynamicMobDropData(int level) {
