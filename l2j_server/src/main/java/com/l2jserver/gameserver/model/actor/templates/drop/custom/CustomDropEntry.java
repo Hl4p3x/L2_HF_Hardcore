@@ -59,4 +59,8 @@ public class CustomDropEntry {
                 .toString();
     }
 
+    public CustomDropEntry applyChanceMod(double chanceMod) {
+        return new CustomDropEntry(name, levelRange, drop.applyChanceMod(chanceMod));
+    }
+
 }

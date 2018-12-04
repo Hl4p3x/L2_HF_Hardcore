@@ -18,13 +18,7 @@
  */
 package com.l2jserver.gameserver.model.effects;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.logging.Logger;
-
+import com.google.common.base.Objects;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.EffectHandler;
 import com.l2jserver.gameserver.model.StatsSet;
@@ -32,8 +26,17 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jserver.gameserver.model.stats.functions.FuncTemplate;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.logging.Logger;
 
 /**
  * Abstract effect implementation.<br>
@@ -164,6 +167,10 @@ public abstract class AbstractEffect
 	public List<FuncTemplate> getFuncTemplates()
 	{
 		return _funcTemplates;
+	}
+
+	public Optional<FuncTemplate> getSingleTemplateByStat(Stats stat) {
+		return _funcTemplates.stream().filter(template -> Objects.equal(template.getStat(), stat)).findFirst();
 	}
 	
 	/**

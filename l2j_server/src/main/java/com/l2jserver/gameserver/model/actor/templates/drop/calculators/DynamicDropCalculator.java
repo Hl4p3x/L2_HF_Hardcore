@@ -2,6 +2,7 @@ package com.l2jserver.gameserver.model.actor.templates.drop.calculators;
 
 import com.l2jserver.gameserver.datatables.categorized.*;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.templates.drop.calculators.modifiers.MaxHpChanceModifier;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.DynamicDropTable;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import org.slf4j.Logger;
@@ -19,6 +20,7 @@ public class DynamicDropCalculator {
     private Set<Integer> managedItemIds = new HashSet<>();
     private GeneralDropCalculator generalDropCalculator = new GeneralDropCalculator();
     private CustomDropCalculator customDropCalculator = new CustomDropCalculator();
+    private MaxHpChanceModifier maxHpChanceModifier = new MaxHpChanceModifier();
 
     public DynamicDropCalculator() {
         load();
@@ -43,8 +45,6 @@ public class DynamicDropCalculator {
         managedItemIds.addAll(ScrollDropDataTable.getInstance().getScrollIds());
         LOG.info("Dynamic Drop Calculator initialized");
     }
-
-    // Add Dynasty Essence, Attribute Stones, Dual Craft Stamp, SA Stones
 
     public List<ItemHolder> calculate(L2Character victim) {
         List<ItemHolder> drop = new ArrayList<>(generalDropCalculator.calculate(DynamicDropTable.getInstance().getDynamicNpcDropData(victim)));

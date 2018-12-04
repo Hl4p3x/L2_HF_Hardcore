@@ -44,6 +44,7 @@ import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.stats.BaseStats;
 import com.l2jserver.gameserver.model.stats.Formulas;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.model.stats.TraitType;
 import com.l2jserver.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jserver.gameserver.model.stats.functions.FuncTemplate;
@@ -53,6 +54,7 @@ import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
+import com.l2jserver.util.StreamUtils;
 
 import java.util.*;
 import java.util.logging.Level;
@@ -360,16 +362,15 @@ public class Skill implements IIdentifiable
 		
 		_excludedFromCheck = set.getBoolean("excludedFromCheck", false);
 		_simultaneousCast = set.getBoolean("simultaneousCast", false);
-		
-		String capsuled_items = set.getString("capsuled_items_skill", null);
-		if (capsuled_items != null)
-		{
-			if (capsuled_items.isEmpty())
+
+		String capsuledItems = set.getString("capsuled_items_skill", null);
+		if (capsuledItems != null) {
+			if (capsuledItems.isEmpty())
 			{
 				_log.warning("Empty Extractable Item Skill data in Skill Id: " + _id);
 			}
-			
-			_extractableItems = parseExtractableSkill(_id, _level, capsuled_items);
+
+			_extractableItems = parseExtractableSkill(_id, _level, capsuledItems);
 		}
 		
 		_icon = set.getString("icon", "icon.skill0000");
@@ -1270,6 +1271,15 @@ public class Skill implements IIdentifiable
 	public List<AbstractEffect> getEffects(EffectScope effectScope)
 	{
 		return _effectLists.get(effectScope);
+	}
+
+	public Optional<FuncTemplate> getEffectByStat(EffectScope effectScope, Stats stat) {
+		return Optional.ofNullable(_effectLists.get(effectScope))
+				.flatMap(list ->
+						list.stream()
+								.flatMap(effect -> StreamUtils.streamOptional(effect.getSingleTemplateByStat(stat)))
+								.findFirst()
+				);
 	}
 	
 	/**

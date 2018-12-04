@@ -3,6 +3,7 @@ package com.l2jserver.gameserver.model.actor.templates.drop;
 import java.util.List;
 import java.util.Objects;
 import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 public class DynamicDropGradeData {
 
@@ -68,4 +69,16 @@ public class DynamicDropGradeData {
                 .add(Objects.toString(miscScrolls))
                 .toString();
     }
+
+    public DynamicDropGradeData applyChanceMod(double chanceMod) {
+        return new DynamicDropGradeData(equipment.applyChanceMod(chanceMod),
+                parts.applyChanceMod(chanceMod),
+                recipes.applyChanceMod(chanceMod),
+                resources.stream().map(resource -> resource.applyChanceMod(chanceMod)).collect(Collectors.toList()),
+                weaponScrolls.applyChanceMod(chanceMod),
+                armorScrolls.applyChanceMod(chanceMod),
+                miscScrolls.applyChanceMod(chanceMod)
+        );
+    }
+
 }

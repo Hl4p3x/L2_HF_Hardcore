@@ -51,4 +51,8 @@ public class DynamicDropEquipmentCategory {
                 .add(Objects.toString(jewels))
                 .toString();
     }
+
+    public DynamicDropEquipmentCategory applyChanceMod(double chanceMod) {
+        return new DynamicDropEquipmentCategory(gradeInfo, weapons.applyChanceMod(chanceMod), armor.applyChanceMod(chanceMod), jewels.applyChanceMod(chanceMod));
+    }
 }

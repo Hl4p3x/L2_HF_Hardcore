@@ -41,4 +41,8 @@ public class DynamicDropScrollCategory {
                 .toString();
     }
 
+    public DynamicDropScrollCategory applyChanceMod(double chanceMod) {
+        return new DynamicDropScrollCategory(scrollGrade, normal.applyChanceMod(chanceMod), blessed.applyChanceMod(chanceMod));
+    }
+
 }

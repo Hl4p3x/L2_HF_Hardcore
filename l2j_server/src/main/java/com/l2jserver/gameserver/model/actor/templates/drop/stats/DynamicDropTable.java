@@ -5,6 +5,7 @@ import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvi
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.templates.drop.*;
+import com.l2jserver.gameserver.model.actor.templates.drop.calculators.modifiers.MaxHpChanceModifier;
 import com.l2jserver.gameserver.model.actor.templates.drop.custom.CustomDropEntry;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment.EquipmentDropStats;
@@ -40,6 +41,7 @@ public class DynamicDropTable {
     private static final Logger LOG = LoggerFactory.getLogger(DynamicDropTable.class);
 
     private AllDynamicDropData allDynamicDropData;
+    private MaxHpChanceModifier maxHpChanceModifier = new MaxHpChanceModifier();
 
     public DynamicDropTable() {
         load();
@@ -112,29 +114,29 @@ public class DynamicDropTable {
             Function<ScrollGrade, List<Scroll>> blessedScrollProvider,
             Function<ScrollGrade, ScrollDropStats> scrollDropStatsProvider) {
         Optional<ScrollGrade> scrollGradeOptional = ScrollGradeRange.byLevel(level);
-        if (scrollGradeOptional.isPresent()) {
-            ScrollGrade scrollGrade = scrollGradeOptional.get();
-            ScrollDropStats scrollDropStats = scrollDropStatsProvider.apply(scrollGrade);
-            Set<Integer> normalScrollsIds = CollectionUtil.extractIds(normalScrollProvider.apply(scrollGrade));
-            Set<Integer> blessedScrollsIds = CollectionUtil.extractIds(blessedScrollProvider.apply(scrollGrade));
-            return new DynamicDropScrollCategory(
-                    scrollGrade,
-                    new DynamicDropCategory(normalScrollsIds, scrollDropStats.getNormal()),
-                    new DynamicDropCategory(blessedScrollsIds, scrollDropStats.getBlessed())
-            );
-        } else {
-            if (level > ScrollGradeRange.D.getLowLevel()) {
+        if (!scrollGradeOptional.isPresent()) {
+            if (level > ScrollGradeRange.lowestGrade().getLowLevel()) {
                 LOG.warn("Could not find scroll drop data for level {}", level);
             }
             return DynamicDropScrollCategory.empty();
         }
+
+        ScrollGrade scrollGrade = scrollGradeOptional.get();
+        ScrollDropStats scrollDropStats = scrollDropStatsProvider.apply(scrollGrade);
+        Set<Integer> normalScrollsIds = CollectionUtil.extractIds(normalScrollProvider.apply(scrollGrade));
+        Set<Integer> blessedScrollsIds = CollectionUtil.extractIds(blessedScrollProvider.apply(scrollGrade));
+        return new DynamicDropScrollCategory(
+                scrollGrade,
+                new DynamicDropCategory(normalScrollsIds, scrollDropStats.getNormal()),
+                new DynamicDropCategory(blessedScrollsIds, scrollDropStats.getBlessed())
+        );
     }
 
     public DynamicDropGradeData getDynamicNpcDropData(L2Character victim) {
         if (victim.isRaid()) {
-            return getDynamicRaidDropData(victim.getLevel());
+            return getDynamicRaidDropData(victim);
         } else {
-            return getDynamicMobDropData(victim.getLevel());
+            return getDynamicMobDropData(victim);
         }
     }
 
@@ -145,18 +147,24 @@ public class DynamicDropTable {
         } else {
             dynamicDropData = allDynamicDropData.getMobs();
         }
-        return dynamicDropData.getCustomDropEntries().stream().filter(drop -> drop.getLevelRange().isWithin(victim.getLevel())).collect(Collectors.toList());
+
+        double chanceMod = maxHpChanceModifier.calculate(victim);
+        return dynamicDropData.getCustomDropEntries().stream().filter(drop -> drop.getLevelRange().isWithin(victim.getLevel()))
+                .map(customDropEntry -> customDropEntry.applyChanceMod(chanceMod))
+                .collect(Collectors.toList());
     }
 
-    public DynamicDropGradeData getDynamicMobDropData(int level) {
-        return getDynamicDropData(level, allDynamicDropData.getMobs());
+    public DynamicDropGradeData getDynamicMobDropData(L2Character victim) {
+        return getDynamicDropData(victim, allDynamicDropData.getMobs());
     }
 
-    public DynamicDropGradeData getDynamicRaidDropData(int level) {
-        return getDynamicDropData(level, allDynamicDropData.getRaid());
+    public DynamicDropGradeData getDynamicRaidDropData(L2Character victim) {
+        return getDynamicDropData(victim, allDynamicDropData.getRaid());
     }
 
-    public DynamicDropGradeData getDynamicDropData(int level, DynamicDropData dynamicDropData) {
+    public DynamicDropGradeData getDynamicDropData(L2Character victim, DynamicDropData dynamicDropData) {
+        int level = victim.getLevel();
+
         DynamicDropEquipmentCategory equipment = convertEquipmentCategory(
                 level,
                 GradedItemsDropDataTable.getInstance(),
@@ -197,13 +205,16 @@ public class DynamicDropTable {
                 dynamicDropData.getScrolls().getMisc()
         );
 
-        return new DynamicDropGradeData(
+        DynamicDropGradeData dynamicDropGradeData = new DynamicDropGradeData(
                 equipment, parts, recipes,
                 resources,
                 weaponScrolls,
                 armorScrolls,
                 miscScrolls
         );
+
+        double chanceMod = maxHpChanceModifier.calculate(victim);
+        return dynamicDropGradeData.applyChanceMod(chanceMod);
     }
 
     private DynamicDropScrollCategory convertMiscScrollCategory(CategorizedScrolls categorizedScrolls, MiscScrollStats misc) {

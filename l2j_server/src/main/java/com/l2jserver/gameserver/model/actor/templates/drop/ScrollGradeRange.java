@@ -39,4 +39,8 @@ public enum ScrollGradeRange {
         return Stream.of(values()).filter(item -> item.getLowLevel() <= level && level <= item.getHighLevel()).map(ScrollGradeRange::getScrollGrade).findFirst();
     }
 
+    public static ScrollGradeRange lowestGrade() {
+        return D;
+    }
+
 }

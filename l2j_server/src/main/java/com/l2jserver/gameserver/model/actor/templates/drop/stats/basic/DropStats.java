@@ -53,4 +53,8 @@ public class DropStats {
         return stacks.equalsTo(1);
     }
 
+    public DropStats applyChanceMod(double chanceMod) {
+        return new DropStats(stacks, Math.min(chance * chanceMod, 100D), count);
+    }
+
 }

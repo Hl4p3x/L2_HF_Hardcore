@@ -40,4 +40,7 @@ public class DynamicDropCategory {
                 .toString();
     }
 
+    public DynamicDropCategory applyChanceMod(double chanceMod) {
+        return new DynamicDropCategory(ids, stats.applyChanceMod(chanceMod));
+    }
 }

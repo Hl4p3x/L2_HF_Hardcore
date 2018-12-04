@@ -30,6 +30,7 @@ public class DynamicDropView implements DropView {
 
     private static final int DROP_LIST_ITEMS_PER_PAGE = 30;
 
+
     public Optional<String> render(L2PcInstance activeChar, L2Npc npc, DropListScope dropListScope, int page) {
         String htmlTemplate = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/mods/NpcView/DropList.htm");
         if (htmlTemplate == null) {

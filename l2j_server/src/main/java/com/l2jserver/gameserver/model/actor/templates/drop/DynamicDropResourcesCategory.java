@@ -31,4 +31,7 @@ public class DynamicDropResourcesCategory {
                 .toString();
     }
 
+    public DynamicDropResourcesCategory applyChanceMod(double chanceMod) {
+        return new DynamicDropResourcesCategory(resourceGrade, dynamicDropCategory.applyChanceMod(chanceMod));
+    }
 }
