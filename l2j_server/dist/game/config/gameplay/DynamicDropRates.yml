@@ -497,78 +497,78 @@ raid:
         chance: 70.0
         stacks: "2-7"
       b:
-        chance: 60.0
+        chance: 65.0
         stacks: "2-6"
       a:
-        chance: 50.0
+        chance: 60.0
         stacks: "2-5"
       s:
-        chance: 40.0
+        chance: 50.0
         stacks: "1-5"
       s80-low:
-        chance: 30.0
+        chance: 45.0
         stacks: "1-4"
       s80-top:
-        chance: 20.0
+        chance: 35.0
         stacks: "1-4"
       s84-low:
-        chance: 18.0
+        chance: 30.0
         stacks: "1-3"
     armor:
       ng:
-        chance: 90.0
+        chance: 93.0
         stacks: "6-17"
       d:
-        chance: 85.0
+        chance: 86.0
         stacks: "5-15"
       c:
-        chance: 80.0
+        chance: 84.0
         stacks: "5-14"
       b:
-        chance: 75.0
+        chance: 78.0
         stacks: "4-12"
       a:
-        chance: 60.0
+        chance: 67.0
         stacks: "4-10"
       s:
-        chance: 50.0
+        chance: 59.0
         stacks: "3-9"
       s80-low:
-        chance: 40.0
+        chance: 48.0
         stacks: "2-7"
       s80-top:
-        chance: 30.0
+        chance: 38.0
         stacks: "2-6"
       s84-low:
-        chance: 25.0
+        chance: 32.0
         stacks: "1-5"
     jewels:
       ng:
-        chance: 90.0
+        chance: 95.0
         stacks: "6-19"
       d:
-        chance: 85.0
+        chance: 88.0
         stacks: "6-16"
       c:
-        chance: 80.0
+        chance: 86.0
         stacks: "5-15"
       b:
-        chance: 75.0
+        chance: 79.0
         stacks: "4-14"
       a:
-        chance: 65.0
+        chance: 68.0
         stacks: "4-12"
       s:
         chance: 60.0
         stacks: "3-11"
       s80-low:
-        chance: 45.0
+        chance: 49.0
         stacks: "2-10"
       s80-top:
-        chance: 40.0
+        chance: 43.0
         stacks: "2-8"
       s84-low:
-        chance: 35.0
+        chance: 38.0
         stacks: "1-7"
   parts:
     weapon:
@@ -743,20 +743,20 @@ raid:
   resources:
     drop:
       low:
-        stacks: "3-8"
+        stacks: "5-13"
         chance: 90.0
         count: "80-437"
       mid:
-        stacks: "2-6"
+        stacks: "3-8"
         chance: 80.0
         count: "60-300"
       high:
-        stacks: "2-5"
-        chance: 60.0
+        stacks: "2-7"
+        chance: 70.0
         count: "50-230"
       highest:
-        stacks: "1-4"
-        chance: 50.0
+        stacks: "1-5"
+        chance: 60.0
         count: "30-140"
   scrolls:
     weapon:
