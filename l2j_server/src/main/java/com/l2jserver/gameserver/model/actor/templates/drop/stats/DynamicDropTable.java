@@ -48,7 +48,7 @@ public class DynamicDropTable {
     }
 
     private void load() {
-        final String path = "./config/DynamicDropRates.yml";
+        final String path = "./config/gameplay/DynamicDropRates.yml";
         try {
             InputStream configStream = new FileInputStream(new File(path));
 
