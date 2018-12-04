@@ -354,14 +354,136 @@ mobs:
         chance: 2.0
         count: "1"
   custom-drop:
-  - level-range: "80-84"
+  - name: "Dynasty Essences"
+    level-range: "80-84"
+    drop:
+      stats:
+        count: "1"
+        chance: 4.6
+      ids:
+      - 9451 # Dynastic Essence
+      - 10413 # Dynastic Essence II
+  - name: "Soul Crystals - C Grade"
+    level-range: "40-45"
+    drop:
+      stats:
+        count: "1"
+        chance: 20.0
+      ids:
+      - 4634 # Red Soul Crystal - Stage 5
+      - 4645 # Green Soul Crystal - Stage 5
+      - 4656 # Blue Soul Crystal - Stage 5
+  - name: "Soul Crystals - C Grade"
+    level-range: "46-49"
+    drop:
+      stats:
+        count: "1"
+        chance: 19.0
+      ids:
+      - 4635 # Red Soul Crystal - Stage 6
+      - 4646 # Green Soul Crystal - Stage 6
+      - 4657 # Blue Soul Crystal - Stage 6
+  - name: "Soul Crystals - C Grade"
+    level-range: "50-52"
+    drop:
+      stats:
+        count: "1"
+        chance: 18.0
+      ids:
+      - 4636 # Red Soul Crystal - Stage 7
+      - 4647 # Green Soul Crystal - Stage 7
+      - 4658 # Blue Soul Crystal - Stage 7
+  - name: "Soul Crystals - C Grade"
+    level-range: "53-57"
+    drop:
+      stats:
+        count: "1"
+        chance: 17.0
+      ids:
+      - 4637 # Red Soul Crystal - Stage 8
+      - 4648 # Green Soul Crystal - Stage 8
+      - 4659 # Blue Soul Crystal - Stage 8
+  - name: "Soul Crystals - B Grade"
+    level-range: "58-61"
+    drop:
+      stats:
+        count: "1"
+        chance: 15.0
+      ids:
+      - 4638 # Red Soul Crystal - Stage 9
+      - 4649 # Green Soul Crystal - Stage 9
+      - 4660 # Blue Soul Crystal - Stage 9
+  - name: "Soul Crystals - B Grade"
+    level-range: "62-68"
+    drop:
+      stats:
+        count: "1"
+        chance: 13.0
+      ids:
+      - 4639 # Red Soul Crystal - Stage 10
+      - 4650 # Green Soul Crystal - Stage 10
+      - 4661 # Blue Soul Crystal - Stage 10
+  - name: "Soul Crystals - A Grade"
+    level-range: "68-71"
+    drop:
+      stats:
+        count: "1"
+        chance: 10.0
+      ids:
+      - 5577 # Red Soul Crystal - Stage 11
+      - 5578 # Green Soul Crystal - Stage 11
+      - 5579 # Blue Soul Crystal - Stage 11
+  - name: "Soul Crystals - A Grade"
+    level-range: "72-75"
     drop:
       stats:
         count: "1"
         chance: 8.0
       ids:
-      - 9451 # Dynastic Essence
-      - 10413 # Dynastic Essence II
+      - 5580 # Red Soul Crystal - Stage 12
+      - 5581 # Green Soul Crystal - Stage 12
+      - 5582 # Blue Soul Crystal - Stage 12
+  - name: "Soul Crystals - S Grade"
+    level-range: "76-79"
+    drop:
+      stats:
+        count: "1"
+        chance: 5.0
+      ids:
+      - 5908 # Red Soul Crystal: Stage 13
+      - 5911 # Green Soul Crystal - Stage 13
+      - 5914 # Blue Soul Crystal: Stage 13
+  - name: "Soul Crystals - Dynasty"
+    level-range: "80-82"
+    drop:
+      stats:
+        count: "1"
+        chance: 1.8
+      ids:
+      - 9570 # Red Soul Crystal - Stage 14
+      - 9572 # Green Soul Crystal - Stage 14
+      - 9571 # Blue Soul Crystal - Stage 14
+  - name: "Soul Crystals - Icarus"
+    level-range: "83-84"
+    drop:
+      stats:
+        count: "1"
+        chance: 0.8
+      ids:
+      - 10480 # Red Soul Crystal - Stage 15
+      - 10482 # Green Soul Crystal - Stage 15
+      - 10481 # Blue Soul Crystal - Stage 15
+  - name: "Soul Crystals - Vesper"
+    level-range: "85"
+    drop:
+      stats:
+        count: "1"
+        chance: 0.1
+      ids:
+      - 13071 # Red Soul Crystal - Stage 16
+      - 13073 # Green Soul Crystal - Stage 16
+      - 13072 # Blue Soul Crystal - Stage 16
+
 raid:
   equipment:
     weapon:
@@ -719,12 +841,132 @@ raid:
         count: "2-8"
 
   custom-drop:
-  - level-range: "80-84"
+  - name: "Dynastic Essences"
+    level-range: "80-84"
     drop:
       stats:
         count: "1-4"
         chance: 30.0
       ids:
-      - 9451 # Dynastic Essence
+      - 9451  # Dynastic Essence
       - 10413 # Dynastic Essence II
-
+  - name: "Soul Crystals - C Grade"
+    level-range: "40-45"
+    drop:
+      stats:
+        count: "1-7"
+        chance: 50.0
+      ids:
+      - 4634 # Red Soul Crystal - Stage 5
+      - 4645 # Green Soul Crystal - Stage 5
+      - 4656 # Blue Soul Crystal - Stage 5
+  - name: "Soul Crystals - C Grade"
+    level-range: "46-49"
+    drop:
+      stats:
+        count: "1-7"
+        chance: 40.0
+      ids:
+      - 4635 # Red Soul Crystal - Stage 6
+      - 4646 # Green Soul Crystal - Stage 6
+      - 4657 # Blue Soul Crystal - Stage 6
+  - name: "Soul Crystals - C Grade"
+    level-range: "50-52"
+    drop:
+      stats:
+        count: "1-7"
+        chance: 40.0
+      ids:
+      - 4636 # Red Soul Crystal - Stage 7
+      - 4647 # Green Soul Crystal - Stage 7
+      - 4658 # Blue Soul Crystal - Stage 7
+  - name: "Soul Crystals - C Grade"
+    level-range: "53-57"
+    drop:
+      stats:
+        count: "1-7"
+        chance: 40.0
+      ids:
+      - 4637 # Red Soul Crystal - Stage 8
+      - 4648 # Green Soul Crystal - Stage 8
+      - 4659 # Blue Soul Crystal - Stage 8
+  - name: "Soul Crystals - B Grade"
+    level-range: "58-61"
+    drop:
+      stats:
+        count: "1-6"
+        chance: 30.0
+      ids:
+      - 4638 # Red Soul Crystal - Stage 9
+      - 4649 # Green Soul Crystal - Stage 9
+      - 4660 # Blue Soul Crystal - Stage 9
+  - name: "Soul Crystals - B Grade"
+    level-range: "62-68"
+    drop:
+      stats:
+        count: "1-6"
+        chance: 30.0
+      ids:
+      - 4639 # Red Soul Crystal - Stage 10
+      - 4650 # Green Soul Crystal - Stage 10
+      - 4661 # Blue Soul Crystal - Stage 10
+  - name: "Soul Crystals - A Grade"
+    level-range: "68-71"
+    drop:
+      stats:
+        count: "1-5"
+        chance: 30.0
+      ids:
+      - 5577 # Red Soul Crystal - Stage 11
+      - 5578 # Green Soul Crystal - Stage 11
+      - 5579 # Blue Soul Crystal - Stage 11
+  - name: "Soul Crystals - A Grade"
+    level-range: "72-75"
+    drop:
+      stats:
+        count: "1-5"
+        chance: 30.0
+      ids:
+      - 5580 # Red Soul Crystal - Stage 12
+      - 5581 # Green Soul Crystal - Stage 12
+      - 5582 # Blue Soul Crystal - Stage 12
+  - name: "Soul Crystals - S Grade"
+    level-range: "76-79"
+    drop:
+      stats:
+        count: "1-5"
+        chance: 25.0
+      ids:
+      - 5908 # Red Soul Crystal: Stage 13
+      - 5911 # Green Soul Crystal - Stage 13
+      - 5914 # Blue Soul Crystal: Stage 13
+  - name: "Soul Crystals - Dynasty"
+    level-range: "80-82"
+    drop:
+      stats:
+        count: "1-5"
+        chance: 20.0
+      ids:
+      - 9570 # Red Soul Crystal - Stage 14
+      - 9572 # Green Soul Crystal - Stage 14
+      - 9571 # Blue Soul Crystal - Stage 14
+  - name: "Soul Crystals - Icarus"
+    level-range: "83-84"
+    drop:
+      stats:
+        count: "1-4"
+        chance: 15.0
+      ids:
+      - 10480 # Red Soul Crystal - Stage 15
+      - 10482 # Green Soul Crystal - Stage 15
+      - 10481 # Blue Soul Crystal - Stage 15
+  - name: "Soul Crystals - Vesper"
+    level-range: "85"
+    drop:
+      stats:
+        count: "1-4"
+        chance: 10.0
+      ids:
+      - 13071 # Red Soul Crystal - Stage 16
+      - 13073 # Green Soul Crystal - Stage 16
+      - 13072 # Blue Soul Crystal - Stage 16

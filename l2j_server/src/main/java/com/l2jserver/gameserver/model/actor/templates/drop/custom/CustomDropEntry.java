@@ -9,6 +9,7 @@ import java.util.StringJoiner;
 
 public class CustomDropEntry {
 
+    private String name = "Other";
     @JsonProperty("level-range")
     private Range levelRange = Range.fromString("1-85");
     private DynamicDropCategory drop = DynamicDropCategory.empty();
@@ -16,7 +17,8 @@ public class CustomDropEntry {
     public CustomDropEntry() {
     }
 
-    public CustomDropEntry(Range levelRange, DynamicDropCategory drop) {
+    public CustomDropEntry(String name, Range levelRange, DynamicDropCategory drop) {
+        this.name = name;
         this.levelRange = levelRange;
         this.drop = drop;
     }
@@ -29,25 +31,32 @@ public class CustomDropEntry {
         return drop;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CustomDropEntry that = (CustomDropEntry) o;
-        return Objects.equals(levelRange, that.levelRange) &&
+        return Objects.equals(name, that.name) &&
+                Objects.equals(levelRange, that.levelRange) &&
                 Objects.equals(drop, that.drop);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(levelRange, drop);
+        return Objects.hash(name, levelRange, drop);
     }
 
     @Override
     public String toString() {
         return new StringJoiner(", ", CustomDropEntry.class.getSimpleName() + "[", "]")
+                .add(name)
                 .add(Objects.toString(levelRange))
                 .add(Objects.toString(drop))
                 .toString();
     }
+
 }

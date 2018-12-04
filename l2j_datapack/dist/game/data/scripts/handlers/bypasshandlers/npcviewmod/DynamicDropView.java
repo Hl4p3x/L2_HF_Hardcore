@@ -73,7 +73,7 @@ public class DynamicDropView implements DropView {
     private List<ItemGroupView> convertCustomDropCategories(List<CustomDropEntry> customDropEntries) {
         List<ItemGroupView> result = new ArrayList<>();
         for (CustomDropEntry customDropEntry : customDropEntries) {
-            result.add(convertDynamicDropCategory("Other", customDropEntry.getDrop()));
+            result.add(convertDynamicDropCategory(customDropEntry.getName(), customDropEntry.getDrop()));
         }
         return result;
     }
