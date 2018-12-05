@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class TerritoryOwningRewardsGenerator {
 
-    public static List<String> ignoreList = Arrays.asList("Gemstone", "Soul Ore", "Spirit Ore");
+    public static List<String> ignoreList = Arrays.asList("Gemstone", "Soul Ore", "Spirit Ore", "Craftsman Mold", "Maestro Holder", "Blacksmith's Frame");
 
     public static List<List<String>> crossJoinResources(String template, List<ResourceGrade> resourceGrades) {
         CraftResourcesDropDataTable craftResourcesDropDataTable = CraftResourcesDropDataTable.getInstance();
