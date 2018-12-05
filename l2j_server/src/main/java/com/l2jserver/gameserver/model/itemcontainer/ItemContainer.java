@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
@@ -318,7 +319,11 @@ public abstract class ItemContainer
 	{
 		return addItem(process, itemId, count, -1, actor, reference);
 	}
-	
+
+	public L2ItemInstance addItem(String process, ItemHolder itemHolder, L2PcInstance actor, Object reference) {
+		return addItem(process, itemHolder.getId(), itemHolder.getCount(), -1, actor, reference);
+	}
+
 	/**
 	 * Adds item to inventory
 	 * @param process : String Identifier of process triggering this action

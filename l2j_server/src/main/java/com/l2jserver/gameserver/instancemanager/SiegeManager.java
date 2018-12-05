@@ -18,17 +18,6 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -42,6 +31,13 @@ import com.l2jserver.gameserver.model.entity.Siege;
 import com.l2jserver.gameserver.model.interfaces.ILocational;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.util.PropertiesParser;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public final class SiegeManager
 {
@@ -191,8 +187,8 @@ public final class SiegeManager
 			_controlTowers.put(castle.getResidenceId(), controlTowers);
 			_flameTowers.put(castle.getResidenceId(), flameTowers);
 			MercTicketManager.MERCS_MAX_PER_CASTLE[castle.getResidenceId() - 1] = siegeSettings.getInt(castle.getName() + "MaxMercenaries", MercTicketManager.MERCS_MAX_PER_CASTLE[castle.getResidenceId() - 1]);
-			
-			if (castle.getOwnerId() != 0)
+
+            if (castle.getOwnerClanId() != 0)
 			{
 				loadTrapUpgrade(castle.getResidenceId());
 			}

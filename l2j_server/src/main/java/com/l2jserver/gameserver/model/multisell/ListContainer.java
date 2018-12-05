@@ -146,7 +146,7 @@ public class ListContainer
 	private static double calculateTaxRate(L2Npc npc) {
 		if (npc != null &&
 				npc.getIsInTown() &&
-				(npc.getCastle() != null && npc.getCastle().getOwnerId() > 0)) {
+                (npc.getCastle() != null && npc.getCastle().getOwnerClanId() > 0)) {
 			return npc.getCastle().getTaxRate();
 		} else {
 			return 0D;

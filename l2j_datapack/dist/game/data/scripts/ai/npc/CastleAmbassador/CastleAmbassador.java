@@ -19,7 +19,6 @@
 package ai.npc.CastleAmbassador;
 
 import ai.npc.AbstractNpcAI;
-
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -160,7 +159,7 @@ public final class CastleAmbassador extends AbstractNpcAI
 	public String onSpawn(L2Npc npc)
 	{
 		final Castle castle = npc.getFort().getCastleByAmbassador(npc.getId());
-		if (castle.getOwnerId() == 0)
+        if (castle.getOwnerClanId() == 0)
 		{
 			npc.deleteMe();
 		}

@@ -18,13 +18,12 @@
  */
 package ai.npc.CastleCourtMagician;
 
+import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.clientpackets.RequestAcquireSkill;
-
-import ai.npc.AbstractNpcAI;
 
 /**
  * Castle Court Magician AI.
@@ -126,7 +125,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ((player.getClan() == null) && (player.getClanId() != npc.getCastle().getOwnerId()))
+        if ((player.getClan() == null) && (player.getClanId() != npc.getCastle().getOwnerClanId()))
 		{
 			return "courtmagician-01.html";
 		}
@@ -261,7 +260,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 			}
 			case "clanTeleport":
 			{
-				if (player.getClanId() == npc.getCastle().getOwnerId())
+                if (player.getClanId() == npc.getCastle().getOwnerClanId())
 				{
 					final L2PcInstance clanLeader = player.getClan().getLeader().getPlayerInstance();
 					
@@ -288,7 +287,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId())) ? "courtmagician.html" : "courtmagician-01.html";
+        return ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerClanId())) ? "courtmagician.html" : "courtmagician-01.html";
 	}
 	
 	public static void main(String[] args)

@@ -18,10 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.logging.Level;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -30,6 +26,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SiegeInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Broadcast;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.logging.Level;
 
 /**
  * @author UnAfraid
@@ -57,7 +57,7 @@ public class RequestSetCastleSiegeTime extends L2GameClientPacket
 			_log.log(Level.WARNING, getType() + ": activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId);
 			return;
 		}
-		if ((castle.getOwnerId() > 0) && (castle.getOwnerId() != activeChar.getClanId()))
+        if ((castle.getOwnerClanId() > 0) && (castle.getOwnerClanId() != activeChar.getClanId()))
 		{
 			_log.log(Level.WARNING, getType() + ": activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date of not his own castle!");
 			return;

@@ -18,17 +18,6 @@
  */
 package com.l2jserver.gameserver.model.entity;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -38,13 +27,8 @@ import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.MountType;
 import com.l2jserver.gameserver.enums.audio.Music;
-import com.l2jserver.gameserver.instancemanager.CastleManager;
-import com.l2jserver.gameserver.instancemanager.CastleManorManager;
-import com.l2jserver.gameserver.instancemanager.FortManager;
-import com.l2jserver.gameserver.instancemanager.SiegeManager;
-import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
+import com.l2jserver.gameserver.instancemanager.*;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.Territory;
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2SkillLearn;
@@ -60,6 +44,17 @@ import com.l2jserver.gameserver.model.zone.type.L2SiegeZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public final class Castle extends AbstractResidence
 {
@@ -81,6 +76,7 @@ public final class Castle extends AbstractResidence
 	private final List<L2ArtefactInstance> _artefacts = new ArrayList<>(1);
 	private final Map<Integer, CastleFunction> _function;
 	private int _ticketBuyCount = 0;
+	private long lastOwnershipChangeTime;
 	
 	/** Castle Functions */
 	public static final int FUNC_TELEPORT = 1;
@@ -153,7 +149,7 @@ public final class Castle extends AbstractResidence
 		
 		private void initializeTask(boolean cwh)
 		{
-			if (getOwnerId() <= 0)
+			if (getOwnerClanId() <= 0)
 			{
 				return;
 			}
@@ -180,11 +176,11 @@ public final class Castle extends AbstractResidence
 			{
 				try
 				{
-					if (getOwnerId() <= 0)
+					if (getOwnerClanId() <= 0)
 					{
 						return;
 					}
-					if ((ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= _fee) || !_cwh)
+					if ((ClanTable.getInstance().getClan(getOwnerClanId()).getWarehouse().getAdena() >= _fee) || !_cwh)
 					{
 						int fee = _fee;
 						if (getEndTime() == -1)
@@ -196,7 +192,7 @@ public final class Castle extends AbstractResidence
 						dbSave();
 						if (_cwh)
 						{
-							ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CS_function_fee", Inventory.ADENA_ID, fee, null, null);
+							ClanTable.getInstance().getClan(getOwnerClanId()).getWarehouse().destroyItemByItemId("CS_function_fee", Inventory.ADENA_ID, fee, null, null);
 						}
 						ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(true), getRate());
 					}
@@ -241,7 +237,7 @@ public final class Castle extends AbstractResidence
 		 */
 		_function = new ConcurrentHashMap<>();
 		initResidenceZone();
-		if (getOwnerId() != 0)
+		if (getOwnerClanId() != 0)
 		{
 			loadFunctions();
 			loadDoorUpgrade();
@@ -264,7 +260,7 @@ public final class Castle extends AbstractResidence
 		{
 			return;
 		}
-		setOwner(clan);
+		setOwnerClan(clan);
 		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_S1_ENGRAVED_RULER);
 		msg.addString(clan.getName());
 		getSiege().announceToPlayer(msg, true);
@@ -278,7 +274,7 @@ public final class Castle extends AbstractResidence
 	public void addToTreasury(long amount)
 	{
 		// check if owned
-		if (getOwnerId() <= 0)
+		if (getOwnerClanId() <= 0)
 		{
 			return;
 		}
@@ -289,7 +285,7 @@ public final class Castle extends AbstractResidence
 			if (rune != null)
 			{
 				long runeTax = (long) (amount * rune.getTaxRate());
-				if (rune.getOwnerId() > 0)
+				if (rune.getOwnerClanId() > 0)
 				{
 					rune.addToTreasury(runeTax);
 				}
@@ -302,7 +298,7 @@ public final class Castle extends AbstractResidence
 			if (aden != null)
 			{
 				long adenTax = (long) (amount * aden.getTaxRate()); // Find out what Aden gets from the current castle instance's income
-				if (aden.getOwnerId() > 0)
+				if (aden.getOwnerClanId() > 0)
 				{
 					aden.addToTreasury(adenTax); // Only bother to really add the tax to the treasury if not npc owned
 				}
@@ -321,7 +317,7 @@ public final class Castle extends AbstractResidence
 	 */
 	public boolean addToTreasuryNoTax(long amount)
 	{
-		if (getOwnerId() <= 0)
+		if (getOwnerClanId() <= 0)
 		{
 			return false;
 		}
@@ -366,7 +362,7 @@ public final class Castle extends AbstractResidence
 	 */
 	public void banishForeigners()
 	{
-		getResidenceZone().banishForeigners(getOwnerId());
+		getResidenceZone().banishForeigners(getOwnerClanId());
 	}
 	
 	/**
@@ -446,7 +442,7 @@ public final class Castle extends AbstractResidence
 	
 	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
 	{
-		if (activeChar.getClanId() != getOwnerId())
+		if (activeChar.getClanId() != getOwnerClanId())
 		{
 			return;
 		}
@@ -478,12 +474,11 @@ public final class Castle extends AbstractResidence
 	}
 	
 	// This method updates the castle tax rate
-	public void setOwner(L2Clan clan)
+	public void setOwnerClan(L2Clan clan)
 	{
 		// Remove old owner
-		if ((getOwnerId() > 0) && ((clan == null) || (clan.getId() != getOwnerId())))
-		{
-			L2Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
+		if ((getOwnerClanId() > 0) && ((clan == null) || (clan.getId() != getOwnerClanId()))) {
+			L2Clan oldOwner = ClanTable.getInstance().getClan(getOwnerClanId()); // Try to find clan instance
 			if (oldOwner != null)
 			{
 				if (_formerOwner == null)
@@ -507,7 +502,7 @@ public final class Castle extends AbstractResidence
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "Exception in setOwner: " + e.getMessage(), e);
+					_log.log(Level.WARNING, "Exception in setOwnerClan: " + e.getMessage(), e);
 				}
 				oldOwner.setCastleId(0); // Unset has castle flag for old owner
 				for (L2PcInstance member : oldOwner.getOnlineMembers(0))
@@ -863,7 +858,13 @@ public final class Castle extends AbstractResidence
 			try (PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET hasCastle = ? WHERE clan_id = ?"))
 			{
 				ps.setInt(1, getResidenceId());
-				ps.setInt(2, getOwnerId());
+				ps.setInt(2, getOwnerClanId());
+				ps.execute();
+			}
+
+			try (PreparedStatement ps = con.prepareStatement("UPDATE castle SET last_ownership_change_time = ? WHERE clan_id = ?")) {
+				ps.setLong(1, System.currentTimeMillis());
+				ps.setInt(2, getOwnerClanId());
 				ps.execute();
 			}
 			
@@ -902,13 +903,13 @@ public final class Castle extends AbstractResidence
 	{
 		return _doors;
 	}
-	
-	public final int getOwnerId()
+
+	public final int getOwnerClanId()
 	{
 		return _ownerId;
 	}
-	
-	public final L2Clan getOwner()
+
+	public final L2Clan getOwnerClan()
 	{
 		return (_ownerId != 0) ? ClanTable.getInstance().getClan(_ownerId) : null;
 	}
@@ -979,11 +980,11 @@ public final class Castle extends AbstractResidence
 	{
 		if (_formerOwner != null)
 		{
-			if (_formerOwner != ClanTable.getInstance().getClan(getOwnerId()))
+			if (_formerOwner != ClanTable.getInstance().getClan(getOwnerClanId()))
 			{
 				int maxreward = Math.max(0, _formerOwner.getReputationScore());
 				_formerOwner.takeReputationScore(Config.LOOSE_CASTLE_POINTS, true);
-				L2Clan owner = ClanTable.getInstance().getClan(getOwnerId());
+				L2Clan owner = ClanTable.getInstance().getClan(getOwnerClanId());
 				if (owner != null)
 				{
 					owner.addReputationScore(Math.min(Config.TAKE_CASTLE_POINTS, maxreward), true);
@@ -996,7 +997,7 @@ public final class Castle extends AbstractResidence
 		}
 		else
 		{
-			L2Clan owner = ClanTable.getInstance().getClan(getOwnerId());
+			L2Clan owner = ClanTable.getInstance().getClan(getOwnerClanId());
 			if (owner != null)
 			{
 				owner.addReputationScore(Config.TAKE_CASTLE_POINTS, true);
@@ -1175,4 +1176,10 @@ public final class Castle extends AbstractResidence
 			}
 		}
 	}
+
+	@Override
+	public long getLastOwnershipChangeTime() {
+		return lastOwnershipChangeTime;
+	}
+
 }

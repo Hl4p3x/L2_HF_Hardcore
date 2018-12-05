@@ -18,6 +18,16 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.InstanceListManager;
+import com.l2jserver.gameserver.SevenSigns;
+import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.L2ClanMember;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Castle;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,16 +38,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.InstanceListManager;
-import com.l2jserver.gameserver.SevenSigns;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2ClanMember;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Castle;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 public final class CastleManager implements InstanceListManager
 {
@@ -107,7 +107,7 @@ public final class CastleManager implements InstanceListManager
 	{
 		for (Castle temp : _castles)
 		{
-			if (temp.getOwnerId() == clan.getId())
+			if (temp.getOwnerClanId() == clan.getId())
 			{
 				return temp;
 			}
@@ -187,7 +187,7 @@ public final class CastleManager implements InstanceListManager
 		boolean hasOwnedCastle = false;
 		for (Castle castle : _castles)
 		{
-			if (castle.getOwnerId() > 0)
+			if (castle.getOwnerClanId() > 0)
 			{
 				hasOwnedCastle = true;
 				break;

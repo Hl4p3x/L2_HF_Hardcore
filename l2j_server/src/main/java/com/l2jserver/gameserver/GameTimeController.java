@@ -44,7 +44,9 @@ public final class GameTimeController extends Thread
 	public static final int MINUTES_PER_IG_DAY = SECONDS_PER_IG_DAY / 60;
 	public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;
 	public static final int TICKS_SUN_STATE_CHANGE = TICKS_PER_IG_DAY / 4;
-	
+	public static final long FULL_DAY_IN_MILLIS = 86400000;
+	public static final long FULL_WEEK_IN_MILLIS = 604800000;
+
 	private static GameTimeController _instance;
 	
 	private final Set<L2Character> _movingObjects = ConcurrentHashMap.newKeySet();

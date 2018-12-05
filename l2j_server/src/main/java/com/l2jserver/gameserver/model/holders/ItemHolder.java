@@ -27,13 +27,13 @@ import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
  */
 public class ItemHolder implements IIdentifiable
 {
-	private final int _id;
-	private final long _count;
+	private final int id;
+	private final long count;
 	
 	public ItemHolder(int id, long count)
 	{
-		_id = id;
-		_count = count;
+		this.id = id;
+		this.count = count;
 	}
 	
 	/**
@@ -42,7 +42,7 @@ public class ItemHolder implements IIdentifiable
 	@Override
 	public int getId()
 	{
-		return _id;
+		return id;
 	}
 	
 	/**
@@ -50,12 +50,12 @@ public class ItemHolder implements IIdentifiable
 	 */
 	public long getCount()
 	{
-		return _count;
+		return count;
 	}
 	
 	@Override
 	public String toString()
 	{
-		return "[" + getClass().getSimpleName() + "] ID: " + _id + ", count: " + _count;
+		return "[" + getClass().getSimpleName() + "] ID: " + id + ", count: " + count;
 	}
 }

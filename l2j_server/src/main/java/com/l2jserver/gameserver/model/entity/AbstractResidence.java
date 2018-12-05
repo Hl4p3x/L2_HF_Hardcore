@@ -18,21 +18,21 @@
  */
 package com.l2jserver.gameserver.model.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.interfaces.Residence;
 import com.l2jserver.gameserver.model.events.ListenersContainer;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.interfaces.INamable;
 import com.l2jserver.gameserver.model.zone.type.L2ResidenceZone;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author xban1x
  */
-public abstract class AbstractResidence extends ListenersContainer implements INamable
+public abstract class AbstractResidence extends ListenersContainer implements Residence
 {
 	private final int _residenceId;
 	private String _name;
@@ -45,7 +45,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		_residenceId = residenceId;
 		initResidentialSkills();
 	}
-	
+
 	protected abstract void load();
 	
 	protected abstract void initResidenceZone();

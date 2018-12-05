@@ -18,8 +18,6 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.Calendar;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
@@ -27,6 +25,8 @@ import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.ClanHall;
+
+import java.util.Calendar;
 
 /**
  * Shows the Siege Info<BR>
@@ -72,8 +72,8 @@ public class SiegeInfo extends L2GameServerPacket
 		if (_castle != null)
 		{
 			writeD(_castle.getResidenceId());
-			
-			final int ownerId = _castle.getOwnerId();
+
+            final int ownerId = _castle.getOwnerClanId();
 			
 			writeD(((ownerId == activeChar.getClanId()) && (activeChar.isClanLeader())) ? 0x01 : 0x00);
 			writeD(ownerId);
@@ -101,7 +101,7 @@ public class SiegeInfo extends L2GameServerPacket
 			}
 			
 			writeD((int) (System.currentTimeMillis() / 1000));
-			if (!_castle.getIsTimeRegistrationOver() && activeChar.isClanLeader() && (activeChar.getClanId() == _castle.getOwnerId()))
+            if (!_castle.getIsTimeRegistrationOver() && activeChar.isClanLeader() && (activeChar.getClanId() == _castle.getOwnerClanId()))
 			{
 				Calendar cal = Calendar.getInstance();
 				cal.setTimeInMillis(_castle.getSiegeDate().getTimeInMillis());

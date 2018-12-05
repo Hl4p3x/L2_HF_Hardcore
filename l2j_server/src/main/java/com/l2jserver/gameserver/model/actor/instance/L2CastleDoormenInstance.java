@@ -18,12 +18,12 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import java.util.StringTokenizer;
-
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
+
+import java.util.StringTokenizer;
 
 public class L2CastleDoormenInstance extends L2DoormenInstance
 {
@@ -87,7 +87,7 @@ public class L2CastleDoormenInstance extends L2DoormenInstance
 			}
 			else if (getCastle() != null)
 			{
-				if (player.getClanId() == getCastle().getOwnerId())
+                if (player.getClanId() == getCastle().getOwnerClanId())
 				{
 					return true;
 				}

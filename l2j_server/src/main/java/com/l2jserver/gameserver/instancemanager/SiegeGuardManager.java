@@ -18,6 +18,11 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.entity.Castle;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,11 +30,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.model.L2Spawn;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Castle;
 
 public final class SiegeGuardManager
 {
@@ -146,7 +146,7 @@ public final class SiegeGuardManager
 		try
 		{
 			int hiredCount = 0, hiredMax = MercTicketManager.getInstance().getMaxAllowedMerc(_castle.getResidenceId());
-			boolean isHired = (getCastle().getOwnerId() > 0) ? true : false;
+            boolean isHired = (getCastle().getOwnerClanId() > 0) ? true : false;
 			loadSiegeGuard();
 			for (L2Spawn spawn : _siegeGuardSpawn)
 			{
@@ -196,7 +196,7 @@ public final class SiegeGuardManager
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
-			if (getCastle().getOwnerId() > 0)
+            if (getCastle().getOwnerClanId() > 0)
 			{
 				ps.setInt(2, 1);
 			}

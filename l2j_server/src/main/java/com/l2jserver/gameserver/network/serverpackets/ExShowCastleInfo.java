@@ -18,11 +18,11 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.List;
-
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.model.entity.Castle;
+
+import java.util.List;
 
 /**
  * @author KenM
@@ -44,15 +44,15 @@ public class ExShowCastleInfo extends L2GameServerPacket
 		for (Castle castle : castles)
 		{
 			writeD(castle.getResidenceId());
-			if (castle.getOwnerId() > 0)
+            if (castle.getOwnerClanId() > 0)
 			{
-				if (ClanTable.getInstance().getClan(castle.getOwnerId()) != null)
+                if (ClanTable.getInstance().getClan(castle.getOwnerClanId()) != null)
 				{
-					writeS(ClanTable.getInstance().getClan(castle.getOwnerId()).getName());
+                    writeS(ClanTable.getInstance().getClan(castle.getOwnerClanId()).getName());
 				}
 				else
 				{
-					_log.warning("Castle owner with no name! Castle: " + castle.getName() + " has an OwnerId = " + castle.getOwnerId() + " who does not have a  name!");
+                    _log.warning("Castle owner with no name! Castle: " + castle.getName() + " has an OwnerId = " + castle.getOwnerClanId() + " who does not have a  name!");
 					writeS("");
 				}
 			}

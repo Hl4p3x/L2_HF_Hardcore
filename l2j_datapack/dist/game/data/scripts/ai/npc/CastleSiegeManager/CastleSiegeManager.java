@@ -19,7 +19,6 @@
 package ai.npc.CastleSiegeManager;
 
 import ai.npc.AbstractNpcAI;
-
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -55,7 +54,7 @@ public final class CastleSiegeManager extends AbstractNpcAI
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		if (player.isClanLeader() && (player.getClanId() == npc.getCastle().getOwnerId()))
+        if (player.isClanLeader() && (player.getClanId() == npc.getCastle().getOwnerClanId()))
 		{
 			if (isInSiege(npc))
 			{

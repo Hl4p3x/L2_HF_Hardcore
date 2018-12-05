@@ -18,11 +18,7 @@
  */
 package ai.npc.WyvernManager;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import ai.npc.AbstractNpcAI;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -30,6 +26,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jserver.gameserver.util.Util;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Wyvern Manager
@@ -134,7 +133,7 @@ public final class WyvernManager extends AbstractNpcAI
 			{
 				if (npc.getCastle() != null)
 				{
-					return player.getClanId() == npc.getCastle().getOwnerId();
+                    return player.getClanId() == npc.getCastle().getOwnerClanId();
 				}
 				return false;
 			}

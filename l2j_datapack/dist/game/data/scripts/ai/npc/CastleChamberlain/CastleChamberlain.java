@@ -18,13 +18,7 @@
  */
 package ai.npc.CastleChamberlain;
 
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
-
+import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
@@ -32,11 +26,7 @@ import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jserver.gameserver.instancemanager.CastleManorManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jserver.gameserver.model.ClanPrivilege;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2TeleportLocation;
-import com.l2jserver.gameserver.model.PcCondOverride;
-import com.l2jserver.gameserver.model.SeedProduction;
+import com.l2jserver.gameserver.model.*;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
@@ -53,16 +43,10 @@ import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcManorBypass
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExShowCropInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExShowCropSetting;
-import com.l2jserver.gameserver.network.serverpackets.ExShowDominionRegistry;
-import com.l2jserver.gameserver.network.serverpackets.ExShowManorDefaultInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExShowSeedInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExShowSeedSetting;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import java.util.*;
 
 /**
  * Castle Chamberlain AI.
@@ -398,7 +382,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 	
 	private final boolean isOwner(final L2PcInstance player, final L2Npc npc)
 	{
-		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerId()));
+        return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClan() != null) && (player.getClanId() == npc.getCastle().getOwnerClanId()));
 	}
 	
 	@Override
@@ -674,7 +658,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					else
 					{
-						final L2Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
+                        final L2Clan clan = ClanTable.getInstance().getClan(castle.getOwnerClanId());
 						final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-02.html");
 						html.replace("%clanleadername%", clan.getLeaderName());
 						html.replace("%clanname%", clan.getName());

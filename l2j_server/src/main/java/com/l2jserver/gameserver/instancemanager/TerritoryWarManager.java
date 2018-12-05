@@ -18,34 +18,13 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2SiegeClan;
-import com.l2jserver.gameserver.model.L2SkillLearn;
-import com.l2jserver.gameserver.model.L2Spawn;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.TerritoryWard;
+import com.l2jserver.gameserver.model.*;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -62,6 +41,17 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.PropertiesParser;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledFuture;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public final class TerritoryWarManager implements Siegable
 {
@@ -852,9 +842,9 @@ public final class TerritoryWarManager implements Siegable
 				if (t != null)
 				{
 					t._fortId = fortId;
-					if (CastleManager.getInstance().getCastleById(castleId).getOwnerId() > 0)
+                    if (CastleManager.getInstance().getCastleById(castleId).getOwnerClanId() > 0)
 					{
-						t.setOwnerClan(ClanTable.getInstance().getClan(CastleManager.getInstance().getCastleById(castleId).getOwnerId()));
+                        t.setOwnerClan(ClanTable.getInstance().getClan(CastleManager.getInstance().getCastleById(castleId).getOwnerClanId()));
 						t.changeNPCsSpawn(0, true);
 					}
 					
@@ -921,7 +911,7 @@ public final class TerritoryWarManager implements Siegable
 			Castle castle = CastleManager.getInstance().getCastleById(t.getCastleId());
 			if (castle != null)
 			{
-				if (castle.getOwnerId() > 0)
+                if (castle.getOwnerClanId() > 0)
 				{
 					activeTerritoryList.add(t);
 				}
@@ -1020,7 +1010,7 @@ public final class TerritoryWarManager implements Siegable
 			Castle castle = CastleManager.getInstance().getCastleById(t.getCastleId());
 			if (castle != null)
 			{
-				if (castle.getOwnerId() > 0)
+                if (castle.getOwnerClanId() > 0)
 				{
 					activeTerritoryList.add(t);
 				}

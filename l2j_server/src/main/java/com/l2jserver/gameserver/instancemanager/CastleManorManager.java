@@ -18,41 +18,28 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.enums.ManorMode;
-import com.l2jserver.gameserver.model.CropProcure;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2ClanMember;
-import com.l2jserver.gameserver.model.L2Seed;
-import com.l2jserver.gameserver.model.SeedProduction;
-import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.*;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.interfaces.IStorable;
 import com.l2jserver.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.util.Rnd;
 import com.l2jserver.util.data.xml.IXmlReader;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * Castle manor system.
@@ -290,7 +277,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 				// Update manor period
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					final L2Clan owner = castle.getOwner();
+                    final L2Clan owner = castle.getOwnerClan();
 					if (owner == null)
 					{
 						continue;
@@ -363,7 +350,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 				// Notify clan leader about manor mode change
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					final L2Clan owner = castle.getOwner();
+                    final L2Clan owner = castle.getOwnerClan();
 					if (owner != null)
 					{
 						final L2ClanMember clanLeader = owner.getLeader();
@@ -382,7 +369,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 				
 				for (Castle castle : CastleManager.getInstance().getCastles())
 				{
-					final L2Clan owner = castle.getOwner();
+                    final L2Clan owner = castle.getOwnerClan();
 					if (owner == null)
 					{
 						continue;

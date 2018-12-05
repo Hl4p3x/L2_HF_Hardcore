@@ -18,12 +18,6 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import java.util.Calendar;
-import java.util.StringTokenizer;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
@@ -38,7 +32,11 @@ import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.model.base.ClassLevel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Calendar;
+import java.util.StringTokenizer;
 
 /**
  * @author NightMarez
@@ -334,7 +332,7 @@ public final class L2TeleporterInstance extends L2Npc
 		// Teleporter is on castle ground and player is in a clan
 		else if (player.getClan() != null)
 		{
-			if (getCastle().getOwnerId() == player.getClanId())
+            if (getCastle().getOwnerClanId() == player.getClanId())
 			{
 				return COND_OWNER; // Owner
 			}

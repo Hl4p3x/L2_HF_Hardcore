@@ -18,26 +18,13 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.Future;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.L2CharacterAI;
 import com.l2jserver.gameserver.ai.L2DoorAI;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.Race;
-import com.l2jserver.gameserver.instancemanager.CastleManager;
-import com.l2jserver.gameserver.instancemanager.ClanHallManager;
-import com.l2jserver.gameserver.instancemanager.FortManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
+import com.l2jserver.gameserver.instancemanager.*;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.Location;
@@ -61,6 +48,14 @@ import com.l2jserver.gameserver.network.serverpackets.OnEventTrigger;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.Rnd;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.Future;
 
 public class L2DoorInstance extends L2Character
 {
@@ -396,7 +391,7 @@ public class L2DoorInstance extends L2Character
 		else if (isCastle)
 		{
 			L2Clan clan = actingPlayer.getClan();
-			if ((clan != null) && (clan.getId() == getCastle().getOwnerId()))
+            if ((clan != null) && (clan.getId() == getCastle().getOwnerClanId()))
 			{
 				return false;
 			}
