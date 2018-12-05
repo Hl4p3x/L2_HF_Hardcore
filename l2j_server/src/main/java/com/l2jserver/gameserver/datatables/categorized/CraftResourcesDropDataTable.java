@@ -66,6 +66,10 @@ public class CraftResourcesDropDataTable {
         return resourceIds;
     }
 
+    public Map<ResourceGrade, List<CraftResource>> getResourceMap() {
+        return resourceMap;
+    }
+
     private static class SingletonHolder {
         protected static final CraftResourcesDropDataTable _instance = new CraftResourcesDropDataTable();
     }
