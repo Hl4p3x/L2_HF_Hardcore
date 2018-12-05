@@ -40,7 +40,7 @@ task zip(type: Zip) {
 build.finalizedBy(zip)
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '4.7'
+	gradleVersion = '5.0'
 }
 
 test {
