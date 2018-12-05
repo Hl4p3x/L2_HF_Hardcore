@@ -77,15 +77,15 @@ public class TerritoryOwningRewardsManager extends AbstractNpcAI {
     public void distributeRewardsByResidences(List<Residence> residences, long rewardMultiplierTimeDistance) {
         for (Residence residence : residences) {
             Optional<TerritoryOwningReward> territoryOwningRewardOptional = territoryOwningRewardsTable.findResidenceReward(residence.getResidenceId());
-            if (territoryOwningRewardOptional.isPresent()) {
-                long countMultiplier = calculateMultiplier(residence, rewardMultiplierTimeDistance);
-
-                territoryOwningRewardOptional.get().getRewards().forEach(
-                        reward -> residence.getOwnerClan().getWarehouse().addItem("Territory Owning Reward", reward.getId(), reward.getCount() * countMultiplier, null, null)
-                );
-            } else {
+            if (!territoryOwningRewardOptional.isPresent()) {
                 LOG.warn("Residence {} [{}] has no Territory Owning Reward data", residence.getName(), residence.getResidenceId());
+                continue;
             }
+
+            long countMultiplier = calculateMultiplier(residence, rewardMultiplierTimeDistance);
+            territoryOwningRewardOptional.get().getRewards().forEach(
+                    reward -> residence.getOwnerClan().getWarehouse().addItem("Territory Owning Reward", reward.getId(), reward.getCount() * countMultiplier, null, null)
+            );
         }
     }
 
