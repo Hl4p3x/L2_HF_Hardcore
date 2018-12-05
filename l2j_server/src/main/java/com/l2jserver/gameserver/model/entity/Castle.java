@@ -646,6 +646,8 @@ public final class Castle extends AbstractResidence
 					_showNpcCrest = rs.getBoolean("showNpcCrest");
 					
 					_ticketBuyCount = rs.getInt("ticketBuyCount");
+
+                    lastOwnershipChangeTime = rs.getLong("last_ownership_change_time");
 				}
 			}
 			_taxRate = _taxPercent / 100.0;
