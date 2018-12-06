@@ -18,18 +18,14 @@
  */
 package hellbound;
 
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.handler.AdminCommandHandler;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
+import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 import handlers.admincommandhandlers.AdminHellbound;
 import handlers.voicedcommandhandlers.Hellbound;
-import hellbound.AI.Amaskari;
-import hellbound.AI.Chimeras;
-import hellbound.AI.DemonPrince;
-import hellbound.AI.HellboundCore;
-import hellbound.AI.Keltas;
-import hellbound.AI.NaiaLock;
-import hellbound.AI.OutpostCaptain;
-import hellbound.AI.Ranku;
-import hellbound.AI.Slaves;
-import hellbound.AI.Typhoon;
+import hellbound.AI.*;
 import hellbound.AI.NPC.Bernarde.Bernarde;
 import hellbound.AI.NPC.Budenka.Budenka;
 import hellbound.AI.NPC.Buron.Buron;
@@ -52,17 +48,10 @@ import hellbound.AI.Zones.TullyWorkshop.TullyWorkshop;
 import hellbound.Instances.DemonPrinceFloor.DemonPrinceFloor;
 import hellbound.Instances.RankuFloor.RankuFloor;
 import hellbound.Instances.UrbanArea.UrbanArea;
-
-import java.util.logging.Logger;
-
 import quests.Q00130_PathToHellbound.Q00130_PathToHellbound;
 import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.handler.AdminCommandHandler;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
-import com.l2jserver.gameserver.handler.VoicedCommandHandler;
+import java.util.logging.Logger;
 
 /**
  * Hellbound class-loader.
@@ -130,7 +119,7 @@ public final class HellboundLoader
 		{
 			try
 			{
-				final Object instance = script.newInstance();
+                final Object instance = script.getConstructor().newInstance();
 				if (instance instanceof IAdminCommandHandler)
 				{
 					AdminCommandHandler.getInstance().registerHandler((IAdminCommandHandler) instance);

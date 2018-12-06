@@ -21,7 +21,6 @@ package gracia;
 import gracia.AI.EnergySeeds;
 import gracia.AI.Lindvior;
 import gracia.AI.Maguen;
-import gracia.AI.StarStones;
 import gracia.AI.NPC.FortuneTelling.FortuneTelling;
 import gracia.AI.NPC.GeneralDilios.GeneralDilios;
 import gracia.AI.NPC.Lekon.Lekon;
@@ -30,6 +29,7 @@ import gracia.AI.NPC.Nottingale.Nottingale;
 import gracia.AI.NPC.Seyo.Seyo;
 import gracia.AI.NPC.ZealotOfShilen.ZealotOfShilen;
 import gracia.AI.SeedOfAnnihilation.SeedOfAnnihilation;
+import gracia.AI.StarStones;
 import gracia.instances.SecretArea.SecretArea;
 import gracia.instances.SeedOfDestruction.Stage1;
 import gracia.instances.SeedOfInfinity.HallOfSuffering.HallOfSuffering;
@@ -86,7 +86,7 @@ public final class GraciaLoader
 		{
 			try
 			{
-				script.newInstance();
+				script.getConstructor().newInstance();
 			}
 			catch (Exception e)
 			{

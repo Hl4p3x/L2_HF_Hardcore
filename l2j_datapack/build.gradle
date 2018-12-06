@@ -4,7 +4,7 @@ apply plugin: 'idea'
 
 defaultTasks('zip')
 
-sourceCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_11
 
 sourceSets {
 	main {
@@ -38,10 +38,6 @@ task zip(type: Zip) {
 }
 
 build.finalizedBy(zip)
-
-task wrapper(type: Wrapper) {
-	gradleVersion = '5.0'
-}
 
 test {
 	useJUnitPlatform()

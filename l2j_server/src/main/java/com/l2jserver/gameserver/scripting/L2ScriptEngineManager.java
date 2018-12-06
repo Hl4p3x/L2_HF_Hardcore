@@ -18,31 +18,17 @@
  */
 package com.l2jserver.gameserver.scripting;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.LineNumberReader;
+import com.l2jserver.Config;
+import com.l2jserver.script.jython.JythonScriptEngine;
+
+import javax.script.*;
+import java.io.*;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javax.script.Compilable;
-import javax.script.CompiledScript;
-import javax.script.ScriptContext;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineFactory;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
-import javax.script.SimpleScriptContext;
-
-import com.l2jserver.Config;
-import com.l2jserver.script.jython.JythonScriptEngine;
 
 /**
  * Caches script engines and provides functionality for executing and managing scripts.
@@ -83,12 +69,11 @@ public final class L2ScriptEngineManager
 	 * Apply only when executing script from files.<BR>
 	 */
 	private static final boolean PURGE_ERROR_LOG = true;
-	
-	protected L2ScriptEngineManager()
-	{
+
+	protected L2ScriptEngineManager() {
 		ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
 		List<ScriptEngineFactory> factories = scriptEngineManager.getEngineFactories();
-		
+
 		for (ScriptEngineFactory factory : factories)
 		{
 			try

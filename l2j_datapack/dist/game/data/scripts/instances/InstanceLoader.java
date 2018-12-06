@@ -34,6 +34,7 @@ import instances.MonasteryOfSilence1.MonasteryOfSilence1;
 import instances.NornilsGarden.NornilsGarden;
 import instances.NornilsGardenQuest.NornilsGardenQuest;
 import instances.SanctumOftheLordsOfDawn.SanctumOftheLordsOfDawn;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -72,7 +73,7 @@ public final class InstanceLoader
 		{
 			try
 			{
-				script.newInstance();
+                script.getConstructor().newInstance();
 			}
 			catch (Exception e)
 			{

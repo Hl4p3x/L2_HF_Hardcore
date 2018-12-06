@@ -5,7 +5,6 @@ import com.l2jserver.util.ObjectMapperYamlSingleton;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
@@ -21,7 +20,7 @@ public class TerritoryOwningRewardsTable {
 
     public void load() {
         try {
-            territoryOwningRewards = ObjectMapperYamlSingleton.getInstance().readValue(new File(REWARDS_FILE_PATH), new TypeReference<List<TerritoryOwningReward>>() {
+            territoryOwningRewards = ObjectMapperYamlSingleton.getInstance().readValue(getClass().getResourceAsStream(REWARDS_FILE_PATH), new TypeReference<List<TerritoryOwningReward>>() {
             });
             LOG.info("[{}] {} reward entries loaded!", TerritoryOwningRewardsManager.LOG_TAG, territoryOwningRewards.size());
         } catch (IOException e) {
