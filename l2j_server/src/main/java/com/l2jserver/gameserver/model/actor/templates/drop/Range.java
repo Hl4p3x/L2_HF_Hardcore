@@ -11,6 +11,9 @@ import java.util.function.Function;
 
 public class Range {
 
+    private static final Range ZERO = new Range(0);
+    private static final Range ONE = new Range(1);
+
     private int low;
     private int high;
 
@@ -106,4 +109,13 @@ public class Range {
         }
         return result;
     }
+
+    public static Range one() {
+        return ONE;
+    }
+
+    public static Range zero() {
+        return ZERO;
+    }
+
 }

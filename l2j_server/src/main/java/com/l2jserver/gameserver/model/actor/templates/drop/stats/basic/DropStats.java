@@ -7,9 +7,9 @@ import java.util.StringJoiner;
 
 public class DropStats {
 
-    private Range stacks = new Range(1);
+    private Range stacks = Range.one();
     private Double chance = 0D;
-    private Range count = new Range(1);
+    private Range count = Range.one();
 
     public DropStats() {
     }
