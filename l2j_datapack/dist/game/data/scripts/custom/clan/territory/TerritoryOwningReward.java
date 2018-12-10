@@ -13,6 +13,9 @@ public class TerritoryOwningReward {
     private int residenceId;
     private List<ItemHolder> rewards;
 
+    public TerritoryOwningReward() {
+    }
+
     public TerritoryOwningReward(int residenceId, List<ItemHolder> rewards) {
         this.residenceId = residenceId;
         this.rewards = rewards;
