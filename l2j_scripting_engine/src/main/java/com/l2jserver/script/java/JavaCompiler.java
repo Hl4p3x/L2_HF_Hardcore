@@ -29,12 +29,6 @@ public class JavaCompiler {
         List<JavaFileObject> compUnits = new ArrayList<>(1);
         compUnits.add(MemoryJavaFileManager.makeStringSource(fileName, source));
         List<String> options = new ArrayList<>();
-     /*   options.add("-warn:-enumSwitch");
-        options.add("-g");
-        options.add("-deprecation");
-        options.add("-1.8");*/
-        /*options.add("--add-modules");
-        options.add("otherside.java");*/
 
         if (sourcePath != null) {
             options.add("-sourcepath");
@@ -46,7 +40,7 @@ public class JavaCompiler {
             options.add(classPath);
         }
 
-        CompilationTask task = this.tool.getTask(err, memoryJavaFileManager, diagnostics, options, null, compUnits);
+        CompilationTask task = tool.getTask(err, memoryJavaFileManager, diagnostics, options, null, compUnits);
         if (task.call()) {
             return memoryJavaFileManager.getClassBytes();
         } else {

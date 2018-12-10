@@ -116,6 +116,7 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
         String fileName = getFileName(ctx);
         String sourcePath = getSourcePath(ctx);
         String classPath = getClassPath(ctx);
+
         Writer err = ctx.getErrorWriter();
         if (err == null) {
             err = new StringWriter();
@@ -230,7 +231,7 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
         return scope != -1 ? ctx.getAttribute("mainClass").toString() : System.getProperty(SYSPROP_PREFIX + ".mainClass");
     }
 
-    protected static ClassLoader getParentLoader(ScriptContext ctx) {
+    private static ClassLoader getParentLoader(ScriptContext ctx) {
         int scope = ctx.getAttributesScope("parentLoader");
         if (scope != -1) {
             Object loader = ctx.getAttribute("parentLoader");
