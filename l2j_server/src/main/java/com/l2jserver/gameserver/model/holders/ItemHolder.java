@@ -29,7 +29,12 @@ public class ItemHolder implements IIdentifiable
 {
 	private final int id;
 	private final long count;
-	
+
+    public ItemHolder() {
+        id = 0;
+        count = 0L;
+    }
+
 	public ItemHolder(int id, long count)
 	{
 		this.id = id;
