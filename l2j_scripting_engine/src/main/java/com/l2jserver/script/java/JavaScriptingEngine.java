@@ -9,9 +9,10 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class JavaScriptingEngine extends AbstractScriptEngine implements Compilable {
+
     private final JavaCompiler compiler = new JavaCompiler();
     private ScriptEngineFactory factory;
-    private static final String SYSPROP_PREFIX = "com.sun.script.java.";
+
     private static final String[] EMPTY_STRING_ARRAY = new String[0];
     private static final String ARGUMENTS = "arguments";
     private static final String SOURCEPATH = "sourcepath";
@@ -61,6 +62,7 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
         String fileName = getFileName(ctx);
         String sourcePath = getSourcePath(ctx);
         String classPath = getClassPath(ctx);
+
         Writer err = ctx.getErrorWriter();
         if (err == null) {
             err = new StringWriter();
@@ -200,7 +202,7 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
         if (scope != -1) {
             Object obj = ctx.getAttribute(ARGUMENTS, scope);
             if (obj instanceof String[]) {
-                return (String[]) ((String[]) obj);
+                return (String[]) obj;
             }
         }
 
@@ -208,33 +210,37 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
     }
 
     private static String getSourcePath(ScriptContext ctx) {
-        int scope = ctx.getAttributesScope("sourcepath");
-        return scope != -1 ? ctx.getAttribute("sourcepath").toString() : System.getProperty(SYSPROP_PREFIX + ".sourcepath");
+        int scope = ctx.getAttributesScope(SOURCEPATH);
+        return scope != -1 ? ctx.getAttribute(SOURCEPATH).toString() : System.getProperty("com.sun.script.java.sourcepath");
+    }
+
+    private static String getSystemClassPath() {
+        String res = System.getProperty("com.sun.script.java.classpath");
+        if (res == null) {
+            return System.getProperty("java.class.path");
+        }
+        return res;
     }
 
     private static String getClassPath(ScriptContext ctx) {
-        int scope = ctx.getAttributesScope("classpath");
+        int scope = ctx.getAttributesScope(CLASSPATH);
+        String systemClassPath = getSystemClassPath();
         if (scope != -1) {
-            return ctx.getAttribute("classpath").toString();
+            return ctx.getAttribute(CLASSPATH).toString() + File.pathSeparator + systemClassPath;
         } else {
-            String res = System.getProperty(SYSPROP_PREFIX + ".classpath");
-            if (res == null) {
-                res = System.getProperty("java.class.path");
-            }
-
-            return res;
+            return systemClassPath;
         }
     }
 
     private static String getMainClassName(ScriptContext ctx) {
-        int scope = ctx.getAttributesScope("mainClass");
-        return scope != -1 ? ctx.getAttribute("mainClass").toString() : System.getProperty(SYSPROP_PREFIX + ".mainClass");
+        int scope = ctx.getAttributesScope(MAINCLASS);
+        return scope != -1 ? ctx.getAttribute(MAINCLASS).toString() : System.getProperty("com.sun.script.java.mainClass");
     }
 
     private static ClassLoader getParentLoader(ScriptContext ctx) {
-        int scope = ctx.getAttributesScope("parentLoader");
+        int scope = ctx.getAttributesScope(PARENTLOADER);
         if (scope != -1) {
-            Object loader = ctx.getAttribute("parentLoader");
+            Object loader = ctx.getAttribute(PARENTLOADER);
             if (loader instanceof ClassLoader) {
                 return (ClassLoader) loader;
             }
@@ -270,9 +276,9 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
                 }
 
                 return clazz;
-            } catch (Exception var6) {
-                var6.printStackTrace();
-                throw new ScriptException(var6);
+            } catch (Exception e) {
+                e.printStackTrace();
+                throw new ScriptException(e);
             }
         }
     }
@@ -294,7 +300,9 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
     }
 
     private static class JavaCompiledScript extends CompiledScript implements Serializable {
-        private static final long serialVersionUID = 1L;
+
+        private static final long serialVersionUID = -1187041062323875051L;
+
         private final transient JavaScriptingEngine _engine;
         private transient Class<?> _class;
         private final Map<String, byte[]> _classBytes;
@@ -319,5 +327,7 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
 
             return JavaScriptingEngine.evalClass(this._class, ctx);
         }
+
     }
+
 }

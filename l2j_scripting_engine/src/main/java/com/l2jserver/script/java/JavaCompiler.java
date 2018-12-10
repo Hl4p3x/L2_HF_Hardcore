@@ -26,10 +26,10 @@ public class JavaCompiler {
 
         MemoryJavaFileManager memoryJavaFileManager = new MemoryJavaFileManager();
 
-        List<JavaFileObject> compUnits = new ArrayList<>(1);
+        List<JavaFileObject> compUnits = new ArrayList<>();
         compUnits.add(MemoryJavaFileManager.makeStringSource(fileName, source));
-        List<String> options = new ArrayList<>();
 
+        List<String> options = new ArrayList<>();
         if (sourcePath != null) {
             options.add("-sourcepath");
             options.add(sourcePath);
@@ -44,13 +44,13 @@ public class JavaCompiler {
         if (task.call()) {
             return memoryJavaFileManager.getClassBytes();
         } else {
-            PrintWriter perr = new PrintWriter(err);
+            PrintWriter errorWriter = new PrintWriter(err);
 
             for (Diagnostic<? extends JavaFileObject> diagnostic1 : diagnostics.getDiagnostics()) {
-                perr.println(diagnostic1.getMessage(Locale.getDefault()));
+                errorWriter.println(diagnostic1.getMessage(Locale.getDefault()));
             }
 
-            perr.flush();
+            errorWriter.flush();
             return null;
         }
     }

@@ -2,16 +2,16 @@ package com.l2jserver.script.java;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineFactory;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class JavaScriptingEngineFactory implements ScriptEngineFactory {
 
     private static long nextClassNum = 0L;
-    private static List<String> names = new ArrayList<>(1);
-    private static List<String> extensions;
-    private static List<String> mimeTypes;
+
+    private static List<String> names = List.of("java");
+    private static List<String> extensions = names;
+    private static List<String> mimeTypes = Collections.emptyList();
 
     public JavaScriptingEngineFactory() {
     }
@@ -106,14 +106,11 @@ public class JavaScriptingEngineFactory implements ScriptEngineFactory {
     public String getProgram(String... statements) {
         StringBuilder buf = new StringBuilder();
         buf.append("class ");
-        buf.append(this.getClassName());
+        buf.append(getClassName());
         buf.append(" {\n");
         buf.append("    public static void main(String[] args) {\n");
         if (statements.length != 0) {
-            int var4 = statements.length;
-
-            for (int var5 = 0; var5 < var4; ++var5) {
-                String statement = statements[var5];
+            for (String statement : statements) {
                 buf.append("        ");
                 buf.append(statement);
                 buf.append(";\n");
@@ -137,14 +134,6 @@ public class JavaScriptingEngineFactory implements ScriptEngineFactory {
 
     private static synchronized long getNextClassNumber() {
         return nextClassNum++;
-    }
-
-    static {
-        names.add("java");
-        names = Collections.unmodifiableList(names);
-        extensions = names;
-        mimeTypes = new ArrayList<>();
-        mimeTypes = Collections.unmodifiableList(mimeTypes);
     }
 
 }
