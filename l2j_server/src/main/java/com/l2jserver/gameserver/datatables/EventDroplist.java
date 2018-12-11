@@ -18,12 +18,12 @@
  */
 package com.l2jserver.gameserver.datatables;
 
+import com.l2jserver.gameserver.model.script.DateRange;
+import com.l2jserver.gameserver.model.script.EventDrop;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import com.l2jserver.gameserver.script.DateRange;
-import com.l2jserver.gameserver.script.EventDrop;
 
 /**
  * This class manage drop of Special Events created by GM for a defined period.<br>

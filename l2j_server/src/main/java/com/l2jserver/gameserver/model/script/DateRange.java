@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.script;
+package com.l2jserver.gameserver.model.script;
 
 import java.text.DateFormat;
 import java.text.ParseException;

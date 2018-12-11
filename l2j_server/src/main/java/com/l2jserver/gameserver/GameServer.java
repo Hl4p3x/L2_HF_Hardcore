@@ -42,7 +42,6 @@ import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.L2GamePacketHandler;
 import com.l2jserver.gameserver.pathfinding.PathFinding;
-import com.l2jserver.gameserver.script.faenor.FaenorScriptEngine;
 import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jserver.gameserver.taskmanager.KnownListUpdateTaskManager;
 import com.l2jserver.gameserver.taskmanager.TaskManager;
@@ -262,10 +261,7 @@ public final class GameServer
 		SevenSigns.getInstance().spawnSevenSignsNPC();
 		SevenSignsFestival.getInstance();
 		AutoSpawnHandler.getInstance();
-		
-		FaenorScriptEngine.getInstance();
-		// Init of a cursed weapon manager
-		
+
 		LOG.info("AutoSpawnHandler: Loaded {} handlers in total.", AutoSpawnHandler.getInstance().size());
 		
 		if (Config.L2JMOD_ALLOW_WEDDING)
