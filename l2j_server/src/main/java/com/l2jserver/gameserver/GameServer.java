@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver;
 
+import com.google.common.base.Stopwatch;
 import com.l2jserver.Config;
 import com.l2jserver.Server;
 import com.l2jserver.UPnPService;
@@ -75,12 +76,12 @@ public final class GameServer
 	private final DeadLockDetector _deadDetectThread;
 	public static GameServer gameServer;
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
-	
-	public GameServer() throws Exception
-	{
+
+	public GameServer() throws Exception {
 		long serverLoadStart = System.currentTimeMillis();
-		
-		LOG.info("{}: Used memory: {}MB.", getClass().getSimpleName(), getUsedMemoryMB());
+
+		long usedMemoryStart = getUsedMemoryMB();
+		LOG.info("{}: Used memory: {} MB.", getClass().getSimpleName(), usedMemoryStart);
 		
 		if (!IdFactory.getInstance().isInitialized())
 		{
@@ -94,155 +95,160 @@ public final class GameServer
 		new File("log/game").mkdirs();
 		
 		// load script engines
-		printSection("Engines");
-		L2ScriptEngineManager.getInstance();
-		
-		printSection("World");
-		// start game time control early
-		GameTimeController.init();
-		InstanceManager.getInstance();
-		L2World.getInstance();
-		MapRegionManager.getInstance();
-		AnnouncementsTable.getInstance();
-		GlobalVariablesManager.getInstance();
-		
-		printSection("Data");
-		CategoryData.getInstance();
-		SecondaryAuthData.getInstance();
-		
-		printSection("Effects");
-		EffectHandler.getInstance().executeScript();
-		printSection("Enchant Skill Groups");
-		EnchantSkillGroupsData.getInstance();
-		printSection("Skill Trees");
-		SkillTreesData.getInstance();
-		printSection("Skills");
-		SkillData.getInstance();
-		SummonSkillsTable.getInstance();
-		
-		printSection("Items");
-		ItemTable.getInstance();
-		EnchantItemGroupsData.getInstance();
-		EnchantItemData.getInstance();
-		EnchantItemOptionsData.getInstance();
-		OptionData.getInstance();
-		EnchantItemHPBonusData.getInstance();
-		MerchantPriceConfigTable.getInstance().loadInstances();
-		BuyListData.getInstance();
-		MultisellData.getInstance();
-		RecipeData.getInstance();
-		ArmorSetsData.getInstance();
-		FishData.getInstance();
-		FishingMonstersData.getInstance();
-		FishingRodsData.getInstance();
-		HennaData.getInstance();
-		
-		printSection("Characters");
-		ClassListData.getInstance();
-		InitialEquipmentData.getInstance();
-		InitialShortcutData.getInstance();
-		ExperienceData.getInstance();
-		PlayerXpPercentLostData.getInstance();
-		KarmaData.getInstance();
-		HitConditionBonusData.getInstance();
-		PlayerTemplateData.getInstance();
-		CharNameTable.getInstance();
-		AdminData.getInstance();
-		RaidBossPointsManager.getInstance();
-		PetDataTable.getInstance();
-		CharSummonTable.getInstance().init();
-		
-		printSection("Clans");
-		ClanTable.getInstance();
-		CHSiegeManager.getInstance();
-		ClanHallManager.getInstance();
-		AuctionManager.getInstance();
-		
-		printSection("Geodata");
-		GeoData.getInstance();
+		timeIt("Engines", () -> L2ScriptEngineManager.getInstance());
+
+		timeIt("World", () -> {
+			// start game time control early
+			GameTimeController.init();
+			InstanceManager.getInstance();
+			L2World.getInstance();
+			MapRegionManager.getInstance();
+			AnnouncementsTable.getInstance();
+			GlobalVariablesManager.getInstance();
+		});
+
+		timeIt("Data", () -> {
+			CategoryData.getInstance();
+			SecondaryAuthData.getInstance();
+		});
+
+		timeIt("Effects", () -> EffectHandler.getInstance().executeScript());
+		timeIt("Enchant Skill Groups", () -> EnchantSkillGroupsData.getInstance());
+		timeIt("Skill Trees", () -> SkillTreesData.getInstance());
+		timeIt("Skills", () -> {
+			SkillData.getInstance();
+			SummonSkillsTable.getInstance();
+		});
+
+		timeIt("Items", () -> {
+			ItemTable.getInstance();
+			EnchantItemGroupsData.getInstance();
+			EnchantItemData.getInstance();
+			EnchantItemOptionsData.getInstance();
+			OptionData.getInstance();
+			EnchantItemHPBonusData.getInstance();
+			MerchantPriceConfigTable.getInstance().loadInstances();
+			BuyListData.getInstance();
+			MultisellData.getInstance();
+			RecipeData.getInstance();
+			ArmorSetsData.getInstance();
+			FishData.getInstance();
+			FishingMonstersData.getInstance();
+			FishingRodsData.getInstance();
+			HennaData.getInstance();
+		});
+
+		timeIt("Characters", () -> {
+			ClassListData.getInstance();
+			InitialEquipmentData.getInstance();
+			InitialShortcutData.getInstance();
+			ExperienceData.getInstance();
+			PlayerXpPercentLostData.getInstance();
+			KarmaData.getInstance();
+			HitConditionBonusData.getInstance();
+			PlayerTemplateData.getInstance();
+			CharNameTable.getInstance();
+			AdminData.getInstance();
+			RaidBossPointsManager.getInstance();
+			PetDataTable.getInstance();
+			CharSummonTable.getInstance().init();
+		});
+
+		timeIt("Clans", () -> {
+			ClanTable.getInstance();
+			CHSiegeManager.getInstance();
+			ClanHallManager.getInstance();
+			AuctionManager.getInstance();
+		});
+
+		timeIt("Geodata", GeoData::getInstance);
 		
 		if (Config.PATHFINDING > 0)
 		{
 			PathFinding.getInstance();
 		}
-		
-		printSection("NPCs");
-		SkillLearnData.getInstance();
-		NpcData.getInstance();
-		WalkingManager.getInstance();
-		StaticObjectData.getInstance();
-		ZoneManager.getInstance();
-		DoorData.getInstance();
-		CastleManager.getInstance().loadInstances();
-		NpcBufferTable.getInstance();
-		GrandBossManager.getInstance().initZones();
-		EventDroplist.getInstance();
-		printSection("Auction Manager");
-		ItemAuctionManager.getInstance();
-		
-		printSection("Olympiad");
-		Olympiad.getInstance();
-		Hero.getInstance();
-		
-		printSection("Seven Signs");
-		SevenSigns.getInstance();
+
+		timeIt("NPCs", () -> {
+			SkillLearnData.getInstance();
+			NpcData.getInstance();
+			WalkingManager.getInstance();
+			StaticObjectData.getInstance();
+			ZoneManager.getInstance();
+			DoorData.getInstance();
+			CastleManager.getInstance().loadInstances();
+			NpcBufferTable.getInstance();
+			GrandBossManager.getInstance().initZones();
+			EventDroplist.getInstance();
+		});
+
+		timeIt("Auction Manager", ItemAuctionManager::getInstance);
+
+		timeIt("Olympiad", () -> {
+			Olympiad.getInstance();
+			Hero.getInstance();
+		});
+
+		timeIt("Seven Signs", SevenSigns::getInstance);
 		
 		// Call to load caches
-		printSection("Cache");
-		HtmCache.getInstance();
-		CrestTable.getInstance();
-		TeleportLocationTable.getInstance();
-		UIData.getInstance();
-		PartyMatchWaitingList.getInstance();
-		PartyMatchRoomList.getInstance();
-		PetitionManager.getInstance();
-		AugmentationData.getInstance();
-		CursedWeaponsManager.getInstance();
-		TransformData.getInstance();
-		BotReportTable.getInstance();
-		
-		printSection("Scripts");
-		QuestManager.getInstance();
-		BoatManager.getInstance();
-		AirShipManager.getInstance();
-		GraciaSeedsManager.getInstance();
-		
-		try
-		{
-			LOG.info("{}: Loading server scripts:", getClass().getSimpleName());
-			if (!Config.ALT_DEV_NO_HANDLERS || !Config.ALT_DEV_NO_QUESTS)
-			{
-				L2ScriptEngineManager.getInstance().executeScriptList(new File(Config.DATAPACK_ROOT, "data/scripts.cfg"));
+		timeIt("Cache", () -> {
+			HtmCache.getInstance();
+			CrestTable.getInstance();
+			TeleportLocationTable.getInstance();
+			UIData.getInstance();
+			PartyMatchWaitingList.getInstance();
+			PartyMatchRoomList.getInstance();
+			PetitionManager.getInstance();
+			AugmentationData.getInstance();
+			CursedWeaponsManager.getInstance();
+			TransformData.getInstance();
+			BotReportTable.getInstance();
+		});
+
+		timeIt("Scripts", () -> {
+			QuestManager.getInstance();
+			BoatManager.getInstance();
+			AirShipManager.getInstance();
+			GraciaSeedsManager.getInstance();
+
+			try {
+				LOG.info("{}: Loading server scripts:", getClass().getSimpleName());
+				if (!Config.ALT_DEV_NO_HANDLERS || !Config.ALT_DEV_NO_QUESTS) {
+					L2ScriptEngineManager.getInstance().executeScriptList(new File(Config.DATAPACK_ROOT, "data/scripts.cfg"));
+				}
+			} catch (IOException ioe) {
+				LOG.error("{}: Failed loading scripts.cfg, scripts are not going to be loaded!", getClass().getSimpleName());
 			}
-		}
-		catch (IOException ioe)
-		{
-			LOG.error("{}: Failed loading scripts.cfg, scripts are not going to be loaded!", getClass().getSimpleName());
-		}
-		
-		SpawnTable.getInstance().load();
-		DayNightSpawnManager.getInstance().trim().notifyChangeMode();
-		FourSepulchersManager.getInstance().init();
-		DimensionalRiftManager.getInstance();
-		RaidBossSpawnManager.getInstance();
+		});
 
-		printSection("Dynamic Drop : " + Config.DYNAMIC_LOOT);
-		if (Config.DYNAMIC_LOOT) {
-			DynamicDropCalculator.getInstance();
-		}
+		timeIt("Spawns", () -> {
+			SpawnTable.getInstance().load();
+			DayNightSpawnManager.getInstance().trim().notifyChangeMode();
+			RaidBossSpawnManager.getInstance();
+		});
 
-		printSection("Siege");
-		SiegeManager.getInstance().getSieges();
-		CastleManager.getInstance().activateInstances();
-		FortManager.getInstance().loadInstances();
-		FortManager.getInstance().activateInstances();
-		FortSiegeManager.getInstance();
-		SiegeScheduleData.getInstance();
-		
-		MerchantPriceConfigTable.getInstance().updateReferences();
-		TerritoryWarManager.getInstance();
-		CastleManorManager.getInstance();
-		MercTicketManager.getInstance();
+		timeIt("Four Sepulchers", () -> FourSepulchersManager.getInstance().init());
+		timeIt("Dimensional Rift", DimensionalRiftManager::getInstance);
+
+		timeIt("Dynamic Drop : " + Config.DYNAMIC_LOOT, () -> {
+			if (Config.DYNAMIC_LOOT) {
+				DynamicDropCalculator.getInstance();
+			}
+		});
+
+		timeIt("Siege", () -> {
+			SiegeManager.getInstance().getSieges();
+			CastleManager.getInstance().activateInstances();
+			FortManager.getInstance().loadInstances();
+			FortManager.getInstance().activateInstances();
+			FortSiegeManager.getInstance();
+			SiegeScheduleData.getInstance();
+
+			MerchantPriceConfigTable.getInstance().updateReferences();
+			TerritoryWarManager.getInstance();
+			CastleManorManager.getInstance();
+			MercTicketManager.getInstance();
+		});
 		
 		QuestManager.getInstance().report();
 		
@@ -257,9 +263,11 @@ public final class GameServer
 		}
 		
 		MonsterRace.getInstance();
-		
-		SevenSigns.getInstance().spawnSevenSignsNPC();
-		SevenSignsFestival.getInstance();
+
+		timeIt("Seven Signs", () -> {
+			SevenSigns.getInstance().spawnSevenSignsNPC();
+			SevenSignsFestival.getInstance();
+		});
 		AutoSpawnHandler.getInstance();
 
 		LOG.info("AutoSpawnHandler: Loaded {} handlers in total.", AutoSpawnHandler.getInstance().size());
@@ -345,9 +353,11 @@ public final class GameServer
 			LOG.error("{}: Failed to open server socket!", getClass().getSimpleName(), e);
 			System.exit(1);
 		}
-		
+
+		long loadedMemory = getUsedMemoryMB();
+
 		LOG.info("{}: Maximum numbers of connected players: {}", getClass().getSimpleName(), Config.MAXIMUM_ONLINE_USERS);
-		LOG.info("{}: Server loaded in {} seconds.", getClass().getSimpleName(), TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis() - serverLoadStart));
+		LOG.info("{}: Server loaded in {} seconds and loading memory footprint is {}.", getClass().getSimpleName(), TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis() - serverLoadStart), loadedMemory - usedMemoryStart);
 		
 		printSection("UPnP");
 		UPnPService.getInstance();
@@ -405,14 +415,21 @@ public final class GameServer
 	{
 		return _deadDetectThread;
 	}
-	
+
+	public static void timeIt(String name, Runnable runnable) {
+		printSection(name);
+		Stopwatch stopwatch = Stopwatch.createStarted();
+		runnable.run();
+		LOG.info("Loading {} took {} seconds", name, stopwatch.elapsed(TimeUnit.MILLISECONDS) / 1000D);
+	}
+
 	public static void printSection(String s)
 	{
-		s = "=[ " + s + " ]";
-		while (s.length() < 61)
-		{
-			s = "-" + s;
+		StringBuilder sBuilder = new StringBuilder("=[ " + s + " ]");
+		while (sBuilder.length() < 61) {
+			sBuilder.insert(0, "-");
 		}
+		s = sBuilder.toString();
 		LOG.info(s);
 	}
 }

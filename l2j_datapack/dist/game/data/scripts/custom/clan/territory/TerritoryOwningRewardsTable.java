@@ -25,10 +25,10 @@ public class TerritoryOwningRewardsTable {
             allTerritoryOwningRewards.addAll(territoryOwningRewards.getCastles());
             allTerritoryOwningRewards.addAll(territoryOwningRewards.getFortresses());
 
-            LOG.info("[{}] {} reward entries loaded!", TerritoryOwningRewardsManager.LOG_TAG, allTerritoryOwningRewards.size());
+            LOG.info("{} {} reward entries loaded!", TerritoryOwningRewardsManager.LOG_TAG, allTerritoryOwningRewards.size());
         } catch (IOException e) {
             String message = "Could not read rewards file from '" + REWARDS_FILE_PATH + "', please check that file exists and is a valid YML";
-            LOG.error("[{}]" + message + " error: {}", TerritoryOwningRewardsManager.LOG_TAG, e.getMessage());
+            LOG.error("{}" + message + " error: {}", TerritoryOwningRewardsManager.LOG_TAG, e.getMessage());
             throw new IllegalStateException(message);
         }
     }
