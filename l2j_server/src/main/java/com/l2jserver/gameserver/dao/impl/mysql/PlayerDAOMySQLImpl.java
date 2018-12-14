@@ -29,13 +29,11 @@ import com.l2jserver.gameserver.model.actor.appearance.PcAppearance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.SubClass;
 import com.l2jserver.gameserver.model.entity.Hero;
+import com.l2jserver.localization.Language;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Timestamp;
+import java.sql.*;
 
 /**
  * Player DAO MySQL implementation.
@@ -47,10 +45,24 @@ public class PlayerDAOMySQLImpl implements PlayerDAO
 	
 	private static final String INSERT = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,fame,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,isin7sdungeon,clan_privs,wantspeace,base_class,newbie,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	private static final String SELECT = "SELECT * FROM characters WHERE charId=?";
+	private static final String SELECT_LANG = "SELECT language FROM characters WHERE charId=?";
 	private static final String UPDATE = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=? WHERE charId=?";
 	private static final String UPDATE_ONLINE = "UPDATE characters SET online=?, lastAccess=? WHERE charId=?";
 	private static final String SELECT_CHARACTERS = "SELECT charId, char_name FROM characters WHERE account_name=? AND charId<>?";
-	
+
+	public Language loadLanguageByCharacterId(int objectId) {
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			 PreparedStatement ps = con.prepareStatement(SELECT_LANG)) {
+			ps.setInt(1, objectId);
+			try (ResultSet rset = ps.executeQuery()) {
+				return Language.of(rset.getString("language"));
+			}
+		} catch (SQLException e) {
+			LOG.error("Could not retrieve language for character {}, falling back to default", objectId);
+			return Language.english();
+		}
+	}
+
 	@Override
 	public L2PcInstance load(int objectId)
 	{

@@ -3,13 +3,15 @@ package custom.clan.territory;
 import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
+import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
 import com.l2jserver.gameserver.instancemanager.MailManager;
-import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.model.entity.Message;
 import com.l2jserver.gameserver.model.entity.interfaces.Residence;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
+import com.l2jserver.localization.Language;
 import com.l2jserver.localization.Strings;
 import com.l2jserver.localization.StringsTable;
 import org.slf4j.Logger;
@@ -21,7 +23,6 @@ import java.util.Optional;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class TerritoryOwningRewardsManager extends AbstractNpcAI {
 
@@ -39,7 +40,6 @@ public class TerritoryOwningRewardsManager extends AbstractNpcAI {
         super(TerritoryOwningRewardsManager.class.getSimpleName(), "custom/clan/territory");
         territoryOwningRewardsTable.load();
         scheduleRewardTask();
-        LOG.info("{} Loaded!", LOG_TAG);
     }
 
     public void scheduleRewardTask() {
@@ -67,7 +67,7 @@ public class TerritoryOwningRewardsManager extends AbstractNpcAI {
     }
 
     public void distributeRewards() {
-        LOG.info("{} Reward distribution started!", LOG_TAG);
+        LOG.info("{} Reward distribution!", LOG_TAG);
 
         List<Residence> castles = onlyOwnedByClan(CastleManager.getInstance().getCastles());
         List<Residence> forts = onlyOwnedByClan(FortManager.getInstance().getForts());
@@ -78,7 +78,12 @@ public class TerritoryOwningRewardsManager extends AbstractNpcAI {
 
     public long calculateMultiplier(Residence residence, long rewardMultiplierTimeDistance) {
         Instant lastOwnershipChangeTime = Instant.ofEpochMilli(residence.getLastOwnershipChangeTime());
-        return Duration.between(lastOwnershipChangeTime, Instant.now()).toMillis() / rewardMultiplierTimeDistance;
+        long multiplier = Math.max(Duration.between(lastOwnershipChangeTime, Instant.now()).toMillis() / rewardMultiplierTimeDistance, 3);
+        if (multiplier < 1) {
+            return 1L;
+        } else {
+            return multiplier;
+        }
     }
 
     public void distributeRewardsByResidences(List<Residence> residences, long rewardMultiplierTimeDistance) {
@@ -89,19 +94,23 @@ public class TerritoryOwningRewardsManager extends AbstractNpcAI {
                 continue;
             }
 
+            List<ItemHolder> rewards = territoryOwningRewardOptional.get().getRewards();
+
             long countMultiplier = calculateMultiplier(residence, rewardMultiplierTimeDistance);
-            Stream<L2ItemInstance> newItems = territoryOwningRewardOptional.get().getRewards().stream().map(
+            rewards.forEach(
                     reward -> residence.getOwnerClan().getWarehouse().addItem("Territory Owning Reward", reward.getId(), reward.getCount() * countMultiplier, null, null)
             );
 
-            String rewardsList = newItems.map(itemInstance -> itemInstance.getName() + "[" + itemInstance.getCount() + "]").collect(Collectors.joining(", \n"));
+            String rewardsList = rewards.stream().map(itemInstance -> ItemTable.getInstance().getTemplate(itemInstance.getId()).getName() + " [" + itemInstance.getCount() + "]").collect(Collectors.joining(", \n"));
 
-            L2ClanMember l2ClanMember = residence.getOwnerClan().getLeader();
-            StringsTable stringsTable = Strings.lang(l2ClanMember.getPlayerInstance().getLang());
+            int leaderId = residence.getOwnerClan().getLeader().getObjectId();
+            Language leaderLanguage = DAOFactory.getInstance().getPlayerDAO().loadLanguageByCharacterId(leaderId);
 
-            Message rewardMessage = new Message(l2ClanMember.getObjectId(),
+            StringsTable stringsTable = Strings.lang(leaderLanguage);
+
+            Message rewardMessage = new Message(leaderId,
                     stringsTable.get("territory_owning_reward") + '!',
-                    stringsTable.get("territory_owning_reward_message") + ":\b" + rewardsList,
+                    stringsTable.get("territory_owning_reward_message") + ":\n" + rewardsList,
                     Message.SendBySystem.NONE);
             MailManager.getInstance().sendMessage(rewardMessage);
         }

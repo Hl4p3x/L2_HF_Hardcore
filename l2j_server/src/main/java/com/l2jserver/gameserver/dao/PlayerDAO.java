@@ -19,6 +19,7 @@
 package com.l2jserver.gameserver.dao;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.localization.Language;
 
 /**
  * Player DAO interface.
@@ -53,4 +54,7 @@ public interface PlayerDAO
 	 * @param player the player
 	 */
 	void loadCharacters(L2PcInstance player);
+
+	Language loadLanguageByCharacterId(int objectId);
+
 }
