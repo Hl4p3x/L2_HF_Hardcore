@@ -110,7 +110,7 @@ public class TerritoryOwningRewardsManager extends AbstractNpcAI {
 
             Message rewardMessage = new Message(leaderId,
                     stringsTable.get("territory_owning_reward") + '!',
-                    stringsTable.get("territory_owning_reward_message") + ":\n" + rewardsList,
+                    stringsTable.get("territory_owning_reward_message") + ":\n\n" + rewardsList,
                     Message.SendBySystem.NONE);
             MailManager.getInstance().sendMessage(rewardMessage);
         }
