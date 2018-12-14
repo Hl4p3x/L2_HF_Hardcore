@@ -101,6 +101,7 @@ import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.gameserver.util.FloodProtectors;
 import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.localization.Language;
 import com.l2jserver.util.EnumIntBitmask;
 import com.l2jserver.util.Rnd;
 import org.slf4j.Logger;
@@ -199,7 +200,7 @@ public final class L2PcInstance extends L2Playable {
     private L2GameClient _client;
     private long _deleteTimer;
     private Calendar _createDate = Calendar.getInstance();
-    private String _lang = null;
+    private Language language = Language.english();
     private String _htmlPrefix = null;
     private volatile boolean _isOnline = false;
     private long _onlineTime;
@@ -10123,26 +10124,22 @@ public final class L2PcInstance extends L2Playable {
         return _htmlPrefix;
     }
 
-    public String getLang() {
-        return _lang;
+    public Language getLang() {
+        return language;
     }
 
-    public boolean setLang(String lang) {
+    public boolean setLang(String languageString) {
         boolean result = false;
         if (Config.L2JMOD_MULTILANG_ENABLE) {
-            if (Config.L2JMOD_MULTILANG_ALLOWED.contains(lang)) {
-                _lang = lang;
+            if (Config.L2JMOD_MULTILANG_ALLOWED.contains(language)) {
+                language = Language.of(languageString);
                 result = true;
             } else {
-                _lang = Config.L2JMOD_MULTILANG_DEFAULT;
+                language = Language.of(Config.L2JMOD_MULTILANG_DEFAULT);
             }
 
-            _htmlPrefix = "data/lang/" + _lang + "/";
-        } else {
-            _lang = null;
-            _htmlPrefix = null;
+            _htmlPrefix = "data/lang/" + language.getCode() + "/";
         }
-
         return result;
     }
 

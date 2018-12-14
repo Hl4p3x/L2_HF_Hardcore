@@ -5,7 +5,13 @@ import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
+import com.l2jserver.gameserver.instancemanager.MailManager;
+import com.l2jserver.gameserver.model.L2ClanMember;
+import com.l2jserver.gameserver.model.entity.Message;
 import com.l2jserver.gameserver.model.entity.interfaces.Residence;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.localization.Strings;
+import com.l2jserver.localization.StringsTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,6 +21,7 @@ import java.util.Optional;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TerritoryOwningRewardsManager extends AbstractNpcAI {
 
@@ -83,9 +90,20 @@ public class TerritoryOwningRewardsManager extends AbstractNpcAI {
             }
 
             long countMultiplier = calculateMultiplier(residence, rewardMultiplierTimeDistance);
-            territoryOwningRewardOptional.get().getRewards().forEach(
+            Stream<L2ItemInstance> newItems = territoryOwningRewardOptional.get().getRewards().stream().map(
                     reward -> residence.getOwnerClan().getWarehouse().addItem("Territory Owning Reward", reward.getId(), reward.getCount() * countMultiplier, null, null)
             );
+
+            String rewardsList = newItems.map(itemInstance -> itemInstance.getName() + "[" + itemInstance.getCount() + "]").collect(Collectors.joining(", \n"));
+
+            L2ClanMember l2ClanMember = residence.getOwnerClan().getLeader();
+            StringsTable stringsTable = Strings.lang(l2ClanMember.getPlayerInstance().getLang());
+
+            Message rewardMessage = new Message(l2ClanMember.getObjectId(),
+                    stringsTable.get("territory_owning_reward") + '!',
+                    stringsTable.get("territory_owning_reward_message") + ":\b" + rewardsList,
+                    Message.SendBySystem.NONE);
+            MailManager.getInstance().sendMessage(rewardMessage);
         }
     }
 

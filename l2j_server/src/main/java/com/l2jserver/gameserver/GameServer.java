@@ -46,6 +46,7 @@ import com.l2jserver.gameserver.pathfinding.PathFinding;
 import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jserver.gameserver.taskmanager.KnownListUpdateTaskManager;
 import com.l2jserver.gameserver.taskmanager.TaskManager;
+import com.l2jserver.localization.MultilangTables;
 import com.l2jserver.mmocore.SelectorConfig;
 import com.l2jserver.mmocore.SelectorThread;
 import com.l2jserver.status.Status;
@@ -204,6 +205,8 @@ public final class GameServer
 			TransformData.getInstance();
 			BotReportTable.getInstance();
 		});
+
+		timeIt("Multilang", () -> MultilangTables.getInstance().load());
 
 		timeIt("Scripts", () -> {
 			QuestManager.getInstance();

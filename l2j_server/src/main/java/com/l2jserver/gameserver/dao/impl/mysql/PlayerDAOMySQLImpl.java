@@ -18,14 +18,6 @@
  */
 package com.l2jserver.gameserver.dao.impl.mysql;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Timestamp;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.dao.PlayerDAO;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
@@ -37,6 +29,13 @@ import com.l2jserver.gameserver.model.actor.appearance.PcAppearance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.SubClass;
 import com.l2jserver.gameserver.model.entity.Hero;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Timestamp;
 
 /**
  * Player DAO MySQL implementation.
@@ -345,7 +344,7 @@ public class PlayerDAOMySQLImpl implements PlayerDAO
 			ps.setLong(46, player.getDeathPenaltyBuffLevel());
 			ps.setInt(47, player.getBookMarkSlot());
 			ps.setInt(48, player.getVitalityPoints());
-			ps.setString(49, player.getLang());
+			ps.setString(49, player.getLang().getCode());
 			ps.setInt(50, player.getObjectId());
 			
 			ps.execute();
