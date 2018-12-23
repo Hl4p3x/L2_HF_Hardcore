@@ -24,6 +24,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.serverpackets.GetOnVehicle;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class ...
@@ -31,6 +33,9 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
  */
 public class ValidatePosition extends L2GameClientPacket
 {
+
+	private static final Logger LOG = LoggerFactory.getLogger(MoveBackwardToLocation.class);
+
 	private static final String _C__59_VALIDATEPOSITION = "[C] 59 ValidatePosition";
 	
 	private int _x;
@@ -61,12 +66,9 @@ public class ValidatePosition extends L2GameClientPacket
 		final int realX = activeChar.getX();
 		final int realY = activeChar.getY();
 		int realZ = activeChar.getZ();
-		
-		if (Config.DEVELOPER)
-		{
-			_log.fine("client pos: " + _x + " " + _y + " " + _z + " head " + _heading);
-			_log.fine("server pos: " + realX + " " + realY + " " + realZ + " head " + activeChar.getHeading());
-		}
+
+		LOG.debug("Validate position Client: {} {} {} heading {} ", _x, _y, _z, _heading);
+		LOG.debug("Validate position Server: {} {} {} heading {}", realX, realY, realZ, activeChar.getHeading());
 		
 		if ((_x == 0) && (_y == 0))
 		{
@@ -181,18 +183,12 @@ public class ValidatePosition extends L2GameClientPacket
 			if ((diffSq > 250000) || (Math.abs(dz) > 200))
 			{
 				// if ((_z - activeChar.getClientZ()) < 200 && Math.abs(activeChar.getLastServerPosition().getZ()-realZ) > 70)
-				
-				if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - activeChar.getClientZ()) < 800))
-				{
+
+				if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - activeChar.getClientZ()) < 800)) {
 					activeChar.setXYZ(realX, realY, _z);
 					realZ = _z;
-				}
-				else
-				{
-					if (Config.DEVELOPER)
-					{
-						_log.info(activeChar.getName() + ": Synchronizing position Server --> Client");
-					}
+				} else {
+					LOG.debug("{} : Synchronizing position Server --> Client", activeChar.getName());
 					
 					activeChar.sendPacket(new ValidateLocation(activeChar));
 				}

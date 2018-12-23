@@ -162,12 +162,13 @@ public final class GameServer
 			AuctionManager.getInstance();
 		});
 
-		timeIt("Geodata", GeoData::getInstance);
-		
-		if (Config.PATHFINDING > 0)
-		{
-			PathFinding.getInstance();
-		}
+		timeIt("Geodata", () -> {
+			GeoData.getInstance();
+
+			if (Config.PATHFINDING > 0) {
+				PathFinding.getInstance();
+			}
+		});
 
 		timeIt("NPCs", () -> {
 			SkillLearnData.getInstance();
@@ -211,8 +212,8 @@ public final class GameServer
 		timeIt("Scripts", () -> {
 			QuestManager.getInstance();
 			BoatManager.getInstance();
-			AirShipManager.getInstance();
-			GraciaSeedsManager.getInstance();
+			// AirShipManager.getInstance();
+			// GraciaSeedsManager.getInstance();
 
 			try {
 				LOG.info("{}: Loading server scripts:", getClass().getSimpleName());

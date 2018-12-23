@@ -18,8 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import java.nio.BufferUnderflowException;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.Location;
@@ -28,6 +26,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.StopMove;
 import com.l2jserver.gameserver.util.Util;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.nio.BufferUnderflowException;
 
 /**
  * This class ...
@@ -35,6 +37,8 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class MoveBackwardToLocation extends L2GameClientPacket
 {
+	private static final Logger LOG = LoggerFactory.getLogger(MoveBackwardToLocation.class);
+
 	private static final String _C__0F_MOVEBACKWARDTOLOC = "[C] 0F MoveBackwardToLoc";
 	
 	// cdddddd
@@ -86,12 +90,14 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-		
+
 		if ((_targetX == _originX) && (_targetY == _originY) && (_targetZ == _originZ))
 		{
 			activeChar.sendPacket(new StopMove(activeChar));
 			return;
 		}
+
+		LOG.debug("Player {} requested movement to {} {} {} from {} {} {}", _targetX, _targetY, _targetZ, _originX, _originY, _originZ);
 		
 		// Correcting targetZ from floor level to head level (?)
 		// Client is giving floor level as targetZ but that floor level doesn't

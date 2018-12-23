@@ -4191,11 +4191,15 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			return;
 		}
-		
+
 		// Get current position of the L2Character
 		final int curX = super.getX();
 		final int curY = super.getY();
 		final int curZ = super.getZ();
+
+		if (LOG.isDebugEnabled() && isPlayer()) {
+			LOG.debug("Player {} has requested movement to {} {} {}, current server location is {} {} {}", getName(), x, y, z, curX, curY, curZ);
+		}
 		
 		// Calculate distance (dx,dy) between current position and destination
 		// TODO: improve Z axis move/follow support when dx,dy are small compared to dz
