@@ -52,6 +52,10 @@ public class OnPlayerLevelChanged implements IBaseEvent
 	{
 		return _newLevel;
 	}
+
+    public boolean hasLevelIncreased() {
+        return _oldLevel < _newLevel;
+    }
 	
 	@Override
 	public EventType getType()
