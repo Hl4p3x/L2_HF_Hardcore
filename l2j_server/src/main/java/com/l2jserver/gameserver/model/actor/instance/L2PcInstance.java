@@ -9359,6 +9359,10 @@ public final class L2PcInstance extends L2Playable {
         getStat().setVitalityPoints(points, quiet);
     }
 
+    public void increaseVitalityLevel() {
+        getStat().increaseVitalityLevel();
+    }
+
     public void updateVitalityPoints(float points, boolean useRates, boolean quiet) {
         getStat().updateVitalityPoints(points, useRates, quiet);
     }

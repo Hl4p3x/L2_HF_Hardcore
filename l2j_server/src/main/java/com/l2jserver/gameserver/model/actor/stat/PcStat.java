@@ -37,15 +37,9 @@ import com.l2jserver.gameserver.model.stats.MoveType;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExVitalityPointInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExVoteSystemInfo;
-import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Util;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class PcStat extends PlayableStat
@@ -676,7 +670,7 @@ public class PcStat extends PlayableStat
 		
 		return val;
 	}
-	
+
 	private void updateVitalityLevel(boolean quiet)
 	{
 		final byte level;
@@ -748,7 +742,29 @@ public class PcStat extends PlayableStat
 		updateVitalityLevel(quiet);
 		getActiveChar().sendPacket(new ExVitalityPointInfo(getVitalityPoints()));
 	}
-	
+
+	public synchronized void increaseVitalityLevel() {
+		byte vitalityLevel = getVitalityLevel();
+		switch (vitalityLevel) {
+			case 4:
+				setVitalityPoints(MAX_VITALITY_POINTS, true);
+				break;
+			case 3:
+				setVitalityPoints(MAX_VITALITY_POINTS, true);
+				break;
+			case 2:
+				setVitalityPoints(VITALITY_LEVELS[3] - 1, true);
+				break;
+			case 1:
+				setVitalityPoints(VITALITY_LEVELS[2] - 1, true);
+				break;
+			case 0:
+				setVitalityPoints(VITALITY_LEVELS[1] - 1, true);
+				break;
+		}
+		updateVitalityLevel(true);
+	}
+
 	public synchronized void updateVitalityPoints(float points, boolean useRates, boolean quiet)
 	{
 		if ((points == 0) || !Config.ENABLE_VITALITY)
