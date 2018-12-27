@@ -326,11 +326,11 @@ public final class Formulas {
 
             // Calculate Movement bonus
             if (player.isSitting()) {
-                hpRegenMultiplier *= 2.2; // Sitting
+                hpRegenMultiplier *= Config.HP_REGEN_SITTING_MULTIPLIER; // Sitting
             } else if (!player.isMoving()) {
-                hpRegenMultiplier *= 1.1; // Staying
+                hpRegenMultiplier *= 1.6; // Staying
             } else if (player.isRunning()) {
-                hpRegenMultiplier *= 0.8; // Running
+                hpRegenMultiplier *= 1; // Running
             }
 
             // Add CON bonus
@@ -414,11 +414,11 @@ public final class Formulas {
 
             // Calculate Movement bonus
             if (player.isSitting()) {
-                mpRegenMultiplier *= 2.2; // Sitting
+                mpRegenMultiplier *= Config.MP_REGEN_SITTING_MULTIPLIER; // Sitting
             } else if (!player.isMoving()) {
-                mpRegenMultiplier *= 1.1; // Staying
+                mpRegenMultiplier *= 1.6; // Staying
             } else if (player.isRunning()) {
-                mpRegenMultiplier *= 0.8; // Running
+                mpRegenMultiplier *= 1; // Running
             }
 
             // Add MEN bonus

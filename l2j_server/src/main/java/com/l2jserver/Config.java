@@ -1112,6 +1112,8 @@ public final class Config
 	public static boolean ALT_ALLOW_AUGMENT_PVP_ITEMS;
 	public static double HP_REGEN_MULTIPLIER;
 	public static double MP_REGEN_MULTIPLIER;
+	public static double HP_REGEN_SITTING_MULTIPLIER;
+	public static double MP_REGEN_SITTING_MULTIPLIER;
 	public static double CP_REGEN_MULTIPLIER;
 	public static boolean IS_TELNET_ENABLED;
 	public static boolean SHOW_LICENCE;
@@ -1517,7 +1519,9 @@ public final class Config
 			RESPAWN_RESTORE_HP = character.getDouble("RespawnRestoreHP", 65) / 100;
 			RESPAWN_RESTORE_MP = character.getDouble("RespawnRestoreMP", 0) / 100;
 			HP_REGEN_MULTIPLIER = character.getDouble("HpRegenMultiplier", 100) / 100;
+			HP_REGEN_SITTING_MULTIPLIER = character.getDouble("HpRegenSittingMultiplier", 700) / 100;
 			MP_REGEN_MULTIPLIER = character.getDouble("MpRegenMultiplier", 100) / 100;
+			MP_REGEN_SITTING_MULTIPLIER = character.getDouble("MpRegenSittingMultiplier", 700) / 100;
 			CP_REGEN_MULTIPLIER = character.getDouble("CpRegenMultiplier", 100) / 100;
 			ENABLE_MODIFY_SKILL_DURATION = character.getBoolean("EnableModifySkillDuration", false);
 			
