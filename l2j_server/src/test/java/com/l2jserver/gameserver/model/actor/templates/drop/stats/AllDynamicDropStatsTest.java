@@ -19,7 +19,7 @@ class AllDynamicDropStatsTest {
     void testYamlMapping() throws Exception {
         ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
 
-        InputStream configStream = new FileInputStream(new File("./dist/game/config/DynamicDropRates.yml"));
+        InputStream configStream = new FileInputStream(new File("./dist/game/config/gameplay/DynamicDropRates.yml"));
         assertThat(configStream).isNotNull();
 
         AllDynamicDropData allDynamicDropData = yamlMapper.readValue(

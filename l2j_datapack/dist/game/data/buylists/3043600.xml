@@ -2,7 +2,12 @@
 	<npcs>
 		<npc>30436</npc> <!-- Sarien -->
 	</npcs>
-    <item id="726"/><!--Mana Drug-->
+    <item id="26064"/> <!-- Soulshot - S grade -->
+    <item id="26059"/> <!-- Spiritshot - S grade -->
+    <item id="26054"/> <!-- Blessed Spiritshot - S grade -->
+
+    <item id="726"/>
+    <! --Mana Drug-->
     <item id="1835"/> <!-- Soulshot: No Grade -->
 	<item id="2509"/> <!-- Spiritshot: No Grade -->
 	<item id="3947"/> <!-- Blessed Spiritshot: No Grade -->
