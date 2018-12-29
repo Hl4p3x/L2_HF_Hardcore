@@ -2,9 +2,9 @@
 	<npcs>
 		<npc>31386</npc> <!-- Violet -->
 	</npcs>
-    <item id="26064"/> <!-- Soulshot - S grade -->
-    <item id="26059"/> <!-- Spiritshot - S grade -->
-    <item id="26054"/> <!-- Blessed Spiritshot - S grade -->
+	<item id="1467"/> <!-- Soulshot - S grade -->
+	<item id="2514"/> <!-- Spiritshot - S grade -->
+	<item id="3952"/> <!-- Blessed Spiritshot - S grade -->
 
     <item id="726"/> <!--Mana Drug-->
     <item id="1835"/> <!-- Soulshot: No Grade -->
