@@ -7216,7 +7216,6 @@
 	<npc id="22692" level="82" type="L2Monster" name="Ragna Orc Warrior" title="Spirit Infested">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
-			<param name="BuffDelay" value="10"/>
 			<skill name="Skill01_ID" id="4032" level="9"/> <!-- NPC Strike -->
 			<skill name="Buff" id="4028" level="2"/> <!-- NPC Might -->
 		</parameters>
