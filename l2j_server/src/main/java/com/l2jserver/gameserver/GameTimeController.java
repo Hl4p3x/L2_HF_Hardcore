@@ -147,41 +147,29 @@ public final class GameTimeController extends Thread
 		boolean isNight = isNight();
 
 		Runnable runnable = () -> DayNightSpawnManager.getInstance().notifyChangeMode();
-		if (isNight)
-		{
+        if (isNight) {
 			ThreadPoolManager.getInstance().executeAi(runnable);
 		}
-		
-		while (true)
-		{
-			nextTickTime = ((System.currentTimeMillis() / MILLIS_IN_TICK) * MILLIS_IN_TICK) + 100;
-			
-			try
-			{
+
+        while (true) {
+            nextTickTime = System.currentTimeMillis() + MILLIS_IN_TICK;
+
+            try {
 				moveObjects();
-			}
-			catch (final Throwable e)
-			{
+            } catch (final Throwable e) {
 				LOG.warn("Unable to move objects!", e);
 			}
 			
 			sleepTime = nextTickTime - System.currentTimeMillis();
-			if (sleepTime > 0)
-			{
-				try
-				{
+            if (sleepTime > 0) {
+                try {
 					Thread.sleep(sleepTime);
-				}
-				catch (final InterruptedException e)
-				{
-					
+                } catch (final InterruptedException ignored) {
 				}
 			}
-			
-			if (isNight() != isNight)
-			{
-				isNight = !isNight;
 
+            if (isNight() != isNight) {
+				isNight = !isNight;
 				ThreadPoolManager.getInstance().executeAi(runnable);
 			}
 		}
@@ -191,4 +179,5 @@ public final class GameTimeController extends Thread
 	{
 		return _instance;
 	}
+
 }
