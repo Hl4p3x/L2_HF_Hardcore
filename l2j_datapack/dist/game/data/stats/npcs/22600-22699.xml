@@ -7217,7 +7217,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9"/> <!-- NPC Strike -->
-			<skill name="Buff" id="4028" level="2"/> <!-- NPC Might -->
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -7239,12 +7238,11 @@
 		</stats>
 		<status undying="false" canBeSown="true"/>
 		<skillList>
-			<skill id="4028" level="2"/> <!--NPC Might -->
 			<skill id="4032" level="9"/> <!--NPC Strike -->
 			<skill id="4116" level="9"/> <!--Resist M. Atk. -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
-			<skill id="4410" level="13"/> <!--Slightly Strong P. Atk. -->
+            <skill id="4410" level="14"/> <!--Slightly Strong P. Atk. -->
 			<skill id="4411" level="11"/> <!--Average M. Atk. -->
 			<skill id="4412" level="9"/> <!--Slightly Weak P. Def. -->
 			<skill id="4413" level="16"/> <!--Very Strong M. Def. -->
