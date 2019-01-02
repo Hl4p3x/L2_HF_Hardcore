@@ -45,8 +45,6 @@ dependencies {
     testCompile "org.mockito:mockito-core:2.+"
     testCompile('org.junit.jupiter:junit-jupiter-api:5.2.0')
 
-    testCompile group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.21'
-
     testImplementation('org.junit.jupiter:junit-jupiter-engine:5.2.0')
 }
 
