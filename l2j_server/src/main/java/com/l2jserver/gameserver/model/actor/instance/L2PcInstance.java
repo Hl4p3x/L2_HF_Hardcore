@@ -10135,7 +10135,7 @@ public final class L2PcInstance extends L2Playable {
     public boolean setLang(String languageString) {
         boolean result = false;
         if (Config.L2JMOD_MULTILANG_ENABLE) {
-            if (Config.L2JMOD_MULTILANG_ALLOWED.contains(language)) {
+            if (Config.L2JMOD_MULTILANG_ALLOWED.contains(language.getCode())) {
                 language = Language.of(languageString);
                 result = true;
             } else {
