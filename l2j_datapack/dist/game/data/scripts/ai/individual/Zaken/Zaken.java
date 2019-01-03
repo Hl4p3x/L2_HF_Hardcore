@@ -417,7 +417,10 @@ public final class Zaken extends AbstractNpcAI {
     }
 
     private int getRoomByCandle(L2Npc npc) {
-        final int candleId = npc.getVariables().getInt("candleId", 0);
+        final int candleId = npc.getVariables().getInt("candleId", -1);
+        if (candleId == -1) {
+            throw new IllegalStateException(npc + " had no candle id");
+        }
         List<ShipRoom> rooms = SHIP.findRoomsByCandleId(candleId);
         return rooms.get(getRandom(rooms.size() - 1)).getRoomNumber();
     }
