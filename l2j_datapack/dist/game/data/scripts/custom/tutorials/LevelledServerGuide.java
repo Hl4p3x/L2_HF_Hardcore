@@ -32,12 +32,11 @@ public class LevelledServerGuide extends Quest {
             new LevelledTutorial(this, 13, 38, "seven_signs_tutorial.html"),
             new LevelledTutorial(this, 14, 42, "soul_crystal_tutorial.html"),
             new LevelledTutorial(this, 15, 48, "augmentation_tutorial.html"),
-            new LevelledTutorial(this, 16, 52, "mammon_tutorial.html"),
             new LevelledTutorial(this, 17, 58, "third_profession_tutorial.html"),
             new LevelledTutorial(this, 18, 74, "attribute_tutorial.html"),
             new LevelledTutorial(this, 19, 76, "subclass_tutorial.html"),
             new LevelledTutorial(this, 20, 77, "dualcraft_tutorial.html"),
-            new LevelledTutorial(this, 21, 78, "nobless_tutorial.html"),
+            new LevelledTutorial(this, 21, 78, "noblesse_tutorial.html"),
             new LevelledTutorial(this, 22, 80, "siege_tutorial.html"),
             new LevelledTutorial(this, 23, 81, "olympiad_tutorial.html"),
             new LevelledTutorial(this, 24, 82, "epic_tutorial.html")
