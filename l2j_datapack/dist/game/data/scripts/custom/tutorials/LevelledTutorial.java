@@ -4,6 +4,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
+import java.util.Optional;
+
 public class LevelledTutorial {
 
     private final int id;
@@ -23,14 +25,16 @@ public class LevelledTutorial {
     }
 
     public void start(L2PcInstance player) {
-        quest.showHtmlFile(player, htmlFile);
-        quest.getQuestState(player, true).set("shown_" + id, "true");
+        quest.setIsCustom(true);
+        QuestState questState = quest.getQuestState(player, true);
+        questState.showHtmlFile(htmlFile);
+        questState.set("shown_" + id, "true");
         player.increaseVitalityLevel();
     }
 
     public boolean hasNotBeenShown(L2PcInstance player) {
         QuestState questState = quest.getQuestState(player, true);
-        return "false".equalsIgnoreCase(questState.get("shown_" + id));
+        return "false".equalsIgnoreCase(Optional.ofNullable(questState.get("shown_" + id)).orElse("false"));
     }
 
 }

@@ -18,15 +18,6 @@
  */
 package com.l2jserver.gameserver.model.quest;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.enums.QuestType;
@@ -39,13 +30,17 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.events.AbstractScript;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.network.serverpackets.ExShowQuestMark;
-import com.l2jserver.gameserver.network.serverpackets.QuestList;
-import com.l2jserver.gameserver.network.serverpackets.TutorialCloseHtml;
-import com.l2jserver.gameserver.network.serverpackets.TutorialEnableClientEvent;
-import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
-import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Util;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Quest state class.
@@ -1279,4 +1274,10 @@ public final class QuestState
 		final String val = get("restartTime");
 		return ((val == null) || !Util.isDigit(val)) || (Long.parseLong(val) <= System.currentTimeMillis());
 	}
+
+	public void showTutorialHtmlFile(L2PcInstance player, String htmlFile) {
+		String text = getQuest().getHtm(player.getHtmlPrefix(), htmlFile);
+		_player.sendPacket(new TutorialShowHtml(text));
+	}
+
 }

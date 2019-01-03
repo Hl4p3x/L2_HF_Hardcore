@@ -1,13 +1,16 @@
 package custom.tutorials;
 
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.events.Containers;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
+import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -46,18 +49,25 @@ public class LevelledServerGuide extends Quest {
         super(SERVER_GUIDE_QUEST_ID, LevelledServerGuide.class.getSimpleName(), "custom/tutorials");
 
         Containers.Players().addListener(new ConsumerEventListener(Containers.Players(), EventType.ON_PLAYER_LEVEL_CHANGED, (Consumer<OnPlayerLevelChanged>) this::onPlayerLevelChanged, this));
+        Containers.Players().addListener(new ConsumerEventListener(Containers.Players(), EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) this::onPlayerLogin, this));
+    }
+
+    private void onPlayerLogin(OnPlayerLogin onPlayerLogin) {
+        QuestState questState = getQuestState(onPlayerLogin.getActiveChar(), true);
+        if (questState.getState() == State.CREATED) {
+            questState.setState(State.STARTED);
+        }
+
+        TUTORIALS_BY_LEVEL.stream()
+                .filter(levelledTutorial -> onPlayerLogin.getActiveChar().getLevel() >= levelledTutorial.level() && levelledTutorial.hasNotBeenShown(onPlayerLogin.getActiveChar()))
+                .min(Comparator.comparing(LevelledTutorial::level)).ifPresent(levelledTutorial -> levelledTutorial.start(onPlayerLogin.getActiveChar()));
     }
 
     private void onPlayerLevelChanged(OnPlayerLevelChanged onPlayerLevelChanged) {
         if (onPlayerLevelChanged.hasLevelIncreased()) {
             TUTORIALS_BY_LEVEL.stream()
-                    .filter(levelledTutorial -> onPlayerLevelChanged.getNewLevel() >= levelledTutorial.level())
-                    .forEach(levelledTutorial -> {
-                        L2PcInstance player = onPlayerLevelChanged.getActiveChar();
-                        if (levelledTutorial.hasNotBeenShown(player)) {
-                            levelledTutorial.start(player);
-                        }
-                    });
+                    .filter(levelledTutorial -> onPlayerLevelChanged.getNewLevel() >= levelledTutorial.level() && levelledTutorial.hasNotBeenShown(onPlayerLevelChanged.getActiveChar()))
+                    .min(Comparator.comparing(LevelledTutorial::level)).ifPresent(levelledTutorial -> levelledTutorial.start(onPlayerLevelChanged.getActiveChar()));
         }
     }
 
