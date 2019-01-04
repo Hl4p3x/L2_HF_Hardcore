@@ -1,11 +1,14 @@
 package com.l2jserver.localization;
 
+import com.l2jserver.Config;
+
 import java.util.Objects;
 import java.util.StringJoiner;
 
 public class Language {
 
     private static final Language EN = new Language("en");
+    private static final Language DEFAULT = new Language(Config.L2JMOD_MULTILANG_DEFAULT);
 
     private String code;
 
@@ -14,6 +17,9 @@ public class Language {
     }
 
     public static Language of(String languageString) {
+        if (languageString == null) {
+            return defaultLanguage();
+        }
         return new Language(languageString);
     }
 
@@ -23,6 +29,10 @@ public class Language {
 
     public static Language english() {
         return EN;
+    }
+
+    public static Language defaultLanguage() {
+        return DEFAULT;
     }
 
     @Override

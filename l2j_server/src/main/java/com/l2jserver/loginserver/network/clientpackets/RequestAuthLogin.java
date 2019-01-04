@@ -18,13 +18,6 @@
  */
 package com.l2jserver.loginserver.network.clientpackets;
 
-import java.net.InetAddress;
-import java.security.GeneralSecurityException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import javax.crypto.Cipher;
-
 import com.l2jserver.Config;
 import com.l2jserver.loginserver.GameServerTable.GameServerInfo;
 import com.l2jserver.loginserver.LoginController;
@@ -37,6 +30,12 @@ import com.l2jserver.loginserver.network.serverpackets.AccountKicked.AccountKick
 import com.l2jserver.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import com.l2jserver.loginserver.network.serverpackets.LoginOk;
 import com.l2jserver.loginserver.network.serverpackets.ServerList;
+
+import javax.crypto.Cipher;
+import java.net.InetAddress;
+import java.security.GeneralSecurityException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * <pre>
@@ -136,6 +135,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 		{
 			case AUTH_SUCCESS:
 				client.setAccount(info.getLogin());
+				client.setAccountLanguage(info.getAccountLanguage());
 				client.setState(LoginClientState.AUTHED_LOGIN);
 				client.setSessionKey(lc.assignSessionKeyToClient(info.getLogin(), client));
 				lc.getCharactersOnAccount(info.getLogin());

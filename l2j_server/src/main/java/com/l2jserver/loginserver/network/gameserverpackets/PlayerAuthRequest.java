@@ -18,14 +18,15 @@
  */
 package com.l2jserver.loginserver.network.gameserverpackets;
 
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
+import com.l2jserver.localization.Language;
 import com.l2jserver.loginserver.GameServerThread;
 import com.l2jserver.loginserver.LoginController;
 import com.l2jserver.loginserver.SessionKey;
 import com.l2jserver.loginserver.network.loginserverpackets.PlayerAuthResponse;
 import com.l2jserver.util.network.BaseRecievePacket;
+
+import java.util.logging.Logger;
 
 /**
  * @author -Wooden-
@@ -53,6 +54,8 @@ public class PlayerAuthRequest extends BaseRecievePacket
 		{
 			_log.info("auth request received for Player " + account);
 		}
+
+		Language language = LoginController.getInstance().getLanguageForAccount(account);
 		SessionKey key = LoginController.getInstance().getKeyForAccount(account);
 		if ((key != null) && key.equals(sessionKey))
 		{
@@ -61,7 +64,7 @@ public class PlayerAuthRequest extends BaseRecievePacket
 				_log.info("auth request: OK");
 			}
 			LoginController.getInstance().removeAuthedLoginClient(account);
-			authResponse = new PlayerAuthResponse(account, true);
+			authResponse = new PlayerAuthResponse(account, true, language);
 		}
 		else
 		{
@@ -71,7 +74,7 @@ public class PlayerAuthRequest extends BaseRecievePacket
 				_log.info("session key from self: " + key);
 				_log.info("session key sent: " + sessionKey);
 			}
-			authResponse = new PlayerAuthResponse(account, false);
+			authResponse = new PlayerAuthResponse(account, false, language);
 		}
 		server.sendPacket(authResponse);
 	}

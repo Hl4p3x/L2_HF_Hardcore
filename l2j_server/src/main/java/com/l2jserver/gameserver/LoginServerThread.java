@@ -18,6 +18,26 @@
  */
 package com.l2jserver.gameserver;
 
+import com.l2jserver.Config;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.L2GameClient;
+import com.l2jserver.gameserver.network.L2GameClient.GameClientState;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.gameserverpackets.*;
+import com.l2jserver.gameserver.network.loginserverpackets.*;
+import com.l2jserver.gameserver.network.serverpackets.CharSelectionInfo;
+import com.l2jserver.gameserver.network.serverpackets.LoginFail;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.localization.Language;
+import com.l2jserver.util.Rnd;
+import com.l2jserver.util.Util;
+import com.l2jserver.util.crypt.NewCrypt;
+import com.l2jserver.util.network.BaseSendablePacket;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -40,43 +60,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.L2GameClient;
-import com.l2jserver.gameserver.network.L2GameClient.GameClientState;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.gameserverpackets.AuthRequest;
-import com.l2jserver.gameserver.network.gameserverpackets.BlowFishKey;
-import com.l2jserver.gameserver.network.gameserverpackets.ChangeAccessLevel;
-import com.l2jserver.gameserver.network.gameserverpackets.ChangePassword;
-import com.l2jserver.gameserver.network.gameserverpackets.PlayerAuthRequest;
-import com.l2jserver.gameserver.network.gameserverpackets.PlayerInGame;
-import com.l2jserver.gameserver.network.gameserverpackets.PlayerLogout;
-import com.l2jserver.gameserver.network.gameserverpackets.PlayerTracert;
-import com.l2jserver.gameserver.network.gameserverpackets.ReplyCharacters;
-import com.l2jserver.gameserver.network.gameserverpackets.SendMail;
-import com.l2jserver.gameserver.network.gameserverpackets.ServerStatus;
-import com.l2jserver.gameserver.network.gameserverpackets.TempBan;
-import com.l2jserver.gameserver.network.loginserverpackets.AuthResponse;
-import com.l2jserver.gameserver.network.loginserverpackets.ChangePasswordResponse;
-import com.l2jserver.gameserver.network.loginserverpackets.InitLS;
-import com.l2jserver.gameserver.network.loginserverpackets.KickPlayer;
-import com.l2jserver.gameserver.network.loginserverpackets.LoginServerFail;
-import com.l2jserver.gameserver.network.loginserverpackets.PlayerAuthResponse;
-import com.l2jserver.gameserver.network.loginserverpackets.RequestCharacters;
-import com.l2jserver.gameserver.network.serverpackets.CharSelectionInfo;
-import com.l2jserver.gameserver.network.serverpackets.LoginFail;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.util.Rnd;
-import com.l2jserver.util.Util;
-import com.l2jserver.util.crypt.NewCrypt;
-import com.l2jserver.util.network.BaseSendablePacket;
 
 public class LoginServerThread extends Thread
 {
@@ -311,6 +294,7 @@ public class LoginServerThread extends Thread
 									sendPacket(pig);
 									wcToRemove.gameClient.setState(GameClientState.AUTHED);
 									wcToRemove.gameClient.setSessionId(wcToRemove.session);
+									wcToRemove.gameClient.setAccountLanguage(Language.of(par.getLanguage()));
 									CharSelectionInfo cl = new CharSelectionInfo(wcToRemove.account, wcToRemove.gameClient.getSessionId().playOkID1);
 									wcToRemove.gameClient.getConnection().sendPacket(cl);
 									wcToRemove.gameClient.setCharSelection(cl.getCharInfo());
@@ -748,7 +732,7 @@ public class LoginServerThread extends Thread
 	{
 		return name != null ? _accountsInGameServer.get(name) : null;
 	}
-	
+
 	public static class SessionKey
 	{
 		public int playOkID1;

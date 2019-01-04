@@ -18,15 +18,8 @@
  */
 package com.l2jserver.loginserver.network;
 
-import java.io.IOException;
-import java.net.InetAddress;
-import java.nio.ByteBuffer;
-import java.security.interfaces.RSAPrivateKey;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
+import com.l2jserver.localization.Language;
 import com.l2jserver.loginserver.LoginController;
 import com.l2jserver.loginserver.SessionKey;
 import com.l2jserver.loginserver.network.serverpackets.L2LoginServerPacket;
@@ -41,6 +34,14 @@ import com.l2jserver.util.Rnd;
 import com.l2jserver.util.crypt.LoginCrypt;
 import com.l2jserver.util.crypt.ScrambledKeyPair;
 
+import java.io.IOException;
+import java.net.InetAddress;
+import java.nio.ByteBuffer;
+import java.security.interfaces.RSAPrivateKey;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Logger;
+
 /**
  * Represents a client connected into the LoginServer
  * @author KenM
@@ -48,7 +49,7 @@ import com.l2jserver.util.crypt.ScrambledKeyPair;
 public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 {
 	private static final Logger _log = Logger.getLogger(L2LoginClient.class.getName());
-	
+
 	public static enum LoginClientState
 	{
 		CONNECTED,
@@ -73,6 +74,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	private Map<Integer, long[]> _charsToDelete;
 	
 	private final long _connectionStartTime;
+	private Language accountLanguage;
 	
 	/**
 	 * @param con
@@ -292,4 +294,13 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	{
 		// Empty
 	}
+
+	public Language getAccountLanguage() {
+		return accountLanguage;
+	}
+
+	public void setAccountLanguage(Language accountLanguage) {
+		this.accountLanguage = accountLanguage;
+	}
+	
 }

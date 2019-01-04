@@ -200,7 +200,7 @@ public final class L2PcInstance extends L2Playable {
     private L2GameClient _client;
     private long _deleteTimer;
     private Calendar _createDate = Calendar.getInstance();
-    private Language language = Language.english();
+    private Language language = Language.defaultLanguage();
     private String _htmlPrefix = null;
     private volatile boolean _isOnline = false;
     private long _onlineTime;
@@ -10135,7 +10135,7 @@ public final class L2PcInstance extends L2Playable {
     public boolean setLang(String languageString) {
         boolean result = false;
         if (Config.L2JMOD_MULTILANG_ENABLE) {
-            if (Config.L2JMOD_MULTILANG_ALLOWED.contains(language.getCode())) {
+            if (Config.L2JMOD_MULTILANG_ALLOWED.contains(languageString)) {
                 language = Language.of(languageString);
                 result = true;
             } else {

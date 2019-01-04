@@ -18,6 +18,19 @@
  */
 package com.l2jserver.loginserver;
 
+import com.l2jserver.Config;
+import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.localization.Language;
+import com.l2jserver.loginserver.GameServerTable.GameServerInfo;
+import com.l2jserver.loginserver.model.data.AccountInfo;
+import com.l2jserver.loginserver.network.L2LoginClient;
+import com.l2jserver.loginserver.network.gameserverpackets.ServerStatus;
+import com.l2jserver.loginserver.network.serverpackets.LoginFail.LoginFailReason;
+import com.l2jserver.util.Rnd;
+import com.l2jserver.util.crypt.ScrambledKeyPair;
+import org.mindrot.jbcrypt.BCrypt;
+
+import javax.crypto.Cipher;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.security.GeneralSecurityException;
@@ -27,27 +40,10 @@ import java.security.spec.RSAKeyGenParameterSpec;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javax.crypto.Cipher;
-
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.loginserver.GameServerTable.GameServerInfo;
-import com.l2jserver.loginserver.model.data.AccountInfo;
-import com.l2jserver.loginserver.network.L2LoginClient;
-import com.l2jserver.loginserver.network.gameserverpackets.ServerStatus;
-import com.l2jserver.loginserver.network.serverpackets.LoginFail.LoginFailReason;
-import com.l2jserver.util.Rnd;
-import com.l2jserver.util.crypt.ScrambledKeyPair;
-import org.mindrot.jbcrypt.BCrypt;
 
 public class LoginController
 {
@@ -70,7 +66,7 @@ public class LoginController
 	private static final int BLOWFISH_KEYS = 20;
 	
 	// SQL Queries
-	private static final String USER_INFO_SELECT = "SELECT login, password, IF(? > value OR value IS NULL, accessLevel, -1) AS accessLevel, lastServer FROM accounts LEFT JOIN (account_data) ON (account_data.account_name=accounts.login AND account_data.var=\"ban_temp\") WHERE login=?";
+	private static final String USER_INFO_SELECT = "SELECT login, password, language, IF(? > value OR value IS NULL, accessLevel, -1) AS accessLevel, lastServer FROM accounts LEFT JOIN (account_data) ON (account_data.account_name=accounts.login AND account_data.var=\"ban_temp\") WHERE login=?";
 	private static final String AUTOCREATE_ACCOUNTS_INSERT = "INSERT INTO accounts (login, password, lastactive, accessLevel, lastIP) values (?, ?, ?, ?, ?)";
 	private static final String ACCOUNT_INFO_UPDATE = "UPDATE accounts SET lastactive = ?, lastIP = ? WHERE login = ?";
 	private static final String ACCOUNT_LAST_SERVER_UPDATE = "UPDATE accounts SET lastServer = ? WHERE login = ?";
@@ -223,8 +219,8 @@ public class LoginController
 						{
 							_log.fine("Account '" + login + "' exists.");
 						}
-						
-						AccountInfo info = new AccountInfo(rset.getString("login"), rset.getString("password"), rset.getInt("accessLevel"), rset.getInt("lastServer"));
+
+						AccountInfo info = new AccountInfo(rset.getString("login"), rset.getString("password"), rset.getInt("accessLevel"), rset.getInt("lastServer"), Language.of(rset.getString("language")));
 						if (!info.checkPassword(password))
 						{
 							// wrong password
@@ -396,6 +392,14 @@ public class LoginController
 			return client.getSessionKey();
 		}
 		return null;
+	}
+
+	public Language getLanguageForAccount(String account) {
+		L2LoginClient client = _loginServerClients.get(account);
+		if (client != null) {
+			return client.getAccountLanguage();
+		}
+		return Language.defaultLanguage();
 	}
 	
 	public boolean isAccountInAnyGameServer(String account)

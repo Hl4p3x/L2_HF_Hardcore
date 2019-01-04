@@ -18,22 +18,6 @@
  */
 package com.l2jserver.gameserver.network;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.nio.ByteBuffer;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Future;
-import java.util.concurrent.RejectedExecutionException;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.LoginServerThread;
@@ -57,9 +41,26 @@ import com.l2jserver.gameserver.network.serverpackets.ServerClose;
 import com.l2jserver.gameserver.security.SecondaryPasswordAuth;
 import com.l2jserver.gameserver.util.FloodProtectors;
 import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.localization.Language;
 import com.l2jserver.mmocore.MMOClient;
 import com.l2jserver.mmocore.MMOConnection;
 import com.l2jserver.mmocore.ReceivablePacket;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.nio.ByteBuffer;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Future;
+import java.util.concurrent.RejectedExecutionException;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
 
 /**
  * Represents a client connected on Game Server.
@@ -69,7 +70,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 {
 	protected static final Logger _log = Logger.getLogger(L2GameClient.class.getName());
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
-	
+
 	/**
 	 * @author KenM
 	 */
@@ -119,6 +120,8 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	private final ReentrantLock _queueLock = new ReentrantLock();
 	
 	private int[][] trace;
+
+	private Language accountLanguage;
 	
 	public L2GameClient(MMOConnection<L2GameClient> con)
 	{
@@ -148,7 +151,15 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			throw new Error("Unable to determine localhost address.");
 		}
 	}
-	
+
+	public Language getAccountLanguage() {
+		return accountLanguage;
+	}
+
+	public void setAccountLanguage(Language accountLanguage) {
+		this.accountLanguage = accountLanguage;
+	}
+
 	public byte[] enableCrypt()
 	{
 		byte[] key = BlowFishKeygen.getRandomKey();

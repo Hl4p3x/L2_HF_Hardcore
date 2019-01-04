@@ -59,7 +59,7 @@ public class PlayerDAOMySQLImpl implements PlayerDAO
 			}
 		} catch (SQLException e) {
 			LOG.error("Could not retrieve language for character {}, falling back to default", objectId);
-			return Language.english();
+			return Language.defaultLanguage();
 		}
 	}
 

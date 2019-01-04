@@ -18,8 +18,10 @@
  */
 package com.l2jserver.loginserver.model.data;
 
-import java.util.Objects;
+import com.l2jserver.localization.Language;
 import org.mindrot.jbcrypt.BCrypt;
+
+import java.util.Objects;
 
 /**
  * @author HorridoJoho
@@ -30,8 +32,9 @@ public final class AccountInfo
 	private final String _passHash;
 	private final int _accessLevel;
 	private final int _lastServer;
-	
-	public AccountInfo(final String login, final String passHash, final int accessLevel, final int lastServer)
+	private final Language accountLanguage;
+
+	public AccountInfo(final String login, final String passHash, final int accessLevel, final int lastServer, Language accountLanguage)
 	{
 		Objects.requireNonNull(login, "login parameter is null");
 		Objects.requireNonNull(passHash, "passHash parameter is null");
@@ -49,6 +52,7 @@ public final class AccountInfo
 		_passHash = passHash;
 		_accessLevel = accessLevel;
 		_lastServer = lastServer;
+		this.accountLanguage = accountLanguage;
 	}
 
 	public boolean checkPassword(String password) {
@@ -69,4 +73,9 @@ public final class AccountInfo
 	{
 		return _lastServer;
 	}
+
+	public Language getAccountLanguage() {
+		return accountLanguage;
+	}
+
 }

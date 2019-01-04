@@ -18,11 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.data.xml.impl.InitialEquipmentData;
@@ -49,6 +44,10 @@ import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.serverpackets.CharCreateFail;
 import com.l2jserver.gameserver.network.serverpackets.CharCreateOk;
 import com.l2jserver.gameserver.network.serverpackets.CharSelectionInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 @SuppressWarnings("unused")
 public final class CharacterCreate extends L2GameClientPacket
@@ -110,7 +109,7 @@ public final class CharacterCreate extends L2GameClientPacket
 			sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
 			return;
 		}
-		
+
 		if (!isValidName(_name))
 		{
 			sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
@@ -216,7 +215,9 @@ public final class CharacterCreate extends L2GameClientPacket
 		{
 			newChar.addAdena("Init", Config.STARTING_ADENA, null, false);
 		}
-		
+
+		newChar.setLang(getClient().getAccountLanguage().getCode());
+
 		final L2PcTemplate template = newChar.getTemplate();
 		Location createLoc = template.getCreationPoint();
 		newChar.setXYZInvisible(createLoc.getX(), createLoc.getY(), createLoc.getZ());

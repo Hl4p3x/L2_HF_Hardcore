@@ -28,6 +28,7 @@ public class PlayerAuthResponse extends BaseRecievePacket
 	
 	private final String _account;
 	private final boolean _authed;
+	private final String language;
 	
 	/**
 	 * @param decrypt
@@ -37,9 +38,14 @@ public class PlayerAuthResponse extends BaseRecievePacket
 		super(decrypt);
 		
 		_account = readS();
-		_authed = (readC() == 0 ? false : true);
+		_authed = readC() != 0;
+		language = readS();
 	}
-	
+
+	public String getLanguage() {
+		return language;
+	}
+
 	/**
 	 * @return Returns the account.
 	 */

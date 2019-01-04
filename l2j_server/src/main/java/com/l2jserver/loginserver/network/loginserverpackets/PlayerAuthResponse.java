@@ -18,6 +18,7 @@
  */
 package com.l2jserver.loginserver.network.loginserverpackets;
 
+import com.l2jserver.localization.Language;
 import com.l2jserver.util.network.BaseSendablePacket;
 
 /**
@@ -25,11 +26,12 @@ import com.l2jserver.util.network.BaseSendablePacket;
  */
 public class PlayerAuthResponse extends BaseSendablePacket
 {
-	public PlayerAuthResponse(String account, boolean response)
+	public PlayerAuthResponse(String account, boolean response, Language language)
 	{
 		writeC(0x03);
 		writeS(account);
 		writeC(response ? 1 : 0);
+		writeS(language.getCode());
 	}
 	
 	@Override
