@@ -68,4 +68,8 @@
 	<item id="5271" /> <!-- Recipe: Greater Soulshot (A) Compressed Package(100%) -->
 	<item id="5276" /> <!-- Recipe: Greater Spiritshot (A) Compressed Package(100%) -->
 	<item id="5281" /> <!-- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%) -->
+
+	<item id="1808"/> <!-- Recipe: Soulshot (S-Grade) -->
+	<item id="3036"/> <!-- Recipe: Spiritshot S -->
+	<item id="3957"/> <!-- Recipe: Blessed Spiritshot S -->
 </list>

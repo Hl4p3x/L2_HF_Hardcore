@@ -276,7 +276,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="1000" />
+		<set name="price" val="50000"/>
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="2131" type="EtcItem" name="Gemstone C">
@@ -285,7 +285,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="3000" />
+		<set name="price" val="100000"/>
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="2132" type="EtcItem" name="Gemstone B">
@@ -294,7 +294,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="10000" />
+		<set name="price" val="200000"/>
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="2133" type="EtcItem" name="Gemstone A">
@@ -303,7 +303,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="30000" />
+		<set name="price" val="400000"/>
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="2134" type="EtcItem" name="Gemstone S">
@@ -312,7 +312,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
-		<set name="price" val="100000" />
+		<set name="price" val="700000"/>
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="2135" type="EtcItem" name="Recipe: Braided Hemp">
