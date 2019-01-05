@@ -1,0 +1,377 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+    <npcs>
+        <npc>30063</npc> <!-- Grocer Lara -->
+        <npc>30081</npc> <!-- Trader Helvetia -->
+        <npc>30093</npc> <!-- Trader Groot -->
+        <npc>30166</npc> <!-- Magic Trader Wesley -->
+        <npc>30180</npc> <!-- Merchant Sara -->
+        <npc>30209</npc> <!-- Merchant Colleen -->
+        <npc>30254</npc> <!-- Trader Harmony -->
+        <npc>30301</npc> <!-- Trader Hally -->
+        <npc>30841</npc> <!-- Trader Carson -->
+        <npc>30893</npc> <!-- Trader Payel -->
+        <npc>31263</npc> <!-- Trader Liesel -->
+        <npc>31307</npc> <!-- Trader Weber -->
+        <npc>31952</npc> <!-- Trader Pele -->
+    </npcs>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of STR (Str+1 Con-1) -->
+        <production count="1" id="4469"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of STR (Str+1 Dex-1) -->
+        <production count="1" id="4470"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of CON (Con+1 Str-1) -->
+        <production count="1" id="4471"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of CON (Con+1 Dex-1) -->
+        <production count="1" id="4472"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of DEX (Dex+1 Str-1) -->
+        <production count="1" id="4473"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of DEX (Dex+1 Con-1) -->
+        <production count="1" id="4474"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of INT (Int+1 Men-1) -->
+        <production count="1" id="4475"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of INT (Int+1 Wit-1) -->
+        <production count="1" id="4476"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of MEN (Men+1 Int-1) -->
+        <production count="1" id="4477"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of MEN (Men+1 Wit-1) -->
+        <production count="1" id="4478"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of WIT (Wit+1 Int-1) -->
+        <production count="1" id="4479"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="336000" id="57"/>
+        <!-- Dye of WIT (Wit+1 Men-1) -->
+        <production count="1" id="4480"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of STR (Str+1 Con-1) -->
+        <production count="1" id="4553"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of STR (Str+1 Dex-1) -->
+        <production count="1" id="4554"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of CON (Con+1 Str-1) -->
+        <production count="1" id="4555"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of CON (Con+1 Dex-1) -->
+        <production count="1" id="4556"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of DEX (Dex+1 Str-1) -->
+        <production count="1" id="4557"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of DEX (Dex+1 Con-1) -->
+        <production count="1" id="4558"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of INT (Int+1 Men-1) -->
+        <production count="1" id="4559"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of INT (Int+1 Wit-1) -->
+        <production count="1" id="4560"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of MEN (Men+1 Int-1) -->
+        <production count="1" id="4561"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of MEN (Men+1 Wit-1) -->
+        <production count="1" id="4562"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of WIT (Wit+1 Int-1) -->
+        <production count="1" id="4563"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="480000" id="57"/>
+        <!-- Greater Dye of WIT (Wit+1 Men-1) -->
+        <production count="1" id="4564"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of STR (Str+2 Con-2) -->
+        <production count="1" id="4589"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of STR (Str+2 Dex-2) -->
+        <production count="1" id="4590"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of CON (Con+2 Str-2) -->
+        <production count="1" id="4591"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of CON (Con+2 Dex-2) -->
+        <production count="1" id="4592"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of DEX (Dex+2 Str-2) -->
+        <production count="1" id="4593"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of DEX (Dex+2 Con-2) -->
+        <production count="1" id="4594"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of INT (Int+2 Men-2) -->
+        <production count="1" id="4595"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of INT (Int+2 Wit-2) -->
+        <production count="1" id="4596"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of MEN (Men+2 Int-2) -->
+        <production count="1" id="4597"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of MEN (Men+2 Wit-2) -->
+        <production count="1" id="4598"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of WIT (Wit+2 Int-2) -->
+        <production count="1" id="4599"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="576000" id="57"/>
+        <!-- Greater Dye of WIT (Wit+2 Men-2) -->
+        <production count="1" id="4600"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of STR (Str+3 Con-3) -->
+        <production count="1" id="4601"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of STR (Str+3 Dex-3) -->
+        <production count="1" id="4602"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of CON (Con+3 Str-3) -->
+        <production count="1" id="4603"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of CON (Con+3 Dex-3) -->
+        <production count="1" id="4604"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of DEX (Dex+3 Str-3) -->
+        <production count="1" id="4605"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of DEX (Dex+3 Con-3) -->
+        <production count="1" id="4606"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of INT (Int+3 Men-3) -->
+        <production count="1" id="4607"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of INT (Int+3 Wit-3) -->
+        <production count="1" id="4608"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of MEN (Men+3 Int-3) -->
+        <production count="1" id="4609"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of MEN (Men+3 Wit-3) -->
+        <production count="1" id="4610"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of WIT (Wit+3 Int-3) -->
+        <production count="1" id="4611"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="864000" id="57"/>
+        <!-- Greater Dye of WIT (Wit+3 Men-3) -->
+        <production count="1" id="4612"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of STR (Str+4 Con-4) -->
+        <production count="1" id="4613"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of STR (Str+4 Dex-4) -->
+        <production count="1" id="4614"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of CON (Con+4 Str-4) -->
+        <production count="1" id="4615"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of CON (Con+4 Dex-4) -->
+        <production count="1" id="4616"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of DEX (Dex+4 Str-4) -->
+        <production count="1" id="4617"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of DEX (Dex+4 Con-4) -->
+        <production count="1" id="4618"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of INT (Int+4 Men-4) -->
+        <production count="1" id="4619"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of INT (Int+4 Wit-4) -->
+        <production count="1" id="4620"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of MEN (Men+4 Int-4) -->
+        <production count="1" id="4621"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of MEN (Men+4 Wit-4) -->
+        <production count="1" id="4622"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of WIT (Wit+4 Int-4) -->
+        <production count="1" id="4623"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1392000" id="57"/>
+        <!-- Greater Dye of WIT (Wit+4 Men-4) -->
+        <production count="1" id="4624"/>
+    </item>
+</list>
