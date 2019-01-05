@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<list dualcraft="false" maintainEnchantment="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" dualcraft="false" maintainEnchantment="false"
       xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
     <npcs>
         <npc>31126</npc> <!-- Blacksmith of Mammon -->
@@ -19,10 +18,8 @@
         <ingredient count="1" id="13457"/>
         <!-- Sirra's Blade -->
         <ingredient count="1" id="8678"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="7168000" id="5575"/>
+        <ingredient count="21504000" id="5575"/>
         <!-- Vesper Dual Sword -->
         <production count="1" id="52"/>
     </item>
@@ -31,10 +28,8 @@
         <ingredient count="1" id="9442"/>
         <!-- Dark Legion's Edge -->
         <ingredient count="1" id="2500"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="3747300" id="5575"/>
+        <ingredient count="11241900" id="5575"/>
         <!-- Dynasty Dual Sword -->
         <production count="1" id="10004"/>
     </item>
@@ -43,10 +38,8 @@
         <ingredient count="1" id="10215"/>
         <!-- Dark Legion's Edge -->
         <ingredient count="1" id="2500"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="5172000" id="5575"/>
+        <ingredient count="15516000" id="5575"/>
         <!-- Icarus Dual Sword -->
         <production count="1" id="10415"/>
     </item>
@@ -55,10 +48,8 @@
         <ingredient count="1" id="11272"/>
         <!-- Dark Legion's Edge -->
         <ingredient count="1" id="2500"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="3747300" id="5575"/>
+        <ingredient count="11241900" id="5575"/>
         <!-- Dynasty Dual Sword - Earth -->
         <production count="1" id="11251"/>
     </item>
@@ -67,10 +58,8 @@
         <ingredient count="1" id="11305"/>
         <!-- Dark Legion's Edge -->
         <ingredient count="1" id="2500"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="5172000" id="5575"/>
+        <ingredient count="15516000" id="5575"/>
         <!-- Icarus Dual Sword - Destruction -->
         <production count="1" id="11300"/>
     </item>
@@ -79,10 +68,8 @@
         <ingredient count="1" id="11058"/>
         <!-- Dark Legion's Edge -->
         <ingredient count="1" id="2500"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="3240000" id="5575"/>
+        <ingredient count="9720000" id="5575"/>
         <!-- Tallum Blade*Dark Legion's Edge - Lightning -->
         <production count="1" id="11234"/>
     </item>
@@ -91,10 +78,8 @@
         <ingredient count="1" id="80"/>
         <!-- Dark Legion's Edge - Thunder -->
         <ingredient count="1" id="11080"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="3240000" id="5575"/>
+        <ingredient count="9720000" id="5575"/>
         <!-- Tallum Blade*Dark Legion's Edge - Lightning -->
         <production count="1" id="11234"/>
     </item>
@@ -103,10 +88,8 @@
         <ingredient count="1" id="9446"/>
         <!-- Soul Separator -->
         <ingredient count="1" id="236"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="4395000" id="5575"/>
+        <ingredient count="13185000" id="5575"/>
         <!-- Dynasty Dual Daggers -->
         <production count="1" id="13882"/>
     </item>
@@ -115,10 +98,8 @@
         <ingredient count="1" id="10216"/>
         <!-- Soul Separator -->
         <ingredient count="1" id="236"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="6089000" id="5575"/>
+        <ingredient count="18267000" id="5575"/>
         <!-- Icarus Dual Daggers -->
         <production count="1" id="13883"/>
     </item>
@@ -127,10 +108,8 @@
         <ingredient count="1" id="11247"/>
         <!-- Soul Separator -->
         <ingredient count="1" id="236"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="4395000" id="5575"/>
+        <ingredient count="13185000" id="5575"/>
         <!-- Dynasty Dual Daggers - Great Gale -->
         <production count="1" id="14526"/>
     </item>
@@ -139,10 +118,8 @@
         <ingredient count="1" id="11301"/>
         <!-- Soul Separator -->
         <ingredient count="1" id="236"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="6089000" id="5575"/>
+        <ingredient count="18267000" id="5575"/>
         <!-- Icarus Dual Daggers - Confusion -->
         <production count="1" id="14527"/>
     </item>
@@ -151,10 +128,8 @@
         <ingredient count="1" id="13460"/>
         <!-- Naga Storm -->
         <ingredient count="1" id="8682"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="8577000" id="5575"/>
+        <ingredient count="25731000" id="5575"/>
         <!-- Vesper Dual Daggers -->
         <production count="1" id="13884"/>
     </item>
@@ -163,10 +138,8 @@
         <ingredient count="1" id="16042"/>
         <!-- Sirra's Blade -->
         <ingredient count="1" id="8678"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="7168000" id="5575"/>
+        <ingredient count="21504000" id="5575"/>
         <!-- Vesper Dual Sword - Destruction -->
         <production count="1" id="16150"/>
     </item>
@@ -175,10 +148,8 @@
         <ingredient count="1" id="16045"/>
         <!-- Naga Storm -->
         <ingredient count="1" id="8682"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="8577000" id="5575"/>
+        <ingredient count="25731000" id="5575"/>
         <!-- Vesper Dual Daggers - Gale -->
         <production count="1" id="16148"/>
     </item>
@@ -187,10 +158,8 @@
         <ingredient count="1" id="15559"/>
         <!-- Naga Storm -->
         <ingredient count="1" id="8682"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="12280000" id="5575"/>
+        <ingredient count="36840000" id="5575"/>
         <!-- Skull Edge Dual Daggers -->
         <production count="1" id="16152"/>
     </item>
@@ -199,10 +168,8 @@
         <ingredient count="1" id="15558"/>
         <!-- Sirra's Blade -->
         <ingredient count="1" id="8678"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="9975000" id="5575"/>
+        <ingredient count="29925000" id="5575"/>
         <!-- Periel Dual Sword -->
         <production count="1" id="16154"/>
     </item>
@@ -211,10 +178,8 @@
         <ingredient count="1" id="15545"/>
         <!-- Angel Slayer -->
         <ingredient count="1" id="6367"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="17867000" id="5575"/>
+        <ingredient count="53601000" id="5575"/>
         <!-- Mamba Edge Dual Daggers -->
         <production count="1" id="16156"/>
     </item>
@@ -223,10 +188,8 @@
         <ingredient count="1" id="15544"/>
         <!-- Forgotten Blade -->
         <ingredient count="1" id="6364"/>
-        <!-- Dualsword Craft Stamp -->
-        <ingredient count="1" id="5126"/>
         <!-- Ancient Adena -->
-        <ingredient count="13939000" id="5575"/>
+        <ingredient count="41817000" id="5575"/>
         <!-- Eternal Core Dual Sword -->
         <production count="1" id="16158"/>
     </item>

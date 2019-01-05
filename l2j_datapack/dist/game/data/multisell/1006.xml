@@ -1,5 +1,5 @@
-<list dualcraft="true" maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      applyTaxes="true" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" dualcraft="true" maintainEnchantment="true"
+	  applyTaxes="true" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<npcs>
 		<npc>30678</npc> <!-- Helton -->
 	</npcs>
@@ -8,12 +8,10 @@
 		<ingredient count="1" id="72"/>
 		<!-- Caliburs -->
 		<ingredient count="1" id="75"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="183" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="548100" id="57"/>
+		<ingredient count="1644300" id="57"/>
 		<!-- Stormbringer*Caliburs -->
 		<production count="1" id="2566"/>
 	</item>
@@ -22,12 +20,10 @@
 		<ingredient count="1" id="72"/>
 		<!-- Sword of Limit -->
 		<ingredient count="1" id="132"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="183" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="548100" id="57"/>
+		<ingredient count="1644300" id="57"/>
 		<!-- Stormbringer*Sword of Limit -->
 		<production count="1" id="2567"/>
 	</item>
@@ -36,12 +32,10 @@
 		<ingredient count="1" id="72"/>
 		<!-- Sword of Delusion -->
 		<ingredient count="1" id="76"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="183" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="548100" id="57"/>
+		<ingredient count="1644300" id="57"/>
 		<!-- Stormbringer*Sword of Delusion -->
 		<production count="1" id="2568"/>
 	</item>
@@ -50,12 +44,10 @@
 		<ingredient count="1" id="72"/>
 		<!-- Sword of Nightmare -->
 		<ingredient count="1" id="134"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="183" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="548100" id="57"/>
+		<ingredient count="1644300" id="57"/>
 		<!-- Stormbringer*Sword of Nightmare -->
 		<production count="1" id="2569"/>
 	</item>
@@ -64,12 +56,10 @@
 		<ingredient count="1" id="72"/>
 		<!-- Tsurugi -->
 		<ingredient count="1" id="77"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="183" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="548100" id="57"/>
+		<ingredient count="1644300" id="57"/>
 		<!-- Stormbringer*Tsurugi -->
 		<production count="1" id="2570"/>
 	</item>
@@ -78,12 +68,10 @@
 		<ingredient count="1" id="73"/>
 		<!-- Sword of Limit -->
 		<ingredient count="1" id="132"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="315" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="945000" id="57"/>
+		<ingredient count="2835000" id="57"/>
 		<!-- Shamshir*Sword of Limit -->
 		<production count="1" id="2577"/>
 	</item>
@@ -92,12 +80,10 @@
 		<ingredient count="1" id="73"/>
 		<!-- Sword of Delusion -->
 		<ingredient count="1" id="76"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="315" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="945000" id="57"/>
+		<ingredient count="2835000" id="57"/>
 		<!-- Shamshir*Sword of Delusion -->
 		<production count="1" id="2578"/>
 	</item>
@@ -106,12 +92,10 @@
 		<ingredient count="1" id="74"/>
 		<!-- Sword of Limit -->
 		<ingredient count="1" id="132"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="315" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="945000" id="57"/>
+		<ingredient count="2835000" id="57"/>
 		<!-- Katana*Sword of Limit -->
 		<production count="1" id="2586"/>
 	</item>
@@ -120,12 +104,10 @@
 		<ingredient count="1" id="74"/>
 		<!-- Sword of Delusion -->
 		<ingredient count="1" id="76"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="315" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="945000" id="57"/>
+		<ingredient count="2835000" id="57"/>
 		<!-- Katana*Sword of Delusion -->
 		<production count="1" id="2587"/>
 	</item>
@@ -134,12 +116,10 @@
 		<ingredient count="1" id="131"/>
 		<!-- Sword of Limit -->
 		<ingredient count="1" id="132"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="315" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="945000" id="57"/>
+		<ingredient count="2835000" id="57"/>
 		<!-- Spirit Sword*Sword of Limit -->
 		<production count="1" id="2594"/>
 	</item>
@@ -148,12 +128,10 @@
 		<ingredient count="1" id="131"/>
 		<!-- Sword of Delusion -->
 		<ingredient count="1" id="76"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="315" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="945000" id="57"/>
+		<ingredient count="2835000" id="57"/>
 		<!-- Spirit Sword*Sword of Delusion -->
 		<production count="1" id="2595"/>
 	</item>
@@ -162,12 +140,10 @@
 		<ingredient count="1" id="133"/>
 		<!-- Sword of Limit -->
 		<ingredient count="1" id="132"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="315" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="945000" id="57"/>
+		<ingredient count="2835000" id="57"/>
 		<!-- Raid Sword*Sword of Limit -->
 		<production count="1" id="2601"/>
 	</item>
@@ -176,12 +152,10 @@
 		<ingredient count="1" id="133"/>
 		<!-- Sword of Delusion -->
 		<ingredient count="1" id="76"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="315" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="945000" id="57"/>
+		<ingredient count="2835000" id="57"/>
 		<!-- Raid Sword*Sword of Delusion -->
 		<production count="1" id="2602"/>
 	</item>
@@ -190,12 +164,10 @@
 		<ingredient count="1" id="72"/>
 		<!-- Samurai Longsword -->
 		<ingredient count="1" id="135"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="124" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="372600" id="57"/>
+		<ingredient count="1117800" id="57"/>
 		<!-- Stormbringer*Samurai Long sword -->
 		<production count="1" id="2571"/>
 	</item>
@@ -204,12 +176,10 @@
 		<ingredient count="1" id="75"/>
 		<!-- Sword of Limit -->
 		<ingredient count="1" id="132"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="38" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="113400" id="57"/>
+		<ingredient count="340200" id="57"/>
 		<!-- Caliburs*Sword of Limit -->
 		<production count="1" id="2607"/>
 	</item>
@@ -218,12 +188,10 @@
 		<ingredient count="1" id="75"/>
 		<!-- Sword of Delusion -->
 		<ingredient count="1" id="76"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="38" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="113400" id="57"/>
+		<ingredient count="340200" id="57"/>
 		<!-- Caliburs*Sword of Delusion -->
 		<production count="1" id="2608"/>
 	</item>
@@ -232,12 +200,10 @@
 		<ingredient count="1" id="132"/>
 		<!-- Sword of Limit -->
 		<ingredient count="1" id="132"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="38" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="113400" id="57"/>
+		<ingredient count="340200" id="57"/>
 		<!-- Sword of Limit*Sword of Limit -->
 		<production count="1" id="2612"/>
 	</item>
@@ -246,12 +212,10 @@
 		<ingredient count="1" id="132"/>
 		<!-- Sword of Delusion -->
 		<ingredient count="1" id="76"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="38" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="113400" id="57"/>
+		<ingredient count="340200" id="57"/>
 		<!-- Sword of Limit*Sword of Delusion -->
 		<production count="1" id="2613"/>
 	</item>
@@ -260,12 +224,10 @@
 		<ingredient count="1" id="132"/>
 		<!-- Sword of Nightmare -->
 		<ingredient count="1" id="134"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="38" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="113400" id="57"/>
+		<ingredient count="340200" id="57"/>
 		<!-- Sword of Limit*Sword of Nightmare -->
 		<production count="1" id="2614"/>
 	</item>
@@ -274,12 +236,10 @@
 		<ingredient count="1" id="132"/>
 		<!-- Tsurugi -->
 		<ingredient count="1" id="77"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="38" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="113400" id="57"/>
+		<ingredient count="340200" id="57"/>
 		<!-- Sword of Limit*Tsurugi -->
 		<production count="1" id="2615"/>
 	</item>
@@ -288,12 +248,10 @@
 		<ingredient count="1" id="76"/>
 		<!-- Sword of Delusion -->
 		<ingredient count="1" id="76"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="38" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="113400" id="57"/>
+		<ingredient count="340200" id="57"/>
 		<!-- Sword of Delusion*Sword of Delusion -->
 		<production count="1" id="2617"/>
 	</item>
@@ -302,12 +260,10 @@
 		<ingredient count="1" id="76"/>
 		<!-- Sword of Nightmare -->
 		<ingredient count="1" id="134"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="38" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="113400" id="57"/>
+		<ingredient count="340200" id="57"/>
 		<!-- Sword of Delusion*Sword of Nightmare -->
 		<production count="1" id="2618"/>
 	</item>
@@ -316,12 +272,10 @@
 		<ingredient count="1" id="76"/>
 		<!-- Tsurugi -->
 		<ingredient count="1" id="77"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="38" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="113400" id="57"/>
+		<ingredient count="340200" id="57"/>
 		<!-- Sword of Delusion*Tsurugi -->
 		<production count="1" id="2619"/>
 	</item>
@@ -330,12 +284,10 @@
 		<ingredient count="1" id="132"/>
 		<!-- Samurai Longsword -->
 		<ingredient count="1" id="135"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="438" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="1314900" id="57"/>
+		<ingredient count="3944700" id="57"/>
 		<!-- Sword of Limit*Samurai Long Sword -->
 		<production count="1" id="2616"/>
 	</item>
@@ -344,12 +296,10 @@
 		<ingredient count="1" id="76"/>
 		<!-- Samurai Longsword -->
 		<ingredient count="1" id="135"/>
-		<!-- Dualsword Craft Stamp -->
-		<ingredient count="1" id="5126"/>
 		<!-- Crystal (C-Grade) -->
 		<ingredient count="438" id="1459"/>
 		<!-- Adena -->
-		<ingredient count="1314900" id="57"/>
+		<ingredient count="3944700" id="57"/>
 		<!-- Sword of Delusion*Samurai Long Sword -->
 		<production count="1" id="2620"/>
 	</item>
