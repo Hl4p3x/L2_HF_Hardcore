@@ -21,6 +21,12 @@
 		<!-- Wooden Bolt -->
 		<production count="100" id="9632" />
 	</item>
+    <item>
+        <!-- Steel Arrow -->
+        <ingredient count="100" id="1342"/>
+        <!-- Steel Bolt -->
+        <production count="100" id="9634"/>
+    </item>
 	<item>
 		<!-- Silver Arrow -->
 		<ingredient count="100" id="1343" />
