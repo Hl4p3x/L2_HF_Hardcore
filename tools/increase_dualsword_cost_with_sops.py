@@ -1,5 +1,6 @@
-import lxml.etree as ET
 import sys
+
+import lxml.etree as ET
 
 STONE_OF_PURITY_ID = '1875'
 ADENA_ID, ANCIENT_ADENA_ID = '57', '5575'
@@ -7,7 +8,8 @@ ADENA_ID, ANCIENT_ADENA_ID = '57', '5575'
 script_name = sys.argv
 
 for file in (
-'../l2j_datapack/dist/game/data/multisell/370000000.xml', '../l2j_datapack/dist/game/data/multisell/370000000.xml'):
+        '../l2j_datapack/dist/game/data/multisell/370000000.xml',
+        '../l2j_datapack/dist/game/data/multisell/370000001.xml'):
     dom = ET.parse(file)
     item_elements = dom.findall('.//item')
     change_count = 0
