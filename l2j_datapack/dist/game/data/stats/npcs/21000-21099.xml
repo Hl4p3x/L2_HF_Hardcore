@@ -4049,7 +4049,6 @@
 					<item id="8741" min="1" max="1" chance="0.1852"/> <!-- Mid-Grade Life Stone - Level 70 -->
 					<item id="8751" min="1" max="1" chance="0.0185"/> <!-- High-Grade Life Stone - Level 70 -->
 					<item id="8761" min="1" max="1" chance="0.0038"/> <!-- Top-Grade Life Stone - Level 70 -->
-					<item id="10302" min="1" max="1" chance="0.0600"/> <!-- Transformation Sealbook: Heretic -->
 				</group>
 			</death>
 			<corpse>
@@ -6150,7 +6149,6 @@
 					<item id="1889" min="1" max="1" chance="5.2411"/> <!-- Compound Braid -->
 					<item id="4044" min="1" max="1" chance="2.6205"/> <!-- Thons -->
 					<item id="3956" min="1" max="1" chance="0.1048"/> <!-- Recipe: Blessed Spiritshot A -->
-					<item id="10306" min="1" max="1" chance="0.3145"/> <!-- Transformation Sealbook: Doll Blader -->
 					<item id="1344" min="30" max="90" chance="32.7569"/> <!-- Mithril Arrow -->
 				</group>
 			</death>

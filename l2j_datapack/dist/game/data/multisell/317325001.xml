@@ -194,36 +194,4 @@
 		<!-- Doom Plate Armor -->
 		<production count="1" id="2381" />
 	</item>
-	<item>
-		<!-- Memento Mori -->
-		<ingredient count="4" id="9814" />
-		<!-- Dragon Heart -->
-		<ingredient count="4" id="9815" />
-		<!-- Earth Egg -->
-		<ingredient count="4" id="9816" />
-		<!-- Nonliving Nucleus -->
-		<ingredient count="4" id="9817" />
-		<!-- Angelic Essence -->
-		<ingredient count="4" id="9818" />
-		<!-- Adena -->
-		<ingredient count="600000" id="57" />
-		<!-- Transformation Sealbook: Golem Guardian -->
-		<production count="1" id="9653" />
-	</item>
-	<item>
-		<!-- Memento Mori -->
-		<ingredient count="4" id="9814" />
-		<!-- Dragon Heart -->
-		<ingredient count="4" id="9815" />
-		<!-- Earth Egg -->
-		<ingredient count="4" id="9816" />
-		<!-- Nonliving Nucleus -->
-		<ingredient count="4" id="9817" />
-		<!-- Angelic Essence -->
-		<ingredient count="4" id="9818" />
-		<!-- Adena -->
-		<ingredient count="600000" id="57" />
-		<!-- Transformation Sealbook: Inferno Drake -->
-		<production count="1" id="9654" />
-	</item>
 </list>

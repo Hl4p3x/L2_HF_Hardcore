@@ -1715,9 +1715,6 @@
         <group chance="1">
           <item id="8922" min="1" max="1" chance="100"/> <!-- Pirate Hat -->
         </group>
-        <group chance="1.0">
-          <item id="10295" min="1" max="1" chance="100"/> <!-- Transformation Sealbook: Zaken -->
-        </group>
       </death>
     </dropLists>
     <collision>
@@ -6059,9 +6056,6 @@
           <item id="959" min="1" max="1" chance="8.9552"/> <!-- Scroll: Enchant Weapon (S-Grade) -->
           <item id="960" min="1" max="1" chance="89.5522"/> <!-- Scroll: Enchant Armor (S-Grade) -->
           <item id="6577" min="1" max="1" chance="1.4926"/> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-        </group>
-        <group chance="1.0">
-          <item id="10298" min="1" max="1" chance="100"/> <!-- Transformation Sealbook: Gordon -->
         </group>
       </death>
     </dropLists>
