@@ -125,7 +125,7 @@ of this directory a little bit.
 350980008.xml -> Manor Products: Rune
 350980009.xml -> Manor Products: Schuttgart
 
-350980012.xml -> BlackSmith Lahm
+350980012.xml -> Blacksmith Lahm
 
 90002001.xml -> Castle Merchant - magic related products (hear/face gear)
 90002002.xml -> Castle Merchant - bracelets
