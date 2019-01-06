@@ -3,3 +3,4 @@ bye: Bye
 territory_owning_reward: Territory Owning Reward
 territory_owning_reward_message: Your residence produced following daily goods
 bulk_sell_failed: Bulk sell failed
+successfully_deposited_n_items: Successfully deposited $n items

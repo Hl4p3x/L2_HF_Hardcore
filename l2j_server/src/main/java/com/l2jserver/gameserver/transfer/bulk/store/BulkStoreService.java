@@ -12,6 +12,7 @@ import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.localization.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -77,7 +78,7 @@ public class BulkStoreService {
         int slots = 0;
 
         for (L2ItemInstance i : allItems) {
-            L2ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
+            L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "deposit");
             if (item == null) {
                 LOG.warn("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
                 return;
@@ -115,7 +116,7 @@ public class BulkStoreService {
         InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
         for (L2ItemInstance i : allItems) {
             // Check validity of requested item
-            L2ItemInstance oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
+            L2ItemInstance oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "deposit");
             if (oldItem == null) {
                 LOG.warn("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");
                 return;
@@ -125,7 +126,7 @@ public class BulkStoreService {
                 continue;
             }
 
-            final L2ItemInstance newItem = player.getInventory().transferItem(warehouse.getName(), i.getId(), i.getCount(), warehouse, player, manager);
+            final L2ItemInstance newItem = player.getInventory().transferItem(warehouse.getName(), i.getObjectId(), i.getCount(), warehouse, player, manager);
             if (newItem == null) {
                 LOG.warn("Error depositing a warehouse object for char " + player.getName() + " (newitem == null)");
                 continue;
@@ -147,6 +148,7 @@ public class BulkStoreService {
         StatusUpdate su = new StatusUpdate(player);
         su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
         player.sendPacket(su);
+        player.sendMessage(Strings.of(player).get("successfully_deposited_n_items").replace("$n", String.valueOf(allItems.size())));
     }
 
     public static BulkStoreService getInstance() {

@@ -3,3 +3,4 @@ bye: Пока
 territory_owning_reward: Награды за Владения
 territory_owning_reward_message: Ваша резиденция произвела следующие товары
 bulk_sell_failed: Групповая продажа неудалась
+successfully_deposited_n_items: $n предметов успешно помещены на склад
