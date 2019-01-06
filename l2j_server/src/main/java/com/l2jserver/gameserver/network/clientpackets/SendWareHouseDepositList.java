@@ -18,11 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -35,6 +30,12 @@ import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.util.Util;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
 /**
  * SendWareHouseDepositList client packet class.
@@ -208,14 +209,7 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 		}
 		
 		// Send updated item list to the player
-		if (playerIU != null)
-		{
-			player.sendPacket(playerIU);
-		}
-		else
-		{
-			player.sendPacket(new ItemList(player, false));
-		}
+		player.sendPacket(Objects.requireNonNullElseGet(playerIU, () -> new ItemList(player, false)));
 		
 		// Update current load status on player
 		StatusUpdate su = new StatusUpdate(player);

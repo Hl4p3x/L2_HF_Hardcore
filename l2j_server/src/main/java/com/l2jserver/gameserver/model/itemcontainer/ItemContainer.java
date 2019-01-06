@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.type.ItemType;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -757,4 +758,13 @@ public abstract class ItemContainer
 		final L2Item template = ItemTable.getInstance().getTemplate(itemId);
 		return (template == null) || validateWeight(template.getWeight() * count);
 	}
+
+	public List<L2ItemInstance> getAllItemsByType(ItemType itemType) {
+		return Stream.of(getItems()).filter(item -> item.getItemType().equals(itemType)).collect(Collectors.toList());
+	}
+
+	public List<L2ItemInstance> getAllSellableItemsByType(ItemType itemType) {
+		return Stream.of(getItems()).filter(itemInstance -> itemInstance.getItemType().equals(itemType) && itemInstance.getItem().getReferencePrice() > 0 && !itemInstance.isEquipped() && itemInstance.getItem().isSellable()).collect(Collectors.toList());
+	}
+
 }

@@ -10866,4 +10866,11 @@ public final class L2PcInstance extends L2Playable {
         _dwarvenRecipeBook.clear();
     }
 
+    public boolean isInSameInstanceAs(L2Object target) {
+        if (target == null) {
+            return false;
+        }
+        return getInstanceId() == target.getInstanceId();
+    }
+
 }

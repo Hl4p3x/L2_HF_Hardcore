@@ -4592,6 +4592,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		return isInsideRadius(loc.getX(), loc.getY(), loc.getZ(), radius, checkZAxis, strictCheck);
 	}
+
+    public final boolean isNotInsideRadius(ILocational loc, int radius, boolean checkZAxis, boolean strictCheck) {
+        return !isInsideRadius(loc.getX(), loc.getY(), loc.getZ(), radius, checkZAxis, strictCheck);
+    }
 	
 	/**
 	 * Check if this object is inside the given radius around the given point.

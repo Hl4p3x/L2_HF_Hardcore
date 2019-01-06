@@ -24,6 +24,8 @@ import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.*;
 import handlers.bypasshandlers.*;
+import handlers.bypasshandlers.bulk.BulkSell;
+import handlers.bypasshandlers.bulk.BulkWarehouseStore;
 import handlers.chathandlers.*;
 import handlers.communityboard.*;
 import handlers.custom.CustomAnnouncePkPvP;
@@ -199,6 +201,8 @@ public class MasterHandler
 			TutorialClose.class,
 			VoiceCommand.class,
 			Wear.class,
+				BulkSell.class,
+				BulkWarehouseStore.class
 		},
 		{
 			// Chat Handlers

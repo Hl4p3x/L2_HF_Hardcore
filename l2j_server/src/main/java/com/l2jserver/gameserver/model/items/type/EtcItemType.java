@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.model.items.type;
 
+import java.util.stream.Stream;
+
 /**
  * EtcItem Type enumerated.
  */
@@ -67,4 +69,9 @@ public enum EtcItemType implements ItemType
 	{
 		return ordinal();
 	}
+
+    public static EtcItemType of(String value) {
+        return Stream.of(values()).filter(etcItemType -> etcItemType.name().toLowerCase().equals(value.toLowerCase())).findFirst().orElse(NONE);
+    }
+
 }
