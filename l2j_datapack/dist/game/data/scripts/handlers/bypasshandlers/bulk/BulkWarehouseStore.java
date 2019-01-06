@@ -1,10 +1,14 @@
 package handlers.bypasshandlers.bulk;
 
+import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.itemcontainer.WarehouseType;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.transfer.bulk.store.BulkStoreService;
+import com.l2jserver.localization.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,7 +19,7 @@ public class BulkWarehouseStore implements IBypassHandler {
     private final static Logger LOG = LoggerFactory.getLogger(BulkWarehouseStore.class);
 
     private static final String[] COMMANDS = {
-            "deposit_bulk"
+            "bulk_deposit"
     };
 
     @Override
@@ -25,18 +29,25 @@ public class BulkWarehouseStore implements IBypassHandler {
         }
 
         StringTokenizer st = new StringTokenizer(command, " ");
-        if (st.countTokens() != 2) {
-            LOG.warn("Player {} is trying to use bulk deposit with incorrect arguments: {}", player, command);
-            return false;
-        }
 
         String action = st.nextToken();
-        if (action.toLowerCase().startsWith("deposit_bulk")) {
+        if (action.toLowerCase().equals("bulk_deposit") && st.countTokens() == 1) {
+            String warehouseType = st.nextToken();
+            String htmlText = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "./data/html/custom/bulk/bulk_deposit.html");
+            htmlText = htmlText.replaceAll("%npc_name%", target.getName());
+            htmlText = htmlText.replaceAll("%objectId%", String.valueOf(target.getObjectId()));
+            htmlText = htmlText.replaceAll("%warehouse_type%", warehouseType);
+            player.sendPacket(new NpcHtmlMessage(htmlText));
+            return true;
+        } else if (action.toLowerCase().startsWith("bulk_deposit") && st.countTokens() == 2) {
+            String warehouseType = st.nextToken();
             String itemType = st.nextToken();
-            BulkStoreService.getInstance().storeAllByType(EtcItemType.of(itemType), player);
+            BulkStoreService.getInstance().storeAllByType(EtcItemType.of(itemType), WarehouseType.of(warehouseType), player);
             return true;
         }
 
+        player.sendMessage(Strings.of(player).get("bulk_sell_failed"));
+        LOG.warn("Player {} is trying to use bulk sell with incorrect arguments: {}", player, command);
         return false;
     }
 

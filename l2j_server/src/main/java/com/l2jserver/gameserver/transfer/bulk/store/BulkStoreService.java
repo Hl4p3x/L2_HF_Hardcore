@@ -4,7 +4,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.ItemContainer;
-import com.l2jserver.gameserver.model.itemcontainer.PcWarehouse;
+import com.l2jserver.gameserver.model.itemcontainer.WarehouseType;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.type.ItemType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -24,7 +24,7 @@ public class BulkStoreService {
 
     private static final Logger LOG = LoggerFactory.getLogger(BulkStoreService.class);
 
-    public void storeAllByType(ItemType type, L2PcInstance player) {
+    public void storeAllByType(ItemType type, WarehouseType warehouseType, L2PcInstance player) {
         if (player == null) {
             return;
         }
@@ -36,12 +36,20 @@ public class BulkStoreService {
             return;
         }
 
-        final ItemContainer warehouse = player.getActiveWarehouse();
+        final ItemContainer warehouse;
+        if (warehouseType.equals(WarehouseType.PRIVATE)) {
+            warehouse = player.getWarehouse();
+        } else if (warehouseType.equals(WarehouseType.CLAN) && player.getClan() != null) {
+            warehouse = player.getClan().getWarehouse();
+        } else {
+            warehouse = null;
+        }
+
         if (warehouse == null) {
             return;
         }
 
-        final boolean isPrivate = warehouse instanceof PcWarehouse;
+        final boolean isPrivate = warehouseType.equals(WarehouseType.PRIVATE);
 
         final L2Npc manager = player.getLastFolkNPC();
         if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM()) {

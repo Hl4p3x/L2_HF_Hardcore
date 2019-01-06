@@ -36,14 +36,14 @@ public class BulkSell implements IBypassHandler {
         if (action.toLowerCase().equals("bulk_sell") && st.countTokens() == 0) {
             String htmlText = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "./data/html/custom/bulk/bulk_sell_options.html");
             htmlText = htmlText.replaceAll("%npc_name%", target.getName());
-            htmlText = htmlText.replace("%objectId%", String.valueOf(target.getObjectId()));
+            htmlText = htmlText.replaceAll("%objectId%", String.valueOf(target.getObjectId()));
             player.sendPacket(new NpcHtmlMessage(htmlText));
             return true;
         } else if (action.toLowerCase().startsWith("bulk_sell") && st.countTokens() == 1) {
             String type = st.nextToken();
             EtcItemType itemType = EtcItemType.of(type);
             String htmlText = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "./data/html/custom/bulk/bulk_sell.html");
-            htmlText = htmlText.replace("%objectId%", String.valueOf(target.getObjectId()));
+            htmlText = htmlText.replaceAll("%objectId%", String.valueOf(target.getObjectId()));
             htmlText = htmlText.replaceAll("%npc_name%", target.getName());
             htmlText = htmlText.replaceAll("%item_group_name%", type);
             htmlText = htmlText.replaceAll("%item_total_count%", String.valueOf(BulkSellService.getInstance().sellAllByTypeCount(itemType, player)));
