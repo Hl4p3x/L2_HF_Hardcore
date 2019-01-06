@@ -2,12 +2,8 @@
 	<npcs>
 		<npc>30437</npc> <!-- Rolento -->
 	</npcs>
-	<item id="1467"/> <!-- Soulshot - S grade -->
-	<item id="2514"/> <!-- Spiritshot - S grade -->
-	<item id="3952"/> <!-- Blessed Spiritshot - S grade -->
-
 	<item id="726"/> <!--Mana Drug-->
-    <item id="1835"/> <!-- Soulshot: No Grade -->
+	<item id="1835"/> <!-- Soulshot: No Grade -->
 	<item id="2509"/> <!-- Spiritshot: No Grade -->
 	<item id="3947"/> <!-- Blessed Spiritshot: No Grade -->
 
@@ -26,6 +22,10 @@
 	<item id="1466"/> <!-- Soulshot: A Grade -->
 	<item id="2513"/> <!-- Spiritshot: A Grade -->
 	<item id="3951"/> <!-- Blessed Spiritshot: A Grade -->
+
+	<item id="1467"/> <!-- Soulshot - S grade -->
+	<item id="2514"/> <!-- Spiritshot - S grade -->
+	<item id="3952"/> <!-- Blessed Spiritshot - S grade -->
 	<item id="17"/> <!-- Wooden Arrow -->
 	<item id="1341"/> <!-- Bone Arrow -->
 	<item id="1342"/> <!-- Steel Arrow -->
