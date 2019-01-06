@@ -447,11 +447,6 @@
 		<skill skillName="Protection of Alignment" skillId="757" skillLvl="1" getLevel="82" learnedByFS="true" />
 		<skill skillName="Wild Shot" skillId="790" skillLvl="1" getLevel="83" learnedByFS="true" />
 	</skillTree>
-	<!-- Inspector -->
-	<skillTree type="classSkillTree" classId="135">
-
-        <skill skillName="Final Flying Form" skillId="840" skillLvl="1" getLevel="79" learnedByFS="true" />
-	</skillTree>
 	<!-- Judicator -->
 	<skillTree type="classSkillTree" classId="136">
 		<skill skillName="Protection of Rune" skillId="755" skillLvl="1" getLevel="82" learnedByFS="true" />
