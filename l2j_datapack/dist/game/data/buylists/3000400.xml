@@ -22,8 +22,13 @@
 	<item id="1466"/> <!-- Soulshot: A Grade -->
 	<item id="2513"/> <!-- Spiritshot: A Grade -->
 	<item id="3951"/> <!-- Blessed Spiritshot: A Grade -->
+
 	<item id="17"/> <!-- Wooden Arrow -->
 	<item id="1341"/> <!-- Bone Arrow -->
+    <item id="1342"/> <!-- Steel Arrow -->
+    <item id="1343"/> <!-- Silver Arrow -->
+    <item id="1344"/> <!-- Mithril Arrow -->
+    <item id="1345"/> <!-- Shining Arrow -->
 	<item id="1060"/> <!-- Lesser Healing Potion -->
 	<item id="1831"/> <!-- Antidote -->
 	<item id="1833"/> <!-- Bandage -->
