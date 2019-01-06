@@ -32,6 +32,13 @@
 	<item id="1343"/> <!-- Silver Arrow -->
 	<item id="1344"/> <!-- Mithril Arrow -->
 	<item id="1345"/> <!-- Shining Arrow -->
+
+	<item id="9632"/> <!-- Wooden Bolt -->
+	<item id="9633"/> <!-- Bone Bolt -->
+	<item id="9634"/> <!-- Steel Bolt -->
+	<item id="9635"/> <!-- Silver Bolt -->
+	<item id="9636"/> <!-- Mithril Bolt -->
+	<item id="9637"/> <!-- Shining Bolt -->
 	<item id="1060"/> <!-- Lesser Healing Potion -->
 	<item id="1061"/> <!-- Greater Healing Potion -->
 	<item id="1831"/> <!-- Antidote -->
