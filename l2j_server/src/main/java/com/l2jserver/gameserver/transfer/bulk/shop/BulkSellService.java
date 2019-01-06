@@ -54,7 +54,7 @@ public class BulkSellService {
         L2Object target = player.getTarget();
         if (target == null ||
                 player.isNotInsideRadius(target, INTERACTION_DISTANCE, true, false) ||
-                player.isInSameInstanceAs(target)) {
+                player.isNotInSameInstanceAs(target)) {
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

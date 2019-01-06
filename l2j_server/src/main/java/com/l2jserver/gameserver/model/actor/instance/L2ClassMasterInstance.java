@@ -19,6 +19,7 @@
 package com.l2jserver.gameserver.model.actor.instance;
 
 import com.l2jserver.Config;
+import com.l2jserver.common.DecimalFormatStandart;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.datatables.ItemTable;
@@ -34,9 +35,6 @@ import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import com.l2jserver.util.StringUtil;
 
 import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
-import java.util.Locale;
 
 /**
  * This class ...
@@ -439,12 +437,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			return "<tr><td>none</td></tr>";
 		}
 
-		DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance(Locale.US);
-		DecimalFormatSymbols symbols = formatter.getDecimalFormatSymbols();
-		symbols.setGroupingSeparator('.');
-		symbols.setDecimalSeparator(',');
-		formatter.setDecimalFormatSymbols(symbols);
-
+		DecimalFormat formatter = DecimalFormatStandart.moneyFormat();
 		final StringBuilder sb = new StringBuilder();
 		for (ItemHolder holder : Config.CLASS_MASTER_SETTINGS.getRequireItems(level))
 		{
