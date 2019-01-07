@@ -2637,21 +2637,7 @@ public final class L2PcInstance extends L2Playable {
      * @return the new or updated item
      */
     public L2ItemInstance addItem(String process, int itemId, L2Object reference, boolean sendMessage) {
-        return addItem(process, itemId, 1, -1, reference, sendMessage);
-    }
-
-    /**
-     * Equivalent to {@link #addItem(String, int, long, int, L2Object, boolean)} with parameters (process, itemId, count, -1, reference, sendMessage)
-     *
-     * @param process
-     * @param itemId
-     * @param count
-     * @param reference
-     * @param sendMessage
-     * @return the new or updated item
-     */
-    public L2ItemInstance addItem(String process, int itemId, long count, L2Object reference, boolean sendMessage) {
-        return addItem(process, itemId, count, -1, reference, sendMessage);
+        return addItem(process, itemId, 1, reference, sendMessage);
     }
 
     /**
@@ -2660,12 +2646,11 @@ public final class L2PcInstance extends L2Playable {
      * @param process      : String Identifier of process triggering this action
      * @param itemId       : int Item Identifier of the item to be added
      * @param count        : long Quantity of items to be added
-     * @param enchantLevel : int Enchant of the item; -1 to not modify on existing items, for new items use the default enchantLevel when -1
      * @param reference    : L2Object Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage  : boolean Specifies whether to send message to Client about this action
      * @return the new or updated item
      */
-    public L2ItemInstance addItem(String process, int itemId, long count, int enchantLevel, L2Object reference, boolean sendMessage) {
+    public L2ItemInstance addItem(String process, int itemId, long count, L2Object reference, boolean sendMessage) {
         if (count > 0) {
             final L2Item item = ItemTable.getInstance().getTemplate(itemId);
             if (item == null) {
@@ -2709,6 +2694,10 @@ public final class L2PcInstance extends L2Playable {
                 }
             } else {
                 // Add the item to inventory
+                int enchantLevel = -1;
+                if (RandomEnchantmentHelper.canApplyRandomDropEnchant(item)) {
+                    enchantLevel = RandomEnchantmentHelper.rollRandomDropEnchant();
+                }
                 L2ItemInstance createdItem = _inventory.addItem(process, itemId, count, enchantLevel, this, reference);
 
                 // If over capacity, drop the item

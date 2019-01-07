@@ -1002,4 +1002,11 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		return Objects.hash(_itemId);
 	}
 
+	/**
+	 * @return {@code true} if item is an Armor, {@code false} otherwise.
+	 */
+	public boolean isArmor() {
+		return getType2() == TYPE2_SHIELD_ARMOR || getType2() == TYPE2_ACCESSORY;
+	}
+
 }
