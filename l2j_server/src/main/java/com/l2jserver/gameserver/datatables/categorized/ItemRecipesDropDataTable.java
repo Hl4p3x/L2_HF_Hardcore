@@ -130,7 +130,7 @@ public class ItemRecipesDropDataTable implements EquipmentProvider<L2RecipeList>
                     .stream()
                     .map(gradedItem -> {
                         Optional<L2RecipeList> recipeOption = RecipeData.getInstance().getRecipeByProductionItem(gradedItem.getItemId());
-                        if (recipeOption.isEmpty() && (!gradedItem.getGradeInfo().getGrade().equals(Grade.NG) || !RECIPELESS_ITEMS.contains(gradedItem.getItemId()))) {
+                        if (recipeOption.isEmpty() && !gradedItem.getGradeInfo().getGrade().equals(Grade.NG) && !RECIPELESS_ITEMS.contains(gradedItem.getItemId())) {
                             LOG.warn("Could not find recipe for item {}", gradedItem);
                         }
                         return recipeOption;
