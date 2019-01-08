@@ -6,6 +6,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvider;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.GradeInfoHelper;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
 import com.l2jserver.gameserver.model.items.parts.ItemPart;
@@ -74,15 +75,15 @@ public class ItemPartsDropDataTable implements EquipmentProvider<ItemPart> {
     }
 
     public List<ItemPart> getWeaponsByGrade(GradeInfo gradeInfo) {
-        return weaponPartsMap.getOrDefault(gradeInfo, new ArrayList<>());
+        return GradeInfoHelper.findAllByGradeInfo(gradeInfo, weaponPartsMap);
     }
 
     public List<ItemPart> getArmorByGrade(GradeInfo gradeInfo) {
-        return armorPartsMap.getOrDefault(gradeInfo, new ArrayList<>());
+        return GradeInfoHelper.findAllByGradeInfo(gradeInfo, armorPartsMap);
     }
 
     public List<ItemPart> getJewelsByGrade(GradeInfo gradeInfo) {
-        return jewelPartsMap.getOrDefault(gradeInfo, new ArrayList<>());
+        return GradeInfoHelper.findAllByGradeInfo(gradeInfo, jewelPartsMap);
     }
 
     public Set<Integer> getAllItemPartsIds() {

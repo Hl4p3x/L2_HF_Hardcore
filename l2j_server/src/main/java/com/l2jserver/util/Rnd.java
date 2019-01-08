@@ -335,13 +335,13 @@ public final class Rnd
 	}
 
 	public static final double getDouble(final int n) {
-        return rnd.get(n * 100) / 100D;
+		return rnd.get(n * 100) / 100D;
 	}
 
 	public static boolean rollAgainst(double limit) {
 		return Rnd.getDouble(100) <= limit;
 	}
-	
+
 	/**
 	 * Gets a random integer number from min(inclusive) to max(inclusive)
 	 * @param min The minimum value

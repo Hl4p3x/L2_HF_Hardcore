@@ -67,7 +67,7 @@ public class DynamicDropTable {
 
     public <T> DynamicDropEquipmentCategory convertEquipmentCategory(int level, EquipmentProvider<T> equipmentProvider, EquipmentDropStats equipmentDropStats, Function<T, Integer> idExtractor) {
         Optional<ItemGradeRange> itemGradeRange = ItemGradeRange.byLevel(level);
-        if (!itemGradeRange.isPresent()) {
+        if (itemGradeRange.isEmpty()) {
             return DynamicDropEquipmentCategory.empty();
         }
 
@@ -85,7 +85,7 @@ public class DynamicDropTable {
             Function<T, Integer> idExtractor
     ) {
         Optional<DropStats> dropStatsOptional = findDropStats.apply(gradeInfo);
-        if (!dropStatsOptional.isPresent()) {
+        if (dropStatsOptional.isEmpty()) {
             LOG.warn("Could not find drop data for {}", gradeInfo);
             return DynamicDropCategory.empty();
         }

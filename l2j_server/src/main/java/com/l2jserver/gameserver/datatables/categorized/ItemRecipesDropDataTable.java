@@ -3,6 +3,7 @@ package com.l2jserver.gameserver.datatables.categorized;
 import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvider;
 import com.l2jserver.gameserver.model.L2RecipeList;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.GradeInfoHelper;
 import com.l2jserver.gameserver.model.items.graded.Grade;
 import com.l2jserver.gameserver.model.items.graded.GradeInfo;
 import com.l2jserver.gameserver.model.items.graded.GradedItem;
@@ -149,15 +150,15 @@ public class ItemRecipesDropDataTable implements EquipmentProvider<L2RecipeList>
     }
 
     public List<L2RecipeList> getWeaponsByGrade(GradeInfo gradeInfo) {
-        return weaponRecipesByGrade.getOrDefault(gradeInfo, new ArrayList<>());
+        return GradeInfoHelper.findAllByGradeInfo(gradeInfo, weaponRecipesByGrade);
     }
 
     public List<L2RecipeList> getArmorByGrade(GradeInfo gradeInfo) {
-        return armorRecipesByGrade.getOrDefault(gradeInfo, new ArrayList<>());
+        return GradeInfoHelper.findAllByGradeInfo(gradeInfo, armorRecipesByGrade);
     }
 
     public List<L2RecipeList> getJewelsByGrade(GradeInfo gradeInfo) {
-        return jewelRecipesByGrade.getOrDefault(gradeInfo, new ArrayList<>());
+        return GradeInfoHelper.findAllByGradeInfo(gradeInfo, jewelRecipesByGrade);
     }
 
     public static ItemRecipesDropDataTable getInstance() {
