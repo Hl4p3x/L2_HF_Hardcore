@@ -194,10 +194,10 @@ mobs:
         chance: 9.0
         count: "1"
       s80-top:
-        chance: 5.0
+        chance: 7.0
         count: "1"
       s84-low:
-        chance: 2.0
+        chance: 4.5
         count: "1"
     armor:
       ng:
@@ -222,10 +222,10 @@ mobs:
         chance: 10.0
         count: "1"
       s80-top:
-        chance: 7.0
+        chance: 8.0
         count: "1"
       s84-low:
-        chance: 5.0
+        chance: 5.5
         count: "1"
     jewels:
       ng:
@@ -250,10 +250,10 @@ mobs:
         chance: 11.0
         count: "1"
       s80-top:
-        chance: 7.0
+        chance: 8.5
         count: "1"
       s84-low:
-        chance: 5.0
+        chance: 6.5
         count: "1"
   resources:
     drop:
