@@ -1,3 +1,7 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '4.0.3'
+}
+
 apply plugin: 'java'
 apply plugin: 'distribution'
 apply plugin: 'eclipse'
@@ -13,7 +17,6 @@ repositories {
 
 dependencies {
     compile project(':l2j_scripting_engine')
-    runtime project(':l2j_scripting_engine')
 
     compile 'com.mchange:c3p0:0.9.5.2'
     compile 'com.jolbox:bonecp:0.8.0.RELEASE'
@@ -55,6 +58,9 @@ def generalManifest = manifest {
             'Class-Path': configurations.runtime.collect { '../libs/' + it.name }.join(' '))
 }
 
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
+
 jar {
     archiveName = 'l2jserver.jar'
     exclude('**/dbinstaller/**')
@@ -65,12 +71,9 @@ jar {
         from(generalManifest)
         attributes('Main-Class': 'com.l2jserver.gameserver.GameServer')
     }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
 }
 
-task loginJar(type: Jar, dependsOn: classes) {
+task loginJar(type: ShadowJar, dependsOn: classes) {
     from(sourceSets.main.output)
     archiveName = 'l2jlogin.jar'
     exclude('**/dbinstaller/**')
@@ -79,12 +82,10 @@ task loginJar(type: Jar, dependsOn: classes) {
         from(generalManifest)
         attributes('Main-Class': 'com.l2jserver.loginserver.L2LoginServer')
     }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
+    configurations = [project.configurations.runtimeClasspath]
 }
 
-task configuratorJar(type: Jar, dependsOn: classes) {
+task configuratorJar(type: ShadowJar, dependsOn: classes) {
     from(sourceSets.main.output)
     archiveName = 'L2J_Configurator.jar'
     include('**/configurator/**')
@@ -105,12 +106,11 @@ task configuratorJar(type: Jar, dependsOn: classes) {
         from(generalManifest)
         attributes('Main-Class': 'com.l2jserver.tools.configurator.ConfigUserInterface')
     }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
+    configurations = [project.configurations.runtimeClasspath]
+
 }
 
-task dbInstLsJar(type: Jar, dependsOn: classes) {
+task dbInstLsJar(type: ShadowJar, dependsOn: classes) {
     from(sourceSets.main.output)
     archiveName = 'dbinst_ls.jar'
     include '**/dbinstaller/**'
@@ -122,12 +122,10 @@ task dbInstLsJar(type: Jar, dependsOn: classes) {
         from(generalManifest)
         attributes('Main-Class': 'com.l2jserver.tools.dbinstaller.LauncherLS')
     }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
+    configurations = [project.configurations.runtimeClasspath]
 }
 
-task dbInstGsJar(type: Jar, dependsOn: classes) {
+task dbInstGsJar(type: ShadowJar, dependsOn: classes) {
     from(sourceSets.main.output)
     archiveName = 'dbinst_gs.jar'
     include('**/dbinstaller/**')
@@ -139,9 +137,7 @@ task dbInstGsJar(type: Jar, dependsOn: classes) {
         from(generalManifest)
         attributes 'Main-Class': 'com.l2jserver.tools.dbinstaller.LauncherGS'
     }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
+    configurations = [project.configurations.runtimeClasspath]
 }
 
 artifacts {

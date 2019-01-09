@@ -18,18 +18,13 @@
  */
 package com.l2jserver.tools.dbinstaller.util.mysql;
 
+import javax.swing.*;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Formatter;
 import java.util.Properties;
 import java.util.TimeZone;
-
-import javax.swing.JOptionPane;
 
 /**
  * @author mrTJO
@@ -42,7 +37,7 @@ public class MySqlConnect
 	{
 		try (Formatter form = new Formatter())
 		{
-			String url = form.format("jdbc:mysql://%s:%s", host, port).toString();
+			String url = form.format("jdbc:mariadb://%s:%s", host, port).toString();
 			Driver driver = DriverManager.getDriver(url);
 			Properties info = new Properties();
 			info.put("user", user);
