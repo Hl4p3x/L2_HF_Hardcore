@@ -101,8 +101,8 @@ public class CustomHomeBoard implements IParseBoardHandler {
 
             List<CommunityBuffList> presets = DAOFactory.getInstance().getCommunityBuffListDao().findAllCommunityBuffSets(player.getObjectId());
             List<String> buffPresetNames = presets.stream().map(CommunityBuffList::getName).collect(Collectors.toList());
-            html = html.replace("%single_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_DEFAULT_PRESET_PRICE));
-            html = html.replace("%preset_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_SINGLE_BUFF_PRICE));
+            html = html.replace("%single_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_SINGLE_BUFF_PRICE));
+            html = html.replace("%preset_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_DEFAULT_PRESET_PRICE));
 
             html = html.replace("%user_buff_presets%", String.join(";", buffPresetNames));
             html = html.replace("%buff_list%", BuffCategoriesRender.renderBuffCategoriesList("list_buff", player));
