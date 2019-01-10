@@ -93,10 +93,7 @@ public class CustomHomeBoard implements IParseBoardHandler {
             String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/CommunityBoard/buff.html");
 
             if (Config.COMMUNITY_RESTORE_ENABLED) {
-                String healButton = "<button value=\"Restore CP/HP/MP\"" +
-                        "action=\"bypass -h _bbs_buff restore $buff_target\"" +
-                        "width=120" +
-                        "height=22 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
+                String healButton = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/CommunityBoard/restore_button.html");
                 html = html.replace("%restore_button%", healButton);
             } else {
                 html = html.replace("%restore_button%", "");
