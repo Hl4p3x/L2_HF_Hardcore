@@ -97,10 +97,6 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 			return;
 		}
 
-		if (LOG.isDebugEnabled()) {
-			LOG.debug("Player {} requested movement to {} {} {} from {} {} {}", _targetX, _targetY, _targetZ, _originX, _originY, _originZ);
-		}
-		
 		// Correcting targetZ from floor level to head level (?)
 		// Client is giving floor level as targetZ but that floor level doesn't
 		// match our current geodata and teleport coords as good as head level!

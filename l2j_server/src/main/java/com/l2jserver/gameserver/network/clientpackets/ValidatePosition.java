@@ -67,11 +67,6 @@ public class ValidatePosition extends L2GameClientPacket
 		final int realY = activeChar.getY();
 		int realZ = activeChar.getZ();
 
-		if (LOG.isDebugEnabled()) {
-			LOG.debug("Validate position Client: {} {} {} heading {} ", _x, _y, _z, _heading);
-			LOG.debug("Validate position Server: {} {} {} heading {}", realX, realY, realZ, activeChar.getHeading());
-		}
-		
 		if ((_x == 0) && (_y == 0))
 		{
 			if (realX != 0)
