@@ -8,6 +8,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jserver.localization.Strings;
 import handlers.communityboard.custom.*;
 import handlers.communityboard.custom.bufflists.BuffList;
 import org.slf4j.Logger;
@@ -31,7 +32,12 @@ public class BuffHandlerAction implements BoardAction {
     public ProcessResult process(L2PcInstance player, ActionArgs args) {
         if (args.getArgs().size() != 3) {
             LOG.warn("Player {} sent and incorrect buff request", player);
-            return ProcessResult.failure("Incorrect buff request");
+            return ProcessResult.failure(Strings.of(player).get("invalid_buff_request"));
+        }
+
+        ProcessResult checkResult = BuffCondition.checkCondition(player);
+        if (checkResult.isFailure()) {
+            return checkResult;
         }
 
         String buffCategory = args.getArgs().get(0);
@@ -40,15 +46,15 @@ public class BuffHandlerAction implements BoardAction {
         String targetString = args.getArgs().get(2);
 
         Optional<L2Character> targetOption = TargetHelper.parseTarget(player, targetString);
-        if (!targetOption.isPresent()) {
+        if (targetOption.isEmpty()) {
             LOG.warn("Player {} tried to use buff on an invalid target {}", player, targetString);
-            return ProcessResult.failure("Invalid target " + targetString);
+            return ProcessResult.failure(Strings.of(player).get("invalid_target_n").replace("$n", targetString));
         }
 
         BuffList categoryBuffs = buffMap.get(buffCategory);
         Optional<SkillHolder> buffHolder = categoryBuffs.findBySkillId(skillId);
-        if (!buffHolder.isPresent()) {
-            return ProcessResult.failure("This buff is not available");
+        if (buffHolder.isEmpty()) {
+            return ProcessResult.failure(Strings.of(player).get("this_buff_is_not_available"));
         }
 
         ProcessResult paymentResult = PaymentHelper.payForService(player, Config.COMMUNITY_SINGLE_BUFF_PRICE);

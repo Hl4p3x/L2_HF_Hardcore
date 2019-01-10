@@ -2,6 +2,7 @@ package handlers.communityboard.custom;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.localization.Strings;
 
 public class PaymentHelper {
 
@@ -14,7 +15,7 @@ public class PaymentHelper {
         if (result) {
             return ProcessResult.success();
         } else {
-            return ProcessResult.failure("Not enough Adena");
+            return ProcessResult.failure(Strings.of(player).get("not_enough_adena"));
         }
     }
 

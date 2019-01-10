@@ -13,12 +13,12 @@
                     <table width="350">
                         <tr>
                             <td>
-                                <center>Buff Lists</center>
+                                <center>Список баффов</center>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <center><font color="LEVEL">%single_buff_price% each</font></center>
+                                <center><font color="LEVEL">%single_buff_price% каждый</font></center>
                             </td>
                         </tr>
                     </table>
@@ -28,12 +28,12 @@
                     <table width="350">
                         <tr>
                             <td>
-                                <center>Buff Presets</center>
+                                <center>Наборы баффов</center>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <center><font color="LEVEL">%preset_buff_price% each</font></center>
+                                <center><font color="LEVEL">%preset_buff_price% каждый</font></center>
                             </td>
                         </tr>
                     </table>
@@ -41,36 +41,36 @@
                     <table width="350" align=center>
                         <tr>
                             <td align=center>
-                                <button value="Tank Buff Preset"
+                                <button value="Баффы для Танка"
                                         action="bypass -h _bbs_buff tank_buff $buff_target"
                                         width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
                             </td>
                             <td align=center>
-                                <button value="Tank Songs/Dances"
+                                <button value="Танцы/Песни для Танка"
                                         action="bypass -h _bbs_buff tank_song_dance $buff_target"
                                         width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
                             </td>
                         </tr>
                         <tr>
                             <td align=center>
-                                <button value="Fighter Buff Preset"
+                                <button value="Баффы для Воина"
                                         action="bypass -h _bbs_buff fighter_buff $buff_target"
                                         width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
                             </td>
                             <td align=center>
-                                <button value="Fighter Songs/Dances"
+                                <button value="Танцы/Песни для Воина"
                                         action="bypass -h _bbs_buff fighter_song_dance $buff_target"
                                         width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
                             </td>
                         </tr>
                         <tr>
                             <td align=center>
-                                <button value="Mage Buff Preset"
+                                <button value="Баффы для Мага"
                                         action="bypass -h _bbs_buff mage_buff $buff_target"
                                         width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
                             </td>
                             <td align=center>
-                                <button value="Mage Songs/Dances"
+                                <button value="Танцы/Песни для Мага"
                                         action="bypass -h _bbs_buff mage_song_dance $buff_target"
                                         width=150 height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
                             </td>
@@ -80,10 +80,10 @@
                     <table width="350">
                         <tr>
                             <td align=center>
-                                Preset
+                                Набор
                             </td>
                             <td align=center>
-                                Target
+                                Цель
                             </td>
                         </tr>
                         <tr>
@@ -102,7 +102,7 @@
                                 <table>
                                     <tr>
                                         <td align=center>
-                                            <button value="Buff Selected"
+                                            <button value="Наложить выбранное"
                                                     action="bypass -h _bbs_buff buff_preset $buff_preset $buff_target"
                                                     width=120
                                                     height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
@@ -111,7 +111,7 @@
                                             %restore_button%
                                         </td>
                                         <td align=center>
-                                            <button value="Cancel Buffs"
+                                            <button value="Убрать баффы"
                                                     action="bypass -h _bbs_buff cancel $buff_target"
                                                     width=120
                                                     height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
@@ -119,19 +119,19 @@
                                     </tr>
                                     <tr>
                                         <td align=center>
-                                            <button value="Create Preset"
+                                            <button value="Создать набор"
                                                     action="bypass -h _bbs_buff create_preset_dialog"
                                                     width=120
                                                     height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
                                         </td>
                                         <td align=center>
-                                            <button value="Update Preset"
+                                            <button value="Редактировать набор"
                                                     action="bypass -h _bbs_buff update_preset $buff_preset $buff_target"
                                                     width=120
                                                     height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">
                                         </td>
                                         <td align=center>
-                                            <button value="Delete Preset"
+                                            <button value="Удалить набор"
                                                     action="bypass -h _bbs_buff delete_preset $buff_preset"
                                                     width=120
                                                     height=22 back="L2UI_ct1.button_df" fore="L2UI_ct1.button_df">

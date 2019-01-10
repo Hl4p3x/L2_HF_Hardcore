@@ -4,3 +4,36 @@ territory_owning_reward: Territory Owning Reward
 territory_owning_reward_message: Your residence produced following daily goods
 bulk_sell_failed: Bulk sell failed
 successfully_deposited_n_items: Successfully deposited $n items
+not_enough_adena: Not enough Adena
+you_cannot_do_this_while_being_dead: You cannot do this while being dead
+you_cannot_do_this_while_being_in_olympiad: You cannot do this while being in Olympiad
+you_cannot_do_this_because_you_are_busy: You cannot do this because you are busy
+you_cannot_do_this_while_in_pvp_mode: You cannot do this while in PvP mode
+you_cannot_do_this_while_flying: You cannot do this while flying
+you_cannot_do_this_in_combat: You cannot do this in combat
+invalid_update_preset_request: Invalid update preset request
+preset_name_cannot_be_empty_or_contain_whitespaces: Preset name cannot be empty or contain whitespaces
+error_occurred_could_not_retrieve_buff_preset: Error occurred, could not retrieve buff preset
+could_not_show_available_preset_buff_list: Could not show available preset buff list
+no_action_route_specified: No action route specified
+no_action_named_n_is_available: No action named $n is available
+invalid_remove_preset_buff_request: Invalid remove preset buff request
+preset_id_cannot_be_empty: Preset id cannot be empty
+buff_id_cannot_be_empty: Buff id cannot be empty
+invalid_preset_buff_request: Invalid preset buff request
+invalid_target_n: Invalid target $n
+could_not_buff_your_custom_preset: Could not buff your custom preset
+could_not_delete_preset_n: Could not delete preset $n
+preset_name: Preset Name
+create: Create
+cancel: Cancel
+you_already_have_a_preset_named_n: You already have a preset named $n
+invalid_buff_request: Invalid buff request
+this_buff_is_not_available: This buff is not available
+restore_is_disabled: Restore is disabled
+invalid_restore_request: Invalid restore request
+can_only_restore_inside_peace_zone: Can only restore inside peace zone
+invalid_request: Invalid request
+category_name_cannot_be_empty: Category name cannot be empty
+preset_name_cannot_be_empty: Preset name cannot be empty
+you_have_reached_maximum_number_of_buffs_in_a_preset: You have reached maximum number of buffs in a preset!

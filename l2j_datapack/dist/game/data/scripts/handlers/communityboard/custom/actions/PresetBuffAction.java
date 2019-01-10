@@ -8,6 +8,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jserver.localization.Strings;
 import handlers.communityboard.custom.*;
 import handlers.communityboard.custom.bufflists.Buffs;
 import org.slf4j.Logger;
@@ -29,13 +30,13 @@ public class PresetBuffAction implements BoardAction {
     public ProcessResult process(L2PcInstance player, ActionArgs args) {
         if (args.getArgs().size() != 1) {
             LOG.warn("{} is trying to use buff preset with invalid args number {}", player, args.getArgs().size());
-            return ProcessResult.failure("Invalid preset buff request");
+            return ProcessResult.failure(Strings.of(player).get("invalid_preset_buff_request"));
         }
 
         Optional<L2Character> targetOption = TargetHelper.parseTarget(player, args.getArgs().get(0));
-        if (!targetOption.isPresent()) {
+        if (targetOption.isEmpty()) {
             LOG.warn("Player {} tried to use buff on an invalid target {}", player, args.getArgs().get(0));
-            return ProcessResult.failure("Invalid target " + args.getArgs().get(0));
+            return ProcessResult.failure(Strings.of(player).get("invalid_target_n").replace("$n", args.getArgs().get(0)));
         }
 
         ProcessResult checkResult = BuffCondition.checkCondition(player);

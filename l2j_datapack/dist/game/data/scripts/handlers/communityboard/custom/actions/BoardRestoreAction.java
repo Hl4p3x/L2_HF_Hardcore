@@ -8,6 +8,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jserver.localization.Strings;
 import handlers.communityboard.custom.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,18 +22,20 @@ public class BoardRestoreAction implements BoardAction {
     @Override
     public ProcessResult process(L2PcInstance player, ActionArgs args) {
         if (!Config.COMMUNITY_RESTORE_ENABLED) {
-            return ProcessResult.failure("Restore is disabled");
+            return ProcessResult.failure(Strings.of(player).get("restore_is_disabled"));
         }
 
         if (args.getArgs().size() != 1) {
             LOG.warn("{} is trying to use restore with invalid args number {}", player, args.getArgs().size());
-            return ProcessResult.failure("Invalid restore request");
+            return ProcessResult.failure(Strings.of(player).get("invalid_restore_request"));
         }
 
-        Optional<L2Character> targetOption = TargetHelper.parseTarget(player, args.getArgs().get(0));
-        if (!targetOption.isPresent()) {
-            LOG.warn("Player {} tried to use restore on an invalid target {}", player, args.getArgs().get(0));
-            return ProcessResult.failure("Invalid target " + args.getArgs().get(0));
+        String targetString = args.getArgs().get(0);
+        Optional<L2Character> targetOption = TargetHelper.parseTarget(player, targetString);
+        if (targetOption.isEmpty()) {
+            LOG.warn("Player {} tried to use restore on an invalid target {}", player, targetString);
+            return ProcessResult.failure(Strings.of(player).get("invalid_target_n").replace("$n", targetString));
+
         }
 
         ProcessResult checkResult = BuffCondition.checkCondition(player);
@@ -41,7 +44,7 @@ public class BoardRestoreAction implements BoardAction {
         }
 
         if (!player.isInsideZone(ZoneId.PEACE)) {
-            ProcessResult.failure("Can only restore inside peace zone");
+            ProcessResult.failure(Strings.of(player).get("can_only_restore_inside_peace_zone"));
         }
 
         ProcessResult paymentResult = PaymentHelper.payForService(player, Config.COMMUNITY_RESTORE_PRICE);

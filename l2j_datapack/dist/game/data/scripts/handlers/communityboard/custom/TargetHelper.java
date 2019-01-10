@@ -13,7 +13,7 @@ public class TargetHelper {
         }
 
         Optional<Target> targetOption = Target.parse(targetArg);
-        if (!targetOption.isPresent()) {
+        if (targetOption.isEmpty()) {
             return Optional.empty();
         }
 

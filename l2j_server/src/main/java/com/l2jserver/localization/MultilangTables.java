@@ -60,7 +60,12 @@ public class MultilangTables implements Loadable {
     public StringsTable get(Language language) {
         StringsTable stringsTable = stringTables.get(language);
         if (stringsTable == null) {
-            throw new IllegalArgumentException("Language " + language + " is not supported");
+            StringsTable defaultTable = stringTables.get(Language.defaultLanguage());
+            if (defaultTable != null) {
+                return defaultTable;
+            } else {
+                throw new IllegalArgumentException("Language " + language + " is not supported and default language not available");
+            }
         } else {
             return stringsTable;
         }

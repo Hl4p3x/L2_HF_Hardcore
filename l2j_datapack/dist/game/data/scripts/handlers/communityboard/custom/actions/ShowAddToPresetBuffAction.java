@@ -7,6 +7,7 @@ import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.localization.Strings;
 import handlers.communityboard.custom.ActionArgs;
 import handlers.communityboard.custom.BoardAction;
 import handlers.communityboard.custom.ProcessResult;
@@ -34,15 +35,15 @@ public class ShowAddToPresetBuffAction implements BoardAction {
     @Override
     public ProcessResult process(L2PcInstance player, ActionArgs args) {
         if (args.isEmpty()) {
-            LOG.warn("Could not ");
-            return ProcessResult.failure("Could not show available preset buff list");
+            LOG.warn("Could not show buff list because preset name is missing");
+            return ProcessResult.failure(Strings.of(player).get("could_not_show_available_preset_buff_list"));
         }
         String presetName = args.getArgs().get(0);
 
         Optional<CommunityBuffList> communityBuffList = DAOFactory.getInstance().getCommunityBuffListDao().findSingleCommunityBuffSet(player.getObjectId(), presetName);
-        if (!communityBuffList.isPresent()) {
+        if (communityBuffList.isEmpty()) {
             LOG.warn("Player {} tried to access list {} that does not belong to him", player, presetName);
-            return ProcessResult.failure("Could not show available preset buff list");
+            return ProcessResult.failure(Strings.of(player).get("could_not_show_available_preset_buff_list"));
         }
 
         Set<SkillHolder> currentPresetBuffs = new HashSet<>(communityBuffList.get().getSkills());

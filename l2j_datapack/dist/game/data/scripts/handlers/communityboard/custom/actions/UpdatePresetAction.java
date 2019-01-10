@@ -7,6 +7,7 @@ import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.localization.Strings;
 import com.l2jserver.util.StringUtil;
 import handlers.communityboard.custom.ActionArgs;
 import handlers.communityboard.custom.BoardAction;
@@ -28,21 +29,21 @@ public class UpdatePresetAction implements BoardAction {
     public ProcessResult process(L2PcInstance player, ActionArgs args) {
         if (args.isEmpty()) {
             LOG.warn("Invalid update preset request from {} with args {}", player, args);
-            ProcessResult.failure("Invalid update preset request");
+            ProcessResult.failure(Strings.of(player).get("invalid_update_preset_request"));
         }
 
         String presetName = args.getArgs().get(0);
         if (StringUtil.isBlank(presetName) || StringUtil.hasWhitespaces(presetName)) {
-            ProcessResult.failure("Preset name cannot be empty or contain whitespaces");
+            ProcessResult.failure(Strings.of(player).get("preset_name_cannot_be_empty_or_contain_whitespaces"));
         }
 
 
         Optional<CommunityBuffList> communityBuffListOption = DAOFactory.getInstance()
                     .getCommunityBuffListDao()
                     .findSingleCommunityBuffSet(player.getObjectId(), presetName);
-        if (!communityBuffListOption.isPresent()) {
-            LOG.warn("Player {} is trying to retrieve preset [{}] that does not belong to him", player, presetName);
-            return ProcessResult.failure("Error occurred, could not retrieve buff preset");
+        if (communityBuffListOption.isEmpty()) {
+            LOG.warn("Player {} is trying to retrieve preset [{}] that does not exist or does not belong to him", player, presetName);
+            return ProcessResult.failure(Strings.of(player).get("error_occurred_could_not_retrieve_buff_preset"));
         }
 
         CommunityBuffList communityBuffList = communityBuffListOption.get();

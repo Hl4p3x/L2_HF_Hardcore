@@ -4,6 +4,7 @@ import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
 import com.l2jserver.gameserver.data.sql.impl.CommunityBuffList;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.localization.Strings;
 import com.l2jserver.util.StringUtil;
 import handlers.communityboard.custom.ActionArgs;
 import handlers.communityboard.custom.BoardAction;
@@ -22,11 +23,11 @@ public class CreatePresetAction implements BoardAction {
     public ProcessResult process(L2PcInstance player, ActionArgs args) {
         if (args.isEmpty()) {
             LOG.warn("Invalid create preset request from {} with args {}", player, args);
-            ProcessResult.failure("Invalid create preset request");
+            return ProcessResult.failure(Strings.of(player).get("invalid_preset_buff_request"));
         }
         String presetName = args.getArgs().get(0);
         if (StringUtil.isBlank(presetName) || StringUtil.hasWhitespaces(presetName)) {
-            ProcessResult.failure("Preset name cannot be empty or contain whitespaces");
+            ProcessResult.failure(Strings.of(player).get("preset_name_cannot_be_empty_or_contain_whitespaces"));
         }
 
         CommunityBuffList communityBuffList = new CommunityBuffList(player.getObjectId(), presetName);
@@ -34,9 +35,9 @@ public class CreatePresetAction implements BoardAction {
             DAOFactory.getInstance().getCommunityBuffListDao().createCommunityBuffList(communityBuffList);
         } catch (UnableToExecuteStatementException e) {
             if (e.getCause() instanceof SQLIntegrityConstraintViolationException) {
-                return ProcessResult.failure("You already have a preset named " + presetName);
+                return ProcessResult.failure(Strings.of(player).get("you_already_have_a_preset_named_n").replace("$n", presetName));
             } else {
-                return ProcessResult.failure("Error occurred, could not create ");
+                return ProcessResult.failure(Strings.of(player).get("error_occurred_could_not_retrieve_buff_preset"));
             }
         }
         CommunityBoardHandler.getInstance().handleParseCommand("_bbs_buff update_preset " + presetName, player);

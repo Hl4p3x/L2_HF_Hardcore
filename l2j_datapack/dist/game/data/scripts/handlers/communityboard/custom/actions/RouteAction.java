@@ -1,6 +1,7 @@
 package handlers.communityboard.custom.actions;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.localization.Strings;
 import handlers.communityboard.custom.ActionArgs;
 import handlers.communityboard.custom.BoardAction;
 import handlers.communityboard.custom.ProcessResult;
@@ -22,12 +23,13 @@ public class RouteAction implements BoardAction {
     @Override
     public ProcessResult process(L2PcInstance player, ActionArgs args) {
         if (args.getArgs().isEmpty()) {
-            return ProcessResult.failure("No action route specified");
+            return ProcessResult.failure(Strings.of(player).get("no_action_route_specified"));
         }
 
-        BoardAction boardAction = actions.get(args.getArgs().get(0));
+        String actionName = args.getArgs().get(0);
+        BoardAction boardAction = actions.get(actionName);
         if (boardAction == null) {
-            return ProcessResult.failure("No action named " + args.getActionName() + " is available");
+            return ProcessResult.failure(Strings.of(player).get("no_action_named_n_is_available").replace("$n", actionName));
         }
 
         return boardAction.process(player, ActionArgs.subActionArgs(args));

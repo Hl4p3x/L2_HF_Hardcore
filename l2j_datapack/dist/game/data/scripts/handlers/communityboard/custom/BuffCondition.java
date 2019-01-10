@@ -1,32 +1,33 @@
 package handlers.communityboard.custom;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.localization.Strings;
 
 public class BuffCondition {
 
     public static ProcessResult checkCondition(L2PcInstance player) {
         if (player.isAlikeDead()) {
-            return ProcessResult.failure("You cannot do this while being dead");
+            return ProcessResult.failure(Strings.of(player).get("you_cannot_do_this_while_being_dead"));
         }
 
         if (player.isInOlympiadMode()) {
-            return ProcessResult.failure("You cannot do this while being in Olympiad");
+            return ProcessResult.failure(Strings.of(player).get("you_cannot_do_this_while_being_in_olympiad"));
         }
 
         if (player.isAttackingDisabled() || player.isCastingNow() || player.isCastingSimultaneouslyNow()) {
-            return ProcessResult.failure("You cannot do this because you are busy");
+            return ProcessResult.failure(Strings.of(player).get("you_cannot_do_this_because_you_are_busy"));
         }
 
         if (player.isPvpFlagged()) {
-            return ProcessResult.failure("You cannot do this while in PvP mode");
+            return ProcessResult.failure(Strings.of(player).get("you_cannot_do_this_while_in_pvp_mode"));
         }
 
         if (player.isFlying()) {
-            return ProcessResult.failure("You cannot do this while flying");
+            return ProcessResult.failure(Strings.of(player).get("you_cannot_do_this_while_flying"));
         }
 
         if (player.isInCombat()) {
-            return ProcessResult.failure("You cannot do this in combat");
+            return ProcessResult.failure(Strings.of(player).get("you_cannot_do_this_in_combat"));
         }
 
         return ProcessResult.success();

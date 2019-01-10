@@ -1,6 +1,7 @@
 package handlers.communityboard;
 
 import com.l2jserver.Config;
+import com.l2jserver.common.DecimalFormatStandart;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
 import com.l2jserver.gameserver.data.sql.impl.CommunityBuffList;
@@ -103,6 +104,9 @@ public class CustomHomeBoard implements IParseBoardHandler {
 
             List<CommunityBuffList> presets = DAOFactory.getInstance().getCommunityBuffListDao().findAllCommunityBuffSets(player.getObjectId());
             List<String> buffPresetNames = presets.stream().map(CommunityBuffList::getName).collect(Collectors.toList());
+            html = html.replace("%single_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_DEFAULT_PRESET_PRICE));
+            html = html.replace("%preset_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_SINGLE_BUFF_PRICE));
+
             html = html.replace("%user_buff_presets%", String.join(";", buffPresetNames));
             html = html.replace("%buff_list%", BuffCategoriesRender.renderBuffCategoriesList("list_buff", player));
 
@@ -111,7 +115,7 @@ public class CustomHomeBoard implements IParseBoardHandler {
         } else if (command.startsWith("_bbs_buff")) {
             Optional<ActionArgs> actionArgsOption = ActionArgs.parse(command);
 
-            if (!actionArgsOption.isPresent()) {
+            if (actionArgsOption.isEmpty()) {
                 return false;
             }
 
