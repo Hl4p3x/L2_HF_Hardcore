@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.WarehouseType;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.transfer.bulk.store.BulkStoreService;
 import com.l2jserver.localization.Strings;
@@ -25,6 +26,11 @@ public class BulkWarehouseStore implements IBypassHandler {
     @Override
     public boolean useBypass(String command, L2PcInstance player, L2Character target) {
         if (!player.getLastFolkNPC().isWarehouse()) {
+            return false;
+        }
+
+        if (player.isInCombat()) {
+            player.sendPacket(SystemMessageId.CANT_OPERATE_PRIVATE_STORE_DURING_COMBAT);
             return false;
         }
 

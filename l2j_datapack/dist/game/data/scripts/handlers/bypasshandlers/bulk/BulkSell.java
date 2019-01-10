@@ -7,6 +7,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.transfer.bulk.shop.BulkSellService;
 import com.l2jserver.localization.Strings;
@@ -27,6 +28,11 @@ public class BulkSell implements IBypassHandler {
     public boolean useBypass(String command, L2PcInstance player, L2Character target) {
         if (!(target instanceof L2MerchantInstance)) {
             LOG.warn("Player {} is trying to use bulk sell without a trader", player);
+            return false;
+        }
+
+        if (player.isInCombat()) {
+            player.sendPacket(SystemMessageId.CANT_OPERATE_PRIVATE_STORE_DURING_COMBAT);
             return false;
         }
 
