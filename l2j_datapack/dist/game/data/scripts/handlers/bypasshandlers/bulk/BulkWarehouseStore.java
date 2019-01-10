@@ -29,7 +29,7 @@ public class BulkWarehouseStore implements IBypassHandler {
             return false;
         }
 
-        if (player.isInCombat()) {
+        if (player.isInCombat() || player.isAlikeDead() || player.isCastingNow() || player.isCastingSimultaneouslyNow()) {
             player.sendPacket(SystemMessageId.CANT_OPERATE_PRIVATE_STORE_DURING_COMBAT);
             return false;
         }
