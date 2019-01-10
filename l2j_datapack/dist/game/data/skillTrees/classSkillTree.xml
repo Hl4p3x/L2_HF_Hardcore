@@ -7910,7 +7910,6 @@
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="13" getLevel="52" levelUpSp="42000" learnedByNpc="true" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="14" getLevel="52" levelUpSp="42000" learnedByNpc="true" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="15" getLevel="52" levelUpSp="42000" learnedByNpc="true" />
-		<skill skillName="Summon Merchant Golem" skillId="831" skillLvl="1" getLevel="52" levelUpSp="125000" learnedByNpc="true" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="24" getLevel="55" levelUpSp="57000" learnedByNpc="true" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="25" getLevel="55" levelUpSp="57000" learnedByNpc="true" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="26" getLevel="55" levelUpSp="57000" learnedByNpc="true" />
