@@ -50,7 +50,7 @@ public class MultilangTables implements Loadable {
             }
         }
 
-        LOG.info("Loaded {} languages with {} entries overall", stringTables.keySet().size(), stringTables.values().size());
+        LOG.info("Loaded {} languages", stringTables.keySet().size());
     }
 
     public static MultilangTables getInstance() {
