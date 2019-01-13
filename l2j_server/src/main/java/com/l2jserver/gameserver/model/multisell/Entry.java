@@ -196,7 +196,6 @@ public class Entry
 			Optional<Ingredient> optionalTax = calculateTaxAdena(ingredients, taxRate);
 			if (optionalTax.isPresent()) {
 				taxAmount = optionalTax.get().getItemCount();
-				ingredients.add(optionalTax.get());
 			}
 		}
 
