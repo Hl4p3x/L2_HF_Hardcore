@@ -864,9 +864,9 @@ public final class Castle extends AbstractResidence
 				ps.execute();
 			}
 
-			try (PreparedStatement ps = con.prepareStatement("UPDATE castle SET last_ownership_change_time = ? WHERE clan_id = ?")) {
+            try (PreparedStatement ps = con.prepareStatement("UPDATE castle SET last_ownership_change_time = ? WHERE id = ?")) {
 				ps.setLong(1, System.currentTimeMillis());
-				ps.setInt(2, getOwnerClanId());
+                ps.setInt(2, getResidenceId());
 				ps.execute();
 			}
 			
