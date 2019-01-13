@@ -101,25 +101,18 @@ public class Entry
 		return taxAmount;
 	}
 
-	private static Optional<Ingredient> calculateTaxAdena(List<Ingredient> ingredients, double taxRate) {
-		long adenaAmount = 0;
+    private static long calculateTaxAmount(List<Ingredient> ingredients, double taxRate) {
 		long taxAmount = 0;
 
 		for (Ingredient ing : ingredients) {
 			if (ing.getItemId() == ADENA_ID) {
 				if (ing.isTaxIngredient()) {
 					taxAmount += Math.round(ing.getItemCount() * taxRate);
-				} else {
-					adenaAmount += ing.getItemCount();
 				}
 			}
 		}
 
-		adenaAmount += taxAmount; // do not forget tax
-		if (adenaAmount > 0) {
-			return Optional.of(new Ingredient(ADENA_ID, adenaAmount, false, false));
-		}
-		return Optional.empty();
+        return taxAmount;
 	}
 
 	private static Ingredient findAndSetEnchant(Ingredient ingredient, EnchantableItemObject enchantableItemObject) {
@@ -154,10 +147,10 @@ public class Entry
 
 		long taxAmount = 0L;
 		if (applyTaxes) {
-			Optional<Ingredient> optionalTax = calculateTaxAdena(template.getIngredients(), taxRate);
-			if (optionalTax.isPresent()) {
-				taxAmount = optionalTax.get().getItemCount();
-				newIngredients.add(optionalTax.get());
+            taxAmount = calculateTaxAmount(newIngredients, taxRate);
+            Optional<Ingredient> itemPrice = newIngredients.stream().filter(ingredient -> ingredient.getItemId() == ADENA_ID).findFirst();
+            if (itemPrice.isPresent()) {
+                itemPrice.get().setItemCount(itemPrice.get().getItemCount() + taxAmount);
 			}
 		}
 
@@ -193,9 +186,10 @@ public class Entry
 
 		long taxAmount = 0L;
 		if (applyTaxes) {
-			Optional<Ingredient> optionalTax = calculateTaxAdena(ingredients, taxRate);
-			if (optionalTax.isPresent()) {
-				taxAmount = optionalTax.get().getItemCount();
+            taxAmount = calculateTaxAmount(ingredients, taxRate);
+            Optional<Ingredient> itemPrice = ingredients.stream().filter(ingredient -> ingredient.getItemId() == ADENA_ID).findFirst();
+            if (itemPrice.isPresent()) {
+                itemPrice.get().setItemCount(itemPrice.get().getItemCount() + taxAmount);
 			}
 		}
 
