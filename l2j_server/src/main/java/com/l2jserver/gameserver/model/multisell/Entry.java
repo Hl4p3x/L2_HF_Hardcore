@@ -106,9 +106,7 @@ public class Entry
 
 		for (Ingredient ing : ingredients) {
 			if (ing.getItemId() == ADENA_ID) {
-				if (ing.isTaxIngredient()) {
-					taxAmount += Math.round(ing.getItemCount() * taxRate);
-				}
+                taxAmount += Math.round(ing.getItemCount() * (taxRate / 100));
 			}
 		}
 
