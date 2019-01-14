@@ -723,7 +723,7 @@
 		<set name="magicLvl" val="52" />
 		<set name="mpConsume" val="122" />
 		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="75000" />
+        <set name="reuseDelay" val="228000"/>
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
