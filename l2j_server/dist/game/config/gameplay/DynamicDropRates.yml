@@ -359,7 +359,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 1.2
+        chance: 0.9
       ids:
       - 9451 # Dynastic Essence
       - 10413 # Dynastic Essence II
