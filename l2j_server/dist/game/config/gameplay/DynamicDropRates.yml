@@ -448,7 +448,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 4.0
+        chance: 3.7
       ids:
       - 5908 # Red Soul Crystal: Stage 13
       - 5911 # Green Soul Crystal - Stage 13
@@ -458,7 +458,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 1.2
+        chance: 1
       ids:
       - 9570 # Red Soul Crystal - Stage 14
       - 9572 # Green Soul Crystal - Stage 14
@@ -468,7 +468,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 0.6
+        chance: 0.5
       ids:
       - 10480 # Red Soul Crystal - Stage 15
       - 10482 # Green Soul Crystal - Stage 15
