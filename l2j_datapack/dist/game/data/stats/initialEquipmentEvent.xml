@@ -185,10 +185,10 @@
 		<item id="23" count="1" equipped="true"/> <!-- Wooden Breastplate -->
 		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 
-		<item id="254" count="1" equipped="true"/> <!-- Iron Gloves -->
+		<item id="254" count="1"/> <!-- Iron Gloves -->
 
 		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
-		<item id="5" count="1"/> <!-- Mace -->
+		<item id="5" count="1" equipped="true"/> <!-- Mace -->
 
 		<item id="118" count="1" equipped="true"/> <!-- Necklace of Magic -->
 		<item id="112" count="1" equipped="true"/> <!-- Apprentice's Earring -->
@@ -245,7 +245,7 @@
 		<item id="2386" count="1" equipped="true"/> <!-- Wooden Gaiter -->
 		<item id="20" count="1" equipped="true"/> <!-- Buckler -->
 
-		<item id="5" count="1"/> <!-- Mace -->
+		<item id="5" count="1" equipped="true"/> <!-- Mace -->
 
 		<item id="215" count="1"/> <!-- Doom Dagger -->
 
