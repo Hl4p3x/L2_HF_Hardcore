@@ -1049,7 +1049,7 @@ raid:
     drop:
       stats:
         count: "1-8"
-        chance: 5
+        chance: 8
       ids:
         - 6622 # Giant's Codex
   - name: "Enchant Skill Mastery"
@@ -1057,6 +1057,6 @@ raid:
     drop:
       stats:
         count: "1-8"
-        chance: 5
+        chance: 8
       ids:
         - 9627 # Giant's Codex - Mastery
