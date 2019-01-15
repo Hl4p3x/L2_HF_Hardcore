@@ -1034,7 +1034,7 @@ raid:
     level-range: "85-86"
     drop:
       stats:
-      count: "5-22"
+        count: "5-22"
         stacks: "2-14"
         chance: 40
       ids:
