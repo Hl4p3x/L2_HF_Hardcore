@@ -29,10 +29,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -42,6 +39,7 @@ public class DynamicDropTable {
 
     private AllDynamicDropData allDynamicDropData;
     private MaxHpChanceModifier maxHpChanceModifier = new MaxHpChanceModifier();
+    private Set<Integer> allCustomDropIds = new HashSet<>();
 
     public DynamicDropTable() {
         load();
@@ -56,6 +54,10 @@ public class DynamicDropTable {
                     configStream,
                     AllDynamicDropData.class
             );
+
+            allCustomDropIds = new HashSet<>();
+            allCustomDropIds.addAll(allDynamicDropData.getMobs().getCustomDropEntries().stream().flatMap(entry -> entry.getDrop().getIds().stream()).collect(Collectors.toSet()));
+            allCustomDropIds.addAll(allDynamicDropData.getRaid().getCustomDropEntries().stream().flatMap(entry -> entry.getDrop().getIds().stream()).collect(Collectors.toSet()));
         } catch (IOException e) {
             throw new IllegalStateException("Could not load Dynamic Drop Rates configuration from " + path);
         }
@@ -221,6 +223,10 @@ public class DynamicDropTable {
         Set<Integer> normalScrollIds = CollectionUtil.extractIds(categorizedScrolls.getNormalMiscScrolls());
         Set<Integer> blessedScrollIds = CollectionUtil.extractIds(categorizedScrolls.getBlessedMiscScrolls());
         return new DynamicDropScrollCategory(ScrollGrade.ALL, new DynamicDropCategory(normalScrollIds, misc.getNormal()), new DynamicDropCategory(blessedScrollIds, misc.getBlessed()));
+    }
+
+    public Set<Integer> getCustomDropIds() {
+        return allCustomDropIds;
     }
 
     public static DynamicDropTable getInstance() {

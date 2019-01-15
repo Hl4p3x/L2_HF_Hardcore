@@ -2,7 +2,6 @@ package com.l2jserver.gameserver.model.actor.templates.drop.calculators;
 
 import com.l2jserver.gameserver.datatables.categorized.*;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.templates.drop.calculators.modifiers.MaxHpChanceModifier;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.DynamicDropTable;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import org.slf4j.Logger;
@@ -20,7 +19,6 @@ public class DynamicDropCalculator {
     private Set<Integer> managedItemIds = new HashSet<>();
     private GeneralDropCalculator generalDropCalculator = new GeneralDropCalculator();
     private CustomDropCalculator customDropCalculator = new CustomDropCalculator();
-    private MaxHpChanceModifier maxHpChanceModifier = new MaxHpChanceModifier();
 
     public DynamicDropCalculator() {
         load();
@@ -43,6 +41,7 @@ public class DynamicDropCalculator {
         managedItemIds.addAll(ItemRecipesDropDataTable.getInstance().getRecipeIds());
         managedItemIds.addAll(CraftResourcesDropDataTable.getInstance().getResourceIds());
         managedItemIds.addAll(ScrollDropDataTable.getInstance().getScrollIds());
+        managedItemIds.addAll(DynamicDropTable.getInstance().getCustomDropIds());
         LOG.info("Dynamic Drop Calculator initialized");
     }
 
