@@ -483,6 +483,34 @@ mobs:
       - 13071 # Red Soul Crystal - Stage 16
       - 13073 # Green Soul Crystal - Stage 16
       - 13072 # Blue Soul Crystal - Stage 16
+  - name: "Attribute Stones"
+    level-range: "83-84"
+    drop:
+      stats:
+        count: "1-2"
+        stacks: "1-2"
+        chance: 2
+      ids:
+        - 9546 # Fire Stone
+        - 9547 # Water Stone
+        - 9548 # Earth Stone
+        - 9549 # Wind Stone
+        - 9550 # Dark Stone
+        - 9551 # Holy Stone
+  - name: "Attribute Stones"
+    level-range: "85-86"
+    drop:
+      stats:
+        count: "1-2"
+        stacks: "1-2"
+        chance: 4
+      ids:
+        - 9546 # Fire Stone
+        - 9547 # Water Stone
+        - 9548 # Earth Stone
+        - 9549 # Wind Stone
+        - 9550 # Dark Stone
+        - 9551 # Holy Stone
 
 raid:
   equipment:
@@ -970,3 +998,31 @@ raid:
       - 13071 # Red Soul Crystal - Stage 16
       - 13073 # Green Soul Crystal - Stage 16
       - 13072 # Blue Soul Crystal - Stage 16
+  - name: "Attribute Stones"
+    level-range: "83-84"
+    drop:
+      stats:
+        count: "3-15"
+        stacks: "1-12"
+        chance: 30
+      ids:
+        - 9546 # Fire Stone
+        - 9547 # Water Stone
+        - 9548 # Earth Stone
+        - 9549 # Wind Stone
+        - 9550 # Dark Stone
+        - 9551 # Holy Stone
+  - name: "Attribute Stones"
+    level-range: "85-86"
+    drop:
+      stats:
+      count: "5-22"
+        stacks: "2-14"
+        chance: 40
+      ids:
+        - 9546 # Fire Stone
+        - 9547 # Water Stone
+        - 9548 # Earth Stone
+        - 9549 # Wind Stone
+        - 9550 # Dark Stone
+        - 9551 # Holy Stone
