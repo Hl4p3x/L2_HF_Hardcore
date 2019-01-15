@@ -1,290 +1,241 @@
-[
-  {
-    "itemId": 119,
-    "itemName": "Necklace of Seal",
-    "partId": 1920,
-    "partName": "Necklace of Seal Chain"
-  },
-  {
-    "itemId": 849,
-    "itemName": "Tiger's Eye Earring",
-    "partId": 1901,
-    "partName": "Tiger's Eye Earring Stone"
-  },
-  {
-    "itemId": 850,
-    "itemName": "Elven Earring",
-    "partId": 1902,
-    "partName": "Elven Earring Beads"
-  },
-  {
-    "itemId": 851,
-    "itemName": "Omen Beast's Eye Earring",
-    "partId": 1905,
-    "partName": "Omen Beast's Eye Earring Gemstone"
-  },
-  {
-    "itemId": 852,
-    "itemName": "Moonstone Earring",
-    "partId": 1908,
-    "partName": "Moonstone Earring Wire"
-  },
-  {
-    "itemId": 853,
-    "itemName": "Earring of Protection",
-    "partId": 1911,
-    "partName": "Earring of Protection Gemstone"
-  },
-  {
-    "itemId": 854,
-    "itemName": "Earring of Seal",
-    "partId": 1914,
-    "partName": "Earring of Seal Gemstone"
-  },
-  {
-    "itemId": 855,
-    "itemName": "Nassen's Earring",
-    "partId": 1918,
-    "partName": "Nassen's Earring Gemstone"
-  },
-  {
-    "itemId": 856,
-    "itemName": "Adamantite Earring",
-    "partId": 4049,
-    "partName": "Adamantite Earring Gemstone"
-  },
-  {
-    "itemId": 864,
-    "itemName": "Earring of Black Ore",
-    "partId": 4052,
-    "partName": "Earring of Black Ore Piece"
-  },
-  {
-    "itemId": 881,
-    "itemName": "Elven Ring",
-    "partId": 1903,
-    "partName": "Elven Ring Piece"
-  },
-  {
-    "itemId": 882,
-    "itemName": "Mithril Ring",
-    "partId": 1906,
-    "partName": "Mithril Ring Wire"
-  },
-  {
-    "itemId": 883,
-    "itemName": "Aquastone Ring",
-    "partId": 1909,
-    "partName": "Aquastone Ring Wire"
-  },
-  {
-    "itemId": 884,
-    "itemName": "Ring of Protection",
-    "partId": 1912,
-    "partName": "Ring of Protection Gemstone"
-  },
-  {
-    "itemId": 885,
-    "itemName": "Ring of Ages",
-    "partId": 1915,
-    "partName": "Ring of Ages Gemstone"
-  },
-  {
-    "itemId": 886,
-    "itemName": "Ring of Seal",
-    "partId": 2917,
-    "partName": "Ring of Seal Gemstone"
-  },
-  {
-    "itemId": 887,
-    "itemName": "Adamantite Ring",
-    "partId": 4050,
-    "partName": "Adamantite Ring Wire"
-  },
-  {
-    "itemId": 895,
-    "itemName": "Ring of Black Ore",
-    "partId": 4053,
-    "partName": "Ring of Black Ore Gemstone"
-  },
-  {
-    "itemId": 910,
-    "itemName": "Necklace of Devotion",
-    "partId": 1899,
-    "partName": "Necklace of Devotion Chain"
-  },
-  {
-    "itemId": 911,
-    "itemName": "Enchanted Necklace",
-    "partId": 1900,
-    "partName": "Enchanted Necklace Chain"
-  },
-  {
-    "itemId": 913,
-    "itemName": "Elven Necklace",
-    "partId": 1904,
-    "partName": "Elven Necklace Beads"
-  },
-  {
-    "itemId": 914,
-    "itemName": "Necklace of Darkness",
-    "partId": 1907,
-    "partName": "Necklace of Darkness Gem"
-  },
-  {
-    "itemId": 915,
-    "itemName": "Aquastone Necklace",
-    "partId": 1910,
-    "partName": "Aquastone Necklace Chain"
-  },
-  {
-    "itemId": 916,
-    "itemName": "Necklace of Protection",
-    "partId": 1913,
-    "partName": "Necklace of Protection Gemstone"
-  },
-  {
-    "itemId": 917,
-    "itemName": "Necklace of Mermaid",
-    "partId": 1916,
-    "partName": "Necklace of Mermaid Teardrop"
-  },
-  {
-    "itemId": 918,
-    "itemName": "Adamantite Necklace",
-    "partId": 4051,
-    "partName": "Adamantite Necklace Chain"
-  },
-  {
-    "itemId": 926,
-    "itemName": "Necklace of Black Ore",
-    "partId": 4054,
-    "partName": "Necklace of Black Ore Beads"
-  },
-  {
-    "itemId": 9452,
-    "itemName": "Sealed Dynasty Earring",
-    "partId": 9991,
-    "partName": "Sealed Dynasty Earring Gemstone"
-  },
-  {
-    "itemId": 9453,
-    "itemName": "Sealed Dynasty Necklace",
-    "partId": 9992,
-    "partName": "Sealed Dynasty Necklace Gemstone"
-  },
-  {
-    "itemId": 9454,
-    "itemName": "Sealed Dynasty Ring",
-    "partId": 9993,
-    "partName": "Sealed Dynasty Ring Gemstone"
-  },
-  {
-    "itemId": 14160,
-    "itemName": "Sealed Vesper Earring",
-    "partId": 15770,
-    "partName": "Sealed Vesper Earring Gem"
-  },
-  {
-    "itemId": 14161,
-    "itemName": "Sealed Vesper Necklace",
-    "partId": 15771,
-    "partName": "Sealed Vesper Necklace Gem"
-  },
-  {
-    "itemId": 14162,
-    "itemName": "Sealed Vesper Ring",
-    "partId": 15769,
-    "partName": "Sealed Vesper Ring Gem"
-  },
-  {
-    "itemId": 6323,
-    "itemName": "Sealed Phoenix Necklace",
-    "partId": 6343,
-    "partName": "Sealed Phoenix Necklace Beads"
-  },
-  {
-    "itemId": 6324,
-    "itemName": "Sealed Phoenix Earring",
-    "partId": 6341,
-    "partName": "Sealed Phoenix Earring Gemstone"
-  },
-  {
-    "itemId": 6325,
-    "itemName": "Sealed Phoenix Ring",
-    "partId": 6345,
-    "partName": "Sealed Phoenix Ring Gemstone"
-  },
-  {
-    "itemId": 6326,
-    "itemName": "Sealed Majestic Necklace",
-    "partId": 6344,
-    "partName": "Sealed Majestic Necklace Beads"
-  },
-  {
-    "itemId": 6327,
-    "itemName": "Sealed Majestic Earring",
-    "partId": 6342,
-    "partName": "Sealed Majestic Earring Gemstone"
-  },
-  {
-    "itemId": 6328,
-    "itemName": "Sealed Majestic Ring",
-    "partId": 6346,
-    "partName": "Sealed Majestic Ring Gemstone"
-  },
-  {
-    "itemId": 6724,
-    "itemName": "Sealed Tateossian Earring",
-    "partId": 6698,
-    "partName": "Sealed Tateossian Earring Part"
-  },
-  {
-    "itemId": 6725,
-    "itemName": "Sealed Tateossian Ring",
-    "partId": 6699,
-    "partName": "Sealed Tateossian Ring Gem"
-  },
-  {
-    "itemId": 6726,
-    "itemName": "Sealed Tateossian Necklace",
-    "partId": 6700,
-    "partName": "Sealed Tateossian Necklace Chain"
-  },
-  {
-    "itemId": 15766,
-    "itemName": "Sealed Moirai Ring",
-    "partId": 15772,
-    "partName": "Sealed Moirai Ring Gem"
-  },
-  {
-    "itemId": 15767,
-    "itemName": "Sealed Moirai Earring",
-    "partId": 15773,
-    "partName": "Sealed Moirai Earring Gem"
-  },
-  {
-    "itemId": 15768,
-    "itemName": "Sealed Moirai Necklace",
-    "partId": 15774,
-    "partName": "Sealed Moirai Necklace Gem"
-  },
-  {
-    "itemId": 907,
-    "itemName": "Necklace of Anguish",
-    "partId": 1896,
-    "partName": "Necklace of Anguish Chain"
-  },
-  {
-    "itemId": 908,
-    "itemName": "Necklace of Wisdom",
-    "partId": 1897,
-    "partName": "Necklace of Wisdom Chain"
-  },
-  {
-    "itemId": 909,
-    "itemName": "Blue Diamond Necklace",
-    "partId": 1898,
-    "partName": "Blue Diamond Necklace Gem"
-  }
-]
+[ {
+  "itemId" : 119,
+  "itemName" : "Necklace of Seal",
+  "partId" : 1920,
+  "partName" : "Necklace of Seal Chain"
+}, {
+  "itemId" : 849,
+  "itemName" : "Tiger's Eye Earring",
+  "partId" : 1901,
+  "partName" : "Tiger's Eye Earring Stone"
+}, {
+  "itemId" : 850,
+  "itemName" : "Elven Earring",
+  "partId" : 1902,
+  "partName" : "Elven Earring Beads"
+}, {
+  "itemId" : 851,
+  "itemName" : "Omen Beast's Eye Earring",
+  "partId" : 1905,
+  "partName" : "Omen Beast's Eye Earring Gemstone"
+}, {
+  "itemId" : 852,
+  "itemName" : "Moonstone Earring",
+  "partId" : 1908,
+  "partName" : "Moonstone Earring Wire"
+}, {
+  "itemId" : 853,
+  "itemName" : "Earring of Protection",
+  "partId" : 1911,
+  "partName" : "Earring of Protection Gemstone"
+}, {
+  "itemId" : 854,
+  "itemName" : "Earring of Seal",
+  "partId" : 1914,
+  "partName" : "Earring of Seal Gemstone"
+}, {
+  "itemId" : 855,
+  "itemName" : "Nassen's Earring",
+  "partId" : 1918,
+  "partName" : "Nassen's Earring Gemstone"
+}, {
+  "itemId" : 856,
+  "itemName" : "Adamantite Earring",
+  "partId" : 4049,
+  "partName" : "Adamantite Earring Gemstone"
+}, {
+  "itemId" : 864,
+  "itemName" : "Earring of Black Ore",
+  "partId" : 4052,
+  "partName" : "Earring of Black Ore Piece"
+}, {
+  "itemId" : 881,
+  "itemName" : "Elven Ring",
+  "partId" : 1903,
+  "partName" : "Elven Ring Piece"
+}, {
+  "itemId" : 882,
+  "itemName" : "Mithril Ring",
+  "partId" : 1906,
+  "partName" : "Mithril Ring Wire"
+}, {
+  "itemId" : 883,
+  "itemName" : "Aquastone Ring",
+  "partId" : 1909,
+  "partName" : "Aquastone Ring Wire"
+}, {
+  "itemId" : 884,
+  "itemName" : "Ring of Protection",
+  "partId" : 1912,
+  "partName" : "Ring of Protection Gemstone"
+}, {
+  "itemId" : 885,
+  "itemName" : "Ring of Ages",
+  "partId" : 1915,
+  "partName" : "Ring of Ages Gemstone"
+}, {
+  "itemId" : 886,
+  "itemName" : "Ring of Seal",
+  "partId" : 2917,
+  "partName" : "Ring of Seal Gemstone"
+}, {
+  "itemId" : 887,
+  "itemName" : "Adamantite Ring",
+  "partId" : 4050,
+  "partName" : "Adamantite Ring Wire"
+}, {
+  "itemId" : 895,
+  "itemName" : "Ring of Black Ore",
+  "partId" : 4053,
+  "partName" : "Ring of Black Ore Gemstone"
+}, {
+  "itemId" : 910,
+  "itemName" : "Necklace of Devotion",
+  "partId" : 1899,
+  "partName" : "Necklace of Devotion Chain"
+}, {
+  "itemId" : 911,
+  "itemName" : "Enchanted Necklace",
+  "partId" : 1900,
+  "partName" : "Enchanted Necklace Chain"
+}, {
+  "itemId" : 913,
+  "itemName" : "Elven Necklace",
+  "partId" : 1904,
+  "partName" : "Elven Necklace Beads"
+}, {
+  "itemId" : 914,
+  "itemName" : "Necklace of Darkness",
+  "partId" : 1907,
+  "partName" : "Necklace of Darkness Gem"
+}, {
+  "itemId" : 915,
+  "itemName" : "Aquastone Necklace",
+  "partId" : 1910,
+  "partName" : "Aquastone Necklace Chain"
+}, {
+  "itemId" : 916,
+  "itemName" : "Necklace of Protection",
+  "partId" : 1913,
+  "partName" : "Necklace of Protection Gemstone"
+}, {
+  "itemId" : 917,
+  "itemName" : "Necklace of Mermaid",
+  "partId" : 1916,
+  "partName" : "Necklace of Mermaid Teardrop"
+}, {
+  "itemId" : 918,
+  "itemName" : "Adamantite Necklace",
+  "partId" : 4051,
+  "partName" : "Adamantite Necklace Chain"
+}, {
+  "itemId" : 926,
+  "itemName" : "Necklace of Black Ore",
+  "partId" : 4054,
+  "partName" : "Necklace of Black Ore Beads"
+}, {
+  "itemId" : 9452,
+  "itemName" : "Sealed Dynasty Earring",
+  "partId" : 9991,
+  "partName" : "Sealed Dynasty Earring Gemstone"
+}, {
+  "itemId" : 9453,
+  "itemName" : "Sealed Dynasty Necklace",
+  "partId" : 9992,
+  "partName" : "Sealed Dynasty Necklace Gemstone"
+}, {
+  "itemId" : 9454,
+  "itemName" : "Sealed Dynasty Ring",
+  "partId" : 9993,
+  "partName" : "Sealed Dynasty Ring Gemstone"
+}, {
+  "itemId" : 14160,
+  "itemName" : "Sealed Vesper Earring",
+  "partId" : 15770,
+  "partName" : "Sealed Vesper Earring Gem"
+}, {
+  "itemId" : 14161,
+  "itemName" : "Sealed Vesper Necklace",
+  "partId" : 15771,
+  "partName" : "Sealed Vesper Necklace Gem"
+}, {
+  "itemId" : 14162,
+  "itemName" : "Sealed Vesper Ring",
+  "partId" : 15769,
+  "partName" : "Sealed Vesper Ring Gem"
+}, {
+  "itemId" : 6323,
+  "itemName" : "Sealed Phoenix Necklace",
+  "partId" : 6343,
+  "partName" : "Sealed Phoenix Necklace Beads"
+}, {
+  "itemId" : 6324,
+  "itemName" : "Sealed Phoenix Earring",
+  "partId" : 6341,
+  "partName" : "Sealed Phoenix Earring Gemstone"
+}, {
+  "itemId" : 6325,
+  "itemName" : "Sealed Phoenix Ring",
+  "partId" : 6345,
+  "partName" : "Sealed Phoenix Ring Gemstone"
+}, {
+  "itemId" : 6326,
+  "itemName" : "Sealed Majestic Necklace",
+  "partId" : 6344,
+  "partName" : "Sealed Majestic Necklace Beads"
+}, {
+  "itemId" : 6327,
+  "itemName" : "Sealed Majestic Earring",
+  "partId" : 6342,
+  "partName" : "Sealed Majestic Earring Gemstone"
+}, {
+  "itemId" : 6328,
+  "itemName" : "Sealed Majestic Ring",
+  "partId" : 6346,
+  "partName" : "Sealed Majestic Ring Gemstone"
+}, {
+  "itemId" : 6724,
+  "itemName" : "Sealed Tateossian Earring",
+  "partId" : 6698,
+  "partName" : "Sealed Tateossian Earring Part"
+}, {
+  "itemId" : 6725,
+  "itemName" : "Sealed Tateossian Ring",
+  "partId" : 6699,
+  "partName" : "Sealed Tateossian Ring Gem"
+}, {
+  "itemId" : 6726,
+  "itemName" : "Sealed Tateossian Necklace",
+  "partId" : 6700,
+  "partName" : "Sealed Tateossian Necklace Chain"
+}, {
+  "itemId" : 15766,
+  "itemName" : "Sealed Moirai Ring",
+  "partId" : 15772,
+  "partName" : "Sealed Moirai Ring Gem"
+}, {
+  "itemId" : 15767,
+  "itemName" : "Sealed Moirai Earring",
+  "partId" : 15773,
+  "partName" : "Sealed Moirai Earring Gem"
+}, {
+  "itemId" : 15768,
+  "itemName" : "Sealed Moirai Necklace",
+  "partId" : 15774,
+  "partName" : "Sealed Moirai Necklace Gem"
+}, {
+  "itemId" : 907,
+  "itemName" : "Necklace of Anguish",
+  "partId" : 1896,
+  "partName" : "Necklace of Anguish Chain"
+}, {
+  "itemId" : 908,
+  "itemName" : "Necklace of Wisdom",
+  "partId" : 1897,
+  "partName" : "Necklace of Wisdom Chain"
+}, {
+  "itemId" : 909,
+  "itemName" : "Blue Diamond Necklace",
+  "partId" : 1898,
+  "partName" : "Blue Diamond Necklace Gem"
+} ]

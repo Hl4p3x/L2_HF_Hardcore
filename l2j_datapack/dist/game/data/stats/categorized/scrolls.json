@@ -1,188 +1,153 @@
 {
-  "normalWeaponScrolls": [
-    {
-      "id": 729,
-      "name": "Scroll: Enchant Weapon (A-Grade)",
-      "grade": "a",
-      "blessed": false
-    },
-    {
-      "id": 947,
-      "name": "Scroll: Enchant Weapon (B-Grade)",
-      "grade": "b",
-      "blessed": false
-    },
-    {
-      "id": 951,
-      "name": "Scroll: Enchant Weapon (C-Grade)",
-      "grade": "c",
-      "blessed": false
-    },
-    {
-      "id": 955,
-      "name": "Scroll: Enchant Weapon (D-Grade)",
-      "grade": "d",
-      "blessed": false
-    },
-    {
-      "id": 959,
-      "name": "Scroll: Enchant Weapon (S-Grade)",
-      "grade": "s",
-      "blessed": false
-    }
-  ],
-  "blessedWeaponScrolls": [
-    {
-      "id": 6569,
-      "name": "Blessed Scroll: Enchant Weapon (A-Grade)",
-      "grade": "a",
-      "blessed": true
-    },
-    {
-      "id": 6571,
-      "name": "Blessed Scroll: Enchant Weapon (B-Grade)",
-      "grade": "b",
-      "blessed": true
-    },
-    {
-      "id": 6573,
-      "name": "Blessed Scroll: Enchant Weapon (C-Grade)",
-      "grade": "c",
-      "blessed": true
-    },
-    {
-      "id": 6575,
-      "name": "Blessed Scroll: Enchant Weapon (D-Grade)",
-      "grade": "d",
-      "blessed": true
-    },
-    {
-      "id": 6577,
-      "name": "Blessed Scroll: Enchant Weapon (S-Grade)",
-      "grade": "s",
-      "blessed": true
-    }
-  ],
-  "normalArmorScrolls": [
-    {
-      "id": 730,
-      "name": "Scroll: Enchant Armor (A-Grade)",
-      "grade": "a",
-      "blessed": false
-    },
-    {
-      "id": 948,
-      "name": "Scroll: Enchant Armor (B-Grade)",
-      "grade": "b",
-      "blessed": false
-    },
-    {
-      "id": 952,
-      "name": "Scroll: Enchant Armor (C-Grade)",
-      "grade": "c",
-      "blessed": false
-    },
-    {
-      "id": 956,
-      "name": "Scroll: Enchant Armor (D-Grade)",
-      "grade": "d",
-      "blessed": false
-    },
-    {
-      "id": 960,
-      "name": "Scroll: Enchant Armor (S-Grade)",
-      "grade": "s",
-      "blessed": false
-    }
-  ],
-  "blessedArmorScrolls": [
-    {
-      "id": 6570,
-      "name": "Blessed Scroll: Enchant Armor (A-Grade)",
-      "grade": "a",
-      "blessed": true
-    },
-    {
-      "id": 6572,
-      "name": "Blessed Scroll: Enchant Armor (B-Grade)",
-      "grade": "b",
-      "blessed": true
-    },
-    {
-      "id": 6574,
-      "name": "Blessed Scroll: Enchant Armor (C-Grade)",
-      "grade": "c",
-      "blessed": true
-    },
-    {
-      "id": 6576,
-      "name": "Blessed Scroll: Enchant Armor (D-Grade)",
-      "grade": "d",
-      "blessed": true
-    },
-    {
-      "id": 6578,
-      "name": "Blessed Scroll: Enchant Armor (S-Grade)",
-      "grade": "s",
-      "blessed": true
-    }
-  ],
-  "normalMiscScrolls": [
-    {
-      "id": 736,
-      "name": "Scroll of Escape",
-      "type": "soe",
-      "blessed": false
-    },
-    {
-      "id": 1830,
-      "name": "Scroll of Escape: Castle",
-      "type": "soe",
-      "blessed": false
-    },
-    {
-      "id": 1829,
-      "name": "Scroll of Escape: Clan Hall",
-      "type": "soe",
-      "blessed": false
-    },
-    {
-      "id": 737,
-      "name": "Scroll of Resurrection",
-      "type": "resurrect",
-      "blessed": false
-    }
-  ],
-  "blessedMiscScrolls": [
-    {
-      "id": 1538,
-      "name": "Blessed Scroll of Escape",
-      "type": "soe",
-      "blessed": true
-    },
-    {
-      "id": 5858,
-      "name": "Blessed Scroll of Escape: Clan Hall",
-      "type": "soe",
-      "blessed": true
-    },
-    {
-      "id": 5859,
-      "name": "Blessed Scroll of Escape: Castle",
-      "type": "soe",
-      "blessed": true
-    },
-    {
-      "id": 6387,
-      "name": "Blessed Scroll of Resurrection for Pets",
-      "type": "resurrect",
-      "blessed": true
-    },
-    {
-      "id": 3936,
-      "name": "Blessed Scroll of Resurrection",
-      "type": "resurrect",
-      "blessed": true
-    }
-  ]
+  "normalWeaponScrolls" : [ {
+    "id" : 729,
+    "name" : "Scroll: Enchant Weapon (A-Grade)",
+    "grade" : "a",
+    "blessed" : false
+  }, {
+    "id" : 947,
+    "name" : "Scroll: Enchant Weapon (B-Grade)",
+    "grade" : "b",
+    "blessed" : false
+  }, {
+    "id" : 951,
+    "name" : "Scroll: Enchant Weapon (C-Grade)",
+    "grade" : "c",
+    "blessed" : false
+  }, {
+    "id" : 955,
+    "name" : "Scroll: Enchant Weapon (D-Grade)",
+    "grade" : "d",
+    "blessed" : false
+  }, {
+    "id" : 959,
+    "name" : "Scroll: Enchant Weapon (S-Grade)",
+    "grade" : "s",
+    "blessed" : false
+  } ],
+  "blessedWeaponScrolls" : [ {
+    "id" : 6569,
+    "name" : "Blessed Scroll: Enchant Weapon (A-Grade)",
+    "grade" : "a",
+    "blessed" : true
+  }, {
+    "id" : 6571,
+    "name" : "Blessed Scroll: Enchant Weapon (B-Grade)",
+    "grade" : "b",
+    "blessed" : true
+  }, {
+    "id" : 6573,
+    "name" : "Blessed Scroll: Enchant Weapon (C-Grade)",
+    "grade" : "c",
+    "blessed" : true
+  }, {
+    "id" : 6575,
+    "name" : "Blessed Scroll: Enchant Weapon (D-Grade)",
+    "grade" : "d",
+    "blessed" : true
+  }, {
+    "id" : 6577,
+    "name" : "Blessed Scroll: Enchant Weapon (S-Grade)",
+    "grade" : "s",
+    "blessed" : true
+  } ],
+  "normalArmorScrolls" : [ {
+    "id" : 730,
+    "name" : "Scroll: Enchant Armor (A-Grade)",
+    "grade" : "a",
+    "blessed" : false
+  }, {
+    "id" : 948,
+    "name" : "Scroll: Enchant Armor (B-Grade)",
+    "grade" : "b",
+    "blessed" : false
+  }, {
+    "id" : 952,
+    "name" : "Scroll: Enchant Armor (C-Grade)",
+    "grade" : "c",
+    "blessed" : false
+  }, {
+    "id" : 956,
+    "name" : "Scroll: Enchant Armor (D-Grade)",
+    "grade" : "d",
+    "blessed" : false
+  }, {
+    "id" : 960,
+    "name" : "Scroll: Enchant Armor (S-Grade)",
+    "grade" : "s",
+    "blessed" : false
+  } ],
+  "blessedArmorScrolls" : [ {
+    "id" : 6570,
+    "name" : "Blessed Scroll: Enchant Armor (A-Grade)",
+    "grade" : "a",
+    "blessed" : true
+  }, {
+    "id" : 6572,
+    "name" : "Blessed Scroll: Enchant Armor (B-Grade)",
+    "grade" : "b",
+    "blessed" : true
+  }, {
+    "id" : 6574,
+    "name" : "Blessed Scroll: Enchant Armor (C-Grade)",
+    "grade" : "c",
+    "blessed" : true
+  }, {
+    "id" : 6576,
+    "name" : "Blessed Scroll: Enchant Armor (D-Grade)",
+    "grade" : "d",
+    "blessed" : true
+  }, {
+    "id" : 6578,
+    "name" : "Blessed Scroll: Enchant Armor (S-Grade)",
+    "grade" : "s",
+    "blessed" : true
+  } ],
+  "normalMiscScrolls" : [ {
+    "id" : 736,
+    "name" : "Scroll of Escape",
+    "type" : "soe",
+    "blessed" : false
+  }, {
+    "id" : 1830,
+    "name" : "Scroll of Escape: Castle",
+    "type" : "soe",
+    "blessed" : false
+  }, {
+    "id" : 1829,
+    "name" : "Scroll of Escape: Clan Hall",
+    "type" : "soe",
+    "blessed" : false
+  }, {
+    "id" : 737,
+    "name" : "Scroll of Resurrection",
+    "type" : "resurrect",
+    "blessed" : false
+  } ],
+  "blessedMiscScrolls" : [ {
+    "id" : 1538,
+    "name" : "Blessed Scroll of Escape",
+    "type" : "soe",
+    "blessed" : true
+  }, {
+    "id" : 5858,
+    "name" : "Blessed Scroll of Escape: Clan Hall",
+    "type" : "soe",
+    "blessed" : true
+  }, {
+    "id" : 5859,
+    "name" : "Blessed Scroll of Escape: Castle",
+    "type" : "soe",
+    "blessed" : true
+  }, {
+    "id" : 6387,
+    "name" : "Blessed Scroll of Resurrection for Pets",
+    "type" : "resurrect",
+    "blessed" : true
+  }, {
+    "id" : 3936,
+    "name" : "Blessed Scroll of Resurrection",
+    "type" : "resurrect",
+    "blessed" : true
+  } ]
 }

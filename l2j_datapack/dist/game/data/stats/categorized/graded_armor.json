@@ -1,1916 +1,1596 @@
-[
-  {
-    "itemId": 1121,
-    "itemName": "Apprentice's Shoes",
-    "itemPrice": 5,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 48,
-    "itemName": "Short Gloves",
-    "itemPrice": 28,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 35,
-    "itemName": "Cloth Shoes",
-    "itemPrice": 28,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 36,
-    "itemName": "Leather Sandals",
-    "itemPrice": 28,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 18,
-    "itemName": "Leather Shield",
-    "itemPrice": 30,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 41,
-    "itemName": "Cloth Cap",
-    "itemPrice": 42,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 28,
-    "itemName": "Pants",
-    "itemPrice": 71,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 462,
-    "itemName": "Stockings",
-    "itemPrice": 71,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 21,
-    "itemName": "Shirt",
-    "itemPrice": 113,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 426,
-    "itemName": "Tunic",
-    "itemPrice": 113,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 1119,
-    "itemName": "Short Leather Gloves",
-    "itemPrice": 470,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 1122,
-    "itemName": "Cotton Shoes",
-    "itemPrice": 470,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 1129,
-    "itemName": "Crude Leather Shoes",
-    "itemPrice": 470,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 19,
-    "itemName": "Small Shield",
-    "itemPrice": 490,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 42,
-    "itemName": "Leather Cap",
-    "itemPrice": 700,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 1103,
-    "itemName": "Cotton Stockings",
-    "itemPrice": 1170,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 463,
-    "itemName": "Feriotic Stockings",
-    "itemPrice": 1170,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 29,
-    "itemName": "Leather Pants",
-    "itemPrice": 1170,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 1100,
-    "itemName": "Cotton Tunic",
-    "itemPrice": 1870,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 428,
-    "itemName": "Feriotic Tunic",
-    "itemPrice": 1870,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 22,
-    "itemName": "Leather Shirt",
-    "itemPrice": 1870,
-    "gradeInfo": "ng-low"
-  },
-  {
-    "itemId": 49,
-    "itemName": "Gloves",
-    "itemPrice": 2040,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 37,
-    "itemName": "Leather Shoes",
-    "itemPrice": 2040,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 20,
-    "itemName": "Buckler",
-    "itemPrice": 2140,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 43,
-    "itemName": "Wooden Helmet",
-    "itemPrice": 3060,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 30,
-    "itemName": "Hard Leather Pants",
-    "itemPrice": 3820,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 464,
-    "itemName": "Leather Stockings",
-    "itemPrice": 3820,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 2386,
-    "itemName": "Wooden Gaiters",
-    "itemPrice": 3820,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 50,
-    "itemName": "Leather Gloves",
-    "itemPrice": 5210,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 38,
-    "itemName": "Low Boots",
-    "itemPrice": 5210,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 102,
-    "itemName": "Round Shield",
-    "itemPrice": 5470,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 429,
-    "itemName": "Leather Tunic",
-    "itemPrice": 6120,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 23,
-    "itemName": "Wooden Breastplate",
-    "itemPrice": 6120,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 44,
-    "itemName": "Leather Helmet",
-    "itemPrice": 7820,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 51,
-    "itemName": "Bracer",
-    "itemPrice": 9500,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 39,
-    "itemName": "Boots",
-    "itemPrice": 9500,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 31,
-    "itemName": "Bone Gaiters",
-    "itemPrice": 9770,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 412,
-    "itemName": "Cotton Pants",
-    "itemPrice": 9770,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 1104,
-    "itemName": "Stockings of Devotion",
-    "itemPrice": 9770,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 625,
-    "itemName": "Bone Shield",
-    "itemPrice": 9900,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 1148,
-    "itemName": "Hard Leather Helmet",
-    "itemPrice": 14200,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 32,
-    "itemName": "Piece Bone Gaiters",
-    "itemPrice": 15300,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 24,
-    "itemName": "Bone Breastplate",
-    "itemPrice": 15600,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 390,
-    "itemName": "Cotton Shirt",
-    "itemPrice": 15600,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 1101,
-    "itemName": "Tunic of Devotion",
-    "itemPrice": 15600,
-    "gradeInfo": "ng-mid"
-  },
-  {
-    "itemId": 33,
-    "itemName": "Hard Leather Gaiters",
-    "itemPrice": 17700,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 1105,
-    "itemName": "Stockings of Magic",
-    "itemPrice": 17700,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 34,
-    "itemName": "Bronze Gaiters",
-    "itemPrice": 23600,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 25,
-    "itemName": "Piece Bone Breastplate",
-    "itemPrice": 24480,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 27,
-    "itemName": "Hard Leather Shirt",
-    "itemPrice": 28400,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 1102,
-    "itemName": "Tunic of Magic",
-    "itemPrice": 28400,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 26,
-    "itemName": "Bronze Breastplate",
-    "itemPrice": 37820,
-    "gradeInfo": "ng-top"
-  },
-  {
-    "itemId": 604,
-    "itemName": "Crafted Leather Gloves",
-    "itemPrice": 16100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 40,
-    "itemName": "Leather Boots",
-    "itemPrice": 16100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 626,
-    "itemName": "Bronze Shield",
-    "itemPrice": 16900,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 45,
-    "itemName": "Bone Helmet",
-    "itemPrice": 24100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 605,
-    "itemName": "Leather Gauntlets",
-    "itemPrice": 25600,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 1123,
-    "itemName": "Blue Buckskin Boots",
-    "itemPrice": 25600,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 627,
-    "itemName": "Aspis",
-    "itemPrice": 26900,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 465,
-    "itemName": "Cursed Stockings",
-    "itemPrice": 30100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 413,
-    "itemName": "Puma Skin Gaiters",
-    "itemPrice": 30100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 46,
-    "itemName": "Bronze Helmet",
-    "itemPrice": 38400,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 63,
-    "itemName": "Gauntlets",
-    "itemPrice": 39100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 2447,
-    "itemName": "Gloves of Knowledge",
-    "itemPrice": 39100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 2446,
-    "itemName": "Reinforced Leather Gloves",
-    "itemPrice": 39100,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 2423,
-    "itemName": "Boots of Knowledge",
-    "itemPrice": 39100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 553,
-    "itemName": "Iron Boots",
-    "itemPrice": 39100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 2422,
-    "itemName": "Reinforced Leather Boots",
-    "itemPrice": 39100,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 376,
-    "itemName": "Iron Plate Gaiters",
-    "itemPrice": 40100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 628,
-    "itemName": "Hoplon",
-    "itemPrice": 41000,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 467,
-    "itemName": "Dark Stockings",
-    "itemPrice": 48000,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 414,
-    "itemName": "Lion Skin Gaiters",
-    "itemPrice": 48000,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 468,
-    "itemName": "Mystic's Stockings",
-    "itemPrice": 48000,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 432,
-    "itemName": "Cursed Tunic",
-    "itemPrice": 48200,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 391,
-    "itemName": "Puma Skin Shirt",
-    "itemPrice": 48200,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 2449,
-    "itemName": "Brigandine Gauntlets",
-    "itemPrice": 57400,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 2448,
-    "itemName": "Manticore Skin Gloves",
-    "itemPrice": 57400,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 2450,
-    "itemName": "Mithril Gloves",
-    "itemPrice": 57400,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 606,
-    "itemName": "Rip Gauntlets",
-    "itemPrice": 57400,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 1124,
-    "itemName": "Boots of Power",
-    "itemPrice": 57400,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 2425,
-    "itemName": "Brigandine Boots",
-    "itemPrice": 57400,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 2426,
-    "itemName": "Elven Mithril Boots",
-    "itemPrice": 57400,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 2424,
-    "itemName": "Manticore Skin Boots",
-    "itemPrice": 57400,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 47,
-    "itemName": "Helmet",
-    "itemPrice": 58600,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 2493,
-    "itemName": "Brigandine Shield",
-    "itemPrice": 60300,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 629,
-    "itemName": "Kite Shield",
-    "itemPrice": 60300,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 377,
-    "itemName": "Scale Gaiters",
-    "itemPrice": 64100,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 347,
-    "itemName": "Ring Mail Breastplate",
-    "itemPrice": 64210,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 415,
-    "itemName": "Mithril Banded Gaiters",
-    "itemPrice": 73200,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 416,
-    "itemName": "Reinforced Leather Gaiters",
-    "itemPrice": 73200,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 469,
-    "itemName": "Stockings of Knowledge",
-    "itemPrice": 73200,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 61,
-    "itemName": "Mithril Plate Gloves",
-    "itemPrice": 75200,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 607,
-    "itemName": "Ogre Power Gauntlets",
-    "itemPrice": 75200,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 2451,
-    "itemName": "Sage's Worn Gloves",
-    "itemPrice": 75200,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 1125,
-    "itemName": "Assault Boots",
-    "itemPrice": 75200,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 2428,
-    "itemName": "Plate Boots",
-    "itemPrice": 75200,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 2427,
-    "itemName": "Salamander Skin Boots",
-    "itemPrice": 75200,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 392,
-    "itemName": "Lion Skin Shirt",
-    "itemPrice": 76900,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 435,
-    "itemName": "Mystic's Tunic",
-    "itemPrice": 76900,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 434,
-    "itemName": "White Tunic",
-    "itemPrice": 76900,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 2494,
-    "itemName": "Plate Shield",
-    "itemPrice": 79000,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 630,
-    "itemName": "Square Shield",
-    "itemPrice": 79000,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 2411,
-    "itemName": "Brigandine Helmet",
-    "itemPrice": 86100,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 378,
-    "itemName": "Compound Scale Gaiters",
-    "itemPrice": 97600,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 379,
-    "itemName": "Dwarven Scale Gaiters",
-    "itemPrice": 97600,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 59,
-    "itemName": "Mithril Gaiters",
-    "itemPrice": 97600,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 348,
-    "itemName": "Scale Mail",
-    "itemPrice": 102500,
-    "gradeInfo": "d-low"
-  },
-  {
-    "itemId": 2401,
-    "itemName": "Elven Mithril Stockings",
-    "itemPrice": 107700,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 417,
-    "itemName": "Manticore Skin Gaiters",
-    "itemPrice": 107700,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 470,
-    "itemName": "Mithril Stockings",
-    "itemPrice": 107700,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 2412,
-    "itemName": "Plate Helmet",
-    "itemPrice": 112800,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 393,
-    "itemName": "Mithril Banded Mail",
-    "itemPrice": 117000,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 394,
-    "itemName": "Reinforced Leather Shirt",
-    "itemPrice": 117000,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 436,
-    "itemName": "Tunic of Knowledge",
-    "itemPrice": 117000,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 349,
-    "itemName": "Compound Scale Mail",
-    "itemPrice": 141100,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 350,
-    "itemName": "Dwarven Scale Mail",
-    "itemPrice": 141100,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 58,
-    "itemName": "Mithril Breastplate",
-    "itemPrice": 141100,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 2378,
-    "itemName": "Brigandine Gaiters",
-    "itemPrice": 143600,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 2377,
-    "itemName": "Mithril Scale Gaiters",
-    "itemPrice": 143600,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 351,
-    "itemName": "Blast Plate",
-    "itemPrice": 156200,
-    "gradeInfo": "d-mid"
-  },
-  {
-    "itemId": 2396,
-    "itemName": "Elven Mithril Tunic",
-    "itemPrice": 172000,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 395,
-    "itemName": "Manticore Skin Shirt",
-    "itemPrice": 172000,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 437,
-    "itemName": "Mithril Tunic",
-    "itemPrice": 172000,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 380,
-    "itemName": "Plate Gaiters",
-    "itemPrice": 188000,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 352,
-    "itemName": "Brigandine Tunic",
-    "itemPrice": 229700,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 353,
-    "itemName": "Half Plate Armor",
-    "itemPrice": 300800,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 438,
-    "itemName": "Sage's Rag",
-    "itemPrice": 225826,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 396,
-    "itemName": "Salamander Skin Mail",
-    "itemPrice": 225826,
-    "gradeInfo": "d-top"
-  },
-  {
-    "itemId": 2453,
-    "itemName": "Chain Gloves",
-    "itemPrice": 97100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2454,
-    "itemName": "Karmian Gloves",
-    "itemPrice": 97100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2452,
-    "itemName": "Reinforced Mithril Gloves",
-    "itemPrice": 97100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2433,
-    "itemName": "Boots of Seal",
-    "itemPrice": 97100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2429,
-    "itemName": "Chain Boots",
-    "itemPrice": 97100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2432,
-    "itemName": "Dwarven Chain Boots",
-    "itemPrice": 97100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2430,
-    "itemName": "Karmian Boots",
-    "itemPrice": 97100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2431,
-    "itemName": "Plated Leather Boots",
-    "itemPrice": 97100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 62,
-    "itemName": "Reinforced Mithril Boots",
-    "itemPrice": 97100,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 2495,
-    "itemName": "Chain Shield",
-    "itemPrice": 102000,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 631,
-    "itemName": "Eldarake",
-    "itemPrice": 102000,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 497,
-    "itemName": "Chain Helmet",
-    "itemPrice": 112800,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2455,
-    "itemName": "Plated Leather Gloves",
-    "itemPrice": 114400,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2496,
-    "itemName": "Dwarven Chain Shield",
-    "itemPrice": 120100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2456,
-    "itemName": "Dwarven Chain Gloves",
-    "itemPrice": 123900,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2457,
-    "itemName": "Gloves of Seal",
-    "itemPrice": 123900,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 2458,
-    "itemName": "Rind Leather Gloves",
-    "itemPrice": 123900,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 2434,
-    "itemName": "Rind Leather Boots",
-    "itemPrice": 123900,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 632,
-    "itemName": "Knight's Shield",
-    "itemPrice": 130100,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 2413,
-    "itemName": "Chain Hood",
-    "itemPrice": 145700,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 498,
-    "itemName": "Steel Plate Helmet",
-    "itemPrice": 158200,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 471,
-    "itemName": "Karmian Stockings",
-    "itemPrice": 182100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 2387,
-    "itemName": "Reinforced Mithril Gaiters",
-    "itemPrice": 182100,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 500,
-    "itemName": "Great Helmet",
-    "itemPrice": 185800,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 2459,
-    "itemName": "Demon's Gloves",
-    "itemPrice": 188800,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 608,
-    "itemName": "Mithril Gauntlets",
-    "itemPrice": 188800,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 64,
-    "itemName": "Composite Boots",
-    "itemPrice": 188800,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 2435,
-    "itemName": "Demon's Boots",
-    "itemPrice": 188800,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 107,
-    "itemName": "Composite Shield",
-    "itemPrice": 198300,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 103,
-    "itemName": "Tower Shield",
-    "itemPrice": 198300,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 2460,
-    "itemName": "Theca Leather Gloves",
-    "itemPrice": 211600,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 2436,
-    "itemName": "Theca Leather Boots",
-    "itemPrice": 211600,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 418,
-    "itemName": "Plated Leather Gaiters",
-    "itemPrice": 214500,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 419,
-    "itemName": "Rind Leather Gaiters",
-    "itemPrice": 232300,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 381,
-    "itemName": "Chain Gaiters",
-    "itemPrice": 242900,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 2463,
-    "itemName": "Divine Gloves",
-    "itemPrice": 275100,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 2461,
-    "itemName": "Drake Leather Gloves",
-    "itemPrice": 275100,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 2462,
-    "itemName": "Full Plate Gauntlets",
-    "itemPrice": 275100,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 603,
-    "itemName": "Divine Boots",
-    "itemPrice": 275100,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 2437,
-    "itemName": "Drake Leather Boots",
-    "itemPrice": 275100,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 2438,
-    "itemName": "Full Plate Boots",
-    "itemPrice": 275100,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 517,
-    "itemName": "Composite Helmet",
-    "itemPrice": 283200,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 1149,
-    "itemName": "Shining Circlet",
-    "itemPrice": 283200,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 2497,
-    "itemName": "Full Plate Shield",
-    "itemPrice": 288800,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 439,
-    "itemName": "Karmian Tunic",
-    "itemPrice": 291000,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 397,
-    "itemName": "Mithril Shirt",
-    "itemPrice": 291000,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 382,
-    "itemName": "Dwarven Chain Gaiters",
-    "itemPrice": 309700,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 398,
-    "itemName": "Plated Leather",
-    "itemPrice": 343000,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 472,
-    "itemName": "Demon's Stockings",
-    "itemPrice": 354000,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 399,
-    "itemName": "Rind Leather Armor",
-    "itemPrice": 372000,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 354,
-    "itemName": "Chain Mail Shirt",
-    "itemPrice": 388600,
-    "gradeInfo": "c-low"
-  },
-  {
-    "itemId": 420,
-    "itemName": "Theca Leather Gaiters",
-    "itemPrice": 396700,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 2414,
-    "itemName": "Full Plate Helmet",
-    "itemPrice": 412600,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 499,
-    "itemName": "Mithril Helmet",
-    "itemPrice": 412600,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 355,
-    "itemName": "Dwarven Chain Mail Shirt",
-    "itemPrice": 495500,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 473,
-    "itemName": "Divine Stockings",
-    "itemPrice": 515800,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 441,
-    "itemName": "Demon's Tunic",
-    "itemPrice": 566000,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 440,
-    "itemName": "Robe of Seal",
-    "itemPrice": 372002,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 400,
-    "itemName": "Theca Leather Armor",
-    "itemPrice": 635000,
-    "gradeInfo": "c-mid"
-  },
-  {
-    "itemId": 442,
-    "itemName": "Divine Tunic",
-    "itemPrice": 825000,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 60,
-    "itemName": "Composite Armor",
-    "itemPrice": 755832,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 401,
-    "itemName": "Drake Leather Armor",
-    "itemPrice": 826056,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 356,
-    "itemName": "Full Plate Armor",
-    "itemPrice": 1101408,
-    "gradeInfo": "c-top"
-  },
-  {
-    "itemId": 2464,
-    "itemName": "Sealed Avadon Gloves",
-    "itemPrice": 399100,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 600,
-    "itemName": "Sealed Avadon Boots",
-    "itemPrice": 399100,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 554,
-    "itemName": "Sealed Zubei's Boots",
-    "itemPrice": 399100,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 673,
-    "itemName": "Avadon Shield",
-    "itemPrice": 419000,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 633,
-    "itemName": "Zubei's Shield",
-    "itemPrice": 419000,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2415,
-    "itemName": "Avadon Circlet",
-    "itemPrice": 598600,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 503,
-    "itemName": "Zubei's Helmet",
-    "itemPrice": 598600,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2487,
-    "itemName": "Sealed Blue Wolf Gloves",
-    "itemPrice": 618800,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2475,
-    "itemName": "Sealed Doom Gloves",
-    "itemPrice": 618800,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2439,
-    "itemName": "Sealed Blue Wolf Boots",
-    "itemPrice": 618800,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 601,
-    "itemName": "Sealed Doom Boots",
-    "itemPrice": 618800,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 110,
-    "itemName": "Doom Shield",
-    "itemPrice": 649800,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2402,
-    "itemName": "Stockings of Zubei",
-    "itemPrice": 748300,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2388,
-    "itemName": "Zubei's Leather Gaiters",
-    "itemPrice": 748300,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2416,
-    "itemName": "Blue Wolf Helmet",
-    "itemPrice": 928300,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2417,
-    "itemName": "Doom Helmet",
-    "itemPrice": 928300,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2379,
-    "itemName": "Avadon Gaiters",
-    "itemPrice": 997700,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 383,
-    "itemName": "Zubei's Gaiters",
-    "itemPrice": 997700,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2403,
-    "itemName": "Blue Wolf Stockings",
-    "itemPrice": 1160300,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2404,
-    "itemName": "Stockings of Doom",
-    "itemPrice": 1160300,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2397,
-    "itemName": "Tunic of Zubei",
-    "itemPrice": 1197000,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2384,
-    "itemName": "Zubei's Leather Shirt",
-    "itemPrice": 1197000,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2380,
-    "itemName": "Blue Wolf Gaiters",
-    "itemPrice": 1547100,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2376,
-    "itemName": "Avadon Breastplate",
-    "itemPrice": 1596000,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 357,
-    "itemName": "Zubei's Breastplate",
-    "itemPrice": 1596000,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2398,
-    "itemName": "Blue Wolf Tunic",
-    "itemPrice": 1857000,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2399,
-    "itemName": "Tunic of Doom",
-    "itemPrice": 1857000,
-    "gradeInfo": "b-low"
-  },
-  {
-    "itemId": 2390,
-    "itemName": "Avadon Leather Armor",
-    "itemPrice": 1198736,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2406,
-    "itemName": "Avadon Robe",
-    "itemPrice": 1198736,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 358,
-    "itemName": "Blue Wolf Breastplate",
-    "itemPrice": 2475000,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2391,
-    "itemName": "Blue Wolf Leather Armor",
-    "itemPrice": 1858472,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2392,
-    "itemName": "Leather Armor of Doom",
-    "itemPrice": 1858472,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 2381,
-    "itemName": "Doom Plate Armor",
-    "itemPrice": 2477552,
-    "gradeInfo": "b-top"
-  },
-  {
-    "itemId": 5290,
-    "itemName": "Sealed Dark Crystal Gloves",
-    "itemPrice": 890000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5295,
-    "itemName": "Sealed Tallum Gloves",
-    "itemPrice": 890000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5291,
-    "itemName": "Sealed Dark Crystal Boots",
-    "itemPrice": 890000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5296,
-    "itemName": "Sealed Tallum Boots",
-    "itemPrice": 890000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5292,
-    "itemName": "Sealed Dark Crystal Shield",
-    "itemPrice": 935000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5289,
-    "itemName": "Sealed Dark Crystal Helmet",
-    "itemPrice": 1336000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5294,
-    "itemName": "Sealed Tallum Helmet",
-    "itemPrice": 1336000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5313,
-    "itemName": "Sealed Gauntlets of Nightmare",
-    "itemPrice": 1355000,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5318,
-    "itemName": "Sealed Majestic Gauntlets",
-    "itemPrice": 1355000,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5314,
-    "itemName": "Sealed Boots of Nightmare",
-    "itemPrice": 1355000,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5319,
-    "itemName": "Sealed Majestic Boots",
-    "itemPrice": 1355000,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5315,
-    "itemName": "Sealed Shield of Nightmare",
-    "itemPrice": 1422000,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5298,
-    "itemName": "Sealed Dark Crystal Leggings",
-    "itemPrice": 1670000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5305,
-    "itemName": "Sealed Tallum Stockings",
-    "itemPrice": 1670000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5312,
-    "itemName": "Sealed Helm of Nightmare",
-    "itemPrice": 2032000,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5317,
-    "itemName": "Sealed Majestic Circlet",
-    "itemPrice": 2032000,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5288,
-    "itemName": "Sealed Dark Crystal Gaiters",
-    "itemPrice": 2226000,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5297,
-    "itemName": "Sealed Dark Crystal Leather Armor",
-    "itemPrice": 2671000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5304,
-    "itemName": "Sealed Tallum Tunic",
-    "itemPrice": 2671000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5287,
-    "itemName": "Sealed Dark Crystal breastplate",
-    "itemPrice": 3562000,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5308,
-    "itemName": "Sealed Dark Crystal Robe",
-    "itemPrice": 2674056,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5301,
-    "itemName": "Sealed Tallum Leather Armor",
-    "itemPrice": 2674056,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5293,
-    "itemName": "Sealed Tallum Plate Armor",
-    "itemPrice": 3565408,
-    "gradeInfo": "a-low"
-  },
-  {
-    "itemId": 5320,
-    "itemName": "Sealed Leather Armor of Nightmare",
-    "itemPrice": 4067448,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5323,
-    "itemName": "Sealed Majestic Leather Armor",
-    "itemPrice": 4067448,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5329,
-    "itemName": "Sealed Majestic Robe",
-    "itemPrice": 4067448,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5326,
-    "itemName": "Sealed Robe of Nightmare",
-    "itemPrice": 4067448,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5311,
-    "itemName": "Sealed Armor of Nightmare",
-    "itemPrice": 5423264,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 5316,
-    "itemName": "Sealed Majestic Plate Armor",
-    "itemPrice": 5423264,
-    "gradeInfo": "a-top"
-  },
-  {
-    "itemId": 6681,
-    "itemName": "Sealed Draconic Leather Glove",
-    "itemPrice": 3195000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 6676,
-    "itemName": "Sealed Imperial Crusader Gauntlet",
-    "itemPrice": 3195000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 6685,
-    "itemName": "Sealed Major Arcana Glove",
-    "itemPrice": 3195000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 6682,
-    "itemName": "Sealed Draconic Leather Boots",
-    "itemPrice": 3195000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 6677,
-    "itemName": "Sealed Imperial Crusader Boots",
-    "itemPrice": 3195000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 6686,
-    "itemName": "Sealed Major Arcana Boots",
-    "itemPrice": 3195000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 13885,
-    "itemName": "Sealed Arcana Sigil",
-    "itemPrice": 3355000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 6678,
-    "itemName": "Sealed Imperial Crusader Shield",
-    "itemPrice": 3355000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 6683,
-    "itemName": "Sealed Draconic Leather Helmet",
-    "itemPrice": 4793000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 6679,
-    "itemName": "Sealed Imperial Crusader Helmet",
-    "itemPrice": 4793000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 6687,
-    "itemName": "Sealed Major Arcana Circlet",
-    "itemPrice": 4793000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 9517,
-    "itemName": "Sealed Dynasty Gauntlets",
-    "itemPrice": 6099000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9527,
-    "itemName": "Sealed Dynasty Gloves",
-    "itemPrice": 6099000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9522,
-    "itemName": "Sealed Dynasty Leather Gloves",
-    "itemPrice": 6099000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9518,
-    "itemName": "Sealed Dynasty Boots",
-    "itemPrice": 6099000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9523,
-    "itemName": "Sealed Dynasty Leather Boots",
-    "itemPrice": 6099000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9528,
-    "itemName": "Sealed Dynasty Shoes",
-    "itemPrice": 6099000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9529,
-    "itemName": "Sealed Dynasty Shield",
-    "itemPrice": 6404000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 13886,
-    "itemName": "Sealed Dynasty Sigil",
-    "itemPrice": 6404000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 6675,
-    "itemName": "Sealed Imperial Crusader Gaiters",
-    "itemPrice": 7988000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 9526,
-    "itemName": "Sealed Dynasty Circlet",
-    "itemPrice": 9149000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9516,
-    "itemName": "Sealed Dynasty Helmet",
-    "itemPrice": 9149000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9521,
-    "itemName": "Sealed Dynasty Leather Helmet",
-    "itemPrice": 9149000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9520,
-    "itemName": "Sealed Dynasty Leather Leggings",
-    "itemPrice": 11436000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9525,
-    "itemName": "Sealed Dynasty Stockings",
-    "itemPrice": 11436000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 6674,
-    "itemName": "Sealed Imperial Crusader Breastplate",
-    "itemPrice": 12781000,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 9515,
-    "itemName": "Sealed Dynasty Gaiter",
-    "itemPrice": 15248000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 6680,
-    "itemName": "Sealed Draconic Leather Armor",
-    "itemPrice": 9595432,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 6684,
-    "itemName": "Sealed Major Arcana Robe",
-    "itemPrice": 9595432,
-    "gradeInfo": "s"
-  },
-  {
-    "itemId": 9519,
-    "itemName": "Sealed Dynasty Leather Armor",
-    "itemPrice": 18298000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9524,
-    "itemName": "Sealed Dynasty Tunic",
-    "itemPrice": 18298000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 9514,
-    "itemName": "Sealed Dynasty Breast Plate",
-    "itemPrice": 24398000,
-    "gradeInfo": "s80-low"
-  },
-  {
-    "itemId": 15703,
-    "itemName": "Sealed Moirai Gauntlet",
-    "itemPrice": 8418000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15705,
-    "itemName": "Sealed Moirai Gloves",
-    "itemPrice": 8418000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15704,
-    "itemName": "Sealed Moirai Leather Gloves",
-    "itemPrice": 8418000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15706,
-    "itemName": "Sealed Moirai Boots",
-    "itemPrice": 8418000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15707,
-    "itemName": "Sealed Moirai Leather Boots",
-    "itemPrice": 8418000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15708,
-    "itemName": "Sealed Moirai Shoes",
-    "itemPrice": 8418000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15710,
-    "itemName": "Sealed Moirai Shield",
-    "itemPrice": 8839000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15709,
-    "itemName": "Sealed Moirai Sigil",
-    "itemPrice": 8839000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15696,
-    "itemName": "Sealed Moirai Circlet",
-    "itemPrice": 12627000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15694,
-    "itemName": "Sealed Moirai Helmet",
-    "itemPrice": 12627000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15695,
-    "itemName": "Sealed Moirai Leather Helmet",
-    "itemPrice": 12627000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15701,
-    "itemName": "Sealed Moirai Leather Legging",
-    "itemPrice": 15784000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15702,
-    "itemName": "Sealed Moirai Stockings",
-    "itemPrice": 15784000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15700,
-    "itemName": "Sealed Moirai Gaiter",
-    "itemPrice": 21046000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15698,
-    "itemName": "Sealed Moirai Leather Breastplate",
-    "itemPrice": 25255000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15699,
-    "itemName": "Sealed Moirai Tunic",
-    "itemPrice": 25255000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 15697,
-    "itemName": "Sealed Moirai Breastplate",
-    "itemPrice": 33673000,
-    "gradeInfo": "s80-top"
-  },
-  {
-    "itemId": 14109,
-    "itemName": "Sealed Vesper Gauntlet",
-    "itemPrice": 11667000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14116,
-    "itemName": "Sealed Vesper Gloves",
-    "itemPrice": 11667000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14113,
-    "itemName": "Sealed Vesper Leather Gloves",
-    "itemPrice": 11667000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14110,
-    "itemName": "Sealed Vesper Boots",
-    "itemPrice": 11667000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14114,
-    "itemName": "Sealed Vesper Leather Boots",
-    "itemPrice": 11667000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14117,
-    "itemName": "Sealed Vesper Shoes",
-    "itemPrice": 11667000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14111,
-    "itemName": "Sealed Vesper Shield",
-    "itemPrice": 12250000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 13887,
-    "itemName": "Sealed Vesper Sigil",
-    "itemPrice": 12250000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 13145,
-    "itemName": "Sealed Vesper Circlet",
-    "itemPrice": 17500000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 13143,
-    "itemName": "Sealed Vesper Helmet",
-    "itemPrice": 17500000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 13144,
-    "itemName": "Sealed Vesper Leather Helmet",
-    "itemPrice": 17500000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14112,
-    "itemName": "Sealed Vesper Leather Leggings",
-    "itemPrice": 21876000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14115,
-    "itemName": "Sealed Vesper Stockings",
-    "itemPrice": 21876000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14108,
-    "itemName": "Sealed Vesper Gaiters",
-    "itemPrice": 29168000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14106,
-    "itemName": "Sealed Vesper Leather Breastplate",
-    "itemPrice": 35000000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14107,
-    "itemName": "Sealed Vesper Tunic",
-    "itemPrice": 35000000,
-    "gradeInfo": "s84"
-  },
-  {
-    "itemId": 14105,
-    "itemName": "Sealed Vesper Breastplate",
-    "itemPrice": 46668000,
-    "gradeInfo": "s84"
-  }
-]
+[ {
+  "itemId" : 1121,
+  "itemName" : "Apprentice's Shoes",
+  "itemPrice" : 5,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 48,
+  "itemName" : "Short Gloves",
+  "itemPrice" : 28,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 35,
+  "itemName" : "Cloth Shoes",
+  "itemPrice" : 28,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 36,
+  "itemName" : "Leather Sandals",
+  "itemPrice" : 28,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 18,
+  "itemName" : "Leather Shield",
+  "itemPrice" : 30,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 41,
+  "itemName" : "Cloth Cap",
+  "itemPrice" : 42,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 28,
+  "itemName" : "Pants",
+  "itemPrice" : 71,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 462,
+  "itemName" : "Stockings",
+  "itemPrice" : 71,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 21,
+  "itemName" : "Shirt",
+  "itemPrice" : 113,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 426,
+  "itemName" : "Tunic",
+  "itemPrice" : 113,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 1119,
+  "itemName" : "Short Leather Gloves",
+  "itemPrice" : 470,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 1122,
+  "itemName" : "Cotton Shoes",
+  "itemPrice" : 470,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 1129,
+  "itemName" : "Crude Leather Shoes",
+  "itemPrice" : 470,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 19,
+  "itemName" : "Small Shield",
+  "itemPrice" : 490,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 42,
+  "itemName" : "Leather Cap",
+  "itemPrice" : 700,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 1103,
+  "itemName" : "Cotton Stockings",
+  "itemPrice" : 1170,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 463,
+  "itemName" : "Feriotic Stockings",
+  "itemPrice" : 1170,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 29,
+  "itemName" : "Leather Pants",
+  "itemPrice" : 1170,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 1100,
+  "itemName" : "Cotton Tunic",
+  "itemPrice" : 1870,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 428,
+  "itemName" : "Feriotic Tunic",
+  "itemPrice" : 1870,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 22,
+  "itemName" : "Leather Shirt",
+  "itemPrice" : 1870,
+  "gradeInfo" : "ng-low"
+}, {
+  "itemId" : 49,
+  "itemName" : "Gloves",
+  "itemPrice" : 2040,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 37,
+  "itemName" : "Leather Shoes",
+  "itemPrice" : 2040,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 20,
+  "itemName" : "Buckler",
+  "itemPrice" : 2140,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 43,
+  "itemName" : "Wooden Helmet",
+  "itemPrice" : 3060,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 30,
+  "itemName" : "Hard Leather Pants",
+  "itemPrice" : 3820,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 464,
+  "itemName" : "Leather Stockings",
+  "itemPrice" : 3820,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 2386,
+  "itemName" : "Wooden Gaiters",
+  "itemPrice" : 3820,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 50,
+  "itemName" : "Leather Gloves",
+  "itemPrice" : 5210,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 38,
+  "itemName" : "Low Boots",
+  "itemPrice" : 5210,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 102,
+  "itemName" : "Round Shield",
+  "itemPrice" : 5470,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 429,
+  "itemName" : "Leather Tunic",
+  "itemPrice" : 6120,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 23,
+  "itemName" : "Wooden Breastplate",
+  "itemPrice" : 6120,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 44,
+  "itemName" : "Leather Helmet",
+  "itemPrice" : 7820,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 51,
+  "itemName" : "Bracer",
+  "itemPrice" : 9500,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 39,
+  "itemName" : "Boots",
+  "itemPrice" : 9500,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 31,
+  "itemName" : "Bone Gaiters",
+  "itemPrice" : 9770,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 412,
+  "itemName" : "Cotton Pants",
+  "itemPrice" : 9770,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 1104,
+  "itemName" : "Stockings of Devotion",
+  "itemPrice" : 9770,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 625,
+  "itemName" : "Bone Shield",
+  "itemPrice" : 9900,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 1148,
+  "itemName" : "Hard Leather Helmet",
+  "itemPrice" : 14200,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 32,
+  "itemName" : "Piece Bone Gaiters",
+  "itemPrice" : 15300,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 24,
+  "itemName" : "Bone Breastplate",
+  "itemPrice" : 15600,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 390,
+  "itemName" : "Cotton Shirt",
+  "itemPrice" : 15600,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 1101,
+  "itemName" : "Tunic of Devotion",
+  "itemPrice" : 15600,
+  "gradeInfo" : "ng-mid"
+}, {
+  "itemId" : 33,
+  "itemName" : "Hard Leather Gaiters",
+  "itemPrice" : 17700,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 1105,
+  "itemName" : "Stockings of Magic",
+  "itemPrice" : 17700,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 34,
+  "itemName" : "Bronze Gaiters",
+  "itemPrice" : 23600,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 25,
+  "itemName" : "Piece Bone Breastplate",
+  "itemPrice" : 24480,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 27,
+  "itemName" : "Hard Leather Shirt",
+  "itemPrice" : 28400,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 1102,
+  "itemName" : "Tunic of Magic",
+  "itemPrice" : 28400,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 26,
+  "itemName" : "Bronze Breastplate",
+  "itemPrice" : 37820,
+  "gradeInfo" : "ng-top"
+}, {
+  "itemId" : 604,
+  "itemName" : "Crafted Leather Gloves",
+  "itemPrice" : 16100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 40,
+  "itemName" : "Leather Boots",
+  "itemPrice" : 16100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 626,
+  "itemName" : "Bronze Shield",
+  "itemPrice" : 16900,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 45,
+  "itemName" : "Bone Helmet",
+  "itemPrice" : 24100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 605,
+  "itemName" : "Leather Gauntlets",
+  "itemPrice" : 25600,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 1123,
+  "itemName" : "Blue Buckskin Boots",
+  "itemPrice" : 25600,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 627,
+  "itemName" : "Aspis",
+  "itemPrice" : 26900,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 465,
+  "itemName" : "Cursed Stockings",
+  "itemPrice" : 30100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 413,
+  "itemName" : "Puma Skin Gaiters",
+  "itemPrice" : 30100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 46,
+  "itemName" : "Bronze Helmet",
+  "itemPrice" : 38400,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 63,
+  "itemName" : "Gauntlets",
+  "itemPrice" : 39100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 2447,
+  "itemName" : "Gloves of Knowledge",
+  "itemPrice" : 39100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 2446,
+  "itemName" : "Reinforced Leather Gloves",
+  "itemPrice" : 39100,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 2423,
+  "itemName" : "Boots of Knowledge",
+  "itemPrice" : 39100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 553,
+  "itemName" : "Iron Boots",
+  "itemPrice" : 39100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 2422,
+  "itemName" : "Reinforced Leather Boots",
+  "itemPrice" : 39100,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 376,
+  "itemName" : "Iron Plate Gaiters",
+  "itemPrice" : 40100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 628,
+  "itemName" : "Hoplon",
+  "itemPrice" : 41000,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 467,
+  "itemName" : "Dark Stockings",
+  "itemPrice" : 48000,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 414,
+  "itemName" : "Lion Skin Gaiters",
+  "itemPrice" : 48000,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 468,
+  "itemName" : "Mystic's Stockings",
+  "itemPrice" : 48000,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 432,
+  "itemName" : "Cursed Tunic",
+  "itemPrice" : 48200,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 391,
+  "itemName" : "Puma Skin Shirt",
+  "itemPrice" : 48200,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 2449,
+  "itemName" : "Brigandine Gauntlets",
+  "itemPrice" : 57400,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 2448,
+  "itemName" : "Manticore Skin Gloves",
+  "itemPrice" : 57400,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 2450,
+  "itemName" : "Mithril Gloves",
+  "itemPrice" : 57400,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 606,
+  "itemName" : "Rip Gauntlets",
+  "itemPrice" : 57400,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 1124,
+  "itemName" : "Boots of Power",
+  "itemPrice" : 57400,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 2425,
+  "itemName" : "Brigandine Boots",
+  "itemPrice" : 57400,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 2426,
+  "itemName" : "Elven Mithril Boots",
+  "itemPrice" : 57400,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 2424,
+  "itemName" : "Manticore Skin Boots",
+  "itemPrice" : 57400,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 47,
+  "itemName" : "Helmet",
+  "itemPrice" : 58600,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 2493,
+  "itemName" : "Brigandine Shield",
+  "itemPrice" : 60300,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 629,
+  "itemName" : "Kite Shield",
+  "itemPrice" : 60300,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 377,
+  "itemName" : "Scale Gaiters",
+  "itemPrice" : 64100,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 347,
+  "itemName" : "Ring Mail Breastplate",
+  "itemPrice" : 64210,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 415,
+  "itemName" : "Mithril Banded Gaiters",
+  "itemPrice" : 73200,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 416,
+  "itemName" : "Reinforced Leather Gaiters",
+  "itemPrice" : 73200,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 469,
+  "itemName" : "Stockings of Knowledge",
+  "itemPrice" : 73200,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 61,
+  "itemName" : "Mithril Plate Gloves",
+  "itemPrice" : 75200,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 607,
+  "itemName" : "Ogre Power Gauntlets",
+  "itemPrice" : 75200,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 2451,
+  "itemName" : "Sage's Worn Gloves",
+  "itemPrice" : 75200,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 1125,
+  "itemName" : "Assault Boots",
+  "itemPrice" : 75200,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 2428,
+  "itemName" : "Plate Boots",
+  "itemPrice" : 75200,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 2427,
+  "itemName" : "Salamander Skin Boots",
+  "itemPrice" : 75200,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 392,
+  "itemName" : "Lion Skin Shirt",
+  "itemPrice" : 76900,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 435,
+  "itemName" : "Mystic's Tunic",
+  "itemPrice" : 76900,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 434,
+  "itemName" : "White Tunic",
+  "itemPrice" : 76900,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 2494,
+  "itemName" : "Plate Shield",
+  "itemPrice" : 79000,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 630,
+  "itemName" : "Square Shield",
+  "itemPrice" : 79000,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 2411,
+  "itemName" : "Brigandine Helmet",
+  "itemPrice" : 86100,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 378,
+  "itemName" : "Compound Scale Gaiters",
+  "itemPrice" : 97600,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 379,
+  "itemName" : "Dwarven Scale Gaiters",
+  "itemPrice" : 97600,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 59,
+  "itemName" : "Mithril Gaiters",
+  "itemPrice" : 97600,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 348,
+  "itemName" : "Scale Mail",
+  "itemPrice" : 102500,
+  "gradeInfo" : "d-low"
+}, {
+  "itemId" : 2401,
+  "itemName" : "Elven Mithril Stockings",
+  "itemPrice" : 107700,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 417,
+  "itemName" : "Manticore Skin Gaiters",
+  "itemPrice" : 107700,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 470,
+  "itemName" : "Mithril Stockings",
+  "itemPrice" : 107700,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 2412,
+  "itemName" : "Plate Helmet",
+  "itemPrice" : 112800,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 393,
+  "itemName" : "Mithril Banded Mail",
+  "itemPrice" : 117000,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 394,
+  "itemName" : "Reinforced Leather Shirt",
+  "itemPrice" : 117000,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 436,
+  "itemName" : "Tunic of Knowledge",
+  "itemPrice" : 117000,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 349,
+  "itemName" : "Compound Scale Mail",
+  "itemPrice" : 141100,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 350,
+  "itemName" : "Dwarven Scale Mail",
+  "itemPrice" : 141100,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 58,
+  "itemName" : "Mithril Breastplate",
+  "itemPrice" : 141100,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 2378,
+  "itemName" : "Brigandine Gaiters",
+  "itemPrice" : 143600,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 2377,
+  "itemName" : "Mithril Scale Gaiters",
+  "itemPrice" : 143600,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 351,
+  "itemName" : "Blast Plate",
+  "itemPrice" : 156200,
+  "gradeInfo" : "d-mid"
+}, {
+  "itemId" : 2396,
+  "itemName" : "Elven Mithril Tunic",
+  "itemPrice" : 172000,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 395,
+  "itemName" : "Manticore Skin Shirt",
+  "itemPrice" : 172000,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 437,
+  "itemName" : "Mithril Tunic",
+  "itemPrice" : 172000,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 380,
+  "itemName" : "Plate Gaiters",
+  "itemPrice" : 188000,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 352,
+  "itemName" : "Brigandine Tunic",
+  "itemPrice" : 229700,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 353,
+  "itemName" : "Half Plate Armor",
+  "itemPrice" : 300800,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 438,
+  "itemName" : "Sage's Rag",
+  "itemPrice" : 225826,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 396,
+  "itemName" : "Salamander Skin Mail",
+  "itemPrice" : 225826,
+  "gradeInfo" : "d-top"
+}, {
+  "itemId" : 2453,
+  "itemName" : "Chain Gloves",
+  "itemPrice" : 97100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2454,
+  "itemName" : "Karmian Gloves",
+  "itemPrice" : 97100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2452,
+  "itemName" : "Reinforced Mithril Gloves",
+  "itemPrice" : 97100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2433,
+  "itemName" : "Boots of Seal",
+  "itemPrice" : 97100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2429,
+  "itemName" : "Chain Boots",
+  "itemPrice" : 97100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2432,
+  "itemName" : "Dwarven Chain Boots",
+  "itemPrice" : 97100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2430,
+  "itemName" : "Karmian Boots",
+  "itemPrice" : 97100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2431,
+  "itemName" : "Plated Leather Boots",
+  "itemPrice" : 97100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 62,
+  "itemName" : "Reinforced Mithril Boots",
+  "itemPrice" : 97100,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 2495,
+  "itemName" : "Chain Shield",
+  "itemPrice" : 102000,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 631,
+  "itemName" : "Eldarake",
+  "itemPrice" : 102000,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 497,
+  "itemName" : "Chain Helmet",
+  "itemPrice" : 112800,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2455,
+  "itemName" : "Plated Leather Gloves",
+  "itemPrice" : 114400,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2496,
+  "itemName" : "Dwarven Chain Shield",
+  "itemPrice" : 120100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2456,
+  "itemName" : "Dwarven Chain Gloves",
+  "itemPrice" : 123900,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2457,
+  "itemName" : "Gloves of Seal",
+  "itemPrice" : 123900,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 2458,
+  "itemName" : "Rind Leather Gloves",
+  "itemPrice" : 123900,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 2434,
+  "itemName" : "Rind Leather Boots",
+  "itemPrice" : 123900,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 632,
+  "itemName" : "Knight's Shield",
+  "itemPrice" : 130100,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 2413,
+  "itemName" : "Chain Hood",
+  "itemPrice" : 145700,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 498,
+  "itemName" : "Steel Plate Helmet",
+  "itemPrice" : 158200,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 471,
+  "itemName" : "Karmian Stockings",
+  "itemPrice" : 182100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 2387,
+  "itemName" : "Reinforced Mithril Gaiters",
+  "itemPrice" : 182100,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 500,
+  "itemName" : "Great Helmet",
+  "itemPrice" : 185800,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 2459,
+  "itemName" : "Demon's Gloves",
+  "itemPrice" : 188800,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 608,
+  "itemName" : "Mithril Gauntlets",
+  "itemPrice" : 188800,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 64,
+  "itemName" : "Composite Boots",
+  "itemPrice" : 188800,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 2435,
+  "itemName" : "Demon's Boots",
+  "itemPrice" : 188800,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 107,
+  "itemName" : "Composite Shield",
+  "itemPrice" : 198300,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 103,
+  "itemName" : "Tower Shield",
+  "itemPrice" : 198300,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 2460,
+  "itemName" : "Theca Leather Gloves",
+  "itemPrice" : 211600,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 2436,
+  "itemName" : "Theca Leather Boots",
+  "itemPrice" : 211600,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 418,
+  "itemName" : "Plated Leather Gaiters",
+  "itemPrice" : 214500,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 419,
+  "itemName" : "Rind Leather Gaiters",
+  "itemPrice" : 232300,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 381,
+  "itemName" : "Chain Gaiters",
+  "itemPrice" : 242900,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 2463,
+  "itemName" : "Divine Gloves",
+  "itemPrice" : 275100,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 2461,
+  "itemName" : "Drake Leather Gloves",
+  "itemPrice" : 275100,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 2462,
+  "itemName" : "Full Plate Gauntlets",
+  "itemPrice" : 275100,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 603,
+  "itemName" : "Divine Boots",
+  "itemPrice" : 275100,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 2437,
+  "itemName" : "Drake Leather Boots",
+  "itemPrice" : 275100,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 2438,
+  "itemName" : "Full Plate Boots",
+  "itemPrice" : 275100,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 517,
+  "itemName" : "Composite Helmet",
+  "itemPrice" : 283200,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 1149,
+  "itemName" : "Shining Circlet",
+  "itemPrice" : 283200,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 2497,
+  "itemName" : "Full Plate Shield",
+  "itemPrice" : 288800,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 439,
+  "itemName" : "Karmian Tunic",
+  "itemPrice" : 291000,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 397,
+  "itemName" : "Mithril Shirt",
+  "itemPrice" : 291000,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 382,
+  "itemName" : "Dwarven Chain Gaiters",
+  "itemPrice" : 309700,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 398,
+  "itemName" : "Plated Leather",
+  "itemPrice" : 343000,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 472,
+  "itemName" : "Demon's Stockings",
+  "itemPrice" : 354000,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 399,
+  "itemName" : "Rind Leather Armor",
+  "itemPrice" : 372000,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 354,
+  "itemName" : "Chain Mail Shirt",
+  "itemPrice" : 388600,
+  "gradeInfo" : "c-low"
+}, {
+  "itemId" : 420,
+  "itemName" : "Theca Leather Gaiters",
+  "itemPrice" : 396700,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 2414,
+  "itemName" : "Full Plate Helmet",
+  "itemPrice" : 412600,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 499,
+  "itemName" : "Mithril Helmet",
+  "itemPrice" : 412600,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 355,
+  "itemName" : "Dwarven Chain Mail Shirt",
+  "itemPrice" : 495500,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 473,
+  "itemName" : "Divine Stockings",
+  "itemPrice" : 515800,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 441,
+  "itemName" : "Demon's Tunic",
+  "itemPrice" : 566000,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 440,
+  "itemName" : "Robe of Seal",
+  "itemPrice" : 372002,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 400,
+  "itemName" : "Theca Leather Armor",
+  "itemPrice" : 635000,
+  "gradeInfo" : "c-mid"
+}, {
+  "itemId" : 442,
+  "itemName" : "Divine Tunic",
+  "itemPrice" : 825000,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 60,
+  "itemName" : "Composite Armor",
+  "itemPrice" : 755832,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 401,
+  "itemName" : "Drake Leather Armor",
+  "itemPrice" : 826056,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 356,
+  "itemName" : "Full Plate Armor",
+  "itemPrice" : 1101408,
+  "gradeInfo" : "c-top"
+}, {
+  "itemId" : 2464,
+  "itemName" : "Sealed Avadon Gloves",
+  "itemPrice" : 399100,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 600,
+  "itemName" : "Sealed Avadon Boots",
+  "itemPrice" : 399100,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 554,
+  "itemName" : "Sealed Zubei's Boots",
+  "itemPrice" : 399100,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 673,
+  "itemName" : "Avadon Shield",
+  "itemPrice" : 419000,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 633,
+  "itemName" : "Zubei's Shield",
+  "itemPrice" : 419000,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2415,
+  "itemName" : "Avadon Circlet",
+  "itemPrice" : 598600,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 503,
+  "itemName" : "Zubei's Helmet",
+  "itemPrice" : 598600,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2487,
+  "itemName" : "Sealed Blue Wolf Gloves",
+  "itemPrice" : 618800,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2475,
+  "itemName" : "Sealed Doom Gloves",
+  "itemPrice" : 618800,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2439,
+  "itemName" : "Sealed Blue Wolf Boots",
+  "itemPrice" : 618800,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 601,
+  "itemName" : "Sealed Doom Boots",
+  "itemPrice" : 618800,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 110,
+  "itemName" : "Doom Shield",
+  "itemPrice" : 649800,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2402,
+  "itemName" : "Stockings of Zubei",
+  "itemPrice" : 748300,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2388,
+  "itemName" : "Zubei's Leather Gaiters",
+  "itemPrice" : 748300,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2416,
+  "itemName" : "Blue Wolf Helmet",
+  "itemPrice" : 928300,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2417,
+  "itemName" : "Doom Helmet",
+  "itemPrice" : 928300,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2379,
+  "itemName" : "Avadon Gaiters",
+  "itemPrice" : 997700,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 383,
+  "itemName" : "Zubei's Gaiters",
+  "itemPrice" : 997700,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2403,
+  "itemName" : "Blue Wolf Stockings",
+  "itemPrice" : 1160300,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2404,
+  "itemName" : "Stockings of Doom",
+  "itemPrice" : 1160300,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2397,
+  "itemName" : "Tunic of Zubei",
+  "itemPrice" : 1197000,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2384,
+  "itemName" : "Zubei's Leather Shirt",
+  "itemPrice" : 1197000,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2380,
+  "itemName" : "Blue Wolf Gaiters",
+  "itemPrice" : 1547100,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2376,
+  "itemName" : "Avadon Breastplate",
+  "itemPrice" : 1596000,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 357,
+  "itemName" : "Zubei's Breastplate",
+  "itemPrice" : 1596000,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2398,
+  "itemName" : "Blue Wolf Tunic",
+  "itemPrice" : 1857000,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2399,
+  "itemName" : "Tunic of Doom",
+  "itemPrice" : 1857000,
+  "gradeInfo" : "b-low"
+}, {
+  "itemId" : 2390,
+  "itemName" : "Avadon Leather Armor",
+  "itemPrice" : 1198736,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2406,
+  "itemName" : "Avadon Robe",
+  "itemPrice" : 1198736,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 358,
+  "itemName" : "Blue Wolf Breastplate",
+  "itemPrice" : 2475000,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2391,
+  "itemName" : "Blue Wolf Leather Armor",
+  "itemPrice" : 1858472,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2392,
+  "itemName" : "Leather Armor of Doom",
+  "itemPrice" : 1858472,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 2381,
+  "itemName" : "Doom Plate Armor",
+  "itemPrice" : 2477552,
+  "gradeInfo" : "b-top"
+}, {
+  "itemId" : 5290,
+  "itemName" : "Sealed Dark Crystal Gloves",
+  "itemPrice" : 890000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5295,
+  "itemName" : "Sealed Tallum Gloves",
+  "itemPrice" : 890000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5291,
+  "itemName" : "Sealed Dark Crystal Boots",
+  "itemPrice" : 890000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5296,
+  "itemName" : "Sealed Tallum Boots",
+  "itemPrice" : 890000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5292,
+  "itemName" : "Sealed Dark Crystal Shield",
+  "itemPrice" : 935000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5289,
+  "itemName" : "Sealed Dark Crystal Helmet",
+  "itemPrice" : 1336000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5294,
+  "itemName" : "Sealed Tallum Helmet",
+  "itemPrice" : 1336000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5313,
+  "itemName" : "Sealed Gauntlets of Nightmare",
+  "itemPrice" : 1355000,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5318,
+  "itemName" : "Sealed Majestic Gauntlets",
+  "itemPrice" : 1355000,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5314,
+  "itemName" : "Sealed Boots of Nightmare",
+  "itemPrice" : 1355000,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5319,
+  "itemName" : "Sealed Majestic Boots",
+  "itemPrice" : 1355000,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5315,
+  "itemName" : "Sealed Shield of Nightmare",
+  "itemPrice" : 1422000,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5298,
+  "itemName" : "Sealed Dark Crystal Leggings",
+  "itemPrice" : 1670000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5305,
+  "itemName" : "Sealed Tallum Stockings",
+  "itemPrice" : 1670000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5312,
+  "itemName" : "Sealed Helm of Nightmare",
+  "itemPrice" : 2032000,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5317,
+  "itemName" : "Sealed Majestic Circlet",
+  "itemPrice" : 2032000,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5288,
+  "itemName" : "Sealed Dark Crystal Gaiters",
+  "itemPrice" : 2226000,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5297,
+  "itemName" : "Sealed Dark Crystal Leather Armor",
+  "itemPrice" : 2671000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5304,
+  "itemName" : "Sealed Tallum Tunic",
+  "itemPrice" : 2671000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5287,
+  "itemName" : "Sealed Dark Crystal breastplate",
+  "itemPrice" : 3562000,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5308,
+  "itemName" : "Sealed Dark Crystal Robe",
+  "itemPrice" : 2674056,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5301,
+  "itemName" : "Sealed Tallum Leather Armor",
+  "itemPrice" : 2674056,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5293,
+  "itemName" : "Sealed Tallum Plate Armor",
+  "itemPrice" : 3565408,
+  "gradeInfo" : "a-low"
+}, {
+  "itemId" : 5320,
+  "itemName" : "Sealed Leather Armor of Nightmare",
+  "itemPrice" : 4067448,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5323,
+  "itemName" : "Sealed Majestic Leather Armor",
+  "itemPrice" : 4067448,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5329,
+  "itemName" : "Sealed Majestic Robe",
+  "itemPrice" : 4067448,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5326,
+  "itemName" : "Sealed Robe of Nightmare",
+  "itemPrice" : 4067448,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5311,
+  "itemName" : "Sealed Armor of Nightmare",
+  "itemPrice" : 5423264,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 5316,
+  "itemName" : "Sealed Majestic Plate Armor",
+  "itemPrice" : 5423264,
+  "gradeInfo" : "a-top"
+}, {
+  "itemId" : 6681,
+  "itemName" : "Sealed Draconic Leather Glove",
+  "itemPrice" : 3195000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 6676,
+  "itemName" : "Sealed Imperial Crusader Gauntlet",
+  "itemPrice" : 3195000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 6685,
+  "itemName" : "Sealed Major Arcana Glove",
+  "itemPrice" : 3195000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 6682,
+  "itemName" : "Sealed Draconic Leather Boots",
+  "itemPrice" : 3195000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 6677,
+  "itemName" : "Sealed Imperial Crusader Boots",
+  "itemPrice" : 3195000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 6686,
+  "itemName" : "Sealed Major Arcana Boots",
+  "itemPrice" : 3195000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 13885,
+  "itemName" : "Sealed Arcana Sigil",
+  "itemPrice" : 3355000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 6678,
+  "itemName" : "Sealed Imperial Crusader Shield",
+  "itemPrice" : 3355000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 6683,
+  "itemName" : "Sealed Draconic Leather Helmet",
+  "itemPrice" : 4793000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 6679,
+  "itemName" : "Sealed Imperial Crusader Helmet",
+  "itemPrice" : 4793000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 6687,
+  "itemName" : "Sealed Major Arcana Circlet",
+  "itemPrice" : 4793000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 9517,
+  "itemName" : "Sealed Dynasty Gauntlets",
+  "itemPrice" : 6099000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9527,
+  "itemName" : "Sealed Dynasty Gloves",
+  "itemPrice" : 6099000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9522,
+  "itemName" : "Sealed Dynasty Leather Gloves",
+  "itemPrice" : 6099000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9518,
+  "itemName" : "Sealed Dynasty Boots",
+  "itemPrice" : 6099000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9523,
+  "itemName" : "Sealed Dynasty Leather Boots",
+  "itemPrice" : 6099000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9528,
+  "itemName" : "Sealed Dynasty Shoes",
+  "itemPrice" : 6099000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9529,
+  "itemName" : "Sealed Dynasty Shield",
+  "itemPrice" : 6404000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 13886,
+  "itemName" : "Sealed Dynasty Sigil",
+  "itemPrice" : 6404000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 6675,
+  "itemName" : "Sealed Imperial Crusader Gaiters",
+  "itemPrice" : 7988000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 9526,
+  "itemName" : "Sealed Dynasty Circlet",
+  "itemPrice" : 9149000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9516,
+  "itemName" : "Sealed Dynasty Helmet",
+  "itemPrice" : 9149000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9521,
+  "itemName" : "Sealed Dynasty Leather Helmet",
+  "itemPrice" : 9149000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9520,
+  "itemName" : "Sealed Dynasty Leather Leggings",
+  "itemPrice" : 11436000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9525,
+  "itemName" : "Sealed Dynasty Stockings",
+  "itemPrice" : 11436000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 6674,
+  "itemName" : "Sealed Imperial Crusader Breastplate",
+  "itemPrice" : 12781000,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 9515,
+  "itemName" : "Sealed Dynasty Gaiter",
+  "itemPrice" : 15248000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 6680,
+  "itemName" : "Sealed Draconic Leather Armor",
+  "itemPrice" : 9595432,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 6684,
+  "itemName" : "Sealed Major Arcana Robe",
+  "itemPrice" : 9595432,
+  "gradeInfo" : "s"
+}, {
+  "itemId" : 9519,
+  "itemName" : "Sealed Dynasty Leather Armor",
+  "itemPrice" : 18298000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9524,
+  "itemName" : "Sealed Dynasty Tunic",
+  "itemPrice" : 18298000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 9514,
+  "itemName" : "Sealed Dynasty Breast Plate",
+  "itemPrice" : 24398000,
+  "gradeInfo" : "s80-low"
+}, {
+  "itemId" : 15703,
+  "itemName" : "Sealed Moirai Gauntlet",
+  "itemPrice" : 8418000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15705,
+  "itemName" : "Sealed Moirai Gloves",
+  "itemPrice" : 8418000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15704,
+  "itemName" : "Sealed Moirai Leather Gloves",
+  "itemPrice" : 8418000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15706,
+  "itemName" : "Sealed Moirai Boots",
+  "itemPrice" : 8418000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15707,
+  "itemName" : "Sealed Moirai Leather Boots",
+  "itemPrice" : 8418000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15708,
+  "itemName" : "Sealed Moirai Shoes",
+  "itemPrice" : 8418000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15710,
+  "itemName" : "Sealed Moirai Shield",
+  "itemPrice" : 8839000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15709,
+  "itemName" : "Sealed Moirai Sigil",
+  "itemPrice" : 8839000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15696,
+  "itemName" : "Sealed Moirai Circlet",
+  "itemPrice" : 12627000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15694,
+  "itemName" : "Sealed Moirai Helmet",
+  "itemPrice" : 12627000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15695,
+  "itemName" : "Sealed Moirai Leather Helmet",
+  "itemPrice" : 12627000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15701,
+  "itemName" : "Sealed Moirai Leather Legging",
+  "itemPrice" : 15784000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15702,
+  "itemName" : "Sealed Moirai Stockings",
+  "itemPrice" : 15784000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15700,
+  "itemName" : "Sealed Moirai Gaiter",
+  "itemPrice" : 21046000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15698,
+  "itemName" : "Sealed Moirai Leather Breastplate",
+  "itemPrice" : 25255000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15699,
+  "itemName" : "Sealed Moirai Tunic",
+  "itemPrice" : 25255000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 15697,
+  "itemName" : "Sealed Moirai Breastplate",
+  "itemPrice" : 33673000,
+  "gradeInfo" : "s80-top"
+}, {
+  "itemId" : 14109,
+  "itemName" : "Sealed Vesper Gauntlet",
+  "itemPrice" : 11667000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14116,
+  "itemName" : "Sealed Vesper Gloves",
+  "itemPrice" : 11667000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14113,
+  "itemName" : "Sealed Vesper Leather Gloves",
+  "itemPrice" : 11667000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14110,
+  "itemName" : "Sealed Vesper Boots",
+  "itemPrice" : 11667000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14114,
+  "itemName" : "Sealed Vesper Leather Boots",
+  "itemPrice" : 11667000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14117,
+  "itemName" : "Sealed Vesper Shoes",
+  "itemPrice" : 11667000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14111,
+  "itemName" : "Sealed Vesper Shield",
+  "itemPrice" : 12250000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 13887,
+  "itemName" : "Sealed Vesper Sigil",
+  "itemPrice" : 12250000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 13145,
+  "itemName" : "Sealed Vesper Circlet",
+  "itemPrice" : 17500000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 13143,
+  "itemName" : "Sealed Vesper Helmet",
+  "itemPrice" : 17500000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 13144,
+  "itemName" : "Sealed Vesper Leather Helmet",
+  "itemPrice" : 17500000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14112,
+  "itemName" : "Sealed Vesper Leather Leggings",
+  "itemPrice" : 21876000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14115,
+  "itemName" : "Sealed Vesper Stockings",
+  "itemPrice" : 21876000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14108,
+  "itemName" : "Sealed Vesper Gaiters",
+  "itemPrice" : 29168000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14106,
+  "itemName" : "Sealed Vesper Leather Breastplate",
+  "itemPrice" : 35000000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14107,
+  "itemName" : "Sealed Vesper Tunic",
+  "itemPrice" : 35000000,
+  "gradeInfo" : "s84"
+}, {
+  "itemId" : 14105,
+  "itemName" : "Sealed Vesper Breastplate",
+  "itemPrice" : 46668000,
+  "gradeInfo" : "s84"
+} ]
