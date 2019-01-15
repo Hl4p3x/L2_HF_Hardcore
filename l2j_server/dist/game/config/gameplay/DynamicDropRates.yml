@@ -501,19 +501,19 @@ raid:
         stacks: "2-6"
       a:
         chance: 60.0
-        stacks: "2-5"
+        stacks: "2-6"
       s:
         chance: 50.0
-        stacks: "1-5"
+        stacks: "2-6"
       s80-low:
         chance: 45.0
-        stacks: "1-4"
+        stacks: "2-5"
       s80-top:
         chance: 40.0
-        stacks: "1-4"
+        stacks: "2-5"
       s84-low:
         chance: 36.0
-        stacks: "1-3"
+        stacks: "2-4"
     armor:
       ng:
         chance: 93.0
@@ -535,13 +535,13 @@ raid:
         stacks: "3-9"
       s80-low:
         chance: 48.0
-        stacks: "2-7"
+        stacks: "3-7"
       s80-top:
         chance: 43.0
-        stacks: "2-6"
+        stacks: "3-6"
       s84-low:
         chance: 38.0
-        stacks: "1-5"
+        stacks: "2-6"
     jewels:
       ng:
         chance: 95.0
@@ -563,13 +563,13 @@ raid:
         stacks: "3-11"
       s80-low:
         chance: 49.0
-        stacks: "2-10"
+        stacks: "3-10"
       s80-top:
         chance: 46.0
-        stacks: "2-8"
+        stacks: "3-8"
       s84-low:
         chance: 40.0
-        stacks: "1-7"
+        stacks: "2-7"
   parts:
     weapon:
       ng:
