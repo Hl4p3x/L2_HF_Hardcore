@@ -332,6 +332,10 @@ public class GradedEquipmentGenerator {
         gradeItems(allArmor, commonGradeParts());
         gradeItems(allJewels, commonGradeParts());
 
+        allWeapon = regradeDynastyToS80(allWeapon);
+        allArmor = regradeDynastyToS80(allArmor);
+        allJewels = regradeDynastyToS80(allJewels);
+
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_weapon.json"), allWeapon);
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_armor.json"), allArmor);
@@ -405,7 +409,10 @@ public class GradedEquipmentGenerator {
     }
 
     private static List<GradedItem> regradeDynastyToS80(List<GradedItem> items) {
-        items.stream().filter(item -> item.getItemName().contains("Dynasty")).forEach(item -> item.getGradeInfo().setGrade(Grade.S80));
+        items.stream().filter(item -> item.getItemName().contains("Dynasty")).forEach(item -> {
+            item.getGradeInfo().setGrade(Grade.S80);
+            item.getGradeInfo().setCategory(GradeCategory.LOW);
+        });
         return items;
     }
 
