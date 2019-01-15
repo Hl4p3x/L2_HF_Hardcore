@@ -96,12 +96,6 @@
     "resourceGrade": "mid"
   },
   {
-    "id": 2130,
-    "name": "Gemstone D",
-    "price": 1000.0,
-    "resourceGrade": "mid"
-  },
-  {
     "id": 1876,
     "name": "Mithril Ore",
     "price": 1000.0,
@@ -144,12 +138,6 @@
     "resourceGrade": "mid"
   },
   {
-    "id": 2131,
-    "name": "Gemstone C",
-    "price": 3000.0,
-    "resourceGrade": "mid"
-  },
-  {
     "id": 1874,
     "name": "Oriharukon Ore",
     "price": 3000.0,
@@ -183,13 +171,13 @@
     "id": 1894,
     "name": "Crafted Leather",
     "price": 5700.0,
-    "resourceGrade": "high"
+    "resourceGrade": "mid"
   },
   {
     "id": 4043,
     "name": "Asofe",
     "price": 6000.0,
-    "resourceGrade": "high"
+    "resourceGrade": "mid"
   },
   {
     "id": 4039,
@@ -213,12 +201,6 @@
     "id": 1887,
     "name": "Varnish of Purity",
     "price": 8100.0,
-    "resourceGrade": "high"
-  },
-  {
-    "id": 2132,
-    "name": "Gemstone B",
-    "price": 10000.0,
     "resourceGrade": "high"
   },
   {
@@ -270,22 +252,22 @@
     "resourceGrade": "high"
   },
   {
-    "id": 2133,
-    "name": "Gemstone A",
-    "price": 30000.0,
-    "resourceGrade": "highest"
-  },
-  {
     "id": 9630,
     "name": "Orichalcum",
     "price": 38000.0,
-    "resourceGrade": "highest"
+    "resourceGrade": "high"
   },
   {
     "id": 9629,
     "name": "Adamantine",
     "price": 46000.0,
-    "resourceGrade": "highest"
+    "resourceGrade": "high"
+  },
+  {
+    "id": 2130,
+    "name": "Gemstone D",
+    "price": 50000.0,
+    "resourceGrade": "high"
   },
   {
     "id": 1892,
@@ -306,8 +288,8 @@
     "resourceGrade": "highest"
   },
   {
-    "id": 2134,
-    "name": "Gemstone S",
+    "id": 2131,
+    "name": "Gemstone C",
     "price": 100000.0,
     "resourceGrade": "highest"
   },
@@ -315,6 +297,12 @@
     "id": 4048,
     "name": "Maestro Mold",
     "price": 154000.0,
+    "resourceGrade": "highest"
+  },
+  {
+    "id": 2132,
+    "name": "Gemstone B",
+    "price": 200000.0,
     "resourceGrade": "highest"
   },
   {
@@ -330,6 +318,12 @@
     "resourceGrade": "highest"
   },
   {
+    "id": 2133,
+    "name": "Gemstone A",
+    "price": 400000.0,
+    "resourceGrade": "highest"
+  },
+  {
     "id": 4045,
     "name": "Maestro Holder",
     "price": 411000.0,
@@ -339,6 +333,12 @@
     "id": 5553,
     "name": "Arcsmith's Anvil",
     "price": 531200.0,
+    "resourceGrade": "highest"
+  },
+  {
+    "id": 2134,
+    "name": "Gemstone S",
+    "price": 700000.0,
     "resourceGrade": "highest"
   },
   {
