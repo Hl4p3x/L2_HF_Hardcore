@@ -1499,7 +1499,6 @@
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A"/>
 			<param name="doSummonNPC" value="1"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="8"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4175" level="8"/> <!-- BOSS Haste -->
 			<skill name="PhysicalSpecial_a" id="4170" level="8"/> <!-- BOSS Mortal Blow -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="8"/> <!-- Stun -->
@@ -1526,7 +1525,6 @@
 			<skill id="4170" level="8"/> <!--BOSS Mortal Blow -->
 			<skill id="4172" level="8"/> <!--Stun -->
 			<skill id="4175" level="8"/> <!--BOSS Haste -->
-			<skill id="4177" level="8"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -1727,7 +1725,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="6"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4173" level="6"/> <!-- BOSS Might -->
 			<skill name="PhysicalSpecial_a" id="4721" level="6"/> <!-- BOSS Strike -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4736" level="6"/> <!-- BOSS Spinning Slash -->
@@ -1754,7 +1751,6 @@
 		<skillList>
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4173" level="6"/> <!--BOSS Might -->
-			<skill id="4177" level="6"/> <!--BOSS Cancel Magic -->
 			<skill id="4273" level="3"/> <!--Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1"/> <!--Blunt Weapon Weak Point -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
@@ -1805,7 +1801,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="6"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4175" level="6"/> <!-- BOSS Haste -->
 			<skill name="PhysicalSpecial_a" id="4731" level="6"/> <!-- BOSS Mortal Blow -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="6"/> <!-- Stun -->
@@ -1831,7 +1826,6 @@
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4172" level="6"/> <!--Stun -->
 			<skill id="4175" level="6"/> <!--BOSS Haste -->
-			<skill id="4177" level="6"/> <!--BOSS Cancel Magic -->
 			<skill id="4276" level="1"/> <!--Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
@@ -2356,7 +2350,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="8"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4174" level="8"/> <!-- BOSS Shield -->
 			<skill name="PhysicalSpecial_a" id="4724" level="8"/> <!-- Stun -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4734" level="8"/> <!-- BOSS Spinning Slash -->
@@ -2382,7 +2375,6 @@
 		<skillList>
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4174" level="8"/> <!--BOSS Shield -->
-			<skill id="4177" level="8"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -2577,7 +2569,6 @@
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
 			<param name="doSummonNPC" value="1"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="7"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4175" level="7"/> <!-- BOSS Haste -->
 			<skill name="PhysicalSpecial_a" id="4720" level="7"/> <!-- BOSS Strike -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4735" level="7"/> <!-- BOSS Spinning Slash -->
@@ -2602,7 +2593,6 @@
 		<skillList>
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4175" level="7"/> <!--BOSS Haste -->
-			<skill id="4177" level="7"/> <!--BOSS Cancel Magic -->
 			<skill id="4273" level="3"/> <!--Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1"/> <!--Blunt Weapon Weak Point -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
@@ -2971,7 +2961,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="6"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4175" level="6"/> <!-- BOSS Haste -->
 			<skill name="PhysicalSpecial_a" id="4730" level="6"/> <!-- BOSS Mortal Blow -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="6"/> <!-- Stun -->
@@ -2997,7 +2986,6 @@
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4172" level="6"/> <!--Stun -->
 			<skill id="4175" level="6"/> <!--BOSS Haste -->
-			<skill id="4177" level="6"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -3199,7 +3187,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="5"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4173" level="5"/> <!-- BOSS Might -->
 			<skill name="PhysicalSpecial_a" id="4725" level="5"/> <!-- Stun -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4735" level="5"/> <!-- BOSS Spinning Slash -->
@@ -3225,7 +3212,6 @@
 		<skillList>
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4173" level="5"/> <!--BOSS Might -->
-			<skill id="4177" level="5"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -3912,7 +3898,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="2"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4174" level="2"/> <!-- BOSS Shield -->
 			<skill name="PhysicalSpecial_a" id="4721" level="2"/> <!-- BOSS Strike -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="2"/> <!-- Stun -->
@@ -3939,7 +3924,6 @@
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4172" level="2"/> <!--Stun -->
 			<skill id="4174" level="2"/> <!--BOSS Shield -->
-			<skill id="4177" level="2"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -4144,7 +4128,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="8"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4176" level="8"/> <!-- BOSS Reflect Damage -->
 			<skill name="PhysicalSpecial_a" id="4168" level="8"/> <!-- BOSS Strike -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="8"/> <!-- Stun -->
@@ -4173,7 +4156,6 @@
 			<skill id="4168" level="8"/> <!--BOSS Strike -->
 			<skill id="4172" level="8"/> <!--Stun -->
 			<skill id="4176" level="8"/> <!--BOSS Reflect Damage -->
-			<skill id="4177" level="8"/> <!--BOSS Cancel Magic -->
 			<skill id="4273" level="3"/> <!--Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1"/> <!--Blunt Weapon Weak Point -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
@@ -4383,7 +4365,6 @@
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A"/>
 			<param name="SSQLoserTeleport" value="1"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="5"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4175" level="5"/> <!-- BOSS Haste -->
 			<skill name="PhysicalSpecial_a" id="4719" level="5"/> <!-- BOSS Strike -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4734" level="5"/> <!-- BOSS Spinning Slash -->
@@ -4409,7 +4390,6 @@
 		<skillList>
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4175" level="5"/> <!--BOSS Haste -->
-			<skill id="4177" level="5"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -4460,7 +4440,6 @@
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
 			<param name="doSummonNPC" value="1"/>
 			<param name="SSQLoserTeleport" value="1"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="7"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4175" level="7"/> <!-- BOSS Haste -->
 			<skill name="PhysicalSpecial_a" id="4724" level="7"/> <!-- Stun -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4734" level="7"/> <!-- BOSS Spinning Slash -->
@@ -4486,7 +4465,6 @@
 		<skillList>
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4175" level="7"/> <!--BOSS Haste -->
-			<skill id="4177" level="7"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -4539,7 +4517,6 @@
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
 			<param name="SSQLoserTeleport" value="1"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="8"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4174" level="8"/> <!-- BOSS Shield -->
 			<skill name="PhysicalSpecial_a" id="4170" level="8"/> <!-- BOSS Mortal Blow -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="8"/> <!-- Stun -->
@@ -4568,7 +4545,6 @@
 			<skill id="4170" level="8"/> <!--BOSS Mortal Blow -->
 			<skill id="4172" level="8"/> <!--Stun -->
 			<skill id="4174" level="8"/> <!--BOSS Shield -->
-			<skill id="4177" level="8"/> <!--BOSS Cancel Magic -->
 			<skill id="4273" level="3"/> <!--Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1"/> <!--Blunt Weapon Weak Point -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->

@@ -934,7 +934,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="2"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4175" level="2"/> <!-- BOSS Haste -->
 			<skill name="PhysicalSpecial_a" id="4732" level="2"/> <!-- BOSS Mortal Blow -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="2"/> <!-- Stun -->
@@ -961,7 +960,6 @@
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4172" level="2"/> <!--Stun -->
 			<skill id="4175" level="2"/> <!--BOSS Haste -->
-			<skill id="4177" level="2"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -2587,7 +2585,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="5"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4176" level="5"/> <!-- BOSS Reflect Damage -->
 			<skill name="PhysicalSpecial_a" id="4728" level="5"/> <!-- Stun -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="5"/> <!-- Stun -->
@@ -2615,7 +2612,6 @@
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4172" level="5"/> <!--Stun -->
 			<skill id="4176" level="5"/> <!--BOSS Reflect Damage -->
-			<skill id="4177" level="5"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -3286,7 +3282,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="3"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4173" level="3"/> <!-- BOSS Might -->
 			<skill name="PhysicalSpecial_a" id="4722" level="3"/> <!-- BOSS Strike -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4737" level="3"/> <!-- BOSS Spinning Slash -->
@@ -3312,7 +3307,6 @@
 		<skillList>
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4173" level="3"/> <!--BOSS Might -->
-			<skill id="4177" level="3"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -4603,7 +4597,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="5"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4176" level="5"/> <!-- BOSS Reflect Damage -->
 			<skill name="PhysicalSpecial_a" id="4724" level="5"/> <!-- Stun -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="5"/> <!-- Stun -->
@@ -4629,7 +4622,6 @@
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4172" level="5"/> <!--Stun -->
 			<skill id="4176" level="5"/> <!--BOSS Reflect Damage -->
-			<skill id="4177" level="5"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
@@ -5143,7 +5135,6 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A"/>
-			<skill name="SelfRangeCancel_a" id="4177" level="3"/> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4173" level="3"/> <!-- BOSS Might -->
 			<skill name="PhysicalSpecial_a" id="4732" level="3"/> <!-- BOSS Mortal Blow -->
 			<skill name="SelfRangePhysicalSpecial_a" id="4737" level="3"/> <!-- BOSS Spinning Slash -->
@@ -5168,7 +5159,6 @@
 		<skillList>
 			<skill id="4045" level="1"/> <!--Resist Full Magic Attack -->
 			<skill id="4173" level="3"/> <!--BOSS Might -->
-			<skill id="4177" level="3"/> <!--BOSS Cancel Magic -->
 			<skill id="4408" level="1"/> <!--HP Increase (1x) -->
 			<skill id="4409" level="1"/> <!--MP Increase (1x) -->
 			<skill id="4410" level="11"/> <!--Average P. Atk. -->
