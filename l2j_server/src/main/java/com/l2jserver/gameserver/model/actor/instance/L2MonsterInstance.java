@@ -98,12 +98,11 @@ public class L2MonsterInstance extends L2Attackable
 						if (isFighter) {
 							return skill.hasEffectType(
 									L2EffectType.PHYSICAL_ATTACK,
-                                    L2EffectType.SUMMON,
 									L2EffectType.STUN);
 						} else {
 							return skill.hasEffectType(
 									L2EffectType.MAGICAL_ATTACK,
-                                    L2EffectType.HEAL, L2EffectType.SUMMON, L2EffectType.PARALYZE,
+									L2EffectType.HEAL, L2EffectType.PARALYZE,
 									L2EffectType.SLEEP, L2EffectType.ROOT);
 						}
 					})
