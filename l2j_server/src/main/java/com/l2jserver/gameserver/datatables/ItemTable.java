@@ -248,7 +248,7 @@ public class ItemTable
 		
 		if (Config.LOG_ITEMS && !process.equals("Reset"))
 		{
-			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
+			if (!Config.LOG_ITEMS_SMALL_LOG || (item.isEquipable() || (item.getId() == ADENA_ID)))
 			{
 				LogRecord record = new LogRecord(Level.INFO, "CREATE:" + process);
 				record.setLoggerName("item");
