@@ -3618,14 +3618,7 @@ public final class L2PcInstance extends L2Playable {
         } else if (itemId == Inventory.ADENA_ID) {
             addAdena("Loot", itemCount, target, true);
         } else {
-            boolean sendMessage = true;
-            if (item instanceof L2EtcItem) {
-                L2EtcItem etcItem = (L2EtcItem) item;
-                if (etcItem.getItemType() == EtcItemType.MATERIAL) {
-                    sendMessage = false;
-                }
-            }
-            addItem("Loot", itemId, itemCount, target, sendMessage);
+            addItem("Loot", itemId, itemCount, target, true);
         }
     }
 
