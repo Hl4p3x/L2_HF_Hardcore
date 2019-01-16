@@ -110,7 +110,7 @@ public class L2MonsterInstance extends L2Attackable
 					.filter(skill -> {
 						Optional<Boolean> result = skill.getConditionUsingItemType()
 								.map(conditionUsingItemType -> conditionUsingItemType.checkUsingWeaponMask(activeWeaponType));
-						return !result.isPresent() || result.get();
+						return result.isEmpty() || result.get();
 					})
 					.collect(Collectors.toList());
 
@@ -132,28 +132,28 @@ public class L2MonsterInstance extends L2Attackable
 
 	@Override
 	public List<Skill> getBuffSkills() {
-		List<Skill> skills = super.getBuffSkills();
+		List<Skill> skills = new ArrayList<>(super.getBuffSkills());
 		skills.addAll(dynamicBuffSkills);
 		return skills;
 	}
 
 	@Override
 	public List<Skill> getHealSkills() {
-		List<Skill> skills = super.getHealSkills();
+		List<Skill> skills = new ArrayList<>(super.getHealSkills());
 		skills.addAll(dynamicHealSkills);
 		return skills;
 	}
 
 	@Override
 	public List<Skill> getLongRangeSkills() {
-		List<Skill> skills = super.getLongRangeSkills();
+		List<Skill> skills = new ArrayList<>(super.getLongRangeSkills());
 		skills.addAll(dynamicLongRangeSkills);
 		return skills;
 	}
 
 	@Override
 	public List<Skill> getShortRangeSkills() {
-		List<Skill> skills = super.getShortRangeSkills();
+		List<Skill> skills = new ArrayList<>(super.getShortRangeSkills());
 		skills.addAll(dynamicShortRangeSkills);
 		return skills;
 	}
