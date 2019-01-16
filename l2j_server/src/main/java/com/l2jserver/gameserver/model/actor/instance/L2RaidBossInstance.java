@@ -99,8 +99,8 @@ public class L2RaidBossInstance extends L2MonsterInstance
 				}
 			}
 		}
-		
-		RaidBossSpawnManager.getInstance().updateStatus(this, true);
+
+		RaidBossSpawnManager.getInstance().setBossDead(this, true);
 		return true;
 	}
 	

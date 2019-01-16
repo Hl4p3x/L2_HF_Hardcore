@@ -102,10 +102,9 @@ public class RaidBossSpawnManager
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing RaidBossSpawnManager: " + e.getMessage(), e);
 		}
 	}
-	
-	private static class SpawnSchedule implements Runnable
-	{
-		private static final Logger _log = Logger.getLogger(SpawnSchedule.class.getName());
+
+	private class SpawnSchedule implements Runnable {
+		private final Logger _log = Logger.getLogger(SpawnSchedule.class.getName());
 		
 		private final int bossId;
 		
@@ -146,57 +145,76 @@ public class RaidBossSpawnManager
 				_log.info(getClass().getSimpleName() + ": Spawning Raid Boss " + raidboss.getName());
 				
 				_bosses.put(bossId, raidboss);
+				syncSingleBoss(raidboss);
 			}
 			
 			_schedules.remove(bossId);
 		}
 	}
-	
+
+	private void syncSingleBoss(L2RaidBossInstance boss) {
+		try (Connection con = ConnectionFactory.getInstance().getConnection();
+			 PreparedStatement ps = con.prepareStatement("UPDATE raidboss_spawnlist SET respawn_time = ?, currentHP = ?, currentMP = ? WHERE boss_id = ?")) {
+
+			if (boss == null) {
+				return;
+			}
+
+			StatsSet info = _storedInfo.get(boss.getId());
+			if (info == null) {
+				return;
+			}
+
+			if (boss.getRaidStatus().equals(StatusEnum.ALIVE)) {
+				info.set("currentHP", boss.getCurrentHp());
+				info.set("currentMP", boss.getCurrentMp());
+				info.set("respawnTime", 0L);
+			}
+
+			ps.setLong(1, info.getLong("respawnTime"));
+			ps.setDouble(2, info.getDouble("currentHP"));
+			ps.setDouble(3, info.getDouble("currentMP"));
+			ps.setInt(4, boss.getId());
+
+			try {
+				ps.execute();
+			} catch (SQLException e) {
+				_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update raidboss_spawnlist table " + e.getMessage() + " for boss " + boss, e);
+			}
+		} catch (SQLException e) {
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": SQL error while updating RaidBoss " + boss + " spawn to database: " + e.getMessage(), e);
+		}
+	}
+
 	/**
 	 * Update status.
 	 * @param boss the boss
-	 * @param isBossDead the is boss dead
 	 */
-	public void updateStatus(L2RaidBossInstance boss, boolean isBossDead)
-	{
+	public void setBossDead(L2RaidBossInstance boss) {
 		final StatsSet info = _storedInfo.get(boss.getId());
-		if (info == null)
-		{
+		if (info == null) {
 			return;
 		}
-		
-		if (isBossDead)
-		{
-			boss.setRaidStatus(StatusEnum.DEAD);
-			
-			final int respawnMinDelay = (int) (boss.getSpawn().getRespawnMinDelay() * Config.RAID_MIN_RESPAWN_MULTIPLIER);
-			final int respawnMaxDelay = (int) (boss.getSpawn().getRespawnMaxDelay() * Config.RAID_MAX_RESPAWN_MULTIPLIER);
-			final int respawnDelay = Rnd.get(respawnMinDelay, respawnMaxDelay);
-			final long respawnTime = Calendar.getInstance().getTimeInMillis() + respawnDelay;
-			
-			info.set("currentHP", boss.getMaxHp());
-			info.set("currentMP", boss.getMaxMp());
-			info.set("respawnTime", respawnTime);
-			
-			if (!_schedules.containsKey(boss.getId()) && ((respawnMinDelay > 0) || (respawnMaxDelay > 0)))
-			{
-				final Calendar time = Calendar.getInstance();
-				time.setTimeInMillis(respawnTime);
-				_log.info(getClass().getSimpleName() + ": Updated " + boss.getName() + " respawn time to " + time.getTime());
-				
-				_schedules.put(boss.getId(), ThreadPoolManager.getInstance().scheduleGeneral(new SpawnSchedule(boss.getId()), respawnDelay));
-				updateDb();
-			}
+
+		boss.setRaidStatus(StatusEnum.DEAD);
+
+		final int respawnMinDelay = (int) (boss.getSpawn().getRespawnMinDelay() * Config.RAID_MIN_RESPAWN_MULTIPLIER);
+		final int respawnMaxDelay = (int) (boss.getSpawn().getRespawnMaxDelay() * Config.RAID_MAX_RESPAWN_MULTIPLIER);
+		final int respawnDelay = Rnd.get(respawnMinDelay, respawnMaxDelay);
+		final long respawnTime = Calendar.getInstance().getTimeInMillis() + respawnDelay;
+
+		info.set("currentHP", boss.getMaxHp());
+		info.set("currentMP", boss.getMaxMp());
+		info.set("respawnTime", respawnTime);
+
+		if (!_schedules.containsKey(boss.getId()) && ((respawnMinDelay > 0) || (respawnMaxDelay > 0))) {
+			final Calendar time = Calendar.getInstance();
+			time.setTimeInMillis(respawnTime);
+			_log.info(getClass().getSimpleName() + ": Updated " + boss.getName() + " respawn time to " + time.getTime());
+
+			_schedules.put(boss.getId(), ThreadPoolManager.getInstance().scheduleGeneral(new SpawnSchedule(boss.getId()), respawnDelay));
+			syncSingleBoss(boss);
 		}
-		else
-		{
-			boss.setRaidStatus(StatusEnum.ALIVE);
-			
-			info.set("currentHP", boss.getCurrentHp());
-			info.set("currentMP", boss.getCurrentMp());
-			info.set("respawnTime", 0L);
-		}
-		_storedInfo.put(boss.getId(), info);
 	}
 	
 	/**
@@ -303,22 +321,15 @@ public class RaidBossSpawnManager
 		
 		SpawnTable.getInstance().deleteSpawn(spawnDat, false);
 		_spawns.remove(bossId);
-		
-		if (_bosses.containsKey(bossId))
-		{
-			_bosses.remove(bossId);
-		}
+		_bosses.remove(bossId);
 		
 		if (_schedules.containsKey(bossId))
 		{
 			final ScheduledFuture<?> f = _schedules.remove(bossId);
 			f.cancel(true);
 		}
-		
-		if (_storedInfo.containsKey(bossId))
-		{
-			_storedInfo.remove(bossId);
-		}
+
+		_storedInfo.remove(bossId);
 		
 		if (updateDb)
 		{
@@ -339,110 +350,48 @@ public class RaidBossSpawnManager
 	/**
 	 * Update database.
 	 */
-	private void updateDb()
-	{
+	private void syncToDb() {
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE raidboss_spawnlist SET respawn_time = ?, currentHP = ?, currentMP = ? WHERE boss_id = ?"))
-		{
-			for (Integer bossId : _storedInfo.keySet())
-			{
-				if (bossId == null)
-				{
+			 PreparedStatement ps = con.prepareStatement("UPDATE raidboss_spawnlist SET respawn_time = ?, currentHP = ?, currentMP = ? WHERE boss_id = ?")) {
+
+			for (Integer bossId : _storedInfo.keySet()) {
+				if (bossId == null) {
 					continue;
 				}
 				
 				L2RaidBossInstance boss = _bosses.get(bossId);
-				
-				if (boss == null)
-				{
+				if (boss == null) {
 					continue;
 				}
-				
-				if (boss.getRaidStatus().equals(StatusEnum.ALIVE))
-				{
-					updateStatus(boss, false);
-				}
-				
+
 				StatsSet info = _storedInfo.get(bossId);
-				
-				if (info == null)
-				{
+				if (info == null) {
 					continue;
 				}
-				
-				try
-				{
-					// TODO(Zoey76): Change this to use batch.
-					ps.setLong(1, info.getLong("respawnTime"));
-					ps.setDouble(2, info.getDouble("currentHP"));
-					ps.setDouble(3, info.getDouble("currentMP"));
-					ps.setInt(4, bossId);
-					ps.executeUpdate();
-					ps.clearParameters();
+
+				if (boss.getRaidStatus().equals(StatusEnum.ALIVE)) {
+					info.set("currentHP", boss.getCurrentHp());
+					info.set("currentMP", boss.getCurrentMp());
+					info.set("respawnTime", 0L);
 				}
-				catch (SQLException e)
-				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldnt update raidboss_spawnlist table " + e.getMessage(), e);
-				}
+
+				ps.setLong(1, info.getLong("respawnTime"));
+				ps.setDouble(2, info.getDouble("currentHP"));
+				ps.setDouble(3, info.getDouble("currentMP"));
+				ps.setInt(4, bossId);
+				ps.addBatch();
 			}
-		}
-		catch (SQLException e)
-		{
+
+			try {
+				ps.executeBatch();
+			} catch (SQLException e) {
+				_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update raidboss_spawnlist table " + e.getMessage(), e);
+			}
+		} catch (SQLException e) {
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": SQL error while updating RaidBoss spawn to database: " + e.getMessage(), e);
 		}
 	}
-	
-	/**
-	 * Gets the all raid boss status.
-	 * @return the all raid boss status
-	 */
-	public String[] getAllRaidBossStatus()
-	{
-		final String[] msg = new String[(_bosses == null) ? 0 : _bosses.size()];
-		
-		if (_bosses == null)
-		{
-			msg[0] = "None";
-			return msg;
-		}
-		
-		int index = 0;
-		
-		for (int i : _bosses.keySet())
-		{
-			L2RaidBossInstance boss = _bosses.get(i);
-			
-			msg[index++] = boss.getName() + ": " + boss.getRaidStatus().name();
-		}
-		
-		return msg;
-	}
-	
-	/**
-	 * Gets the raid boss status.
-	 * @param bossId the boss id
-	 * @return the raid boss status
-	 */
-	public String getRaidBossStatus(int bossId)
-	{
-		String msg = "RaidBoss Status..." + Config.EOL;
-		
-		if (_bosses == null)
-		{
-			msg += "None";
-			return msg;
-		}
-		
-		if (_bosses.containsKey(bossId))
-		{
-			final L2RaidBossInstance boss = _bosses.get(bossId);
-			
-			msg += boss.getName() + ": " + boss.getRaidStatus().name();
-		}
-		
-		return msg;
-	}
-	
+
 	/**
 	 * Gets the raid boss status id.
 	 * @param bossId the boss id
@@ -482,6 +431,7 @@ public class RaidBossSpawnManager
 		_log.info(getClass().getSimpleName() + ": Spawning Night Raid Boss " + raidboss.getName());
 		
 		_bosses.put(raidboss.getId(), raidboss);
+		syncSingleBoss(raidboss);
 	}
 	
 	/**
@@ -526,7 +476,7 @@ public class RaidBossSpawnManager
 	 */
 	public void cleanUp()
 	{
-		updateDb();
+		syncToDb();
 		
 		_bosses.clear();
 		
