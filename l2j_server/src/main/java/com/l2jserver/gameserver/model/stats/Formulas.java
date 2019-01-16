@@ -262,6 +262,10 @@ public final class Formulas {
             hpRegenMultiplier *= Config.L2JMOD_CHAMPION_HP_REGEN;
         }
 
+        if (cha.isRaid() && !cha.isInCombat()) {
+            hpRegenMultiplier *= 15;
+        }
+
         if (cha.isPlayer()) {
             L2PcInstance player = cha.getActingPlayer();
 
