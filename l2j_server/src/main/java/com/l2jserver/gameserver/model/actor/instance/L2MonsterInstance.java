@@ -102,7 +102,7 @@ public class L2MonsterInstance extends L2Attackable
 						} else {
 							return skill.hasEffectType(
 									L2EffectType.MAGICAL_ATTACK,
-									L2EffectType.HEAL, L2EffectType.PARALYZE,
+                                    L2EffectType.HEAL, L2EffectType.PARALYZE,
 									L2EffectType.SLEEP, L2EffectType.ROOT);
 						}
 					})
