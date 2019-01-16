@@ -851,6 +851,7 @@ public final class Config
 	public static double RAID_HP_MULTIPLIER;
 	public static double RAID_MP_MULTIPLIER;
 	public static double RAID_HP_REGEN_MULTIPLIER;
+	public static double RAID_OUT_OF_COMBAT_HP_REGEN_MULTIPLIER;
 	public static double RAID_MP_REGEN_MULTIPLIER;
 	public static double RAID_PDEFENCE_MULTIPLIER;
 	public static double RAID_MDEFENCE_MULTIPLIER;
@@ -2190,6 +2191,7 @@ public final class Config
 			RAID_HP_MULTIPLIER = NPC.getDouble("RaidHpMultiplier", 100) / 100;
 			RAID_MP_MULTIPLIER = NPC.getDouble("RaidMpMultiplier", 100) / 100;
 			RAID_HP_REGEN_MULTIPLIER = NPC.getDouble("RaidHpRegenMultiplier", 100) / 100;
+			RAID_OUT_OF_COMBAT_HP_REGEN_MULTIPLIER = NPC.getDouble("RaidOutOfCombatHpRegenMultiplier", 100) / 100;
 			RAID_MP_REGEN_MULTIPLIER = NPC.getDouble("RaidMpRegenMultiplier", 100) / 100;
 			RAID_PDEFENCE_MULTIPLIER = NPC.getDouble("RaidPDefenceMultiplier", 100) / 100;
 			RAID_MDEFENCE_MULTIPLIER = NPC.getDouble("RaidMDefenceMultiplier", 100) / 100;

@@ -263,7 +263,7 @@ public final class Formulas {
         }
 
         if (cha.isRaid() && !cha.isInCombat()) {
-            hpRegenMultiplier *= 15;
+            hpRegenMultiplier *= Config.RAID_OUT_OF_COMBAT_HP_REGEN_MULTIPLIER;
         }
 
         if (cha.isPlayer()) {
