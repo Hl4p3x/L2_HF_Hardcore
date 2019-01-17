@@ -227,6 +227,7 @@ public final class DayNightSpawnManager
 		switch (mode)
 		{
 			case 0:
+				boss.decayMe();
 				boss.deleteMe();
 				_log.info(getClass().getSimpleName() + ": Deleting Hellman raidboss");
 				break;
@@ -248,6 +249,7 @@ public final class DayNightSpawnManager
 		_bosses.put(spawnDat, raidboss);
 		if (!GameTimeController.getInstance().isNight()) {
 			_log.info("It is not night yet, removing " + raidboss + " from world");
+			raidboss.decayMe();
 			raidboss.deleteMe();
 		}
 
