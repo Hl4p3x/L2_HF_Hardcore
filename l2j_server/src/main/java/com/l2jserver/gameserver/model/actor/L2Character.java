@@ -4787,47 +4787,47 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				reduceCurrentHp(reflectedDamage, target, true, false, null);
 				notifyDamageReceived(reflectedDamage, target, null, crit, false);
 			}
-			
-			if (!isBow) // Do not absorb if weapon is of type bow
+
+			if (!isBow || target.isNpc()) // Do not absorb if weapon is of type bow
 			{
 				// Absorb HP from the damage inflicted
 				double absorbPercent = getStat().calcStat(Stats.ABSORB_DAMAGE_PERCENT, 0, null, null);
-				
+
 				if (absorbPercent > 0)
 				{
 					int maxCanAbsorb = (int) (getMaxRecoverableHp() - getCurrentHp());
 					int absorbDamage = (int) ((absorbPercent / 100.) * damage);
-					
+
 					if (absorbDamage > maxCanAbsorb)
 					{
 						absorbDamage = maxCanAbsorb; // Can't absord more than max hp
 					}
-					
+
 					if (absorbDamage > 0)
 					{
 						setCurrentHp(getCurrentHp() + absorbDamage);
 					}
 				}
-				
+
 				// Absorb MP from the damage inflicted
 				absorbPercent = getStat().calcStat(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0, null, null);
-				
+
 				if (absorbPercent > 0)
 				{
 					int maxCanAbsorb = (int) (getMaxRecoverableMp() - getCurrentMp());
 					int absorbDamage = (int) ((absorbPercent / 100.) * damage);
-					
+
 					if (absorbDamage > maxCanAbsorb)
 					{
 						absorbDamage = maxCanAbsorb; // Can't absord more than max hp
 					}
-					
+
 					if (absorbDamage > 0)
 					{
 						setCurrentMp(getCurrentMp() + absorbDamage);
 					}
 				}
-				
+
 			}
 			
 			// Notify AI with EVT_ATTACKED
