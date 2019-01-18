@@ -416,6 +416,7 @@ public final class Config
 	public static int CLAN_LEVEL_9_REQUIREMENT;
 	public static int CLAN_LEVEL_10_REQUIREMENT;
 	public static int CLAN_LEVEL_11_REQUIREMENT;
+	public static boolean CLAN_LEVEL_WITHOUT_QUEST;
 	public static boolean ALLOW_WYVERN_ALWAYS;
 	public static boolean ALLOW_WYVERN_DURING_SIEGE;
 	
@@ -1505,6 +1506,7 @@ public final class Config
 			CLAN_LEVEL_9_REQUIREMENT = Feature.getInt("ClanLevel9Requirement", 120);
 			CLAN_LEVEL_10_REQUIREMENT = Feature.getInt("ClanLevel10Requirement", 140);
 			CLAN_LEVEL_11_REQUIREMENT = Feature.getInt("ClanLevel11Requirement", 170);
+			CLAN_LEVEL_WITHOUT_QUEST = Feature.getBoolean("ClanLevelWithoutQuest", true);
 			ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
 			ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
 			

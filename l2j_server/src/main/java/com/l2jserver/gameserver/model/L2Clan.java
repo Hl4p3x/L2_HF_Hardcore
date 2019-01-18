@@ -2531,11 +2531,11 @@ public class L2Clan implements IIdentifiable, INamable
 			case 2:
 			{
 				// Upgrade to 3
-				if ((player.getAdena() >= 5550000) && (player.getInventory().getItemByItemId(1419) != null))
+				if ((player.getAdena() >= 5550000) && (Config.CLAN_LEVEL_WITHOUT_QUEST || player.getInventory().getItemByItemId(1419) != null))
 				{
 					// itemId 1419 == Blood Mark
 					if (player.reduceAdena("ClanLvl", 5550000, player.getTarget(), true) &&
-							player.destroyItemByItemId("ClanLvl", 1419, 1, player.getTarget(), false)) {
+							(Config.CLAN_LEVEL_WITHOUT_QUEST || player.destroyItemByItemId("ClanLvl", 1419, 1, player.getTarget(), false))) {
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(1419);
 						player.sendPacket(sm);
@@ -2547,11 +2547,11 @@ public class L2Clan implements IIdentifiable, INamable
 			case 3:
 			{
 				// Upgrade to 4
-				if ((player.getAdena() >= 7000000) && (player.getInventory().getItemByItemId(3874) != null))
+				if ((player.getAdena() >= 7000000) && ((Config.CLAN_LEVEL_WITHOUT_QUEST || player.getInventory().getItemByItemId(3874) != null)))
 				{
 					// itemId 3874 == Alliance Manifesto
 					if (player.reduceAdena("ClanLvl", 7000000, player.getTarget(), true) &&
-							player.destroyItemByItemId("ClanLvl", 3874, 1, player.getTarget(), false))
+							(Config.CLAN_LEVEL_WITHOUT_QUEST || player.destroyItemByItemId("ClanLvl", 3874, 1, player.getTarget(), false)))
 					{
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(3874);
@@ -2564,11 +2564,11 @@ public class L2Clan implements IIdentifiable, INamable
 			case 4:
 			{
 				// Upgrade to 5
-				if ((player.getAdena() >= 10500000) && (player.getInventory().getItemByItemId(3870) != null))
+				if ((player.getAdena() >= 10500000) && ((Config.CLAN_LEVEL_WITHOUT_QUEST || player.getInventory().getItemByItemId(3870) != null)))
 				{
 					// itemId 3870 == Seal of Aspiration
 					if (player.reduceAdena("ClanLvl", 10500000, player.getTarget(), true) &&
-							player.destroyItemByItemId("ClanLvl", 3870, 1, player.getTarget(), false)) {
+							(Config.CLAN_LEVEL_WITHOUT_QUEST || player.destroyItemByItemId("ClanLvl", 3870, 1, player.getTarget(), false))) {
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(3870);
 						player.sendPacket(sm);
