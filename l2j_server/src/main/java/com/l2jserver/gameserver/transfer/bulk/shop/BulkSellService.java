@@ -8,9 +8,11 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
+import com.l2jserver.gameserver.transfer.bulk.BulkBlacklist;
 import com.l2jserver.gameserver.util.Util;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.l2jserver.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 import static com.l2jserver.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
@@ -18,7 +20,7 @@ import static com.l2jserver.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 public class BulkSellService {
 
     public long sellAllByTypePrice(EtcItemType type, L2PcInstance player) {
-        List<L2ItemInstance> allItems = player.getInventory().getAllSellableItemsByType(type);
+        List<L2ItemInstance> allItems = player.getInventory().getAllSellableItemsByType(type).stream().filter(item -> !BulkBlacklist.IDS.contains(item.getId())).collect(Collectors.toList());
 
         long totalPrice = 0;
         for (L2ItemInstance i : allItems) {
