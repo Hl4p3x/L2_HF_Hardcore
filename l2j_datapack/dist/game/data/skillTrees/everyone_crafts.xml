@@ -18,6 +18,7 @@
         <skill skillName="Create Item" skillId="172" skillLvl="7" getLevel="55" levelUpSp="171000" learnedByNpc="true"/>
         <skill skillName="Create Item" skillId="172" skillLvl="8" getLevel="62" levelUpSp="360000" learnedByNpc="true"/>
         <skill skillName="Create Item" skillId="172" skillLvl="9" getLevel="70" levelUpSp="720000" learnedByNpc="true"/>
+        <skill skillName="Create Item" skillId="172" skillLvl="10" getLevel="82" learnedByFS="true"/>
 
         <skill skillName="Summon Merchant Golem" skillId="831" skillLvl="1" getLevel="20" levelUpSp="125000"
                learnedByNpc="true"/>
