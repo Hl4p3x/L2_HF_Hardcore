@@ -1,5 +1,6 @@
 package custom.tutorials;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.events.Containers;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
@@ -37,7 +38,7 @@ public class LevelledServerGuide extends Quest {
             new LevelledTutorial(this, 15, 48, "augmentation_tutorial.html"),
             new LevelledTutorial(this, 17, 58, "third_profession_tutorial.html"),
             new LevelledTutorial(this, 18, 74, "attribute_tutorial.html"),
-            new LevelledTutorial(this, 19, 76, "subclass_tutorial.html"),
+            new LevelledTutorial(this, 19, 76, Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS ? "subclass_tutorial_no_quest.html" : "subclass_tutorial.html"),
             new LevelledTutorial(this, 20, 77, "dualcraft_tutorial.html"),
             new LevelledTutorial(this, 21, 78, "noblesse_tutorial.html"),
             new LevelledTutorial(this, 22, 80, "siege_tutorial.html"),

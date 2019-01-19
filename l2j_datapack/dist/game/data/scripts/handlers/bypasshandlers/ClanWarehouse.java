@@ -18,8 +18,6 @@
  */
 package handlers.bypasshandlers;
 
-import java.util.logging.Level;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.ClanPrivilege;
@@ -30,12 +28,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2WarehouseInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
-import com.l2jserver.gameserver.network.serverpackets.WareHouseDepositList;
-import com.l2jserver.gameserver.network.serverpackets.WareHouseWithdrawalList;
+
+import java.util.logging.Level;
 
 public class ClanWarehouse implements IBypassHandler
 {
@@ -45,11 +41,14 @@ public class ClanWarehouse implements IBypassHandler
 		"withdrawsortedc",
 		"depositc"
 	};
+
+	private static final int GOLEM_TRADER_ID = 13128;
 	
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!(target instanceof L2WarehouseInstance) && !(target instanceof L2ClanHallManagerInstance))
+
+		if (!(target instanceof L2WarehouseInstance) && !(target instanceof L2ClanHallManagerInstance) && target.getId() != GOLEM_TRADER_ID)
 		{
 			return false;
 		}
