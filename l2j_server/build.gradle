@@ -113,7 +113,7 @@ task configuratorJar(type: ShadowJar, dependsOn: classes) {
 
 }
 
-task dbInstLsJar(type: ShadowJar, dependsOn: classes) {
+task dbInstLsJar(type: Jar, dependsOn: classes) {
     from(sourceSets.main.output)
     archiveName = 'dbinst_ls.jar'
     include '**/dbinstaller/**'
@@ -125,10 +125,12 @@ task dbInstLsJar(type: ShadowJar, dependsOn: classes) {
         from(generalManifest)
         attributes('Main-Class': 'com.l2jserver.tools.dbinstaller.LauncherLS')
     }
-    configurations = [project.configurations.runtimeClasspath]
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
 
-task dbInstGsJar(type: ShadowJar, dependsOn: classes) {
+task dbInstGsJar(type: Jar, dependsOn: classes) {
     from(sourceSets.main.output)
     archiveName = 'dbinst_gs.jar'
     include('**/dbinstaller/**')
@@ -140,7 +142,9 @@ task dbInstGsJar(type: ShadowJar, dependsOn: classes) {
         from(generalManifest)
         attributes 'Main-Class': 'com.l2jserver.tools.dbinstaller.LauncherGS'
     }
-    configurations = [project.configurations.runtimeClasspath]
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
 
 artifacts {
