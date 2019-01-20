@@ -107,8 +107,11 @@ public class GradedEquipmentGenerator {
             8351, // Black Colored Fish Scale
             6905, // Hair Pin Piece
             8376, // Red Horn of Victory Fragment
-            2012 // Sword of Reflection Blade
+            2012, // Sword of Reflection Blade
+            3031, // Spirit Ore
+            1785 // Soul Ore
     );
+
     // Magic constant of full armor 0.616 to chest price ration
     private static final double FULL_TO_CHEST_PRICE_RATION = 0.616;
 
@@ -242,7 +245,7 @@ public class GradedEquipmentGenerator {
 
     private static ItemPart findPartByItem(L2Item item) {
         Optional<L2RecipeList> recipeList = RecipeData.getInstance().getRecipeByProductionItem(item.getId());
-        if (!recipeList.isPresent()) {
+        if (recipeList.isEmpty()) {
             return null;
         }
 

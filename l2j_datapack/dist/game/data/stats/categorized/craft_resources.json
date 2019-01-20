@@ -39,11 +39,6 @@
   "price" : 200.0,
   "resourceGrade" : "low"
 }, {
-  "id" : 1785,
-  "name" : "Soul Ore",
-  "price" : 250.0,
-  "resourceGrade" : "low"
-}, {
   "id" : 1866,
   "name" : "Suede",
   "price" : 300.0,
@@ -52,11 +47,6 @@
   "id" : 1884,
   "name" : "Cord",
   "price" : 325.0,
-  "resourceGrade" : "low"
-}, {
-  "id" : 3031,
-  "name" : "Spirit Ore",
-  "price" : 400.0,
   "resourceGrade" : "low"
 }, {
   "id" : 1878,
@@ -77,12 +67,12 @@
   "id" : 1882,
   "name" : "Leather",
   "price" : 900.0,
-  "resourceGrade" : "mid"
+  "resourceGrade" : "low"
 }, {
   "id" : 1876,
   "name" : "Mithril Ore",
   "price" : 1000.0,
-  "resourceGrade" : "mid"
+  "resourceGrade" : "low"
 }, {
   "id" : 1879,
   "name" : "Cokes",
@@ -152,7 +142,7 @@
   "id" : 4039,
   "name" : "Mold Glue",
   "price" : 6000.0,
-  "resourceGrade" : "high"
+  "resourceGrade" : "mid"
 }, {
   "id" : 4044,
   "name" : "Thons",
@@ -229,6 +219,11 @@
   "price" : 64000.0,
   "resourceGrade" : "highest"
 }, {
+  "id" : 2131,
+  "name" : "Gemstone C",
+  "price" : 90000.0,
+  "resourceGrade" : "highest"
+}, {
   "id" : 4046,
   "name" : "Maestro Anvil Lock",
   "price" : 90400.0,
@@ -239,9 +234,9 @@
   "price" : 95000.0,
   "resourceGrade" : "highest"
 }, {
-  "id" : 2131,
-  "name" : "Gemstone C",
-  "price" : 100000.0,
+  "id" : 2132,
+  "name" : "Gemstone B",
+  "price" : 130000.0,
   "resourceGrade" : "highest"
 }, {
   "id" : 4048,
@@ -249,24 +244,19 @@
   "price" : 154000.0,
   "resourceGrade" : "highest"
 }, {
-  "id" : 2132,
-  "name" : "Gemstone B",
-  "price" : 200000.0,
-  "resourceGrade" : "highest"
-}, {
   "id" : 5551,
   "name" : "Reorin's Mold",
   "price" : 238000.0,
   "resourceGrade" : "highest"
 }, {
+  "id" : 2133,
+  "name" : "Gemstone A",
+  "price" : 300000.0,
+  "resourceGrade" : "highest"
+}, {
   "id" : 5552,
   "name" : "Warsmith's Mold",
   "price" : 385000.0,
-  "resourceGrade" : "highest"
-}, {
-  "id" : 2133,
-  "name" : "Gemstone A",
-  "price" : 400000.0,
   "resourceGrade" : "highest"
 }, {
   "id" : 4045,
@@ -281,7 +271,7 @@
 }, {
   "id" : 2134,
   "name" : "Gemstone S",
-  "price" : 700000.0,
+  "price" : 680000.0,
   "resourceGrade" : "highest"
 }, {
   "id" : 4047,
