@@ -9,8 +9,8 @@
 	<item id="5193" /> <!-- Rope of Magic (C-Grade) -->
 	<item id="5194" /> <!-- Rope of Magic (B-Grade) -->
 	<item id="2130" /> <!-- Gemstone D -->
-	<item id="2131" /> <!-- Gemstone C -->
-	<item id="2132" /> <!-- Gemstone B -->
+	<item id="2131"/> <!-- Gemstone C -->
+	<item id="2132"/> <!-- Gemstone B -->
 	<item id="2133"/> <!-- Gemstone A -->
 	<item id="2134"/> <!-- Gemstone S -->
 </list>
