@@ -109,7 +109,9 @@ public class GradedEquipmentGenerator {
             8376, // Red Horn of Victory Fragment
             2012, // Sword of Reflection Blade
             3031, // Spirit Ore
-            1785 // Soul Ore
+            1785, // Soul Ore
+            2130, // Gemstone D
+            2131 // Gemstone C
     );
 
     // Magic constant of full armor 0.616 to chest price ratio

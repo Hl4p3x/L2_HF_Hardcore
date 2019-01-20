@@ -72,7 +72,7 @@
   "id" : 1876,
   "name" : "Mithril Ore",
   "price" : 1000.0,
-  "resourceGrade" : "low"
+  "resourceGrade" : "mid"
 }, {
   "id" : 1879,
   "name" : "Cokes",
@@ -142,7 +142,7 @@
   "id" : 4039,
   "name" : "Mold Glue",
   "price" : 6000.0,
-  "resourceGrade" : "mid"
+  "resourceGrade" : "high"
 }, {
   "id" : 4044,
   "name" : "Thons",
@@ -209,19 +209,9 @@
   "price" : 46000.0,
   "resourceGrade" : "high"
 }, {
-  "id" : 2130,
-  "name" : "Gemstone D",
-  "price" : 50000.0,
-  "resourceGrade" : "high"
-}, {
   "id" : 1892,
   "name" : "Blacksmith's Frame",
   "price" : 64000.0,
-  "resourceGrade" : "highest"
-}, {
-  "id" : 2131,
-  "name" : "Gemstone C",
-  "price" : 90000.0,
   "resourceGrade" : "highest"
 }, {
   "id" : 4046,
