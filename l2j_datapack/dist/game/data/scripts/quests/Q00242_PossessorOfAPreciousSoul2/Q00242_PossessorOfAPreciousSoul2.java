@@ -18,8 +18,7 @@
  */
 package quests.Q00242_PossessorOfAPreciousSoul2;
 
-import quests.Q00241_PossessorOfAPreciousSoul1.Q00241_PossessorOfAPreciousSoul1;
-
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.audio.Sound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -27,6 +26,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.localization.Strings;
+import quests.Q00241_PossessorOfAPreciousSoul1.Q00241_PossessorOfAPreciousSoul1;
 
 /**
  * Possessor Of A PreciousSoul part 2 (242)<br>
@@ -77,7 +78,11 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 		{
 			return "no_sub.html";
 		}
-		
+
+		if (Config.ALT_NOBLESSE_SHORT_QUEST) {
+			return "<html><body>" + Strings.of(player).get("you_can_go_straight_to_caradine") + "</body></html>";
+		}
+
 		switch (event)
 		{
 			case "31742-02.html":

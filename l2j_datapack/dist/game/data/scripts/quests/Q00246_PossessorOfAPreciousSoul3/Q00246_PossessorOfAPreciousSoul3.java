@@ -18,6 +18,7 @@
  */
 package quests.Q00246_PossessorOfAPreciousSoul3;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.audio.Sound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -25,7 +26,6 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
-
 import quests.Q00242_PossessorOfAPreciousSoul2.Q00242_PossessorOfAPreciousSoul2;
 
 /**
@@ -271,7 +271,8 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				{
 					case State.CREATED:
 						final QuestState qs = player.getQuestState(Q00242_PossessorOfAPreciousSoul2.class.getSimpleName());
-						htmltext = ((player.getLevel() >= 65) && (qs != null) && qs.isCompleted()) ? "31740-1.htm" : "31740-2.html";
+						boolean previousQuestCompleted = qs != null && qs.isCompleted();
+						htmltext = ((player.getLevel() >= 65) && (Config.ALT_NOBLESSE_SHORT_QUEST || previousQuestCompleted)) ? "31740-1.htm" : "31740-2.html";
 						break;
 					case State.STARTED:
 						htmltext = "31740-5.html";

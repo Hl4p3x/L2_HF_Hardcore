@@ -259,6 +259,7 @@ public final class Config
 	public static int DMG_BENEFIT_LEVEL_DIFF;
 	public static double DMG_BENEFIT;
 	public static double ACCURACY_BENEFIT;
+	public static boolean ALT_NOBLESSE_SHORT_QUEST;
 	
 	// --------------------------------------------------
 	// ClanHall Settings
@@ -1840,6 +1841,7 @@ public final class Config
 			DMG_BENEFIT_LEVEL_DIFF = character.getInt("AltLevelDiffForDmgBenefit", 6);
 			DMG_BENEFIT = character.getDouble("AltDmgBenefitForLvLDifferencesMultiplier", 1.1);
 			ACCURACY_BENEFIT = character.getDouble("AltAccuracyBenefitForLvLDifferencesMultiplier", 1);
+			ALT_NOBLESSE_SHORT_QUEST = character.getBoolean("AltNoblesseShortQuest", false);
 
 			// Load Telnet L2Properties file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);

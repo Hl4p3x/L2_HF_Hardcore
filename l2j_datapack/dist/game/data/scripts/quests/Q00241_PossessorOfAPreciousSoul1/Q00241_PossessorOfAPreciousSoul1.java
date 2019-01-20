@@ -18,12 +18,14 @@
  */
 package quests.Q00241_PossessorOfAPreciousSoul1;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.audio.Sound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.localization.Strings;
 
 /**
  * Possessor Of A PreciousSoul part 1 (241)<br>
@@ -271,8 +273,13 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 		{
 			return "no_sub.html";
 		}
-		
+
+
 		String htmltext = getNoQuestMsg(player);
+		if (Config.ALT_NOBLESSE_SHORT_QUEST) {
+			return "<html><body>" + Strings.of(player).get("you_can_go_straight_to_caradine") + "</body></html>";
+		}
+
 		switch (npc.getId())
 		{
 			case TALIEN:
