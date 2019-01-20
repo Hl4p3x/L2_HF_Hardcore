@@ -18,20 +18,16 @@
  */
 package handlers.bypasshandlers;
 
-import java.util.logging.Level;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
-import com.l2jserver.gameserver.network.serverpackets.WareHouseDepositList;
-import com.l2jserver.gameserver.network.serverpackets.WareHouseWithdrawalList;
+
+import java.util.logging.Level;
 
 public class PrivateWarehouse implements IBypassHandler
 {
@@ -47,6 +43,11 @@ public class PrivateWarehouse implements IBypassHandler
 	{
 		if (!target.isNpc())
 		{
+			return false;
+		}
+
+		if (activeChar.isInCombat()) {
+			activeChar.sendPacket(SystemMessageId.CANT_OPERATE_PRIVATE_STORE_DURING_COMBAT);
 			return false;
 		}
 		

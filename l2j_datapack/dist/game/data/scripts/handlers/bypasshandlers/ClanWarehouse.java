@@ -52,6 +52,11 @@ public class ClanWarehouse implements IBypassHandler
 		{
 			return false;
 		}
+
+		if (activeChar.isInCombat()) {
+			activeChar.sendPacket(SystemMessageId.CANT_OPERATE_PRIVATE_STORE_DURING_COMBAT);
+			return false;
+		}
 		
 		if (activeChar.isEnchanting())
 		{
