@@ -27,7 +27,7 @@ mobs:
         chance: 0.7
         stacks: "1"
       s84-low:
-        chance: 0.2
+        chance: 0.4
         stacks: "1"
     armor:
       ng:
@@ -55,7 +55,7 @@ mobs:
         chance: 0.9
         stacks: "1"
       s84-low:
-        chance: 0.3
+        chance: 0.5
         stacks: "1"
     jewels:
       ng:
@@ -83,7 +83,7 @@ mobs:
         chance: 1
         stacks: "1"
       s84-low:
-        chance: 0.4
+        chance: 0.6
         stacks: "1"
   parts:
     weapon:
@@ -109,10 +109,10 @@ mobs:
         chance: 64.0
         count: "1-6"
       s80-top:
-        chance: 60.0
+        chance: 62.0
         count: "1-5"
       s84-low:
-        chance: 50.0
+        chance: 60.0
         count: "1-3"
     armor:
       ng:
@@ -140,7 +140,7 @@ mobs:
         chance: 64.0
         count: "1-6"
       s84-low:
-        chance: 55.0
+        chance: 62.0
         count: "1-4"
     jewels:
       ng:
@@ -168,7 +168,7 @@ mobs:
         chance: 64.0
         count: "1-6"
       s84-low:
-        chance: 55.0
+        chance: 62.0
         count: "1-4"
   recipes:
     weapon:
@@ -197,7 +197,7 @@ mobs:
         chance: 7.0
         count: "1"
       s84-low:
-        chance: 4.5
+        chance: 5
         count: "1"
     armor:
       ng:
@@ -225,7 +225,7 @@ mobs:
         chance: 8.0
         count: "1"
       s84-low:
-        chance: 5.5
+        chance: 6.5
         count: "1"
     jewels:
       ng:
@@ -253,26 +253,26 @@ mobs:
         chance: 8.5
         count: "1"
       s84-low:
-        chance: 6.5
+        chance: 7
         count: "1"
   resources:
     drop:
       low:
         stacks: "2-4"
         chance: 75.0
-        count: "5-40"
+        count: "5-50"
       mid:
         stacks: "1-3"
         chance: 50.0
-        count: "1-25"
+        count: "1-30"
       high:
         stacks: "1"
-        chance: 25.0
-        count: "1-10"
+        chance: 27.0
+        count: "1-12"
       highest:
         stacks: "1"
-        chance: 6.0
-        count: "1-2"
+        chance: 7.0
+        count: "1-5"
   scrolls:
     weapon:
       d:
@@ -478,7 +478,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 0.1
+        chance: 0.2
       ids:
       - 13071 # Red Soul Crystal - Stage 16
       - 13073 # Green Soul Crystal - Stage 16
@@ -489,7 +489,7 @@ mobs:
       stats:
         count: "1-2"
         stacks: "1-2"
-        chance: 2
+        chance: 2.6
       ids:
         - 9546 # Fire Stone
         - 9547 # Water Stone
@@ -502,7 +502,7 @@ mobs:
     drop:
       stats:
         count: "1-2"
-        stacks: "1-2"
+        stacks: "1-3"
         chance: 4
       ids:
         - 9546 # Fire Stone
@@ -526,7 +526,7 @@ mobs:
       stats:
         count: "1"
         stacks: "1"
-        chance: 0.9
+        chance: 0.8
       ids:
         - 9627 # Giant's Codex - Mastery
 
@@ -549,17 +549,17 @@ raid:
         chance: 60.0
         stacks: "2-6"
       s:
-        chance: 50.0
+        chance: 55.0
         stacks: "2-6"
       s80-low:
-        chance: 45.0
+        chance: 50.0
         stacks: "2-5"
       s80-top:
-        chance: 41.0
+        chance: 47.0
         stacks: "2-5"
       s84-low:
-        chance: 37.0
-        stacks: "2-5"
+        chance: 42.0
+        stacks: "1-5"
     armor:
       ng:
         chance: 93.0
@@ -580,14 +580,14 @@ raid:
         chance: 59.0
         stacks: "3-9"
       s80-low:
-        chance: 48.0
+        chance: 52.0
         stacks: "3-7"
       s80-top:
-        chance: 43.0
+        chance: 48.0
         stacks: "3-6"
       s84-low:
-        chance: 38.0
-        stacks: "3-6"
+        chance: 43.0
+        stacks: "2-5"
     jewels:
       ng:
         chance: 95.0
@@ -608,14 +608,14 @@ raid:
         chance: 60.0
         stacks: "3-11"
       s80-low:
-        chance: 49.0
+        chance: 54.0
         stacks: "3-10"
       s80-top:
-        chance: 46.0
+        chance: 50.0
         stacks: "3-8"
       s84-low:
-        chance: 41.0
-        stacks: "3-7"
+        chance: 49.0
+        stacks: "2-6"
   parts:
     weapon:
       ng:
@@ -643,7 +643,7 @@ raid:
         chance: 64.0
         count: "1-85"
       s84-low:
-        chance: 60.0
+        chance: 62.0
         count: "1-76"
     armor:
       ng:
@@ -671,7 +671,7 @@ raid:
         chance: 64.0
         count: "15-125"
       s84-low:
-        chance: 60.0
+        chance: 63.0
         count: "10-100"
     jewels:
       ng:
@@ -1057,6 +1057,6 @@ raid:
     drop:
       stats:
         count: "1-8"
-        chance: 8
+        chance: 7
       ids:
         - 9627 # Giant's Codex - Mastery
