@@ -78,7 +78,11 @@ public class L2MonsterInstance extends L2Attackable
 	}
 
 	private void addRandomSkills() {
-		if (Config.ADD_RANDOM_NPC_SKILLS && !isRaid() && !isRaidMinion()) {
+        if (isRaid() || isRaidMinion()) {
+            return;
+        }
+
+        if (Config.ADD_RANDOM_NPC_SKILLS) {
 			boolean isFighter = getTemplate().getBasePAtk() > getTemplate().getBaseMAtk();
 			L2Weapon activeWeapon = getActiveWeaponItem();
 			WeaponType activeWeaponType;
@@ -131,30 +135,46 @@ public class L2MonsterInstance extends L2Attackable
 
 	@Override
 	public List<Skill> getBuffSkills() {
-		List<Skill> skills = new ArrayList<>(super.getBuffSkills());
-		skills.addAll(dynamicBuffSkills);
-		return skills;
+        if (isRaid() || isRaidMinion()) {
+            return super.getBuffSkills();
+        } else {
+            List<Skill> skills = new ArrayList<>(super.getBuffSkills());
+            skills.addAll(dynamicBuffSkills);
+            return skills;
+        }
 	}
 
 	@Override
 	public List<Skill> getHealSkills() {
-		List<Skill> skills = new ArrayList<>(super.getHealSkills());
-		skills.addAll(dynamicHealSkills);
-		return skills;
+        if (isRaid() || isRaidMinion()) {
+            return super.getHealSkills();
+        } else {
+            List<Skill> skills = new ArrayList<>(super.getHealSkills());
+            skills.addAll(dynamicHealSkills);
+            return skills;
+        }
 	}
 
 	@Override
 	public List<Skill> getLongRangeSkills() {
-		List<Skill> skills = new ArrayList<>(super.getLongRangeSkills());
-		skills.addAll(dynamicLongRangeSkills);
-		return skills;
+        if (isRaid() || isRaidMinion()) {
+            return super.getLongRangeSkills();
+        } else {
+            List<Skill> skills = new ArrayList<>(super.getLongRangeSkills());
+            skills.addAll(dynamicLongRangeSkills);
+            return skills;
+        }
 	}
 
 	@Override
 	public List<Skill> getShortRangeSkills() {
-		List<Skill> skills = new ArrayList<>(super.getShortRangeSkills());
-		skills.addAll(dynamicShortRangeSkills);
-		return skills;
+        if (isRaid() || isRaidMinion()) {
+            return super.getShortRangeSkills();
+        } else {
+            List<Skill> skills = new ArrayList<>(super.getShortRangeSkills());
+            skills.addAll(dynamicShortRangeSkills);
+            return skills;
+        }
 	}
 
 	@Override
