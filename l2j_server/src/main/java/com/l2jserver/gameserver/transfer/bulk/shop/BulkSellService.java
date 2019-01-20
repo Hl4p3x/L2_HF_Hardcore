@@ -5,22 +5,21 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.transfer.bulk.BulkBlacklist;
+import com.l2jserver.gameserver.transfer.bulk.BulkItemType;
+import com.l2jserver.gameserver.transfer.bulk.BulkItemTypeFilter;
 import com.l2jserver.gameserver.util.Util;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static com.l2jserver.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 import static com.l2jserver.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
 public class BulkSellService {
 
-    public long sellAllByTypePrice(EtcItemType type, L2PcInstance player) {
-        List<L2ItemInstance> allItems = player.getInventory().getAllSellableItemsByType(type).stream().filter(item -> !BulkBlacklist.IDS.contains(item.getId())).collect(Collectors.toList());
+    public long sellAllByTypePrice(BulkItemType type, L2PcInstance player) {
+        List<L2ItemInstance> allItems = BulkItemTypeFilter.getInstance().filter(type, player.getInventory().getAllItemsByType(type.getItemType()));
 
         long totalPrice = 0;
         for (L2ItemInstance i : allItems) {
@@ -41,12 +40,12 @@ public class BulkSellService {
         return totalPrice;
     }
 
-    public int sellAllByTypeCount(EtcItemType type, L2PcInstance player) {
-        return player.getInventory().getAllSellableItemsByType(type).size();
+    public int sellAllByTypeCount(BulkItemType type, L2PcInstance player) {
+        return BulkItemTypeFilter.getInstance().filter(type, player.getInventory().getAllSellableItemsByType(type.getItemType())).size();
     }
 
-    public void sellAllByType(EtcItemType type, L2PcInstance player) {
-        List<L2ItemInstance> allItems = player.getInventory().getAllSellableItemsByType(type);
+    public void sellAllByType(BulkItemType type, L2PcInstance player) {
+        List<L2ItemInstance> allItems = BulkItemTypeFilter.getInstance().filter(type, player.getInventory().getAllSellableItemsByType(type.getItemType()));
 
         if (!player.getClient().getFloodProtectors().getTransaction().tryPerformAction("buy")) {
             player.sendMessage("You are buying too fast.");

@@ -4,15 +4,19 @@
 <font color="LEVEL">%npc_name%:</font><br><br>
 Choose which items category you are going to deposit to <font color="LEVEL">%warehouse_type%</font> warehouse:<br>
 <center>
-    <button action="bypass -h npc_%objectId%_bulk_deposit %warehouse_type% material" value="Deposit All Resources/Parts"
+    <button action="bypass -h npc_%objectId%_bulk_deposit %warehouse_type% resources" value="Deposit All Resources"
             width=160
             height=32
             back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
-        <button action="bypass -h npc_%objectId%_bulk_deposit %warehouse_type% recipe" value="Deposit All Recipes"
-                width=160 height=32
+        <button action="bypass -h npc_%objectId%_bulk_deposit %warehouse_type% parts" value="Deposit All Parts"
+                width=160
+                height=32
                 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
-            <button action="bypass -h npc_%objectId%_Chat 0" value="Go Back" width=160 height=32
+            <button action="bypass -h npc_%objectId%_bulk_deposit %warehouse_type% recipes" value="Deposit All Recipes"
+                    width=160 height=32
                     back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+                <button action="bypass -h npc_%objectId%_Chat 0" value="Go Back" width=160 height=32
+                        back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
 </center>
 </body>
 </html>

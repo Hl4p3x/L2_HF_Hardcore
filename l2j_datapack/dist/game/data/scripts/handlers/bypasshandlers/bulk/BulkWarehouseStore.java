@@ -5,9 +5,9 @@ import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.WarehouseType;
-import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.transfer.bulk.BulkItemType;
 import com.l2jserver.gameserver.transfer.bulk.store.BulkStoreService;
 import com.l2jserver.localization.Strings;
 import org.slf4j.Logger;
@@ -48,7 +48,7 @@ public class BulkWarehouseStore implements IBypassHandler {
         } else if (action.toLowerCase().startsWith("bulk_deposit") && st.countTokens() == 2) {
             String warehouseType = st.nextToken();
             String itemType = st.nextToken();
-            BulkStoreService.getInstance().storeAllByType(EtcItemType.of(itemType), WarehouseType.of(warehouseType), player);
+            BulkStoreService.getInstance().storeAllByType(BulkItemType.of(itemType), WarehouseType.of(warehouseType), player);
             return true;
         }
 

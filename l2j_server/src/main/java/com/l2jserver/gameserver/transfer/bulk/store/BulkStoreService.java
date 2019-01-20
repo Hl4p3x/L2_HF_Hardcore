@@ -6,12 +6,12 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jserver.gameserver.model.itemcontainer.WarehouseType;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.type.ItemType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.transfer.bulk.BulkBlacklist;
+import com.l2jserver.gameserver.transfer.bulk.BulkItemType;
+import com.l2jserver.gameserver.transfer.bulk.BulkItemTypeFilter;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.localization.Strings;
 import org.slf4j.Logger;
@@ -19,7 +19,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
@@ -27,12 +26,12 @@ public class BulkStoreService {
 
     private static final Logger LOG = LoggerFactory.getLogger(BulkStoreService.class);
 
-    public void storeAllByType(ItemType type, WarehouseType warehouseType, L2PcInstance player) {
+    public void storeAllByType(BulkItemType type, WarehouseType warehouseType, L2PcInstance player) {
         if (player == null) {
             return;
         }
 
-        List<L2ItemInstance> allItems = player.getInventory().getAllItemsByType(type).stream().filter(item -> !BulkBlacklist.IDS.contains(item.getId())).collect(Collectors.toList());
+        List<L2ItemInstance> allItems = BulkItemTypeFilter.getInstance().filter(type, player.getInventory().getAllItemsByType(type.getItemType()));
 
         if (!player.getClient().getFloodProtectors().getTransaction().tryPerformAction("deposit")) {
             player.sendMessage("You are depositing items too fast.");

@@ -6,9 +6,9 @@ import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.transfer.bulk.BulkItemType;
 import com.l2jserver.gameserver.transfer.bulk.shop.BulkSellService;
 import com.l2jserver.localization.Strings;
 import org.slf4j.Logger;
@@ -47,7 +47,7 @@ public class BulkSell implements IBypassHandler {
             return true;
         } else if (action.toLowerCase().startsWith("bulk_sell") && st.countTokens() == 1) {
             String type = st.nextToken();
-            EtcItemType itemType = EtcItemType.of(type);
+            BulkItemType itemType = BulkItemType.of(type);
             String htmlText = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "./data/html/custom/bulk/bulk_sell.html");
             htmlText = htmlText.replaceAll("%objectId%", String.valueOf(target.getObjectId()));
             htmlText = htmlText.replaceAll("%npc_name%", target.getName());
@@ -59,7 +59,7 @@ public class BulkSell implements IBypassHandler {
             return true;
         } else if (action.toLowerCase().startsWith("bulk_sell") && st.countTokens() == 2) {
             String type = st.nextToken();
-            BulkSellService.getInstance().sellAllByType(EtcItemType.of(type), player);
+            BulkSellService.getInstance().sellAllByType(BulkItemType.of(type), player);
             return true;
         }
 

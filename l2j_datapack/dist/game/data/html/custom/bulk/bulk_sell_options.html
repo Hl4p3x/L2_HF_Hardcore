@@ -4,12 +4,14 @@
 <font color="LEVEL">%npc_name%:</font><br><br>
 Choose which items category you are going to sell:<br>
 <center>
-    <button action="bypass -h npc_%objectId%_bulk_sell material" value="Sell All Resources/Parts" width=150 height=32
-        back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
-        <button action="bypass -h npc_%objectId%_bulk_sell recipe" value="Sell All Recipes" width=150 height=32
+    <button action="bypass -h npc_%objectId%_bulk_sell resources" value="Sell All Resources" width=150 height=32
+            back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+        <button action="bypass -h npc_%objectId%_bulk_sell parts" value="Sell All Parts" width=150 height=32
                 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
-            <button action="bypass -h npc_%objectId%_Chat 0" value="Go Back" width=150 height=32
+            <button action="bypass -h npc_%objectId%_bulk_sell recipes" value="Sell All Recipes" width=150 height=32
                     back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+                <button action="bypass -h npc_%objectId%_Chat 0" value="Go Back" width=150 height=32
+                        back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
 </center>
 </body>
 </html>
