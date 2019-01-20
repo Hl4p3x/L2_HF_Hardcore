@@ -162,6 +162,7 @@ public final class Config
 	public static byte MAX_SUBCLASS;
 	public static byte BASE_SUBCLASS_LEVEL;
 	public static byte MAX_SUBCLASS_LEVEL;
+	public static boolean ALLOW_ALL_SUBCLASSES;
 	public static int MAX_PVTSTORESELL_SLOTS_DWARF;
 	public static int MAX_PVTSTORESELL_SLOTS_OTHER;
 	public static int MAX_PVTSTOREBUY_SLOTS_DWARF;
@@ -1642,6 +1643,7 @@ public final class Config
 			MAX_SUBCLASS = character.getByte("MaxSubclass", (byte) 3);
 			BASE_SUBCLASS_LEVEL = character.getByte("BaseSubclassLevel", (byte) 40);
 			MAX_SUBCLASS_LEVEL = character.getByte("MaxSubclassLevel", (byte) 80);
+			ALLOW_ALL_SUBCLASSES = character.getBoolean("AllowAllSubclasses", true);
 			MAX_PVTSTORESELL_SLOTS_DWARF = character.getInt("MaxPvtStoreSellSlotsDwarf", 4);
 			MAX_PVTSTORESELL_SLOTS_OTHER = character.getInt("MaxPvtStoreSellSlotsOther", 3);
 			MAX_PVTSTOREBUY_SLOTS_DWARF = character.getInt("MaxPvtStoreBuySlotsDwarf", 5);

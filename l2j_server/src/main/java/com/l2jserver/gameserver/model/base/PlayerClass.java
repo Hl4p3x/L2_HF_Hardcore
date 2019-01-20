@@ -18,21 +18,16 @@
  */
 package com.l2jserver.gameserver.model.base;
 
-import static com.l2jserver.gameserver.model.base.ClassLevel.First;
-import static com.l2jserver.gameserver.model.base.ClassLevel.Fourth;
-import static com.l2jserver.gameserver.model.base.ClassLevel.Second;
-import static com.l2jserver.gameserver.model.base.ClassLevel.Third;
-import static com.l2jserver.gameserver.model.base.ClassType.Fighter;
-import static com.l2jserver.gameserver.model.base.ClassType.Mystic;
-import static com.l2jserver.gameserver.model.base.ClassType.Priest;
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.Set;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.enums.Race;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import static com.l2jserver.gameserver.model.base.ClassLevel.*;
+import static com.l2jserver.gameserver.model.base.ClassType.*;
 
 /**
  * @author luisantonioa
@@ -209,7 +204,9 @@ public enum PlayerClass
 	static
 	{
 		Set<PlayerClass> subclasses = getSet(null, Third);
-		subclasses.removeAll(neverSubclassed);
+		if (!Config.ALLOW_ALL_SUBCLASSES) {
+			subclasses.removeAll(neverSubclassed);
+		}
 		
 		mainSubclassSet = subclasses;
 		
@@ -253,15 +250,16 @@ public enum PlayerClass
 				subclasses = EnumSet.copyOf(mainSubclassSet);
 				
 				subclasses.remove(this);
-				
-				switch (player.getRace())
-				{
-					case ELF:
-						subclasses.removeAll(getSet(Race.DARK_ELF, Third));
-						break;
-					case DARK_ELF:
-						subclasses.removeAll(getSet(Race.ELF, Third));
-						break;
+
+				if (!Config.ALLOW_ALL_SUBCLASSES) {
+					switch (player.getRace()) {
+						case ELF:
+							subclasses.removeAll(getSet(Race.DARK_ELF, Third));
+							break;
+						case DARK_ELF:
+							subclasses.removeAll(getSet(Race.ELF, Third));
+							break;
+					}
 				}
 				
 				subclasses.removeAll(getSet(Race.KAMAEL, Third));
