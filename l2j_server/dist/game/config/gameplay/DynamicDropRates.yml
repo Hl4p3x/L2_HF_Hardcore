@@ -273,6 +273,10 @@ mobs:
         stacks: "1"
         chance: 7.0
         count: "1-5"
+      base_category_materials:
+        stacks: "1"
+        chance: 16.0
+        count: "1-12"
   scrolls:
     weapon:
       d:
@@ -804,6 +808,10 @@ raid:
         stacks: "1-5"
         chance: 60.0
         count: "30-140"
+      base_category_materials:
+        stacks: "1-5"
+        chance: 65.0
+        count: "20-49"
   scrolls:
     weapon:
       d:

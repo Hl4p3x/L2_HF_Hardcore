@@ -3,6 +3,7 @@ package com.l2jserver.util.misc;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Sets;
 import com.l2jserver.Config;
 import com.l2jserver.Server;
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;
@@ -30,6 +31,7 @@ import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.model.multisell.Ingredient;
 import com.l2jserver.gameserver.model.multisell.ListContainer;
 import com.l2jserver.util.CollectionUtil;
+import com.l2jserver.util.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -398,14 +400,27 @@ public class GradedEquipmentGenerator {
     }
 
     private static List<CraftResource> gradeCraftResources(List<L2EtcItem> craftResources) {
-        List<ResourceGrade> resourceGrades = Arrays.asList(ResourceGrade.values());
+        List<ResourceGrade> resourceGrades = Arrays.asList(ResourceGrade.LOW, ResourceGrade.MID, ResourceGrade.HIGH, ResourceGrade.HIGHEST);
+        Set<Integer> baseResourceIds = Sets.newHashSet(
+                9628, // Leonard
+                9629, // Adamantine
+                9630 // Orichalcum
+        );
+
+        Pair<List<L2EtcItem>, List<L2EtcItem>> baseResourceSplitPair = CollectionUtil.splitBy(craftResources, (item) -> baseResourceIds.contains(item.getId()));
+
+        List<L2EtcItem> baseResources = baseResourceSplitPair.getLeft();
+        craftResources = baseResourceSplitPair.getRight();
 
         Comparator<L2EtcItem> priceCompare = Comparator.comparing(L2EtcItem::getReferencePrice);
         Comparator<L2EtcItem> nameCompare = Comparator.comparing(L2EtcItem::getName);
         craftResources.sort(priceCompare.thenComparing(nameCompare));
 
         List<CraftResource> result = new ArrayList<>(craftResources.size());
-        List<List<L2EtcItem>> splitItems = CollectionUtil.splitList(craftResources, resourceGrades.size() - 1);
+
+        baseResources.forEach(baseResource -> result.add(new CraftResource(baseResource.getId(), baseResource.getName(), baseResource.getReferencePrice(), ResourceGrade.BASE_CATEGORY_MATERIALS)));
+
+        List<List<L2EtcItem>> splitItems = CollectionUtil.splitList(craftResources, resourceGrades.size());
         int gradeIndex = 0;
         for (List<L2EtcItem> items : splitItems) {
             for (L2EtcItem item : items) {

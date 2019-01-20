@@ -6,7 +6,17 @@ import com.l2jserver.util.StringUtil;
 
 public enum ResourceGrade {
 
-    LOW, MID, HIGH, HIGHEST, UNSET;
+    LOW, MID, HIGH, HIGHEST, BASE_CATEGORY_MATERIALS("Base Craft"), UNSET;
+
+    private final String customName;
+
+    ResourceGrade() {
+        this.customName = StringUtil.capitalize(name());
+    }
+
+    ResourceGrade(String customName) {
+        this.customName = customName;
+    }
 
     @JsonCreator
     public static ResourceGrade fromString(String text) {
@@ -19,7 +29,7 @@ public enum ResourceGrade {
     }
 
     public String toString() {
-        return StringUtil.capitalize(name());
+        return customName;
     }
 
 }

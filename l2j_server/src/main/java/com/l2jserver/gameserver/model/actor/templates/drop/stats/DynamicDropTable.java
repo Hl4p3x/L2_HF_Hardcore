@@ -116,7 +116,7 @@ public class DynamicDropTable {
             Function<ScrollGrade, List<Scroll>> blessedScrollProvider,
             Function<ScrollGrade, ScrollDropStats> scrollDropStatsProvider) {
         Optional<ScrollGrade> scrollGradeOptional = ScrollGradeRange.byLevel(level);
-        if (!scrollGradeOptional.isPresent()) {
+        if (scrollGradeOptional.isEmpty()) {
             if (level > ScrollGradeRange.lowestGrade().getLowLevel()) {
                 LOG.warn("Could not find scroll drop data for level {}", level);
             }

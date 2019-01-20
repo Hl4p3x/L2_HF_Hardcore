@@ -10,8 +10,10 @@ public enum ResourceGradeRange {
 
     LOW(1, 40, ResourceGrade.LOW),
     MID(41, 62, ResourceGrade.MID),
-    HIGH(63, 76, ResourceGrade.HIGH),
-    HIGHEST(77, 85, ResourceGrade.HIGHEST);
+    HIGH(63, 77, ResourceGrade.HIGH),
+    HIGHEST(78, 86, ResourceGrade.HIGHEST),
+    BASE_MATERIALS(80, 86, ResourceGrade.BASE_CATEGORY_MATERIALS);
+
 
     private int lowLevel;
     private int highLevel;

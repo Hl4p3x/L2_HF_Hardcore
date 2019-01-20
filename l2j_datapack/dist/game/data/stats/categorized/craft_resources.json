@@ -1,4 +1,19 @@
 [ {
+  "id" : 9628,
+  "name" : "Leonard",
+  "price" : 25500.0,
+  "resourceGrade" : "base_category_materials"
+}, {
+  "id" : 9629,
+  "name" : "Adamantine",
+  "price" : 46000.0,
+  "resourceGrade" : "base_category_materials"
+}, {
+  "id" : 9630,
+  "name" : "Orichalcum",
+  "price" : 38000.0,
+  "resourceGrade" : "base_category_materials"
+}, {
   "id" : 1864,
   "name" : "Stem",
   "price" : 100.0,
@@ -67,7 +82,7 @@
   "id" : 1882,
   "name" : "Leather",
   "price" : 900.0,
-  "resourceGrade" : "low"
+  "resourceGrade" : "mid"
 }, {
   "id" : 1876,
   "name" : "Mithril Ore",
@@ -132,12 +147,12 @@
   "id" : 1894,
   "name" : "Crafted Leather",
   "price" : 5700.0,
-  "resourceGrade" : "mid"
+  "resourceGrade" : "high"
 }, {
   "id" : 4043,
   "name" : "Asofe",
   "price" : 6000.0,
-  "resourceGrade" : "mid"
+  "resourceGrade" : "high"
 }, {
   "id" : 4039,
   "name" : "Mold Glue",
@@ -192,21 +207,6 @@
   "id" : 1893,
   "name" : "Oriharukon",
   "price" : 24600.0,
-  "resourceGrade" : "high"
-}, {
-  "id" : 9628,
-  "name" : "Leonard",
-  "price" : 25500.0,
-  "resourceGrade" : "high"
-}, {
-  "id" : 9630,
-  "name" : "Orichalcum",
-  "price" : 38000.0,
-  "resourceGrade" : "high"
-}, {
-  "id" : 9629,
-  "name" : "Adamantine",
-  "price" : 46000.0,
   "resourceGrade" : "high"
 }, {
   "id" : 1892,
