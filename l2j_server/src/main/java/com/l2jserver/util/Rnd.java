@@ -301,8 +301,8 @@ public final class Rnd
 	private static final long MASK = (1L << 48) - 1;
 	
 	private static final long MULTIPLIER = 0x5DEECE66DL;
-	
-	private static final RandomContainer rnd = newInstance(RandomType.SECURE);
+
+    private static final RandomContainer rnd = newInstance(RandomType.SECURE);
 	
 	protected static volatile long SEED_UNIQUIFIER = 8682522807148012L;
 	
