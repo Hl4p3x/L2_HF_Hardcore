@@ -19,13 +19,15 @@ public class BulkWarehouseStore implements IBypassHandler {
 
     private final static Logger LOG = LoggerFactory.getLogger(BulkWarehouseStore.class);
 
+    private static final Integer GOLEM_TRADER_ID = 13128;
+
     private static final String[] COMMANDS = {
             "bulk_deposit"
     };
 
     @Override
     public boolean useBypass(String command, L2PcInstance player, L2Character target) {
-        if (!player.getLastFolkNPC().isWarehouse()) {
+        if (!player.getLastFolkNPC().isWarehouse() && player.getLastFolkNPC().getId() != GOLEM_TRADER_ID) {
             return false;
         }
 
