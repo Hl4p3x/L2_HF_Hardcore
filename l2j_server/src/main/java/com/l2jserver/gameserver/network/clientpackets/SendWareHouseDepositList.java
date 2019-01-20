@@ -45,7 +45,9 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 	private static final String _C__3B_SENDWAREHOUSEDEPOSITLIST = "[C] 3B SendWareHouseDepositList";
 	
 	private static final int BATCH_LENGTH = 12;
-	
+
+	private static final int GOLEM_TRADER_ID = 13128;
+
 	private List<ItemHolder> _items = null;
 	
 	@Override
@@ -99,7 +101,7 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 		final boolean isPrivate = warehouse instanceof PcWarehouse;
 		
 		final L2Npc manager = player.getLastFolkNPC();
-		if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM())
+		if (((manager == null) || (!manager.isWarehouse() && manager.getId() != GOLEM_TRADER_ID) || !manager.canInteract(player)) && !player.isGM())
 		{
 			return;
 		}

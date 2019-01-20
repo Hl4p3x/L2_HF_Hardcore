@@ -26,6 +26,8 @@ public class BulkStoreService {
 
     private static final Logger LOG = LoggerFactory.getLogger(BulkStoreService.class);
 
+    private static final Integer GOLEM_TRADER_ID = 13128;
+
     public void storeAllByType(BulkItemType type, WarehouseType warehouseType, L2PcInstance player) {
         if (player == null) {
             return;
@@ -54,7 +56,7 @@ public class BulkStoreService {
         final boolean isPrivate = warehouseType.equals(WarehouseType.PRIVATE);
 
         final L2Npc manager = player.getLastFolkNPC();
-        if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM()) {
+        if (((manager == null) || (!manager.isWarehouse() && manager.getId() != GOLEM_TRADER_ID) || !manager.canInteract(player)) && !player.isGM()) {
             return;
         }
 
