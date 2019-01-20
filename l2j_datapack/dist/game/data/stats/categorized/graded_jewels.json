@@ -333,4 +333,19 @@
   "itemName" : "Sealed Vesper Necklace",
   "itemPrice" : 10284000,
   "gradeInfo" : "s84"
+}, {
+  "itemId" : 6325,
+  "itemName" : "Sealed Phoenix Ring",
+  "itemPrice" : 670000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 6324,
+  "itemName" : "Sealed Phoenix Earring",
+  "itemPrice" : 1005000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 6323,
+  "itemName" : "Sealed Phoenix Necklace",
+  "itemPrice" : 1340000,
+  "gradeInfo" : "a-mid"
 } ]

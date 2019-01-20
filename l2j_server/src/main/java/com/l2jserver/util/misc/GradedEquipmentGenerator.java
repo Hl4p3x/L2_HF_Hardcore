@@ -112,8 +112,8 @@ public class GradedEquipmentGenerator {
             1785 // Soul Ore
     );
 
-    // Magic constant of full armor 0.616 to chest price ration
-    private static final double FULL_TO_CHEST_PRICE_RATION = 0.616;
+    // Magic constant of full armor 0.616 to chest price ratio
+    private static final double FULL_TO_CHEST_PRICE_RATIO = 0.616;
 
     private static CategorizedItems collectCategorizedItems() {
         Map<Integer, L2Weapon> weaponsMap = ItemTable.getInstance().getWeapons();
@@ -312,7 +312,7 @@ public class GradedEquipmentGenerator {
                     // Grade full armor as a partly priced chest armor
                     if (bodyPart == L2Item.SLOT_FULL_ARMOR) {
                         bodyPart = L2Item.SLOT_CHEST;
-                        price = (int) Math.round(price * FULL_TO_CHEST_PRICE_RATION);
+                        price = (int) Math.round(price * FULL_TO_CHEST_PRICE_RATIO);
                     }
                     return new GradedItem(item.getId(), item.getName(), price, bodyPart,
                             new GradeInfo(Grade.fromCrystalType(item.getCrystalType()), GradeCategory.UNSET));
@@ -338,6 +338,9 @@ public class GradedEquipmentGenerator {
         allWeapon = regradeDynastyToS80(allWeapon);
         allArmor = regradeDynastyToS80(allArmor);
         allJewels = regradeDynastyToS80(allJewels);
+
+        allArmor.addAll(duplicateLowAToMid(allArmor));
+        allJewels.addAll(duplicateLowAToMid(allJewels));
 
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("data/stats/categorized/graded_weapon.json"), allWeapon);
@@ -409,6 +412,10 @@ public class GradedEquipmentGenerator {
             gradeIndex += 1;
         }
         return result;
+    }
+
+    private static List<GradedItem> duplicateLowAToMid(List<GradedItem> items) {
+        return items.stream().filter(item -> item.getGradeInfo().equals(GradeInfo.fromString("A-LOW"))).map(GradedItem::new).peek(item -> item.getGradeInfo().setCategory(GradeCategory.MID)).collect(Collectors.toList());
     }
 
     private static List<GradedItem> regradeDynastyToS80(List<GradedItem> items) {

@@ -12,6 +12,11 @@ public class GradeInfo {
     public GradeInfo() {
     }
 
+    public GradeInfo(GradeInfo gradeInfo) {
+        this.grade = gradeInfo.grade;
+        this.category = gradeInfo.category;
+    }
+
     public GradeInfo(Grade grade, GradeCategory category) {
         this.grade = grade;
         this.category = category;

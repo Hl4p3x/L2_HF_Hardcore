@@ -55,9 +55,9 @@ public class ItemPartsDropDataTable implements EquipmentProvider<ItemPart> {
 
             Multimap<GradeInfo, ItemPart> itemPartMultimap = HashMultimap.create();
             itemParts.forEach(itemPart -> {
-                Optional<GradedItem> gradedItemOption = GradedItemsDropDataTable.getInstance().getItemById(itemPart.getItemId());
-                if (gradedItemOption.isPresent()) {
-                    itemPartMultimap.put(gradedItemOption.get().getGradeInfo(), itemPart);
+                Collection<GradedItem> gradedItems = GradedItemsDropDataTable.getInstance().getItemById(itemPart.getItemId());
+                if (!gradedItems.isEmpty()) {
+                    gradedItems.forEach(item -> itemPartMultimap.put(item.getGradeInfo(), itemPart));
                 } else if (ItemTable.getInstance().getTemplate(itemPart.getItemId()).getCrystalType() != CrystalType.NONE) {
                     LOG.warn("Part {} is missing graded item and cannot added to data table", itemPart);
                 }

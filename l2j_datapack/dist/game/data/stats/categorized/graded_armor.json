@@ -1593,4 +1593,79 @@
   "itemName" : "Sealed Vesper Breastplate",
   "itemPrice" : 46668000,
   "gradeInfo" : "s84"
+}, {
+  "itemId" : 5290,
+  "itemName" : "Sealed Dark Crystal Gloves",
+  "itemPrice" : 890000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5295,
+  "itemName" : "Sealed Tallum Gloves",
+  "itemPrice" : 890000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5291,
+  "itemName" : "Sealed Dark Crystal Boots",
+  "itemPrice" : 890000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5296,
+  "itemName" : "Sealed Tallum Boots",
+  "itemPrice" : 890000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5292,
+  "itemName" : "Sealed Dark Crystal Shield",
+  "itemPrice" : 935000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5289,
+  "itemName" : "Sealed Dark Crystal Helmet",
+  "itemPrice" : 1336000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5294,
+  "itemName" : "Sealed Tallum Helmet",
+  "itemPrice" : 1336000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5298,
+  "itemName" : "Sealed Dark Crystal Leggings",
+  "itemPrice" : 1670000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5305,
+  "itemName" : "Sealed Tallum Stockings",
+  "itemPrice" : 1670000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5297,
+  "itemName" : "Sealed Dark Crystal Leather Armor",
+  "itemPrice" : 2671000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5304,
+  "itemName" : "Sealed Tallum Tunic",
+  "itemPrice" : 2671000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5287,
+  "itemName" : "Sealed Dark Crystal breastplate",
+  "itemPrice" : 3562000,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5308,
+  "itemName" : "Sealed Dark Crystal Robe",
+  "itemPrice" : 2674056,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5301,
+  "itemName" : "Sealed Tallum Leather Armor",
+  "itemPrice" : 2674056,
+  "gradeInfo" : "a-mid"
+}, {
+  "itemId" : 5293,
+  "itemName" : "Sealed Tallum Plate Armor",
+  "itemPrice" : 3565408,
+  "gradeInfo" : "a-mid"
 } ]

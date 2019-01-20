@@ -23,6 +23,13 @@ public class GradedItem implements HasItemId {
         this.gradeInfo = gradeInfo;
     }
 
+    public GradedItem(GradedItem gradedItem) {
+        this.itemId = gradedItem.itemId;
+        this.itemName = gradedItem.itemName;
+        this.itemPrice = gradedItem.itemPrice;
+        this.itemSlot = gradedItem.itemSlot;
+        this.gradeInfo = new GradeInfo(gradedItem.gradeInfo);
+    }
 
     public int getItemSlot() {
         return itemSlot;

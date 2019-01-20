@@ -2,6 +2,7 @@ package com.l2jserver.gameserver.datatables.categorized;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvider;
@@ -15,15 +16,13 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class GradedItemsDropDataTable implements EquipmentProvider<GradedItem> {
 
     private static final Logger LOG = LoggerFactory.getLogger(GradedItemsDropDataTable.class);
 
     private Map<GradeInfo, List<GradedItem>> allGradedItemsMap = new HashMap<>();
-    private Map<Integer, GradedItem> allGradedItemById = new HashMap<>();
+    private Multimap<Integer, GradedItem> allGradedItemById = ArrayListMultimap.create();
 
     private Map<GradeInfo, List<GradedItem>> gradedWeaponsMap = new HashMap<>();
     private Map<GradeInfo, List<GradedItem>> gradedArmorMap = new HashMap<>();
@@ -59,8 +58,10 @@ public class GradedItemsDropDataTable implements EquipmentProvider<GradedItem> {
         LOG.info("Loaded {} graded items!", allGradedIds.size());
     }
 
-    private Map<Integer, GradedItem> buildIdMap(List<GradedItem> allGradedItems) {
-        return allGradedItems.stream().collect(Collectors.toMap(GradedItem::getItemId, Function.identity()));
+    private Multimap<Integer, GradedItem> buildIdMap(List<GradedItem> allGradedItems) {
+        allGradedItemById = ArrayListMultimap.create();
+        allGradedItems.forEach(item -> allGradedItemById.put(item.getItemId(), item));
+        return allGradedItemById;
     }
 
     private Map<GradeInfo, List<GradedItem>> buildGradeMap(List<GradedItem> gradedItems) {
@@ -111,8 +112,8 @@ public class GradedItemsDropDataTable implements EquipmentProvider<GradedItem> {
         return gradedJewelsMap;
     }
 
-    public Optional<GradedItem> getItemById(int itemId) {
-        return Optional.ofNullable(allGradedItemById.get(itemId));
+    public Collection<GradedItem> getItemById(int itemId) {
+        return allGradedItemById.get(itemId);
     }
 
     public Set<Integer> getGradedItemsIds() {
