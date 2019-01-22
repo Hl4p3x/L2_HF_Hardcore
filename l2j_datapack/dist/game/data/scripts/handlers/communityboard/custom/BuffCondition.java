@@ -1,6 +1,7 @@
 package handlers.communityboard.custom;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.olympiad.OlympiadManager;
 import com.l2jserver.localization.Strings;
 
 public class BuffCondition {
@@ -10,7 +11,7 @@ public class BuffCondition {
             return ProcessResult.failure(Strings.of(player).get("you_cannot_do_this_while_being_dead"));
         }
 
-        if (player.isInOlympiadMode()) {
+        if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegisteredInComp(player)) {
             return ProcessResult.failure(Strings.of(player).get("you_cannot_do_this_while_being_in_olympiad"));
         }
 
