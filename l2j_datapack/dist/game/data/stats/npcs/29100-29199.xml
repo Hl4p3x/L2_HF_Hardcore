@@ -3601,18 +3601,47 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="20">
-					<item id="15560" min="1" max="1" chance="9.1"/> <!-- Vigwik Axe -->
-					<item id="15561" min="1" max="1" chance="9.09"/> <!-- Devilish Maul -->
-					<item id="15562" min="1" max="1" chance="9.09"/> <!-- Feather Eye Blade -->
-					<item id="15563" min="1" max="1" chance="9.09"/> <!-- Octo Claw -->
-					<item id="15564" min="1" max="1" chance="9.09"/> <!-- Doubletop Spear -->
-					<item id="15565" min="1" max="1" chance="9.09"/> <!-- Rising Star -->
-					<item id="15566" min="1" max="1" chance="9.09"/> <!-- Black Visage -->
-					<item id="15567" min="1" max="1" chance="9.09"/> <!-- Veniplant Sword -->
-					<item id="15568" min="1" max="1" chance="9.09"/> <!-- Skull Carnium Bow -->
-					<item id="15558" min="1" max="1" chance="9.09"/> <!-- Periel Sword -->
-					<item id="15559" min="1" max="1" chance="9.09"/> <!-- Skull Edge -->
+				<item id="13893" min="1" max="1" chance="10"/> <!-- Sealed Holy Spirit's Cloak -->
+				<group chance="40">
+					<item id="15560" min="1" max="1" chance="6"/> <!-- Vigwik Axe -->
+					<item id="15561" min="1" max="1" chance="6"/> <!-- Devilish Maul -->
+					<item id="15562" min="1" max="1" chance="6"/> <!-- Feather Eye Blade -->
+					<item id="15563" min="1" max="1" chance="6"/> <!-- Octo Claw -->
+					<item id="15564" min="1" max="1" chance="6"/> <!-- Doubletop Spear -->
+					<item id="15565" min="1" max="1" chance="6"/> <!-- Rising Star -->
+					<item id="15566" min="1" max="1" chance="6"/> <!-- Black Visage -->
+					<item id="15567" min="1" max="1" chance="6"/> <!-- Veniplant Sword -->
+					<item id="15568" min="1" max="1" chance="6"/> <!-- Skull Carnium Bow -->
+					<item id="15558" min="1" max="1" chance="6"/> <!-- Periel Sword -->
+					<item id="15559" min="1" max="1" chance="6"/> <!-- Skull Edge -->
+				</group>
+				<group chance="60">
+					<item id="15745" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Circlet -->
+					<item id="15757" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shoes -->
+					<item id="15759" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Sigil -->
+					<item id="15748" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Tunic -->
+					<item id="15751" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Stockings -->
+					<item id="15754" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gloves -->
+				</group>
+				<group chance="60">
+					<item id="15747" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Breastplate -->
+					<item id="15750" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Legging -->
+					<item id="15756" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Boots -->
+					<item id="15753" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Gloves -->
+					<item id="15744" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Helmet -->
+				</group>
+				<group chance="60">
+					<item id="15743" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Helmet -->
+					<item id="15746" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Breastplate -->
+					<item id="15749" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gaiter -->
+					<item id="15752" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gauntlet -->
+					<item id="15755" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Boots -->
+					<item id="15758" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shield -->
+				</group>
+				<group chance="60">
+					<item id="15763" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Ring -->
+					<item id="15764" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Earring -->
+					<item id="15765" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Necklace -->
 				</group>
 				<group chance="50">
 					<item id="13143" min="1" max="1" chance="9.1"/> <!-- Sealed Vesper Helmet -->
@@ -3783,7 +3812,7 @@
 			<height normal="55"/>
 		</collision>
 	</npc>
-	<npc id="29181" level="83" type="L2GrandBoss" name="Zaken">
+	<npc id="29181" level="85" type="L2GrandBoss" name="Zaken">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3820,6 +3849,48 @@
 		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false"/>
 		<dropLists>
 			<death>
+				<item id="13893" min="1" max="1" chance="10"/> <!-- Sealed Holy Spirit's Cloak -->
+				<group chance="40">
+					<item id="15560" min="1" max="1" chance="6"/> <!-- Vigwik Axe -->
+					<item id="15561" min="1" max="1" chance="6"/> <!-- Devilish Maul -->
+					<item id="15562" min="1" max="1" chance="6"/> <!-- Feather Eye Blade -->
+					<item id="15563" min="1" max="1" chance="6"/> <!-- Octo Claw -->
+					<item id="15564" min="1" max="1" chance="6"/> <!-- Doubletop Spear -->
+					<item id="15565" min="1" max="1" chance="6"/> <!-- Rising Star -->
+					<item id="15566" min="1" max="1" chance="6"/> <!-- Black Visage -->
+					<item id="15567" min="1" max="1" chance="6"/> <!-- Veniplant Sword -->
+					<item id="15568" min="1" max="1" chance="6"/> <!-- Skull Carnium Bow -->
+					<item id="15558" min="1" max="1" chance="6"/> <!-- Periel Sword -->
+					<item id="15559" min="1" max="1" chance="6"/> <!-- Skull Edge -->
+				</group>
+				<group chance="60">
+					<item id="15745" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Circlet -->
+					<item id="15757" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shoes -->
+					<item id="15759" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Sigil -->
+					<item id="15748" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Tunic -->
+					<item id="15751" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Stockings -->
+					<item id="15754" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gloves -->
+				</group>
+				<group chance="60">
+					<item id="15747" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Breastplate -->
+					<item id="15750" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Legging -->
+					<item id="15756" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Boots -->
+					<item id="15753" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Gloves -->
+					<item id="15744" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Helmet -->
+				</group>
+				<group chance="60">
+					<item id="15743" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Helmet -->
+					<item id="15746" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Breastplate -->
+					<item id="15749" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gaiter -->
+					<item id="15752" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gauntlet -->
+					<item id="15755" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Boots -->
+					<item id="15758" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shield -->
+				</group>
+				<group chance="60">
+					<item id="15763" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Ring -->
+					<item id="15764" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Earring -->
+					<item id="15765" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Necklace -->
+				</group>
 				<group chance="30">
 					<item id="13143" min="1" max="1" chance="5.92"/> <!-- Sealed Vesper Helmet -->
 					<item id="13144" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Helmet -->
@@ -3838,28 +3909,6 @@
 					<item id="14108" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gaiters -->
 					<item id="14112" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Leggings -->
 					<item id="14115" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Stockings -->
-				</group>
-				<group chance="70">
-					<item id="15694" min="1" max="1" chance="5.92"/> <!-- Sealed Moirai Helmet -->
-					<item id="15695" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Leather Helmet -->
-					<item id="15696" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Circlet -->
-					<item id="15703" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Gauntlet -->
-					<item id="15704" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Gloves -->
-					<item id="15706" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Shoes -->
-					<item id="15710" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Shield -->
-					<item id="15709" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Sigil -->
-					<item id="15697" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Breastplate -->
-					<item id="15698" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Leather Breastplate -->
-					<item id="15699" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Tunic -->
-					<item id="15700" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Gaiter -->
-					<item id="15701" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Leather Legging -->
-					<item id="15702" min="1" max="1" chance="5.88"/> <!-- Sealed Moirai Stockings -->
-					<item id="15766" min="1" max="1" chance="10"/> <!-- Sealed Moirai Ring -->
-					<item id="15767" min="1" max="1" chance="8"/> <!-- Sealed Moirai Earring -->
-					<item id="15768" min="1" max="1" chance="6"/> <!-- Sealed Moirai Necklace -->
 				</group>
 				<group chance="70">
 					<item id="14162" min="1" max="1" chance="33.4"/> <!-- Sealed Vesper Ring -->
