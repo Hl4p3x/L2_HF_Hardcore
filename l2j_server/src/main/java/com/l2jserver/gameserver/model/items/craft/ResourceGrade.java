@@ -6,7 +6,7 @@ import com.l2jserver.util.StringUtil;
 
 public enum ResourceGrade {
 
-    LOW, MID, HIGH, HIGHEST, BASE_CATEGORY_MATERIALS("Base Craft"), UNSET;
+    LOW, MID, HIGH, HIGHEST, BASE_CATEGORY_MATERIALS("Base Craft" ), UNSET, UNDROPPABLE;
 
     private final String customName;
 

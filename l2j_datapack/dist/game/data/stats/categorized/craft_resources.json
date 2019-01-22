@@ -14,6 +14,26 @@
   "price" : 38000.0,
   "resourceGrade" : "base_category_materials"
 }, {
+  "id" : 2130,
+  "name" : "Gemstone D",
+  "price" : 50000.0,
+  "resourceGrade" : "undroppable"
+}, {
+  "id" : 2131,
+  "name" : "Gemstone C",
+  "price" : 90000.0,
+  "resourceGrade" : "undroppable"
+}, {
+  "id" : 5220,
+  "name" : "Metal Hardener",
+  "price" : 5000.0,
+  "resourceGrade" : "undroppable"
+}, {
+  "id" : 1893,
+  "name" : "Oriharukon",
+  "price" : 24600.0,
+  "resourceGrade" : "undroppable"
+}, {
   "id" : 1864,
   "name" : "Stem",
   "price" : 100.0,
@@ -139,15 +159,10 @@
   "price" : 5000.0,
   "resourceGrade" : "mid"
 }, {
-  "id" : 5220,
-  "name" : "Metal Hardener",
-  "price" : 5000.0,
-  "resourceGrade" : "mid"
-}, {
   "id" : 1894,
   "name" : "Crafted Leather",
   "price" : 5700.0,
-  "resourceGrade" : "high"
+  "resourceGrade" : "mid"
 }, {
   "id" : 4043,
   "name" : "Asofe",
@@ -204,15 +219,10 @@
   "price" : 23000.0,
   "resourceGrade" : "high"
 }, {
-  "id" : 1893,
-  "name" : "Oriharukon",
-  "price" : 24600.0,
-  "resourceGrade" : "high"
-}, {
   "id" : 1892,
   "name" : "Blacksmith's Frame",
   "price" : 64000.0,
-  "resourceGrade" : "highest"
+  "resourceGrade" : "high"
 }, {
   "id" : 4046,
   "name" : "Maestro Anvil Lock",

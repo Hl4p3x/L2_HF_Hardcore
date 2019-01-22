@@ -111,9 +111,14 @@ public class GradedEquipmentGenerator {
             8376, // Red Horn of Victory Fragment
             2012, // Sword of Reflection Blade
             3031, // Spirit Ore
-            1785, // Soul Ore
+            1785 // Soul Ore
+    );
+
+    private static final List<Integer> UNDROPPABLE_MATERIALS = Arrays.asList(
             2130, // Gemstone D
-            2131 // Gemstone C
+            2131, // Gemstone C
+            5220, // Metal Hardener
+            1893 // Oriharukon
     );
 
     // Magic constant of full armor 0.616 to chest price ratio
@@ -412,6 +417,12 @@ public class GradedEquipmentGenerator {
         List<L2EtcItem> baseResources = baseResourceSplitPair.getLeft();
         craftResources = baseResourceSplitPair.getRight();
 
+
+        Pair<List<L2EtcItem>, List<L2EtcItem>> undroppableSplit = CollectionUtil.splitBy(craftResources, (item) -> UNDROPPABLE_MATERIALS.contains(item.getId()));
+        List<L2EtcItem> undroppableResources = undroppableSplit.getLeft();
+
+        craftResources = undroppableSplit.getRight();
+
         Comparator<L2EtcItem> priceCompare = Comparator.comparing(L2EtcItem::getReferencePrice);
         Comparator<L2EtcItem> nameCompare = Comparator.comparing(L2EtcItem::getName);
         craftResources.sort(priceCompare.thenComparing(nameCompare));
@@ -419,6 +430,7 @@ public class GradedEquipmentGenerator {
         List<CraftResource> result = new ArrayList<>(craftResources.size());
 
         baseResources.forEach(baseResource -> result.add(new CraftResource(baseResource.getId(), baseResource.getName(), baseResource.getReferencePrice(), ResourceGrade.BASE_CATEGORY_MATERIALS)));
+        undroppableResources.forEach(baseResource -> result.add(new CraftResource(baseResource.getId(), baseResource.getName(), baseResource.getReferencePrice(), ResourceGrade.UNDROPPABLE)));
 
         List<List<L2EtcItem>> splitItems = CollectionUtil.splitList(craftResources, resourceGrades.size());
         int gradeIndex = 0;
