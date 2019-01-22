@@ -359,7 +359,7 @@ mobs:
         count: "1"
   custom-drop:
   - name: "Dynasty Essences"
-    level-range: "80-84"
+    level-range: "80-82"
     drop:
       stats:
         count: "1"
@@ -372,7 +372,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 18.0
+        chance: 4
       ids:
       - 4634 # Red Soul Crystal - Stage 5
       - 4645 # Green Soul Crystal - Stage 5
@@ -382,7 +382,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 16.0
+        chance: 4
       ids:
       - 4635 # Red Soul Crystal - Stage 6
       - 4646 # Green Soul Crystal - Stage 6
@@ -392,7 +392,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 14.0
+        chance: 4
       ids:
       - 4636 # Red Soul Crystal - Stage 7
       - 4647 # Green Soul Crystal - Stage 7
@@ -402,7 +402,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 12.0
+        chance: 4
       ids:
       - 4637 # Red Soul Crystal - Stage 8
       - 4648 # Green Soul Crystal - Stage 8
@@ -412,7 +412,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 10.0
+        chance: 4
       ids:
       - 4638 # Red Soul Crystal - Stage 9
       - 4649 # Green Soul Crystal - Stage 9
@@ -422,7 +422,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 9.5
+        chance: 4
       ids:
       - 4639 # Red Soul Crystal - Stage 10
       - 4650 # Green Soul Crystal - Stage 10
@@ -432,7 +432,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 8.5
+        chance: 3.5
       ids:
       - 5577 # Red Soul Crystal - Stage 11
       - 5578 # Green Soul Crystal - Stage 11
@@ -442,7 +442,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 8.0
+        chance: 3
       ids:
       - 5580 # Red Soul Crystal - Stage 12
       - 5581 # Green Soul Crystal - Stage 12
@@ -452,7 +452,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 3.7
+        chance: 2
       ids:
       - 5908 # Red Soul Crystal: Stage 13
       - 5911 # Green Soul Crystal - Stage 13
