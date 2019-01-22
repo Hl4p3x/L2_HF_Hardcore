@@ -44,7 +44,9 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private ItemHolder _items[] = null;
-	
+
+	private static final int GOLEM_TRADER_ID = 13128;
+
 	@Override
 	protected void readImpl()
 	{
@@ -95,7 +97,7 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 		}
 		
 		final L2Npc manager = player.getLastFolkNPC();
-		if (((manager == null) || !manager.isWarehouse() || !manager.canInteract(player)) && !player.isGM())
+		if (((manager == null) || (!manager.isWarehouse() && manager.getId() != GOLEM_TRADER_ID) || !manager.canInteract(player)) && !player.isGM())
 		{
 			return;
 		}
