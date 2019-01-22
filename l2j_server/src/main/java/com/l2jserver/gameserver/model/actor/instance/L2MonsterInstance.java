@@ -52,6 +52,7 @@ import java.util.stream.Collectors;
 public class L2MonsterInstance extends L2Attackable
 {
 	private static final int MONSTER_MAINTENANCE_INTERVAL = 1000;
+	private static final int INSANE_CRUSHER_ID = 762;
 	
 	protected boolean _enableMinions = true;
 	
@@ -97,6 +98,9 @@ public class L2MonsterInstance extends L2Attackable
 					.stream()
 					.filter(skill -> {
 						if (skill.isPassive()) {
+							return false;
+						}
+						if (skill.getId() == INSANE_CRUSHER_ID) {
 							return false;
 						}
 						if (isFighter) {
