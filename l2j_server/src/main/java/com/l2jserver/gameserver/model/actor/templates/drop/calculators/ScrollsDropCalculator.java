@@ -13,7 +13,7 @@ public class ScrollsDropCalculator {
         List<ItemHolder> drop = new ArrayList<>();
         drop.addAll(calculateScrollDropCategory(dynamicDropGradeData.getWeaponScrolls()));
         drop.addAll(calculateScrollDropCategory(dynamicDropGradeData.getArmorScrolls()));
-        drop.addAll(calculateScrollDropCategory(dynamicDropGradeData.getMiscScrolls()));
+        drop.addAll(DynamicDropHelper.calculateCategoryDrop(dynamicDropGradeData.getMiscScrolls().getBlessed()));
         return drop;
     }
 

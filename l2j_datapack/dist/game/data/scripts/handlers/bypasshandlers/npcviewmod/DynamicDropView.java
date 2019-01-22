@@ -158,7 +158,7 @@ public class DynamicDropView implements DropView {
         List<ItemGroupView> result = new ArrayList<>();
         result.addAll(convertScrollsCategoryToView("Weapon Scrolls", dynamicDropGradeData.getWeaponScrolls()));
         result.addAll(convertScrollsCategoryToView("Armor Scrolls", dynamicDropGradeData.getArmorScrolls()));
-        result.addAll(convertScrollsCategoryToView("Misc Scrolls", dynamicDropGradeData.getMiscScrolls()));
+        result.add(convertDynamicDropCategory("Blessed Misc Scrolls", dynamicDropGradeData.getMiscScrolls().getBlessed()));
         return result;
     }
 
