@@ -753,7 +753,7 @@
 				<group chance="1.1053999662399292">
 					<item id="9516" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Helmet -->
 					<item id="9529" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Shield -->
-					<item id="10120" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
+					<item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
 					<item id="9521" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Leather Helmet -->
 					<item id="9526" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Circlet -->
 					<item id="9532" min="1" max="1" chance="25.5801"/> <!-- Sealed Dynasty Helmet Piece -->
@@ -1674,7 +1674,7 @@
 				<group chance="0.9340000152587891">
 					<item id="9516" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Helmet -->
 					<item id="9529" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Shield -->
-					<item id="10120" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
+					<item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
 					<item id="9521" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Leather Helmet -->
 					<item id="9526" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Circlet -->
 					<item id="9532" min="1" max="1" chance="25.5801"/> <!-- Sealed Dynasty Helmet Piece -->
@@ -2599,7 +2599,7 @@
 				<group chance="3.5439000129699707">
 					<item id="9516" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Helmet -->
 					<item id="9529" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Shield -->
-					<item id="10120" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
+					<item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
 					<item id="9521" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Leather Helmet -->
 					<item id="9526" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Circlet -->
 					<item id="9532" min="1" max="1" chance="25.5801"/> <!-- Sealed Dynasty Helmet Piece -->
