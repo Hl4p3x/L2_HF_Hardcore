@@ -47,7 +47,7 @@
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="80000000" id="57"/>
+		<ingredient count="50000000" id="57"/>
 		<!-- Blooded Fabric -->
 		<production count="1" id="4295"/>
 	</item>
@@ -65,7 +65,7 @@
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="100000000" id="57"/>
+		<ingredient count="80000000" id="57"/>
 		<!-- Black Frozen Core -->
 		<production count="1" id="15470"/>
 	</item>
