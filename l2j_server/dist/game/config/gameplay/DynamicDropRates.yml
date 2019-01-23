@@ -109,11 +109,11 @@ mobs:
         chance: 64.0
         count: "1-6"
       s80-top:
-        chance: 62.0
+        chance: 63.0
         count: "1-5"
       s84-low:
-        chance: 60.0
-        count: "1-3"
+        chance: 63.0
+        count: "1-5"
     armor:
       ng:
         chance: 95.0
@@ -140,8 +140,8 @@ mobs:
         chance: 64.0
         count: "1-6"
       s84-low:
-        chance: 62.0
-        count: "1-4"
+        chance: 64.0
+        count: "1-6"
     jewels:
       ng:
         chance: 95.0
@@ -168,8 +168,8 @@ mobs:
         chance: 64.0
         count: "1-6"
       s84-low:
-        chance: 62.0
-        count: "1-4"
+        chance: 64.0
+        count: "1-6"
   recipes:
     weapon:
       ng:
@@ -197,7 +197,7 @@ mobs:
         chance: 7.0
         count: "1"
       s84-low:
-        chance: 5
+        chance: 7
         count: "1"
     armor:
       ng:
@@ -225,7 +225,7 @@ mobs:
         chance: 8.0
         count: "1"
       s84-low:
-        chance: 6.5
+        chance: 8
         count: "1"
     jewels:
       ng:
@@ -253,7 +253,7 @@ mobs:
         chance: 8.5
         count: "1"
       s84-low:
-        chance: 7
+        chance: 8.4
         count: "1"
   resources:
     drop:
@@ -515,6 +515,20 @@ mobs:
         - 9549 # Wind Stone
         - 9550 # Dark Stone
         - 9551 # Holy Stone
+  - name: "Attribute Crystals"
+    level-range: "85-86"
+    drop:
+      stats:
+        count: "1-2"
+        stacks: "1"
+        chance: 1
+      ids:
+        - 9552 # Fire Crystal
+        - 9553 # Water Crystal
+        - 9554 # Earth Crystal
+        - 9555 # Wind Crystal
+        - 9556 # Dark Crystal
+        - 9557 # Holy Crystal
   - name: "Enchant Skill"
     level-range: "82-84"
     drop:
@@ -1112,6 +1126,20 @@ raid:
         - 9549 # Wind Stone
         - 9550 # Dark Stone
         - 9551 # Holy Stone
+  - name: "Attribute Crystals"
+    level-range: "85-86"
+    drop:
+      stats:
+        count: "4-20"
+        stacks: "2-10"
+        chance: 30
+      ids:
+        - 9552 # Fire Crystal
+        - 9553 # Water Crystal
+        - 9554 # Earth Crystal
+        - 9555 # Wind Crystal
+        - 9556 # Dark Crystal
+        - 9557 # Holy Crystal
   - name: "Enchant Skill"
     level-range: "82-84"
     drop:
