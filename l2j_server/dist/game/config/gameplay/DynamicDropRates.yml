@@ -533,6 +533,66 @@ mobs:
         chance: 0.8
       ids:
         - 9627 # Giant's Codex - Mastery
+  - name: "Life Stones - 84"
+    level-range: "85-86"
+    drop:
+      stats:
+        count: "1"
+        stacks: "1"
+        chance: 0.3
+      ids:
+        - 14166 # Life Stone - Level 84
+        - 14167 # Mid-Grade Life Stone - Level 84
+  - name: "High Quality Life Stones - 84"
+    level-range: "85-86"
+    drop:
+      stats:
+        count: "1"
+        stacks: "1"
+        chance: 0.1
+      ids:
+        - 14168 # High-Grade Life Stone - Level 84
+        - 14169 # Top-Grade Life Stone - Level 84
+  - name: "Life Stones - 82"
+    level-range: "83-84"
+    drop:
+      stats:
+        count: "1"
+        stacks: "1"
+        chance: 0.4
+      ids:
+        - 10483 # Life Stone - Level 82
+        - 10484 # Mid-Grade Life Stone - Level 82
+  - name: "High Quality Life Stones - 82"
+    level-range: "83-84"
+    drop:
+      stats:
+        count: "1"
+        stacks: "1"
+        chance: 0.1
+      ids:
+        - 10485 # High-Grade Life Stone - Level 82
+        - 10486 # Top-Grade Life Stone - Level 82
+  - name: "Life Stones - 80"
+    level-range: "80-82"
+    drop:
+      stats:
+        count: "1"
+        stacks: "1"
+        chance: 0.5
+      ids:
+        - 9573 # Life Stone - Level 80
+        - 9574 # Mid-Grade Life Stone - Level 80
+  - name: "High Quality Life Stones - 80"
+    level-range: "80-82"
+    drop:
+      stats:
+        count: "1"
+        stacks: "1"
+        chance: 0.2
+      ids:
+        - 9575 # High-Grade Life Stone - Level 80
+        - 9576 # Top-Grade Life Stone - Level 80
 
 raid:
   equipment:
@@ -1068,3 +1128,63 @@ raid:
         chance: 7
       ids:
         - 9627 # Giant's Codex - Mastery
+  - name: "Life Stones - 84"
+    level-range: "85-86"
+    drop:
+      stats:
+        count: "1"
+        stacks: "1"
+        chance: 10
+      ids:
+        - 14166 # Life Stone - Level 84
+        - 14167 # Mid-Grade Life Stone - Level 84
+  - name: "High Quality Life Stones - 84"
+    level-range: "85-86"
+    drop:
+      stats:
+        count: "1"
+        stacks: "1"
+        chance: 5
+      ids:
+        - 14168 # High-Grade Life Stone - Level 84
+        - 14169 # Top-Grade Life Stone - Level 84
+  - name: "Life Stones - 82"
+    level-range: "83-84"
+    drop:
+      stats:
+        count: "1-2"
+        stacks: "1"
+        chance: 10
+      ids:
+        - 10483 # Life Stone - Level 82
+        - 10484 # Mid-Grade Life Stone - Level 82
+  - name: "High Quality Life Stones - 82"
+    level-range: "83-84"
+    drop:
+      stats:
+        count: "1-2"
+        stacks: "1"
+        chance: 5
+      ids:
+        - 10485 # High-Grade Life Stone - Level 82
+        - 10486 # Top-Grade Life Stone - Level 82
+  - name: "Life Stones - 80"
+    level-range: "80-82"
+    drop:
+      stats:
+        count: "1-3"
+        stacks: "1"
+        chance: 12
+      ids:
+        - 9573 # Life Stone - Level 80
+        - 9574 # Mid-Grade Life Stone - Level 80
+  - name: "High Quality Life Stones - 80"
+    level-range: "80-82"
+    drop:
+      stats:
+        count: "1-2"
+        stacks: "1"
+        chance: 6
+      ids:
+        - 9575 # High-Grade Life Stone - Level 80
+        - 9576 # Top-Grade Life Stone - Level 80
