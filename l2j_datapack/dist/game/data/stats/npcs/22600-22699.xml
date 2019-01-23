@@ -2219,7 +2219,7 @@
 				<group chance="1.2236000299453735">
 					<item id="9516" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Helmet -->
 					<item id="9529" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Shield -->
-                    <item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
+					<item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
 					<item id="9521" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Leather Helmet -->
 					<item id="9526" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Circlet -->
 					<item id="9532" min="1" max="1" chance="25.5801"/> <!-- Sealed Dynasty Helmet Piece -->
@@ -4814,7 +4814,7 @@
 				<group chance="4.457200050354004">
 					<item id="9516" min="1" max="1" chance="0.0826"/> <!-- Sealed Dynasty Helmet -->
 					<item id="9529" min="1" max="1" chance="0.118"/> <!-- Sealed Dynasty Shield -->
-                    <item id="13886" min="1" max="1" chance="0.118"/> <!-- Sealed Dynasty Sigil -->
+					<item id="13886" min="1" max="1" chance="0.118"/> <!-- Sealed Dynasty Sigil -->
 					<item id="9521" min="1" max="1" chance="0.0826"/> <!-- Sealed Dynasty Leather Helmet -->
 					<item id="9526" min="1" max="1" chance="0.0826"/> <!-- Sealed Dynasty Circlet -->
 					<item id="9532" min="1" max="1" chance="20.3864"/> <!-- Sealed Dynasty Helmet Piece -->
@@ -5768,7 +5768,7 @@
 				<group chance="0.35519999265670776">
 					<item id="9516" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Helmet -->
 					<item id="9529" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Shield -->
-                    <item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
+					<item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
 					<item id="9521" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Leather Helmet -->
 					<item id="9526" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Circlet -->
 					<item id="9532" min="1" max="1" chance="25.5801"/> <!-- Sealed Dynasty Helmet Piece -->
@@ -6714,7 +6714,7 @@
 				<group chance="0.21119999885559082">
 					<item id="9516" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Helmet -->
 					<item id="9529" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Shield -->
-                    <item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
+					<item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
 					<item id="9521" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Leather Helmet -->
 					<item id="9526" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Circlet -->
 					<item id="9532" min="1" max="1" chance="25.5801"/> <!-- Sealed Dynasty Helmet Piece -->
@@ -7729,7 +7729,7 @@
 				<group chance="0.21649999916553497">
 					<item id="9516" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Helmet -->
 					<item id="9529" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Shield -->
-                    <item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
+					<item id="13886" min="1" max="1" chance="0.1481"/> <!-- Sealed Dynasty Sigil -->
 					<item id="9521" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Leather Helmet -->
 					<item id="9526" min="1" max="1" chance="0.1037"/> <!-- Sealed Dynasty Circlet -->
 					<item id="9532" min="1" max="1" chance="25.5801"/> <!-- Sealed Dynasty Helmet Piece -->
