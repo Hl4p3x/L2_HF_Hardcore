@@ -39,4 +39,34 @@
 		<!-- Shining Bolt -->
 		<production count="100" id="9637" />
 	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="100000000" id="57"/>
+		<!-- Portal Stone -->
+		<production count="1" id="3865"/>
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="80000000" id="57"/>
+		<!-- Blooded Fabric -->
+		<production count="1" id="4295"/>
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="100000000" id="57"/>
+		<!-- Vacualite Floating Stone -->
+		<production count="1" id="7267"/>
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="100000000" id="57"/>
+		<!-- Frintezza's Magic Force Field Removal Scroll -->
+		<production count="1" id="8073"/>
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="100000000" id="57"/>
+		<!-- Black Frozen Core -->
+		<production count="1" id="15470"/>
+	</item>
 </list>

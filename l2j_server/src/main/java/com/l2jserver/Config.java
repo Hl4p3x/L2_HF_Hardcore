@@ -1144,6 +1144,7 @@ public final class Config
 	public static int ZAKEN_INACTIVITY_TIMEOUT;
 	
 	// FREYA
+	public static boolean FREYA_WITHOUT_QUEST;
 	public static int FREYA_CONTEST_TIME;
 	public static int FREYA_SPAWN_INTERVAL;
 	public static int FREYA_SPAWN_RANDOM;
@@ -2872,7 +2873,8 @@ public final class Config
 			ZAKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfZakenSpawn", 86);
 			ZAKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfZakenSpawn", 24);
 			ZAKEN_INACTIVITY_TIMEOUT = GrandBossSettings.getInt("ZakenInactivityTimeout", 15);
-			
+
+			FREYA_WITHOUT_QUEST = GrandBossSettings.getBoolean("FreyaWithoutQuest", false);
 			FREYA_CONTEST_TIME = GrandBossSettings.getInt("FreyaWaitTime", 5);
 			FREYA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFreyaSpawn", 86);
 			FREYA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfFreyaSpawn", 24);

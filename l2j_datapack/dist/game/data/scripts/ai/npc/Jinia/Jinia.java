@@ -18,13 +18,13 @@
  */
 package ai.npc.Jinia;
 
-import com.l2jserver.gameserver.instancemanager.GrandBossManager;
-import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
 import ai.npc.AbstractNpcAI;
-
+import com.l2jserver.Config;
+import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
 
 /**
  * Jinia AI.
@@ -61,7 +61,7 @@ public final class Jinia extends AbstractNpcAI {
 				}
 
 				final QuestState st = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
-				if (st.isCompleted()) {
+				if (Config.FREYA_WITHOUT_QUEST || st.isCompleted()) {
 					return "32781-05.html";
 				}
 				else if (st.isCond(5) || st.isCond(6)) {
@@ -98,9 +98,8 @@ public final class Jinia extends AbstractNpcAI {
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
-		if ((st != null) && (player.getLevel() >= MIN_LEVEL))
-		{
-			if (st.isCompleted())
+		if ((Config.FREYA_WITHOUT_QUEST || st != null) && (player.getLevel() >= MIN_LEVEL)) {
+			if (Config.FREYA_WITHOUT_QUEST || st.isCompleted())
 			{
 				return "32781-02.html";
 			}
