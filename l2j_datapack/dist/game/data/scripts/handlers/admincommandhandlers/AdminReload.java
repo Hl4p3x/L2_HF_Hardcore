@@ -32,6 +32,7 @@ import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.drop.calculators.DynamicDropCalculator;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.DynamicDropTable;
 import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jserver.gameserver.util.Util;
 
@@ -68,7 +69,13 @@ public class AdminReload implements IAdminCommandHandler
 			final String type = st.nextToken();
 			switch (type.toLowerCase())
 			{
-                case "dynamic_drop": {
+				case "dynamic_drop_rates" )):{
+					DynamicDropTable.getInstance().load();
+					DynamicDropCalculator.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Dynamic Drop Rates." );
+					break;
+				}
+				case "dynamic_drop": {
 					DynamicDropCalculator.getInstance().reload();
                     AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Dynamic Drop Data.");
                     break;

@@ -45,7 +45,7 @@ public class DynamicDropTable {
         load();
     }
 
-    private void load() {
+    public void load() {
         final String path = "./config/gameplay/DynamicDropRates.yml";
         try {
             InputStream configStream = new FileInputStream(new File(path));
@@ -61,10 +61,6 @@ public class DynamicDropTable {
         } catch (IOException e) {
             throw new IllegalStateException("Could not load Dynamic Drop Rates configuration from " + path);
         }
-    }
-
-    public AllDynamicDropData getAllDynamicDropData() {
-        return allDynamicDropData;
     }
 
     public <T> DynamicDropEquipmentCategory convertEquipmentCategory(int level, EquipmentProvider<T> equipmentProvider, EquipmentDropStats equipmentDropStats, Function<T, Integer> idExtractor) {
