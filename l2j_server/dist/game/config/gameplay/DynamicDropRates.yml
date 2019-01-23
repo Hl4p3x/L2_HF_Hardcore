@@ -27,7 +27,7 @@ mobs:
         chance: 0.7
         stacks: "1"
       s84-low:
-        chance: 0.4
+        chance: 0.6
         stacks: "1"
     armor:
       ng:
@@ -55,7 +55,7 @@ mobs:
         chance: 0.9
         stacks: "1"
       s84-low:
-        chance: 0.5
+        chance: 0.8
         stacks: "1"
     jewels:
       ng:
@@ -83,7 +83,7 @@ mobs:
         chance: 1
         stacks: "1"
       s84-low:
-        chance: 0.6
+        chance: 0.9
         stacks: "1"
   parts:
     weapon:
