@@ -69,7 +69,7 @@ public class AdminReload implements IAdminCommandHandler
 			final String type = st.nextToken();
 			switch (type.toLowerCase())
 			{
-				case "dynamic_drop_rates" )):{
+				case "dynamic_drop_rates": {
 					DynamicDropTable.getInstance().load();
 					DynamicDropCalculator.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Dynamic Drop Rates." );
