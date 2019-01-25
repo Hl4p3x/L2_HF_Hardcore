@@ -7,83 +7,83 @@
 		<!-- Medal of Glory -->
 		<ingredient count="1" id="21874" />
 		<!-- Fame Points -->
-		<production count="100" id="-300" />
+        <production count="200" id="-300"/>
 	</item>
 	<item>
 		<!-- Olympiad Token -->
 		<ingredient count="2000" id="13722" />
 		<!-- Noble Enhancement Stone -->
-		<production count="1" id="14052" />
+        <production count="5" id="14052"/>
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="420000" id="13722" />
+        <ingredient count="22000" id="13722"/>
 		<!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
 		<production count="1" id="6577" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="195000" id="13722" />
+        <ingredient count="12500" id="13722"/>
 		<!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
 		<production count="1" id="6569" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="84000" id="13722" />
+        <ingredient count="8400" id="13722"/>
 		<!-- Blessed Scroll: Enchant Weapon (B-Grade) -->
 		<production count="1" id="6571" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="63000" id="13722" />
+        <ingredient count="6300" id="13722"/>
 		<!-- Blessed Scroll: Enchant Armor (S-Grade) -->
 		<production count="1" id="6578" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="23400" id="13722" />
+        <ingredient count="2340" id="13722"/>
 		<!-- Blessed Scroll: Enchant Armor (A-Grade) -->
 		<production count="1" id="6570" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="9000" id="13722" />
+        <ingredient count="900" id="13722"/>
 		<!-- Blessed Scroll: Enchant Armor (B-Grade) -->
 		<production count="1" id="6572" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="70000" id="13722" />
+        <ingredient count="7000" id="13722"/>
 		<!-- Scroll: Enchant Weapon (S-Grade) -->
 		<production count="1" id="959" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="23400" id="13722" />
+        <ingredient count="2340" id="13722"/>
 		<!-- Scroll: Enchant Weapon (A-Grade) -->
 		<production count="1" id="729" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="6000" id="13722" />
+        <ingredient count="600" id="13722"/>
 		<!-- Scroll: Enchant Weapon (B-Grade) -->
 		<production count="1" id="947" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="7000" id="13722" />
+        <ingredient count="700" id="13722"/>
 		<!-- Scroll: Enchant Armor (S-Grade) -->
 		<production count="1" id="960" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="3120" id="13722" />
+        <ingredient count="312" id="13722"/>
 		<!-- Scroll: Enchant Armor (A-Grade) -->
 		<production count="1" id="730" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-		<ingredient count="960" id="13722" />
+        <ingredient count="140" id="13722"/>
 		<!-- Scroll: Enchant Armor (B-Grade) -->
 		<production count="1" id="948" />
 	</item>
