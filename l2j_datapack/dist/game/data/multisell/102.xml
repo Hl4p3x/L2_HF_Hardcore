@@ -29,109 +29,109 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="50000" id="13722"/>
+        <ingredient count="60000" id="13722"/>
 		<!-- Vesper Helmet -->
 		<production count="1" id="13137" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="50000" id="13722"/>
+        <ingredient count="60000" id="13722"/>
 		<!-- Vesper Leather Helmet -->
 		<production count="1" id="13138" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="50000" id="13722"/>
+        <ingredient count="60000" id="13722"/>
 		<!-- Vesper Circlet -->
 		<production count="1" id="13139" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="45000" id="13722"/>
+        <ingredient count="55000" id="13722"/>
 		<!-- Vesper Sigil -->
 		<production count="1" id="12813" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="90000" id="13722"/>
+        <ingredient count="100000" id="13722"/>
 		<!-- Vesper Breastplate -->
 		<production count="1" id="13432" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="80000" id="13722"/>
+        <ingredient count="90000" id="13722"/>
 		<!-- Vesper Leather Breastplate -->
 		<production count="1" id="13433" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="80000" id="13722"/>
+        <ingredient count="90000" id="13722"/>
 		<!-- Vesper Tunic -->
 		<production count="1" id="13434" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="79000" id="13722"/>
+        <ingredient count="85000" id="13722"/>
 		<!-- Vesper Gaiters -->
 		<production count="1" id="13438" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="50000" id="13722"/>
+        <ingredient count="60000" id="13722"/>
 		<!-- Vesper Gauntlet -->
 		<production count="1" id="13439" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="50000" id="13722"/>
+        <ingredient count="60000" id="13722"/>
 		<!-- Vesper Boots -->
 		<production count="1" id="13440" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="45000" id="13722"/>
+        <ingredient count="55000" id="13722"/>
 		<!-- Vesper Shield -->
 		<production count="1" id="13471" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="72000" id="13722"/>
+        <ingredient count="82000" id="13722"/>
 		<!-- Vesper Leather Leggings -->
 		<production count="1" id="13441" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="50000" id="13722"/>
+        <ingredient count="60000" id="13722"/>
 		<!-- Vesper Leather Gloves -->
 		<production count="1" id="13442" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="50000" id="13722"/>
+        <ingredient count="60000" id="13722"/>
 		<!-- Vesper Leather Boots -->
 		<production count="1" id="13443" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="72000" id="13722"/>
+        <ingredient count="82000" id="13722"/>
 		<!-- Vesper Stockings -->
 		<production count="1" id="13444" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="50000" id="13722"/>
+        <ingredient count="60000" id="13722"/>
 		<!-- Vesper Gloves -->
 		<production count="1" id="13445" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="50000" id="13722"/>
+        <ingredient count="60000" id="13722"/>
 		<!-- Vesper Shoes -->
 		<production count="1" id="13446" />
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="100000" id="13722"/>
+        <ingredient count="120000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Helmet -->
@@ -139,7 +139,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="100000" id="13722"/>
+        <ingredient count="120000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Leather Helmet -->
@@ -147,7 +147,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="100000" id="13722"/>
+        <ingredient count="120000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Circlet -->
@@ -155,7 +155,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="190000" id="13722"/>
+        <ingredient count="200000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="304700000" id="57"/>
 		<!-- Vorpal Breastplate -->
@@ -163,7 +163,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="175000" id="13722"/>
+        <ingredient count="185000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="304700000" id="57"/>
 		<!-- Vorpal Leather Breastplate -->
@@ -171,7 +171,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="175000" id="13722"/>
+        <ingredient count="185000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="304700000" id="57"/>
 		<!-- Vorpal Tunic -->
@@ -179,7 +179,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="168000" id="13722"/>
+        <ingredient count="178000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Gaiter -->
@@ -187,7 +187,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="156000" id="13722"/>
+        <ingredient count="166000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Leather Legging -->
@@ -195,7 +195,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="156000" id="13722"/>
+        <ingredient count="166000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Stockings -->
@@ -203,7 +203,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="120000" id="13722"/>
+        <ingredient count="130000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Gauntlet -->
@@ -211,7 +211,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="120000" id="13722"/>
+        <ingredient count="130000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Leather Gloves -->
@@ -219,7 +219,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="120000" id="13722"/>
+        <ingredient count="130000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Gloves -->
@@ -227,7 +227,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="120000" id="13722"/>
+        <ingredient count="130000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Boots -->
@@ -235,7 +235,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="120000" id="13722"/>
+        <ingredient count="130000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Leather Boots -->
@@ -243,7 +243,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="120000" id="13722"/>
+        <ingredient count="130000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="104700000" id="57"/>
 		<!-- Vorpal Shoes -->
@@ -259,7 +259,7 @@
 	</item>
 	<item>
 		<!-- Olympiad Token -->
-        <ingredient count="110000" id="13722"/>
+        <ingredient count="120000" id="13722"/>
 		<!-- Adena -->
         <ingredient count="94700000" id="57"/>
 		<!-- Vorpal Sigil -->
