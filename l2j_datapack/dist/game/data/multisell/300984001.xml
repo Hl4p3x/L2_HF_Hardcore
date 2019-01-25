@@ -30,6 +30,12 @@
     <item>
         <!-- Adena -->
         <ingredient count="399100" id="57"/>
+        <!-- Sealed Avadon Boots -->
+        <production count="1" id="600"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="399100" id="57"/>
         <!-- Sealed Zubei's Gauntlets -->
         <production count="1" id="612"/>
     </item>
@@ -38,12 +44,6 @@
         <ingredient count="419000" id="57"/>
         <!-- Zubei's Shield -->
         <production count="1" id="633"/>
-    </item>
-    <item>
-        <!-- Adena -->
-        <ingredient count="399100" id="57"/>
-        <!-- Sealed Avadon Boots -->
-        <production count="1" id="600"/>
     </item>
     <item>
         <!-- Adena -->
@@ -113,6 +113,102 @@
     </item>
     <item>
         <!-- Adena -->
+        <ingredient count="3562000" id="57"/>
+        <!-- Dark Crystal Breastplate -->
+        <production count="1" id="365"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="2226000" id="57"/>
+        <!-- Dark Crystal Gaiters -->
+        <production count="1" id="388"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1336000" id="57"/>
+        <!-- Dark Crystal Helmet -->
+        <production count="1" id="512"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="935000" id="57"/>
+        <!-- Dark Crystal Shield -->
+        <production count="1" id="641"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="2671000" id="57"/>
+        <!-- Dark Crystal Leather Armor -->
+        <production count="1" id="2385"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1670000" id="57"/>
+        <!-- Dark Crystal Leggings -->
+        <production count="1" id="2389"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="4341000" id="57"/>
+        <!-- Dark Crystal Robe -->
+        <production count="1" id="2407"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="5788000" id="57"/>
+        <!-- Tallum Plate Armor -->
+        <production count="1" id="2382"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1336000" id="57"/>
+        <!-- Tallum Helm -->
+        <production count="1" id="547"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="4341000" id="57"/>
+        <!-- Tallum Leather Armor -->
+        <production count="1" id="2393"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="2671000" id="57"/>
+        <!-- Tallum Tunic -->
+        <production count="1" id="2400"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1670000" id="57"/>
+        <!-- Tallum Stockings -->
+        <production count="1" id="2405"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="890000" id="57"/>
+        <!-- Sealed Dark Crystal Gloves -->
+        <production count="1" id="5290"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="890000" id="57"/>
+        <!-- Sealed Tallum Gloves -->
+        <production count="1" id="5295"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="890000" id="57"/>
+        <!-- Sealed Dark Crystal Boots -->
+        <production count="1" id="5291"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="890000" id="57"/>
+        <!-- Sealed Tallum Boots -->
+        <production count="1" id="5296"/>
+    </item>
+    <item>
+        <!-- Adena -->
         <ingredient count="621200" id="57"/>
         <!-- Adamantite Necklace -->
         <production count="1" id="918"/>
@@ -125,7 +221,7 @@
     </item>
     <item>
         <!-- Adena -->
-        <ingredient count="1340000" id="57"/>
+        <ingredient count="948000" id="57"/>
         <!-- Necklace of Black Ore -->
         <production count="1" id="926"/>
     </item>
@@ -143,7 +239,7 @@
     </item>
     <item>
         <!-- Adena -->
-        <ingredient count="1005000" id="57"/>
+        <ingredient count="711000" id="57"/>
         <!-- Earring of Black Ore -->
         <production count="1" id="864"/>
     </item>
@@ -161,8 +257,44 @@
     </item>
     <item>
         <!-- Adena -->
-        <ingredient count="670000" id="57"/>
+        <ingredient count="474000" id="57"/>
         <!-- Ring of Black Ore -->
         <production count="1" id="895"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1340000" id="57"/>
+        <!-- Sealed Phoenix Necklace -->
+        <production count="1" id="6323"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1005000" id="57"/>
+        <!-- Sealed Phoenix Earring -->
+        <production count="1" id="6324"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="670000" id="57"/>
+        <!-- Sealed Phoenix Ring -->
+        <production count="1" id="6325"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1998000" id="57"/>
+        <!-- Sealed Majestic Necklace -->
+        <production count="1" id="6326"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="1498000" id="57"/>
+        <!-- Sealed Majestic Earring -->
+        <production count="1" id="6327"/>
+    </item>
+    <item>
+        <!-- Adena -->
+        <ingredient count="999000" id="57"/>
+        <!-- Sealed Majestic Ring -->
+        <production count="1" id="6328"/>
     </item>
 </list>
