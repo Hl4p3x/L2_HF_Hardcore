@@ -3931,7 +3931,7 @@
 				<group chance="5">
 					<item id="21712" min="1" max="1" chance="100"/> <!-- Blessed Earring of Zaken -->
 				</group>
-				<group chance="70">
+				<group chance="100">
 					<item id="6659" min="1" max="1" chance="100"/> <!-- Earring of Zaken -->
 				</group>
 				<group chance="0.1">
