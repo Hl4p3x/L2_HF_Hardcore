@@ -1241,7 +1241,7 @@ public final class Config
 	public static long COMMUNITY_SINGLE_BUFF_PRICE;
 	public static int MAX_CUSTOM_PRESET_BUFFS;
 	public static long COMMUNITY_TELEPORT_PRICE;
-	public static long COMMUNITY_TELEPORT_DELAY;
+	public static int COMMUNITY_TELEPORT_DELAY;
 
 	public static boolean SPOIL_ENABLED;
 	
@@ -3081,7 +3081,7 @@ public final class Config
 		COMMUNITY_SINGLE_BUFF_PRICE = customCommunity.getLong("CommunitySingleBuffPrice", 50000);
 		MAX_CUSTOM_PRESET_BUFFS = customCommunity.getInt("CommunityMaxBuffsInPreset", 36);
 		COMMUNITY_TELEPORT_PRICE = customCommunity.getLong("CommunityTeleportPrice", 250000);
-		COMMUNITY_TELEPORT_DELAY = customCommunity.getLong("CommunityTeleportDelay", 3600);
+		COMMUNITY_TELEPORT_DELAY = customCommunity.getInt("CommunityTeleportDelay", 3600);
 	}
 	
 	/**

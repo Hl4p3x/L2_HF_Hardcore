@@ -101,6 +101,10 @@ public final class GameTimeController extends Thread
 	{
 		return (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
 	}
+
+	public final int getFutureGameTicks(long millisInFuture) {
+		return (int) (millisInFuture / GameTimeController.MILLIS_IN_TICK + getGameTicks());
+	}
 	
 	/**
 	 * Add a L2Character to movingObjects of GameTimeController.
