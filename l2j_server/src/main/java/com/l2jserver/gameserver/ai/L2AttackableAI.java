@@ -744,7 +744,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	{
 		if ((npc != null) && (npc.getSpawn() != null) && (npc.getSpawn().getLocation() != null))
 		{
-			int delay = GameTimeController.MILLIS_IN_TICK * 8;
+			int delay = GameTimeController.MILLIS_IN_TICK * 12;
 			
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			// SoE Animation section

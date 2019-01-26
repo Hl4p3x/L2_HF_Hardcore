@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.l2jserver.gameserver.model.interfaces.ILocational;
 import com.l2jserver.gameserver.model.interfaces.IPositionable;
 
@@ -197,7 +199,14 @@ public class Location implements IPositionable
 		_heading = loc.getHeading();
 		_instanceId = loc.getInstanceId();
 	}
-	
+
+	@JsonCreator
+	public static Location fromString(@JsonProperty("x") int x,
+									  @JsonProperty("y") int y,
+									  @JsonProperty("z") int z) {
+		return new Location(x, y, z);
+	}
+
 	@Override
 	public boolean equals(Object obj)
 	{

@@ -35,6 +35,7 @@ import com.l2jserver.gameserver.model.actor.templates.drop.calculators.DynamicDr
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.DynamicDropTable;
 import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jserver.gameserver.util.Util;
+import handlers.communityboard.custom.teleport.CustomTeleportTable;
 
 import javax.script.ScriptException;
 import java.io.File;
@@ -69,10 +70,15 @@ public class AdminReload implements IAdminCommandHandler
 			final String type = st.nextToken();
 			switch (type.toLowerCase())
 			{
+				case "custom_teleports": {
+					CustomTeleportTable.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Custom Teleports.");
+					break;
+				}
 				case "dynamic_drop_rates": {
 					DynamicDropTable.getInstance().load();
 					DynamicDropCalculator.getInstance().load();
-					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Dynamic Drop Rates." );
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Dynamic Drop Rates.");
 					break;
 				}
 				case "dynamic_drop": {

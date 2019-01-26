@@ -38,3 +38,6 @@ category_name_cannot_be_empty: Название категории не може
 preset_name_cannot_be_empty: Название набора не может быть пустым
 you_have_reached_maximum_number_of_buffs_in_a_preset: Вы достигли максимального количества баффов в наборе
 you_can_go_straight_to_caradine: Скорее, иди к Caradine в Goddard, ей нужна твоя помощь!
+free: бесплатно
+each: каждый
+karma_players_cannot_use_gk: Игроки с кармой не могут использовать телепорт

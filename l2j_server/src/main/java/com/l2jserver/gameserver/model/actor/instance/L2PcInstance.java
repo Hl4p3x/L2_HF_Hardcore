@@ -3558,6 +3558,14 @@ public final class L2PcInstance extends L2Playable {
         }
     }
 
+    public void fakeCast(SkillHolder skillHolder, int castTime, Runnable onCastEnd) {
+        MagicSkillUse msk = new MagicSkillUse(this, 2013, 1, castTime, 0);
+        Broadcast.toSelfAndKnownPlayersInRadius(this, msk, 900);
+        sendPacket(new SetupGauge(0, castTime));
+        forceIsCasting(GameTimeController.getInstance().getGameTicks() + (castTime / GameTimeController.MILLIS_IN_TICK));
+        setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(onCastEnd, castTime));
+    }
+
     /**
      * Send SystemMessage packet.
      *

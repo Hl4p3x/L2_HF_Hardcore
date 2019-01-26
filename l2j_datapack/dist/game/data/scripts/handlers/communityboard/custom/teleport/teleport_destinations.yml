@@ -1,0 +1,55 @@
+---
+- name: "Town of Rune"
+  code: "rune"
+  coordinates:
+    x: 43833
+    y: -48143
+    z: -799
+- name: "Town of Aden"
+  code: "aden"
+  coordinates:
+    x: 147468
+    y: 26918
+    z: -2206
+- name: "Town of Goddard"
+  code: "goddard"
+  coordinates:
+    x: 147618
+    y: -56303
+    z: -2778
+- name: "Town of Gludio"
+  code: "gludio"
+  coordinates:
+    x: -14225
+    y: 123540
+    z: -3121
+- name: "Town of Dion"
+  code: "dion"
+  coordinates:
+    x: 18748
+    y: 145437
+    z: -3127
+- name: "Town of Giran"
+  code: "giran"
+  coordinates:
+    x: 83474
+    y: 148682
+    z: -3407
+- name: "Gludin Village"
+  code: "gludin"
+  coordinates:
+    x: -82228
+    y: 150851
+    z: -3131
+- name: "Kamael Village"
+  code: "kamael"
+  coordinates:
+    x: -117297
+    y: 46543
+    z: 365
+- name: "Hunters Village"
+  code: "hunters"
+  coordinates:
+    x: 116623
+    y: 76396
+    z: -2731

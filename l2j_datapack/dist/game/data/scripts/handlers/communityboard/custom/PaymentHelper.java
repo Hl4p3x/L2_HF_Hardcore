@@ -7,7 +7,7 @@ import com.l2jserver.localization.Strings;
 public class PaymentHelper {
 
     public static ProcessResult payForService(L2PcInstance player, long price) {
-        if (player.getClassId().level() < Config.FREE_COMMUNITY_TILL_CLASS_LEVEL) {
+        if (checkFreeService(player)) {
             return ProcessResult.success();
         }
 
@@ -17,6 +17,10 @@ public class PaymentHelper {
         } else {
             return ProcessResult.failure(Strings.of(player).get("not_enough_adena"));
         }
+    }
+
+    public static boolean checkFreeService(L2PcInstance player) {
+        return player.getClassId().level() < Config.FREE_COMMUNITY_TILL_CLASS_LEVEL;
     }
 
 }

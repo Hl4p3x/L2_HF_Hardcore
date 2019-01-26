@@ -8,14 +8,16 @@ import com.l2jserver.gameserver.data.sql.impl.CommunityBuffList;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.handler.IParseBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
-import handlers.communityboard.custom.ActionArgs;
-import handlers.communityboard.custom.BoardAction;
-import handlers.communityboard.custom.ProcessResult;
+import com.l2jserver.localization.Strings;
+import handlers.communityboard.custom.*;
 import handlers.communityboard.custom.actions.*;
 import handlers.communityboard.custom.bufflists.sets.*;
 import handlers.communityboard.custom.bufflists.sets.presets.*;
 import handlers.communityboard.custom.renderers.BuffCategoriesRender;
+import handlers.communityboard.custom.teleport.CustomTeleportTable;
+import handlers.communityboard.custom.teleport.TeleportDestination;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -83,7 +85,8 @@ public class CustomHomeBoard implements IParseBoardHandler {
         return new String[]{
                 "_bbshome",
                 "_bbstop",
-                "_bbs_buff"
+                "_bbs_buff",
+                "_bbs_teleport"
         };
     }
 
@@ -99,10 +102,19 @@ public class CustomHomeBoard implements IParseBoardHandler {
                 html = html.replace("%restore_button%", "");
             }
 
+            if (PaymentHelper.checkFreeService(player)) {
+                String free = Strings.of(player).get("free");
+                html = html.replace("%teleport_price%", free);
+                html = html.replace("%single_buff_price%", free);
+                html = html.replace("%preset_buff_price%", free);
+            } else {
+                html = html.replace("%teleport_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_TELEPORT_PRICE));
+                html = html.replace("%single_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_SINGLE_BUFF_PRICE));
+                html = html.replace("%preset_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_DEFAULT_PRESET_PRICE));
+            }
+
             List<CommunityBuffList> presets = DAOFactory.getInstance().getCommunityBuffListDao().findAllCommunityBuffSets(player.getObjectId());
             List<String> buffPresetNames = presets.stream().map(CommunityBuffList::getName).collect(Collectors.toList());
-            html = html.replace("%single_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_SINGLE_BUFF_PRICE));
-            html = html.replace("%preset_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_DEFAULT_PRESET_PRICE));
 
             html = html.replace("%user_buff_presets%", String.join(";", buffPresetNames));
             html = html.replace("%buff_list%", BuffCategoriesRender.renderBuffCategoriesList("list_buff", player));
@@ -131,9 +143,47 @@ public class CustomHomeBoard implements IParseBoardHandler {
                 player.sendPacket(new ExShowScreenMessage(result.getResult(), 2000));
             }
             return true;
+        } else if (command.startsWith("_bbs_teleport")) {
+            return handleTeleport(command, player);
         } else {
             return false;
         }
+    }
+
+    private boolean handleTeleport(String command, L2PcInstance player) {
+        Optional<ActionArgs> actionArgsOption = ActionArgs.parse(command);
+
+        if (actionArgsOption.isEmpty()) {
+            return false;
+        }
+
+        String teleportDestinationCode = actionArgsOption.get().getActionName();
+
+        Optional<TeleportDestination> teleportDestination = CustomTeleportTable.getInstance().findByCode(teleportDestinationCode);
+        if (teleportDestination.isEmpty()) {
+            LOG.warn("Player {} requested teleport to unknown location {}", player, teleportDestinationCode);
+            return false;
+        }
+
+        ProcessResult result = BuffCondition.checkCondition(player);
+        if (result.isFailure()) {
+            player.sendPacket(new ExShowScreenMessage(result.getResult(), 2000));
+            return false;
+        }
+
+        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && player.getKarma() > 0) {
+            player.sendPacket(new ExShowScreenMessage(Strings.of(player).get("karma_players_cannot_use_gk"), 2000));
+            return false;
+        }
+
+        ProcessResult payment = PaymentHelper.payForService(player, Config.COMMUNITY_TELEPORT_PRICE);
+        if (payment.isFailure()) {
+            return false;
+        }
+
+        SkillHolder soe = new SkillHolder(2013, 1);
+        player.fakeCast(soe, Config.COMMUNITY_TELEPORT_DELAY, () -> player.teleToLocation(teleportDestination.get().getCoordinates(), true));
+        return true;
     }
 
 
