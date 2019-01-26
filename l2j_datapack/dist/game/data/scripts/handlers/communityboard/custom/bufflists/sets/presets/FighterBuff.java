@@ -21,7 +21,6 @@ public class FighterBuff implements BuffList {
             new SkillHolder(1062, 2), // Berserker Spirit
             new SkillHolder(1499, 1), // Improved Combat
             new SkillHolder(1501, 1), // Improved Condition
-            new SkillHolder(1240, 3), // Guidance
             new SkillHolder(1388, 3), // Greater Might
             new SkillHolder(1542, 1), // Counter Critical
             new SkillHolder(1502, 1), // Improved Critical Attack

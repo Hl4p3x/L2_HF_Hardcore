@@ -23,7 +23,6 @@ public class TankBuff implements BuffList {
             new SkillHolder(1085, 3), // Acumen
             new SkillHolder(1499, 1), // Improved Combat
             new SkillHolder(1501, 1), // Improved Condition
-            new SkillHolder(1240, 3), // Guidance
             new SkillHolder(1389, 3), // Greater Shield
             new SkillHolder(1542, 1), // Counter Critical
             new SkillHolder(1502, 1), // Improved Critical Attack
