@@ -105,7 +105,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	private int _lastBuffTick;
 	private long lastCastTime = 0;
 	// Fear parameters
-	private int _fearTime;
+	private volatile int _fearTime;
 	private Future<?> _fearTask = null;
 	private final RaidChaos raidChaos;
 	

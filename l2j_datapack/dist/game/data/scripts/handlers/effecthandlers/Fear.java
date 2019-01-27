@@ -74,10 +74,6 @@ public final class Fear extends AbstractEffect
 		return false;
 	}
 
-	@Override
-	public void onExit(BuffInfo info) {
-		info.getEffected().enableAllSkills();
-	}
 
 	@Override
 	public void onStart(BuffInfo info) {
@@ -85,7 +81,7 @@ public final class Fear extends AbstractEffect
 			info.getEffected().abortCast();
 		}
 
-		info.getEffected().disableAllSkills();
+		info.getEffected().setTarget(null);
 		info.getEffected().abortAttack();
 
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID, info.getEffector(), true);
