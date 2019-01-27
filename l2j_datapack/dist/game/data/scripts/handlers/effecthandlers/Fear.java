@@ -73,15 +73,21 @@ public final class Fear extends AbstractEffect
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID, info.getEffector(), false);
 		return false;
 	}
-	
+
 	@Override
-	public void onStart(BuffInfo info)
-	{
-		if (info.getEffected().isCastingNow() && info.getEffected().canAbortCast())
-		{
+	public void onExit(BuffInfo info) {
+		info.getEffected().enableAllSkills();
+	}
+
+	@Override
+	public void onStart(BuffInfo info) {
+		if (info.getEffected().isCastingNow() && info.getEffected().canAbortCast()) {
 			info.getEffected().abortCast();
 		}
-		
+
+		info.getEffected().disableAllSkills();
+		info.getEffected().abortAttack();
+
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID, info.getEffector(), true);
 	}
 }

@@ -8,7 +8,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 public class CharacterBlockHelper {
 
     public static void block(L2Character target) {
-        // target.stopAndDisable();
+        target.stopAndDisable();
         target.setIsCastingNow(true);
         if (target instanceof L2Summon) {
             L2Summon summon = (L2Summon) target;
@@ -20,7 +20,7 @@ public class CharacterBlockHelper {
 
     public static void unblock(L2Character target) {
         target.setIsCastingNow(false);
-        // target.startAndEnable();
+        target.startAndEnable();
         if (target instanceof L2Summon) {
             L2Summon summon = (L2Summon) target;
             L2PcInstance owner = summon.getOwner();
