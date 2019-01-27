@@ -52,6 +52,8 @@ public class CustomHomeBoard implements IParseBoardHandler {
         listBuffActions.put("shillen_elder", new ShowBuffListAction("shillen_elder", new ShillenSaint()));
         listBuffActions.put("overlord", new ShowBuffListAction("overlord", new Dominator()));
         listBuffActions.put("warcryer", new ShowBuffListAction("warcryer", new Doomcryer()));
+        listBuffActions.put("others", new ShowBuffListAction("others", new Others()));
+
 
         actions.put("list_buff", new RouteAction(listBuffActions));
 
@@ -75,6 +77,7 @@ public class CustomHomeBoard implements IParseBoardHandler {
         listAddToPresetBuffActions.put("shillen_elder", new ShowAddToPresetBuffAction(new ShillenSaint()));
         listAddToPresetBuffActions.put("overlord", new ShowAddToPresetBuffAction(new Dominator()));
         listAddToPresetBuffActions.put("warcryer", new ShowAddToPresetBuffAction(new Doomcryer()));
+        listAddToPresetBuffActions.put("others", new ShowAddToPresetBuffAction(new Others()));
 
         actions.put("list_add_to_preset_buff", new RouteAction(listAddToPresetBuffActions));
     }

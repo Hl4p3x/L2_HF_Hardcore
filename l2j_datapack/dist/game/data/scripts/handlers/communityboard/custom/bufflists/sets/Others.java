@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-public class WarsmithAndSummoners implements BuffList {
+public class Others implements BuffList {
 
     public final List<SkillHolder> buffs = Arrays.asList(
             new SkillHolder(828, 1), // Case Harden
@@ -20,7 +20,9 @@ public class WarsmithAndSummoners implements BuffList {
             new SkillHolder(4700, 13), // Gift of Queen
             new SkillHolder(4699, 13), // Blessing of Queen
             new SkillHolder(4702, 13), // Blessing of Seraphim
-            new SkillHolder(4703, 13) // Gift of Seraphim
+            new SkillHolder(4703, 13), // Gift of Seraphim
+            new SkillHolder(834, 1), // Blood Pact
+            new SkillHolder(982, 3) // Combat Aura
     );
 
     @Override

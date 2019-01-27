@@ -18,7 +18,7 @@ public class AllBuffs implements BuffList {
         allBuffs.addAll(new ShillenSaint().getBuffs());
         allBuffs.addAll(new SpectralDancer().getBuffs());
         allBuffs.addAll(new SwordMuse().getBuffs());
-        allBuffs.addAll(new WarsmithAndSummoners().getBuffs());
+        allBuffs.addAll(new Others().getBuffs());
         return allBuffs;
     }
 
@@ -33,7 +33,7 @@ public class AllBuffs implements BuffList {
         buffs.put("warcryer", new Doomcryer());
         buffs.put("elven_elder", new ElvenSaint());
         buffs.put("shillen_elder", new ShillenSaint());
-        buffs.put("warsmith_summoners", new WarsmithAndSummoners());
+        buffs.put("others", new Others());
         buffs.put("songs", new SwordMuse());
         buffs.put("dances", new SpectralDancer());
         buffs.put("prophet", new Hierophant());
