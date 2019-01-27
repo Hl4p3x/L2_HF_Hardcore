@@ -73,25 +73,25 @@
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="5000000" id="57" />
+		<ingredient count="20000000" id="57"/>
 		<!-- Agathion Seal Bracelet - Fortress -->
 		<production count="1" id="10018" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="500" id="57" />
+		<ingredient count="500000" id="57"/>
 		<!-- Scroll of Escape: Fortress -->
 		<production count="1" id="10129" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="300" id="57" />
+		<ingredient count="30000" id="57"/>
 		<!-- Food for Wyvern -->
 		<production count="1" id="6316" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="200000" id="57" />
+		<ingredient count="20000000" id="57"/>
 		<!-- Blessed Scroll of Escape: Fortress -->
 		<production count="1" id="10130" />
 	</item>
