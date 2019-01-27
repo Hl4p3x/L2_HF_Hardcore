@@ -41,111 +41,111 @@
 	</item>
 	<item>
 		<!-- Knight's Epaulette -->
-		<ingredient count="2500" id="9912"/>
+        <ingredient count="2500" id="9912"/>
 		<!-- Adena -->
-		<ingredient count="5000000" id="57" />
+        <ingredient count="5000000" id="57"/>
 		<!-- Giant's Codex - Mastery -->
 		<production count="1" id="9627" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="30000" id="57" />
+        <ingredient count="30000" id="57"/>
 		<!-- Battleground Spell - Shield Master -->
 		<production count="1" id="10143" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="36000" id="57" />
+        <ingredient count="36000" id="57"/>
 		<!-- Battleground Spell - Wizard -->
 		<production count="1" id="10144" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="35000" id="57" />
+        <ingredient count="35000" id="57"/>
 		<!-- Battleground Spell - Healer -->
 		<production count="1" id="10145" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="32000" id="57" />
+        <ingredient count="32000" id="57"/>
 		<!-- Battleground Spell - Dagger Master -->
 		<production count="1" id="10146" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="29000" id="57" />
+        <ingredient count="29000" id="57"/>
 		<!-- Battleground Spell - Bow Master -->
 		<production count="1" id="10147" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="22000" id="57" />
+        <ingredient count="22000" id="57"/>
 		<!-- Battleground Spell - Berserker -->
 		<production count="1" id="10148" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="2700000" id="57" />
+        <ingredient count="2700000" id="57"/>
 		<!-- Battleground Blessed Scroll of Escape -->
 		<production count="1" id="10149" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="80000" id="57" />
+        <ingredient count="80000" id="57"/>
 		<!-- Battleground Transform Spell -->
 		<production count="1" id="10151" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="14000" id="57" />
+        <ingredient count="14000" id="57"/>
 		<!-- Battle Health Recovery Potion -->
 		<production count="1" id="10152" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="92000" id="57" />
+        <ingredient count="92000" id="57"/>
 		<!-- Battle Mana Recovery Potion -->
 		<production count="1" id="10153" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="40000" id="57" />
+        <ingredient count="40000" id="57"/>
 		<!-- Battle CP Recovery Potion -->
 		<production count="1" id="10154" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="72000" id="57" />
+        <ingredient count="72000" id="57"/>
 		<!-- Mental Strengthening Potion -->
 		<production count="1" id="10155" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="80000" id="57" />
+        <ingredient count="80000" id="57"/>
 		<!-- Medusa's Potion -->
 		<production count="1" id="10156" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="30000" id="57" />
+        <ingredient count="30000" id="57"/>
 		<!-- Instant Haste Potion -->
 		<production count="1" id="10157" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="40000" id="57" />
+        <ingredient count="40000" id="57"/>
 		<!-- Ballista Bomb -->
 		<production count="1" id="9688" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="15000" id="57" />
+        <ingredient count="15000" id="57"/>
 		<!-- Full Bottle of Souls - 5 Souls (For Combat) -->
 		<production count="1" id="10411" />
 	</item>
 	<item>
 		<!-- Adena -->
-		<ingredient count="40000" id="57" />
+        <ingredient count="40000" id="57"/>
 		<!-- Capture Rope -->
 		<production count="1" id="10159" />
 	</item>
