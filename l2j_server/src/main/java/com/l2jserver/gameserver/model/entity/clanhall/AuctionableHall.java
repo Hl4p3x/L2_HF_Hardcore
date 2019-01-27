@@ -18,12 +18,8 @@
  */
 package com.l2jserver.gameserver.model.entity.clanhall;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.instancemanager.AuctionManager;
@@ -33,7 +29,13 @@ import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.entity.ClanHall;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public final class AuctionableHall extends ClanHall
 {
@@ -41,8 +43,8 @@ public final class AuctionableHall extends ClanHall
 	private final int _grade;
 	protected boolean _paid;
 	private final int _lease;
-	private final int _chRate = 604800000;
-	
+	private final int _chRate = 86400000;
+
 	public AuctionableHall(StatsSet set)
 	{
 		super(set);
@@ -111,25 +113,21 @@ public final class AuctionableHall extends ClanHall
 	private final void initialyzeTask(boolean forced)
 	{
 		long currentTime = System.currentTimeMillis();
-		if (_paidUntil > currentTime)
-		{
+		if (_paidUntil > currentTime) {
 			ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), _paidUntil - currentTime);
+			return;
 		}
-		else if (!_paid && !forced)
-		{
-			if ((System.currentTimeMillis() + (3600000 * 24)) <= (_paidUntil + _chRate))
-			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), System.currentTimeMillis() + (3600000 * 24));
-			}
-			else
-			{
+
+		if (!_paid && !forced) {
+			if ((System.currentTimeMillis() + GameTimeController.MILLIS_PER_HOUR) <= (_paidUntil + _chRate)) {
+				ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), System.currentTimeMillis() + GameTimeController.MILLIS_PER_HOUR);
+			} else {
 				ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), (_paidUntil + _chRate) - System.currentTimeMillis());
 			}
+			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), 0);
-		}
+
+		ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), 0);
 	}
 	
 	/** Fee Task */
@@ -138,78 +136,56 @@ public final class AuctionableHall extends ClanHall
 		private final Logger _log = Logger.getLogger(FeeTask.class.getName());
 		
 		@Override
-		public void run()
-		{
-			try
-			{
-				long _time = System.currentTimeMillis();
+		public void run() {
+			try {
+				long currentTime = System.currentTimeMillis();
 				
 				if (isFree())
 				{
 					return;
 				}
-				
-				if (_paidUntil > _time)
-				{
-					ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), _paidUntil - _time);
+
+				if (_paidUntil > currentTime) {
+					ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), _paidUntil - currentTime);
 					return;
 				}
 				
 				L2Clan Clan = ClanTable.getInstance().getClan(getOwnerId());
-				if (ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= getLease())
-				{
-					if (_paidUntil != 0)
-					{
-						while (_paidUntil <= _time)
-						{
+				if (ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= getLease()) {
+					if (_paidUntil != 0) {
+						while (_paidUntil <= currentTime) {
 							_paidUntil += _chRate;
 						}
-					}
-					else
-					{
-						_paidUntil = _time + _chRate;
+					} else {
+						_paidUntil = currentTime + _chRate;
 					}
 					ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CH_rental_fee", Inventory.ADENA_ID, getLease(), null, null);
-					ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), _paidUntil - _time);
+					ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), _paidUntil - currentTime);
 					_paid = true;
 					updateDb();
-				}
-				else
-				{
+				} else {
 					_paid = false;
-					if (_time > (_paidUntil + _chRate))
-					{
-						if (ClanHallManager.getInstance().loaded())
-						{
+					if (currentTime > (_paidUntil + _chRate)) {
+						if (ClanHallManager.getInstance().loaded()) {
 							AuctionManager.getInstance().initNPC(getId());
 							ClanHallManager.getInstance().setFree(getId());
-							Clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
-						}
-						else
-						{
+							Clan.broadcastToOnlineMembers(new ExShowScreenMessage("The clan hall fee is one day overdue; therefore the clan hall ownership has been revoked.", 4000));
+						} else {
 							ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), 3000);
 						}
-					}
-					else
-					{
+					} else {
 						updateDb();
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
 						sm.addInt(getLease());
 						Clan.broadcastToOnlineMembers(sm);
-						if ((_time + (3600000 * 24)) <= (_paidUntil + _chRate))
-						{
-							ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), _time + (3600000 * 24));
+						if ((currentTime + (3600000 * 24)) <= (_paidUntil + _chRate)) {
+							ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), currentTime + (3600000 * 24));
+						} else {
+							ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), (_paidUntil + _chRate) - currentTime);
 						}
-						else
-						{
-							ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), (_paidUntil + _chRate) - _time);
-						}
-						
 					}
 				}
-			}
-			catch (Exception e)
-			{
+			} catch (Exception e) {
 				_log.log(Level.SEVERE, "", e);
 			}
 		}
