@@ -19,7 +19,6 @@
 package ai.npc.ClanTrader;
 
 import ai.npc.AbstractNpcAI;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -45,7 +44,7 @@ public final class ClanTrader extends AbstractNpcAI
 	private static final int BLOOD_OATH = 9910; // Blood Oath
 	private static final int BLOOD_OATH_COUNT = 10; // Blood Oath Count
 	private static final int KNIGHTS_EPAULETTE = 9912; // Knight's Epaulette
-	private static final int KNIGHTS_EPAULETTE_COUNT = 100; // Knight's Epaulette Count
+	private static final int KNIGHTS_EPAULETTE_COUNT = 5000; // Knight's Epaulette Count
 	
 	private ClanTrader()
 	{
