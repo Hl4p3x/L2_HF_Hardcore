@@ -2579,7 +2579,7 @@ public class L2Clan implements IIdentifiable, INamable
 			}
 			case 5:
 				// Upgrade to 6
-				if ((getReputationScore() >= Config.CLAN_LEVEL_6_COST) && (getMembersCount() >= Config.CLAN_LEVEL_6_REQUIREMENT))
+				if ((getReputationScore() >= Config.CLAN_LEVEL_6_COST) && (Config.ALT_CLAN_LEVEL_WITHOUT_MEMBERS || getMembersCount() >= Config.CLAN_LEVEL_6_REQUIREMENT))
 				{
 					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_6_COST, true);
 					SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
@@ -2591,7 +2591,7 @@ public class L2Clan implements IIdentifiable, INamable
 			
 			case 6:
 				// Upgrade to 7
-				if ((getReputationScore() >= Config.CLAN_LEVEL_7_COST) && (getMembersCount() >= Config.CLAN_LEVEL_7_REQUIREMENT))
+				if ((getReputationScore() >= Config.CLAN_LEVEL_7_COST) && (Config.ALT_CLAN_LEVEL_WITHOUT_MEMBERS || getMembersCount() >= Config.CLAN_LEVEL_7_REQUIREMENT))
 				{
 					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_7_COST, true);
 					SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
@@ -2602,7 +2602,7 @@ public class L2Clan implements IIdentifiable, INamable
 				break;
 			case 7:
 				// Upgrade to 8
-				if ((getReputationScore() >= Config.CLAN_LEVEL_8_COST) && (getMembersCount() >= Config.CLAN_LEVEL_8_REQUIREMENT))
+				if ((getReputationScore() >= Config.CLAN_LEVEL_8_COST) && (Config.ALT_CLAN_LEVEL_WITHOUT_MEMBERS || getMembersCount() >= Config.CLAN_LEVEL_8_REQUIREMENT))
 				{
 					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_8_COST, true);
 					SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
@@ -2613,7 +2613,7 @@ public class L2Clan implements IIdentifiable, INamable
 				break;
 			case 8:
 				// Upgrade to 9
-				if ((getReputationScore() >= Config.CLAN_LEVEL_9_COST) && (player.getInventory().getItemByItemId(9910) != null) && (getMembersCount() >= Config.CLAN_LEVEL_9_REQUIREMENT))
+				if ((getReputationScore() >= Config.CLAN_LEVEL_9_COST) && (player.getInventory().getItemByItemId(9910) != null) && (Config.ALT_CLAN_LEVEL_WITHOUT_MEMBERS || getMembersCount() >= Config.CLAN_LEVEL_9_REQUIREMENT))
 				{
 					// itemId 9910 == Blood Oath
 					if (player.destroyItemByItemId("ClanLvl", 9910, 150, player.getTarget(), false))
@@ -2632,7 +2632,7 @@ public class L2Clan implements IIdentifiable, INamable
 				break;
 			case 9:
 				// Upgrade to 10
-				if ((getReputationScore() >= Config.CLAN_LEVEL_10_COST) && (player.getInventory().getItemByItemId(9911) != null) && (getMembersCount() >= Config.CLAN_LEVEL_10_REQUIREMENT))
+				if ((getReputationScore() >= Config.CLAN_LEVEL_10_COST) && (player.getInventory().getItemByItemId(9911) != null) && (Config.ALT_CLAN_LEVEL_WITHOUT_MEMBERS || getMembersCount() >= Config.CLAN_LEVEL_10_REQUIREMENT))
 				{
 					// itemId 9911 == Blood Alliance
 					if (player.destroyItemByItemId("ClanLvl", 9911, 5, player.getTarget(), false))
@@ -2660,7 +2660,7 @@ public class L2Clan implements IIdentifiable, INamable
 						break;
 					}
 				}
-				if (hasTerritory && (getReputationScore() >= Config.CLAN_LEVEL_11_COST) && (getMembersCount() >= Config.CLAN_LEVEL_11_REQUIREMENT))
+				if (hasTerritory && (getReputationScore() >= Config.CLAN_LEVEL_11_COST) && (Config.ALT_CLAN_LEVEL_WITHOUT_MEMBERS || getMembersCount() >= Config.CLAN_LEVEL_11_REQUIREMENT))
 				{
 					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_11_COST, true);
 					SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
