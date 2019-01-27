@@ -7,7 +7,7 @@
 		<!-- Medal of Glory -->
 		<ingredient count="1" id="21874" />
 		<!-- Fame Points -->
-        <production count="200" id="-300"/>
+		<production count="300" id="-300"/>
 	</item>
 	<item>
 		<!-- Olympiad Token -->
