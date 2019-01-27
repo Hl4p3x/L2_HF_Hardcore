@@ -69,6 +69,7 @@ public class DynamicDropCalculator {
     public List<ItemHolder> calculate(L2Character victim) {
         List<ItemHolder> drop = new ArrayList<>(generalDropCalculator.calculate(DynamicDropTable.getInstance().getDynamicNpcDropData(victim)));
         drop.addAll(customDropCalculator.calculate(DynamicDropTable.getInstance().getCustomDrop(victim)));
+        drop.addAll(customDropCalculator.calculateCategories(DynamicDropTable.getInstance().getNpcDrop(victim)));
         return drop;
     }
 

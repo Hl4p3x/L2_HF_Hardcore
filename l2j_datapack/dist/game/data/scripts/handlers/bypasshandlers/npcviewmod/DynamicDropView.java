@@ -40,7 +40,10 @@ public class DynamicDropView implements DropView {
 
         DynamicDropGradeData dynamicDropGradeData = DynamicDropTable.getInstance().getDynamicNpcDropData(npc);
         List<CustomDropEntry> customDropEntries = DynamicDropTable.getInstance().getCustomDrop(npc);
+        List<DynamicDropCategory> npcDropEntries = DynamicDropTable.getInstance().getNpcDrop(npc);
 
+
+        List<ItemGroupView> npcGroupViews = convertDropCategories(npcDropEntries);
         List<ItemGroupView> equipmentGroupViews = convertEquipmentCategoryToView("Equipment", dynamicDropGradeData.getEquipment());
         List<ItemGroupView> partsGroupViews = convertEquipmentCategoryToView("Parts", dynamicDropGradeData.getParts());
         List<ItemGroupView> recipesGroupViews = convertEquipmentCategoryToView("Recipes", dynamicDropGradeData.getRecipes());
@@ -51,6 +54,7 @@ public class DynamicDropView implements DropView {
 
 
         List<ItemGroupView> allGroupViews = new ArrayList<>();
+        allGroupViews.addAll(npcGroupViews);
         allGroupViews.addAll(equipmentGroupViews);
         allGroupViews.addAll(partsGroupViews);
         allGroupViews.addAll(recipesGroupViews);
@@ -75,6 +79,14 @@ public class DynamicDropView implements DropView {
         List<ItemGroupView> result = new ArrayList<>();
         for (CustomDropEntry customDropEntry : customDropEntries) {
             result.add(convertDynamicDropCategory(customDropEntry.getName(), customDropEntry.getDrop()));
+        }
+        return result;
+    }
+
+    private List<ItemGroupView> convertDropCategories(List<DynamicDropCategory> categories) {
+        List<ItemGroupView> result = new ArrayList<>();
+        for (DynamicDropCategory category : categories) {
+            result.add(convertDynamicDropCategory(category.getName(), category));
         }
         return result;
     }

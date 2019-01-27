@@ -1216,3 +1216,12 @@ raid:
       ids:
         - 9575 # High-Grade Life Stone - Level 80
         - 9576 # Top-Grade Life Stone - Level 80
+
+npcs:
+  - npc_id: 25447
+    drop_categories:
+      - name: "Exclusive Weapons"
+        stats:
+          chance: 60
+        ids:
+          - 21973 # Mardil's Fan

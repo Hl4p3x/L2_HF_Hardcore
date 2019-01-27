@@ -2,12 +2,13 @@ package com.l2jserver.gameserver.model.actor.templates.drop.custom;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.l2jserver.gameserver.model.actor.templates.drop.DynamicDropCategory;
+import com.l2jserver.gameserver.model.actor.templates.drop.HasDropCategory;
 import com.l2jserver.gameserver.model.actor.templates.drop.Range;
 
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class CustomDropEntry {
+public class CustomDropEntry implements HasDropCategory {
 
     private String name = "Other";
     @JsonProperty("level-range")

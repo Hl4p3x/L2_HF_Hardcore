@@ -1,5 +1,6 @@
 package com.l2jserver.gameserver.model.actor.templates.drop.stats;
 
+import com.google.common.base.Functions;
 import com.l2jserver.gameserver.datatables.categorized.*;
 import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvider;
 import com.l2jserver.gameserver.model.L2RecipeList;
@@ -8,6 +9,7 @@ import com.l2jserver.gameserver.model.actor.templates.drop.*;
 import com.l2jserver.gameserver.model.actor.templates.drop.calculators.modifiers.MaxHpChanceModifier;
 import com.l2jserver.gameserver.model.actor.templates.drop.custom.CustomDropEntry;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.DropStats;
+import com.l2jserver.gameserver.model.actor.templates.drop.stats.basic.NpcDropData;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.equipment.EquipmentDropStats;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.resources.ResourceDropStats;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.scrolls.MiscScrollStats;
@@ -40,6 +42,7 @@ public class DynamicDropTable {
     private AllDynamicDropData allDynamicDropData;
     private MaxHpChanceModifier maxHpChanceModifier = new MaxHpChanceModifier();
     private Set<Integer> allCustomDropIds = new HashSet<>();
+    private Map<Integer, NpcDropData> npcDropData = new HashMap<>();
 
     public DynamicDropTable() {
         load();
@@ -58,8 +61,10 @@ public class DynamicDropTable {
             allCustomDropIds = new HashSet<>();
             allCustomDropIds.addAll(allDynamicDropData.getMobs().getCustomDropEntries().stream().flatMap(entry -> entry.getDrop().getIds().stream()).collect(Collectors.toSet()));
             allCustomDropIds.addAll(allDynamicDropData.getRaid().getCustomDropEntries().stream().flatMap(entry -> entry.getDrop().getIds().stream()).collect(Collectors.toSet()));
+
+            npcDropData = allDynamicDropData.getNpcs().stream().collect(Collectors.toMap(NpcDropData::getNpcId, Functions.identity()));
         } catch (IOException e) {
-            throw new IllegalStateException("Could not load Dynamic Drop Rates configuration from " + path);
+            throw new IllegalStateException("Could not load Dynamic Drop Rates configuration from " + path, e);
         }
     }
 
@@ -227,6 +232,10 @@ public class DynamicDropTable {
 
     public static DynamicDropTable getInstance() {
         return DynamicDropTable.SingletonHolder._instance;
+    }
+
+    public List<DynamicDropCategory> getNpcDrop(L2Character victim) {
+        return Optional.ofNullable(npcDropData.get(victim.getId())).map(NpcDropData::getCategories).orElse(Collections.emptyList());
     }
 
     private static class SingletonHolder {
