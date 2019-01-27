@@ -53,3 +53,9 @@
     x: 116623
     y: 76396
     z: -2731
+- name: "Luxury Shop"
+  code: "luxury"
+  coordinates:
+    x: 80662
+    y: 145477
+    z: -3536
