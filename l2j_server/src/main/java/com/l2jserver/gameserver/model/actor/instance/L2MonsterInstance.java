@@ -38,6 +38,7 @@ import com.l2jserver.util.Rnd;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
 import java.util.stream.Collectors;
 
@@ -65,6 +66,15 @@ public class L2MonsterInstance extends L2Attackable
 	private List<Skill> dynamicLongRangeSkills = new ArrayList<>();
 	private List<Skill> dynamicBuffSkills = new ArrayList<>();
 	private List<Skill> dynamicHealSkills = new ArrayList<>();
+
+	private static final Set<Integer> BLACKLIST = Set.of(
+			18329, // Hall Keeper Captain
+			18330, // Hall Keeper Wizard
+			18331, // Hall Keeper Guard
+			18333, // Hall Keeper Suicidal Soldier
+			18855, // Archery Knight
+			29021  // Archangel
+	);
 	
 	/**
 	 * Creates a monster.
@@ -79,7 +89,7 @@ public class L2MonsterInstance extends L2Attackable
 	}
 
 	private void addRandomSkills() {
-        if (isRaid() || isRaidMinion()) {
+		if (isRaid() || isRaidMinion() || BLACKLIST.contains(getId())) {
             return;
         }
 
