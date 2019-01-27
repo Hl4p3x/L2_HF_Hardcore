@@ -39,8 +39,7 @@ public class BoardCancelAction implements BoardAction {
         SkillHolder cancellation = new SkillHolder(1056, 1);
 
         if (targetHolder.isSummonTarget()) {
-            targetHolder.getMaster().fakeCast(cancellation, delay, () -> cancelBuffs(targetHolder.getSummon()), targetHolder.getSummon())
-            ;
+            targetHolder.getMaster().fakeCast(cancellation, delay, () -> cancelBuffs(targetHolder.getSummon()), targetHolder.getSummon());
         } else {
             targetHolder.getMaster().fakeCast(cancellation, delay, () -> cancelBuffs(targetHolder.getMaster()), targetHolder.getMaster());
         }
