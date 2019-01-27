@@ -488,7 +488,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="material" val="PAPER"/>
         <set name="weight" val="3"/>
-        <set name="price" val="3"/>
+        <set name="price" val="10"/>
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
         <set name="is_stackable" val="true"/>
         <set name="handler" val="FishShots"/>
@@ -501,7 +501,7 @@
         <set name="crystal_type" val="D"/>
         <set name="material" val="PAPER"/>
         <set name="weight" val="3"/>
-        <set name="price" val="5"/>
+        <set name="price" val="30"/>
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
         <set name="is_stackable" val="true"/>
         <set name="handler" val="FishShots"/>
@@ -514,7 +514,7 @@
         <set name="crystal_type" val="C"/>
         <set name="material" val="PAPER"/>
         <set name="weight" val="3"/>
-        <set name="price" val="7"/>
+        <set name="price" val="60"/>
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
         <set name="is_stackable" val="true"/>
         <set name="handler" val="FishShots"/>
@@ -527,7 +527,7 @@
         <set name="crystal_type" val="B"/>
         <set name="material" val="PAPER"/>
         <set name="weight" val="3"/>
-        <set name="price" val="25"/>
+        <set name="price" val="90"/>
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
         <set name="is_stackable" val="true"/>
         <set name="handler" val="FishShots"/>
@@ -540,7 +540,7 @@
         <set name="crystal_type" val="A"/>
         <set name="material" val="PAPER"/>
         <set name="weight" val="3"/>
-        <set name="price" val="40"/>
+        <set name="price" val="120"/>
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
         <set name="is_stackable" val="true"/>
         <set name="handler" val="FishShots"/>
@@ -553,7 +553,7 @@
         <set name="crystal_type" val="S"/>
         <set name="material" val="PAPER"/>
         <set name="weight" val="3"/>
-        <set name="price" val="50"/>
+        <set name="price" val="180"/>
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
         <set name="is_stackable" val="true"/>
         <set name="handler" val="FishShots"/>

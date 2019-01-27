@@ -30,11 +30,11 @@
 	<item id="8198" /> <!-- Fisherman's Potion - Purple -->
 	<item id="8199" /> <!-- Fisherman's Potion - Red -->
 	<item id="8200" /> <!-- Fisherman's Potion - White -->
-	<item id="8202"/> <!-- Fisherman's Potion -->
-	<item id="6535"/> <!-- Fishing Shot (No-Grade) -->
-	<item id="6536"/> <!-- Fishing Shot (D-Grade) -->
-	<item id="6537"/> <!-- Fishing Shot (C-Grade) -->
-	<item id="6538"/> <!-- Fishing Shot (B-Grade) -->
-	<item id="6539"/> <!-- Fishing Shot (A-Grade) -->
-	<item id="6540"/> <!-- Fishing Shot (S-Grade) -->
+    <item id="8202"/> <!-- Fisherman's Potion -->
+    <item id="6535"/> <!-- Fishing Shot (No-Grade) -->
+    <item id="6536"/> <!-- Fishing Shot (D-Grade) -->
+    <item id="6537"/> <!-- Fishing Shot (C-Grade) -->
+    <item id="6538"/> <!-- Fishing Shot (B-Grade) -->
+    <item id="6539"/> <!-- Fishing Shot (A-Grade) -->
+    <item id="6540"/> <!-- Fishing Shot (S-Grade) -->
 </list>
