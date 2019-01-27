@@ -54,10 +54,10 @@ public final class Q00457_LostAndFound extends Quest
 	};
 	// Misc
 	private static final int PACKAGED_BOOK = 15716;
-	private static final double CHANCE_SPAWN = 0.3; // 1%
+    private static final double CHANCE_SPAWN = 0.3; // 1%
 	private static final int MIN_LV = 82;
-	private static Set<L2Spawn> _escortCheckers = new HashSet<>();
-	private L2Npc gumielInstance;
+    private static Set<L2Spawn> _escortCheckers = new HashSet<>();
+    private L2Npc gumielInstance;
 	
 	public Q00457_LostAndFound()
 	{
@@ -113,10 +113,10 @@ public final class Q00457_LostAndFound extends Quest
 			case "TIME_LIMIT":
 			{
 				startQuestTimer("STOP", 2000, npc, player);
-				if (gumielInstance != null) {
-					gumielInstance.decayMe();
-				}
-				st.set("spawned", 0);
+                if (gumielInstance != null) {
+                    gumielInstance.decayMe();
+                }
+                st.set("spawned", 0);
 				st.exitQuest(QuestType.DAILY);
 				break;
 			}
@@ -179,10 +179,10 @@ public final class Q00457_LostAndFound extends Quest
 				npc.deleteMe();
 				break;
 			}
-			case "DESPAWN" : {
-				npc.deleteMe();
-				break;
-			}
+            case "DESPAWN": {
+                npc.deleteMe();
+                break;
+            }
 			default:
 			{
 				htmltext = event;
@@ -207,15 +207,15 @@ public final class Q00457_LostAndFound extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 
-		if (Rnd.rollAgainst(CHANCE_SPAWN) && st.isNowAvailable() && st.getInt("spawned") == 0 && player.getLevel() >= MIN_LV) {
-			gumielInstance = addSpawn(GUMIEL, npc);
-			st.set("spawned", 1);
-			st.startQuestTimer("DESPAWN", 1200000);
+        if (Rnd.rollAgainst(CHANCE_SPAWN) && st.isNowAvailable() && st.getInt("spawned") == 0 && player.getLevel() >= MIN_LV) {
+            gumielInstance = addSpawn(GUMIEL, npc);
+            st.set("spawned", 1);
+            st.startQuestTimer("DESPAWN", 1200000);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
 
-	@Override
+    @Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
