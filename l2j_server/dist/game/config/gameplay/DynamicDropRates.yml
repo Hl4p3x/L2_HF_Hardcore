@@ -493,7 +493,7 @@ mobs:
       stats:
         count: "1-2"
         stacks: "1-2"
-        chance: 2.6
+        chance: 4
       ids:
         - 9546 # Fire Stone
         - 9547 # Water Stone
@@ -507,7 +507,7 @@ mobs:
       stats:
         count: "1-2"
         stacks: "1-3"
-        chance: 4
+        chance: 6
       ids:
         - 9546 # Fire Stone
         - 9547 # Water Stone
@@ -521,7 +521,7 @@ mobs:
       stats:
         count: "1-2"
         stacks: "1"
-        chance: 1
+        chance: 3
       ids:
         - 9552 # Fire Crystal
         - 9553 # Water Crystal
@@ -1118,7 +1118,7 @@ raid:
       stats:
         count: "5-22"
         stacks: "2-14"
-        chance: 40
+        chance: 60
       ids:
         - 9546 # Fire Stone
         - 9547 # Water Stone
@@ -1132,7 +1132,7 @@ raid:
       stats:
         count: "4-20"
         stacks: "2-10"
-        chance: 30
+        chance: 40
       ids:
         - 9552 # Fire Crystal
         - 9553 # Water Crystal
