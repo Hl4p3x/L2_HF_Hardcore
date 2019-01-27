@@ -55,6 +55,7 @@ import com.l2jserver.gameserver.model.events.impl.character.*;
 import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
+import com.l2jserver.gameserver.model.holders.FakeCast;
 import com.l2jserver.gameserver.model.holders.InvulSkillHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.holders.SkillUseHolder;
@@ -84,17 +85,17 @@ import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.pathfinding.AbstractNodeLoc;
 import com.l2jserver.gameserver.pathfinding.PathFinding;
 import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
+import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.util.CollectionUtil;
 import com.l2jserver.util.EmptyQueue;
+import com.l2jserver.util.HeadTail;
 import com.l2jserver.util.Rnd;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.Future;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.StampedLock;
 
@@ -217,8 +218,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	private volatile L2CharacterAI _ai = null;
 	
 	/** Future Skill Cast */
-	protected Future<?> _skillCast;
-	protected Future<?> _skillCast2;
+	protected volatile Future<?> _skillCast;
+	protected volatile Future<?> _skillCast2;
 	
 	/**
 	 * Creates a creature.
@@ -6848,6 +6849,62 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public void startAndEnable() {
 		enableAllSkills();
 		setIsImmobilized(false);
+	}
+
+	public void fakeCastSeries(List<FakeCast> casts, L2Character target) {
+		HeadTail<FakeCast> castSplit = CollectionUtil.beheaded(casts);
+
+		Optional<FakeCast> head = castSplit.getHead();
+		if (head.isEmpty()) {
+			return;
+		}
+
+		CompletableFuture<?> future = makeCompletableFuture(fakeCast(head.get(), target));
+		for (FakeCast cast : castSplit.getTail()) {
+			future = future.thenCompose((s) -> makeCompletableFuture(fakeCast(cast, target)));
+		}
+	}
+
+	public static <T> CompletableFuture<T> makeCompletableFuture(Future<T> future) {
+		return CompletableFuture.supplyAsync(() -> {
+			try {
+				return future.get();
+			} catch (InterruptedException | ExecutionException e) {
+				throw new RuntimeException(e);
+			}
+		});
+	}
+
+	public Future<?> fakeCast(FakeCast fakeCast, L2Character target) {
+		return fakeCast(fakeCast.getSkillHolder(), fakeCast.getCastTime(), fakeCast.getOnCastEnd(), target);
+	}
+
+	public Future<?> fakeCast(SkillHolder skillHolder, int castTime, Runnable onCastEnd) {
+		return fakeCast(skillHolder, castTime, onCastEnd, this);
+	}
+
+	public Future<?> fakeCast(SkillHolder skillHolder, int castTime, Runnable onCastEnd, L2Character target) {
+		startCastAnimation(skillHolder, castTime, target);
+		return scheduleCastEnding(castTime, onCastEnd, target);
+	}
+
+	private void startCastAnimation(SkillHolder skillHolder, int castTime, L2Character target) {
+		MagicSkillUse msk = new MagicSkillUse(this, target, skillHolder.getSkillId(), skillHolder.getSkillLvl(), castTime, 0);
+		Broadcast.toSelfAndKnownPlayersInRadius(this, msk, 900);
+		sendPacket(new SetupGauge(SetupGauge.BLUE, castTime));
+		forceIsCasting(GameTimeController.getInstance().getFutureGameTicks(castTime));
+	}
+
+	private Future<?> scheduleCastEnding(int castTime, Runnable onCastEnd, L2Character target) {
+		ScheduledFuture<?> future = ThreadPoolManager.getInstance().scheduleGeneral(() -> {
+			if (target != this) {
+				setHeading(Util.calculateHeadingFrom(this, target));
+			}
+			onCastEnd.run();
+			setIsCastingNow(false);
+		}, castTime);
+		setSkillCast(future);
+		return future;
 	}
 
 }

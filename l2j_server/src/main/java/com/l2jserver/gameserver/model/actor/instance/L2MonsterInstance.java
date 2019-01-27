@@ -75,7 +75,7 @@ public class L2MonsterInstance extends L2Attackable
 		super(template);
 		setInstanceType(InstanceType.L2MonsterInstance);
 		setAutoAttackable(true);
-		addRandomSkills();
+		// addRandomSkills();
 	}
 
 	private void addRandomSkills() {

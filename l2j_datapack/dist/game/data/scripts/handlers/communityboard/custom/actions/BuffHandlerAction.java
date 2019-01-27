@@ -2,12 +2,8 @@ package handlers.communityboard.custom.actions;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.localization.Strings;
 import handlers.communityboard.custom.*;
 import handlers.communityboard.custom.bufflists.BuffList;
@@ -45,11 +41,7 @@ public class BuffHandlerAction implements BoardAction {
 
         String targetString = args.getArgs().get(2);
 
-        Optional<L2Character> targetOption = TargetHelper.parseTarget(player, targetString);
-        if (targetOption.isEmpty()) {
-            LOG.warn("Player {} tried to use buff on an invalid target {}", player, targetString);
-            return ProcessResult.failure(Strings.of(player).get("invalid_target_n").replace("$n", targetString));
-        }
+        TargetHolder targetHolder = TargetHelper.parseTarget(player, targetString);
 
         BuffList categoryBuffs = buffMap.get(buffCategory);
         Optional<SkillHolder> buffHolder = categoryBuffs.findBySkillId(skillId);
@@ -63,17 +55,11 @@ public class BuffHandlerAction implements BoardAction {
         }
 
         int delay = GameTimeController.TICKS_PER_SECOND * GameTimeController.MILLIS_IN_TICK;
-
-        L2Character target = targetOption.get();
-        CharacterBlockHelper.block(target);
-
-        MagicSkillUse msk = new MagicSkillUse(target, buffHolder.get().getSkillId(), buffHolder.get().getSkillLvl(), delay, 0);
-        Broadcast.toSelfAndKnownPlayersInRadius(target, msk, 900);
-
-        player.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(() -> {
-            buffHolder.get().getSkill().applyEffects(target, target);
-            CharacterBlockHelper.unblock(target);
-        }, delay));
+        if (targetHolder.isSummonTarget()) {
+            targetHolder.getMaster().fakeCast(buffHolder.get(), delay, () -> buffHolder.get().getSkill().applyEffects(targetHolder.getMaster(), targetHolder.getSummon()), targetHolder.getSummon());
+        } else {
+            targetHolder.getMaster().fakeCast(buffHolder.get(), delay, () -> buffHolder.get().getSkill().applyEffects(targetHolder.getMaster(), targetHolder.getMaster()), targetHolder.getMaster());
+        }
 
         return ProcessResult.success();
     }

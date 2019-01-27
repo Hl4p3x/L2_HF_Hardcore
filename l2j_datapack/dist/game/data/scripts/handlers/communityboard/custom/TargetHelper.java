@@ -7,27 +7,25 @@ import java.util.Optional;
 
 public class TargetHelper {
 
-    public static Optional<L2Character> parseTarget(L2PcInstance player, String targetArg) {
+    public static TargetHolder parseTarget(L2PcInstance player, String targetArg) {
         if (targetArg == null) {
-            return Optional.of(player);
+            return TargetHolder.of(player);
         }
 
         Optional<Target> targetOption = Target.parse(targetArg);
         if (targetOption.isEmpty()) {
-            return Optional.empty();
+            return TargetHolder.of(player);
         }
 
         Target targetValue = targetOption.get();
         if (targetValue.equals(Target.SUMMON)) {
             L2Character summon = player.getSummon();
             if (summon != null) {
-                return Optional.of(summon);
-            } else {
-                return Optional.empty();
+                return TargetHolder.of(player, summon);
             }
         }
 
-        return Optional.of(player);
+        return TargetHolder.of(player);
     }
 
 }

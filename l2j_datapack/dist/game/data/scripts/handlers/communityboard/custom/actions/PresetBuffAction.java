@@ -2,19 +2,16 @@ package handlers.communityboard.custom.actions;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jserver.gameserver.model.holders.FakeCast;
 import com.l2jserver.localization.Strings;
 import handlers.communityboard.custom.*;
 import handlers.communityboard.custom.bufflists.Buffs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Optional;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class PresetBuffAction implements BoardAction {
 
@@ -33,11 +30,7 @@ public class PresetBuffAction implements BoardAction {
             return ProcessResult.failure(Strings.of(player).get("invalid_preset_buff_request"));
         }
 
-        Optional<L2Character> targetOption = TargetHelper.parseTarget(player, args.getArgs().get(0));
-        if (targetOption.isEmpty()) {
-            LOG.warn("Player {} tried to use buff on an invalid target {}", player, args.getArgs().get(0));
-            return ProcessResult.failure(Strings.of(player).get("invalid_target_n").replace("$n", args.getArgs().get(0)));
-        }
+        TargetHolder targetHolder = TargetHelper.parseTarget(player, args.getArgs().get(0));
 
         ProcessResult checkResult = BuffCondition.checkCondition(player);
         if (checkResult.isFailure()) {
@@ -49,30 +42,15 @@ public class PresetBuffAction implements BoardAction {
             return paymentResult;
         }
 
-        int delay = GameTimeController.TICKS_PER_SECOND * GameTimeController.MILLIS_IN_TICK;
+        int delay = GameTimeController.TICKS_PER_SECOND * GameTimeController.MILLIS_IN_TICK * 2;
 
-        final L2Character target = targetOption.get();
-        CharacterBlockHelper.block(target);
-
-        int rollingCastDelay = 0;
-        int rollingEffectDelay = delay;
-        for (SkillHolder buff : buffs.getBuffs()) {
-            ThreadPoolManager.getInstance().scheduleGeneral(() -> {
-                MagicSkillUse msk = new MagicSkillUse(target, buff.getSkillId(), buff.getSkillLvl(), delay, 0);
-                Broadcast.toSelfAndKnownPlayersInRadius(target, msk, 900);
-            }, rollingCastDelay);
-
-            player.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(() -> {
-                buff.getSkill().applyEffects(target, target);
-            }, rollingEffectDelay));
-
-            rollingCastDelay += delay;
-            rollingEffectDelay += delay;
+        if (targetHolder.isSummonTarget()) {
+            List<FakeCast> fakeCasts = buffs.getBuffs().stream().map(buff -> new FakeCast(buff, delay, () -> buff.getSkill().applyEffects(targetHolder.getMaster(), targetHolder.getSummon()))).collect(Collectors.toList());
+            targetHolder.getMaster().fakeCastSeries(fakeCasts, targetHolder.getSummon());
+        } else {
+            List<FakeCast> fakeCasts = buffs.getBuffs().stream().map(buff -> new FakeCast(buff, delay, () -> buff.getSkill().applyEffects(targetHolder.getMaster(), targetHolder.getMaster()))).collect(Collectors.toList());
+            targetHolder.getMaster().fakeCastSeries(fakeCasts, targetHolder.getMaster());
         }
-
-        ThreadPoolManager.getInstance().scheduleGeneral(() -> {
-            CharacterBlockHelper.unblock(target);
-        }, rollingEffectDelay);
 
         return ProcessResult.success();
     }
