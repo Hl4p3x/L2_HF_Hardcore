@@ -359,7 +359,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="weight" val="240"/>
+        <set name="weight" val="60"/>
 		<set name="price" val="30000"/>
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
