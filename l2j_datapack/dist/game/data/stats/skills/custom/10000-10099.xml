@@ -12,7 +12,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ManaHealOverTime" ticks="3">
-				<param power="45"/>
+				<param power="70"/>
 			</effect>
 		</for>
 	</skill>
