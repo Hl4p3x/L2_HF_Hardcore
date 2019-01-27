@@ -326,7 +326,7 @@ public class Skill implements IIdentifiable
 		_nextActionIsAttack = set.getBoolean("nextActionAttack", false);
 		
 		_removedOnAnyActionExceptMove = (_abnormalType == AbnormalType.INVINCIBILITY) || (_abnormalType == AbnormalType.HIDE);
-		_removedOnDamage = (_abnormalType == AbnormalType.SLEEP) || (_abnormalType == AbnormalType.FORCE_MEDITATION) || (_abnormalType == AbnormalType.HIDE);
+		_removedOnDamage = (_abnormalType == AbnormalType.SLEEP) || (_abnormalType == AbnormalType.FORCE_MEDITATION) || (_abnormalType == AbnormalType.HIDE) || _abnormalType == AbnormalType.TURN_PASSIVE;
 		
 		_blockedInOlympiad = set.getBoolean("blockedInOlympiad", false);
 		
