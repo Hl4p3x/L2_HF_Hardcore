@@ -11,8 +11,8 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ManaHealOverTime" ticks="3">
-				<param power="70"/>
+			<effect name="ManaHealOverTime" ticks="2">
+				<param power="75"/>
 			</effect>
 		</for>
 	</skill>
