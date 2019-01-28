@@ -42,7 +42,7 @@ public class PresetBuffAction implements BoardAction {
             return paymentResult;
         }
 
-        int delay = GameTimeController.TICKS_PER_SECOND * GameTimeController.MILLIS_IN_TICK * 2;
+        int delay = GameTimeController.TICKS_PER_SECOND * GameTimeController.MILLIS_IN_TICK;
 
         if (targetHolder.isSummonTarget()) {
             List<FakeCast> fakeCasts = buffs.getBuffs().stream().map(buff -> new FakeCast(buff, delay, () -> buff.getSkill().applyEffects(targetHolder.getMaster(), targetHolder.getSummon()))).collect(Collectors.toList());
