@@ -271,12 +271,12 @@ mobs:
         count: "1-12"
       highest:
         stacks: "1"
-        chance: 7.0
-        count: "1-5"
+        chance: 10.0
+        count: "1-9"
       base_category_materials:
         stacks: "1"
-        chance: 16.0
-        count: "1-12"
+        chance: 12.0
+        count: "1-8"
   scrolls:
     weapon:
       d:

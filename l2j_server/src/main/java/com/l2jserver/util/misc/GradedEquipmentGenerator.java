@@ -118,7 +118,21 @@ public class GradedEquipmentGenerator {
             2130, // Gemstone D
             2131, // Gemstone C
             5220, // Metal Hardener
-            1893 // Oriharukon
+            1893, // Oriharukon
+            1883, // Steel Mold
+            1886, // Silver Mold
+            1892, // Blacksmith's Frame
+            4046, // Maestro Anvil Lock
+            1891, // Artisan's Frame
+            2132, // Gemstone B
+            4048, // Maestro Mold
+            5551, // Reorin's Mold
+            2133, // Gemstone A
+            5552, // Warsmith's Mold
+            4045, // Maestro Holder
+            5553, // Arcsmith's Anvil
+            4047, // Craftsman Mold
+            5554  // Warsmith's Holder
     );
 
     // Magic constant of full armor 0.616 to chest price ratio
