@@ -2426,14 +2426,9 @@ public final class L2PcInstance extends L2Playable {
         if (count > 0) {
             _inventory.addAdena(process, count, this, reference);
 
-            // Send update packet
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(_inventory.getAdenaInstance());
-                sendPacket(iu);
-            } else {
-                sendPacket(new ItemList(this, false));
-            }
+            InventoryUpdate iu = new InventoryUpdate();
+            iu.addItem(_inventory.getAdenaInstance());
+            sendPacket(iu);
         }
     }
 
@@ -2460,14 +2455,9 @@ public final class L2PcInstance extends L2Playable {
                 return false;
             }
 
-            // Send update packet
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(adenaItem);
-                sendPacket(iu);
-            } else {
-                sendPacket(new ItemList(this, false));
-            }
+            InventoryUpdate iu = new InventoryUpdate();
+            iu.addItem(adenaItem);
+            sendPacket(iu);
 
             if (sendMessage) {
                 SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED_ADENA);
@@ -2498,13 +2488,9 @@ public final class L2PcInstance extends L2Playable {
         if (count > 0) {
             _inventory.addAncientAdena(process, count, this, reference);
 
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(_inventory.getAncientAdenaInstance());
-                sendPacket(iu);
-            } else {
-                sendPacket(new ItemList(this, false));
-            }
+            InventoryUpdate iu = new InventoryUpdate();
+            iu.addItem(_inventory.getAncientAdenaInstance());
+            sendPacket(iu);
         }
     }
 
@@ -2532,13 +2518,9 @@ public final class L2PcInstance extends L2Playable {
                 return false;
             }
 
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                InventoryUpdate iu = new InventoryUpdate();
-                iu.addItem(ancientAdenaItem);
-                sendPacket(iu);
-            } else {
-                sendPacket(new ItemList(this, false));
-            }
+            InventoryUpdate iu = new InventoryUpdate();
+            iu.addItem(ancientAdenaItem);
+            sendPacket(iu);
 
             if (sendMessage) {
                 if (count > 1) {
@@ -2589,14 +2571,9 @@ public final class L2PcInstance extends L2Playable {
             // Add the item to inventory
             L2ItemInstance newitem = _inventory.addItem(process, item, this, reference);
 
-            // Send inventory update packet
-            if (!Config.FORCE_INVENTORY_UPDATE) {
-                InventoryUpdate playerIU = new InventoryUpdate();
-                playerIU.addItem(newitem);
-                sendPacket(playerIU);
-            } else {
-                sendPacket(new ItemList(this, false));
-            }
+            InventoryUpdate playerIU = new InventoryUpdate();
+            playerIU.addItem(newitem);
+            sendPacket(playerIU);
 
             // Update current load as well
             StatusUpdate su = new StatusUpdate(this);
@@ -2643,11 +2620,11 @@ public final class L2PcInstance extends L2Playable {
     /**
      * Adds item to Inventory and send a Server->Client InventoryUpdate packet to the L2PcInstance.
      *
-     * @param process      : String Identifier of process triggering this action
-     * @param itemId       : int Item Identifier of the item to be added
-     * @param count        : long Quantity of items to be added
-     * @param reference    : L2Object Object referencing current action like NPC selling item or previous item in transformation
-     * @param sendMessage  : boolean Specifies whether to send message to Client about this action
+     * @param process     : String Identifier of process triggering this action
+     * @param itemId      : int Item Identifier of the item to be added
+     * @param count       : long Quantity of items to be added
+     * @param reference   : L2Object Object referencing current action like NPC selling item or previous item in transformation
+     * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return the new or updated item
      */
     public L2ItemInstance addItem(String process, int itemId, long count, L2Object reference, boolean sendMessage) {
@@ -5018,13 +4995,9 @@ public final class L2PcInstance extends L2Playable {
             return;
         }
 
-        if (!Config.FORCE_INVENTORY_UPDATE) {
-            InventoryUpdate iu = new InventoryUpdate();
-            iu.addModifiedItem(arrows);
-            sendPacket(iu);
-        } else {
-            sendPacket(new ItemList(this, false));
-        }
+        InventoryUpdate iu = new InventoryUpdate();
+        iu.addModifiedItem(arrows);
+        sendPacket(iu);
     }
 
     /**
