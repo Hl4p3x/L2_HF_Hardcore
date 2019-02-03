@@ -9,21 +9,21 @@ import java.util.StringJoiner;
 
 public class NpcDropData {
 
-    @JsonProperty("npc_id")
-    private int npcId;
+    @JsonProperty("npc_ids")
+    private List<Integer> npcIds;
     @JsonProperty("drop_categories")
     private List<DynamicDropCategory> categories;
 
     public NpcDropData() {
     }
 
-    public NpcDropData(int npcId, List<DynamicDropCategory> categories) {
-        this.npcId = npcId;
+    public NpcDropData(List<Integer> npcIds, List<DynamicDropCategory> categories) {
+        this.npcIds = npcIds;
         this.categories = categories;
     }
 
-    public int getNpcId() {
-        return npcId;
+    public List<Integer> getNpcIds() {
+        return npcIds;
     }
 
     public List<DynamicDropCategory> getCategories() {
@@ -33,7 +33,7 @@ public class NpcDropData {
     @Override
     public String toString() {
         return new StringJoiner(", ", NpcDropData.class.getSimpleName() + "[", "]")
-                .add(Objects.toString(npcId))
+                .add(Objects.toString(npcIds))
                 .add(Objects.toString(categories))
                 .toString();
     }

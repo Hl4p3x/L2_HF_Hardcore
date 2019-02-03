@@ -1,6 +1,5 @@
 package com.l2jserver.gameserver.model.actor.templates.drop.stats;
 
-import com.google.common.base.Functions;
 import com.l2jserver.gameserver.datatables.categorized.*;
 import com.l2jserver.gameserver.datatables.categorized.interfaces.EquipmentProvider;
 import com.l2jserver.gameserver.model.L2RecipeList;
@@ -62,7 +61,8 @@ public class DynamicDropTable {
             allCustomDropIds.addAll(allDynamicDropData.getMobs().getCustomDropEntries().stream().flatMap(entry -> entry.getDrop().getIds().stream()).collect(Collectors.toSet()));
             allCustomDropIds.addAll(allDynamicDropData.getRaid().getCustomDropEntries().stream().flatMap(entry -> entry.getDrop().getIds().stream()).collect(Collectors.toSet()));
 
-            npcDropData = allDynamicDropData.getNpcs().stream().collect(Collectors.toMap(NpcDropData::getNpcId, Functions.identity()));
+            npcDropData.clear();
+            allDynamicDropData.getNpcs().forEach(npcDropEntry -> npcDropEntry.getNpcIds().forEach(id -> npcDropData.put(id, npcDropEntry)));
         } catch (IOException e) {
             throw new IllegalStateException("Could not load Dynamic Drop Rates configuration from " + path, e);
         }

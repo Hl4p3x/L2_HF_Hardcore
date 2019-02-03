@@ -1840,7 +1840,7 @@ public final class Config
 			ALT_VALIDATE_TRIGGER_SKILLS = character.getBoolean("AltValidateTriggerSkills", false);
 			ALT_DROPPABLE_AUGMENTED_ITEMS = character.getBoolean("AltDroppableAugmentedItems", true);
 			ALT_DISABLE_DEATH_PENALTY = character.getBoolean("AltDisableDeathPenalty", false);
-			PLAYER_MOVEMENT_BLOCK_TIME = character.getInt("NpcTalkBlockingTime", 0) * 1000;
+			PLAYER_MOVEMENT_BLOCK_TIME = character.getInt("NpcTalkBlockingTime", 0);
 			ALT_AUTO_LEARN_SKILLS_ON_SP = character.getBoolean("AltAutoLearnSkillsOnSp", false);
 
 			DMG_PENALTY_LEVEL_DIFF = character.getInt("AltLevelDiffForDmgPenalty", 6);
