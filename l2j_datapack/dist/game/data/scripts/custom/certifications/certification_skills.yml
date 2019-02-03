@@ -1,0 +1,18 @@
+emergent:
+  - 631 # Emergent Ability - Attack
+  - 633 # Emergent Ability - Empower
+  - 634 # Emergent Ability - Magic Defense
+  - 632 # Emergent Ability - Defense
+mastery:
+  - 637 # Master Ability - Attack
+  - 638 # Master Ability - Empower
+  - 639 # Master Ability - Casting
+  - 640 # Master Ability - Focus
+  - 799 # Master Ability - Defense
+  - 800 # Master Ability - Magic Defense
+  - 10283 # Certificate - Rogue Ability
+  - 10282 # Certificate - Knight Ability
+  - 10286 # Certificate - Summoner Ability
+  - 10284 # Certificate - Wizard Ability
+  - 10285 # Certificate - Healer Ability
+  - 10287 # Certificate - Enchanter Ability
