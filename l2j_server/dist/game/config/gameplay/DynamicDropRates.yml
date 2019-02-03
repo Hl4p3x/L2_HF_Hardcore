@@ -482,7 +482,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 0.2
+        chance: 0.4
       ids:
       - 13071 # Red Soul Crystal - Stage 16
       - 13073 # Green Soul Crystal - Stage 16
@@ -1093,7 +1093,7 @@ raid:
     drop:
       stats:
         count: "1-4"
-        chance: 10.0
+        chance: 14.0
       ids:
       - 13071 # Red Soul Crystal - Stage 16
       - 13073 # Green Soul Crystal - Stage 16
@@ -1218,10 +1218,45 @@ raid:
         - 9576 # Top-Grade Life Stone - Level 80
 
 npcs:
-  - npc_id: 25447
+  - npc_id: 25447 # Immortal Savior Mardil
     drop_categories:
       - name: "Exclusive Weapons"
         stats:
           chance: 60
         ids:
           - 21973 # Mardil's Fan
+  - npc_id: 22857 # Knoriks
+    drop_categories:
+      - name: "Knoriks Special SA"
+        stats:
+          count: "1"
+          chance: 8.0
+        ids:
+          - 13071 # Red Soul Crystal - Stage 16
+          - 13073 # Green Soul Crystal - Stage 16
+          - 13072 # Blue Soul Crystal - Stage 16
+  - npc_id:
+      - 29181 # Zaken
+      - 29179 # Freya
+      - 29047 # Frintezza
+    drop_categories:
+      - name: "Soul Crystals - Vorpal"
+        stats:
+          count: "3-12"
+          chance: 100.0
+        ids:
+          - 15541 # Red Soul Crystal - Stage 17
+          - 15543 # Green Soul Crystal - Stage 17
+          - 15542 # Blue Soul Crystal - Stage 17
+  - npc_id:
+      - 29068 # Antharas
+      - 29028 # Valakas
+    drop_categories:
+      - name: "Soul Crystals - Elegia"
+        stats:
+          count: "2-8"
+          chance: 100.0
+        ids:
+          - 15826 # Red Soul Crystal - Stage 18
+          - 15828 # Green Soul Crystal - Stage 18
+          - 15827 # Blue Soul Crystal - Stage 18
