@@ -59,3 +59,9 @@
     x: 80662
     y: 145477
     z: -3536
+- name: "Town of Shuttgart"
+  code: "shuttgart"
+  coordinates:
+    x: 87358
+    y: -141982
+    z: -1341
