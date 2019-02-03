@@ -528,19 +528,10 @@ public class PcInventory extends Inventory
 			{
 				_ancientAdena = item;
 			}
-			if (actor != null)
-			{
-				// Send inventory update packet
-				if (!Config.FORCE_INVENTORY_UPDATE)
-				{
-					InventoryUpdate playerIU = new InventoryUpdate();
-					playerIU.addItem(item);
-					actor.sendPacket(playerIU);
-				}
-				else
-				{
-					actor.sendPacket(new ItemList(actor, false));
-				}
+			if (actor != null) {
+                InventoryUpdate playerIU = new InventoryUpdate();
+                playerIU.addItem(item);
+                actor.sendPacket(playerIU);
 				
 				// Update current load as well
 				StatusUpdate su = new StatusUpdate(actor);
