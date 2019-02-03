@@ -547,6 +547,14 @@ mobs:
         chance: 0.8
       ids:
         - 9627 # Giant's Codex - Mastery
+  - name: "Noble Enhancement Stone"
+    level-range: "85-86"
+    drop:
+      stats:
+        count: "5-60"
+        chance: 10
+      ids:
+        - 14052 # Noble Enhancement Stone
   - name: "Life Stones - 84"
     level-range: "85-86"
     drop:
@@ -1156,6 +1164,14 @@ raid:
         chance: 7
       ids:
         - 9627 # Giant's Codex - Mastery
+  - name: "Noble Enhancement Stone"
+    level-range: "85-86"
+    drop:
+      stats:
+        count: "700-2000"
+        chance: 50
+      ids:
+        - 14052 # Noble Enhancement Stone
   - name: "Life Stones - 84"
     level-range: "85-86"
     drop:
@@ -1230,11 +1246,17 @@ npcs:
       - name: "Knoriks Special SA"
         stats:
           count: "1"
-          chance: 8.0
+          chance: 7.0
         ids:
           - 13071 # Red Soul Crystal - Stage 16
           - 13073 # Green Soul Crystal - Stage 16
           - 13072 # Blue Soul Crystal - Stage 16
+      - name: "Knoriks Special Noble Enhancement"
+          stats:
+            count: "100-600"
+            chance: 15.0
+          ids:
+            - 14052 # Noble Enhancement Stone
   - npc_id:
       - 29181 # Zaken
       - 29179 # Freya
