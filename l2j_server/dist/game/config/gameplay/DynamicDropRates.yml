@@ -1234,14 +1234,16 @@ raid:
         - 9576 # Top-Grade Life Stone - Level 80
 
 npcs:
-  - npc_id: 25447 # Immortal Savior Mardil
+  - npc_ids:
+      - 25447 # Immortal Savior Mardil
     drop_categories:
       - name: "Exclusive Weapons"
         stats:
           chance: 60
         ids:
           - 21973 # Mardil's Fan
-  - npc_id: 22857 # Knoriks
+  - npc_ids:
+      - 22857 # Knoriks
     drop_categories:
       - name: "Knoriks Special SA"
         stats:
@@ -1257,7 +1259,7 @@ npcs:
           chance: 15.0
         ids:
           - 14052 # Noble Enhancement Stone
-  - npc_id:
+  - npc_ids:
       - 29181 # Zaken
       - 29179 # Freya
       - 29047 # Frintezza
@@ -1270,7 +1272,7 @@ npcs:
           - 15541 # Red Soul Crystal - Stage 17
           - 15543 # Green Soul Crystal - Stage 17
           - 15542 # Blue Soul Crystal - Stage 17
-  - npc_id:
+  - npc_ids:
       - 29068 # Antharas
       - 29028 # Valakas
     drop_categories:
