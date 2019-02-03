@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
 	<skill id="10000" levels="1" name="Mana Drug">
-		<set name="abnormalTime" val="15" />
+		<set name="abnormalTime" val="10"/>
 		<set name="displayId" val="646"/>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -11,7 +11,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ManaHealOverTime" ticks="2">
+			<effect name="ManaHealOverTime" ticks="5">
 				<param power="75"/>
 			</effect>
 		</for>

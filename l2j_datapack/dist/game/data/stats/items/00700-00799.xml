@@ -369,8 +369,6 @@
 		<cond msgId="113" addName="1">
 			<and>
 				<player flyMounted="false"/>
-				<player has_karma="false"/>
-				<player pvp_flag="false"/>
 			</and>
 		</cond>
 	</item>
@@ -404,8 +402,6 @@
 		<cond msgId="113" addName="1">
 			<and>
 				<player flyMounted="false"/>
-				<player has_karma="false"/>
-				<player pvp_flag="false"/>
 			</and>
 		</cond>
 	</item>
