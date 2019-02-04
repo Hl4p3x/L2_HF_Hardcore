@@ -65,3 +65,21 @@
     x: 87358
     y: -141982
     z: -1341
+- name: "Floran Village"
+  code: "floran"
+  coordinates:
+    x: 17144
+    y: 170156
+    z: -3502
+- name: "Town of Oren"
+  code: "oren"
+  coordinates:
+    x: 82461
+    y: 53672
+    z: -1488
+- name: "Heine"
+  code: "heine"
+  coordinates:
+    x: 111867
+    y: 220163
+    z: -3672
