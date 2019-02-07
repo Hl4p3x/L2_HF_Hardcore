@@ -1,0 +1,1 @@
+select ch.charId, ch.char_name, onem.olympiad_points from olympiad_nobles_eom onem join characters ch on onem.charId = ch.charId left join heroes hr on hr.charId = ch.charId  where onem.competitions_done >= 15 AND hr.charId IS NULL;

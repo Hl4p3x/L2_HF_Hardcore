@@ -1,0 +1,1 @@
+UPDATE items it JOIN olympiad_nobles_eom onem ON onem.charId=it.owner_id LEFT JOIN heroes hr ON hr.charId = it.owner_id SET it.count=(it.count + 75000 + (onem.olympiad_points * 1000)) WHERE it.item_id = 13722 AND onem.competitions_done >= 15 AND hr.charId IS NULL;
