@@ -18,11 +18,6 @@
  */
 package handlers.targethandlers;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
-
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -33,6 +28,11 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Area Friendly target handler implementation.
@@ -120,52 +120,45 @@ public class AreaFriendly implements ITargetTypeHandler
 			return false;
 		}
 		
-		if (target.isPlayable())
-		{
+		if (target.isPlayable()) {
 			L2PcInstance targetPlayer = target.getActingPlayer();
-			
-			if (activeChar == targetPlayer)
-			{
+
+			if (activeChar == targetPlayer) {
 				return true;
 			}
-			
-			if (targetPlayer.inObserverMode() || targetPlayer.isInOlympiadMode())
-			{
+
+			if (targetPlayer.inObserverMode() || targetPlayer.isInOlympiadMode()) {
 				return false;
 			}
-			
-			if (activeChar.isInDuelWith(target))
-			{
+
+			if (activeChar.isInDuelWith(target)) {
 				return false;
 			}
-			
-			if (activeChar.isInPartyWith(target))
-			{
+
+			if (activeChar.isInPartyWith(target)) {
 				return true;
 			}
-			
+
 			// Only siege allies.
-			if (activeChar.isInSiege() && !activeChar.isOnSameSiegeSideWith(targetPlayer))
-			{
+			if (activeChar.isInSiege() && !activeChar.isOnSameSiegeSideWith(targetPlayer)) {
 				return false;
 			}
-			
-			if (target.isInsideZone(ZoneId.PVP))
-			{
+
+			if (target.isInsideZone(ZoneId.PVP)) {
 				return false;
 			}
-			
-			if (activeChar.isInClanWith(target) || activeChar.isInAllyWith(target) || activeChar.isInCommandChannelWith(target))
-			{
+
+			if (activeChar.isInClanWith(target) || activeChar.isInAllyWith(target) || activeChar.isInCommandChannelWith(target)) {
 				return true;
 			}
-			
-			if ((targetPlayer.getPvpFlag() > 0) || (targetPlayer.getKarma() > 0))
-			{
+
+			if ((targetPlayer.getPvpFlag() > 0) || (targetPlayer.getKarma() > 0)) {
 				return false;
 			}
+			return true;
+		} else {
+			return false;
 		}
-		return true;
 	}
 	
 	public static class CharComparator implements Comparator<L2Character>
