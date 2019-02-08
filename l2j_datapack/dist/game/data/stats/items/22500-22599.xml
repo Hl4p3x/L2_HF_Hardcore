@@ -24,4 +24,40 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 	</item>
+	<item id="22568" name="Improved Ring of Core" type="Armor">
+		<set name="icon" val="icon.accessory_ring_of_core_i00"/>
+		<set name="default_action" val="EQUIP"/>
+		<set name="bodypart" val="rfinger;lfinger"/>
+		<set name="immediate_effect" val="true"/>
+		<set name="crystal_count" val="69"/>
+		<set name="crystal_type" val="S80"/>
+		<set name="material" val="GOLD"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="870000"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="item_skill" val="3563-1"/>
+		<for>
+			<add order="0" stat="mDef" val="65"/>
+			<add stat="maxMp" val="26"/>
+			<enchant stat="mDef" val="0"/>
+		</for>
+	</item>
+	<item id="22569" name="Improved Earring of Orfen" type="Armor">
+		<set name="icon" val="icon.accessory_earring_of_orfen_i00"/>
+		<set name="default_action" val="EQUIP"/>
+		<set name="bodypart" val="rear;lear"/>
+		<set name="immediate_effect" val="true"/>
+		<set name="crystal_count" val="104"/>
+		<set name="crystal_type" val="S80"/>
+		<set name="material" val="GOLD"/>
+		<set name="weight" val="150"/>
+		<set name="price" val="1300000"/>
+		<set name="enchant_enabled" val="1"/>
+		<set name="item_skill" val="3560-1"/>
+		<for>
+			<add order="0" stat="mDef" val="98"/>
+			<add stat="maxMp" val="38"/>
+			<enchant stat="mDef" val="0"/>
+		</for>
+	</item>
 </list>

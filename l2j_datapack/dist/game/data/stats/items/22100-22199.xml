@@ -1013,9 +1013,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3561-1" /> <!-- Guess -->
 		<for>
-			<add order="0" stat="mDef" val="48" />
-			<add stat="maxMp" val="21" />
-			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="65"/>
+			<add stat="maxMp" val="26"/>
+			<enchant stat="mDef" val="0"/>
 		</for>
 	</item>
 	<item id="22174" type="Armor" name="Improved Ring of Queen Ant">
@@ -1025,16 +1025,16 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="82" />
-		<set name="crystal_type" val="B" />
+		<set name="crystal_type" val="S80"/>
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="616000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="item_skill" val="3562-1" /> <!-- Guess -->
 		<for>
-			<add order="0" stat="mDef" val="48" />
-			<add stat="maxMp" val="21" />
-			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="65"/>
+			<add stat="maxMp" val="26"/>
+			<enchant stat="mDef" val="0"/>
 		</for>
 	</item>
 	<item id="22175" type="Armor" name="Improved Blessed Earring of Zaken">
