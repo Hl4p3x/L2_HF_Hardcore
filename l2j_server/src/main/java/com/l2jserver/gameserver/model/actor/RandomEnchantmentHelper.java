@@ -21,7 +21,7 @@ public class RandomEnchantmentHelper {
     }
 
     public static int rollRandomDropEnchant() {
-        double random = Rnd.getDouble(100);
+        double random = Rnd.randomHundredth();
 
         List<RangeChanceHolder> chances = Config.ALT_DROP_ENCHANTED_CHANCES;
         for (RangeChanceHolder chance : chances) {

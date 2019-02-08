@@ -336,7 +336,7 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
 
         List<ChancedReward> chancedRewards = CHANCED_REWARDS_MAP.getOrDefault(consecutiveLogins, Collections.emptyList());
         chancedRewards.forEach(chancedReward -> {
-            if ((Rnd.get(100) + Rnd.get()) < chancedReward.getChance()) {
+            if ((Rnd.randomHundredth()) < chancedReward.getChance()) {
                 attachments.addItem(
                         "ClanLoginBonus",
                         chancedReward.getReward().getItemId(),
@@ -346,12 +346,12 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
             }
         });
 
-        if (consecutiveLogins == 3 && (Rnd.get(100) + Rnd.get()) < 15) {
+        if (consecutiveLogins == 3 && Rnd.get(100) < 15) {
             Reward reward = RndCollection.random(ACCESSORY_REWARDS);
             attachments.addItem("ClanLoginBonus", reward.getItemId(), reward.getAmount(), null, null);
         }
 
-        if (consecutiveLogins == 4 && (Rnd.get(100) + Rnd.get()) < 10) {
+        if (consecutiveLogins == 4 && Rnd.get(100) < 10) {
             Reward reward = RndCollection.random(SET_REWARDS);
             attachments.addItem("ClanLoginBonus", reward.getItemId(), reward.getAmount(), null, null);
         }

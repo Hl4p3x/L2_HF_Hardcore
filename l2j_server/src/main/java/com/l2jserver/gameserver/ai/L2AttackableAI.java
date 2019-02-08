@@ -896,7 +896,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
                 double percentage = (npc.getCurrentHp() / npc.getMaxHp()) * 100;
                 if (npc.isMinion()) {
                     L2Character leader = npc.getLeader();
-                    if ((leader != null) && !leader.isDead() && (Rnd.get(100) > ((leader.getCurrentHp() / leader.getMaxHp()) * 100))) {
+                    if ((leader != null) && !leader.isDead() && (Rnd.randomHundredth() > ((leader.getCurrentHp() / leader.getMaxHp()) * 100))) {
                         for (Skill healSkill : aiHealSkills) {
                             if (healSkill.getTargetType() == L2TargetType.SELF) {
                                 continue;
@@ -925,7 +925,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
                     }
                 }
 
-                if (Rnd.get(100) < ((100 - percentage) / 3)) {
+                if (Rnd.randomHundredth() < ((100 - percentage) / 3)) {
                     for (Skill sk : aiHealSkills) {
                         if (!checkSkillCastConditions(npc, sk)) {
                             continue;

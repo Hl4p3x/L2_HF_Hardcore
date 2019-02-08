@@ -998,11 +998,11 @@ public final class Formulas {
         } else {
             rate = (int) attacker.getStat().calcStat(Stats.CRITICAL_RATE_POS, attacker.getStat().getCriticalHit(target, null));
         }
-        return (target.getStat().calcStat(Stats.DEFENCE_CRITICAL_RATE, rate, null, null) + target.getStat().calcStat(Stats.DEFENCE_CRITICAL_RATE_ADD, 0, null, null)) > Rnd.get(1000);
+        return (target.getStat().calcStat(Stats.DEFENCE_CRITICAL_RATE, rate, null, null) + target.getStat().calcStat(Stats.DEFENCE_CRITICAL_RATE_ADD, 0, null, null)) > Rnd.randomThousandth();
     }
 
     public static final boolean calcMCrit(double mRate) {
-        return mRate > Rnd.get(1000);
+        return mRate > Rnd.randomThousandth();
     }
 
     /**
@@ -1043,7 +1043,7 @@ public final class Formulas {
         // Adjust the rate to be between 1 and 99
         rate = Math.max(Math.min(rate, 99), 1);
 
-        return Rnd.get(100) < rate;
+        return Rnd.randomHundredth() < rate;
     }
 
     /**
@@ -1103,7 +1103,7 @@ public final class Formulas {
         chance = Math.max(chance, 200);
         chance = Math.min(chance, 980);
 
-        return chance < Rnd.get(1000);
+        return chance < Rnd.randomThousandth();
     }
 
     public static long calculateAccuracyBenefit(int levelDiff) {
@@ -1156,7 +1156,7 @@ public final class Formulas {
 
         if ((shldRate > 0) && ((100 - Config.ALT_PERFECT_SHLD_BLOCK) < Rnd.get(100))) {
             shldSuccess = SHIELD_DEFENSE_PERFECT_BLOCK;
-        } else if (shldRate > Rnd.get(100)) {
+        } else if (shldRate > Rnd.randomHundredth()) {
             shldSuccess = SHIELD_DEFENSE_SUCCEED;
         }
 
@@ -1302,7 +1302,7 @@ public final class Formulas {
             Debug.sendSkillDebug(attacker, target, skill, set);
         }
 
-        if (finalRate <= Rnd.get(100)) {
+        if (finalRate <= Rnd.randomHundredth()) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
             sm.addCharName(target);
             sm.addSkillName(skill);
@@ -1365,7 +1365,7 @@ public final class Formulas {
             Debug.sendSkillDebug(attacker.getOwner(), target, skill, set);
         }
 
-        return (Rnd.get(100) < finalRate);
+        return (Rnd.randomHundredth() < finalRate);
     }
 
     public static boolean calcMagicSuccess(L2Character attacker, L2Character target, Skill skill) {
@@ -1397,7 +1397,7 @@ public final class Formulas {
         }
         // general magic resist
         final double resModifier = target.calcStat(Stats.MAGIC_SUCCESS_RES, 1, null, skill);
-        int rate = 100 - Math.round((float) (lvlModifier * targetModifier * resModifier));
+        double rate = 100 - lvlModifier * targetModifier * resModifier;
 
         if (attacker.isDebug()) {
             final StatsSet set = new StatsSet();
@@ -1409,7 +1409,7 @@ public final class Formulas {
             Debug.sendSkillDebug(attacker, target, skill, set);
         }
 
-        return (Rnd.get(100) < rate);
+        return (Rnd.randomHundredth() < rate);
     }
 
     public static double calcManaDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean sps, boolean bss, boolean mcrit) {
@@ -1497,7 +1497,7 @@ public final class Formulas {
         if (skill.isMagic() || skill.isDebuff()) {
             return false;
         }
-        if (Rnd.get(100) < target.calcStat(Stats.P_SKILL_EVASION, 0, null, skill)) {
+        if (Rnd.randomHundredth() < target.calcStat(Stats.P_SKILL_EVASION, 0, null, skill)) {
             if (activeChar.isPlayer()) {
                 SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGES_ATTACK);
                 sm.addString(target.getName());
@@ -1538,7 +1538,7 @@ public final class Formulas {
                 }
             }
             initVal *= actor.getStat().calcStat(Stats.SKILL_CRITICAL_PROBABILITY, 1, null, null);
-            return (Rnd.get(100) < initVal);
+            return (Rnd.randomHundredth() < initVal);
         }
 
         return false;
@@ -1681,7 +1681,7 @@ public final class Formulas {
         }
 
         final double chance = target.calcStat(Stats.VENGEANCE_SKILL_PHYSICAL_DAMAGE, 0, target, skill);
-        if (Rnd.get(100) < chance) {
+        if (Rnd.randomHundredth() < chance) {
             if (target.isPlayer()) {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.COUNTERED_C1_ATTACK);
                 sm.addCharName(attacker);
@@ -1718,7 +1718,7 @@ public final class Formulas {
             return false;
         }
         final double reflectChance = target.calcStat(skill.isMagic() ? Stats.REFLECT_SKILL_MAGIC : Stats.REFLECT_SKILL_PHYSIC, 0, null, skill);
-        return reflectChance > Rnd.get(100);
+        return reflectChance > Rnd.randomHundredth();
     }
 
     /**
@@ -1756,7 +1756,7 @@ public final class Formulas {
             set.set("rate", rate);
             Debug.sendSkillDebug(activeChar, target, skill, set);
         }
-        return Rnd.get(100) < rate;
+        return Rnd.randomHundredth() < rate;
     }
 
     public static List<BuffInfo> calcCancelStealEffects(L2Character activeChar, L2Character target, Skill skill, String slot, int rate, int max) {
@@ -1887,7 +1887,7 @@ public final class Formulas {
             levelMod = (((skill.getMagicLevel() + baseChance) - targetLevel) + 30);
         }
 
-        return Rnd.get(100) < (
+        return Rnd.randomHundredth() < (
                 ((levelMod - target.getINT()) * calcAttributeBonus(attacker, target, skill))
                         * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
     }

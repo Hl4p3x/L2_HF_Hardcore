@@ -93,8 +93,8 @@ public final class Rnd
 		 * @param n The superior limit (exclusive)
 		 * @return A random integer number from 0 to n-1
 		 */
-        public final int get(final int n) {
-            return _random.nextInt(n);
+		public final int get(final int n) {
+			return Rnd.nextInt(n);
 		}
 		
 		/**
@@ -177,6 +177,10 @@ public final class Rnd
 		public final int nextInt()
 		{
 			return _random.nextInt();
+		}
+
+		public final int nextInt(int n) {
+			return _random.nextInt(n);
 		}
 		
 		/**
@@ -302,7 +306,7 @@ public final class Rnd
 	
 	private static final long MULTIPLIER = 0x5DEECE66DL;
 
-    private static final RandomContainer rnd = newInstance(RandomType.SECURE);
+	private static final RandomContainer rnd = newInstance(RandomType.UNSECURE_THREAD_LOCAL);
 	
 	protected static volatile long SEED_UNIQUIFIER = 8682522807148012L;
 	
@@ -328,18 +332,19 @@ public final class Rnd
 	 */
 	public static final int get(final int n)
 	{
-		if (n == 0) {
-			return 0;
-		}
-		return rnd.get(n);
+		return rnd.nextInt(n);
 	}
 
-	public static final double getDouble(final int n) {
-		return rnd.get(n * 100) / 100D;
+	public static final double randomThousandth() {
+		return 1000 * Rnd.nextDouble();
+	}
+
+	public static final double randomHundredth() {
+		return 100 * Rnd.nextDouble();
 	}
 
 	public static boolean rollAgainst(double limit) {
-		return Rnd.getDouble(100) <= limit;
+		return Rnd.randomHundredth() <= limit;
 	}
 
 	/**
