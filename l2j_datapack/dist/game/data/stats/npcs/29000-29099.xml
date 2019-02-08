@@ -1,12 +1,14 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-  <npc id="29001" level="40" type="L2GrandBoss" name="Queen Ant">
+  <npc id="29001" level="85" type="L2GrandBoss" name="Queen Ant">
     <!-- Confirmed CT2.5 -->
     <race>BUG</race>
     <sex>FEMALE</sex>
     <acquire expRate="1362.20985" sp="140740" raidPoints="1680"/>
+
     <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-      <vitals hp="96596" hpRegen="208" mp="300.8" mpRegen="2.1"/>
-      <attack physical="105" magical="8" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="3155900.34672804" hpRegen="818.275841116973" mp="177740.0" mpRegen="300"/>
+      <attack physical="8022.87946266377" magical="2559.9693577641" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="1252" magical="229" evasion="-18"/>
       <attribute>
         <defence fire="-83" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -17,6 +19,7 @@
       </speed>
       <hitTime>370</hitTime>
     </stats>
+
     <status undying="false" noSleepMode="true"/>
     <skillList>
       <skill id="4019" level="1"/> <!--Decrease Speed -->
@@ -41,60 +44,107 @@
     </ai>
     <dropLists>
       <death>
-        <group chance="50">
-          <item id="2499" min="1" max="1" chance="12"/> <!-- Elven Long Sword -->
-          <item id="70" min="1" max="1" chance="12"/> <!-- Claymore -->
-          <item id="159" min="1" max="1" chance="11"/> <!-- Bonebreaker -->
-          <item id="189" min="1" max="1" chance="11"/> <!-- Staff of Life -->
-          <item id="188" min="1" max="1" chance="11"/> <!-- Ghost Staff -->
-          <item id="225" min="1" max="1" chance="11"/> <!-- Mithril Dagger -->
-          <item id="262" min="1" max="1" chance="10"/> <!-- Scallop Jamadhr -->
-          <item id="280" min="1" max="1" chance="11"/> <!-- Light Crossbow -->
-          <item id="297" min="1" max="1" chance="11"/> <!-- Glaive -->
+        <item id="13893" min="1" max="1" chance="10"/> <!-- Sealed Holy Spirit's Cloak -->
+        <group chance="40">
+          <item id="15560" min="1" max="1" chance="6"/> <!-- Vigwik Axe -->
+          <item id="15561" min="1" max="1" chance="6"/> <!-- Devilish Maul -->
+          <item id="15562" min="1" max="1" chance="6"/> <!-- Feather Eye Blade -->
+          <item id="15563" min="1" max="1" chance="6"/> <!-- Octo Claw -->
+          <item id="15564" min="1" max="1" chance="6"/> <!-- Doubletop Spear -->
+          <item id="15565" min="1" max="1" chance="6"/> <!-- Rising Star -->
+          <item id="15566" min="1" max="1" chance="6"/> <!-- Black Visage -->
+          <item id="15567" min="1" max="1" chance="6"/> <!-- Veniplant Sword -->
+          <item id="15568" min="1" max="1" chance="6"/> <!-- Skull Carnium Bow -->
+          <item id="15558" min="1" max="1" chance="6"/> <!-- Periel Sword -->
+          <item id="15559" min="1" max="1" chance="6"/> <!-- Skull Edge -->
+        </group>
+        <group chance="60">
+          <item id="15745" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Circlet -->
+          <item id="15757" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shoes -->
+          <item id="15759" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Sigil -->
+          <item id="15748" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Tunic -->
+          <item id="15751" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Stockings -->
+          <item id="15754" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gloves -->
+        </group>
+        <group chance="60">
+          <item id="15747" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Breastplate -->
+          <item id="15750" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Legging -->
+          <item id="15756" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Boots -->
+          <item id="15753" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Gloves -->
+          <item id="15744" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Helmet -->
+        </group>
+        <group chance="60">
+          <item id="15743" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Helmet -->
+          <item id="15746" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Breastplate -->
+          <item id="15749" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gaiter -->
+          <item id="15752" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gauntlet -->
+          <item id="15755" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Boots -->
+          <item id="15758" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shield -->
+        </group>
+        <group chance="60">
+          <item id="15763" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Ring -->
+          <item id="15764" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Earring -->
+          <item id="15765" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Necklace -->
+        </group>
+        <group chance="30">
+          <item id="13143" min="1" max="1" chance="5.92"/> <!-- Sealed Vesper Helmet -->
+          <item id="13144" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Helmet -->
+          <item id="13145" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Circlet -->
+          <item id="14109" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gauntlet -->
+          <item id="14113" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Gloves -->
+          <item id="14116" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gloves -->
+          <item id="14110" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Boots -->
+          <item id="14114" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Boots -->
+          <item id="14117" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Shoes -->
+          <item id="14111" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Shield -->
+          <item id="13887" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Sigil -->
+          <item id="14105" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Breastplate -->
+          <item id="14106" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Breastplate -->
+          <item id="14107" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Tunic -->
+          <item id="14108" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gaiters -->
+          <item id="14112" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Leggings -->
+          <item id="14115" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Stockings -->
+        </group>
+        <group chance="70">
+          <item id="14162" min="1" max="1" chance="33.4"/> <!-- Sealed Vesper Ring -->
+          <item id="14160" min="1" max="1" chance="33.3"/> <!-- Sealed Vesper Earring -->
+          <item id="14161" min="1" max="1" chance="33.3"/> <!-- Sealed Vesper Necklace -->
         </group>
         <group chance="100">
-          <item id="851" min="1" max="2" chance="35"/> <!-- Omen Beast's Eye Earring -->
-          <item id="914" min="1" max="2" chance="30"/> <!-- Necklace of Darkness -->
-          <item id="882" min="1" max="2" chance="35"/> <!-- Mithril Ring -->
-        </group>
-        <group chance="75">
-          <item id="353" min="1" max="2" chance="50"/> <!-- Half Plate Armor -->
-          <item id="380" min="1" max="2" chance="50"/> <!-- Plate Gaiters -->
-        </group>
-        <group chance="85">
-          <item id="396" min="1" max="2" chance="50"/> <!-- Salamander Skin Mail -->
-          <item id="438" min="1" max="2" chance="50"/> <!-- Sage's Rag -->
+          <item id="1538" min="1" max="10" chance="50"/> <!-- Blessed Scroll of Escape -->
         </group>
         <group chance="100">
-          <item id="2412" min="1" max="3" chance="20"/> <!-- Plate Helmet -->
-          <item id="1125" min="1" max="3" chance="20"/> <!-- Assault Boots -->
-          <item id="607" min="1" max="3" chance="20"/> <!-- Ogre Power Gauntlets -->
-          <item id="630" min="1" max="3" chance="20"/> <!-- Square Shield -->
-          <item id="955" min="1" max="3" chance="20"/> <!-- Scroll: Enchant Weapon (D-Grade) -->
+          <item id="3936" min="1" max="10" chance="50"/> <!-- Blessed Scroll of Resurrection -->
         </group>
         <group chance="100">
-          <item id="57" min="140000" max="170000" chance="100"/> <!-- Adena -->
+          <item id="57" min="9000000" max="11100000" chance="100"/> <!-- Adena -->
         </group>
         <group chance="100">
-          <item id="57" min="140000" max="170000" chance="100"/> <!-- Adena -->
+          <item id="16162" min="2" max="4" chance="60"/> <!-- High-Grade Life Stone - Level 85 -->
+          <item id="16166" min="2" max="4" chance="40"/> <!-- High-Grade Life Stone - Level 86 -->
         </group>
         <group chance="100">
-          <item id="57" min="140000" max="170000" chance="100"/> <!-- Adena -->
+          <item id="22174" min="1" max="1" chance="100"/> <!-- Improved Ring of Queen Ant -->
         </group>
-        <group chance="100">
-          <item id="57" min="140000" max="170000" chance="100"/> <!-- Adena -->
-        </group>
-        <group chance="100">
-          <item id="57" min="140000" max="170000" chance="100"/> <!-- Adena -->
-        </group>
-        <group chance="100">
-          <item id="57" min="140000" max="170000" chance="100"/> <!-- Adena -->
-        </group>
-        <group chance="100">
-          <item id="57" min="120000" max="150000" chance="100"/> <!-- Adena -->
-        </group>
-        <group chance="100">
-          <item id="6660" min="1" max="1" chance="100"/> <!-- Ring of Queen Ant -->
+        <group chance="52.264">
+          <item id="14170" min="1" max="1" chance="5.7764"/> <!-- Forgotten Scroll - Seed of Revenge -->
+          <item id="14177" min="1" max="1" chance="5.6387"/> <!-- Forgotten Scroll - Ghost Walking -->
+          <item id="14181" min="1" max="1" chance="5.6195"/> <!-- Forgotten Scroll - Dread Pool -->
+          <item id="14179" min="1" max="1" chance="5.6081"/> <!-- Forgotten Scroll - Arrow Rain -->
+          <item id="14175" min="1" max="1" chance="5.6081"/> <!-- Forgotten Scroll - Exciting Adventure -->
+          <item id="14176" min="1" max="1" chance="5.6042"/> <!-- Forgotten Scroll - Wind Riding -->
+          <item id="14182" min="1" max="1" chance="5.6042"/> <!-- Forgotten Scroll - Force of Destruction -->
+          <item id="14178" min="1" max="1" chance="5.5871"/> <!-- Forgotten Scroll - Flame Hawk -->
+          <item id="14173" min="1" max="1" chance="5.5851"/> <!-- Forgotten Scroll - Eva's Will / Touch of Eva -->
+          <item id="14174" min="1" max="1" chance="5.5813"/> <!-- Forgotten Scroll - Pain of Shillien -->
+          <item id="14172" min="1" max="1" chance="5.5641"/> <!-- Forgotten Scroll - Spirit of Phoenix -->
+          <item id="14184" min="1" max="1" chance="5.5354"/> <!-- Forgotten Scroll - Golem Armor -->
+          <item id="14183" min="1" max="1" chance="5.5143"/> <!-- Forgotten Scroll - Demolition Impact -->
+          <item id="14186" min="1" max="1" chance="5.4741"/> <!-- Forgotten Scroll - Lightning Shock -->
+          <item id="14187" min="1" max="1" chance="5.4359"/> <!-- Forgotten Scroll - Flame Armor -->
+          <item id="14188" min="1" max="1" chance="5.4263"/> <!-- Forgotten Scroll - Frost Armor -->
+          <item id="14185" min="1" max="1" chance="5.4244"/> <!-- Forgotten Scroll - Wild Shot -->
+          <item id="14171" min="1" max="1" chance="5.4129"/> <!-- Forgotten Scroll - Hell Scream -->
         </group>
       </death>
     </dropLists>
@@ -103,13 +153,13 @@
       <height normal="53"/>
     </collision>
   </npc>
-  <npc id="29002" level="38" type="L2Monster" name="Queen Ant Larva">
+  <npc id="29002" level="85" type="L2Monster" name="Queen Ant Larva">
     <!-- Confirmed CT2.5 -->
     <race>BUG</race>
     <sex>MALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="591.9" hpRegen="3.5" mp="315.1" mpRegen="1.5"/>
+      <vitals hp="300591.9" hpRegen="80.5" mp="315.1" mpRegen="1.5"/>
       <attack physical="89.21" magical="59.01" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="118.72" magical="84.16"/>
       <attribute>
@@ -145,14 +195,15 @@
       <height normal="8"/>
     </collision>
   </npc>
-  <npc id="29003" level="35" type="L2Monster" name="Nurse Ant">
+  <npc id="29003" level="85" type="L2Monster" name="Nurse Ant">
     <!-- Confirmed CT2.5 -->
     <race>BUG</race>
     <sex>MALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="4000" hpRegen="108" mp="402.6" mpRegen="1.8"/>
-      <attack physical="637" magical="395" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="355900.34672804" hpRegen="418.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="2000" magical="5000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="547" magical="200"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -187,7 +238,7 @@
       <height normal="15"/>
     </collision>
   </npc>
-  <npc id="29004" level="37" type="L2Monster" name="Guard Ant">
+  <npc id="29004" level="85" type="L2Monster" name="Guard Ant">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="120"/>
@@ -198,8 +249,9 @@
     <sex>MALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="4343" hpRegen="115" mp="432.7" mpRegen="1.8"/>
-      <attack physical="178" magical="27" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="578" magical="211"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -234,7 +286,7 @@
       <height normal="15"/>
     </collision>
   </npc>
-  <npc id="29005" level="39" type="L2Monster" name="Court Guard Ant">
+  <npc id="29005" level="85" type="L2Monster" name="Court Guard Ant">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="120"/>
@@ -245,8 +297,9 @@
     <sex>MALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="7051" hpRegen="122" mp="463.3" mpRegen="1.8"/>
-      <attack physical="1190" magical="1074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="267900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4789" magical="3931" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="610" magical="223"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -281,14 +334,15 @@
       <height normal="15"/>
     </collision>
   </npc>
-  <npc id="29006" level="50" type="L2GrandBoss" name="Core">
+  <npc id="29006" level="85" type="L2GrandBoss" name="Core">
     <!-- Confirmed CT2.5 -->
     <race>CONSTRUCT</race>
     <sex>MALE</sex>
     <acquire expRate="816.56286" sp="153786" raidPoints="1508"/>
     <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-      <vitals hp="261551.926" hpRegen="441.65" mp="1708.8" mpRegen="20"/>
-      <attack physical="722.31" magical="1398.68" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="3155900.34672804" hpRegen="818.275841116973" mp="177740.0" mpRegen="300"/>
+      <attack physical="4022.87946266377" magical="8559.9693577641" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="1602" magical="293" evasion="-18"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -320,103 +374,107 @@
     </ai>
     <dropLists>
       <death>
+        <item id="13893" min="1" max="1" chance="10"/> <!-- Sealed Holy Spirit's Cloak -->
         <group chance="40">
-          <item id="75" min="1" max="1" chance="12"/> <!-- Caliburs -->
-          <item id="84" min="1" max="1" chance="10"/> <!-- Homunkulus's Sword -->
-          <item id="162" min="1" max="1" chance="12"/> <!-- War Axe -->
-          <item id="174" min="1" max="1" chance="10"/> <!-- Nirvana Axe -->
-          <item id="200" min="1" max="1" chance="10"/> <!-- Sage's Staff -->
-          <item id="233" min="1" max="1" chance="12"/> <!-- Dark Screamer -->
-          <item id="265" min="1" max="1" chance="10"/> <!-- Fisted Blade -->
-          <item id="283" min="1" max="1" chance="12"/> <!-- Akat Long Bow -->
-          <item id="301" min="1" max="1" chance="12"/> <!-- Scorpion -->
+          <item id="15560" min="1" max="1" chance="6"/> <!-- Vigwik Axe -->
+          <item id="15561" min="1" max="1" chance="6"/> <!-- Devilish Maul -->
+          <item id="15562" min="1" max="1" chance="6"/> <!-- Feather Eye Blade -->
+          <item id="15563" min="1" max="1" chance="6"/> <!-- Octo Claw -->
+          <item id="15564" min="1" max="1" chance="6"/> <!-- Doubletop Spear -->
+          <item id="15565" min="1" max="1" chance="6"/> <!-- Rising Star -->
+          <item id="15566" min="1" max="1" chance="6"/> <!-- Black Visage -->
+          <item id="15567" min="1" max="1" chance="6"/> <!-- Veniplant Sword -->
+          <item id="15568" min="1" max="1" chance="6"/> <!-- Skull Carnium Bow -->
+          <item id="15558" min="1" max="1" chance="6"/> <!-- Periel Sword -->
+          <item id="15559" min="1" max="1" chance="6"/> <!-- Skull Edge -->
         </group>
         <group chance="60">
-          <item id="60" min="1" max="1" chance="20"/> <!-- Composite Armor -->
-          <item id="400" min="1" max="1" chance="20"/> <!-- Theca Leather Armor -->
-          <item id="420" min="1" max="1" chance="20"/> <!-- Theca Leather Gaiters -->
-          <item id="441" min="1" max="1" chance="20"/> <!-- Demon's Tunic -->
-          <item id="472" min="1" max="1" chance="20"/> <!-- Demon's Stockings -->
+          <item id="15745" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Circlet -->
+          <item id="15757" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shoes -->
+          <item id="15759" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Sigil -->
+          <item id="15748" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Tunic -->
+          <item id="15751" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Stockings -->
+          <item id="15754" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gloves -->
+        </group>
+        <group chance="60">
+          <item id="15747" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Breastplate -->
+          <item id="15750" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Legging -->
+          <item id="15756" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Boots -->
+          <item id="15753" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Gloves -->
+          <item id="15744" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Helmet -->
+        </group>
+        <group chance="60">
+          <item id="15743" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Helmet -->
+          <item id="15746" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Breastplate -->
+          <item id="15749" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gaiter -->
+          <item id="15752" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gauntlet -->
+          <item id="15755" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Boots -->
+          <item id="15758" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shield -->
+        </group>
+        <group chance="60">
+          <item id="15763" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Ring -->
+          <item id="15764" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Earring -->
+          <item id="15765" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Necklace -->
+        </group>
+        <group chance="30">
+          <item id="13143" min="1" max="1" chance="5.92"/> <!-- Sealed Vesper Helmet -->
+          <item id="13144" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Helmet -->
+          <item id="13145" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Circlet -->
+          <item id="14109" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gauntlet -->
+          <item id="14113" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Gloves -->
+          <item id="14116" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gloves -->
+          <item id="14110" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Boots -->
+          <item id="14114" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Boots -->
+          <item id="14117" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Shoes -->
+          <item id="14111" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Shield -->
+          <item id="13887" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Sigil -->
+          <item id="14105" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Breastplate -->
+          <item id="14106" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Breastplate -->
+          <item id="14107" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Tunic -->
+          <item id="14108" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gaiters -->
+          <item id="14112" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Leggings -->
+          <item id="14115" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Stockings -->
         </group>
         <group chance="70">
-          <item id="517" min="1" max="1" chance="20"/> <!-- Composite Helmet -->
-          <item id="2435" min="1" max="1" chance="20"/> <!-- Demon's Boots -->
-          <item id="2459" min="1" max="1" chance="20"/> <!-- Demon's Gloves -->
-          <item id="107" min="1" max="1" chance="20"/> <!-- Composite Shield -->
-          <item id="951" min="1" max="1" chance="20"/> <!-- Scroll: Enchant Weapon (C-Grade) -->
-        </group>
-
-        <group chance="20">
-          <item id="554" min="1" max="1" chance="15.2384"/> <!-- Sealed Zubei's Boots -->
-          <item id="600" min="1" max="1" chance="15.2384"/> <!-- Sealed Avadon Boots -->
-          <item id="612" min="1" max="1" chance="15.2384"/> <!-- Sealed Zubei's Gauntlets -->
-          <item id="2464" min="1" max="1" chance="15.2384"/> <!-- Sealed Avadon Gloves -->
-        </group>
-
-        <group chance="15">
-          <item id="357" min="1" max="1" chance="7.3723"/> <!-- Zubei's Breastplate -->
-          <item id="383" min="1" max="1" chance="7.7949"/> <!-- Zubei's Gaiters -->
-          <item id="2376" min="1" max="1" chance="7.3723"/> <!-- Avadon Breastplate -->
-          <item id="2379" min="1" max="1" chance="7.7949"/> <!-- Avadon Gaiters -->
-        </group>
-
-        <group chance="15">
-          <item id="2397" min="1" max="1" chance="7.6807"/> <!-- Tunic of Zubei -->
-          <item id="2402" min="1" max="1" chance="8.0869"/> <!-- Stockings of Zubei -->
-          <item id="2406" min="1" max="1" chance="6.4942"/> <!-- Avadon Robe -->
-        </group>
-
-        <group chance="15">
-          <item id="2384" min="1" max="1" chance="7.6807"/> <!-- Zubei's Leather Shirt -->
-          <item id="2388" min="1" max="1" chance="9.0869"/> <!-- Zubei's Leather Gaiters -->
-          <item id="2390" min="1" max="1" chance="6.4942"/> <!-- Avadon Leather Armor -->
-        </group>
-
-        <group chance="15">
-          <item id="503" min="1" max="1" chance="6.8887"/> <!-- Zubei's Helmet -->
-          <item id="633" min="1" max="1" chance="9.8414"/> <!-- Zubei's Shield -->
-          <item id="673" min="1" max="1" chance="9.8414"/> <!-- Avadon Shield -->
-          <item id="2415" min="1" max="1" chance="6.8887"/> <!-- Avadon Circlet -->
-        </group>
-
-        <group chance="20">
-          <item id="856" min="1" max="1" chance="14.2777"/> <!-- Adamantite Earring -->
-          <item id="918" min="1" max="1" chance="12.2083"/> <!-- Adamantite Necklace -->
-          <item id="887" min="1" max="1" chance="16.4165"/> <!-- Adamantite Ring -->
-        </group>
-
-        <group chance="20">
-          <item id="264" min="1" max="1" chance="2"/> <!-- Pata -->
-          <item id="229" min="1" max="1" chance="2"/> <!-- Kris -->
-          <item id="277" min="1" max="1" chance="2"/> <!-- Dark Elven Bow -->
-          <item id="300" min="1" max="1" chance="2"/> <!-- Great Axe -->
-          <item id="91" min="1" max="1" chance="2"/> <!-- Heavy War Axe -->
-          <item id="92" min="1" max="1" chance="2"/> <!-- Sprite's Staff -->
-        </group>
-
-        <group chance="100">
-          <item id="57" min="100000" max="150000" chance="100"/> <!-- Adena -->
+          <item id="14162" min="1" max="1" chance="33.4"/> <!-- Sealed Vesper Ring -->
+          <item id="14160" min="1" max="1" chance="33.3"/> <!-- Sealed Vesper Earring -->
+          <item id="14161" min="1" max="1" chance="33.3"/> <!-- Sealed Vesper Necklace -->
         </group>
         <group chance="100">
-          <item id="57" min="100000" max="150000" chance="100"/> <!-- Adena -->
+          <item id="1538" min="1" max="10" chance="50"/> <!-- Blessed Scroll of Escape -->
         </group>
         <group chance="100">
-          <item id="57" min="100000" max="150000" chance="100"/> <!-- Adena -->
+          <item id="3936" min="1" max="10" chance="50"/> <!-- Blessed Scroll of Resurrection -->
         </group>
         <group chance="100">
-          <item id="57" min="100000" max="150000" chance="100"/> <!-- Adena -->
+          <item id="57" min="9000000" max="11100000" chance="100"/> <!-- Adena -->
         </group>
         <group chance="100">
-          <item id="57" min="100000" max="150000" chance="100"/> <!-- Adena -->
+          <item id="16162" min="2" max="4" chance="60"/> <!-- High-Grade Life Stone - Level 85 -->
+          <item id="16166" min="2" max="4" chance="40"/> <!-- High-Grade Life Stone - Level 86 -->
         </group>
         <group chance="100">
-          <item id="8744" min="2" max="4" chance="45"/> <!-- High-Grade Life Stone - Level 49 -->
-          <item id="8745" min="2" max="4" chance="40"/> <!-- High-Grade Life Stone - Level 52 -->
-          <item id="8754" min="1" max="2" chance="10"/> <!-- Top-Grade Life Stone - Level 49 -->
-          <item id="8755" min="1" max="2" chance="5"/> <!-- Top-Grade Life Stone - Level 52 -->
+          <item id="22568" min="1" max="1" chance="100"/> <!-- Improved Ring of Core -->
         </group>
-        <group chance="100">
-          <item id="6662" min="1" max="1" chance="100"/> <!-- Ring of Core -->
+        <group chance="52.264">
+          <item id="14170" min="1" max="1" chance="5.7764"/> <!-- Forgotten Scroll - Seed of Revenge -->
+          <item id="14177" min="1" max="1" chance="5.6387"/> <!-- Forgotten Scroll - Ghost Walking -->
+          <item id="14181" min="1" max="1" chance="5.6195"/> <!-- Forgotten Scroll - Dread Pool -->
+          <item id="14179" min="1" max="1" chance="5.6081"/> <!-- Forgotten Scroll - Arrow Rain -->
+          <item id="14175" min="1" max="1" chance="5.6081"/> <!-- Forgotten Scroll - Exciting Adventure -->
+          <item id="14176" min="1" max="1" chance="5.6042"/> <!-- Forgotten Scroll - Wind Riding -->
+          <item id="14182" min="1" max="1" chance="5.6042"/> <!-- Forgotten Scroll - Force of Destruction -->
+          <item id="14178" min="1" max="1" chance="5.5871"/> <!-- Forgotten Scroll - Flame Hawk -->
+          <item id="14173" min="1" max="1" chance="5.5851"/> <!-- Forgotten Scroll - Eva's Will / Touch of Eva -->
+          <item id="14174" min="1" max="1" chance="5.5813"/> <!-- Forgotten Scroll - Pain of Shillien -->
+          <item id="14172" min="1" max="1" chance="5.5641"/> <!-- Forgotten Scroll - Spirit of Phoenix -->
+          <item id="14184" min="1" max="1" chance="5.5354"/> <!-- Forgotten Scroll - Golem Armor -->
+          <item id="14183" min="1" max="1" chance="5.5143"/> <!-- Forgotten Scroll - Demolition Impact -->
+          <item id="14186" min="1" max="1" chance="5.4741"/> <!-- Forgotten Scroll - Lightning Shock -->
+          <item id="14187" min="1" max="1" chance="5.4359"/> <!-- Forgotten Scroll - Flame Armor -->
+          <item id="14188" min="1" max="1" chance="5.4263"/> <!-- Forgotten Scroll - Frost Armor -->
+          <item id="14185" min="1" max="1" chance="5.4244"/> <!-- Forgotten Scroll - Wild Shot -->
+          <item id="14171" min="1" max="1" chance="5.4129"/> <!-- Forgotten Scroll - Hell Scream -->
         </group>
       </death>
     </dropLists>
@@ -437,8 +495,9 @@
     <equipment rhand="75"/> <!-- rhand: Caliburs -->
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="13817" hpRegen="166" mp="747.8" mpRegen="2.1"/>
-      <attack physical="410" magical="69" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="801" magical="293"/>
       <attribute>
         <attack type="DARK" value="20"/>
@@ -487,8 +546,9 @@
     <equipment rhand="1472"/> <!-- rhand: Dreadbane -->
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="16012" hpRegen="185" mp="889.8" mpRegen="2.4"/>
-      <attack physical="470" magical="715" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="895" magical="327"/>
       <attribute>
         <attack type="DARK" value="20"/>
@@ -537,8 +597,9 @@
     <sex>FEMALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="12544" hpRegen="154" mp="665.0" mpRegen="2.1"/>
-      <attack physical="354" magical="60" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="747" magical="273"/>
       <attribute>
         <defence fire="-13" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -585,8 +646,9 @@
     <sex>MALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="12130" hpRegen="150" mp="637.8" mpRegen="2.1"/>
-      <attack physical="337" magical="58" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="729" magical="267"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -633,8 +695,9 @@
     <sex>MALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="13389" hpRegen="162" mp="720.0" mpRegen="2.1"/>
-      <attack physical="391" magical="66" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="783" magical="286"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -682,8 +745,9 @@
     <sex>MALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="12964" hpRegen="158" mp="692.4" mpRegen="2.1"/>
-      <attack physical="372" magical="63" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="765" magical="280"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -733,8 +797,9 @@
     <sex>MALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="11721" hpRegen="146" mp="610.8" mpRegen="2.1"/>
-      <attack physical="320" magical="55" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="711" magical="260"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -769,7 +834,7 @@
       <height normal="35" grown="43"/>
     </collision>
   </npc>
-  <npc id="29014" level="50" type="L2GrandBoss" name="Orfen">
+  <npc id="29014" level="85" type="L2GrandBoss" name="Orfen">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="80"/>
@@ -780,8 +845,9 @@
     <sex>FEMALE</sex>
     <acquire expRate="816.56286" sp="153786" raidPoints="1508"/>
     <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-      <vitals hp="261551.926" hpRegen="441.65" mp="1708.8" mpRegen="20"/>
-      <attack physical="722.31" magical="1398.68" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="3155900.34672804" hpRegen="818.275841116973" mp="177740.0" mpRegen="300"/>
+      <attack physical="8022.87946266377" magical="2559.9693577641" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="1602" magical="293" evasion="-18"/>
       <attribute>
         <defence fire="-83" water="20" wind="53" earth="20" holy="20" dark="20"/>
@@ -817,157 +883,107 @@
     </ai>
     <dropLists>
       <death>
-        <group chance="35">
-          <item id="76" min="1" max="1" chance="12"/> <!-- Sword of Delusion -->
-          <item id="145" min="1" max="1" chance="10"/> <!-- Sword of Whispering Death -->
-          <item id="162" min="1" max="1" chance="12"/> <!-- War Axe -->
-          <item id="201" min="1" max="1" chance="10"/> <!-- Club of Nature -->
-          <item id="199" min="1" max="1" chance="10"/> <!-- Pa'agrian Hammer -->
-          <item id="231" min="1" max="1" chance="12"/> <!-- Grace Dagger -->
-          <item id="265" min="1" max="1" chance="10"/> <!-- Fisted Blade -->
-          <item id="283" min="1" max="1" chance="12"/> <!-- Akat Long Bow -->
-          <item id="303" min="1" max="1" chance="12"/> <!-- Widow Maker -->
+        <item id="13893" min="1" max="1" chance="10"/> <!-- Sealed Holy Spirit's Cloak -->
+        <group chance="40">
+          <item id="15560" min="1" max="1" chance="6"/> <!-- Vigwik Axe -->
+          <item id="15561" min="1" max="1" chance="6"/> <!-- Devilish Maul -->
+          <item id="15562" min="1" max="1" chance="6"/> <!-- Feather Eye Blade -->
+          <item id="15563" min="1" max="1" chance="6"/> <!-- Octo Claw -->
+          <item id="15564" min="1" max="1" chance="6"/> <!-- Doubletop Spear -->
+          <item id="15565" min="1" max="1" chance="6"/> <!-- Rising Star -->
+          <item id="15566" min="1" max="1" chance="6"/> <!-- Black Visage -->
+          <item id="15567" min="1" max="1" chance="6"/> <!-- Veniplant Sword -->
+          <item id="15568" min="1" max="1" chance="6"/> <!-- Skull Carnium Bow -->
+          <item id="15558" min="1" max="1" chance="6"/> <!-- Periel Sword -->
+          <item id="15559" min="1" max="1" chance="6"/> <!-- Skull Edge -->
+        </group>
+        <group chance="60">
+          <item id="15745" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Circlet -->
+          <item id="15757" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shoes -->
+          <item id="15759" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Sigil -->
+          <item id="15748" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Tunic -->
+          <item id="15751" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Stockings -->
+          <item id="15754" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gloves -->
+        </group>
+        <group chance="60">
+          <item id="15747" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Breastplate -->
+          <item id="15750" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Legging -->
+          <item id="15756" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Boots -->
+          <item id="15753" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Gloves -->
+          <item id="15744" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Helmet -->
+        </group>
+        <group chance="60">
+          <item id="15743" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Helmet -->
+          <item id="15746" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Breastplate -->
+          <item id="15749" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gaiter -->
+          <item id="15752" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gauntlet -->
+          <item id="15755" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Boots -->
+          <item id="15758" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shield -->
+        </group>
+        <group chance="60">
+          <item id="15763" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Ring -->
+          <item id="15764" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Earring -->
+          <item id="15765" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Necklace -->
+        </group>
+        <group chance="30">
+          <item id="13143" min="1" max="1" chance="5.92"/> <!-- Sealed Vesper Helmet -->
+          <item id="13144" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Helmet -->
+          <item id="13145" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Circlet -->
+          <item id="14109" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gauntlet -->
+          <item id="14113" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Gloves -->
+          <item id="14116" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gloves -->
+          <item id="14110" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Boots -->
+          <item id="14114" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Boots -->
+          <item id="14117" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Shoes -->
+          <item id="14111" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Shield -->
+          <item id="13887" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Sigil -->
+          <item id="14105" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Breastplate -->
+          <item id="14106" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Breastplate -->
+          <item id="14107" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Tunic -->
+          <item id="14108" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gaiters -->
+          <item id="14112" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Leggings -->
+          <item id="14115" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Stockings -->
+        </group>
+        <group chance="70">
+          <item id="14162" min="1" max="1" chance="33.4"/> <!-- Sealed Vesper Ring -->
+          <item id="14160" min="1" max="1" chance="33.3"/> <!-- Sealed Vesper Earring -->
+          <item id="14161" min="1" max="1" chance="33.3"/> <!-- Sealed Vesper Necklace -->
         </group>
         <group chance="100">
-          <item id="854" min="1" max="2" chance="35"/> <!-- Earring of Seal -->
-          <item id="917" min="1" max="2" chance="30"/> <!-- Necklace of Mermaid -->
-          <item id="885" min="1" max="2" chance="35"/> <!-- Ring of Ages -->
-        </group>
-        <group chance="50">
-          <item id="60" min="1" max="1" chance="20"/> <!-- Composite Armor -->
-          <item id="400" min="1" max="1" chance="20"/> <!-- Theca Leather Armor -->
-          <item id="420" min="1" max="1" chance="20"/> <!-- Theca Leather Gaiters -->
-          <item id="441" min="1" max="1" chance="20"/> <!-- Demon's Tunic -->
-          <item id="472" min="1" max="1" chance="20"/> <!-- Demon's Stockings -->
-        </group>
-        <group chance="50">
-          <item id="517" min="1" max="2" chance="20"/> <!-- Composite Helmet -->
-          <item id="64" min="1" max="2" chance="20"/> <!-- Composite Boots -->
-          <item id="608" min="1" max="2" chance="20"/> <!-- Mithril Gauntlets -->
-          <item id="103" min="1" max="2" chance="20"/> <!-- Tower Shield -->
-          <item id="951" min="1" max="2" chance="20"/> <!-- Scroll: Enchant Weapon (C-Grade) -->
-        </group>
-
-        <group chance="15">
-          <item id="601" min="1" max="1" chance="10.7283"/> <!-- Sealed Doom Boots -->
-          <item id="2439" min="1" max="1" chance="10.7283"/> <!-- Sealed Blue Wolf Boots -->
-          <item id="2475" min="1" max="1" chance="10.7283"/> <!-- Sealed Doom Gloves -->
-          <item id="2487" min="1" max="1" chance="10.7283"/> <!-- Sealed Blue Wolf Gloves -->
-        </group>
-
-        <group chance="10">
-          <item id="358" min="1" max="1" chance="5.1784"/> <!-- Blue Wolf Breastplate -->
-          <item id="2381" min="1" max="1" chance="5.1098"/> <!-- Doom Plate Armor -->
-          <item id="2380" min="1" max="1" chance="5.2854"/> <!-- Blue Wolf Gaiters -->
-        </group>
-
-        <group chance="10">
-          <item id="2398" min="1" max="1" chance="5.1309"/> <!-- Blue Wolf Tunic -->
-          <item id="2399" min="1" max="1" chance="5.1309"/> <!-- Tunic of Doom -->
-          <item id="2403" min="1" max="1" chance="5.2096"/> <!-- Blue Wolf Stockings -->
-          <item id="2404" min="1" max="1" chance="5.2096"/> <!-- Stockings of Doom -->
-        </group>
-
-        <group chance="10">
-          <item id="2391" min="1" max="1" chance="5.2916"/> <!-- Blue Wolf Leather Armor -->
-          <item id="2392" min="1" max="1" chance="5.2916"/> <!-- Leather Armor of Doom -->
-        </group>
-
-        <group chance="10">
-          <item id="110" min="1" max="1" chance="10.2537"/> <!-- Doom Shield -->
-          <item id="2416" min="1" max="1" chance="10.1776"/> <!-- Blue Wolf Helmet -->
-          <item id="2417" min="1" max="1" chance="10.1776"/> <!-- Doom Helmet -->
-        </group>
-
-        <group chance="15">
-          <item id="864" min="1" max="1" chance="12.2845"/> <!-- Earring of Black Ore -->
-          <item id="926" min="1" max="1" chance="10.2134"/> <!-- Necklace of Black Ore -->
-          <item id="895" min="1" max="1" chance="14.4267"/> <!-- Ring of Black Ore -->
-        </group>
-
-        <group chance="20">
-          <item id="856" min="1" max="1" chance="14.2777"/> <!-- Adamantite Earring -->
-          <item id="918" min="1" max="1" chance="12.2083"/> <!-- Adamantite Necklace -->
-          <item id="887" min="1" max="1" chance="16.4165"/> <!-- Adamantite Ring -->
-        </group>
-
-        <group chance="20">
-          <item id="554" min="1" max="1" chance="15.2384"/> <!-- Sealed Zubei's Boots -->
-          <item id="600" min="1" max="1" chance="15.2384"/> <!-- Sealed Avadon Boots -->
-          <item id="612" min="1" max="1" chance="15.2384"/> <!-- Sealed Zubei's Gauntlets -->
-          <item id="2464" min="1" max="1" chance="15.2384"/> <!-- Sealed Avadon Gloves -->
-        </group>
-
-        <group chance="15">
-          <item id="357" min="1" max="1" chance="7.3723"/> <!-- Zubei's Breastplate -->
-          <item id="383" min="1" max="1" chance="7.7949"/> <!-- Zubei's Gaiters -->
-          <item id="2376" min="1" max="1" chance="7.3723"/> <!-- Avadon Breastplate -->
-          <item id="2379" min="1" max="1" chance="7.7949"/> <!-- Avadon Gaiters -->
-        </group>
-
-        <group chance="15">
-          <item id="2397" min="1" max="1" chance="7.6807"/> <!-- Tunic of Zubei -->
-          <item id="2402" min="1" max="1" chance="8.0869"/> <!-- Stockings of Zubei -->
-          <item id="2406" min="1" max="1" chance="6.4942"/> <!-- Avadon Robe -->
-        </group>
-
-        <group chance="15">
-          <item id="2384" min="1" max="1" chance="7.6807"/> <!-- Zubei's Leather Shirt -->
-          <item id="2388" min="1" max="1" chance="9.0869"/> <!-- Zubei's Leather Gaiters -->
-          <item id="2390" min="1" max="1" chance="6.4942"/> <!-- Avadon Leather Armor -->
-        </group>
-
-        <group chance="15">
-          <item id="503" min="1" max="1" chance="6.8887"/> <!-- Zubei's Helmet -->
-          <item id="633" min="1" max="1" chance="9.8414"/> <!-- Zubei's Shield -->
-          <item id="673" min="1" max="1" chance="9.8414"/> <!-- Avadon Shield -->
-          <item id="2415" min="1" max="1" chance="6.8887"/> <!-- Avadon Circlet -->
-        </group>
-
-        <group chance="20">
-          <item id="264" min="1" max="1" chance="2"/> <!-- Pata -->
-          <item id="229" min="1" max="1" chance="2"/> <!-- Kris -->
-          <item id="277" min="1" max="1" chance="2"/> <!-- Dark Elven Bow -->
-          <item id="300" min="1" max="1" chance="2"/> <!-- Great Axe -->
-          <item id="91" min="1" max="1" chance="2"/> <!-- Heavy War Axe -->
-          <item id="92" min="1" max="1" chance="2"/> <!-- Sprite's Staff -->
-        </group>
-
-        <group chance="10">
-          <item id="267" min="1" max="1" chance="1"/> <!-- Arthro Nail -->
-          <item id="234" min="1" max="1" chance="1"/> <!-- Demon's Dagger -->
-          <item id="287" min="1" max="1" chance="1"/> <!-- Bow of Peril -->
-          <item id="97" min="1" max="1" chance="1"/> <!-- Lance -->
-          <item id="175" min="1" max="1" chance="1"/> <!-- Art of Battle Axe -->
-          <item id="210" min="1" max="1" chance="1"/> <!-- Staff Of Evil Spirits -->
-          <item id="142" min="1" max="1" chance="1"/> <!-- Keshanberk -->
-          <item id="148" min="1" max="1" chance="1"/> <!-- Sword of Valhalla -->
-          <item id="78" min="1" max="1" chance="1"/> <!-- Great Sword -->
-        </group>
-
-        <group chance="100">
-          <item id="57" min="110000" max="150000" chance="100"/> <!-- Adena -->
+          <item id="1538" min="1" max="10" chance="50"/> <!-- Blessed Scroll of Escape -->
         </group>
         <group chance="100">
-          <item id="57" min="110000" max="150000" chance="100"/> <!-- Adena -->
+          <item id="3936" min="1" max="10" chance="50"/> <!-- Blessed Scroll of Resurrection -->
         </group>
         <group chance="100">
-          <item id="57" min="110000" max="150000" chance="100"/> <!-- Adena -->
+          <item id="57" min="9000000" max="11100000" chance="100"/> <!-- Adena -->
         </group>
         <group chance="100">
-          <item id="57" min="110000" max="150000" chance="100"/> <!-- Adena -->
+          <item id="16162" min="2" max="4" chance="60"/> <!-- High-Grade Life Stone - Level 85 -->
+          <item id="16166" min="2" max="4" chance="40"/> <!-- High-Grade Life Stone - Level 86 -->
         </group>
         <group chance="100">
-          <item id="57" min="110000" max="150000" chance="100"/> <!-- Adena -->
+          <item id="22569" min="1" max="1" chance="100"/> <!-- Improved Earring of Orfen -->
         </group>
-        <group chance="100">
-          <item id="8744" min="2" max="4" chance="45"/> <!-- High-Grade Life Stone - Level 49 -->
-          <item id="8745" min="2" max="4" chance="40"/> <!-- High-Grade Life Stone - Level 52 -->
-          <item id="8754" min="1" max="2" chance="10"/> <!-- Top-Grade Life Stone - Level 49 -->
-          <item id="8755" min="1" max="2" chance="5"/> <!-- Top-Grade Life Stone - Level 52 -->
-        </group>
-        <group chance="100">
-          <item id="6661" min="1" max="1" chance="100"/> <!-- Earring of Orfen -->
+        <group chance="52.264">
+          <item id="14170" min="1" max="1" chance="5.7764"/> <!-- Forgotten Scroll - Seed of Revenge -->
+          <item id="14177" min="1" max="1" chance="5.6387"/> <!-- Forgotten Scroll - Ghost Walking -->
+          <item id="14181" min="1" max="1" chance="5.6195"/> <!-- Forgotten Scroll - Dread Pool -->
+          <item id="14179" min="1" max="1" chance="5.6081"/> <!-- Forgotten Scroll - Arrow Rain -->
+          <item id="14175" min="1" max="1" chance="5.6081"/> <!-- Forgotten Scroll - Exciting Adventure -->
+          <item id="14176" min="1" max="1" chance="5.6042"/> <!-- Forgotten Scroll - Wind Riding -->
+          <item id="14182" min="1" max="1" chance="5.6042"/> <!-- Forgotten Scroll - Force of Destruction -->
+          <item id="14178" min="1" max="1" chance="5.5871"/> <!-- Forgotten Scroll - Flame Hawk -->
+          <item id="14173" min="1" max="1" chance="5.5851"/> <!-- Forgotten Scroll - Eva's Will / Touch of Eva -->
+          <item id="14174" min="1" max="1" chance="5.5813"/> <!-- Forgotten Scroll - Pain of Shillien -->
+          <item id="14172" min="1" max="1" chance="5.5641"/> <!-- Forgotten Scroll - Spirit of Phoenix -->
+          <item id="14184" min="1" max="1" chance="5.5354"/> <!-- Forgotten Scroll - Golem Armor -->
+          <item id="14183" min="1" max="1" chance="5.5143"/> <!-- Forgotten Scroll - Demolition Impact -->
+          <item id="14186" min="1" max="1" chance="5.4741"/> <!-- Forgotten Scroll - Lightning Shock -->
+          <item id="14187" min="1" max="1" chance="5.4359"/> <!-- Forgotten Scroll - Flame Armor -->
+          <item id="14188" min="1" max="1" chance="5.4263"/> <!-- Forgotten Scroll - Frost Armor -->
+          <item id="14185" min="1" max="1" chance="5.4244"/> <!-- Forgotten Scroll - Wild Shot -->
+          <item id="14171" min="1" max="1" chance="5.4129"/> <!-- Forgotten Scroll - Hell Scream -->
         </group>
       </death>
     </dropLists>
@@ -976,7 +992,7 @@
       <height normal="143"/>
     </collision>
   </npc>
-  <npc id="29015" level="48" type="L2Monster" name="Raikel">
+  <npc id="29015" level="85" type="L2Monster" name="Raikel">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="70"/>
@@ -987,8 +1003,9 @@
     <sex>MALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="6482" hpRegen="158" mp="692.4" mpRegen="2.1"/>
-      <attack physical="298" magical="40" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="765" magical="280"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -1023,7 +1040,7 @@
       <height normal="64"/>
     </collision>
   </npc>
-  <npc id="29016" level="49" type="L2Monster" name="Raikel Leos">
+  <npc id="29016" level="85" type="L2Monster" name="Raikel Leos">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="70"/>
@@ -1034,8 +1051,9 @@
     <sex>MALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="6694" hpRegen="162" mp="720.0" mpRegen="2.1"/>
-      <attack physical="1058" magical="1563" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="783" magical="286"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -1070,7 +1088,7 @@
       <height normal="64"/>
     </collision>
   </npc>
-  <npc id="29017" level="48" type="L2Monster" name="Riba">
+  <npc id="29017" level="85" type="L2Monster" name="Riba">
     <!-- Confirmed CT2.5 -->
     <parameters>
       <param name="MoveAroundSocial" value="40"/>
@@ -1081,8 +1099,9 @@
     <sex>FEMALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="6482" hpRegen="158" mp="692.4" mpRegen="2.1"/>
-      <attack physical="298" magical="40" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="765" magical="280"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -1117,14 +1136,15 @@
       <height normal="72"/>
     </collision>
   </npc>
-  <npc id="29018" level="49" type="L2Monster" name="Riba Iren">
+  <npc id="29018" level="85" type="L2Monster" name="Riba Iren">
     <!-- Confirmed CT2.5 -->
     <race>BUG</race>
     <sex>FEMALE</sex>
     <acquire sp="1"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="13389" hpRegen="162" mp="720.0" mpRegen="2.1"/>
-      <attack physical="1058" magical="1563" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="4000" magical="1000" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="783" magical="286"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20"/>
@@ -1370,14 +1390,15 @@
       <height normal="300"/>
     </collision>
   </npc>
-  <npc id="29020" level="75" type="L2GrandBoss" name="Baium">
+  <npc id="29020" level="85" type="L2GrandBoss" name="Baium">
     <!-- Confirmed CT2.5 -->
     <race>UNDEAD</race>
     <sex>MALE</sex>
     <acquire expRate="1822.82674" sp="1081544" raidPoints="13008"/>
     <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-      <vitals hp="1709400" hpRegen="750" mp="18000.0" mpRegen="99"/>
-      <attack physical="3374.18" magical="2200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+      <vitals hp="3155900.34672804" hpRegen="818.275841116973" mp="177740.0" mpRegen="300"/>
+      <attack physical="8022.87946266377" magical="2559.9693577641" random="30" critical="4" accuracy="7"
+              attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
       <defence physical="3300" magical="2200"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="20" dark="53"/>
@@ -1409,140 +1430,107 @@
     </ai>
     <dropLists>
       <death>
-          <item id="8620" min="5" max="10" chance="50"/> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-
-        <group chance="25">
-          <item id="80" min="1" max="1" chance="5"/> <!-- Tallum Blade -->
-          <item id="98" min="1" max="1" chance="5"/> <!-- Halberd -->
-          <item id="269" min="1" max="1" chance="5"/> <!-- Blood Tornado -->
-          <item id="2504" min="1" max="1" chance="5"/> <!-- Meteor Shower -->
+        <item id="13893" min="1" max="1" chance="10"/> <!-- Sealed Holy Spirit's Cloak -->
+        <group chance="40">
+          <item id="15560" min="1" max="1" chance="6"/> <!-- Vigwik Axe -->
+          <item id="15561" min="1" max="1" chance="6"/> <!-- Devilish Maul -->
+          <item id="15562" min="1" max="1" chance="6"/> <!-- Feather Eye Blade -->
+          <item id="15563" min="1" max="1" chance="6"/> <!-- Octo Claw -->
+          <item id="15564" min="1" max="1" chance="6"/> <!-- Doubletop Spear -->
+          <item id="15565" min="1" max="1" chance="6"/> <!-- Rising Star -->
+          <item id="15566" min="1" max="1" chance="6"/> <!-- Black Visage -->
+          <item id="15567" min="1" max="1" chance="6"/> <!-- Veniplant Sword -->
+          <item id="15568" min="1" max="1" chance="6"/> <!-- Skull Carnium Bow -->
+          <item id="15558" min="1" max="1" chance="6"/> <!-- Periel Sword -->
+          <item id="15559" min="1" max="1" chance="6"/> <!-- Skull Edge -->
         </group>
-        <group chance="25">
-          <item id="235" min="1" max="1" chance="5"/> <!-- Bloody Orchid -->
-          <item id="288" min="1" max="1" chance="5"/> <!-- Carnage Bow -->
-          <item id="150" min="1" max="1" chance="5"/> <!-- Elemental Sword -->
-          <item id="212" min="1" max="1" chance="5"/> <!-- Dasparion's Staff -->
+        <group chance="60">
+          <item id="15745" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Circlet -->
+          <item id="15757" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shoes -->
+          <item id="15759" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Sigil -->
+          <item id="15748" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Tunic -->
+          <item id="15751" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Stockings -->
+          <item id="15754" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gloves -->
         </group>
-        <group chance="20">
-          <item id="81" min="1" max="1" chance="5"/> <!-- Dragon Slayer -->
-          <item id="151" min="1" max="1" chance="5"/> <!-- Sword of Miracles -->
-          <item id="2500" min="1" max="1" chance="5"/> <!-- Dark Legion's Edge -->
-          <item id="164" min="1" max="1" chance="5"/> <!-- Elysian -->
+        <group chance="60">
+          <item id="15747" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Breastplate -->
+          <item id="15750" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Legging -->
+          <item id="15756" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Boots -->
+          <item id="15753" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Gloves -->
+          <item id="15744" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Leather Helmet -->
         </group>
-        <group chance="20">
-          <item id="236" min="1" max="1" chance="5"/> <!-- Soul Separator -->
-          <item id="270" min="1" max="1" chance="5"/> <!-- Dragon Grinder -->
-          <item id="289" min="1" max="1" chance="5"/> <!-- Soul Bow -->
-          <item id="213" min="1" max="1" chance="5"/> <!-- Branch of the Mother Tree -->
-          <item id="305" min="1" max="1" chance="5"/> <!-- Tallum Glaive -->
+        <group chance="60">
+          <item id="15743" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Helmet -->
+          <item id="15746" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Breastplate -->
+          <item id="15749" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gaiter -->
+          <item id="15752" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Gauntlet -->
+          <item id="15755" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Boots -->
+          <item id="15758" min="1" max="1" chance="8"/> <!-- Sealed Vorpal Shield -->
         </group>
-        <group chance="10">
-          <item id="6364" min="1" max="1" chance="1"/> <!-- Forgotten Blade -->
-          <item id="6365" min="1" max="1" chance="1"/> <!-- Basalt Battlehammer -->
-          <item id="6369" min="1" max="1" chance="1"/> <!-- Dragon Hunter Axe -->
-          <item id="6370" min="1" max="1" chance="1"/> <!-- Saint Spear -->
-          <item id="6372" min="1" max="1" chance="1"/> <!-- Heaven's Divider -->
-          <item id="6580" min="1" max="1" chance="1"/> <!-- Tallum Blade*Dark Legion's Edge -->
+        <group chance="60">
+          <item id="15763" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Ring -->
+          <item id="15764" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Earring -->
+          <item id="15765" min="1" max="1" chance="9"/> <!-- Sealed Vorpal Necklace -->
         </group>
-        <group chance="10">
-          <item id="7575" min="1" max="1" chance="2"/> <!-- Draconic Bow -->
-          <item id="6366" min="1" max="1" chance="2"/> <!-- Imperial Staff -->
-          <item id="6367" min="1" max="1" chance="2"/> <!-- Angel Slayer -->
-          <item id="6371" min="1" max="1" chance="2"/> <!-- Demon Splinter -->
-          <item id="6579" min="1" max="1" chance="2"/> <!-- Arcana Mace -->
+        <group chance="30">
+          <item id="13143" min="1" max="1" chance="5.92"/> <!-- Sealed Vesper Helmet -->
+          <item id="13144" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Helmet -->
+          <item id="13145" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Circlet -->
+          <item id="14109" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gauntlet -->
+          <item id="14113" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Gloves -->
+          <item id="14116" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gloves -->
+          <item id="14110" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Boots -->
+          <item id="14114" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Boots -->
+          <item id="14117" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Shoes -->
+          <item id="14111" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Shield -->
+          <item id="13887" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Sigil -->
+          <item id="14105" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Breastplate -->
+          <item id="14106" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Breastplate -->
+          <item id="14107" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Tunic -->
+          <item id="14108" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Gaiters -->
+          <item id="14112" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Leather Leggings -->
+          <item id="14115" min="1" max="1" chance="5.88"/> <!-- Sealed Vesper Stockings -->
         </group>
-        <group chance="20">
-          <item id="6326" min="1" max="1" chance="8"/> <!-- Sealed Majestic Necklace -->
-          <item id="6327" min="1" max="1" chance="8"/> <!-- Sealed Majestic Earring -->
-          <item id="6328" min="1" max="1" chance="8"/> <!-- Sealed Majestic Ring -->
+        <group chance="70">
+          <item id="14162" min="1" max="1" chance="33.4"/> <!-- Sealed Vesper Ring -->
+          <item id="14160" min="1" max="1" chance="33.3"/> <!-- Sealed Vesper Earring -->
+          <item id="14161" min="1" max="1" chance="33.3"/> <!-- Sealed Vesper Necklace -->
         </group>
-        <group chance="25">
-          <item id="6323" min="1" max="2" chance="10"/> <!-- Sealed Phoenix Necklace -->
-          <item id="6324" min="1" max="2" chance="10"/> <!-- Sealed Phoenix Earring -->
-          <item id="6325" min="1" max="2" chance="10"/> <!-- Sealed Phoenix Ring -->
-        </group>
-        <group chance="15">
-          <item id="6724" min="1" max="1" chance="6"/> <!-- Sealed Tateossian Earring -->
-          <item id="6725" min="1" max="1" chance="6"/> <!-- Sealed Tateossian Ring -->
-          <item id="6726" min="1" max="1" chance="6"/> <!-- Sealed Tateossian Necklace -->
-        </group>
-        <group chance="25">
-          <item id="5287" min="1" max="2" chance="6"/> <!-- Sealed Dark Crystal breastplate -->
-          <item id="5297" min="1" max="2" chance="6"/> <!-- Sealed Dark Crystal Leather Armor -->
-          <item id="5304" min="1" max="2" chance="6"/> <!-- Sealed Tallum Tunic -->
-        </group>
-        <group chance="25">
-          <item id="5311" min="1" max="2" chance="6"/> <!-- Sealed Armor of Nightmare -->
-          <item id="5320" min="1" max="2" chance="6"/> <!-- Sealed Leather Armor of Nightmare -->
-          <item id="5326" min="1" max="2" chance="6"/> <!-- Sealed Robe of Nightmare -->
-        </group>
-        <group chance="25">
-          <item id="5293" min="1" max="2" chance="6"/> <!-- Sealed Tallum Plate Armor -->
-          <item id="5301" min="1" max="2" chance="6"/> <!-- Sealed Tallum Leather Armor -->
-          <item id="5308" min="1" max="2" chance="6"/> <!-- Sealed Dark Crystal Robe -->
-          <item id="5316" min="1" max="2" chance="6"/> <!-- Sealed Majestic Plate Armor -->
-          <item id="5323" min="1" max="2" chance="6"/> <!-- Sealed Majestic Leather Armor -->
-          <item id="5329" min="1" max="2" chance="2"/> <!-- Sealed Majestic Robe -->
-        </group>
-        <group chance="25">
-          <item id="5288" min="1" max="2" chance="6"/> <!-- Sealed Dark Crystal Gaiters -->
-          <item id="5298" min="1" max="2" chance="6"/> <!-- Sealed Dark Crystal Leggings -->
-          <item id="5305" min="1" max="2" chance="6"/> <!-- Sealed Tallum Stockings -->
-        </group>
-        <group chance="10">
-          <item id="6674" min="1" max="1" chance="2"/> <!-- Sealed Imperial Crusader Breastplate -->
-          <item id="6675" min="1" max="1" chance="2"/> <!-- Sealed Imperial Crusader Gaiters -->
-          <item id="6680" min="1" max="1" chance="2"/> <!-- Sealed Draconic Leather Armor -->
-          <item id="6684" min="1" max="1" chance="2"/> <!-- Sealed Major Arcana Robe -->
-        </group>
-        <group chance="25">
-          <item id="5289" min="1" max="2" chance="8"/> <!-- Sealed Dark Crystal Helmet -->
-          <item id="5294" min="1" max="2" chance="8"/> <!-- Sealed Tallum Helmet -->
-          <item id="5312" min="1" max="2" chance="8"/> <!-- Sealed Helm of Nightmare -->
-          <item id="5317" min="1" max="2" chance="8"/> <!-- Sealed Majestic Circlet -->
-        </group>
-        <group chance="25">
-          <item id="5291" min="1" max="2" chance="8"/> <!-- Sealed Dark Crystal Boots -->
-          <item id="5296" min="1" max="2" chance="8"/> <!-- Sealed Tallum Boots -->
-          <item id="5314" min="1" max="2" chance="8"/> <!-- Sealed Boots of Nightmare -->
-          <item id="5319" min="1" max="2" chance="8"/> <!-- Sealed Majestic Boots -->
-        </group>
-        <group chance="25">
-          <item id="5290" min="1" max="2" chance="8"/> <!-- Sealed Dark Crystal Gloves -->
-          <item id="5295" min="1" max="2" chance="8"/> <!-- Sealed Tallum Gloves -->
-          <item id="5313" min="1" max="2" chance="8"/> <!-- Sealed Gauntlets of Nightmare -->
-          <item id="5318" min="1" max="2" chance="8"/> <!-- Sealed Majestic Gauntlets -->
-        </group>
-        <group chance="25">
-          <item id="5292" min="1" max="2" chance="8"/> <!-- Sealed Dark Crystal Shield -->
-          <item id="5315" min="1" max="2" chance="8"/> <!-- Sealed Shield of Nightmare -->
-          <item id="6678" min="1" max="1" chance="3"/> <!-- Sealed Imperial Crusader Shield -->
-        </group>
-        <group chance="10">
-          <item id="6676" min="1" max="1" chance="3"/> <!-- Sealed Imperial Crusader Gauntlet -->
-          <item id="6681" min="1" max="1" chance="3"/> <!-- Sealed Draconic Leather Glove -->
-          <item id="6685" min="1" max="1" chance="3"/> <!-- Sealed Major Arcana Glove -->
-        </group>
-        <group chance="10">
-          <item id="6677" min="1" max="1" chance="3"/> <!-- Sealed Imperial Crusader Boots -->
-          <item id="6682" min="1" max="1" chance="3"/> <!-- Sealed Draconic Leather Boots -->
-          <item id="6686" min="1" max="1" chance="3"/> <!-- Sealed Major Arcana Boots -->
-        </group>
-        <group chance="10">
-          <item id="6679" min="1" max="1" chance="3"/> <!-- Sealed Imperial Crusader Helmet -->
-          <item id="6683" min="1" max="1" chance="3"/> <!-- Sealed Draconic Leather Helmet -->
-          <item id="6687" min="1" max="1" chance="3"/> <!-- Sealed Major Arcana Circlet -->
-        </group>
-
         <group chance="100">
-          <item id="8751" min="1" max="2" chance="45"/> <!-- High-Grade Life Stone - Level 70 -->
-          <item id="8752" min="1" max="2" chance="40"/> <!-- High-Grade Life Stone - Level 76 -->
-          <item id="8761" min="1" max="1" chance="10"/> <!-- Top-Grade Life Stone - Level 70 -->
-          <item id="8762" min="1" max="1" chance="5"/> <!-- Top-Grade Life Stone - Level 76 -->
+          <item id="1538" min="1" max="10" chance="50"/> <!-- Blessed Scroll of Escape -->
         </group>
-
         <group chance="100">
-          <item id="6658" min="1" max="1" chance="100"/> <!-- Ring of Baium -->
+          <item id="3936" min="1" max="10" chance="50"/> <!-- Blessed Scroll of Resurrection -->
+        </group>
+        <group chance="100">
+          <item id="57" min="9000000" max="11100000" chance="100"/> <!-- Adena -->
+        </group>
+        <group chance="100">
+          <item id="16162" min="2" max="4" chance="60"/> <!-- High-Grade Life Stone - Level 85 -->
+          <item id="16166" min="2" max="4" chance="40"/> <!-- High-Grade Life Stone - Level 86 -->
+        </group>
+        <group chance="100">
+          <item id="22173" min="1" max="1" chance="100"/> <!-- Improved Ring of Baium -->
+        </group>
+        <group chance="52.264">
+          <item id="14170" min="1" max="1" chance="5.7764"/> <!-- Forgotten Scroll - Seed of Revenge -->
+          <item id="14177" min="1" max="1" chance="5.6387"/> <!-- Forgotten Scroll - Ghost Walking -->
+          <item id="14181" min="1" max="1" chance="5.6195"/> <!-- Forgotten Scroll - Dread Pool -->
+          <item id="14179" min="1" max="1" chance="5.6081"/> <!-- Forgotten Scroll - Arrow Rain -->
+          <item id="14175" min="1" max="1" chance="5.6081"/> <!-- Forgotten Scroll - Exciting Adventure -->
+          <item id="14176" min="1" max="1" chance="5.6042"/> <!-- Forgotten Scroll - Wind Riding -->
+          <item id="14182" min="1" max="1" chance="5.6042"/> <!-- Forgotten Scroll - Force of Destruction -->
+          <item id="14178" min="1" max="1" chance="5.5871"/> <!-- Forgotten Scroll - Flame Hawk -->
+          <item id="14173" min="1" max="1" chance="5.5851"/> <!-- Forgotten Scroll - Eva's Will / Touch of Eva -->
+          <item id="14174" min="1" max="1" chance="5.5813"/> <!-- Forgotten Scroll - Pain of Shillien -->
+          <item id="14172" min="1" max="1" chance="5.5641"/> <!-- Forgotten Scroll - Spirit of Phoenix -->
+          <item id="14184" min="1" max="1" chance="5.5354"/> <!-- Forgotten Scroll - Golem Armor -->
+          <item id="14183" min="1" max="1" chance="5.5143"/> <!-- Forgotten Scroll - Demolition Impact -->
+          <item id="14186" min="1" max="1" chance="5.4741"/> <!-- Forgotten Scroll - Lightning Shock -->
+          <item id="14187" min="1" max="1" chance="5.4359"/> <!-- Forgotten Scroll - Flame Armor -->
+          <item id="14188" min="1" max="1" chance="5.4263"/> <!-- Forgotten Scroll - Frost Armor -->
+          <item id="14185" min="1" max="1" chance="5.4244"/> <!-- Forgotten Scroll - Wild Shot -->
+          <item id="14171" min="1" max="1" chance="5.4129"/> <!-- Forgotten Scroll - Hell Scream -->
         </group>
       </death>
     </dropLists>
@@ -1551,16 +1539,17 @@
       <height normal="174"/>
     </collision>
   </npc>
-  <npc id="29021" level="74" type="L2Monster" name="Archangel">
+  <npc id="29021" level="85" type="L2Monster" name="Archangel">
     <!-- Confirmed CT2.5 -->
     <race>DIVINE</race>
     <sex>MALE</sex>
     <equipment rhand="21738"/> <!-- rhand: Winged Spear - Event -->
     <acquire expRate="1.2" sp="343"/>
     <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-      <vitals hp="186915" hpRegen="158" mp="1475.0" mpRegen="3"/>
-      <attack physical="1395" magical="371" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120"/>
-      <defence physical="5108" magical="1686" evasion="-18"/>
+      <vitals hp="195900.34672804" hpRegen="218.275841116973" mp="17740.0" mpRegen="100"/>
+      <attack physical="3000" magical="1000" random="30" critical="4" accuracy="0"
+              attackSpeed="253" type="POLE" range="80" distance="80" width="120"/>
+      <defence physical="4108" magical="1686" evasion="-18"/>
       <attribute>
         <defence fire="20" water="20" wind="20" earth="20" holy="53" dark="-13"/>
       </attribute>
