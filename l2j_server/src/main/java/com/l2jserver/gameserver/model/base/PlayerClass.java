@@ -266,8 +266,7 @@ public enum PlayerClass
 
                 Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);
 
-                if (!Config.ALLOW_ALL_SUBCLASSES && unavailableClasses != null)
-				{
+				if (!Config.ALLOW_ALL_SUBCLASSES && unavailableClasses != null) {
 					subclasses.removeAll(unavailableClasses);
 				}
 			}
