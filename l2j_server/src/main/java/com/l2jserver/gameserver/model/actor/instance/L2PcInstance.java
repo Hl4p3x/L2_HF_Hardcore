@@ -5665,7 +5665,6 @@ public final class L2PcInstance extends L2Playable {
     @Override
     public void restoreEffects() {
         DAOFactory.getInstance().getPlayerSkillSaveDAO().load(this);
-
         DAOFactory.getInstance().getPlayerSkillSaveDAO().delete(this);
     }
 

@@ -28,23 +28,23 @@ public class SkillsHelper {
      * Perform a simple check for current player and skill.<br> Takes the needed SP if the skill require it and all
      * requirements are meet.<br> Consume required items if the skill require it and all requirements are meet.<br>
      *
-     * @param player the skill learning player.
+     * @param player  the skill learning player.
      * @param trainer the skills teaching Npc.
-     * @param s the skill to be learn.
+     * @param s       the skill to be learn.
      * @return {@code true} if all requirements are meet, {@code false} otherwise.
      */
     public static boolean checkPlayerSkill(SkillLearnData skillLearnData, L2PcInstance player, L2Npc trainer,
-        L2SkillLearn s) {
+                                           L2SkillLearn s) {
         if (s != null) {
             if (s.getSkillId() == skillLearnData.getId() && (s.getSkillLevel() == skillLearnData.getLevel())) {
                 // Hack check.
                 if (s.getGetLevel() > player.getLevel()) {
                     player.sendPacket(SystemMessageId.YOU_DONT_MEET_SKILL_LEVEL_REQUIREMENTS);
                     Util.handleIllegalPlayerAction(player,
-                        "Player " + player.getName() + ", level " + player.getLevel() + " is requesting skill Id: "
-                            + skillLearnData.getId() + " level " + skillLearnData.getLevel()
-                            + " without having minimum required level, " + s.getGetLevel()
-                            + "!", IllegalActionPunishmentType.NONE);
+                            "Player " + player.getName() + ", level " + player.getLevel() + " is requesting skill Id: "
+                                    + skillLearnData.getId() + " level " + skillLearnData.getLevel()
+                                    + " without having minimum required level, " + s.getGetLevel()
+                                    + "!", IllegalActionPunishmentType.NONE);
                     return false;
                 }
 
@@ -57,7 +57,7 @@ public class SkillsHelper {
                 }
 
                 if (!Config.DIVINE_SP_BOOK_NEEDED && (skillLearnData.getId() == CommonSkill.DIVINE_INSPIRATION
-                    .getId())) {
+                        .getId())) {
                     return true;
                 }
 
@@ -91,14 +91,14 @@ public class SkillsHelper {
                     // If the player has all required items, they are consumed.
                     for (ItemHolder itemIdCount : s.getRequiredItems()) {
                         if (!player
-                            .destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer,
-                                true)) {
+                                .destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer,
+                                        true)) {
                             Util.handleIllegalPlayerAction(player,
-                                "Somehow player " + player.getName() + ", level " + player.getLevel()
-                                    + " lose required item Id: " + itemIdCount.getId()
-                                    + " to learn skill while learning skill Id: " + skillLearnData.getId() + " level "
-                                    + skillLearnData.getLevel()
-                                    + "!", IllegalActionPunishmentType.NONE);
+                                    "Somehow player " + player.getName() + ", level " + player.getLevel()
+                                            + " lose required item Id: " + itemIdCount.getId()
+                                            + " to learn skill while learning skill Id: " + skillLearnData.getId() + " level "
+                                            + skillLearnData.getLevel()
+                                            + "!", IllegalActionPunishmentType.NONE);
                         }
                     }
                 }
@@ -118,9 +118,9 @@ public class SkillsHelper {
     /**
      * Add the skill to the player and makes proper updates.
      *
-     * @param player the player acquiring a skill.
+     * @param player  the player acquiring a skill.
      * @param trainer the Npc teaching a skill.
-     * @param skill the skill to be learn.
+     * @param skill   the skill to be learn.
      */
     public static void giveSkill(SkillLearnData skillLearnData, L2PcInstance player, L2Npc trainer, Skill skill) {
         // Send message.
@@ -143,20 +143,20 @@ public class SkillsHelper {
 
         // Notify scripts of the skill learn.
         EventDispatcher
-            .getInstance()
-            .notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, skillLearnData.getSkillType()), trainer);
+                .getInstance()
+                .notifyEventAsync(new OnPlayerSkillLearn(trainer, player, skill, skillLearnData.getSkillType()), trainer);
     }
 
     /**
      * Wrapper for returning the skill list to the player after it's done with current skill.
      *
      * @param trainer the Npc which the {@code player} is interacting
-     * @param player the active character
+     * @param player  the active character
      */
     public static void showSkillList(AcquireSkillType skillType, L2Npc trainer, L2PcInstance player) {
         if ((skillType == AcquireSkillType.TRANSFORM) || (skillType
-            == AcquireSkillType.SUBCLASS) || (skillType
-            == AcquireSkillType.TRANSFER)) {// Managed in Datapack.
+                == AcquireSkillType.SUBCLASS) || (skillType
+                == AcquireSkillType.TRANSFER) || (skillType == AcquireSkillType.MASTERY)) {// Managed in Datapack.
             return;
         }
 

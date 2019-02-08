@@ -1,28 +1,22 @@
 package custom.certifications;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import ai.npc.AbstractNpcAI;
+import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.AcquireSkillType;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
-import com.l2jserver.util.ObjectMapperYamlSingleton;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
-public class MasteryCertifications extends Quest {
+public class MasteryCertifications extends AbstractNpcAI {
 
     private static final Logger LOG = LoggerFactory.getLogger(MasteryCertifications.class);
 
@@ -42,45 +36,23 @@ public class MasteryCertifications extends Quest {
                     32234
             };
 
-    private CertificationSkills certificationSkills;
-    private List<CertificationAcquireLevel> certificationAcquireLevel;
 
     public MasteryCertifications() {
-        super(90166775, MasteryCertifications.class.getSimpleName(), "custom/certifications");
-        load();
+        super(MasteryCertifications.class.getSimpleName(), "Mastery Certifications");
         addStartNpc(NPCS);
         addTalkId(NPCS);
-    }
-
-    public void load() {
-        ObjectMapper objectMapper = ObjectMapperYamlSingleton.getInstance();
-        try {
-            Map<CertificationSkillType, Set<Integer>> values = objectMapper.readValue(getClass().getResourceAsStream("./certification_skills.yml"), new TypeReference<Map<CertificationSkillType, Set<Integer>>>() {
-            });
-            certificationSkills = new CertificationSkills(values);
-        } catch (IOException e) {
-            LOG.error("Could not read certification skills data", e);
-            throw new IllegalStateException(e);
-        }
-
-        try {
-            certificationAcquireLevel = objectMapper.readValue(getClass().getResourceAsStream("./certification_levels.yml"), new TypeReference<List<CertificationAcquireLevel>>() {
-            });
-        } catch (IOException e) {
-            LOG.error("Could not read certification acquire level data", e);
-            throw new IllegalStateException(e);
-        }
+        addAcquireSkillId(NPCS);
     }
 
     @Override
     public String onTalk(L2Npc npc, L2PcInstance player) {
-        final QuestState st = getQuestState(player, true);
-        String htmltext = getNoQuestMsg(player);
-        if (st != null) {
-            st.setState(State.STARTED);
-            return "mastery_certification.html";
-        }
-        return htmltext;
+        return HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/custom/certifications/mastery_certification.html");
+    }
+
+    @Override
+    public String onAcquireSkill(L2Npc npc, L2PcInstance player, Skill skill, AcquireSkillType type) {
+        listCertifications(player);
+        return null;
     }
 
     @Override
@@ -91,18 +63,26 @@ public class MasteryCertifications extends Quest {
                 break;
             case "certification_drop_all_from_current_class":
                 dropAllCertificationsFromCurrentClass(player);
-                break;
+                return HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/custom/certifications/mastery_certification_removed.html");
+            case "certification_info":
+                return HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/custom/certifications/mastery_certification.html");
         }
-        return "mastery_certification.html";
+        return null;
     }
 
     public void dropAllCertificationsFromCurrentClass(L2PcInstance player) {
-        certificationSkills.getAllSkillIds().forEach(player::removeSkill);
+        SkillTreesData.getInstance().getClassMasterySkillIds().forEach(skillId -> {
+            Skill skill = player.getKnownSkill(skillId);
+            if (skill != null) {
+                player.removeSkill(skill, true);
+            }
+        });
+        player.sendSkillList();
     }
 
     public void listCertifications(L2PcInstance player) {
-        final List<L2SkillLearn> subClassSkills = SkillTreesData.getInstance().getAvailableSubClassSkills(player);
-        final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.SUBCLASS);
+        final List<L2SkillLearn> subClassSkills = SkillTreesData.getInstance().getAvailableMasterClassSkills(player);
+        final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.MASTERY);
         int count = 0;
 
         for (L2SkillLearn s : subClassSkills) {

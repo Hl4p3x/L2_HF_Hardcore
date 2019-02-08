@@ -44,6 +44,10 @@ public class Pair<T, Y> {
                 .toString();
     }
 
+    public static <T> Pair<T, T> of(T left, T right) {
+        return new Pair<>(left, right);
+    }
+
     public static <T> Pair<T, T> of(List<T> items) {
         if (items.size() == 2) {
             return new Pair<>(items.get(0), items.get(1));
