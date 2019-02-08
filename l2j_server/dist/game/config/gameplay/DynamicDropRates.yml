@@ -1248,7 +1248,7 @@ npcs:
       - name: "Knoriks Special SA"
         stats:
           count: "1"
-          chance: 7.0
+          chance: 25.0
         ids:
           - 13071 # Red Soul Crystal - Stage 16
           - 13073 # Green Soul Crystal - Stage 16
@@ -1256,17 +1256,21 @@ npcs:
       - name: "Knoriks Special Noble Enhancement"
         stats:
           count: "100-600"
-          chance: 15.0
+          chance: 40.0
         ids:
           - 14052 # Noble Enhancement Stone
   - npc_ids:
       - 29181 # Zaken
       - 29179 # Freya
       - 29047 # Frintezza
+      - 29006 # Core
+      - 29014 # Orfen
+      - 29001 # Queen Ant
+      - 29020 # Baium
     drop_categories:
       - name: "Soul Crystals - Vorpal"
         stats:
-          count: "3-12"
+          count: "3-8"
           chance: 100.0
         ids:
           - 15541 # Red Soul Crystal - Stage 17
