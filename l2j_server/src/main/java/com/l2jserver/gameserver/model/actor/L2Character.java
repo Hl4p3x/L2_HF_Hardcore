@@ -4773,7 +4773,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                     if (skill.getEffectPoint() > 0) {
                         ((L2Attackable) target).reduceHate(this, skill.getEffectPoint());
                     } else if (skill.getEffectPoint() < 0) {
-                        ((L2Attackable) target).addDamageHate(this, 0, -skill.getEffectPoint());
+                        long aggro = Math.round(-skill.getEffectPoint() + getPAtk(target));
+                        ((L2Attackable) target).addDamageHate(this, 0, aggro);
                     }
                 }
             }
@@ -5077,7 +5078,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                                         for (L2Object skillTarget : targets) {
                                             if ((npcTarget == skillTarget) || (npcMob == skillTarget)) {
                                                 L2Character originalCaster = isSummon() ? getSummon() : player;
-                                                attackable.addDamageHate(originalCaster, 0, (skillEffectPoint * 150) / (attackable.getLevel() + 7));
+                                                attackable.addDamageHate(originalCaster, 0, skillEffectPoint);
                                             }
                                         }
                                     }
