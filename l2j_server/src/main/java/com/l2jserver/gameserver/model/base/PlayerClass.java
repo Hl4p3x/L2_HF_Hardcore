@@ -1,18 +1,18 @@
 /*
  * Copyright (C) 2004-2016 L2J Server
- * 
+ *
  * This file is part of L2J Server.
- * 
+ *
  * L2J Server is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * L2J Server is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
@@ -52,7 +52,7 @@ public enum PlayerClass
 	Cleric(Race.HUMAN, Priest, Second),
 	Bishop(Race.HUMAN, Priest, Third),
 	Prophet(Race.HUMAN, Priest, Third),
-	
+
 	ElvenFighter(Race.ELF, Fighter, First),
 	ElvenKnight(Race.ELF, Fighter, Second),
 	TempleKnight(Race.ELF, Fighter, Third),
@@ -66,8 +66,8 @@ public enum PlayerClass
 	ElementalSummoner(Race.ELF, Mystic, Third),
 	ElvenOracle(Race.ELF, Priest, Second),
 	ElvenElder(Race.ELF, Priest, Third),
-	
-	DarkElvenFighter(Race.DARK_ELF, Fighter, First),
+
+    DarkElvenFighter(Race.DARK_ELF, Fighter, First),
 	PalusKnight(Race.DARK_ELF, Fighter, Second),
 	ShillienKnight(Race.DARK_ELF, Fighter, Third),
 	Bladedancer(Race.DARK_ELF, Fighter, Third),
@@ -80,8 +80,8 @@ public enum PlayerClass
 	PhantomSummoner(Race.DARK_ELF, Mystic, Third),
 	ShillienOracle(Race.DARK_ELF, Priest, Second),
 	ShillienElder(Race.DARK_ELF, Priest, Third),
-	
-	OrcFighter(Race.ORC, Fighter, First),
+
+    OrcFighter(Race.ORC, Fighter, First),
 	OrcRaider(Race.ORC, Fighter, Second),
 	Destroyer(Race.ORC, Fighter, Third),
 	OrcMonk(Race.ORC, Fighter, Second),
@@ -90,14 +90,14 @@ public enum PlayerClass
 	OrcShaman(Race.ORC, Mystic, Second),
 	Overlord(Race.ORC, Mystic, Third),
 	Warcryer(Race.ORC, Mystic, Third),
-	
-	DwarvenFighter(Race.DWARF, Fighter, First),
+
+    DwarvenFighter(Race.DWARF, Fighter, First),
 	DwarvenScavenger(Race.DWARF, Fighter, Second),
 	BountyHunter(Race.DWARF, Fighter, Third),
 	DwarvenArtisan(Race.DWARF, Fighter, Second),
 	Warsmith(Race.DWARF, Fighter, Third),
-	
-	dummyEntry1(null, null, null),
+
+    dummyEntry1(null, null, null),
 	dummyEntry2(null, null, null),
 	dummyEntry3(null, null, null),
 	dummyEntry4(null, null, null),
@@ -141,37 +141,37 @@ public enum PlayerClass
 	arcanaLord(Race.HUMAN, Mystic, Fourth),
 	cardinal(Race.HUMAN, Priest, Fourth),
 	hierophant(Race.HUMAN, Priest, Fourth),
-	
-	evaTemplar(Race.ELF, Fighter, Fourth),
+
+    evaTemplar(Race.ELF, Fighter, Fourth),
 	swordMuse(Race.ELF, Fighter, Fourth),
 	windRider(Race.ELF, Fighter, Fourth),
 	moonlightSentinel(Race.ELF, Fighter, Fourth),
 	mysticMuse(Race.ELF, Mystic, Fourth),
 	elementalMaster(Race.ELF, Mystic, Fourth),
 	evaSaint(Race.ELF, Priest, Fourth),
-	
-	shillienTemplar(Race.DARK_ELF, Fighter, Fourth),
+
+    shillienTemplar(Race.DARK_ELF, Fighter, Fourth),
 	spectralDancer(Race.DARK_ELF, Fighter, Fourth),
 	ghostHunter(Race.DARK_ELF, Fighter, Fourth),
 	ghostSentinel(Race.DARK_ELF, Fighter, Fourth),
 	stormScreamer(Race.DARK_ELF, Mystic, Fourth),
 	spectralMaster(Race.DARK_ELF, Mystic, Fourth),
 	shillienSaint(Race.DARK_ELF, Priest, Fourth),
-	
-	titan(Race.ORC, Fighter, Fourth),
+
+    titan(Race.ORC, Fighter, Fourth),
 	grandKhavatari(Race.ORC, Fighter, Fourth),
 	dominator(Race.ORC, Mystic, Fourth),
 	doomcryer(Race.ORC, Mystic, Fourth),
-	
-	fortuneSeeker(Race.DWARF, Fighter, Fourth),
+
+    fortuneSeeker(Race.DWARF, Fighter, Fourth),
 	maestro(Race.DWARF, Fighter, Fourth),
-	
-	dummyEntry31(null, null, null),
+
+    dummyEntry31(null, null, null),
 	dummyEntry32(null, null, null),
 	dummyEntry33(null, null, null),
 	dummyEntry34(null, null, null),
-	
-	maleSoldier(Race.KAMAEL, Fighter, First),
+
+    maleSoldier(Race.KAMAEL, Fighter, First),
 	femaleSoldier(Race.KAMAEL, Fighter, First),
 	trooper(Race.KAMAEL, Fighter, Second),
 	warder(Race.KAMAEL, Fighter, Second),
@@ -185,71 +185,71 @@ public enum PlayerClass
 	trickster(Race.KAMAEL, Fighter, Fourth),
 	inspector(Race.KAMAEL, Fighter, Third),
 	judicator(Race.KAMAEL, Fighter, Fourth);
-	
-	private Race _race;
+
+    private Race _race;
 	private ClassLevel _level;
 	private ClassType _type;
-	
-	private static final Set<PlayerClass> mainSubclassSet;
+
+    private static final Set<PlayerClass> mainSubclassSet;
 	private static final Set<PlayerClass> neverSubclassed = EnumSet.of(Overlord, Warsmith);
-	
-	private static final Set<PlayerClass> subclasseSet1 = EnumSet.of(DarkAvenger, Paladin, TempleKnight, ShillienKnight);
+
+    private static final Set<PlayerClass> subclasseSet1 = EnumSet.of(DarkAvenger, Paladin, TempleKnight, ShillienKnight);
 	private static final Set<PlayerClass> subclasseSet2 = EnumSet.of(TreasureHunter, AbyssWalker, Plainswalker);
 	private static final Set<PlayerClass> subclasseSet3 = EnumSet.of(Hawkeye, SilverRanger, PhantomRanger);
 	private static final Set<PlayerClass> subclasseSet4 = EnumSet.of(Warlock, ElementalSummoner, PhantomSummoner);
 	private static final Set<PlayerClass> subclasseSet5 = EnumSet.of(Sorceror, Spellsinger, Spellhowler);
-	
-	private static final EnumMap<PlayerClass, Set<PlayerClass>> subclassSetMap = new EnumMap<>(PlayerClass.class);
-	
-	static
+
+    private static final EnumMap<PlayerClass, Set<PlayerClass>> subclassSetMap = new EnumMap<>(PlayerClass.class);
+
+    static
 	{
 		Set<PlayerClass> subclasses = getSet(null, Third);
 		if (!Config.ALLOW_ALL_SUBCLASSES) {
 			subclasses.removeAll(neverSubclassed);
 		}
-		
-		mainSubclassSet = subclasses;
-		
-		subclassSetMap.put(DarkAvenger, subclasseSet1);
+
+        mainSubclassSet = subclasses;
+
+        subclassSetMap.put(DarkAvenger, subclasseSet1);
 		subclassSetMap.put(Paladin, subclasseSet1);
 		subclassSetMap.put(TempleKnight, subclasseSet1);
 		subclassSetMap.put(ShillienKnight, subclasseSet1);
-		
-		subclassSetMap.put(TreasureHunter, subclasseSet2);
+
+        subclassSetMap.put(TreasureHunter, subclasseSet2);
 		subclassSetMap.put(AbyssWalker, subclasseSet2);
 		subclassSetMap.put(Plainswalker, subclasseSet2);
-		
-		subclassSetMap.put(Hawkeye, subclasseSet3);
+
+        subclassSetMap.put(Hawkeye, subclasseSet3);
 		subclassSetMap.put(SilverRanger, subclasseSet3);
 		subclassSetMap.put(PhantomRanger, subclasseSet3);
-		
-		subclassSetMap.put(Warlock, subclasseSet4);
+
+        subclassSetMap.put(Warlock, subclasseSet4);
 		subclassSetMap.put(ElementalSummoner, subclasseSet4);
 		subclassSetMap.put(PhantomSummoner, subclasseSet4);
-		
-		subclassSetMap.put(Sorceror, subclasseSet5);
+
+        subclassSetMap.put(Sorceror, subclasseSet5);
 		subclassSetMap.put(Spellsinger, subclasseSet5);
 		subclassSetMap.put(Spellhowler, subclasseSet5);
 	}
-	
-	PlayerClass(Race race, ClassType pType, ClassLevel pLevel)
+
+    PlayerClass(Race race, ClassType pType, ClassLevel pLevel)
 	{
 		_race = race;
 		_level = pLevel;
 		_type = pType;
 	}
-	
-	public final Set<PlayerClass> getAvailableSubclasses(L2PcInstance player)
+
+    public final Set<PlayerClass> getAvailableSubclasses(L2PcInstance player)
 	{
 		Set<PlayerClass> subclasses = null;
-		
-		if (_level == Third)
+
+        if (_level == Third)
 		{
 			if (player.getRace() != Race.KAMAEL)
 			{
 				subclasses = EnumSet.copyOf(mainSubclassSet);
-				
-				subclasses.remove(this);
+
+                subclasses.remove(this);
 
 				if (!Config.ALLOW_ALL_SUBCLASSES) {
 					switch (player.getRace()) {
@@ -261,16 +261,15 @@ public enum PlayerClass
 							break;
 					}
 				}
-				
-				subclasses.removeAll(getSet(Race.KAMAEL, Third));
-				
-				Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);
-				
-				if (unavailableClasses != null)
+
+                subclasses.removeAll(getSet(Race.KAMAEL, Third));
+
+                Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);
+
+                if (!Config.ALLOW_ALL_SUBCLASSES && unavailableClasses != null)
 				{
 					subclasses.removeAll(unavailableClasses);
 				}
-				
 			}
 			else
 			{
@@ -298,12 +297,12 @@ public enum PlayerClass
 		}
 		return subclasses;
 	}
-	
-	public static final EnumSet<PlayerClass> getSet(Race race, ClassLevel level)
+
+    public static final EnumSet<PlayerClass> getSet(Race race, ClassLevel level)
 	{
 		EnumSet<PlayerClass> allOf = EnumSet.noneOf(PlayerClass.class);
-		
-		for (PlayerClass playerClass : EnumSet.allOf(PlayerClass.class))
+
+        for (PlayerClass playerClass : EnumSet.allOf(PlayerClass.class))
 		{
 			if ((race == null) || playerClass.isOfRace(race))
 			{
@@ -315,23 +314,23 @@ public enum PlayerClass
 		}
 		return allOf;
 	}
-	
-	public final boolean isOfRace(Race pRace)
+
+    public final boolean isOfRace(Race pRace)
 	{
 		return _race == pRace;
 	}
-	
-	public final boolean isOfType(ClassType pType)
+
+    public final boolean isOfType(ClassType pType)
 	{
 		return _type == pType;
 	}
-	
-	public final boolean isOfLevel(ClassLevel pLevel)
+
+    public final boolean isOfLevel(ClassLevel pLevel)
 	{
 		return _level == pLevel;
 	}
-	
-	public final ClassLevel getLevel()
+
+    public final ClassLevel getLevel()
 	{
 		return _level;
 	}
