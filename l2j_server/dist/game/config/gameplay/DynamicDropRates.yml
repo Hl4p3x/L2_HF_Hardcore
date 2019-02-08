@@ -927,7 +927,7 @@ raid:
       s:
         normal:
           chance: 40.0
-          count: "1-6"
+          count: "1-10"
         blessed:
           chance: 4.0
           count: "1-2"
@@ -963,7 +963,7 @@ raid:
       s:
         normal:
           chance: 45.0
-          count: "2-20"
+          count: "2-30"
         blessed:
           chance: 5.0
           count: "1-3"
@@ -1270,7 +1270,7 @@ npcs:
     drop_categories:
       - name: "Soul Crystals - Vorpal"
         stats:
-          count: "3-8"
+          stacks: "3-8"
           chance: 100.0
         ids:
           - 15541 # Red Soul Crystal - Stage 17
@@ -1282,7 +1282,7 @@ npcs:
     drop_categories:
       - name: "Soul Crystals - Elegia"
         stats:
-          count: "2-8"
+          stacks: "2-8"
           chance: 100.0
         ids:
           - 15826 # Red Soul Crystal - Stage 18

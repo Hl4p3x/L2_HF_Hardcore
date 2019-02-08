@@ -25,12 +25,13 @@
 		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="22568" name="Improved Ring of Core" type="Armor">
+		<set name="displayId" val="6662"/>
 		<set name="icon" val="icon.accessory_ring_of_core_i00"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="bodypart" val="rfinger;lfinger"/>
 		<set name="immediate_effect" val="true"/>
 		<set name="crystal_count" val="69"/>
-		<set name="crystal_type" val="S80"/>
+		<set name="crystal_type" val="A"/>
 		<set name="material" val="GOLD"/>
 		<set name="weight" val="150"/>
 		<set name="price" val="870000"/>
@@ -43,12 +44,13 @@
 		</for>
 	</item>
 	<item id="22569" name="Improved Earring of Orfen" type="Armor">
+		<set name="displayId" val="6661"/>
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="bodypart" val="rear;lear"/>
 		<set name="immediate_effect" val="true"/>
 		<set name="crystal_count" val="104"/>
-		<set name="crystal_type" val="S80"/>
+		<set name="crystal_type" val="A"/>
 		<set name="material" val="GOLD"/>
 		<set name="weight" val="150"/>
 		<set name="price" val="1300000"/>
