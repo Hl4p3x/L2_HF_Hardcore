@@ -482,7 +482,7 @@ mobs:
     drop:
       stats:
         count: "1"
-        chance: 0.4
+        chance: 0.5
       ids:
       - 13071 # Red Soul Crystal - Stage 16
       - 13073 # Green Soul Crystal - Stage 16
