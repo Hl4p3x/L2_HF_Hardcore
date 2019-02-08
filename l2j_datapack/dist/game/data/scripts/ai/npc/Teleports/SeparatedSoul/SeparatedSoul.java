@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import handlers.communityboard.custom.BuffCondition;
+import handlers.communityboard.custom.ProcessResult;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -91,8 +92,12 @@ public final class SeparatedSoul extends AbstractNpcAI {
             case 7:
             case 8: {
                 if (player.getLevel() >= MIN_LEVEL) {
-                    BuffCondition.checkCondition(player);
-                    player.teleToLocation(LOCATIONS.get(ask), false);
+                    ProcessResult result = BuffCondition.checkCondition(player);
+                    if (result.isSuccess()) {
+                        player.teleToLocation(LOCATIONS.get(ask), false);
+                    } else {
+                        player.sendScreenMessage(result.getResult());
+                    }
                 } else {
                     return "no-level.htm";
                 }
