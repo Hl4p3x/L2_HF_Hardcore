@@ -1032,7 +1032,7 @@ public final class Formulas {
         }
 
         // Chance of break is higher with higher dmg
-        init += Math.sqrt(13 * dmg);
+        init += Math.sqrt(dmg);
 
         // Chance is affected by target MEN
         init -= ((BaseStats.MEN.calcBonus(target) * 100) - 100);
