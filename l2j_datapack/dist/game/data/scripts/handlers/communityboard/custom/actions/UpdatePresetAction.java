@@ -56,6 +56,7 @@ public class UpdatePresetAction implements BoardAction {
         List<Skill> presetBuffs = communityBuffList.getSkills().stream().map(SkillHolder::getSkill).collect(Collectors.toList());
         String buffRows = BuffRowRender.render("bypass -h _bbs_buff remove_preset_buff " + communityBuffList.getId() + " %buff_id%", presetBuffs);
         html = html.replace("%current_preset_buff_list%", buffRows);
+        html = html.replace("%preset_name%", presetName);
 
         CommunityBoardHandler.separateAndSend(html, player);
         return ProcessResult.success();

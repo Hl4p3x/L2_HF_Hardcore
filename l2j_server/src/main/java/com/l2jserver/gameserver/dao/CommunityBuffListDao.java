@@ -123,7 +123,7 @@ public class CommunityBuffListDao {
         Jdbi jdbi = Jdbi.create(ConnectionFactory.getInstance().getDataSource());
         return jdbi.inTransaction(h -> {
             Optional<CommunityBuffList> communityBuffList = findSingleCommunityBuffSet(ownerId, listName);
-            if (!communityBuffList.isPresent()) {
+            if (communityBuffList.isEmpty()) {
                 return false;
             }
 
