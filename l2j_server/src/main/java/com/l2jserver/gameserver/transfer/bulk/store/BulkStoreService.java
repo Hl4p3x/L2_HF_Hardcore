@@ -8,7 +8,6 @@ import com.l2jserver.gameserver.model.itemcontainer.WarehouseType;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.transfer.bulk.BulkItemType;
 import com.l2jserver.gameserver.transfer.bulk.BulkItemTypeFilter;
@@ -18,7 +17,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
-import java.util.Objects;
 
 import static com.l2jserver.gameserver.model.itemcontainer.Inventory.ADENA_ID;
 
@@ -116,7 +114,7 @@ public class BulkStoreService {
         }
 
         // Proceed to the transfer
-        InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+        InventoryUpdate playerIU = new InventoryUpdate();
         for (L2ItemInstance i : allItems) {
             // Check validity of requested item
             L2ItemInstance oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "deposit");
@@ -135,17 +133,15 @@ public class BulkStoreService {
                 continue;
             }
 
-            if (playerIU != null) {
-                if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
-                    playerIU.addModifiedItem(oldItem);
-                } else {
-                    playerIU.addRemovedItem(oldItem);
-                }
+            if ((oldItem.getCount() > 0) && (oldItem != newItem)) {
+                playerIU.addModifiedItem(oldItem);
+            } else {
+                playerIU.addRemovedItem(oldItem);
             }
         }
 
         // Send updated item list to the player
-        player.sendPacket(Objects.requireNonNullElseGet(playerIU, () -> new ItemList(player, false)));
+        player.sendPacket(playerIU);
 
         // Update current load status on player
         StatusUpdate su = new StatusUpdate(player);

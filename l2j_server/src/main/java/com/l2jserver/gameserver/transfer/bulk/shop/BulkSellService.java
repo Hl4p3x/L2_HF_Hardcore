@@ -6,6 +6,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.transfer.bulk.BulkItemType;
 import com.l2jserver.gameserver.transfer.bulk.BulkItemTypeFilter;
@@ -65,6 +66,7 @@ public class BulkSellService {
             return;
         }
 
+        InventoryUpdate playerIU = new InventoryUpdate();
         long totalPrice = 0;
         for (L2ItemInstance i : allItems) {
             L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "sell");
@@ -80,13 +82,21 @@ public class BulkSellService {
                 return;
             }
 
+            final L2ItemInstance newItem;
             if (Config.ALLOW_REFUND) {
-                player.getInventory().transferItem("Sell", i.getObjectId(), i.getCount(), player.getRefund(), player, target);
+                newItem = player.getInventory().transferItem("Sell", i.getObjectId(), i.getCount(), player.getRefund(), player, target);
             } else {
-                player.getInventory().destroyItem("Sell", i.getObjectId(), i.getCount(), player, target);
+                newItem = player.getInventory().destroyItem("Sell", i.getObjectId(), i.getCount(), player, target);
+            }
+
+            if ((i.getCount() > 0) && (i != newItem)) {
+                playerIU.addModifiedItem(i);
+            } else {
+                playerIU.addRemovedItem(i);
             }
         }
         player.addAdena("Sell", totalPrice, target, true);
+        player.sendPacket(playerIU);
 
         StatusUpdate su = new StatusUpdate(player);
         su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
