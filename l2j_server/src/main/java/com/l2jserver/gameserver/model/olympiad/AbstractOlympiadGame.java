@@ -18,10 +18,6 @@
  */
 package com.l2jserver.gameserver.model.olympiad;
 
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.AntiFeedManager;
@@ -38,11 +34,11 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExOlympiadMode;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jserver.gameserver.network.serverpackets.SkillCoolTime;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.*;
+
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author godson, GodKratos, Pere, DS
@@ -440,6 +436,15 @@ public abstract class AbstractOlympiadGame
 				player.sendPacket(sm);
 			}
 			player.sendPacket(iu);
+
+			if (Config.OLYMPIAD_WIN_REWARDS_FAME) {
+				int value = Config.OLYMPIAD_WIN_FAME_AMOUNT;
+				player.setFame(player.getFame() + value);
+				SystemMessage fameMsg = SystemMessage.getSystemMessage(SystemMessageId.ACQUIRED_S1_REPUTATION_SCORE);
+				fameMsg.addInt(value);
+				player.sendPacket(fameMsg);
+				player.sendPacket(new UserInfo(player));
+			}
 		}
 		catch (Exception e)
 		{
