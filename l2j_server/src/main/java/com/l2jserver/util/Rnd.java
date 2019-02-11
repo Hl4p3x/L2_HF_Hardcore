@@ -332,6 +332,9 @@ public final class Rnd
 	 */
 	public static final int get(final int n)
 	{
+		if (n == 0) {
+			return 0;
+		}
 		return rnd.nextInt(n);
 	}
 
