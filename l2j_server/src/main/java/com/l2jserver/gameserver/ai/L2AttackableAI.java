@@ -1104,8 +1104,6 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
             LOG.debug("{} is doing a basic attack", this);
             _actor.stopMove(null);
             _actor.doAttack(getAttackTarget());
-        } else {
-            moveToPawn(getAttackTarget(), npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius());
         }
     }
 
