@@ -150,8 +150,8 @@ public abstract class AbstractAI implements Ctrl
 	private int _moveToPawnTimeout;
 	
 	protected Future<?> _followTask = null;
-	private static final int FOLLOW_INTERVAL = 1000;
-	private static final int ATTACK_FOLLOW_INTERVAL = 500;
+	private static final int FOLLOW_INTERVAL = 500;
+	private static final int ATTACK_FOLLOW_INTERVAL = 200;
 	
 	/**
 	 * Constructor of AbstractAI.
@@ -496,78 +496,61 @@ public abstract class AbstractAI implements Ctrl
 	protected void moveToPawn(L2Object pawn, int offset)
 	{
 		// Check if actor can move
-		if (!_actor.isMovementDisabled())
-		{
-			if (offset < 10)
-			{
-				offset = 10;
-			}
-			
-			// prevent possible extra calls to this function (there is none?),
-			// also don't send movetopawn packets too often
-			boolean sendPacket = true;
-			if (_clientMoving && (_target == pawn))
-			{
-				if (_clientMovingToPawnOffset == offset)
-				{
-					if (GameTimeController.getInstance().getGameTicks() < _moveToPawnTimeout)
-					{
-						return;
-					}
-					sendPacket = false;
+		if (_actor.isMovementDisabled() || _actor.isCastingNow() || _actor.isCastingSimultaneouslyNow() || _actor.isAttackingNow()) {
+			clientActionFailed();
+			return;
+		}
+
+		if (offset < 10) {
+			offset = 10;
+		}
+
+		// prevent possible extra calls to this function (there is none?),
+		// also don't send movetopawn packets too often
+		boolean sendPacket = true;
+		if (_clientMoving && (_target == pawn)) {
+			if (_clientMovingToPawnOffset == offset) {
+				if (GameTimeController.getInstance().getGameTicks() < _moveToPawnTimeout) {
+					return;
 				}
-				else if (_actor.isOnGeodataPath())
-				{
-					// minimum time to calculate new route is 2 seconds
-					if (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10))
-					{
-						return;
-					}
+				sendPacket = false;
+			} else if (_actor.isOnGeodataPath()) {
+				// minimum time to calculate new route is 2 seconds
+				if (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10)) {
+					return;
 				}
-			}
-			
-			// Set AI movement data
-			_clientMoving = true;
-			_clientMovingToPawnOffset = offset;
-			_target = pawn;
-			_moveToPawnTimeout = GameTimeController.getInstance().getGameTicks();
-			_moveToPawnTimeout += 1000 / GameTimeController.MILLIS_IN_TICK;
-			
-			if (pawn == null)
-			{
-				return;
-			}
-			
-			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
-			_actor.moveToLocation(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
-			
-			if (!_actor.isMoving())
-			{
-				clientActionFailed();
-				return;
-			}
-			
-			// Send a Server->Client packet MoveToPawn/CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
-			if (pawn instanceof L2Character)
-			{
-				if (_actor.isOnGeodataPath())
-				{
-					_actor.broadcastPacket(new MoveToLocation(_actor));
-					_clientMovingToPawnOffset = 0;
-				}
-				else if (sendPacket)
-				{
-					_actor.broadcastPacket(new MoveToPawn(_actor, (L2Character) pawn, offset));
-				}
-			}
-			else
-			{
-				_actor.broadcastPacket(new MoveToLocation(_actor));
 			}
 		}
-		else
-		{
+
+		// Set AI movement data
+		_clientMoving = true;
+		_clientMovingToPawnOffset = offset;
+		_target = pawn;
+		_moveToPawnTimeout = GameTimeController.getInstance().getGameTicks();
+		_moveToPawnTimeout += 200 / GameTimeController.MILLIS_IN_TICK;
+
+		if (pawn == null) {
+			return;
+		}
+
+		// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
+		_actor.moveToLocation(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
+
+		if (!_actor.isMoving()) {
 			clientActionFailed();
+			return;
+		}
+
+		// Send a Server->Client packet MoveToPawn/CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
+		if (pawn instanceof L2Character) {
+			if (_actor.isOnGeodataPath()) {
+				_actor.broadcastPacket(new MoveToLocation(_actor));
+				_clientMovingToPawnOffset = 0;
+			} else if (sendPacket) {
+				_actor.broadcastPacket(new MoveToPawn(_actor, (L2Character) pawn, offset));
+			}
+		} else {
+			_actor.broadcastPacket(new MoveToLocation(_actor));
 		}
 	}
 	
@@ -592,7 +575,6 @@ public abstract class AbstractAI implements Ctrl
 			
 			// Send a Server->Client packet CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
 			_actor.broadcastPacket(new MoveToLocation(_actor));
-			
 		}
 		else
 		{

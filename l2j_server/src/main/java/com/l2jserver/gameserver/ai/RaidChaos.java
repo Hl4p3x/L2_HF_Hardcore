@@ -19,12 +19,13 @@ public class RaidChaos {
         this.aggro = new Aggro(attackableAi, npc);
     }
 
-    private void handleRaidBossChaos() {
+    private boolean handleRaidBossChaos() {
         if (!((L2MonsterInstance) npc).hasMinions()) {
             if (_chaosTime > Config.RAID_CHAOS_TIME) {
                 if (Rnd.get(100) <= (100 - ((npc.getCurrentHp() * Config.RAID_CHAOS_SOLO_BOSS_TRESHOLD) / npc.getMaxHp()))) {
                     aggro.aggroReconsider();
                     _chaosTime = 0;
+                    return true;
                 }
             }
         } else {
@@ -32,38 +33,44 @@ public class RaidChaos {
                 if (Rnd.get(100) <= (100 - ((npc.getCurrentHp() * Config.RAID_CHAOS_GROUP_BOSS_TRESHOLD) / npc.getMaxHp()))) {
                     aggro.aggroReconsider();
                     _chaosTime = 0;
+                    return true;
                 }
             }
         }
+        return false;
     }
 
-    private void handleRaidMinionChaos() {
+    private boolean handleRaidMinionChaos() {
         if (_chaosTime > Config.MINION_CHAOS_TIME) {
             if (Rnd.get(100) <= (100 - ((npc.getCurrentHp() * Config.RAID_CHAOS_MINION_THRESHOLD) / npc.getMaxHp()))) {
                 aggro.aggroReconsider();
                 _chaosTime = 0;
+                return true;
             }
         }
+        return false;
     }
 
-    private void handleGrandBossChaos() {
+    private boolean handleGrandBossChaos() {
         if (_chaosTime > Config.GRAND_CHAOS_TIME) {
             double chaosRate = 100 - ((npc.getCurrentHp() * Config.RAID_CHAOS_GRAND_BOSS_THRESHOLD) / npc.getMaxHp());
             if (((chaosRate <= 10) && (Rnd.get(100) <= 10)) || ((chaosRate > 10) && (Rnd.get(100) <= chaosRate))) {
                 aggro.aggroReconsider();
                 _chaosTime = 0;
+                return true;
             }
         }
+        return false;
     }
 
-    public void handleRaidChaos() {
+    public boolean handleRaidChaos() {
         _chaosTime++;
         if (npc instanceof L2RaidBossInstance) {
-            handleRaidBossChaos();
+            return handleRaidBossChaos();
         } else if (npc instanceof L2GrandBossInstance) {
-            handleGrandBossChaos();
+            return handleGrandBossChaos();
         } else {
-            handleRaidMinionChaos();
+            return handleRaidMinionChaos();
         }
     }
 

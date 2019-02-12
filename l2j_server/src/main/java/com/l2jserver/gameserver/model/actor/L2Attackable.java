@@ -70,6 +70,7 @@ public class L2Attackable extends L2Npc {
     private boolean _champion = false;
     private final Map<L2Character, AggroInfo> _aggroList = new ConcurrentHashMap<>();
     private boolean _isReturningToSpawnPoint = false;
+    private long startedReturningToSpawnPoint = 0;
     private boolean _canReturnToSpawnPoint = true;
     private boolean _seeThroughSilentMove = false;
     // Manor
@@ -142,6 +143,13 @@ public class L2Attackable extends L2Npc {
 
     public final void setisReturningToSpawnPoint(boolean value) {
         _isReturningToSpawnPoint = value;
+        if (_isReturningToSpawnPoint) {
+            startedReturningToSpawnPoint = System.currentTimeMillis();
+        }
+    }
+
+    public long getStartedReturningToSpawnPoint() {
+        return startedReturningToSpawnPoint;
     }
 
     public final boolean canReturnToSpawnPoint() {

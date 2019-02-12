@@ -599,7 +599,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
                 }
 
                 // Calculate the distance between the current position of the L2Character and the target (x,y)
-                double distance2 = npc.calculateDistance(x1, y1, 0, false, true);
+                double distance2 = npc.calculateDistance(x1, y1, z1, false, true);
 
                 if (distance2 > ((range + range) * (range + range))) {
                     npc.setisReturningToSpawnPoint(true);
@@ -617,7 +617,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
                 y1 = npc.getSpawn().getY(npc);
                 z1 = npc.getSpawn().getZ(npc);
 
-                if (!npc.isInsideRadius(x1, y1, 0, range, false, false)) {
+                if (!npc.isInsideRadius(x1, y1, z1, range, false, false)) {
                     npc.setisReturningToSpawnPoint(true);
                 } else {
                     int deltaX = Rnd.nextInt(range * 2); // x
@@ -632,12 +632,16 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
             final Location moveLoc = GeoData.getInstance().moveCheck(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceId());
 
             moveTo(moveLoc.getX(), moveLoc.getY(), moveLoc.getZ());
+            if (npc.isReturningToSpawnPoint() && System.currentTimeMillis() - npc.getStartedReturningToSpawnPoint() > 60 * 1000) {
+                returnToSpawn(npc);
+            }
         }
     }
 
     private void returnToSpawn(L2Attackable npc) {
         if ((npc != null) && (npc.getSpawn() != null) && (npc.getSpawn().getLocation() != null)) {
             int delay = GameTimeController.MILLIS_IN_TICK * 12;
+            npc.setisReturningToSpawnPoint(true);
 
             npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
             // SoE Animation section
@@ -669,6 +673,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
             npc.teleToLocation(npc.getSpawn().getLocation());
             npc.enableAllSkills();
             npc.setIsCastingNow(false);
+            npc.setisReturningToSpawnPoint(false);
         }
     }
 
@@ -885,7 +890,9 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
 
         // BOSS/Raid Minion Target Reconsider
         if (npc.isRaid() || npc.isRaidMinion()) {
-            raidChaos.handleRaidChaos();
+            if (raidChaos.handleRaidChaos()) {
+                return;
+            }
         }
 
         final List<Skill> generalSkills = npc.getTemplate().getAISkills(AISkillScope.GENERAL);
@@ -1056,15 +1063,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
             }
         }
 
-        double dist = npc.calculateDistance(mostHate, false, false);
-        int dist2 = (int) dist - collision;
-        int range = npc.getPhysicalAttackRange() + combinedCollision;
-        if (mostHate.isMoving()) {
-            range = range + 25;
-            if (npc.isMoving()) {
-                range = range + 25;
-            }
-        }
+        double distance = npc.calculateDistance(mostHate, false, false);
 
         long timeSinceLastCast = System.currentTimeMillis() - lastCastTime;
         boolean canCastSkill = timeSinceLastCast >= Config.NPC_DELAY_BETWEEN_CASTS;
@@ -1074,9 +1073,8 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
         if (canSeeTarget && canCastSkill && !npc.getShortRangeSkills().isEmpty() && npc.hasSkillChance()) {
             final Skill shortRangeSkill = npc.getShortRangeSkills().get(Rnd.get(npc.getShortRangeSkills().size()));
             int random = Rnd.get(100);
-            if ((npc.getShortRangeSkillChance() > random) && checkSkillCastConditions(npc, shortRangeSkill)) {
-                clientStopMoving(null);
-                npc.doCast(shortRangeSkill);
+            if (npc.getShortRangeSkillChance() > random) {
+                cast(shortRangeSkill);
                 LOG.debug("{} used short range skill {} on {}", this, shortRangeSkill, npc.getTarget());
                 lastCastTime = System.currentTimeMillis();
                 return;
@@ -1087,9 +1085,8 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
         if (canSeeTarget && canCastSkill && !npc.getLongRangeSkills().isEmpty() && npc.hasSkillChance()) {
             final Skill longRangeSkill = npc.getLongRangeSkills().get(Rnd.get(npc.getLongRangeSkills().size()));
             int random = Rnd.get(100);
-            if ((npc.getLongRangeSkillChance() > random) && checkSkillCastConditions(npc, longRangeSkill)) {
-                clientStopMoving(null);
-                npc.doCast(longRangeSkill);
+            if (npc.getLongRangeSkillChance() > random) {
+                cast(longRangeSkill);
                 LOG.debug("{} used long range skill {} on {}", this, longRangeSkill, npc.getTarget());
                 lastCastTime = System.currentTimeMillis();
                 return;
@@ -1097,25 +1094,16 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
             LOG.debug("{} could not use long range skill {} on {} because of random {} is less than {} or conditions", this, longRangeSkill, npc.getTarget(), random, npc.getLongRangeSkillChance());
         }
 
-        // Starts melee attack
-        if ((dist2 > range) || !canSeeTarget) {
-            LOG.debug("{}: target {} is out of reach, reconsidering", npc, mostHate);
+        if (maybeMoveToPawn(getAttackTarget(), _actor.getPhysicalAttackRange())) {
             if (npc.isMovementDisabled()) {
                 targetReconsider();
-            } else {
-                final L2Character target = getAttackTarget();
-                if (target != null) {
-                    if (target.isMoving()) {
-                        range -= 100;
-                    }
-                    moveToPawn(target, Math.max(range, 5));
-                }
             }
             return;
         }
 
         // Attacks target
         LOG.debug("{} is doing a basic attack", this);
+        _actor.stopMove(null);
         _actor.doAttack(getAttackTarget());
     }
 
@@ -1805,7 +1793,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
                     dist2 = dist - actor.getTemplate().getCollisionRadius();
                     range = actor.getPhysicalAttackRange() + actor.getTemplate().getCollisionRadius() + obj.getTemplate().getCollisionRadius();
                     if (obj.isMoving()) {
-                        dist2 = dist2 - 70;
+                        dist2 = dist2 - 10;
                     }
                 } catch (NullPointerException e) {
                     continue;

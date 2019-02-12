@@ -18,19 +18,6 @@
  */
 package com.l2jserver.gameserver.ai;
 
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_CAST;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_INTERACT;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_MOVE_TO;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_PICK_UP;
-import static com.l2jserver.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.GeoData;
@@ -61,6 +48,11 @@ import com.l2jserver.gameserver.network.serverpackets.AutoAttackStop;
 import com.l2jserver.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.l2jserver.gameserver.ai.CtrlIntention.*;
 
 /**
  * This class manages AI of L2Character.<br>
@@ -1077,8 +1069,8 @@ public class L2CharacterAI extends AbstractAI
 		}
 		
 		final boolean needToMove;
-		
-		if (target.isDoor())
+
+		if (target.isDoor() && target instanceof L2DoorInstance)
 		{
 			L2DoorInstance dor = (L2DoorInstance) target;
 			int xPoint = 0;
@@ -1094,9 +1086,7 @@ public class L2CharacterAI extends AbstractAI
 			xPoint /= 4;
 			yPoint /= 4;
 			needToMove = !_actor.isInsideRadius(xPoint, yPoint, dor.getTemplate().getNodeZ(), offset, false, false);
-		}
-		else
-		{
+		} else {
 			needToMove = !_actor.isInsideRadius(target, offset, false, false);
 		}
 		
@@ -1106,7 +1096,7 @@ public class L2CharacterAI extends AbstractAI
 			if (getFollowTarget() != null)
 			{
 				// allow larger hit range when the target is moving (check is run only once per second)
-				if (!_actor.isInsideRadius(target, offset + 100, false, false))
+				if (!_actor.isInsideRadius(target, offset + 10, false, false))
 				{
 					return true;
 				}
@@ -1148,7 +1138,7 @@ public class L2CharacterAI extends AbstractAI
 			{
 				if (((L2Character) target).isMoving())
 				{
-					offset -= 100;
+					offset = offset / 2;
 				}
 				if (offset < 5)
 				{
