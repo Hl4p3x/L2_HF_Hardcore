@@ -1063,8 +1063,6 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
             }
         }
 
-        double distance = npc.calculateDistance(mostHate, false, false);
-
         long timeSinceLastCast = System.currentTimeMillis() - lastCastTime;
         boolean canCastSkill = timeSinceLastCast >= Config.NPC_DELAY_BETWEEN_CASTS;
         boolean canSeeTarget = GeoData.getInstance().canSeeTarget(npc, npc.getTarget());
@@ -1107,7 +1105,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
         _actor.doAttack(getAttackTarget());
     }
 
-    private boolean cast(Skill sk) {
+    public boolean cast(Skill sk) {
         if (sk == null) {
             return false;
         }
@@ -1566,7 +1564,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
      * @param skill  the skill to check.
      * @return {@code true} if the skill is available for casting {@code false} otherwise.
      */
-    private static boolean checkSkillCastConditions(L2Attackable caster, Skill skill) {
+    public static boolean checkSkillCastConditions(L2Attackable caster, Skill skill) {
         if (caster.isCastingNow() && !skill.isSimultaneousCast()) {
             return false;
         }

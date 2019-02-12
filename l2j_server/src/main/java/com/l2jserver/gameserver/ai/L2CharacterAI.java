@@ -326,8 +326,8 @@ public class L2CharacterAI extends AbstractAI
 			changeIntentionToCast(skill, target);
 		}
 	}
-	
-	protected void changeIntentionToCast(Skill skill, L2Object target)
+
+    private void changeIntentionToCast(Skill skill, L2Object target)
 	{
 		// Set the AI cast target
 		setCastTarget((L2Character) target);

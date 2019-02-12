@@ -18,6 +18,7 @@
  */
 package ai.individual.Baium;
 
+import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.CategoryType;
@@ -43,8 +44,6 @@ import com.l2jserver.gameserver.network.serverpackets.Earthquake;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.util.Util;
-
-import ai.npc.AbstractNpcAI;
 
 /**
  * Baium AI.
@@ -774,11 +773,11 @@ public final class Baium extends AbstractNpcAI
 				skillToCast = BAIUM_ATTACK;
 			}
 		}
-		
+
 		if ((skillToCast != null) && npc.checkDoCastConditions(skillToCast.getSkill()))
 		{
 			npc.setTarget(player);
-			npc.doCast(skillToCast.getSkill());
+            npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, skillToCast.getSkill(), player);
 		}
 	}
 	

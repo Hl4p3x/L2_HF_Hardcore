@@ -1711,14 +1711,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                     future.cancel(true);
                     _skillCast2 = null;
                 }
-                _skillCast2 = ThreadPoolManager.getInstance().scheduleEffect(mut, (int) skillAnimTime - 400);
+                _skillCast2 = ThreadPoolManager.getInstance().scheduleEffect(mut, (int) skillAnimTime);
             } else {
                 Future<?> future = _skillCast;
                 if (future != null) {
                     future.cancel(true);
                     _skillCast = null;
                 }
-                _skillCast = ThreadPoolManager.getInstance().scheduleEffect(mut, (int) skillAnimTime - 400);
+                _skillCast = ThreadPoolManager.getInstance().scheduleEffect(mut, (int) skillAnimTime);
             }
         } else {
             mut.setSkillTime(0);
