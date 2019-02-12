@@ -44,7 +44,7 @@ public final class TriggerSkillBySkill extends AbstractEffect
 	private final int _chance;
 	private final SkillHolder _skill;
 	private final L2TargetType _targetType;
-	
+
 	/**
 	 * @param attachCond
 	 * @param applyCond
@@ -61,14 +61,14 @@ public final class TriggerSkillBySkill extends AbstractEffect
 		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
 		_targetType = params.getEnum("targetType", L2TargetType.class, L2TargetType.ONE);
 	}
-	
+
 	public void onSkillUseEvent(OnCreatureSkillUse event)
 	{
 		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0) || (_castSkillId == 0)))
 		{
 			return;
 		}
-		
+
 		if (_castSkillId != event.getSkill().getId())
 		{
 			return;

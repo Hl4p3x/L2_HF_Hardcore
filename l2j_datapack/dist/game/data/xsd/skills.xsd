@@ -307,6 +307,7 @@
 				<xs:attribute type="xs:short" name="castSkillId" use="optional" />
 				<xs:attribute type="xs:byte" name="blockedActions" use="optional" />
 				<xs:attribute type="xs:string" name="skillId" use="optional" />
+				<xs:attribute type="xs:string" name="dmgType" use="optional"/>
 				<xs:attribute type="xs:string" name="skillLevel" use="optional" />
 				<xs:attribute type="xs:string" name="allowWeapons" use="optional" />
 				<xs:attribute type="xs:string" name="targetType" use="optional" />

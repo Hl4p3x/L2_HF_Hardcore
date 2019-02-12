@@ -18,17 +18,13 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.gameserver.model.holders.MinionHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.interfaces.IParserAdvUtils;
+
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * This class is meant to hold a set of (key,value) pairs.<br>
@@ -492,7 +488,7 @@ public class StatsSet implements IParserAdvUtils
 		Object val = _set.get(key);
 		if (val == null)
 		{
-			throw new IllegalArgumentException("String value required, but not specified");
+			throw new IllegalArgumentException("String value " + key + " required, but not specified");
 		}
 		return String.valueOf(val);
 	}

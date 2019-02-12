@@ -48,7 +48,8 @@ public final class TriggerSkillByDamage extends AbstractEffect
 	private final SkillHolder _skill;
 	private final L2TargetType _targetType;
 	private final InstanceType _attackerType;
-	
+	private DamageType type;
+
 	public TriggerSkillByDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
@@ -60,6 +61,7 @@ public final class TriggerSkillByDamage extends AbstractEffect
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
 		_targetType = params.getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
+		type = DamageType.fromString(params.getString("dmgType", DamageType.ANY.name()));
 	}
 	
 	public void onDamageReceivedEvent(OnCreatureDamageReceived event)
@@ -85,7 +87,20 @@ public final class TriggerSkillByDamage extends AbstractEffect
 		{
 			return;
 		}
-		
+
+		if (event.getSkill() == null && type.equals(DamageType.MAGICAL)) {
+			return;
+		}
+
+		if (event.getSkill() != null && !type.equals(DamageType.ANY)) {
+			if (type.equals(DamageType.PHYSICAL) && !event.getSkill().isPhysical()) {
+				return;
+			}
+			if (type.equals(DamageType.MAGICAL) && !event.getSkill().isMagic()) {
+				return;
+			}
+		}
+
 		if ((event.getDamage() < _minDamage) || (Rnd.get(100) > _chance) || !event.getAttacker().getInstanceType().isType(_attackerType))
 		{
 			return;

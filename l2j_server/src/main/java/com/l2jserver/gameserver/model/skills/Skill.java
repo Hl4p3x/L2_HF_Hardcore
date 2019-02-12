@@ -209,7 +209,9 @@ public class Skill implements IIdentifiable
 	private final int _channelingSkillId;
 	private final int _channelingTickInitialDelay;
 	private final int _channelingTickInterval;
-	
+
+	private String dmgType;
+
 	public Skill(StatsSet set)
 	{
 		_id = set.getInt("skill_id");
@@ -1554,7 +1556,7 @@ public class Skill implements IIdentifiable
 		if (hasEffects(EffectScope.SELF))
 		{
 			synchronized (caster) {
-				// Hotfix possible concurrecy bottleneck
+				// Hotfix possible concurrency bottleneck
 				if (caster.isAffectedBySkill(getId())) {
 					caster.stopSkillEffects(true, getId());
 				}

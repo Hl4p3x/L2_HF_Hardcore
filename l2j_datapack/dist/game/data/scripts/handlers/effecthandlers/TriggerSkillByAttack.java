@@ -51,7 +51,7 @@ public final class TriggerSkillByAttack extends AbstractEffect
 	private final InstanceType _attackerType;
 	private int _allowWeapons;
 	private final boolean _isCritical;
-	
+
 	/**
 	 * @param attachCond
 	 * @param applyCond
@@ -71,7 +71,7 @@ public final class TriggerSkillByAttack extends AbstractEffect
 		_targetType = params.getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
 		_isCritical = params.getBoolean("isCritical", false);
-		
+
 		if (params.getString("allowWeapons").equalsIgnoreCase("ALL"))
 		{
 			_allowWeapons = 0;
@@ -91,7 +91,7 @@ public final class TriggerSkillByAttack extends AbstractEffect
 		{
 			return;
 		}
-		
+
 		if (_isCritical != event.isCritical())
 		{
 			return;
