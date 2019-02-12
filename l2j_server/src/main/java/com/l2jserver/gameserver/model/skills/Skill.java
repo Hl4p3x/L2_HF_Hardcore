@@ -1553,11 +1553,13 @@ public class Skill implements IIdentifiable
 		// Self Effect
 		if (hasEffects(EffectScope.SELF))
 		{
-			if (caster.isAffectedBySkill(getId()))
-			{
-				caster.stopSkillEffects(true, getId());
+			synchronized (caster) {
+				// Hotfix possible concurrecy bottleneck
+				if (caster.isAffectedBySkill(getId())) {
+					caster.stopSkillEffects(true, getId());
+				}
+				applyEffects(caster, caster, true, false, true, 0);
 			}
-			applyEffects(caster, caster, true, false, true, 0);
 		}
 		
 		if (cubic == null)
