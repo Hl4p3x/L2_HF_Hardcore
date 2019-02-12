@@ -1099,10 +1099,14 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
             return;
         }
 
-        // Attacks target
-        LOG.debug("{} is doing a basic attack", this);
-        _actor.stopMove(null);
-        _actor.doAttack(getAttackTarget());
+        if (GeoData.getInstance().canSeeTarget(_actor, getAttackTarget())) {
+            // Attacks target
+            LOG.debug("{} is doing a basic attack", this);
+            _actor.stopMove(null);
+            _actor.doAttack(getAttackTarget());
+        } else {
+            moveToPawn(getAttackTarget(), 10);
+        }
     }
 
     public boolean cast(Skill sk) {
