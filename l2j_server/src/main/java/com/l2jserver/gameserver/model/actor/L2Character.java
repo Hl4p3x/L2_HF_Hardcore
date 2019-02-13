@@ -1711,14 +1711,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                     future.cancel(true);
                     _skillCast2 = null;
                 }
-                _skillCast2 = ThreadPoolManager.getInstance().scheduleEffect(mut, (int) skillAnimTime);
+                _skillCast2 = ThreadPoolManager.getInstance().scheduleEffect(mut, (int) skillAnimTime - 300);
             } else {
                 Future<?> future = _skillCast;
                 if (future != null) {
                     future.cancel(true);
                     _skillCast = null;
                 }
-                _skillCast = ThreadPoolManager.getInstance().scheduleEffect(mut, (int) skillAnimTime);
+                _skillCast = ThreadPoolManager.getInstance().scheduleEffect(mut, (int) skillAnimTime - 300);
             }
         } else {
             mut.setSkillTime(0);
@@ -3450,7 +3450,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             return true;
         }
 
-        if (!isVisible() || isMovementDisabled() || isCastingNow() || isCastingSimultaneouslyNow() || isAttackingNow()) {
+        if (!isVisible() || isMovementDisabled() || isCastingNow() || isAttackingNow()) {
             //_move = null;
             return false;
         }
@@ -3702,7 +3702,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     public void moveToLocation(int x, int y, int z, int offset) {
         // Get the Move Speed of the L2Charcater
         double speed = getMoveSpeed();
-        if ((speed <= 0) || isMovementDisabled() || isCastingNow() || isCastingSimultaneouslyNow() || isAttackingNow()) {
+        if ((speed <= 0) || isMovementDisabled() || isCastingNow() || isAttackingNow()) {
             return;
         }
 
@@ -3960,7 +3960,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
         // Get the Move Speed of the L2Charcater
         double speed = getMoveSpeed();
-        if ((speed <= 0) || isMovementDisabled() || isCastingNow() || isCastingSimultaneouslyNow() || isAttackingNow()) {
+        if ((speed <= 0) || isMovementDisabled() || isCastingNow() || isAttackingNow()) {
             // Cancel the move action
             _move = null;
             return false;
@@ -4015,8 +4015,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         GameTimeController.getInstance().registerMovingObject(this);
 
         // Create a task to notify the AI that L2Character arrives at a check point of the movement
-        if ((ticksToMove * GameTimeController.MILLIS_IN_TICK) > 1000) {
-            ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 500);
+        if ((ticksToMove * GameTimeController.MILLIS_IN_TICK) > 3000) {
+            ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
         }
 
         // the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive

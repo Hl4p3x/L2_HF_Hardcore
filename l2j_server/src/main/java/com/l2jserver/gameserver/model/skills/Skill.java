@@ -257,7 +257,7 @@ public class Skill implements IIdentifiable
 		_stayAfterDeath = set.getBoolean("stayAfterDeath", false);
 		_stayOnSubclassChange = set.getBoolean("stayOnSubclassChange", true);
 
-		_hitTime = set.getInt("hitTime", 600);
+		_hitTime = set.getInt("hitTime", 0);
 		_coolTime = set.getInt("coolTime", 0);
 		_isDebuff = set.getBoolean("isDebuff", false);
 		_isRecoveryHerb = set.getBoolean("isRecoveryHerb", false);

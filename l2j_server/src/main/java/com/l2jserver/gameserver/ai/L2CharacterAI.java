@@ -1068,8 +1068,11 @@ public class L2CharacterAI extends AbstractAI
 			offset += ((L2Character) target).getTemplate().getCollisionRadius();
 		}
 
-		if (!GeoData.getInstance().canSeeTarget(_actor, getAttackTarget())) {
+		if (!GeoData.getInstance().canSeeTarget(_actor, target)) {
 			offset = _actor.getTemplate().getCollisionRadius();
+			if (target instanceof L2Character) {
+				offset += ((L2Character) target).getTemplate().getCollisionRadius();
+			}
 		}
 		
 		final boolean needToMove;
