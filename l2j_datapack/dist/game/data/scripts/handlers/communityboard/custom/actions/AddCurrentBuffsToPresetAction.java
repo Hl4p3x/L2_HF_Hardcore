@@ -44,17 +44,17 @@ public class AddCurrentBuffsToPresetAction implements BoardAction {
         List<BuffInfo> currentPlayerBuffs = new ArrayList<>(player.getEffectList().getBuffs());
         List<BuffInfo> currentPlayerDances = new ArrayList<>(player.getEffectList().getDances());
 
-        Set<SkillHolder> currentPlayerBuffSkills = currentPlayerBuffs.stream().map(buff -> new SkillHolder(buff.getSkill().getId(), buff.getSkill().getLevel())).collect(Collectors.toSet());
-        Set<SkillHolder> currentPlayerDanceSkills = currentPlayerDances.stream().map(buff -> new SkillHolder(buff.getSkill().getId(), buff.getSkill().getLevel())).collect(Collectors.toSet());
+        Set<SkillHolder> currentPlayerBuffSkills = currentPlayerBuffs.stream().map(buff -> new SkillHolder(buff.getSkill().getId(), buff.getSkill().getLevel())).collect(Collectors.toCollection(LinkedHashSet::new));
+        Set<SkillHolder> currentPlayerDanceSkills = currentPlayerDances.stream().map(buff -> new SkillHolder(buff.getSkill().getId(), buff.getSkill().getLevel())).collect(Collectors.toCollection(LinkedHashSet::new));
 
-        Set<SkillHolder> allCurrentPlayerBuffs = new HashSet<>();
+        Set<SkillHolder> allCurrentPlayerBuffs = new LinkedHashSet<>();
         allCurrentPlayerBuffs.addAll(currentPlayerBuffSkills);
         allCurrentPlayerBuffs.addAll(currentPlayerDanceSkills);
 
-        Set<SkillHolder> availableBuffs = new HashSet<>(new AllBuffs().getBuffs());
+        Set<SkillHolder> availableBuffs = new LinkedHashSet<>(new AllBuffs().getBuffs());
         allCurrentPlayerBuffs.retainAll(availableBuffs);
 
-        Set<SkillHolder> buffsAlreadyInList = new HashSet<>(buffList.get().getSkills());
+        Set<SkillHolder> buffsAlreadyInList = new LinkedHashSet<>(buffList.get().getSkills());
         allCurrentPlayerBuffs.removeAll(buffsAlreadyInList);
 
         for (SkillHolder buff : allCurrentPlayerBuffs) {
