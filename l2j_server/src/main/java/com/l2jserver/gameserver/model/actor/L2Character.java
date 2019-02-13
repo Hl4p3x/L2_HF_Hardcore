@@ -3450,8 +3450,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             return true;
         }
 
-        if (!isVisible() || isMovementDisabled() || isCastingNow() || isAttackingNow()) {
-            //_move = null;
+        if (!isVisible() || isMovementDisabled() || isCastingNow()) {
+            _move = null;
             return false;
         }
 
@@ -3702,7 +3702,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     public void moveToLocation(int x, int y, int z, int offset) {
         // Get the Move Speed of the L2Charcater
         double speed = getMoveSpeed();
-        if ((speed <= 0) || isMovementDisabled() || isCastingNow() || isAttackingNow()) {
+        if ((speed <= 0) || isMovementDisabled() || isCastingNow()) {
             return;
         }
 

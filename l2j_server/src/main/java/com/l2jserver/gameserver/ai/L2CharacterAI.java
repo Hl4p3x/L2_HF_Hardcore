@@ -1103,7 +1103,7 @@ public class L2CharacterAI extends AbstractAI
 			if (getFollowTarget() != null)
 			{
 				// allow larger hit range when the target is moving (check is run only once per second)
-				if (!_actor.isInsideRadius(target, offset + 10, false, false))
+				if (!_actor.isInsideRadius(target, offset + 50, false, false))
 				{
 					return true;
 				}

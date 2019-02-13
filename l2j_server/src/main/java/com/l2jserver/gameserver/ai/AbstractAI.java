@@ -496,7 +496,7 @@ public abstract class AbstractAI implements Ctrl
 	protected void moveToPawn(L2Object pawn, int offset)
 	{
 		// Check if actor can move
-		if (_actor.isMovementDisabled() || _actor.isCastingNow() || _actor.isCastingSimultaneouslyNow() || _actor.isAttackingNow()) {
+		if (_actor.isMovementDisabled() || _actor.isCastingNow()) {
 			clientActionFailed();
 			return;
 		}
@@ -527,7 +527,7 @@ public abstract class AbstractAI implements Ctrl
 		_clientMovingToPawnOffset = offset;
 		_target = pawn;
 		_moveToPawnTimeout = GameTimeController.getInstance().getGameTicks();
-		_moveToPawnTimeout += 200 / GameTimeController.MILLIS_IN_TICK;
+		_moveToPawnTimeout += 1000 / GameTimeController.MILLIS_IN_TICK;
 
 		if (pawn == null) {
 			return;
@@ -564,8 +564,9 @@ public abstract class AbstractAI implements Ctrl
 	protected void moveTo(int x, int y, int z)
 	{
 		// Chek if actor can move
-		if (!_actor.isMovementDisabled())
-		{
+		if (_actor.isMovementDisabled() || _actor.isCastingNow()) {
+			clientActionFailed();
+		} else {
 			// Set AI movement data
 			_clientMoving = true;
 			_clientMovingToPawnOffset = 0;
@@ -575,10 +576,6 @@ public abstract class AbstractAI implements Ctrl
 			
 			// Send a Server->Client packet CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
 			_actor.broadcastPacket(new MoveToLocation(_actor));
-		}
-		else
-		{
-			clientActionFailed();
 		}
 	}
 	
