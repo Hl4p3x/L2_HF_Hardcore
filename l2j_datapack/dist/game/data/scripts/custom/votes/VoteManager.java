@@ -128,7 +128,7 @@ public class VoteManager extends AbstractNpcAI {
     }
 
     private void despawnNpcs() {
-        spawnManager.decayAll();
+        spawnManager.deleteAll();
     }
 
     private void unloadRewardMultisells() {

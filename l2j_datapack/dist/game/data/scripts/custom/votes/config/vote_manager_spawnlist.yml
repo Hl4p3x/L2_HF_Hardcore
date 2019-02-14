@@ -1,104 +1,68 @@
-- x: -116978 # Kamael Village
+- x: -116984 # Kamael Village
   y:   46841
   z:   360
   heading:  3355
-- x: -84366 # Talking Island Village
-  y:  242156
-  z: -3725
-  heading: 24500
-- x: -84149 # Talking Island Village
-  y:  243254
+- x: -84147 # Talking Island Village
+  y:  243284
   z: -3725
   heading:  8000
-- x: -82062 # Gludin Village
+- x: -82066 # Gludin Village
   y:  150160
   z: -3122
   heading: 16500
 - x: -44979 # Orc Village
-  y: -113508
+  y: -113542
   z:  -194
   heading: 32000
-- x: -14078 # Town of Gludio
-  y:  123184
+- x: -14048 # Town of Gludio
+  y:  123142
   z: -3115
   heading: 32000
-- x:  10998 # Dark Elven Village
-  y:   17540
-  z: -4567
-  heading: 55000
-- x:  11370 # Dark Elven Village
-  y:   15972
-  z: -4577
+- x:  11380 # Dark Elven Village
+  y:   16000
+  z: -4580
   heading: 14000
 - x:  15624 # Town of Dion
-  y:  142784
+  y:  142782
   z: -2699
   heading: 16500
-- x:  17986 # Floran Village
-  y:  170536
-  z: -3499
-  heading: 48000
 - x:  44206 # Rune Township
-  y:  -48732
+  y:  -48700
   z:  -800
   heading: 33000
-- x:  44349 # Rune Township
-  y:  -47640
-  z:  -792
-  heading: 50000
-- x:  45502 # Elven Village
-  y:   49312
+- x:  45509 # Elven Village
+  y:   49326
   z: -3067
   heading: 53000
-- x:  47678 # Elven Village
-  y:   51296
-  z: -2989
-  heading: 38500
-- x:  81166 # Town of Oren
-  y:   54576
+- x:  81136 # Town of Oren
+  y:   54543
   z: -1517
   heading: 32000
-- x:  83106 # Town of Giran
+- x:  83110 # Town of Giran
   y:  147912
-  z: -3467
+  z: -3447
   heading: 32000
-- x:  87626 # Town of Schuttgart
-  y: -140674
-  z: -1536
-  heading: 16500
-- x:  87854 # Town of Schuttgart
-  y: -142256
+- x:  87790 # Town of Schuttgart
+  y: -142243
   z: -1336
   heading:  7342
-- x: 110622 # Heine
-  y:  220400
+- x: 110592 # Heine
+  y:  220438
   z: -3667
   heading:     0
-- x: 114910 # Dwarven Village
-  y: -178144
+- x: 114880 # Dwarven Village
+  y: -178110
   z:  -827
   heading:     0
-- x: 116254 # Dwarven Village
-  y: -181728
-  z: -1373
-  heading:     0
-- x: 117230 #hunters Village
-  y:   75824
+- x: 117174 # Hunters Village
+  y:   75798
   z: -2725
   heading: 25000
-- x: 147292 # Town of Goddard
-  y:  -56450
+- x: 147302 # Town of Goddard
+  y:  -56457
   z: -2776
   heading: 33000
-- x: 147758 # Town of Aden
+- x: 147760 # Town of Aden
   y:   27408
   z: -2198
   heading: 16500
-- x: 147118 # Town of Goddard
-  y:  -58048
-  z: -2979
-  heading: 49000
-- x: 148590 # Town of Goddard
-  y:  -57952
-  z: -2974
-  heading: 53000
