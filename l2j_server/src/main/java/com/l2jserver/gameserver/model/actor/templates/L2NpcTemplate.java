@@ -106,6 +106,16 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		super(set);
 	}
 
+	public L2NpcTemplate(int id, int displayId, String name, String title) {
+		StatsSet statsSet = new StatsSet();
+		statsSet.set("id", id);
+		statsSet.set("displayId", displayId);
+		statsSet.set("name", name);
+		statsSet.set("title", title);
+		set(statsSet);
+	}
+
+
 	@Override
 	public void set(StatsSet set)
 	{

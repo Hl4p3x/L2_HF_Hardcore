@@ -48,6 +48,12 @@ public class Entry
 		this.entryId = entryId;
 	}
 
+	public Entry(int entryId, List<Ingredient> products, List<Ingredient> ingredients) {
+		this.entryId = entryId;
+		this.products = products;
+		this.ingredients = ingredients;
+	}
+
 	public Entry(int entryId, boolean stackable, List<Ingredient> products, List<Ingredient> ingredients, long taxAmount) {
 		this.entryId = entryId;
 		this.stackable = stackable;

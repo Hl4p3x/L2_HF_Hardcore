@@ -1,0 +1,23 @@
+list_id: 6090002
+
+items:
+  - ingredients:
+      - id: 9142 # Apiga
+      - count: 100
+  - products:
+      - id: 21583 # 7th Anniversary Cloak - Pitch Black
+      - count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+      - count: 100
+  - products:
+      - id: 21587 # 7th Anniversary Cloak - Blood Red
+      - count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+      - count: 100
+  - products:
+      - id: 21588 # 7th Anniversary Cloak - Pearl White
+      - count: 1

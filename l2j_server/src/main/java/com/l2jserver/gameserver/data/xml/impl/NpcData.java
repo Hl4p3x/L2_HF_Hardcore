@@ -740,6 +740,14 @@ public class NpcData implements IXmlReader
 		return null;
 	}
 
+	public boolean addNpc(L2NpcTemplate npc) {
+		return _npcs.put(npc.getId(), npc) != null;
+	}
+
+	public boolean removeNpc(L2NpcTemplate npc) {
+		return _npcs.remove(npc.getId()) != null;
+	}
+
 	/**
 	 * Gets all templates matching the filter.
 	 * @param filter

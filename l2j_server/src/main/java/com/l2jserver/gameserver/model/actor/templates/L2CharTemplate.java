@@ -18,16 +18,16 @@
  */
 package com.l2jserver.gameserver.model.actor.templates;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Map;
-
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.events.ListenersContainer;
 import com.l2jserver.gameserver.model.items.type.WeaponType;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.model.stats.MoveType;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Map;
 
 /**
  * Character template.
@@ -86,7 +86,10 @@ public class L2CharTemplate extends ListenersContainer
 	private final double[] _moveType = new double[MoveType.values().length];
 	/** The creature's race. */
 	private Race _race;
-	
+
+	public L2CharTemplate() {
+	}
+
 	public L2CharTemplate(StatsSet set)
 	{
 		set(set);

@@ -2,8 +2,8 @@ package com.l2jserver.localization;
 
 import com.l2jserver.Config;
 import com.l2jserver.common.Loadable;
-import com.l2jserver.util.ObjectMapperYamlSingleton;
 import com.l2jserver.util.StringUtil;
+import com.l2jserver.util.YamlMapper;
 import com.l2jserver.util.file.filter.ExtFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,7 +43,7 @@ public class MultilangTables implements Loadable {
 
             String fileLangCode = file.getName().substring(0, 2);
             Language language = Language.of(fileLangCode);
-            Map<String, String> localizationValues = ObjectMapperYamlSingleton.readAsStringMap(file);
+            Map<String, String> localizationValues = YamlMapper.readAsStringMap(file);
             StringsTable oldValue = stringTables.put(language, new StringsTable(localizationValues));
             if (oldValue != null) {
                 LOG.warn("Language {} was overridden from file {}", language, file.getAbsolutePath());

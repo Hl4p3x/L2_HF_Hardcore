@@ -207,11 +207,18 @@ public class Location implements IPositionable
 		return new Location(x, y, z);
 	}
 
+	@JsonCreator
+	public static Location fromString(@JsonProperty("x") int x,
+									  @JsonProperty("y") int y,
+									  @JsonProperty("z") int z,
+									  @JsonProperty("heading") int heading) {
+		return new Location(x, y, z, heading);
+	}
+
 	@Override
 	public boolean equals(Object obj)
 	{
-		if ((obj != null) && (obj instanceof Location))
-		{
+		if (obj instanceof Location) {
 			final Location loc = (Location) obj;
 			return (getX() == loc.getX()) && (getY() == loc.getY()) && (getZ() == loc.getZ()) && (getHeading() == loc.getHeading()) && (getInstanceId() == loc.getInstanceId());
 		}

@@ -1,6 +1,6 @@
 package custom.clan.territory;
 
-import com.l2jserver.util.ObjectMapperYamlSingleton;
+import com.l2jserver.util.YamlMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +19,7 @@ public class TerritoryOwningRewardsTable {
 
     public void load() {
         try {
-            TerritoryOwningRewardData territoryOwningRewards = ObjectMapperYamlSingleton.getInstance().readValue(getClass().getResourceAsStream(REWARDS_FILE_PATH), TerritoryOwningRewardData.class);
+            TerritoryOwningRewardData territoryOwningRewards = YamlMapper.getInstance().readValue(getClass().getResourceAsStream(REWARDS_FILE_PATH), TerritoryOwningRewardData.class);
 
             allTerritoryOwningRewards = new ArrayList<>();
             allTerritoryOwningRewards.addAll(territoryOwningRewards.getCastles());

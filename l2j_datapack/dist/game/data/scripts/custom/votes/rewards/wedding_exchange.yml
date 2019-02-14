@@ -1,0 +1,23 @@
+list_id: 6090001
+
+items:
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 100
+    products:
+      - id: 6408 # Formal Wear
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 100
+    products:
+      - id: 21162 # Wedding Veil
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 100
+    products:
+      - id: 21163 # Wedding Bouquet
+        count: 1

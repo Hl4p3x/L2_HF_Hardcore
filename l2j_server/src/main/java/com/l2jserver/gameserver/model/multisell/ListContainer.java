@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.model.multisell;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -245,6 +247,29 @@ public class ListContainer
 
 	private static boolean calculateApplyTaxes(double taxRate) {
 		return taxRate > 0D;
+	}
+
+	@JsonCreator
+	public static ListContainer from(@JsonProperty("list_id") int listId,
+									 @JsonProperty("npcs") Set<Integer> npcsAllowed,
+									 @JsonProperty("items") List<SimpleEntry> items) {
+		return from(listId, false, false, 1.0, false, npcsAllowed, items);
+	}
+
+	@JsonCreator
+	public static ListContainer from(@JsonProperty("list_id") int listId, @JsonProperty("apply_taxes") boolean applyTaxes,
+									 @JsonProperty("maintain_enchantment") boolean maintainEnchantment, @JsonProperty("use_rate") double useRate,
+									 @JsonProperty("boolean dualcraft") boolean dualcraft,
+									 @JsonProperty("npcs") Set<Integer> npcsAllowed,
+									 @JsonProperty("items") List<SimpleEntry> items) {
+		int entryId = 1;
+		List<Entry> entries = new ArrayList<>();
+		for (SimpleEntry item : items) {
+			entries.add(new Entry(entryId, item.getProducts(), item.getIngredients()));
+			entryId += 1;
+		}
+
+		return new ListContainer(listId, applyTaxes, maintainEnchantment, useRate, entries, npcsAllowed, dualcraft);
 	}
 
 }

@@ -1,0 +1,18 @@
+npc:
+  id: 8975541
+  display_id: 32323
+  name: "Shima"
+  title: "Vote Manager"
+rewards:
+  - id: 9142 # Apiga
+    count: 1
+sources:
+  - name: "L2Top"
+    source_type: "l2top"
+    url: ""
+  - name: "LA2 MMO Top Ru"
+    source_type: "la2_mmotop_ru"
+    url: ""
+  - name: "Hopzone"
+    source_type: "hopzone"
+    url: ""

@@ -40,13 +40,13 @@ import org.w3c.dom.Node;
 
 import java.io.File;
 import java.io.FileFilter;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public final class MultisellData implements IXmlReader
 {
-	private final Map<Integer, ListContainer> _entries = new HashMap<>();
+	private final Map<Integer, ListContainer> _entries = new ConcurrentHashMap<>();
 	
 	public static final int PAGE_SIZE = 40;
 	// Special IDs.
@@ -133,7 +133,7 @@ public final class MultisellData implements IXmlReader
 					{
 						if ("item".equalsIgnoreCase(d.getNodeName()))
 						{
-							Entry e = parseEntry(d, entryId++, list);
+							Entry e = parseEntry(d, entryId++);
 							list.getEntries().add(e);
 						}
 						else if ("npcs".equalsIgnoreCase(d.getNodeName()))
@@ -165,8 +165,8 @@ public final class MultisellData implements IXmlReader
 	{
 		return NUMERIC_FILTER;
 	}
-	
-	private final Entry parseEntry(Node n, int entryId, ListContainer list)
+
+	private final Entry parseEntry(Node n, int entryId)
 	{
 		Node first = n.getFirstChild();
 		final Entry entry = new Entry(entryId);

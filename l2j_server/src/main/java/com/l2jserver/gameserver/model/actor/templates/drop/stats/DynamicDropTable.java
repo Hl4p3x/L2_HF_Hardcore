@@ -22,7 +22,7 @@ import com.l2jserver.gameserver.model.items.parts.ItemPart;
 import com.l2jserver.gameserver.model.items.scrolls.CategorizedScrolls;
 import com.l2jserver.gameserver.model.items.scrolls.Scroll;
 import com.l2jserver.util.CollectionUtil;
-import com.l2jserver.util.ObjectMapperYamlSingleton;
+import com.l2jserver.util.YamlMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,7 +52,7 @@ public class DynamicDropTable {
         try {
             InputStream configStream = new FileInputStream(new File(path));
 
-            allDynamicDropData = ObjectMapperYamlSingleton.getInstance().readValue(
+            allDynamicDropData = YamlMapper.getInstance().readValue(
                     configStream,
                     AllDynamicDropData.class
             );

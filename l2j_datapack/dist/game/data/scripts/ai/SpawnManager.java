@@ -1,6 +1,7 @@
 package ai;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
+
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -15,11 +16,13 @@ public class SpawnManager {
 
     public SpawnManager decayAll() {
         npcs.forEach(L2Npc::decayMe);
+        npcs = new CopyOnWriteArrayList<>();
         return this;
     }
 
     public SpawnManager deleteAll() {
         npcs.forEach(L2Npc::deleteMe);
+        npcs = new CopyOnWriteArrayList<>();
         return this;
     }
 
@@ -27,6 +30,8 @@ public class SpawnManager {
         return npcs;
     }
 
-
+    public int size() {
+        return npcs.size();
+    }
 
 }

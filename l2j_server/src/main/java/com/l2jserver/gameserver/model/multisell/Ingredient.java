@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.model.multisell;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.items.L2Armor;
@@ -36,7 +38,7 @@ public class Ingredient
 	private boolean _maintainIngredient;
 	private L2Item _template = null;
 	private ItemInfo _itemInfo = null;
-	
+
 	public Ingredient(StatsSet set)
 	{
 		this(set.getInt("id"), set.getLong("count"), set.getBoolean("isTaxIngredient", false), set.getBoolean("maintainIngredient", false));
@@ -138,4 +140,24 @@ public class Ingredient
 	{
 		return _template == null ? 0 : _template.getWeight();
 	}
+
+	@JsonCreator
+	public static Ingredient from(@JsonProperty("id") int id,
+								  @JsonProperty("count") long count,
+								  @JsonProperty("isTaxIngredient") boolean taxIngredient,
+								  @JsonProperty("maintainIngredient") boolean maintainIngredient) {
+		return new Ingredient(id, count, taxIngredient, maintainIngredient);
+	}
+
+	@JsonCreator
+	public static Ingredient from(@JsonProperty("id") int id,
+								  @JsonProperty("count") long count) {
+		return new Ingredient(id, count, true, false);
+	}
+
+	@JsonCreator
+	public static Ingredient from(@JsonProperty("id") int id) {
+		return new Ingredient(id, 1, true, false);
+	}
+
 }

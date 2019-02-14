@@ -11,14 +11,10 @@ import com.l2jserver.gameserver.model.base.AcquireSkillType;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
 public class MasteryCertifications extends AbstractNpcAI {
-
-    private static final Logger LOG = LoggerFactory.getLogger(MasteryCertifications.class);
 
     private static final int[] NPCS =
             {

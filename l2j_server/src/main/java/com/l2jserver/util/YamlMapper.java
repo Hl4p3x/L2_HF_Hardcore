@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ObjectMapperYamlSingleton {
+public class YamlMapper {
 
     public static Map<String, String> readAsStringMap(File file) {
         try {
@@ -21,7 +21,7 @@ public class ObjectMapperYamlSingleton {
     }
 
     public static ObjectMapper getInstance() {
-        return ObjectMapperYamlSingleton.SingletonHolder._instance;
+        return YamlMapper.SingletonHolder._instance;
     }
 
     private static class SingletonHolder {

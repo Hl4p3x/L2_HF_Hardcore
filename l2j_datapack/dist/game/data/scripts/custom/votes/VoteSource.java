@@ -1,4 +1,8 @@
 package custom.votes;
 
-public interface VoteSource {
+public class VoteSource {
+
+    private String url;
+    private VoteEntryMapper voteEntryMapper;
+
 }

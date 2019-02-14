@@ -1,7 +1,7 @@
 package handlers.communityboard.custom.teleport;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.l2jserver.util.ObjectMapperYamlSingleton;
+import com.l2jserver.util.YamlMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +23,7 @@ public class CustomTeleportTable {
     public void load() {
         String file = "teleport_destinations.yml";
         try {
-            teleportDestinations = ObjectMapperYamlSingleton.getInstance().readValue(getClass().getResourceAsStream(file), new TypeReference<Set<TeleportDestination>>() {
+            teleportDestinations = YamlMapper.getInstance().readValue(getClass().getResourceAsStream(file), new TypeReference<Set<TeleportDestination>>() {
             });
         } catch (IOException e) {
             String message = "Could not read rewards file from '" + file + "', please check that file exists and is a valid YML";
