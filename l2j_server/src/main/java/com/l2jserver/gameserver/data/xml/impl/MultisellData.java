@@ -233,18 +233,25 @@ public final class MultisellData implements IXmlReader
 	 * @param productMultiplier
 	 * @param ingredientMultiplier
 	 */
-	public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier)
-	{
-		ListContainer template = _entries.get(listId);
+
+	public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier) {
+		separateAndSend(_entries.get(listId), player, npc, inventoryOnly, productMultiplier, ingredientMultiplier);
+	}
+
+	public final void separateAndSend(ListContainer template, L2PcInstance player, L2Npc npc) {
+		separateAndSend(template, player, npc, false, 1, 1);
+	}
+
+	public final void separateAndSend(ListContainer template, L2PcInstance player, L2Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier) {
 		if (template == null)
 		{
-			LOG.warn("{}: Cannot find list ID: {} requested by player: {}, NPC ID: {}!", getClass().getSimpleName(), listId, player, (npc != null ? npc.getId() : 0));
+			LOG.warn("{}: Cannot find list ID: {} requested by player: {}, NPC ID: {}!", getClass().getSimpleName(), null, player, (npc != null ? npc.getId() : 0));
 			return;
 		}
 
 		if (((npc != null) && template.isNpcNotAllowed(npc.getId())) || ((npc == null) && template.isNpcOnly()))
 		{
-			LOG.warn("{}: Player {} attempted to open multisell {} from npc {} which is not allowed!", getClass().getSimpleName(), player, listId, npc);
+			LOG.warn("{}: Player {} attempted to open multisell {} from npc {} which is not allowed!", getClass().getSimpleName(), player, template.getListId(), npc);
 			return;
 		}
 

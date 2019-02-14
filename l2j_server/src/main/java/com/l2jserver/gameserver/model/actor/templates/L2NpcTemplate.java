@@ -87,8 +87,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private int _maxSkillChance;
 	private int shortRangeSkillChance;
 	private int longRangeSkillChance;
-	private Map<Integer, Skill> _skills;
-	private Map<AISkillScope, List<Skill>> _aiSkillLists;
+	private Map<Integer, Skill> _skills = Collections.emptyMap();
+	private Map<AISkillScope, List<Skill>> _aiSkillLists = Collections.emptyMap();
 	private Set<Integer> _clans;
 	private Set<Integer> _ignoreClanNpcIds;
 	private Map<DropListScope, List<IDropItem>> _dropLists;
@@ -106,12 +106,14 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		super(set);
 	}
 
-	public L2NpcTemplate(int id, int displayId, String name, String title) {
+	public L2NpcTemplate(int id, int displayId, String name, String title, double collisionRadius, double collisionHeight) {
 		StatsSet statsSet = new StatsSet();
 		statsSet.set("id", id);
 		statsSet.set("displayId", displayId);
 		statsSet.set("name", name);
 		statsSet.set("title", title);
+		statsSet.set("collisionRadius", collisionRadius);
+		statsSet.set("collisionHeight", collisionHeight);
 		set(statsSet);
 	}
 
@@ -175,7 +177,15 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
 		_collisionHeightGrown = set.getDouble("collisionHeightGrown", 0);
 	}
-	
+
+	public void setUsingServerSideName(boolean usingServerSideName) {
+		this._usingServerSideName = usingServerSideName;
+	}
+
+	public void setUsingServerSideTitle(boolean usingServerSideTitle) {
+		this._usingServerSideTitle = usingServerSideTitle;
+	}
+
 	@Override
 	public int getId()
 	{
@@ -405,7 +415,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	@Override
 	public Map<Integer, Skill> getSkills()
 	{
-		return _skills;
+		return _skills != null ? _skills : Collections.emptyMap();
 	}
 	
 	public void setSkills(Map<Integer, Skill> skills)

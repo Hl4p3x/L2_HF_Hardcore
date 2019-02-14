@@ -64,7 +64,7 @@ public class ListContainer
         this.maintainEnchantment = maintainEnchantment;
         this.useRate = useRate;
         this.entries = entries;
-        this.npcsAllowed = npcsAllowed;
+        this.npcsAllowed = npcsAllowed != null ? npcsAllowed : new HashSet<>();
         this.dualcraft = dualcraft;
     }
 
@@ -250,18 +250,12 @@ public class ListContainer
 	}
 
 	@JsonCreator
-	public static ListContainer from(@JsonProperty("list_id") int listId,
-									 @JsonProperty("npcs") Set<Integer> npcsAllowed,
-									 @JsonProperty("items") List<SimpleEntry> items) {
-		return from(listId, false, false, 1.0, false, npcsAllowed, items);
-	}
-
-	@JsonCreator
 	public static ListContainer from(@JsonProperty("list_id") int listId, @JsonProperty("apply_taxes") boolean applyTaxes,
-									 @JsonProperty("maintain_enchantment") boolean maintainEnchantment, @JsonProperty("use_rate") double useRate,
-									 @JsonProperty("boolean dualcraft") boolean dualcraft,
-									 @JsonProperty("npcs") Set<Integer> npcsAllowed,
-									 @JsonProperty("items") List<SimpleEntry> items) {
+                                     @JsonProperty("maintain_enchantment") boolean maintainEnchantment,
+                                     @JsonProperty("use_rate") double useRate,
+                                     @JsonProperty("boolean dualcraft") boolean dualcraft,
+                                     @JsonProperty("npcs") Set<Integer> npcsAllowed,
+                                     @JsonProperty("items") List<SimpleEntry> items) {
 		int entryId = 1;
 		List<Entry> entries = new ArrayList<>();
 		for (SimpleEntry item : items) {

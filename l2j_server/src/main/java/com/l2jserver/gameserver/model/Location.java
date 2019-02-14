@@ -201,17 +201,10 @@ public class Location implements IPositionable
 	}
 
 	@JsonCreator
-	public static Location fromString(@JsonProperty("x") int x,
-									  @JsonProperty("y") int y,
-									  @JsonProperty("z") int z) {
-		return new Location(x, y, z);
-	}
-
-	@JsonCreator
-	public static Location fromString(@JsonProperty("x") int x,
-									  @JsonProperty("y") int y,
-									  @JsonProperty("z") int z,
-									  @JsonProperty("heading") int heading) {
+	public static Location from(@JsonProperty("x") int x,
+								@JsonProperty("y") int y,
+								@JsonProperty("z") int z,
+								@JsonProperty("heading") int heading) {
 		return new Location(x, y, z, heading);
 	}
 

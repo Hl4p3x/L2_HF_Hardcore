@@ -1,0 +1,86 @@
+list_id: 6090002
+
+items:
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 2
+    products:
+      - id: 6577 # Blessed Scroll: Enchant Weapon (S-Grade)
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 1
+    products:
+      - id: 6578 # Blessed Scroll: Enchant Armor (S-Grade)
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 1
+    products:
+      - id: 959 # Scroll: Enchant Weapon (S-Grade)
+        count: 2
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 1
+    products:
+      - id: 960 # Scroll: Enchant Armor (S-Grade)
+        count: 3
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 1
+    products:
+      - id: 9552 # Fire Crystal
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 1
+    products:
+      - id: 9553 # Water Crystal
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 1
+    products:
+      - id: 9554 # Earth Crystal
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 1
+    products:
+      - id: 9555 # Wind Crystal
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 1
+    products:
+      - id: 9556 # Dark Crystal
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 1
+    products:
+      - id: 9557 # Wind Crystal
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 2
+    products:
+      - id: 16166 # High-Grade Life Stone - Level 86
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 4
+    products:
+      - id: 16167 # Top-Grade Life Stone - Level 86
+        count: 1
