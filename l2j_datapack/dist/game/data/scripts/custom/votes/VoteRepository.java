@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class VoteRepository {
 
-    private static final String CREATE_TABLE_IF_NOT_EXIST = "CREATE TABLE IF NOT EXISTS votes (id INT NOT NULL AUTO_INCREMENT, character_id INT NOT NULL, source_code VARCHAR(64) NOT NULL, vote_timestamp timestamp NOT NULL,  PRIMARY KEY (id))";
+    private static final String CREATE_TABLE_IF_NOT_EXIST = "CREATE TABLE IF NOT EXISTS votes (id INT NOT NULL AUTO_INCREMENT, character_id INT NOT NULL, source_code VARCHAR(64) NOT NULL, vote_timestamp timestamp NOT NULL, PRIMARY KEY (id), UNIQUE(character_id, source_code, vote_timestamp))";
     private static final String SELECT_LATEST_VOTES_BY_SOURCE = "SELECT source_code, MAX(vote_timestamp) as vote_timestamp, character_id FROM votes GROUP BY source_code, character_id HAVING character_id=:character_id";
     private static final String INSERT_VOTE_ENTRY = "INSERT INTO votes (character_id, source_code, vote_timestamp) VALUES (:character_id, :source_code, :timestamp)";
 

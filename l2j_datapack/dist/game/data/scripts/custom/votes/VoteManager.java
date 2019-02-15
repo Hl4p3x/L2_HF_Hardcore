@@ -32,6 +32,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class VoteManager extends AbstractNpcAI {
@@ -164,10 +165,10 @@ public class VoteManager extends AbstractNpcAI {
         for (VoteEntry entry : votes) {
             try {
                 voteRepository.saveVoteHistory(player.getObjectId(), entry);
-                results.add(ProcessResultCarrier.success(config.getRewards(), "Reward for a vote from " + entry.getSourceCode()));
+                results.add(ProcessResultCarrier.success(config.getRewards(), Strings.of(player).get("reward_for_vote_from_n").replace("$n", entry.getSourceCode())));
             } catch (RuntimeException e) {
                 LOG.error("Failed to process reward {}", entry, e);
-                results.add(ProcessResultCarrier.failure("Failed to process vote from " + entry.getSourceCode()));
+                results.add(ProcessResultCarrier.failure(Strings.of(player).get("reward_failed_to_process_n").replace("$n", entry.getSourceCode())));
             }
         }
         return results;
@@ -182,19 +183,22 @@ public class VoteManager extends AbstractNpcAI {
 
         List<ProcessResultCarrier<List<ItemHolder>>> results = rewards(player, votes);
 
-        for (ProcessResultCarrier<List<ItemHolder>> items : results) {
-            Message rewardMessage = new Message(player.getObjectId(),
-                    "Vote rewards!",
-                    items.getMessage(),
-                    Message.SendBySystem.NONE);
+        String content = results.stream().map(ProcessResultCarrier::getMessage).collect(Collectors.joining("\n"));
+        Message rewardMessage = new Message(player.getObjectId(),
+                Strings.of(player).get("vote_rewards"),
+                content,
+                Message.SendBySystem.NONE);
 
-            if (items.isSuccess()) {
-                rewardMessage.createAttachments();
+        List<ProcessResultCarrier<List<ItemHolder>>> successfulResults = results.stream().filter(ProcessResultCarrier::isSuccess).collect(Collectors.toList());
+
+        if (!successfulResults.isEmpty()) {
+            rewardMessage.createAttachments();
+            for (ProcessResultCarrier<List<ItemHolder>> items : successfulResults) {
                 items.getResult().forEach(reward -> Objects.requireNonNull(rewardMessage.getAttachments()).addItem("Vote Reward", reward.getId(), reward.getCount(), null, true));
             }
-
-            MailManager.getInstance().sendMessage(rewardMessage);
         }
+
+        MailManager.getInstance().sendMessage(rewardMessage);
     }
 
     @Override
