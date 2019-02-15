@@ -106,7 +106,7 @@ public class Log {
         logger.error(tagFormat + format, tag, arg1, arg2);
     }
 
-    public void error(String format, Object... arguments) {
+    public void error(String format, Object[] arguments) {
         logger.error(tagFormat + format, tag, arguments);
     }
 

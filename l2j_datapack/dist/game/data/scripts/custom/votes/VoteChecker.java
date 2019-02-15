@@ -2,7 +2,9 @@ package custom.votes;
 
 import com.l2jserver.common.Log;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import custom.votes.mappers.HopzoneEntryMapper;
 import custom.votes.mappers.L2TopVoteEntryMapper;
+import custom.votes.mappers.MmorpgTopRuEntryMapper;
 import custom.votes.mappers.VoteEntryMapper;
 
 import java.time.LocalDateTime;
@@ -19,7 +21,11 @@ public class VoteChecker {
 
     private List<VoteSource> voteSources;
     private VoteRepository voteRepository;
-    private Map<String, VoteEntryMapper> voteMappers = Stream.of(new L2TopVoteEntryMapper("l2top_ru")).collect(Collectors.toMap(L2TopVoteEntryMapper::getSourceCode, Function.identity()));
+    private Map<String, VoteEntryMapper> voteMappers = Stream.of(
+            new L2TopVoteEntryMapper("l2top_ru"),
+            new HopzoneEntryMapper("hopzone"),
+            new MmorpgTopRuEntryMapper("mmo_top_ru")
+    ).collect(Collectors.toMap(VoteEntryMapper::getSourceCode, Function.identity()));
 
     private VoteRetriever voteRetriever = new VoteRetriever();
 
@@ -38,10 +44,16 @@ public class VoteChecker {
                 continue;
             }
 
-            VoteEntry latestKnownVoteEntry = latestVotes.get(voteSource.getName());
+            VoteEntry latestKnownVoteEntry = latestVotes.get(voteSource.getCode());
             LocalDateTime latestVoteTime = latestKnownVoteEntry != null ? latestKnownVoteEntry.getTimestamp() : LocalDateTime.MIN;
 
-            List<VoteEntry> sourceVotes = voteRetriever.retrieveVotes(voteSource.getUrl(), player, mapper);
+            List<VoteEntry> sourceVotes;
+            try {
+                sourceVotes = voteRetriever.retrieveVotes(voteSource.getUrl(), player, mapper);
+            } catch (RuntimeException e) {
+                LOG.error("Failed to retrieve votes for {} from {} because of: {}", player, voteSource, e.getMessage());
+                continue;
+            }
 
             List<VoteEntry> newVotes = sourceVotes.stream().filter(sourceVote -> sourceVote.getTimestamp().isAfter(latestVoteTime)).collect(Collectors.toList());
             results.addAll(newVotes);

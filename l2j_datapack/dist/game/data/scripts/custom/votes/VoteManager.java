@@ -4,6 +4,7 @@ import ai.SpawnManager;
 import ai.npc.AbstractNpcAI;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.l2jserver.common.Log;
+import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
@@ -30,7 +31,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
+import java.util.concurrent.Future;
 import java.util.stream.Stream;
 
 public class VoteManager extends AbstractNpcAI {
@@ -43,6 +44,7 @@ public class VoteManager extends AbstractNpcAI {
     private L2NpcTemplate voteManagerTemplate;
     private VoteRepository voteRepository = new VoteRepository();
     private VoteChecker voteChecker;
+    private Map<Integer, Future<?>> rewardClaimTasks = new ConcurrentHashMap<>();
 
     private VoteManager() {
         super(VoteManager.class.getSimpleName(), "Vote Manager");
@@ -129,6 +131,7 @@ public class VoteManager extends AbstractNpcAI {
 
     @Override
     public boolean unload() {
+        LOG.info("Unloading script");
         despawnNpcs();
         unloadRewardMultisells();
         NpcData.getInstance().removeNpc(voteManagerTemplate);
@@ -163,31 +166,48 @@ public class VoteManager extends AbstractNpcAI {
                 voteRepository.saveVoteHistory(player.getObjectId(), entry);
                 results.add(ProcessResultCarrier.success(config.getRewards(), "Reward for a vote from " + entry.getSourceCode()));
             } catch (RuntimeException e) {
+                LOG.error("Failed to process reward {}", entry, e);
                 results.add(ProcessResultCarrier.failure("Failed to process vote from " + entry.getSourceCode()));
             }
         }
         return results;
     }
 
+    private void claimRewards(L2PcInstance player) {
+        List<VoteEntry> votes = voteChecker.checkNewVotes(player);
+        if (votes.isEmpty()) {
+            player.sendScreenMessage(Strings.of(player).get("no_new_votes"));
+            return;
+        }
+
+        List<ProcessResultCarrier<List<ItemHolder>>> results = rewards(player, votes);
+
+        for (ProcessResultCarrier<List<ItemHolder>> items : results) {
+            Message rewardMessage = new Message(player.getObjectId(),
+                    "Vote rewards!",
+                    items.getMessage(),
+                    Message.SendBySystem.NONE);
+
+            if (items.isSuccess()) {
+                rewardMessage.createAttachments();
+                items.getResult().forEach(reward -> Objects.requireNonNull(rewardMessage.getAttachments()).addItem("Vote Reward", reward.getId(), reward.getCount(), null, true));
+            }
+
+            MailManager.getInstance().sendMessage(rewardMessage);
+        }
+    }
+
     @Override
     public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
         if (event.equals("claim_rewards")) {
-            List<VoteEntry> votes = voteChecker.checkNewVotes(player);
-            if (votes.isEmpty()) {
-                player.sendScreenMessage(Strings.of(player).get("no_new_votes"));
-                return null;
+            Future<?> rewardClaimTask = rewardClaimTasks.get(player.getObjectId());
+            if (rewardClaimTask != null && !rewardClaimTask.isDone()) {
+                player.sendScreenMessage(Strings.of(player).get("vote_reward_claim_in_progress"));
+            } else {
+                rewardClaimTasks.put(player.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneral(() -> claimRewards(player), 10L));
+                player.sendScreenMessage(Strings.of(player).get("vote_reward_claim_task_started"));
             }
-
-            List<ProcessResultCarrier<List<ItemHolder>>> results = rewards(player, votes);
-
-            Message rewardMessage = new Message(player.getObjectId(),
-                    "Vote rewards!",
-                    results.stream().map(ProcessResultCarrier::getMessage).collect(Collectors.joining(",<br>")),
-                    Message.SendBySystem.NONE);
-            rewardMessage.createAttachments();
-
-            config.getRewards().forEach(reward -> Objects.requireNonNull(rewardMessage.getAttachments()).addItem("Vote Reward", reward.getId(), reward.getCount(), null, true));
-            MailManager.getInstance().sendMessage(rewardMessage);
+            return null;
         } else if (event.contains("exchange")) {
             MultisellData.getInstance().separateAndSend(multisells.get(event), player, npc);
         }

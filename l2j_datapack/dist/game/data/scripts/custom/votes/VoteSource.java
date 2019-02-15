@@ -25,7 +25,6 @@ public class VoteSource {
         return new StringJoiner(", ", VoteSource.class.getSimpleName() + "[", "]")
                 .add(name)
                 .add(code)
-                .add(url)
                 .toString();
     }
 

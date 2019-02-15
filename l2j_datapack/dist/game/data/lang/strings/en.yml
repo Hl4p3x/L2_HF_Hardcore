@@ -42,3 +42,5 @@ free: free
 each: each
 karma_players_cannot_use_gk: Karma players cannot use Gatekeeper
 no_new_votes: No new votes
+vote_reward_claim_in_progress: Vote rewards claim is already in progress, please wait.
+vote_reward_claim_task_started: Vote rewards claim started, wait for in-game mail.

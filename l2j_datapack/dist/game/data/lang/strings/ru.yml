@@ -42,3 +42,5 @@ free: бесплатно
 each: каждый
 karma_players_cannot_use_gk: Игроки с кармой не могут использовать телепорт
 no_new_votes: Нету новых голосов
+vote_reward_claim_in_progress: Получение награды за голоса уже в процессе.
+vote_reward_claim_task_started: Запущено получение награды за голоса, ожидайте игровое письмо.
