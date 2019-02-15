@@ -6,26 +6,32 @@ import java.util.StringJoiner;
 
 public class VoteEntry {
 
-    private String sourceType;
-    private int characterId;
+    private String sourceCode;
+    private String characterName;
     private LocalDateTime timestamp;
 
-    public int getCharacterId() {
-        return characterId;
+    public VoteEntry(String sourceCode, String characterName, LocalDateTime timestamp) {
+        this.sourceCode = sourceCode;
+        this.characterName = characterName;
+        this.timestamp = timestamp;
+    }
+
+    public String getSourceCode() {
+        return sourceCode;
+    }
+
+    public String getCharacterName() {
+        return characterName;
     }
 
     public LocalDateTime getTimestamp() {
         return timestamp;
     }
 
-    public String getSourceType() {
-        return sourceType;
-    }
-
     @Override
     public String toString() {
         return new StringJoiner(", ", VoteEntry.class.getSimpleName() + "[", "]")
-                .add(String.valueOf(characterId))
+                .add(String.valueOf(characterName))
                 .add(Objects.toString(timestamp))
                 .toString();
     }

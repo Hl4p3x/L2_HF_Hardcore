@@ -9,8 +9,9 @@ import java.util.stream.Collectors;
 
 public class VoteRepository {
 
-    private static final String CREATE_TABLE_IF_NOT_EXIST = "CREATE TABLE votes (id NOT NULL AUTOINCREMENT, character_id NOT NULL, source_type NOT_NULL VARCHAR(64), timestamp NOT NULL date)";
-    private static final String SELECT_LATEST_VOTES_BY_SOURCE = "SELECT source_type, timestamp FROM votes GROUP BY source_type ORDER BY source_type, timestamp HAVING character_id=:character_id";
+    private static final String CREATE_TABLE_IF_NOT_EXIST = "CREATE TABLE IF NOT EXISTS votes (id INT NOT NULL AUTO_INCREMENT, character_id INT NOT NULL, source_code VARCHAR(64) NOT NULL, timestamp date NOT NULL,  PRIMARY KEY (id))";
+    private static final String SELECT_LATEST_VOTES_BY_SOURCE = "SELECT source_code, timestamp FROM votes GROUP BY source_code ORDER BY source_code, timestamp HAVING character_id=:character_id";
+    private static final String INSERT_VOTE_ENTRY = "INSERT INTO votes VALUES (:character_id, :source_code, :timestamp)";
 
     private Jdbi jdbi;
 
@@ -27,6 +28,13 @@ public class VoteRepository {
                 .bind("character_id", playerObjectId)
                 .mapTo(VoteEntry.class)
                 .stream()
-                .collect(Collectors.toMap(VoteEntry::getSourceType, Functions.identity())));
+                .collect(Collectors.toMap(VoteEntry::getSourceCode, Functions.identity())));
+    }
+
+    public boolean saveVoteHistory(int playerObjectId, VoteEntry entry) {
+        return jdbi.withHandle(h -> h.createUpdate(INSERT_VOTE_ENTRY)
+                .bind("character_id", playerObjectId)
+                .bind("source_code", entry.getSourceCode())
+                .bind("timestamp", entry.getTimestamp()).execute()) > 0;
     }
 }

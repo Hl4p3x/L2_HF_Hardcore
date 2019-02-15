@@ -7,23 +7,30 @@ import com.l2jserver.common.Log;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.NpcLocation;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.gameserver.model.entity.Message;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.multisell.ListContainer;
 import com.l2jserver.localization.Strings;
 import com.l2jserver.util.YamlMapper;
 import custom.votes.config.VoteConfig;
+import handlers.communityboard.custom.ProcessResultCarrier;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class VoteManager extends AbstractNpcAI {
@@ -44,6 +51,9 @@ public class VoteManager extends AbstractNpcAI {
 
     public void load() {
         LOG.info("Loading Vote Manager ...");
+        if (voteRepository.createTableIfNotExist()) {
+            LOG.info("Created vote history table");
+        }
         loadConfig();
         loadVoteChecker();
         loadNpc();
@@ -146,6 +156,19 @@ public class VoteManager extends AbstractNpcAI {
         return HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/custom/votes/html/vote_manager.html");
     }
 
+    private List<ProcessResultCarrier<List<ItemHolder>>> rewards(L2PcInstance player, List<VoteEntry> votes) {
+        List<ProcessResultCarrier<List<ItemHolder>>> results = new ArrayList<>();
+        for (VoteEntry entry : votes) {
+            try {
+                voteRepository.saveVoteHistory(player.getObjectId(), entry);
+                results.add(ProcessResultCarrier.success(config.getRewards(), "Reward for a vote from " + entry.getSourceCode()));
+            } catch (RuntimeException e) {
+                results.add(ProcessResultCarrier.failure("Failed to process vote from " + entry.getSourceCode()));
+            }
+        }
+        return results;
+    }
+
     @Override
     public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
         if (event.equals("claim_rewards")) {
@@ -154,6 +177,17 @@ public class VoteManager extends AbstractNpcAI {
                 player.sendScreenMessage(Strings.of(player).get("no_new_votes"));
                 return null;
             }
+
+            List<ProcessResultCarrier<List<ItemHolder>>> results = rewards(player, votes);
+
+            Message rewardMessage = new Message(player.getObjectId(),
+                    "Vote rewards!",
+                    results.stream().map(ProcessResultCarrier::getMessage).collect(Collectors.joining(",<br>")),
+                    Message.SendBySystem.NONE);
+            rewardMessage.createAttachments();
+
+            config.getRewards().forEach(reward -> Objects.requireNonNull(rewardMessage.getAttachments()).addItem("Vote Reward", reward.getId(), reward.getCount(), null, true));
+            MailManager.getInstance().sendMessage(rewardMessage);
         } else if (event.contains("exchange")) {
             MultisellData.getInstance().separateAndSend(multisells.get(event), player, npc);
         }

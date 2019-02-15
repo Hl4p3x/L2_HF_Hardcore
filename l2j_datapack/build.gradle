@@ -24,6 +24,8 @@ dependencies {
 	compile project(':l2j_server')
 	compile group: 'org.jdbi', name: 'jdbi3-core', version: '3.4.0'
 	compile group: 'org.jdbi', name: 'jdbi3-sqlobject', version: '3.4.0'
+	compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.7'
+
 	testCompile("org.assertj:assertj-core:3.11.0")
 	testCompile "org.mockito:mockito-core:2.+"
 	testCompile('org.junit.jupiter:junit-jupiter-api:5.2.0')

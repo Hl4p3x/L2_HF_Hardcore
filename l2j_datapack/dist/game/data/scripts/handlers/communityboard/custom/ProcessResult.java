@@ -32,6 +32,10 @@ public class ProcessResult {
         return new ProcessResult(true, StringUtil.EMPTY);
     }
 
+    public static ProcessResult success(String text) {
+        return new ProcessResult(true, text);
+    }
+
     @Override
     public String toString() {
         return "ProcessResult{" +

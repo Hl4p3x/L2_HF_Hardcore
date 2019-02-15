@@ -1,7 +1,7 @@
 npc:
   id: 8975541
   display_id: 32323
-  name: "Shima"
+  name: "Fiona"
   title: "Vote Manager"
   collision_radius: 8
   collision_height: 24.5
@@ -11,13 +11,10 @@ rewards:
 sources:
   - name: "L2Top"
     code: "l2top_ru"
-    source_type: "l2top"
-    url: ""
-  - name: "LA2 MMO Top Ru"
-    code: "mmo_top_ru"
-    source_type: "la2_mmotop_ru"
-    url: ""
-  - name: "Hopzone"
-    code: "hopzone"
-    source_type: "hopzone"
-    url: ""
+    url: "http://l2top.ru/editServ/?adminAct=lastVotes&uid=30846&key=4ca8cf352e898070d0799a0e8be68bd1"
+#  - name: "LA2 MMO Top Ru"
+#    code: "mmo_top_ru"
+#    url: ""
+#  - name: "Hopzone"
+#    code: "hopzone"
+#    url: ""
