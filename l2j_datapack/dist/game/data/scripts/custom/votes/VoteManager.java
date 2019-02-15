@@ -13,6 +13,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.multisell.ListContainer;
+import com.l2jserver.localization.Strings;
 import com.l2jserver.util.YamlMapper;
 import custom.votes.config.VoteConfig;
 
@@ -150,17 +151,11 @@ public class VoteManager extends AbstractNpcAI {
         if (event.equals("claim_rewards")) {
             List<VoteEntry> votes = voteChecker.checkNewVotes(player);
             if (votes.isEmpty()) {
-                return "no_new_votes";
+                player.sendScreenMessage(Strings.of(player).get("no_new_votes"));
+                return null;
             }
-
-        } else if (event.equals("cloaks_exchange")) {
-            MultisellData.getInstance().separateAndSend(multisells.get("cloaks_exchange"), player, npc);
-        } else if (event.equals("accessories_exchange")) {
-            MultisellData.getInstance().separateAndSend(multisells.get("accessories_exchange"), player, npc);
-        } else if (event.equals("wedding_exchange")) {
-            MultisellData.getInstance().separateAndSend(multisells.get("wedding_exchange"), player, npc);
-        } else if (event.equals("misc_exchange")) {
-            MultisellData.getInstance().separateAndSend(multisells.get("misc_exchange"), player, npc);
+        } else if (event.contains("exchange")) {
+            MultisellData.getInstance().separateAndSend(multisells.get(event), player, npc);
         }
         return super.onAdvEvent(event, npc, player);
     }

@@ -18,13 +18,6 @@
  */
 package handlers.telnethandlers;
 
-import java.io.File;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.util.StringTokenizer;
-
-import javax.script.ScriptException;
-
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
@@ -39,6 +32,13 @@ import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
+import com.l2jserver.localization.MultilangTables;
+
+import javax.script.ScriptException;
+import java.io.File;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.StringTokenizer;
 
 /**
  * @author UnAfraid
@@ -65,8 +65,11 @@ public class ReloadHandler implements ITelnetHandler
 					_print.print("Reloading multisell... ");
 					MultisellData.getInstance().load();
 					_print.println("done");
-				}
-				else if (type.equals("skill"))
+				} else if (type.equals("multilang")) {
+					_print.print("Reloading multilang... ");
+					MultilangTables.getInstance().load();
+					_print.println("done");
+				} else if (type.equals("skill"))
 				{
 					_print.print("Reloading skills... ");
 					SkillData.getInstance().reload();
