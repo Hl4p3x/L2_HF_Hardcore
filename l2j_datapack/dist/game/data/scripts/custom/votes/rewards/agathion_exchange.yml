@@ -1,0 +1,359 @@
+list_id: 6090005
+
+items:
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 10320 # Agathion Seal Bracelet - Little Angel
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 50
+    products:
+      - id: 10316 # Agathion Seal Bracelet - Little Angel - Firework
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 70
+    products:
+      - id: 10318 # Agathion Seal Bracelet - Little Angel - Blessed Escape
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 60
+    products:
+      - id: 10319 # Agathion Seal Bracelet - Little Angel - Resurrection
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 10326 # Agathion Seal Bracelet - Little Devil
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 50
+    products:
+      - id: 10322 # Agathion Seal Bracelet - Little Devil - Firework
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 70
+    products:
+      - id: 10324 # Agathion Seal Bracelet - Little Devil - Blessed Escape
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 60
+    products:
+      - id: 10325 # Agathion Seal Bracelet - Little Devil - Resurrection
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 10606 # Agathion Seal Bracelet - Rudolph
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 10659 # Agathion Summon Bracelet - Monkey
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 10660 # Agathion Summon Bracelet - Griffin
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 13756 # Agathion Summon Bracelet - Knight
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20006 # Agathion Seal Bracelet - Majo
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20007 # Agathion Seal Bracelet - Gold Majo
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20008 # Agathion Seal Bracelet - Black Majo
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20012 # Agathion Seal Bracelet - Plaipitak
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20063 # Agathion Seal Bracelet - Baby Panda
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20064 # Agathion Seal Bracelet - Bamboo Panda
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20065 # Agathion Seal Bracelet - Sexy Panda
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20212 # Agathion Seal Bracelet - Charming Cupid
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20213 # Agathion Seal Bracelet - Naughty Cupid
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20221 # Agathion Seal Bracelet - White Maneki Neko
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20222 # Agathion Seal Bracelet - Black Maneki Neko
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20223 # Agathion Seal Bracelet - Brown Maneki Neko
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20230 # Agathion Seal Bracelet - One-Eyed Bat Drove
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20236 # Agathion Seal Bracelet - Pegasus
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20245 # Agathion Seal Bracelet - Yellow-Robed Tojigong
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20246 # Agathion Seal Bracelet - Blue-Robed Tojigong
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20247 # Agathion Seal Bracelet - Green-Robed Tojigong
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20252 # Agathion Seal Bracelet - Bugbear
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20297 # Agathion Seal Bracelet - Red Sumo Wrestler
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20299 # Agathion Seal Bracelet - Blue Sumo Wrestler
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20301 # Agathion Seal Bracelet - Great Sumo Match
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20303 # Agathion Seal Bracelet - Button-Eyed Bear Doll
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20307 # Agathion Seal Bracelet - God of Fortune
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20309 # Agathion Seal Bracelet - Dryad
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20310 # Agathion Seal Bracelet - Wonboso
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20312 # Agathion Seal Bracelet - Daewoonso
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20591 # Agathion Seal Bracelet - Weaver
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20654 # Agathion Seal Bracelet - Chon-chon
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20656 # Agathion Seal Bracelet - Tang-tang
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20660 # Agathion Seal Bracelet - Monkey King
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20662 # Agathion Seal Bracelet - Utanka Agathion
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20664 # Agathion Seal Bracelet - Bonus B Agathion
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20726 # Agathion Seal Bracelet - Zombie
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20732 # Agathion Seal Bracelet - Baekyi Hwamae
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20733 # Agathion Seal Bracelet - Kwanwoo Hwamae
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20779 # Agathion Seal Bracelet - Opera
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20782 # Agathion Seal Bracelet - Nepal Snow
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20783 # Agathion Seal Bracelet - Round Ball Snow
+        count: 1
+
+  - ingredients:
+      - id: 9142 # Apiga
+        count: 40
+    products:
+      - id: 20784 # Agathion Seal Bracelet - Ladder Snow
+        count: 1
