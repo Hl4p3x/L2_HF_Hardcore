@@ -32,6 +32,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.TutorialCloseHtml;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
+import com.l2jserver.localization.Strings;
 import com.l2jserver.util.StringUtil;
 
 import java.text.DecimalFormat;
@@ -160,59 +161,10 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		}
 		else if (!Config.CLASS_MASTER_SETTINGS.isAllowed(level))
 		{
-			final int jobLevel = player.getClassId().level();
-			final StringBuilder sb = new StringBuilder(100);
-			sb.append("<html><body>");
-			switch (jobLevel)
-			{
-				case 0:
-					if (Config.CLASS_MASTER_SETTINGS.isAllowed(1))
-					{
-						sb.append("Come back here when you reached level 20 to change your class.<br>");
-					}
-					else if (Config.CLASS_MASTER_SETTINGS.isAllowed(2))
-					{
-						sb.append("Come back after your first occupation change.<br>");
-					}
-					else if (Config.CLASS_MASTER_SETTINGS.isAllowed(3))
-					{
-						sb.append("Come back after your second occupation change.<br>");
-					}
-					else
-					{
-						sb.append("I can't change your occupation.<br>");
-					}
-					break;
-				case 1:
-					if (Config.CLASS_MASTER_SETTINGS.isAllowed(2))
-					{
-						sb.append("Come back here when you reached level 40 to change your class.<br>");
-					}
-					else if (Config.CLASS_MASTER_SETTINGS.isAllowed(3))
-					{
-						sb.append("Come back after your second occupation change.<br>");
-					}
-					else
-					{
-						sb.append("I can't change your occupation.<br>");
-					}
-					break;
-				case 2:
-					if (Config.CLASS_MASTER_SETTINGS.isAllowed(3))
-					{
-						sb.append("Come back here when you reached level 76 to change your class.<br>");
-					}
-					else
-					{
-						sb.append("I can't change your occupation.<br>");
-					}
-					break;
-				case 3:
-					sb.append("There is no class change available for you anymore.<br>");
-					break;
-			}
-			sb.append("</body></html>");
-			html.setHtml(sb.toString());
+			String sb = "<html><body>" +
+					Strings.of(player).get("there_is_no_class_change_available") +
+					"<br></body></html>";
+			html.setHtml(sb);
 		}
 		else
 		{

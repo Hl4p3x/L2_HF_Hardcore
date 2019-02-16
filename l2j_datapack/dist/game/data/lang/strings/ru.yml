@@ -47,3 +47,4 @@ vote_reward_claim_task_started: Запущено получение наград
 vote_rewards: Награды за голоса
 reward_for_vote_from_n: Награда за голос за $n
 reward_failed_to_process_n: Неудалось получить голос за $n
+there_is_no_class_change_available: Извините, больше нету смен профессий.

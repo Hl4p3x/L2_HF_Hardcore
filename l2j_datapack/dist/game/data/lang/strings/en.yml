@@ -47,3 +47,4 @@ vote_reward_claim_task_started: Vote rewards claim started, wait for in-game mai
 vote_rewards: Vote Rewards
 reward_for_vote_from_n: Reward for a vote from $n
 reward_failed_to_process_n: Failed to retrieve vote from $n
+there_is_no_class_change_available: There is no class change available for you.
