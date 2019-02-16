@@ -68,36 +68,30 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		
 		return "data/html/classmaster/" + pom + ".htm";
 	}
-	
+
 	@Override
-	public void onBypassFeedback(L2PcInstance player, String command)
-	{
-		if (command.startsWith("1stClass"))
-		{
+	public void showChatWindow(L2PcInstance player) {
+		showHtmlMenu(player, getObjectId(), player.getPlayerClassLevel().ordinal() + 1);
+	}
+
+	@Override
+	public void onBypassFeedback(L2PcInstance player, String command) {
+		if (command.startsWith("class_options")) {
 			showHtmlMenu(player, getObjectId(), 1);
-		}
-		else if (command.startsWith("2ndClass"))
-		{
+		} else if (command.startsWith("2ndClass")) {
 			showHtmlMenu(player, getObjectId(), 2);
-		}
-		else if (command.startsWith("3rdClass"))
-		{
+		} else if (command.startsWith("3rdClass")) {
 			showHtmlMenu(player, getObjectId(), 3);
-		}
-		else if (command.startsWith("change_class"))
-		{
+		} else if (command.startsWith("change_class")) {
 			int val = Integer.parseInt(command.substring(13));
-			
-			if (checkAndChangeClass(player, val))
-			{
+
+			if (checkAndChangeClass(player, val)) {
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(player.getHtmlPrefix(), "data/html/classmaster/ok.htm");
 				html.replace("%name%", ClassListData.getInstance().getClass(val).getClientCode());
 				player.sendPacket(html);
 			}
-		}
-		else
-		{
+		} else {
 			super.onBypassFeedback(player, command);
 		}
 	}
