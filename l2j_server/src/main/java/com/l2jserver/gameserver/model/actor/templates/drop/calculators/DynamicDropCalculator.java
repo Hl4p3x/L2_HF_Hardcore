@@ -2,6 +2,8 @@ package com.l2jserver.gameserver.model.actor.templates.drop.calculators;
 
 import com.l2jserver.gameserver.datatables.categorized.*;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2DefenderInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
 import com.l2jserver.gameserver.model.actor.templates.drop.stats.DynamicDropTable;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import org.slf4j.Logger;
@@ -67,6 +69,10 @@ public class DynamicDropCalculator {
     }
 
     public List<ItemHolder> calculate(L2Character victim) {
+        if (victim instanceof L2DefenderInstance || victim instanceof L2GuardInstance) {
+            return Collections.emptyList();
+        }
+
         List<ItemHolder> drop = new ArrayList<>(generalDropCalculator.calculate(DynamicDropTable.getInstance().getDynamicNpcDropData(victim)));
         drop.addAll(customDropCalculator.calculate(DynamicDropTable.getInstance().getCustomDrop(victim)));
         drop.addAll(customDropCalculator.calculateCategories(DynamicDropTable.getInstance().getNpcDrop(victim)));

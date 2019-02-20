@@ -3,6 +3,8 @@ package handlers.bypasshandlers.npcviewmod;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2DefenderInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.drop.*;
 import com.l2jserver.gameserver.model.actor.templates.drop.calculators.DynamicDropCalculator;
@@ -54,14 +56,18 @@ public class DynamicDropView implements DropView {
 
 
         List<ItemGroupView> allGroupViews = new ArrayList<>();
-        allGroupViews.addAll(npcGroupViews);
-        allGroupViews.addAll(equipmentGroupViews);
-        allGroupViews.addAll(partsGroupViews);
-        allGroupViews.addAll(recipesGroupViews);
-        allGroupViews.addAll(resourceGroupViews);
-        allGroupViews.addAll(scrollsGroupViews);
-        allGroupViews.addAll(customDropGroupViews);
-        allGroupViews.addAll(regularDropGroupViews);
+        if (npc instanceof L2DefenderInstance || npc instanceof L2GuardInstance) {
+            allGroupViews.addAll(regularDropGroupViews);
+        } else {
+            allGroupViews.addAll(npcGroupViews);
+            allGroupViews.addAll(equipmentGroupViews);
+            allGroupViews.addAll(partsGroupViews);
+            allGroupViews.addAll(recipesGroupViews);
+            allGroupViews.addAll(resourceGroupViews);
+            allGroupViews.addAll(scrollsGroupViews);
+            allGroupViews.addAll(customDropGroupViews);
+            allGroupViews.addAll(regularDropGroupViews);
+        }
 
         int totalItems = allGroupViews.stream().mapToInt(ItemGroupView::getSize).sum();
         int pages = (int) Math.ceil((double) totalItems / DROP_LIST_ITEMS_PER_PAGE);
