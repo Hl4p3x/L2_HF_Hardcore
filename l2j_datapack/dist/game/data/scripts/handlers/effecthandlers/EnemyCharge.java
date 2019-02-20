@@ -81,7 +81,7 @@ public final class EnemyCharge extends AbstractEffect
 		// If no distance
 		if ((distance < 1) || ((distance - offset) <= 0))
 		{
-			return;
+			distance = 1;
 		}
 		
 		// Calculate movement angles needed

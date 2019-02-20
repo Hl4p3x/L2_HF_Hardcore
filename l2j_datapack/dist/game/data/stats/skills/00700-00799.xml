@@ -2555,6 +2555,7 @@
 		<for>
 			<effect name="PhysicalSoulAttack" />
 			<effect name="Stun" />
+			<effect name="EnemyCharge"/>
 		</for>
 		<enchant3for>
 			<effect name="PhysicalSoulAttack" />
