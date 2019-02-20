@@ -608,19 +608,15 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		}
 		
 		L2PcInstance character = L2World.getInstance().getPlayer(objId);
-		if (character != null)
-		{
-			// exploit prevention, should not happens in normal way
-			_log.severe("Attempt of double login: " + character.getName() + "(" + objId + ") " + getAccountName());
-			if (character.getClient() != null)
-			{
+		if (character != null) {
+			// exploit prevention, should not happen in normal way
+			if (character.getClient() != null || character.getOfflineStartTime() == 0) {
 				character.getClient().closeNow();
-			}
-			else
-			{
+				_log.severe("Attempt of double login: " + character.getName() + "(" + objId + ") " + getAccountName());
+				return null;
+			} else {
 				character.deleteMe();
 			}
-			return null;
 		}
 		
 		character = L2PcInstance.load(objId);
@@ -822,6 +818,8 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 							L2GameClient.this
 						});
 						_logAccounting.log(record);
+
+						LoginServerThread.getInstance().sendLogout(getAccountName());
 						return;
 					}
 					fast = !getActiveChar().isInCombat() && !getActiveChar().isLocked();
