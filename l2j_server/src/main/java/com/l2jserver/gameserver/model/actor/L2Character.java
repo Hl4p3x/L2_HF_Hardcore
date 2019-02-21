@@ -3672,6 +3672,50 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
         return _target;
     }
 
+    public final boolean isPathEmpty(MoveData m) {
+        return (m.geoPath == null) || (m.geoPath.size() < 2);
+    }
+
+    public final MoveData tryToFindApproximatePath(MoveData m, int curX, int curY, int curZ, int targetX, int targetY, int targetZ) {
+        m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, targetX, targetY, targetZ, getInstanceId(), isPlayable());
+        if (!isPathEmpty(m)) {
+            return m;
+        }
+
+        for (int i = 1; i < Config.PATH_ON_FAILURE_APPROXIMATION; i = i + Config.PATH_ON_FAILURE_APPROXIMATION_STEP) {
+            m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, targetX + i, targetY, targetZ, getInstanceId(), isPlayable());
+            if (!isPathEmpty(m)) {
+                return m;
+            }
+
+            m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, targetX, targetY + i, targetZ, getInstanceId(), isPlayable());
+            if (!isPathEmpty(m)) {
+                return m;
+            }
+
+            m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, targetX + i, targetY + i, targetZ, getInstanceId(), isPlayable());
+            if (!isPathEmpty(m)) {
+                return m;
+            }
+
+            m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, targetX - i, targetY, targetZ, getInstanceId(), isPlayable());
+            if (!isPathEmpty(m)) {
+                return m;
+            }
+
+            m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, targetX, targetY - i, targetZ, getInstanceId(), isPlayable());
+            if (!isPathEmpty(m)) {
+                return m;
+            }
+
+            m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, targetX - i, targetY - i, targetZ, getInstanceId(), isPlayable());
+            if (!isPathEmpty(m)) {
+                return m;
+            }
+        }
+        return m;
+    }
+
     /**
      * Calculate movement data for a move to location action and add the L2Character to movingObjects of GameTimeController (only called by AI Accessor).<br>
      * <B><U>Concept</U>:</B><br>
@@ -3850,8 +3894,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
                 // Path calculation
                 // Overrides previous movement check
                 if ((isPlayable() && !isInVehicle) || isMinion() || isInCombat()) {
-                    m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId(), isPlayable());
-                    if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
+                    m = tryToFindApproximatePath(m, curX, curY, curZ, originalX, originalY, originalZ);
+                    if (isPathEmpty(m)) // No path found
                     {
                         // Even though there's no path found (remember geonodes aren't perfect),
                         // the mob is attacking and right now we set it so that the mob will go

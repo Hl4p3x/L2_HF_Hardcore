@@ -18,11 +18,11 @@
  */
 package com.l2jserver.gameserver.pathfinding.cellnodes;
 
+import com.l2jserver.Config;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
-
-import com.l2jserver.Config;
 
 /**
  * @author DS Credits to Diamond
@@ -157,25 +157,25 @@ public class CellNodeBuffer
 		// East
 		if (_current.getLoc().canGoEast())
 		{
-			nodeE = addNode(x + 1, y, z, false);
+			nodeE = addNode(x + Config.NODE_STEP_MODIFIER, y, z, false);
 		}
 		
 		// South
 		if (_current.getLoc().canGoSouth())
 		{
-			nodeS = addNode(x, y + 1, z, false);
+			nodeS = addNode(x, y + Config.NODE_STEP_MODIFIER, z, false);
 		}
 		
 		// West
 		if (_current.getLoc().canGoWest())
 		{
-			nodeW = addNode(x - 1, y, z, false);
+			nodeW = addNode(x - Config.NODE_STEP_MODIFIER, y, z, false);
 		}
 		
 		// North
 		if (_current.getLoc().canGoNorth())
 		{
-			nodeN = addNode(x, y - 1, z, false);
+			nodeN = addNode(x, y - Config.NODE_STEP_MODIFIER, z, false);
 		}
 		
 		if (Config.ADVANCED_DIAGONAL_STRATEGY)
@@ -185,7 +185,7 @@ public class CellNodeBuffer
 			{
 				if (nodeE.getLoc().canGoSouth() && nodeS.getLoc().canGoEast())
 				{
-					addNode(x + 1, y + 1, z, true);
+					addNode(x + Config.NODE_STEP_MODIFIER, y + Config.NODE_STEP_MODIFIER, z, true);
 				}
 			}
 			
@@ -194,7 +194,7 @@ public class CellNodeBuffer
 			{
 				if (nodeW.getLoc().canGoSouth() && nodeS.getLoc().canGoWest())
 				{
-					addNode(x - 1, y + 1, z, true);
+					addNode(x - Config.NODE_STEP_MODIFIER, y + Config.NODE_STEP_MODIFIER, z, true);
 				}
 			}
 			
@@ -203,7 +203,7 @@ public class CellNodeBuffer
 			{
 				if (nodeE.getLoc().canGoNorth() && nodeN.getLoc().canGoEast())
 				{
-					addNode(x + 1, y - 1, z, true);
+					addNode(x + Config.NODE_STEP_MODIFIER, y - Config.NODE_STEP_MODIFIER, z, true);
 				}
 			}
 			
@@ -212,7 +212,7 @@ public class CellNodeBuffer
 			{
 				if (nodeW.getLoc().canGoNorth() && nodeN.getLoc().canGoWest())
 				{
-					addNode(x - 1, y - 1, z, true);
+					addNode(x - Config.NODE_STEP_MODIFIER, y - Config.NODE_STEP_MODIFIER, z, true);
 				}
 			}
 		}

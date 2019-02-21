@@ -1232,6 +1232,9 @@ public final class Config
 	public static Path GEODATA_PATH;
 	public static boolean TRY_LOAD_UNSPECIFIED_REGIONS;
 	public static Map<String, Boolean> GEODATA_REGIONS;
+	public static int NODE_STEP_MODIFIER;
+	public static int PATH_ON_FAILURE_APPROXIMATION;
+	public static int PATH_ON_FAILURE_APPROXIMATION_STEP;
 
 	// Custom Board
 	public static boolean CUSTOM_COMMUNITY;
@@ -2984,6 +2987,9 @@ public final class Config
 					}
 				}
 			}
+			NODE_STEP_MODIFIER = geoData.getInt("NodeStepModifier", 1);
+			PATH_ON_FAILURE_APPROXIMATION = geoData.getInt("PathOnFailureApproximation", 15);
+			PATH_ON_FAILURE_APPROXIMATION_STEP = geoData.getInt("PathOnFailureApproximationStep", 1);
 		}
 		else if (Server.serverMode == Server.MODE_LOGINSERVER)
 		{
