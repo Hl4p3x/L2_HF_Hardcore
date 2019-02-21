@@ -36,6 +36,8 @@ task zip(type: Zip) {
 	def fileName = 'L2J_DataPack_' + new Date().format("yyyy-MM-dd")
 	baseName = fileName
 	from('dist')
+	exclude '**/geodata/**'
+	exclude '**/pathnode/**'
 	println 'Build in build/distributions/' + fileName + '.zip'
 }
 
