@@ -113,6 +113,9 @@ public class L2MonsterInstance extends L2Attackable
 						if (skill.getId() == INSANE_CRUSHER_ID) {
 							return false;
 						}
+						if (skill.hasEffectType(L2EffectType.TELEPORT)) {
+							return false;
+						}
 						if (isFighter) {
 							return skill.hasEffectType(
 									L2EffectType.PHYSICAL_ATTACK,
