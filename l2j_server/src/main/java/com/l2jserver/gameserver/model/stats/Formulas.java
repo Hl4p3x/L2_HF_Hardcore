@@ -793,9 +793,11 @@ public final class Formulas {
             }
         }
 
-        int levelDiff = attacker.getLevel() - target.getLevel();
-        damage -= calculateDmgPenalty(levelDiff, damage);
-        damage += calculateDmgBenefit(levelDiff, damage);
+        if (!(target instanceof L2DoorInstance)) {
+            int levelDiff = attacker.getLevel() - target.getLevel();
+            damage -= calculateDmgPenalty(levelDiff, damage);
+            damage += calculateDmgBenefit(levelDiff, damage);
+        }
 
         return Math.max(damage, 1);
     }
