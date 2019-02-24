@@ -1284,6 +1284,16 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 		return (_mana >= 0);
 	}
 
+    public void setDisplayId(int displayId) {
+        this.displayId = displayId;
+        updateDatabase();
+    }
+
+    public void unsetDisplayId() {
+        this.displayId = getOriginalDisplayId();
+        updateDatabase();
+    }
+
 	/**
 	 * Returns the remaining mana of this shadow item
 	 * @return lifeTime
@@ -1660,7 +1670,7 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 		}
 
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=? " + "WHERE object_id = ?"))
+             PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=?,item_display_id=? " + "WHERE object_id = ?"))
 		{
 			ps.setInt(1, _ownerId);
 			ps.setLong(2, getCount());
@@ -1672,6 +1682,7 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 			ps.setInt(8, getMana());
 			ps.setLong(9, getTime());
 			ps.setInt(10, getObjectId());
+            ps.setInt(11, displayId > 0 ? displayId : getOriginalDisplayId());
 			ps.executeUpdate();
 			_existsInDb = true;
 			_storedInDb = true;
@@ -1695,7 +1706,7 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 		}
 
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,custom_type1,custom_type2,mana_left,time) " + "VALUES (?,?,?,?,?,?,?,?,?,?,?)"))
+             PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,custom_type1,custom_type2,mana_left,time,item_display_id) " + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, _ownerId);
 			ps.setInt(2, _itemId);
@@ -1708,8 +1719,9 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 			ps.setInt(9, _type2);
 			ps.setInt(10, getMana());
 			ps.setLong(11, getTime());
+            ps.setInt(12, displayId > 0 ? displayId : getOriginalDisplayId());
 
-			ps.executeUpdate();
+            ps.executeUpdate();
 			_existsInDb = true;
 			_storedInDb = true;
 
