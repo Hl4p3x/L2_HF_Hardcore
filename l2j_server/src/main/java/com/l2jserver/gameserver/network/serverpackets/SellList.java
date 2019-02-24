@@ -18,12 +18,12 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SellList extends L2GameServerPacket
 {
@@ -74,7 +74,7 @@ public class SellList extends L2GameServerPacket
 		{
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());
-			writeD(item.getDisplayId());
+			writeD(item.getOriginalDisplayId());
 			writeQ(item.getCount());
 			writeH(item.getItem().getType2());
 			writeH(item.isEquipped() ? 0x01 : 0x00);

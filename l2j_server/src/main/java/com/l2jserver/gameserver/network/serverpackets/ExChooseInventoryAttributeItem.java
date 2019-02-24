@@ -32,7 +32,7 @@ public class ExChooseInventoryAttributeItem extends L2GameServerPacket
 	
 	public ExChooseInventoryAttributeItem(L2ItemInstance item)
 	{
-		_itemId = item.getDisplayId();
+		_itemId = item.getOriginalDisplayId();
 		_atribute = Elementals.getItemElement(_itemId);
 		if (_atribute == Elementals.NONE)
 		{

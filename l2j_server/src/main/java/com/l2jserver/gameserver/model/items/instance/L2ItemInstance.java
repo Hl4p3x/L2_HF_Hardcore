@@ -157,6 +157,7 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 	private final DropProtection _dropProtection = new DropProtection();
 
 	private int _shotsMask = 0;
+	private int displayId;
 
 	private final List<Options> _enchantOptions = new ArrayList<>();
 
@@ -176,6 +177,7 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 			throw new IllegalArgumentException();
 		}
 		super.setName(_item.getName());
+		displayId = _item.getDisplayId();
 		setCount(1);
 		_loc = ItemLocation.VOID;
 		_type1 = 0;
@@ -202,6 +204,7 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 			throw new IllegalArgumentException();
 		}
 		super.setName(_item.getName());
+		displayId = _item.getDisplayId();
 		setCount(1);
 		_loc = ItemLocation.VOID;
 		_mana = _item.getDuration();
@@ -619,9 +622,13 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 	/**
 	 * @return the display Id of the item.
 	 */
-	public int getDisplayId()
+	public int getOriginalDisplayId()
 	{
 		return getItem().getDisplayId();
+	}
+
+	public int getDisplayId() {
+		return displayId;
 	}
 
 	/**
