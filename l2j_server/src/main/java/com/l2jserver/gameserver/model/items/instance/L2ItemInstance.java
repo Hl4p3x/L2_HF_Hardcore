@@ -1290,12 +1290,12 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 
     public void setDisplayId(int displayId) {
         this.displayId = displayId;
-        updateDatabase();
+		_storedInDb = false;
     }
 
     public void unsetDisplayId() {
         this.displayId = getOriginalDisplayId();
-        updateDatabase();
+		_storedInDb = false;
     }
 
     public boolean isCustomDisplayId() {

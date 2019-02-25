@@ -24,6 +24,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.interfaces.EnchantableItemObject;
 import com.l2jserver.gameserver.model.multisell.dualcraft.DualcraftCombinator;
@@ -52,6 +53,8 @@ public class ListContainer
 	private Set<Integer> npcsAllowed = new HashSet<>();
 
 	private boolean dualcraft = false;
+	private boolean isRemoveTransmogrification;
+	private boolean isBestowTransmogrification;
 	
 	public ListContainer(int listId)
 	{
@@ -76,6 +79,22 @@ public class ListContainer
 		this.entries = entries;
 	}
 
+	public boolean isRemoveTransmogrification() {
+		return isRemoveTransmogrification;
+	}
+
+	public boolean isBestowTransmogrification() {
+		return isBestowTransmogrification;
+	}
+
+	public void setRemoveTransmogrification(boolean removeTransmogrification) {
+		isRemoveTransmogrification = removeTransmogrification;
+	}
+
+	public void setBestowTransmogrification(boolean bestowTransmogrification) {
+		isBestowTransmogrification = bestowTransmogrification;
+	}
+
 	public static ListContainer prepareTransmogrificationRemove(int multisellId, L2Npc npc, L2PcInstance player, boolean maintainEnchantment) {
 		List<L2ItemInstance> displayableEquipment = player.getInventory().getAllUnequippedDisplayables();
 		List<L2ItemInstance> customDisplayables = displayableEquipment.stream().filter(L2ItemInstance::isCustomDisplayId).collect(Collectors.toList());
@@ -88,12 +107,14 @@ public class ListContainer
 			List<Ingredient> ingredients = List.of(Ingredient.from(itemInstance.getId(), 1, false, false));
 			List<Ingredient> products = List.of(Ingredient.from(itemInstance.getId(), 1, false, false));
 
-			entries.add(Entry.prepareEntry(itemInstance.getObjectId(), ingredients, products, itemInstance, maintainEnchantment, applyTaxes, taxRate));
+			entries.add(Entry.prepareEntry(itemInstance.getObjectId(), ingredients, products, itemInstance, applyTaxes, maintainEnchantment, taxRate));
 		}
-		return new ListContainer(multisellId, applyTaxes, maintainEnchantment, taxRate, entries, Set.of(npc.getId()), false);
+		ListContainer result = new ListContainer(multisellId, applyTaxes, maintainEnchantment, taxRate, entries, Set.of(npc.getId()), false);
+		result.setRemoveTransmogrification(true);
+		return result;
 	}
 
-	public static ListContainer prepareTransmogrificationBestow(int multisellId, L2Npc npc, L2PcInstance player, boolean maintainEnchantment) {
+	public static ListContainer prepareTransmogrificationBestow(int multisellId, L2Npc npc, L2PcInstance player, List<ItemHolder> price, boolean maintainEnchantment) {
 		List<L2ItemInstance> displayableEquipment = player.getInventory().getAllUnequippedDisplayables();
 		List<L2ItemInstance> customizableDisplayables = displayableEquipment.stream().filter(L2ItemInstance::isNotCustomDisplayId).collect(Collectors.toList());
 		Multimap<Integer, L2ItemInstance> displayablesByBodyPart = Multimaps.index(customizableDisplayables, itemInstance -> Objects.requireNonNull(itemInstance).getItem().getBodyPart());
@@ -101,24 +122,36 @@ public class ListContainer
 		double taxRate = calculateTaxRate(npc);
 		boolean applyTaxes = calculateApplyTaxes(taxRate);
 
+		List<Ingredient> priceIngredients = price.stream().map(holder -> Ingredient.from(holder.getId(), holder.getCount(), true, false)).collect(Collectors.toList());
+
+
 		List<Entry> entries = new ArrayList<>();
+		int entryIdCounter = 1;
 		for (L2ItemInstance itemInstance : customizableDisplayables) {
 			Collection<L2ItemInstance> bodypartDisplayableDonors = displayablesByBodyPart.get(itemInstance.getItem().getBodyPart());
+			if (itemInstance.isWeapon()) {
+				bodypartDisplayableDonors = bodypartDisplayableDonors.stream().filter(donor -> itemInstance.getWeaponItem().getItemType().equals(donor.getWeaponItem().getItemType())).collect(Collectors.toList());
+			}
+
 			for (L2ItemInstance donorDisplayable : bodypartDisplayableDonors) {
 				if (donorDisplayable.getId() == itemInstance.getId()) {
 					continue;
 				}
 
-				List<Ingredient> ingredients = List.of(
-						Ingredient.from(itemInstance.getId(), 1, false, false),
-						Ingredient.from(donorDisplayable.getId(), 1, false, false)
-				);
+				List<Ingredient> ingredients = new ArrayList<>();
+				ingredients.add(Ingredient.from(itemInstance.getId(), 1, false, false));
+				ingredients.add(Ingredient.from(donorDisplayable.getId(), 1, false, false));
+				ingredients.addAll(priceIngredients);
+
 				List<Ingredient> products = List.of(Ingredient.from(itemInstance.getId(), 1, false, false));
 
-				entries.add(Entry.prepareEntry(itemInstance.getObjectId(), ingredients, products, itemInstance, maintainEnchantment, applyTaxes, taxRate));
+				entries.add(Entry.prepareEntry(entryIdCounter, ingredients, products, itemInstance, applyTaxes, maintainEnchantment, taxRate));
+				entryIdCounter += 1;
 			}
 		}
-		return new ListContainer(multisellId, applyTaxes, maintainEnchantment, taxRate, entries, Set.of(npc.getId()), false);
+		ListContainer result = new ListContainer(multisellId, applyTaxes, maintainEnchantment, taxRate, entries, Set.of(npc.getId()), false);
+		result.setBestowTransmogrification(true);
+		return result;
 	}
 
 	public boolean isDualcraft() {

@@ -10,8 +10,10 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.multisell.ListContainer;
-import custom.common.Config;
+import com.l2jserver.util.YamlMapper;
 import custom.common.ShortNpc;
+
+import java.io.IOException;
 
 public class TransmogrificationManager extends AbstractNpcAI {
 
@@ -47,7 +49,13 @@ public class TransmogrificationManager extends AbstractNpcAI {
     }
 
     private void loadConfig() {
-        config = Config.load("./transmogrification_config.yml", TransmogrificationConfig.class, LOG);
+        String resourcePath = "./transmogrification_config.yml";
+        try {
+            config = YamlMapper.getInstance().readValue(getClass().getResourceAsStream(resourcePath), TransmogrificationConfig.class);
+            LOG.info("Config for transmogrification loaded");
+        } catch (IOException e) {
+            throw new IllegalStateException("Could not load config from " + resourcePath, e);
+        }
     }
 
     private void loadNpc() {
@@ -75,7 +83,7 @@ public class TransmogrificationManager extends AbstractNpcAI {
     @Override
     public String onAdvEvent(String event, L2Npc npc, L2PcInstance player) {
         if (event.equals("bestow")) {
-            ListContainer bestowTransmogrificationList = ListContainer.prepareTransmogrificationBestow(1238976, npc, player, true);
+            ListContainer bestowTransmogrificationList = ListContainer.prepareTransmogrificationBestow(1238976, npc, player, config.getPrice(), true);
             MultisellData.getInstance().separateAndSend(bestowTransmogrificationList, player, npc);
             return null;
         } else if (event.contains("remove")) {

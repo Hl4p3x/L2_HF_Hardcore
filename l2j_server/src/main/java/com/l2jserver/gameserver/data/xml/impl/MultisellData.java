@@ -259,7 +259,9 @@ public final class MultisellData implements IXmlReader
         if (template.isDualcraft()) {
             list = ListContainer.prepareDualcraftMultisell(template, player, npc);
         } else if (inventoryOnly) {
-            list = ListContainer.prepareInventoryOnlyMultisell(template, player, npc);
+			list = ListContainer.prepareInventoryOnlyMultisell(template, player, npc);
+		} else if (template.isBestowTransmogrification() || template.isRemoveTransmogrification()) {
+			list = template;
         } else {
             list = ListContainer.prepareFullMultisell(template, npc);
         }

@@ -246,7 +246,9 @@ public class MultiSellChoose extends L2GameClientPacket
 						}
 					}
 				}
-				
+
+				int customDisplayId = 0;
+
 				List<L2Augmentation> augmentation = new ArrayList<>();
 				Elementals[] elemental = null;
 				/** All ok, remove items and add final product */
@@ -293,7 +295,11 @@ public class MultiSellChoose extends L2GameClientPacket
 								// for non-stackable items, one of two scenaria are possible:
 								// a) list maintains enchantment: get the instances that exactly match the requested enchantment level
 								// b) list does not maintain enchantment: get the instances with the LOWEST enchantment level
-								
+								if (list.isBestowTransmogrification()) {
+									customDisplayId = itemToTake.getDisplayId();
+								}
+
+
 								// a) if enchantment is maintained, then get a list of items that exactly match this enchantment
 								if (list.getMaintainEnchantment())
 								{
@@ -408,6 +414,13 @@ public class MultiSellChoose extends L2GameClientPacket
 							for (int i = 0; i < (e.getItemCount() * _amount); i++)
 							{
 								product = inv.addItem("Multisell", e.getItemId(), 1, player, player.getTarget());
+								if (list.isBestowTransmogrification() && customDisplayId > 0) {
+									product.setDisplayId(customDisplayId);
+								}
+								if (list.isRemoveTransmogrification()) {
+									product.unsetDisplayId();
+								}
+
 								if ((product != null) && list.getMaintainEnchantment())
 								{
 									if (i < augmentation.size())

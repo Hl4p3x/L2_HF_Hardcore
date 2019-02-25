@@ -6,9 +6,5 @@ npc:
   collision_radius: 8
   collision_height: 22.5
 price:
-  armor:
-    - id: 57
-      count: 30000000
-  weapon:
-    - id: 57
-      count: 60000000
+  - id: 57
+    count: 40000000
