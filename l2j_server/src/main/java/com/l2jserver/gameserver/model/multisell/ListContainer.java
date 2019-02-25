@@ -104,8 +104,13 @@ public class ListContainer
 
 		List<Entry> entries = new ArrayList<>();
 		for (L2ItemInstance itemInstance : customDisplayables) {
-			List<Ingredient> ingredients = List.of(Ingredient.from(itemInstance.getId(), 1, false, false));
-			List<Ingredient> products = List.of(Ingredient.from(itemInstance.getId(), 1, false, false));
+			Ingredient ingredient = Ingredient.from(itemInstance.getId(), 1, false, false);
+			ingredient.setItemInfo(new ItemInfo(itemInstance));
+			List<Ingredient> ingredients = List.of(ingredient);
+
+			Ingredient product = Ingredient.from(itemInstance.getId(), 1, false, false);
+			product.setItemInfo(new ItemInfo(itemInstance));
+			List<Ingredient> products = List.of(product);
 
 			entries.add(Entry.prepareEntry(itemInstance.getObjectId(), ingredients, products, itemInstance, applyTaxes, maintainEnchantment, taxRate));
 		}
@@ -139,8 +144,13 @@ public class ListContainer
 				}
 
 				List<Ingredient> ingredients = new ArrayList<>();
-				ingredients.add(Ingredient.from(itemInstance.getId(), 1, false, false));
-				ingredients.add(Ingredient.from(donorDisplayable.getId(), 1, false, false));
+				Ingredient mainIngredient = Ingredient.from(itemInstance.getId(), 1, false, false);
+				mainIngredient.setItemInfo(new ItemInfo(itemInstance));
+				ingredients.add(mainIngredient);
+
+				Ingredient donorIngredient = Ingredient.from(donorDisplayable.getId(), 1, false, false);
+				donorIngredient.setItemInfo(new ItemInfo(donorDisplayable));
+				ingredients.add(donorIngredient);
 				ingredients.addAll(priceIngredients);
 
 				List<Ingredient> products = List.of(Ingredient.from(itemInstance.getId(), 1, false, false));

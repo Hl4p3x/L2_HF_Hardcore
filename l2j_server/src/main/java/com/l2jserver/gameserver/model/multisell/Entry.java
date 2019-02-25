@@ -178,7 +178,7 @@ public class Entry
 
 		List<Ingredient> newIngredients = new ArrayList<>(ingredients.size());
 		for (Ingredient ing : ingredients) {
-			if (maintainEnchantment && item != null && ing.isArmorOrWeapon()) {
+			if (maintainEnchantment && item != null && ing.isArmorOrWeapon() && item.getId() == ing.getItemId()) {
 				info = new ItemInfo(item);
 				final Ingredient newIngredient = ing.getCopy();
 				newIngredient.setItemInfo(info);
