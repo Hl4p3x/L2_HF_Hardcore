@@ -5,26 +5,14 @@
 	</npcs>
 	<item>
 		<!-- Event - Medal -->
-		<ingredient count="5" id="6392" />
-		<!-- Greater Haste Potion -->
-		<production count="1" id="1374" />
+		<ingredient count="100" id="6392"/>
+		<!-- Scroll: Enchant Weapon (S-Grade) -->
+		<production count="1" id="959"/>
 	</item>
 	<item>
 		<!-- Event - Medal -->
-		<ingredient count="10" id="6392" />
-		<!-- Greater Swift Attack Potion -->
-		<production count="1" id="1375" />
-	</item>
-	<item>
-		<!-- Event - Medal -->
-		<ingredient count="10" id="6392" />
-		<!-- Greater Magic Haste Potion -->
-		<production count="1" id="6036" />
-	</item>
-	<item>
-		<!-- Event - Medal -->
-		<ingredient count="17" id="6392" />
-		<!-- Quick Healing Potion -->
-		<production count="1" id="1540" />
+		<ingredient count="33" id="6392"/>
+		<!-- Scroll: Enchant Armor (S-Grade) -->
+		<production count="1" id="960"/>
 	</item>
 </list>
