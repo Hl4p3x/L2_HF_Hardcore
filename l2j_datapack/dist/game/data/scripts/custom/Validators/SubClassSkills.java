@@ -322,7 +322,7 @@ public final class SubClassSkills extends Quest
 	private List<L2ItemInstance> getCertItems(L2PcInstance player)
 	{
 		final List<L2ItemInstance> tmp = new ArrayList<>();
-        for (L2ItemInstance i : player.getInventory().getAllItemsArray())
+		for (L2ItemInstance i : player.getInventory().getAllItemsArray())
 		{
 			if ((i != null) && (Arrays.binarySearch(_allCertItemIds, i.getId()) >= 0))
 			{
