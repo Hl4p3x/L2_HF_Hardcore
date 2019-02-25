@@ -31,7 +31,7 @@ public enum ItemGradeRange {
     S(76, 79, new GradeInfo(Grade.S, GradeCategory.ALL)), //
     S_DYNO(80, 82, new GradeInfo(Grade.S80, GradeCategory.LOW)), //
     S_MORA(83, 84, new GradeInfo(Grade.S80, GradeCategory.TOP)), //
-    S_VESP(85, 86, new GradeInfo(Grade.S84, GradeCategory.LOW));
+    S_VESP(85, 85, new GradeInfo(Grade.S84, GradeCategory.LOW));
 
     private int lowLevel;
     private int highLevel;

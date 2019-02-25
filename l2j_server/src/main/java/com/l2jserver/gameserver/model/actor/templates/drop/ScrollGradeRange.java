@@ -11,7 +11,7 @@ public enum ScrollGradeRange {
     C(40, 51, ScrollGrade.C),
     B(52, 60, ScrollGrade.B),
     A(61, 75, ScrollGrade.A),
-    S(76, 85, ScrollGrade.S);
+    S(76, 86, ScrollGrade.S);
 
     private int lowLevel;
     private int highLevel;
