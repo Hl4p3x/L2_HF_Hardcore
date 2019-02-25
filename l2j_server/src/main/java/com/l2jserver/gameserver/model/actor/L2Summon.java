@@ -55,18 +55,7 @@ import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo.SummonInfo;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.ExPartyPetWindowAdd;
-import com.l2jserver.gameserver.network.serverpackets.ExPartyPetWindowDelete;
-import com.l2jserver.gameserver.network.serverpackets.ExPartyPetWindowUpdate;
-import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jserver.gameserver.network.serverpackets.PetDelete;
-import com.l2jserver.gameserver.network.serverpackets.PetInfo;
-import com.l2jserver.gameserver.network.serverpackets.PetItemList;
-import com.l2jserver.gameserver.network.serverpackets.PetStatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.RelationChanged;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.network.serverpackets.TeleportToLocation;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.pathfinding.PathFinding;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 import com.l2jserver.gameserver.util.Util;
@@ -941,7 +930,7 @@ public abstract class L2Summon extends L2Playable
 			updateEffectIcons(true);
 			if (isPet())
 			{
-				activeChar.sendPacket(new PetItemList(getInventory().getItems()));
+				activeChar.sendPacket(new PetItemList(getInventory().getAllItemsArray()));
 			}
 		}
 		else

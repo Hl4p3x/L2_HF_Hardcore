@@ -18,11 +18,11 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class ItemList extends AbstractItemPacket
 {
@@ -34,8 +34,8 @@ public final class ItemList extends AbstractItemPacket
 	{
 		_activeChar = activeChar;
 		_showWindow = showWindow;
-		
-		for (L2ItemInstance item : activeChar.getInventory().getItems())
+
+        for (L2ItemInstance item : activeChar.getInventory().getAllItemsArray())
 		{
 			if (!item.isQuestItem())
 			{

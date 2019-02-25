@@ -18,8 +18,6 @@
  */
 package handlers.bypasshandlers;
 
-import java.text.DateFormat;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.idfactory.IdFactory;
@@ -33,6 +31,8 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+
+import java.text.DateFormat;
 
 public class Loto implements IBypassHandler
 {
@@ -256,7 +256,7 @@ public class Loto implements IBypassHandler
 			
 			int lotonumber = Lottery.getInstance().getId();
 			String message = "";
-			for (L2ItemInstance item : player.getInventory().getItems())
+            for (L2ItemInstance item : player.getInventory().getAllItemsArray())
 			{
 				if (item == null)
 				{

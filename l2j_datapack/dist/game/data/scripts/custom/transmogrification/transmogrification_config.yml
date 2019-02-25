@@ -1,0 +1,14 @@
+npc:
+  id: 8975542
+  display_id: 32559
+  name: "Forlan"
+  title: "Transmogrification Manager"
+  collision_radius: 8
+  collision_height: 22.5
+price:
+  armor:
+    - id: 57
+      count: 30000000
+  weapon:
+    - id: 57
+      count: 60000000

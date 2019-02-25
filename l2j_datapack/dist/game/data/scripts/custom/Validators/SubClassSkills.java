@@ -18,10 +18,6 @@
  */
 package custom.Validators;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
@@ -32,6 +28,10 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.util.Util;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Sub-class skills validator.<br>
@@ -322,7 +322,7 @@ public final class SubClassSkills extends Quest
 	private List<L2ItemInstance> getCertItems(L2PcInstance player)
 	{
 		final List<L2ItemInstance> tmp = new ArrayList<>();
-		for (L2ItemInstance i : player.getInventory().getItems())
+        for (L2ItemInstance i : player.getInventory().getAllItemsArray())
 		{
 			if ((i != null) && (Arrays.binarySearch(_allCertItemIds, i.getId()) >= 0))
 			{

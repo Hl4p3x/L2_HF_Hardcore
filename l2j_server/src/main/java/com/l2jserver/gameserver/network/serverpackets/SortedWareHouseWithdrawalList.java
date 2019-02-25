@@ -18,11 +18,6 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import com.l2jserver.gameserver.data.xml.impl.RecipeData;
 import com.l2jserver.gameserver.model.L2RecipeList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -32,6 +27,11 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.items.type.CrystalType;
 import com.l2jserver.gameserver.model.items.type.EtcItemType;
 import com.l2jserver.gameserver.model.items.type.MaterialType;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class SortedWareHouseWithdrawalList extends L2GameServerPacket
 {
@@ -101,44 +101,44 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket
 		switch (itemtype)
 		{
 			case WEAPON:
-				_objects = createWeaponList(player.getActiveWarehouse().getItems());
+                _objects = createWeaponList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case ARMOR:
-				_objects = createArmorList(player.getActiveWarehouse().getItems());
+                _objects = createArmorList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case ETCITEM:
-				_objects = createEtcItemList(player.getActiveWarehouse().getItems());
+                _objects = createEtcItemList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case MATERIAL:
-				_objects = createMatList(player.getActiveWarehouse().getItems());
+                _objects = createMatList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case RECIPE:
-				_objects = createRecipeList(player.getActiveWarehouse().getItems());
+                _objects = createRecipeList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case AMULETT:
-				_objects = createAmulettList(player.getActiveWarehouse().getItems());
+                _objects = createAmulettList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case SPELLBOOK:
-				_objects = createSpellbookList(player.getActiveWarehouse().getItems());
+                _objects = createSpellbookList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case CONSUMABLE:
-				_objects = createConsumableList(player.getActiveWarehouse().getItems());
+                _objects = createConsumableList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case SHOT:
-				_objects = createShotList(player.getActiveWarehouse().getItems());
+                _objects = createShotList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case SCROLL:
-				_objects = createScrollList(player.getActiveWarehouse().getItems());
+                _objects = createScrollList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case SEED:
-				_objects = createSeedList(player.getActiveWarehouse().getItems());
+                _objects = createSeedList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case OTHER:
-				_objects = createOtherList(player.getActiveWarehouse().getItems());
+                _objects = createOtherList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 			case ALL:
 			default:
-				_objects = createAllList(player.getActiveWarehouse().getItems());
+                _objects = createAllList(player.getActiveWarehouse().getAllItemsArray());
 				break;
 		}
 		

@@ -116,7 +116,7 @@ public final class RequestPetUseItem extends L2GameClientPacket
 				pet.getInventory().equipItem(item);
 			}
 			
-			activeChar.sendPacket(new PetItemList(pet.getInventory().getItems()));
+			activeChar.sendPacket(new PetItemList(pet.getInventory().getAllItemsArray()));
 			pet.updateAndBroadcastStatus(1);
 		}
 		else

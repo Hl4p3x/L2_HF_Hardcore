@@ -18,11 +18,11 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author JIV
@@ -35,7 +35,7 @@ public class ExQuestItemList extends AbstractItemPacket
 	public ExQuestItemList(L2PcInstance activeChar)
 	{
 		_activeChar = activeChar;
-		for (L2ItemInstance item : activeChar.getInventory().getItems())
+        for (L2ItemInstance item : activeChar.getInventory().getAllItemsArray())
 		{
 			if (item.isQuestItem())
 			{

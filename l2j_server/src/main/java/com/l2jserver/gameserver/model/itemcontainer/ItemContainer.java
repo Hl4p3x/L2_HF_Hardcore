@@ -84,23 +84,36 @@ public abstract class ItemContainer
 	/**
 	 * @return the items in inventory
 	 */
-	public L2ItemInstance[] getItems()
+	public L2ItemInstance[] getAllItemsArray()
 	{
 		return _items.toArray(new L2ItemInstance[0]);
 	}
 
-    public List<L2ItemInstance> getUnequippedWeapons() {
-        return Stream.of(getItems()).filter(item -> item.isWeapon() && !item.isEquipped()).collect(Collectors.toList());
-    }
+	public List<L2ItemInstance> getAllItems() {
+		return _items;
+	}
+
+	public List<L2ItemInstance> getAllUnequippedDisplayables() {
+		return Stream.of(getAllItemsArray()).filter(item -> (item.isWeapon() || item.isArmor()) && item.isNotEquipped() && item.isDisplayable()).collect(Collectors.toList());
+	}
+
+	public List<L2ItemInstance> getUnequippedWeapons() {
+		return Stream.of(getAllItemsArray()).filter(item -> item.isWeapon() && !item.isEquipped()).collect(Collectors.toList());
+	}
+
+	public List<L2ItemInstance> getUnequippedArmor() {
+
+		return Stream.of(getAllItemsArray()).filter(item -> item.isArmor() && !item.isEquipped()).collect(Collectors.toList());
+	}
 
     public List<L2ItemInstance> getWeapons() {
-        return Stream.of(getItems()).filter(L2ItemInstance::isWeapon).collect(Collectors.toList());
+		return Stream.of(getAllItemsArray()).filter(L2ItemInstance::isWeapon).collect(Collectors.toList());
     }
 
 	public ItemsByCategory getCategorizedItems() {
-		List<L2ItemInstance> weapons = Stream.of(getItems()).filter(L2ItemInstance::isWeapon).collect(Collectors.toList());
-		List<L2ItemInstance> armor = Stream.of(getItems()).filter(L2ItemInstance::isArmor).collect(Collectors.toList());
-		List<L2ItemInstance> others = Stream.of(getItems()).filter(itemInstance -> !itemInstance.isArmor() && !itemInstance.isWeapon()).collect(Collectors.toList());
+		List<L2ItemInstance> weapons = Stream.of(getAllItemsArray()).filter(L2ItemInstance::isWeapon).collect(Collectors.toList());
+		List<L2ItemInstance> armor = Stream.of(getAllItemsArray()).filter(L2ItemInstance::isArmor).collect(Collectors.toList());
+		List<L2ItemInstance> others = Stream.of(getAllItemsArray()).filter(itemInstance -> !itemInstance.isArmor() && !itemInstance.isWeapon()).collect(Collectors.toList());
 		return new ItemsByCategory(weapons, armor, others);
 	}
 
@@ -760,11 +773,11 @@ public abstract class ItemContainer
 	}
 
 	public List<L2ItemInstance> getAllItemsByType(ItemType itemType) {
-		return Stream.of(getItems()).filter(item -> item.getItemType().equals(itemType)).collect(Collectors.toList());
+		return Stream.of(getAllItemsArray()).filter(item -> item.getItemType().equals(itemType)).collect(Collectors.toList());
 	}
 
 	public List<L2ItemInstance> getAllSellableItemsByType(ItemType itemType) {
-		return Stream.of(getItems()).filter(itemInstance -> itemInstance.getItemType().equals(itemType) && itemInstance.getItem().getReferencePrice() > 0 && !itemInstance.isEquipped() && itemInstance.getItem().isSellable()).collect(Collectors.toList());
+		return Stream.of(getAllItemsArray()).filter(itemInstance -> itemInstance.getItemType().equals(itemType) && itemInstance.getItem().getReferencePrice() > 0 && !itemInstance.isEquipped() && itemInstance.getItem().isSellable()).collect(Collectors.toList());
 	}
 
 }

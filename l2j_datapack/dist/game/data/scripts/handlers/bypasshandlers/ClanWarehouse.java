@@ -152,7 +152,7 @@ public class ClanWarehouse implements IBypassHandler
 			return;
 		}
 		
-		for (L2ItemInstance i : player.getActiveWarehouse().getItems())
+		for (L2ItemInstance i : player.getActiveWarehouse().getAllItemsArray())
 		{
 			if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 			{

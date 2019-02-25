@@ -29,11 +29,7 @@ import com.l2jserver.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExChangePostState;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.ItemList;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -115,8 +111,8 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 		
 		int weight = 0;
 		int slots = 0;
-		
-		for (L2ItemInstance item : attachments.getItems())
+
+        for (L2ItemInstance item : attachments.getAllItemsArray())
 		{
 			if (item == null)
 			{
@@ -166,7 +162,7 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 		
 		// Proceed to the transfer
 		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-		for (L2ItemInstance item : attachments.getItems())
+        for (L2ItemInstance item : attachments.getAllItemsArray())
 		{
 			if (item == null)
 			{

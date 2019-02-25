@@ -19,6 +19,7 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.multisell.ListContainer;
 import com.l2jserver.localization.Strings;
 import com.l2jserver.util.YamlMapper;
+import custom.common.ShortNpc;
 import custom.votes.config.VoteConfig;
 import handlers.communityboard.custom.ProcessResultCarrier;
 

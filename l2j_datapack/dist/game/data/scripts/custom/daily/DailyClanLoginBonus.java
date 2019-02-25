@@ -358,7 +358,7 @@ public class DailyClanLoginBonus extends AbstractNpcAI {
 
         if (attachments.getSize() > 0) {
             MailManager.getInstance().sendMessage(rewardMessage);
-            LOG.debug("Player {} earned daily login bonus {}", player, attachments.getItems());
+            LOG.debug("Player {} earned daily login bonus {}", player, attachments.getAllItemsArray());
         } else {
             LOG.debug("Player {} could not earn login bonus, no attachments specified", player);
         }

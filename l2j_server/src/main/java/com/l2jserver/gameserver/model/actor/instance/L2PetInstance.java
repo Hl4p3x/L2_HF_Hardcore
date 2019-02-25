@@ -318,7 +318,7 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public L2ItemInstance getActiveWeaponInstance()
 	{
-		for (L2ItemInstance item : getInventory().getItems())
+		for (L2ItemInstance item : getInventory().getAllItemsArray())
 		{
 			if ((item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == L2Item.SLOT_R_HAND))
 			{
@@ -613,7 +613,7 @@ public class L2PetInstance extends L2Summon
 			else
 			{
 				final L2ItemInstance item = getInventory().addItem("Pickup", target, getOwner(), this);
-				// sendPacket(new PetItemList(getInventory().getItems()));
+				// sendPacket(new PetItemList(getInventory().getAllItemsArray()));
 				sendPacket(new PetInventoryUpdate(item));
 			}
 		}
@@ -792,7 +792,7 @@ public class L2PetInstance extends L2Summon
 	{
 		try
 		{
-			for (L2ItemInstance item : getInventory().getItems())
+			for (L2ItemInstance item : getInventory().getAllItemsArray())
 			{
 				dropItemHere(item);
 			}

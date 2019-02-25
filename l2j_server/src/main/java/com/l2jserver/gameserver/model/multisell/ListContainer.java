@@ -76,6 +76,51 @@ public class ListContainer
 		this.entries = entries;
 	}
 
+	public static ListContainer prepareTransmogrificationRemove(int multisellId, L2Npc npc, L2PcInstance player, boolean maintainEnchantment) {
+		List<L2ItemInstance> displayableEquipment = player.getInventory().getAllUnequippedDisplayables();
+		List<L2ItemInstance> customDisplayables = displayableEquipment.stream().filter(L2ItemInstance::isCustomDisplayId).collect(Collectors.toList());
+
+		double taxRate = calculateTaxRate(npc);
+		boolean applyTaxes = calculateApplyTaxes(taxRate);
+
+		List<Entry> entries = new ArrayList<>();
+		for (L2ItemInstance itemInstance : customDisplayables) {
+			List<Ingredient> ingredients = List.of(Ingredient.from(itemInstance.getId(), 1, false, false));
+			List<Ingredient> products = List.of(Ingredient.from(itemInstance.getId(), 1, false, false));
+
+			entries.add(Entry.prepareEntry(itemInstance.getObjectId(), ingredients, products, itemInstance, maintainEnchantment, applyTaxes, taxRate));
+		}
+		return new ListContainer(multisellId, applyTaxes, maintainEnchantment, taxRate, entries, Set.of(npc.getId()), false);
+	}
+
+	public static ListContainer prepareTransmogrificationBestow(int multisellId, L2Npc npc, L2PcInstance player, boolean maintainEnchantment) {
+		List<L2ItemInstance> displayableEquipment = player.getInventory().getAllUnequippedDisplayables();
+		List<L2ItemInstance> customizableDisplayables = displayableEquipment.stream().filter(L2ItemInstance::isNotCustomDisplayId).collect(Collectors.toList());
+		Multimap<Integer, L2ItemInstance> displayablesByBodyPart = Multimaps.index(customizableDisplayables, itemInstance -> Objects.requireNonNull(itemInstance).getItem().getBodyPart());
+
+		double taxRate = calculateTaxRate(npc);
+		boolean applyTaxes = calculateApplyTaxes(taxRate);
+
+		List<Entry> entries = new ArrayList<>();
+		for (L2ItemInstance itemInstance : customizableDisplayables) {
+			Collection<L2ItemInstance> bodypartDisplayableDonors = displayablesByBodyPart.get(itemInstance.getItem().getBodyPart());
+			for (L2ItemInstance donorDisplayable : bodypartDisplayableDonors) {
+				if (donorDisplayable.getId() == itemInstance.getId()) {
+					continue;
+				}
+
+				List<Ingredient> ingredients = List.of(
+						Ingredient.from(itemInstance.getId(), 1, false, false),
+						Ingredient.from(donorDisplayable.getId(), 1, false, false)
+				);
+				List<Ingredient> products = List.of(Ingredient.from(itemInstance.getId(), 1, false, false));
+
+				entries.add(Entry.prepareEntry(itemInstance.getObjectId(), ingredients, products, itemInstance, maintainEnchantment, applyTaxes, taxRate));
+			}
+		}
+		return new ListContainer(multisellId, applyTaxes, maintainEnchantment, taxRate, entries, Set.of(npc.getId()), false);
+	}
+
 	public boolean isDualcraft() {
 		return dualcraft;
 	}

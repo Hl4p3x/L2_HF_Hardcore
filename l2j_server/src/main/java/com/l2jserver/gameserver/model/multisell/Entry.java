@@ -168,39 +168,39 @@ public class Entry
 		return new Entry(entryId, false, newProducts, newIngredients, taxAmount);
 	}
 
-	public static Entry prepareEntry(Entry template, L2ItemInstance item, boolean applyTaxes, boolean maintainEnchantment, double taxRate) {
-		int entryId = template.getEntryId() * 100000;
+	public static Entry prepareEntry(int originalEntryId, List<Ingredient> ingredients, List<Ingredient> products, L2ItemInstance item, boolean applyTaxes, boolean maintainEnchantment, double taxRate) {
+		int entryId = originalEntryId * 100000;
 		if (maintainEnchantment && (item != null)) {
 			entryId += item.getEnchantLevel();
 		}
 
 		ItemInfo info = null;
 
-		List<Ingredient> ingredients = new ArrayList<>(template.getIngredients().size());
-		for (Ingredient ing : template.getIngredients()) {
+		List<Ingredient> newIngredients = new ArrayList<>(ingredients.size());
+		for (Ingredient ing : ingredients) {
 			if (maintainEnchantment && item != null && ing.isArmorOrWeapon()) {
 				info = new ItemInfo(item);
 				final Ingredient newIngredient = ing.getCopy();
 				newIngredient.setItemInfo(info);
-				ingredients.add(newIngredient);
+				newIngredients.add(newIngredient);
 			} else {
-				ingredients.add(ing.getCopy());
+				newIngredients.add(ing.getCopy());
 			}
 		}
 
 		long taxAmount = 0L;
 		if (applyTaxes) {
-            taxAmount = calculateTaxAmount(ingredients, taxRate);
-            Optional<Ingredient> itemPrice = ingredients.stream().filter(ingredient -> ingredient.getItemId() == ADENA_ID).findFirst();
-            if (itemPrice.isPresent()) {
-                itemPrice.get().setItemCount(itemPrice.get().getItemCount() + taxAmount);
+			taxAmount = calculateTaxAmount(newIngredients, taxRate);
+			Optional<Ingredient> itemPrice = newIngredients.stream().filter(ingredient -> ingredient.getItemId() == ADENA_ID).findFirst();
+			if (itemPrice.isPresent()) {
+				itemPrice.get().setItemCount(itemPrice.get().getItemCount() + taxAmount);
 			}
 		}
 
 		boolean stackable = true;
 		// now copy products
-		List<Ingredient> products = new ArrayList<>(template.getProducts().size());
-		for (Ingredient ing : template.getProducts()) {
+		List<Ingredient> newProducts = new ArrayList<>(products.size());
+		for (Ingredient ing : products) {
 			if (!ing.isStackable()) {
 				stackable = false;
 			}
@@ -212,9 +212,14 @@ public class Entry
 				info = new ItemInfo(ing.getTemplate().getDefaultEnchantLevel());
 				newProduct.setItemInfo(info);
 			}
-			products.add(newProduct);
+			newProducts.add(newProduct);
 		}
 
-		return new Entry(entryId, stackable, products, ingredients, taxAmount);
+		return new Entry(entryId, stackable, newProducts, newIngredients, taxAmount);
+
+	}
+
+	public static Entry prepareEntry(Entry template, L2ItemInstance item, boolean applyTaxes, boolean maintainEnchantment, double taxRate) {
+		return prepareEntry(template.getEntryId(), template.getIngredients(), template.getProducts(), item, applyTaxes, maintainEnchantment, taxRate);
 	}
 }

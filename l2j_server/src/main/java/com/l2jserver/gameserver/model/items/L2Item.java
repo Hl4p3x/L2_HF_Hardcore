@@ -971,7 +971,11 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	{
 		return getItemType() == EtcItemType.PET_COLLAR;
 	}
-	
+
+	public boolean isHelmet() {
+		return _bodyPart == L2Item.SLOT_HEAD;
+	}
+
 	public Skill getEnchant4Skill()
 	{
 		return null;
@@ -1007,6 +1011,22 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	 */
 	public boolean isArmor() {
 		return getType2() == TYPE2_SHIELD_ARMOR || getType2() == TYPE2_ACCESSORY;
+	}
+
+	public boolean isAccessory() {
+		return getType2() == TYPE2_ACCESSORY;
+	}
+
+	public boolean isUnderwear() {
+		return _bodyPart == SLOT_UNDERWEAR;
+	}
+
+	public boolean isNotDisplayable() {
+		return isBracelet() || isBelt() || isHelmet() || isUnderwear() || isAccessory();
+	}
+
+	public boolean isDisplayable() {
+		return !isNotDisplayable();
 	}
 
 }

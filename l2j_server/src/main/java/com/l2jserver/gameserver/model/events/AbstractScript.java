@@ -18,29 +18,6 @@
  */
 package com.l2jserver.gameserver.model.events;
 
-import java.io.File;
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import javax.script.ScriptException;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -70,41 +47,14 @@ import com.l2jserver.gameserver.model.drops.IDropItem;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.model.entity.Instance;
-import com.l2jserver.gameserver.model.events.annotations.Id;
-import com.l2jserver.gameserver.model.events.annotations.Ids;
-import com.l2jserver.gameserver.model.events.annotations.NpcLevelRange;
-import com.l2jserver.gameserver.model.events.annotations.NpcLevelRanges;
-import com.l2jserver.gameserver.model.events.annotations.Priority;
-import com.l2jserver.gameserver.model.events.annotations.Range;
-import com.l2jserver.gameserver.model.events.annotations.Ranges;
-import com.l2jserver.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jserver.gameserver.model.events.annotations.RegisterType;
+import com.l2jserver.gameserver.model.events.annotations.*;
 import com.l2jserver.gameserver.model.events.impl.IBaseEvent;
 import com.l2jserver.gameserver.model.events.impl.character.OnCreatureKill;
 import com.l2jserver.gameserver.model.events.impl.character.OnCreatureZoneEnter;
 import com.l2jserver.gameserver.model.events.impl.character.OnCreatureZoneExit;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcCanBeSeen;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcEventReceived;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArrived;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMoveRouteFinished;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSkillFinished;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcSpawn;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcTeleport;
-import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableAggroRangeEnter;
-import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableAttack;
-import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableFactionCall;
-import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableHate;
-import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableKill;
-import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerLogout;
-import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
-import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
-import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
-import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerSummonTalk;
+import com.l2jserver.gameserver.model.events.impl.character.npc.*;
+import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.*;
+import com.l2jserver.gameserver.model.events.impl.character.player.*;
 import com.l2jserver.gameserver.model.events.impl.character.trap.OnTrapAction;
 import com.l2jserver.gameserver.model.events.impl.item.OnItemBypassEvent;
 import com.l2jserver.gameserver.model.events.impl.item.OnItemTalk;
@@ -112,12 +62,7 @@ import com.l2jserver.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult
 import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeFinish;
 import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeOwnerChange;
 import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
-import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
-import com.l2jserver.gameserver.model.events.listeners.AnnotationEventListener;
-import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
-import com.l2jserver.gameserver.model.events.listeners.DummyEventListener;
-import com.l2jserver.gameserver.model.events.listeners.FunctionEventListener;
-import com.l2jserver.gameserver.model.events.listeners.RunnableEventListener;
+import com.l2jserver.gameserver.model.events.listeners.*;
 import com.l2jserver.gameserver.model.events.returns.AbstractEventReturn;
 import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -135,16 +80,25 @@ import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jserver.gameserver.scripting.ScriptManager;
 import com.l2jserver.gameserver.util.MinionList;
 import com.l2jserver.util.Rnd;
 import com.l2jserver.util.Util;
+
+import javax.script.ScriptException;
+import java.io.File;
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Abstract script.
@@ -1859,7 +1813,7 @@ public abstract class AbstractScript implements INamable
 	public long getQuestItemsCount(L2PcInstance player, int... itemIds)
 	{
 		long count = 0;
-		for (L2ItemInstance item : player.getInventory().getItems())
+		for (L2ItemInstance item : player.getInventory().getAllItemsArray())
 		{
 			if (item == null)
 			{

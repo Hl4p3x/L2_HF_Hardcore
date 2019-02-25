@@ -18,8 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.logging.Level;
-
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.data.xml.impl.PetDataTable;
 import com.l2jserver.gameserver.model.L2PetData;
@@ -35,6 +33,8 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.PetItemList;
+
+import java.util.logging.Level;
 
 /**
  * Summon Pet effect implementation.
@@ -119,7 +119,7 @@ public final class SummonPet extends AbstractEffect
 		pet.spawnMe(player.getX() + 50, player.getY() + 100, player.getZ());
 		pet.startFeed();
 		pet.setFollowStatus(true);
-		pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
+		pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getAllItemsArray()));
 		pet.broadcastStatusUpdate();
 	}
 }

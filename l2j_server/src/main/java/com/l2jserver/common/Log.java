@@ -112,4 +112,8 @@ public class Log {
         logger.error(tag + msg, t);
     }
 
+    public static Log of(String tag, Class<?> clazz) {
+        return new Log(tag, clazz);
+    }
+
 }

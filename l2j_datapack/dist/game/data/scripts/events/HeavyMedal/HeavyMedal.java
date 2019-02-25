@@ -95,12 +95,12 @@ public final class HeavyMedal extends LongTimeEvent
 					playSound(player, Sound.ITEMSOUND_QUEST_ITEMGET);
 					level++;
 				}
-				htmltext = "31229-" + event.toLowerCase() + "-" + String.valueOf(level) + ".htm";
+				htmltext = "31229-" + event.toLowerCase() + "-" + level + ".htm";
 			}
 		}
 		else if (event.equalsIgnoreCase("talk"))
 		{
-			htmltext = String.valueOf(npc.getId()) + "-lvl-" + String.valueOf(level) + ".htm";
+			htmltext = npc.getId() + "-lvl-" + level + ".htm";
 		}
 		return htmltext;
 	}

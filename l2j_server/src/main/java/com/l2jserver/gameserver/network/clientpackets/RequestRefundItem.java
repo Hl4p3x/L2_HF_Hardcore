@@ -18,8 +18,6 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import static com.l2jserver.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;
 import com.l2jserver.gameserver.model.L2Object;
@@ -34,6 +32,8 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ExBuySellList;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.util.Util;
+
+import static com.l2jserver.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 
 /**
  * RequestRefundItem client packet class.
@@ -131,8 +131,8 @@ public final class RequestRefundItem extends L2GameClientPacket
 		long weight = 0;
 		long adena = 0;
 		long slots = 0;
-		
-		L2ItemInstance[] refund = player.getRefund().getItems();
+
+        L2ItemInstance[] refund = player.getRefund().getAllItemsArray();
 		int[] objectIds = new int[_items.length];
 		
 		for (int i = 0; i < _items.length; i++)

@@ -120,7 +120,11 @@ public class LongTimeEvent extends Quest
 			}
 			_eventName = doc.getDocumentElement().getAttributes().getNamedItem("name").getNodeValue();
 			String period = doc.getDocumentElement().getAttributes().getNamedItem("active").getNodeValue();
-			_eventPeriod = DateRange.parse(period, new SimpleDateFormat("dd MM yyyy", Locale.US));
+			if (period.equalsIgnoreCase("-1")) {
+				_eventPeriod = new DateRange(new Date(), new Date(Long.MAX_VALUE));
+			} else {
+				_eventPeriod = DateRange.parse(period, new SimpleDateFormat("dd MM yyyy", Locale.US));
+			}
 			
 			if (doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod") != null)
 			{

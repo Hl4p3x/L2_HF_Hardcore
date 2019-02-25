@@ -54,7 +54,7 @@ public class Freight implements IBypassHandler
 				if (freight.getSize() > 0)
 				{
 					activeChar.setActiveWarehouse(freight);
-					for (L2ItemInstance i : activeChar.getActiveWarehouse().getItems())
+					for (L2ItemInstance i : activeChar.getActiveWarehouse().getAllItemsArray())
 					{
 						if (i.isTimeLimitedItem() && (i.getRemainingTime() <= 0))
 						{

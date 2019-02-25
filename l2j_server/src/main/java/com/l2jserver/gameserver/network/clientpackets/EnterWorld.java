@@ -431,7 +431,7 @@ public class EnterWorld extends L2GameClientPacket
 		sendPacket(new ExNevitAdventTimeChange(-1)); // only set pause state...
 		sendPacket(new ExShowContactList(activeChar));
 		
-		for (L2ItemInstance item : activeChar.getInventory().getItems())
+		for (L2ItemInstance item : activeChar.getInventory().getAllItemsArray())
 		{
 			if (item.isTimeLimitedItem())
 			{
@@ -443,7 +443,7 @@ public class EnterWorld extends L2GameClientPacket
 			}
 		}
 		
-		for (L2ItemInstance whItem : activeChar.getWarehouse().getItems())
+		for (L2ItemInstance whItem : activeChar.getWarehouse().getAllItemsArray())
 		{
 			if (whItem.isTimeLimitedItem())
 			{

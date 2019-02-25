@@ -70,7 +70,7 @@ public final class Restoration extends AbstractEffect
 		else if (info.getEffected().isPet())
 		{
 			info.getEffected().getInventory().addItem("Skill", _itemId, _itemCount, info.getEffected().getActingPlayer(), info.getEffector());
-			info.getEffected().getActingPlayer().sendPacket(new PetItemList(info.getEffected().getInventory().getItems()));
+			info.getEffected().getActingPlayer().sendPacket(new PetItemList(info.getEffected().getInventory().getAllItemsArray()));
 		}
 	}
 }

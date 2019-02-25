@@ -552,6 +552,10 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 		return (_loc == ItemLocation.PAPERDOLL) || (_loc == ItemLocation.PET_EQUIP);
 	}
 
+    public boolean isNotEquipped() {
+        return !isEquipped();
+    }
+
 	/**
 	 * Returns the slot where the item is stored
 	 * @return int
@@ -655,7 +659,7 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 		return (_item instanceof L2Armor);
 	}
 
-	/**
+    /**
 	 * @return the characteristics of the L2EtcItem, {@code false} otherwise.
 	 */
 	public L2EtcItem getEtcItem()
@@ -1294,7 +1298,15 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
         updateDatabase();
     }
 
-	/**
+    public boolean isCustomDisplayId() {
+        return getDisplayId() != getOriginalDisplayId();
+    }
+
+    public boolean isNotCustomDisplayId() {
+        return !isCustomDisplayId();
+    }
+
+    /**
 	 * Returns the remaining mana of this shadow item
 	 * @return lifeTime
 	 */
@@ -2272,4 +2284,9 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 	public int getItemId() {
 		return _itemId;
 	}
+
+    public boolean isDisplayable() {
+        return _item.isDisplayable();
+    }
+
 }

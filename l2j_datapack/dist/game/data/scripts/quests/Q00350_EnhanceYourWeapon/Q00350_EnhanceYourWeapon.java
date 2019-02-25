@@ -18,20 +18,6 @@
  */
 package quests.Q00350_EnhanceYourWeapon;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.logging.Level;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.AbsorberInfo;
 import com.l2jserver.gameserver.model.L2Object;
@@ -46,6 +32,14 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.util.*;
+import java.util.logging.Level;
 
 /**
  * Enhance Your Weapon (350)
@@ -297,8 +291,8 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		{
 			return null;
 		}
-		
-		L2ItemInstance[] inv = player.getInventory().getItems();
+
+        L2ItemInstance[] inv = player.getInventory().getAllItemsArray();
 		SoulCrystal ret = null;
 		for (L2ItemInstance item : inv)
 		{

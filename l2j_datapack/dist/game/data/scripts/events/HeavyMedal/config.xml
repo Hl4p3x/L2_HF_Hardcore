@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<event name="Heavy Medal" active="27 02 2007-28 02 2007" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
+<event name="Heavy Medal" active="-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation="../../../xsd/eventConfig.xsd">
 	<droplist>
 		<add item="6392" min="1" max="1" chance="45%" /> <!-- Event - Medal -->
 		<add item="6393" min="1" max="1" chance="5%" /> <!-- Event - Glittering Medal -->
@@ -88,6 +89,7 @@
 	</spawnlist>
 	<messages>
 		<add type="onEnd" text="Heavy Medal: Event end!" />
-		<add type="onEnter" text="Heavy Medal Event: Collect Medals and trade them for prizes at Event Cats in every town! Hurry up, since the event will end at Feb 28th!" />
+		<add type="onEnter"
+			 text="Heavy Medal Event: Collect Medals and trade them for prizes at Event Cats in every town! Hurry up!"/>
 	</messages>
 </event>

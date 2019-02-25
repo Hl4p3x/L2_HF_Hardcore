@@ -1,4 +1,4 @@
-package custom.votes;
+package custom.common;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

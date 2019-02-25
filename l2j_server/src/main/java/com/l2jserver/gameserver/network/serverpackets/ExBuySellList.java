@@ -35,7 +35,7 @@ public class ExBuySellList extends AbstractItemPacket
 		_sellList = player.getInventory().getAvailableItems(false, false, false);
 		if (player.hasRefund())
 		{
-			_refundList = player.getRefund().getItems();
+			_refundList = player.getRefund().getAllItemsArray();
 		}
 		_done = done;
 	}

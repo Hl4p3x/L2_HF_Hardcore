@@ -1671,7 +1671,7 @@ public final class L2PcInstance extends L2Playable {
         int weaponPenalty = 0;
         int crystaltype;
 
-        for (L2ItemInstance item : getInventory().getItems()) {
+        for (L2ItemInstance item : getInventory().getAllItemsArray()) {
             if ((item != null) && item.isEquipped() && ((item.getItemType() != EtcItemType.ARROW) && (item.getItemType() != EtcItemType.BOLT))) {
                 crystaltype = item.getItem().getCrystalType().getId();
                 if (crystaltype > expertiseLevel) {

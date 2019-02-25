@@ -39,7 +39,7 @@ public class ExReplySentPost extends AbstractItemPacket
 			final ItemContainer attachments = msg.getAttachments();
 			if ((attachments != null) && (attachments.getSize() > 0))
 			{
-				_items = attachments.getItems();
+				_items = attachments.getAllItemsArray();
 			}
 			else
 			{

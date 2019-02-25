@@ -48,7 +48,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 		}
 		
 		_playerAdena = player.getAdena();
-		_items = player.getActiveWarehouse().getItems();
+		_items = player.getActiveWarehouse().getAllItemsArray();
 		_whType = type;
 	}
 	

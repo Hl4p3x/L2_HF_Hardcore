@@ -1,7 +1,7 @@
 package custom.votes.config;
 
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import custom.votes.ShortNpc;
+import custom.common.ShortNpc;
 import custom.votes.VoteSource;
 
 import java.util.List;

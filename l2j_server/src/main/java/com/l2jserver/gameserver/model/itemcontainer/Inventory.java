@@ -332,7 +332,7 @@ public abstract class Inventory extends ItemContainer
 			
 			if (item.isArmor())
 			{
-				for (L2ItemInstance itm : inventory.getItems())
+				for (L2ItemInstance itm : inventory.getAllItemsArray())
 				{
 					if (!itm.isEquipped() || (itm.getItem().getSkills() == null) || itm.equals(item))
 					{
@@ -1601,7 +1601,7 @@ public abstract class Inventory extends ItemContainer
 		
 		L2ItemInstance arrow = null;
 		
-		for (L2ItemInstance item : getItems())
+		for (L2ItemInstance item : getAllItemsArray())
 		{
 			if (item.isEtcItem() && (item.getItem().getItemGradeSPlus() == bow.getItemGradeSPlus()) && (item.getEtcItem().getItemType() == EtcItemType.ARROW))
 			{
@@ -1623,7 +1623,7 @@ public abstract class Inventory extends ItemContainer
 	{
 		L2ItemInstance bolt = null;
 		
-		for (L2ItemInstance item : getItems())
+		for (L2ItemInstance item : getAllItemsArray())
 		{
 			if (item.isEtcItem() && (item.getItem().getItemGradeSPlus() == crossbow.getItemGradeSPlus()) && (item.getEtcItem().getItemType() == EtcItemType.BOLT))
 			{
