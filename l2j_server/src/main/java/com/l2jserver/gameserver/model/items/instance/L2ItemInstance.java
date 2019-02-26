@@ -1520,7 +1520,7 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 	public static L2ItemInstance restoreFromDb(int ownerId, ResultSet rs)
 	{
 		L2ItemInstance inst = null;
-		int objectId, item_id, loc_data, enchant_level, custom_type1, custom_type2, manaLeft;
+		int objectId, item_id, loc_data, enchant_level, custom_type1, custom_type2, manaLeft, item_display_id;
 		long time, count;
 		ItemLocation loc;
 		try
@@ -1535,6 +1535,7 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 			custom_type2 = rs.getInt("custom_type2");
 			manaLeft = rs.getInt("mana_left");
 			time = rs.getLong("time");
+			item_display_id = rs.getInt("item_display_id");
 		}
 		catch (Exception e)
 		{
@@ -1557,7 +1558,11 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 		inst._locData = loc_data;
 		inst._existsInDb = true;
 		inst._storedInDb = true;
-
+		if (item_display_id > 0) {
+			inst.displayId = item_display_id;
+		} else {
+			inst.displayId = inst.getOriginalDisplayId();
+		}
 		// Setup life time for shadow weapons
 		inst._mana = manaLeft;
 		inst._time = time;
@@ -1693,8 +1698,8 @@ public class L2ItemInstance extends L2Object implements EnchantableItemObject
 			ps.setInt(7, getCustomType2());
 			ps.setInt(8, getMana());
 			ps.setLong(9, getTime());
-			ps.setInt(10, getObjectId());
-            ps.setInt(11, displayId > 0 ? displayId : getOriginalDisplayId());
+			ps.setInt(10, displayId > 0 ? displayId : getOriginalDisplayId());
+			ps.setInt(11, getObjectId());
 			ps.executeUpdate();
 			_existsInDb = true;
 			_storedInDb = true;

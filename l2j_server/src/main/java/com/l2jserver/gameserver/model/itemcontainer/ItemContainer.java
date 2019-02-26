@@ -701,7 +701,7 @@ public abstract class ItemContainer
 	public void restore()
 	{
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND (loc=?)"))
+			 PreparedStatement ps = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time, item_display_id FROM items WHERE owner_id=? AND (loc=?)"))
 		{
 			ps.setInt(1, getOwnerId());
 			ps.setString(2, getBaseLocation().name());

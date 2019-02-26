@@ -1643,7 +1643,7 @@ public abstract class Inventory extends ItemContainer
 	public void restore()
 	{
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data"))
+			 PreparedStatement ps = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time, item_display_id FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data"))
 		{
 			ps.setInt(1, getOwnerId());
 			ps.setString(2, getBaseLocation().name());
@@ -1658,7 +1658,7 @@ public abstract class Inventory extends ItemContainer
 					{
 						continue;
 					}
-					
+
 					if (getOwner() instanceof L2PcInstance)
 					{
 						L2PcInstance player = (L2PcInstance) getOwner();
