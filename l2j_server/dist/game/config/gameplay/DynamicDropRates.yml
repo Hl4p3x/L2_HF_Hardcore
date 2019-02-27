@@ -1356,6 +1356,59 @@ npcs:
           - 15541 # Red Soul Crystal - Stage 17
           - 15543 # Green Soul Crystal - Stage 17
           - 15542 # Blue Soul Crystal - Stage 17
+
+      - name: "Vorpal Weapons"
+        stats:
+          count: "1-4"
+          chance: 100
+        ids:
+          - 15558 # Periel Sword
+          - 15559 # Skull Edge
+          - 15560 # Vigwik Axe
+          - 15561 # Devilish Maul
+          - 15562 # Feather Eye Blade
+          - 15563 # Octo Claw
+          - 15564 # Doubletop Spear
+          - 15565 # Rising Star
+          - 15566 # Black Visage
+          - 15567 # Veniplant Sword
+          - 15568 # Skull Carnium Bow
+          - 15569 # Gemtail Rapier
+          - 15570 # Finale Blade
+          - 15571 # Dominion Crossbow
+
+      - name: "Vorpal Armor"
+        stats:
+          count: "3-9"
+          chance: 100
+        ids:
+          - 15743 # Sealed Vorpal Helmet
+          - 15746 # Sealed Vorpal Breastplate
+          - 15749 # Sealed Vorpal Gaiters
+          - 15752 # Sealed Vorpal Gauntlets
+          - 15755 # Sealed Vorpal Boots
+          - 15758 # Sealed Vorpal Shield
+          - 15744 # Sealed Vorpal Leather Helmet
+          - 15747 # Sealed Vorpal Leather Breastplate
+          - 15750 # Sealed Vorpal Leather Leggings
+          - 15753 # Sealed Vorpal Leather Gloves
+          - 15756 # Sealed Vorpal Leather Boots
+          - 15745 # Sealed Vorpal Circlet
+          - 15748 # Sealed Vorpal Tunic
+          - 15751 # Sealed Vorpal Stockings
+          - 15754 # Sealed Vorpal Gloves
+          - 15757 # Sealed Vorpal Shoes
+          - 15759 # Sealed Vorpal Sigil
+
+      - name: "Vorpal Jewels"
+        stats:
+          count: "3-10"
+          chance: 100
+        ids:
+          - 15763 # Sealed Vorpal Ring
+          - 15764 # Sealed Vorpal Earring
+          - 15765 # Sealed Vorpal Necklace
+
   - npc_ids:
       - 29068 # Antharas
       - 29028 # Valakas
@@ -1368,3 +1421,64 @@ npcs:
           - 15826 # Red Soul Crystal - Stage 18
           - 15828 # Green Soul Crystal - Stage 18
           - 15827 # Blue Soul Crystal - Stage 18
+
+      - name: "Soul Crystals - Vorpal"
+        stats:
+          stacks: "3-8"
+          chance: 100.0
+        ids:
+          - 15541 # Red Soul Crystal - Stage 17
+          - 15543 # Green Soul Crystal - Stage 17
+          - 15542 # Blue Soul Crystal - Stage 17
+
+      - name: "Vorpal Weapons"
+        stats:
+          count: "1-4"
+          chance: 100
+        ids:
+          - 15558 # Periel Sword
+          - 15559 # Skull Edge
+          - 15560 # Vigwik Axe
+          - 15561 # Devilish Maul
+          - 15562 # Feather Eye Blade
+          - 15563 # Octo Claw
+          - 15564 # Doubletop Spear
+          - 15565 # Rising Star
+          - 15566 # Black Visage
+          - 15567 # Veniplant Sword
+          - 15568 # Skull Carnium Bow
+          - 15569 # Gemtail Rapier
+          - 15570 # Finale Blade
+          - 15571 # Dominion Crossbow
+
+      - name: "Vorpal Armor"
+        stats:
+          count: "3-9"
+          chance: 100
+        ids:
+          - 15743 # Sealed Vorpal Helmet
+          - 15746 # Sealed Vorpal Breastplate
+          - 15749 # Sealed Vorpal Gaiters
+          - 15752 # Sealed Vorpal Gauntlets
+          - 15755 # Sealed Vorpal Boots
+          - 15758 # Sealed Vorpal Shield
+          - 15744 # Sealed Vorpal Leather Helmet
+          - 15747 # Sealed Vorpal Leather Breastplate
+          - 15750 # Sealed Vorpal Leather Leggings
+          - 15753 # Sealed Vorpal Leather Gloves
+          - 15756 # Sealed Vorpal Leather Boots
+          - 15745 # Sealed Vorpal Circlet
+          - 15748 # Sealed Vorpal Tunic
+          - 15751 # Sealed Vorpal Stockings
+          - 15754 # Sealed Vorpal Gloves
+          - 15757 # Sealed Vorpal Shoes
+          - 15759 # Sealed Vorpal Sigil
+
+      - name: "Vorpal Jewels"
+        stats:
+          count: "3-10"
+          chance: 100
+        ids:
+          - 15763 # Sealed Vorpal Ring
+          - 15764 # Sealed Vorpal Earring
+          - 15765 # Sealed Vorpal Necklace
