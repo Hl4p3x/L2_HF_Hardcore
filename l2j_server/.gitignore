@@ -1,9 +1,9 @@
-/bin/
-/build/
-/.gradle/
+bin/
+build/
+.gradle/
 .DS_Store
 *.log
 .project
 .classpath
-/test-output/
+test-output/
 .settings/
