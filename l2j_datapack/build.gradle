@@ -34,7 +34,7 @@ dependencies {
 
 task zip(type: Zip) {
 	def fileName = 'L2J_DataPack_' + new Date().format("yyyy-MM-dd")
-	baseName = fileName
+	archiveFileName = fileName
 	from('dist')
 	exclude '**/geodata/**'
 	exclude '**/pathnode/**'

@@ -18,19 +18,6 @@
  */
 package com.l2jserver.loginserver;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.LineNumberReader;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.security.GeneralSecurityException;
-import java.util.logging.Level;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.Server;
 import com.l2jserver.UPnPService;
@@ -41,6 +28,14 @@ import com.l2jserver.loginserver.network.L2LoginPacketHandler;
 import com.l2jserver.mmocore.SelectorConfig;
 import com.l2jserver.mmocore.SelectorThread;
 import com.l2jserver.status.Status;
+
+import java.io.*;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.security.GeneralSecurityException;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 /**
  * @author KenM
@@ -54,8 +49,7 @@ public final class L2LoginServer
 	private GameServerListener _gameServerListener;
 	private SelectorThread<L2LoginClient> _selectorThread;
 	private Status _statusServer;
-	private Thread _restartLoginServer;
-	
+
 	public static void main(String[] args)
 	{
 		new L2LoginServer();
@@ -258,7 +252,7 @@ public final class L2LoginServer
 		if (Config.LOGIN_SERVER_SCHEDULE_RESTART)
 		{
 			_log.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
-			_restartLoginServer = new LoginServerRestart();
+			Thread _restartLoginServer = new LoginServerRestart();
 			_restartLoginServer.setDaemon(true);
 			_restartLoginServer.start();
 		}

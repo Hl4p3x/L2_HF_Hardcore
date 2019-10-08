@@ -61,10 +61,11 @@ def generalManifest = manifest {
 }
 
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import org.gradle.plugins.ide.internal.generator.PropertiesPersistableConfigurationObject
 
 
 jar {
-    archiveName = 'l2jserver.jar'
+    archiveFileName = 'l2jserver.jar'
     exclude('**/dbinstaller/**')
     exclude('**/loginserver/**')
     exclude('**/accountmanager/**')
@@ -80,7 +81,7 @@ jar {
 
 task loginJar(type: ShadowJar, dependsOn: classes) {
     from(sourceSets.main.output)
-    archiveName = 'l2jlogin.jar'
+    archiveFileName = 'l2jlogin.jar'
     exclude('**/dbinstaller/**')
     exclude('**/gameserver/**')
     manifest {
@@ -92,7 +93,7 @@ task loginJar(type: ShadowJar, dependsOn: classes) {
 
 task configuratorJar(type: ShadowJar, dependsOn: classes) {
     from(sourceSets.main.output)
-    archiveName = 'L2J_Configurator.jar'
+    archiveFileName = 'L2J_Configurator.jar'
     include('**/configurator/**')
     include('**/i18n/**')
     include('**/images/**')
@@ -117,7 +118,7 @@ task configuratorJar(type: ShadowJar, dependsOn: classes) {
 
 task dbInstLsJar(type: Jar, dependsOn: classes) {
     from(sourceSets.main.output)
-    archiveName = 'dbinst_ls.jar'
+    archiveFileName = 'dbinst_ls.jar'
     include '**/dbinstaller/**'
     include '**/images/**'
     include '**/util/**'
@@ -134,7 +135,7 @@ task dbInstLsJar(type: Jar, dependsOn: classes) {
 
 task dbInstGsJar(type: Jar, dependsOn: classes) {
     from(sourceSets.main.output)
-    archiveName = 'dbinst_gs.jar'
+    archiveFileName = 'dbinst_gs.jar'
     include('**/dbinstaller/**')
     include('**/images/**')
     include('**/util/**')
@@ -172,8 +173,8 @@ task zip(type: Zip, dependsOn: build) {
         from(dbInstGsJar)
     }
 
-    baseName = 'L2J_Server_' + new Date().format("yyyy-MM-dd")
-    println 'Build in build/distributions/' + baseName + '.zip'
+    archiveFileName = 'L2J_Server_' + new Date().format("yyyy-MM-dd")
+    println 'Build in build/distributions/' + archiveFileName + '.zip'
 }
 
 build.finalizedBy(zip)
@@ -187,9 +188,9 @@ eclipse {
     jdt {
         file {
             whenMerged { jdt ->
-                def propertiesField = org.gradle.plugins.ide.internal.generator.PropertiesPersistableConfigurationObject.getDeclaredField('properties')
+                def propertiesField = PropertiesPersistableConfigurationObject.getDeclaredField('properties')
                 propertiesField.accessible = true
-                Properties properties = propertiesField.get(jdt)
+                Properties properties = (Properties) propertiesField.get(jdt)
                 properties.setProperty 'org.eclipse.jdt.core.compiler.problem.incompleteEnumSwitch', 'ignore'
             }
         }
