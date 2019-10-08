@@ -22,10 +22,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.ai.CtrlEvent;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.ai.L2AttackableAI;
-import com.l2jserver.gameserver.ai.L2CharacterAI;
+import com.l2jserver.gameserver.ai.*;
 import com.l2jserver.gameserver.data.xml.impl.CategoryData;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.datatables.ItemTable;
@@ -668,6 +665,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
         // remove the object from its old location
         decayMe();
+        decaySummon();
 
         // Set the x,y,z position of the L2Object and if necessary modify its _worldRegion
         setXYZ(x, y, z);
@@ -687,6 +685,30 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
     public void teleToLocation(int x, int y, int z, int heading, int instanceId, boolean randomOffset) {
         teleToLocation(x, y, z, heading, instanceId, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
+    }
+
+    public void recallSummon() {
+        if (!isPlayer()) {
+            return;
+        }
+        final L2Summon summon = getSummon();
+        if (summon != null) {
+            summon.setFollowStatus(false);
+            summon.teleToLocation(getLocation(), false);
+            ((L2SummonAI) summon.getAI()).setStartFollowController(true);
+            summon.setFollowStatus(true);
+            summon.updateAndBroadcastStatus(0);
+        }
+    }
+
+    private void decaySummon() {
+        if (!isPlayer()) {
+            return;
+        }
+        final L2Summon summon = getSummon();
+        if (summon != null) {
+            summon.decayMe();
+        }
     }
 
     public void teleToLocation(int x, int y, int z, int heading, int instanceId) {

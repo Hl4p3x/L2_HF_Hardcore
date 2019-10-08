@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.*;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2CharacterAI;
 import com.l2jserver.gameserver.ai.L2PlayerAI;
-import com.l2jserver.gameserver.ai.L2SummonAI;
 import com.l2jserver.gameserver.cache.WarehouseCacheManager;
 import com.l2jserver.gameserver.communitybbs.BB.Forum;
 import com.l2jserver.gameserver.communitybbs.Manager.ForumsBBSManager;
@@ -7929,15 +7928,7 @@ public final class L2PcInstance extends L2Playable {
             _tamedBeasts.clear();
         }
 
-        // Modify the position of the pet if necessary
-        final L2Summon summon = getSummon();
-        if (summon != null) {
-            summon.setFollowStatus(false);
-            summon.teleToLocation(getLocation(), false);
-            ((L2SummonAI) summon.getAI()).setStartFollowController(true);
-            summon.setFollowStatus(true);
-            summon.updateAndBroadcastStatus(0);
-        }
+        recallSummon();
 
         TvTEvent.onTeleported(this);
     }
