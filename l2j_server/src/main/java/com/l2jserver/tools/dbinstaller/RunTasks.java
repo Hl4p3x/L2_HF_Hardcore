@@ -18,15 +18,14 @@
  */
 package com.l2jserver.tools.dbinstaller;
 
-import java.io.File;
-import java.sql.SQLException;
-import java.util.prefs.Preferences;
-
-import javax.swing.JOptionPane;
-
 import com.l2jserver.tools.dbinstaller.util.mysql.DBDumper;
 import com.l2jserver.tools.dbinstaller.util.mysql.ScriptExecutor;
 import com.l2jserver.util.file.filter.SQLFilter;
+
+import javax.swing.*;
+import java.io.File;
+import java.sql.SQLException;
+import java.util.prefs.Preferences;
 
 /**
  * @author mrTJO
@@ -103,7 +102,7 @@ public class RunTasks extends Thread
 		
 		_frame.appendToProgressArea("Installing Database Content...");
 		exec.execSqlBatch(new File(_sqlDir));
-		_frame.appendToProgressArea("Database Installation Complete!");
+		_frame.appendToProgressArea("Database Content Installation Complete!");
 		
 		File cusDir = new File(_sqlDir, "custom");
 		if (cusDir.exists())
@@ -139,7 +138,7 @@ public class RunTasks extends Thread
 		}
 		
 		_frame.setFrameVisible(false);
-		_frame.showMessage("Done!", "Database Installation Complete!", JOptionPane.INFORMATION_MESSAGE);
+		_frame.showMessage("Done!", "Installation Complete!", JOptionPane.INFORMATION_MESSAGE);
 		System.exit(0);
 		
 	}
