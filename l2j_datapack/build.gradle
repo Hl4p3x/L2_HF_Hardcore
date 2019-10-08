@@ -33,12 +33,12 @@ dependencies {
 }
 
 task zip(type: Zip) {
-	def fileName = 'L2J_DataPack_' + new Date().format("yyyy-MM-dd")
-	archiveFileName = fileName
+	def filename = 'L2J_DataPack_' + new Date().format("yyyy-MM-dd") + '.zip'
+	archiveFileName = filename
 	from('dist')
 	exclude '**/geodata/**'
 	exclude '**/pathnode/**'
-	println 'Build in build/distributions/' + fileName + '.zip'
+	println 'Build in build/distributions/' + filename
 }
 
 build.finalizedBy(zip)

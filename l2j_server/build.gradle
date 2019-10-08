@@ -173,8 +173,9 @@ task zip(type: Zip, dependsOn: build) {
         from(dbInstGsJar)
     }
 
-    archiveFileName = 'L2J_Server_' + new Date().format("yyyy-MM-dd")
-    println 'Build in build/distributions/' + archiveFileName + '.zip'
+    def filename = 'L2J_Server_' + new Date().format("yyyy-MM-dd") + '.zip'
+    archiveFileName = filename
+    println 'Build in build/distributions/' + filename
 }
 
 build.finalizedBy(zip)
