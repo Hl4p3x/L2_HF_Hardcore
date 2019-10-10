@@ -519,6 +519,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
         if ((npc instanceof L2GuardInstance) && !npc.isWalker()) {
             // Order to the L2GuardInstance to return to its home location because there's no target to attack
             npc.returnHome();
+            return;
         }
 
         // If this is a festival monster, then it remains in the same location.
@@ -602,7 +603,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
                 double distance2 = npc.calculateDistance(x1, y1, z1, false, true);
 
                 if (distance2 > ((range + range) * (range + range))) {
-                    npc.setisReturningToSpawnPoint(true);
+                    npc.setIsReturningToSpawnPoint(true);
                     float delay = (float) Math.sqrt(distance2) / range;
                     x1 = npc.getX() + (int) ((x1 - npc.getX()) / delay);
                     y1 = npc.getY() + (int) ((y1 - npc.getY()) / delay);
@@ -618,7 +619,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
                 z1 = npc.getSpawn().getZ(npc);
 
                 if (!npc.isInsideRadius(x1, y1, z1, range, false, false)) {
-                    npc.setisReturningToSpawnPoint(true);
+                    npc.setIsReturningToSpawnPoint(true);
                 } else {
                     int deltaX = Rnd.nextInt(range * 2); // x
                     int deltaY = Rnd.get(deltaX, range * 2); // distance
@@ -641,7 +642,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
     private void returnToSpawn(L2Attackable npc) {
         if ((npc != null) && (npc.getSpawn() != null) && (npc.getSpawn().getLocation() != null)) {
             int delay = GameTimeController.MILLIS_IN_TICK * 12;
-            npc.setisReturningToSpawnPoint(true);
+            npc.setIsReturningToSpawnPoint(true);
 
             npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
             // SoE Animation section
@@ -673,7 +674,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable {
             npc.teleToLocation(npc.getSpawn().getLocation());
             npc.enableAllSkills();
             npc.setIsCastingNow(false);
-            npc.setisReturningToSpawnPoint(false);
+            npc.setIsReturningToSpawnPoint(false);
         }
     }
 

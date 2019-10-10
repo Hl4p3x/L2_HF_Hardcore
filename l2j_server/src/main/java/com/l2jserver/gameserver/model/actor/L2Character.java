@@ -2425,7 +2425,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
      */
     public boolean isMovementDisabled() {
         // check for isTeleporting to prevent teleport cheating (if appear packet not received)
-        return isStunned() || isRooted() || isSleeping() || isOverloaded() || isParalyzed() || isImmobilized() || isAlikeDead() || isTeleporting();
+        return isStunned() || isRooted() || isSleeping() || isOverloaded() || isParalyzed() || isImmobilized() || isAlikeDead() || isTeleporting() || isCastingNow() || isAttackingNow();
     }
 
     /**
@@ -3472,7 +3472,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
             return true;
         }
 
-        if (!isVisible() || isMovementDisabled() || isCastingNow()) {
+        if (!isVisible() || isMovementDisabled()) {
             _move = null;
             return false;
         }
@@ -3768,7 +3768,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
     public void moveToLocation(int x, int y, int z, int offset) {
         // Get the Move Speed of the L2Charcater
         double speed = getMoveSpeed();
-        if ((speed <= 0) || isMovementDisabled() || isCastingNow()) {
+        if ((speed <= 0) || isMovementDisabled()) {
             return;
         }
 
@@ -4026,7 +4026,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 
         // Get the Move Speed of the L2Charcater
         double speed = getMoveSpeed();
-        if ((speed <= 0) || isMovementDisabled() || isCastingNow() || isAttackingNow()) {
+        if ((speed <= 0) || isMovementDisabled()) {
             // Cancel the move action
             _move = null;
             return false;

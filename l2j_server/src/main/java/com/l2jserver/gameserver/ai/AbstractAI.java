@@ -496,7 +496,7 @@ public abstract class AbstractAI implements Ctrl
 	protected void moveToPawn(L2Object pawn, int offset)
 	{
 		// Check if actor can move
-		if (_actor.isMovementDisabled() || _actor.isCastingNow()) {
+		if (_actor.isMovementDisabled()) {
 			clientActionFailed();
 			return;
 		}
@@ -564,7 +564,7 @@ public abstract class AbstractAI implements Ctrl
 	protected void moveTo(int x, int y, int z)
 	{
 		// Chek if actor can move
-		if (_actor.isMovementDisabled() || _actor.isCastingNow()) {
+		if (_actor.isMovementDisabled()) {
 			clientActionFailed();
 		} else {
 			// Set AI movement data

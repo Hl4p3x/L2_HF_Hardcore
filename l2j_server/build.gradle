@@ -48,6 +48,12 @@ dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter-engine:5.2.0')
 }
 
+task runGameServer(type: JavaExec) {
+    group = "Execution"
+    description = "Run the Game Server"
+    classpath = sourceSets.main.runtimeClasspath
+    main = "com.l2jserver.gameserver.GameServer"
+}
 
 test {
     useJUnitPlatform()

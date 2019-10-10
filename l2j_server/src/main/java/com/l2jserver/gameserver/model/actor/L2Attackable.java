@@ -141,7 +141,7 @@ public class L2Attackable extends L2Npc {
         return _isReturningToSpawnPoint;
     }
 
-    public final void setisReturningToSpawnPoint(boolean value) {
+    public final void setIsReturningToSpawnPoint(boolean value) {
         _isReturningToSpawnPoint = value;
         if (_isReturningToSpawnPoint) {
             startedReturningToSpawnPoint = System.currentTimeMillis();

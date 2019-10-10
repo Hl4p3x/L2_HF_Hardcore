@@ -18,15 +18,8 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.ai.L2CharacterAI;
-import com.l2jserver.gameserver.ai.L2FortSiegeGuardAI;
-import com.l2jserver.gameserver.ai.L2SiegeGuardAI;
-import com.l2jserver.gameserver.ai.L2SpecialSiegeGuardAI;
+import com.l2jserver.gameserver.ai.*;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.FortManager;
@@ -40,6 +33,8 @@ import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.entity.Fort;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class L2DefenderInstance extends L2Attackable
 {
@@ -139,7 +134,7 @@ public class L2DefenderInstance extends L2Attackable
 			{
 				LOG.debug("{} moving home", getObjectId());
 			}
-			setisReturningToSpawnPoint(true);
+			setIsReturningToSpawnPoint(true);
 			clearAggroList();
 			
 			if (hasAI())

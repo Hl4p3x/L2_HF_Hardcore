@@ -732,7 +732,7 @@ public class L2CharacterAI extends AbstractAI
 		
 		if (_actor instanceof L2Attackable)
 		{
-			((L2Attackable) _actor).setisReturningToSpawnPoint(false);
+			((L2Attackable) _actor).setIsReturningToSpawnPoint(false);
 		}
 		clientStoppedMoving();
 		
