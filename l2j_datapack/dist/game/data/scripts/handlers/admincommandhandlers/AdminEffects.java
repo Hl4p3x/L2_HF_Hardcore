@@ -18,10 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Collection;
-import java.util.StringTokenizer;
-
-import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.Team;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -34,20 +31,11 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.CharInfo;
-import com.l2jserver.gameserver.network.serverpackets.Earthquake;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExRedSky;
-import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SSQInfo;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-import com.l2jserver.gameserver.network.serverpackets.SunRise;
-import com.l2jserver.gameserver.network.serverpackets.SunSet;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Broadcast;
 import com.l2jserver.gameserver.util.Util;
+import java.util.Collection;
+import java.util.StringTokenizer;
 
 /**
  * This class handles following admin commands:
@@ -530,13 +518,11 @@ public class AdminEffects implements IAdminCommandHandler
 					activeChar.sendMessage("Usage: //social <social_id> [player_name|radius]");
 				}
 			}
-			catch (Exception e)
-			{
-				if (Config.DEBUG)
-				{
-					e.printStackTrace();
-				}
-			}
+			catch (Exception e) {
+                if (CommonConfig.DEBUG) {
+                    e.printStackTrace();
+                }
+            }
 		}
 		else if (command.startsWith("admin_ave_abnormal") || command.startsWith("admin_ave_special") || command.startsWith("admin_ave_event"))
 		{

@@ -18,7 +18,7 @@
  */
 package handlers.communityboard;
 
-import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;

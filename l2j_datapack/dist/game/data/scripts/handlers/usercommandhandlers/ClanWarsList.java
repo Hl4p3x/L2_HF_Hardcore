@@ -18,7 +18,7 @@
  */
 package handlers.usercommandhandlers;
 
-import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

@@ -18,11 +18,8 @@
  */
 package ai.fantasy_isle;
 
-import java.text.SimpleDateFormat;
-import java.util.HashMap;
-import java.util.Map;
-
-import com.l2jserver.Config;
+import ai.npc.AbstractNpcAI;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -33,8 +30,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-
-import ai.npc.AbstractNpcAI;
+import java.text.SimpleDateFormat;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * MC Show AI.
@@ -298,25 +296,23 @@ public class MC_Show extends AbstractNpcAI
 		if (hourDiff < 0)
 		{
 			hourDiff = 24 - (hourDiff *= -1);
-		}
-		minDiff = (30 - minutes);
-		if (minDiff < 0)
-		{
-			minDiff = 60 - (minDiff *= -1);
-		}
-		long diff;
-		hourDiff *= 3600000;
-		minDiff *= 60000;
-		diff = hourDiff + minDiff;
-		if (Config.DEBUG)
-		{
-			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-			_log.info("Fantasy Isle: MC show script starting at " + format.format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
-		}
-		// TODO startRepeatingQuestTimer("Start", diff, 14400000, null, null);
-		// missing option to provide different initial delay
-		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new StartMCShow(), diff, 14400000L);
-	}
+        }
+        minDiff = (30 - minutes);
+        if (minDiff < 0) {
+            minDiff = 60 - (minDiff *= -1);
+        }
+        long diff;
+        hourDiff *= 3600000;
+        minDiff *= 60000;
+        diff = hourDiff + minDiff;
+        if (CommonConfig.DEBUG) {
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            _log.info("Fantasy Isle: MC show script starting at " + format.format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
+        }
+        // TODO startRepeatingQuestTimer("Start", diff, 14400000, null, null);
+        // missing option to provide different initial delay
+        ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new StartMCShow(), diff, 14400000L);
+    }
 	
 	private void autoChat(L2Npc npc, NpcStringId npcString, int type)
 	{

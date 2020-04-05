@@ -18,6 +18,7 @@
  */
 package handlers.voicedcommandhandlers;
 
+import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -25,7 +26,6 @@ import com.l2jserver.gameserver.model.entity.L2Event;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.util.StringUtil;
 
 /**
  * @author Zoey76.

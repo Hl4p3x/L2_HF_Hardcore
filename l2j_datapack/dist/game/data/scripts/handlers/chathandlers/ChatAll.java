@@ -18,11 +18,8 @@
  */
 package handlers.chathandlers;
 
-import java.util.Collection;
-import java.util.StringTokenizer;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.handler.IChatHandler;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.handler.VoicedCommandHandler;
@@ -31,6 +28,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.util.Util;
+import java.util.Collection;
+import java.util.StringTokenizer;
+import java.util.logging.Logger;
 
 /**
  * A chat handler
@@ -64,11 +64,9 @@ public class ChatAll implements IChatHandler
 				params = text.substring(command.length() + 2);
 				vch = VoicedCommandHandler.getInstance().getHandler(command);
 			}
-			else
-			{
+			else {
 				command = text.substring(1);
-				if (Config.DEBUG)
-				{
+				if (CommonConfig.DEBUG) {
 					_log.info("Command: " + command);
 				}
 				vch = VoicedCommandHandler.getInstance().getHandler(command);
@@ -78,10 +76,8 @@ public class ChatAll implements IChatHandler
 				vch.useVoicedCommand(command, activeChar, params);
 				vcd_used = true;
 			}
-			else
-			{
-				if (Config.DEBUG)
-				{
+			else {
+				if (CommonConfig.DEBUG) {
 					_log.warning("No handler registered for bypass '" + command + "'");
 				}
 				vcd_used = false;

@@ -19,13 +19,13 @@
 package handlers.bypasshandlers;
 
 import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
-
 import java.util.logging.Level;
 
 public class PrivateWarehouse implements IBypassHandler
@@ -118,18 +118,14 @@ public class PrivateWarehouse implements IBypassHandler
 			player.sendPacket(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH);
 			return;
 		}
-		
-		if (itemtype != null)
-		{
+
+		if (itemtype != null) {
 			player.sendPacket(new SortedWareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE, itemtype, sortorder));
-		}
-		else
-		{
+		} else {
 			player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE));
 		}
-		
-		if (Config.DEBUG)
-		{
+
+		if (CommonConfig.DEBUG) {
 			_log.fine("Source: L2WarehouseInstance.java; Player: " + player.getName() + "; Command: showRetrieveWindow; Message: Showing stored items.");
 		}
 	}

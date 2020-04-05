@@ -18,9 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.logging.Logger;
-
-import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -29,6 +27,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2ControllableMobInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
+import java.util.logging.Logger;
 
 /**
  * This class handles following admin commands: - res = resurrects target L2Character
@@ -117,17 +116,15 @@ public class AdminRes implements IAdminCommandHandler
 		{
 			obj = activeChar;
 		}
-		
-		if (obj instanceof L2ControllableMobInstance)
-		{
+
+		if (obj instanceof L2ControllableMobInstance) {
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
-		
+
 		doResurrect((L2Character) obj);
-		
-		if (Config.DEBUG)
-		{
+
+		if (CommonConfig.DEBUG) {
 			_log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") resurrected character " + obj.getObjectId());
 		}
 	}

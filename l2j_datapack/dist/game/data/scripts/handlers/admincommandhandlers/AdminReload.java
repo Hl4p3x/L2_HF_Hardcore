@@ -19,6 +19,7 @@
 package handlers.admincommandhandlers;
 
 import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.CrestTable;
 import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
@@ -37,10 +38,9 @@ import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.localization.MultilangTables;
 import handlers.communityboard.custom.teleport.CustomTeleportTable;
-
-import javax.script.ScriptException;
 import java.io.File;
 import java.util.StringTokenizer;
+import javax.script.ScriptException;
 
 /**
  * @author NosBit
@@ -145,17 +145,13 @@ public class AdminReload implements IAdminCommandHandler
 				case "htm":
 				case "html":
 				{
-					if (st.hasMoreElements())
-					{
+					if (st.hasMoreElements()) {
 						final String path = st.nextToken();
-						final File file = new File(Config.DATAPACK_ROOT, "data/html/" + path);
-						if (file.exists())
-						{
+						final File file = new File(CommonConfig.DATAPACK_ROOT, "data/html/" + path);
+						if (file.exists()) {
 							HtmCache.getInstance().reload(file);
 							AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htm File:" + file.getName() + ".");
-						}
-						else
-						{
+						} else {
 							activeChar.sendMessage("File or Directory does not exist.");
 						}
 					}

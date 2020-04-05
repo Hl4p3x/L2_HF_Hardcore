@@ -18,6 +18,7 @@
  */
 package quests.Q00457_LostAndFound;
 
+import com.l2jserver.common.util.Rnd;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.enums.QuestType;
@@ -31,8 +32,6 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.util.Rnd;
-
 import java.util.HashSet;
 import java.util.Set;
 

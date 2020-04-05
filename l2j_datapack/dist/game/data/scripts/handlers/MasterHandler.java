@@ -19,6 +19,7 @@
 package handlers;
 
 import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.handler.*;
 import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
@@ -37,7 +38,6 @@ import handlers.targethandlers.*;
 import handlers.telnethandlers.*;
 import handlers.usercommandhandlers.*;
 import handlers.voicedcommandhandlers.*;
-
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
@@ -289,19 +289,19 @@ public class MasterHandler
 			MyBirthday.class,
 			SiegeStatus.class,
 		},
-		{
-			// Voiced Command Handlers
-			StatsVCmd.class,
-			// TODO: Add configuration options for this voiced commands:
-			// CastleVCmd.class,
-			// SetVCmd.class,
-			(Config.L2JMOD_ALLOW_WEDDING ? Wedding.class : null),
-			(Config.BANKING_SYSTEM_ENABLED ? Banking.class : null),
-			(Config.L2JMOD_CHAT_ADMIN ? ChatAdmin.class : null),
-			(Config.L2JMOD_MULTILANG_ENABLE && Config.L2JMOD_MULTILANG_VOICED_ALLOW ? Lang.class : null),
-			(Config.L2JMOD_DEBUG_VOICE_COMMAND ? Debug.class : null),
-			(Config.L2JMOD_ALLOW_CHANGE_PASSWORD ? ChangePassword.class : null),
-		},
+            {
+                    // Voiced Command Handlers
+                    StatsVCmd.class,
+                    // TODO: Add configuration options for this voiced commands:
+                    // CastleVCmd.class,
+                    // SetVCmd.class,
+                    (Config.L2JMOD_ALLOW_WEDDING ? Wedding.class : null),
+                    (Config.BANKING_SYSTEM_ENABLED ? Banking.class : null),
+                    (Config.L2JMOD_CHAT_ADMIN ? ChatAdmin.class : null),
+                    (CommonConfig.L2JMOD_MULTILANG_ENABLE && Config.L2JMOD_MULTILANG_VOICED_ALLOW ? Lang.class : null),
+                    (Config.L2JMOD_DEBUG_VOICE_COMMAND ? Debug.class : null),
+                    (Config.L2JMOD_ALLOW_CHANGE_PASSWORD ? ChangePassword.class : null),
+            },
 		{
 			// Target Handlers
 			Area.class,

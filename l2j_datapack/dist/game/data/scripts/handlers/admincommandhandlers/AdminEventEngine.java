@@ -18,15 +18,9 @@
  */
 package handlers.admincommandhandlers;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.util.StringTokenizer;
-
-import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.util.Rnd;
+import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.data.xml.impl.TransformData;
 import com.l2jserver.gameserver.enums.audio.Music;
@@ -35,14 +29,10 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.L2Event;
 import com.l2jserver.gameserver.model.entity.L2Event.EventState;
-import com.l2jserver.gameserver.network.serverpackets.CharInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Broadcast;
-import com.l2jserver.util.Rnd;
-import com.l2jserver.util.StringUtil;
+import java.io.*;
+import java.util.StringTokenizer;
 
 /**
  * This class handles following admin commands: - admin = shows menu
@@ -119,14 +109,12 @@ public class AdminEventEngine implements IAdminCommandHandler
 			{
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
 				String eventName = command.substring(16);
-				try
-				{
+				try {
 					final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-					
-					try (FileInputStream fis = new FileInputStream(Config.DATAPACK_ROOT + "/data/events/" + eventName);
-						InputStreamReader isr = new InputStreamReader(fis);
-						BufferedReader br = new BufferedReader(isr))
-					{
+
+					try (FileInputStream fis = new FileInputStream(CommonConfig.DATAPACK_ROOT + "/data/events/" + eventName);
+						 InputStreamReader isr = new InputStreamReader(fis);
+						 BufferedReader br = new BufferedReader(isr)) {
 						adminReply.setFile("en", "data/html/mods/EventEngine/Participation.htm");
 						adminReply.replace("%eventName%", eventName);
 						adminReply.replace("%eventCreator%", br.readLine());
@@ -144,11 +132,10 @@ public class AdminEventEngine implements IAdminCommandHandler
 				}
 				
 			}
-			else if (actualCommand.startsWith("admin_event_del"))
-			{
+			else if (actualCommand.startsWith("admin_event_del")) {
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
 				String eventName = command.substring(16);
-				File file = new File(Config.DATAPACK_ROOT + "/data/events/" + eventName);
+				File file = new File(CommonConfig.DATAPACK_ROOT + "/data/events/" + eventName);
 				file.delete();
 				showMainPage(activeChar);
 			}
@@ -165,11 +152,9 @@ public class AdminEventEngine implements IAdminCommandHandler
 			}
 			else if (actualCommand.startsWith("admin_event_store"))
 			{
-				try
-				{
-					try (FileOutputStream file = new FileOutputStream(new File(Config.DATAPACK_ROOT, "data/events/" + tempName));
-						PrintStream p = new PrintStream(file))
-					{
+				try {
+					try (FileOutputStream file = new FileOutputStream(new File(CommonConfig.DATAPACK_ROOT, "data/events/" + tempName));
+						 PrintStream p = new PrintStream(file)) {
 						p.println(activeChar.getName());
 						p.println(tempBuffer);
 					}
@@ -440,17 +425,14 @@ public class AdminEventEngine implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private String showStoredEvents()
-	{
-		final File dir = new File(Config.DATAPACK_ROOT, "/data/events");
-		if (dir.isFile())
-		{
+	private String showStoredEvents() {
+		final File dir = new File(CommonConfig.DATAPACK_ROOT, "/data/events");
+		if (dir.isFile()) {
 			return "<font color=\"FF0000\">The directory '" + dir.getAbsolutePath() + "' is a file or is corrupted!</font><br>";
 		}
-		
+
 		String note = "";
-		if (!dir.exists())
-		{
+		if (!dir.exists()) {
 			note = "<font color=\"FF0000\">The directory '" + dir.getAbsolutePath() + "' does not exist!</font><br><font color=\"0099FF\">Trying to create it now...<br></font><br>";
 			if (dir.mkdirs())
 			{

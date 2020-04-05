@@ -18,13 +18,13 @@
  */
 package handlers.voicedcommandhandlers;
 
-import java.util.StringTokenizer;
-
 import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.util.StringUtil;
+import java.util.StringTokenizer;
 
 public class Lang implements IVoicedCommandHandler
 {
@@ -34,22 +34,18 @@ public class Lang implements IVoicedCommandHandler
 	};
 	
 	@Override
-	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
-	{
-		if (!Config.L2JMOD_MULTILANG_ENABLE || !Config.L2JMOD_MULTILANG_VOICED_ALLOW)
-		{
+	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params) {
+		if (!CommonConfig.L2JMOD_MULTILANG_ENABLE || !Config.L2JMOD_MULTILANG_VOICED_ALLOW) {
 			return false;
 		}
-		
+
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		if (params == null)
-		{
+		if (params == null) {
 			final StringBuilder html = StringUtil.startAppend(100);
-			for (String lang : Config.L2JMOD_MULTILANG_ALLOWED)
-			{
+			for (String lang : CommonConfig.L2JMOD_MULTILANG_ALLOWED) {
 				StringUtil.append(html, "<button value=\"", lang.toUpperCase(), "\" action=\"bypass -h voice .lang ", lang, "\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
 			}
-			
+
 			msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/Lang/LanguageSelect.htm");
 			msg.replace("%list%", html.toString());
 			activeChar.sendPacket(msg);

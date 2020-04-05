@@ -1,6 +1,7 @@
 package handlers.communityboard.custom.actions;
 
 import com.l2jserver.Config;
+import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
 import com.l2jserver.gameserver.data.sql.impl.CommunityBuffList;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
@@ -8,16 +9,14 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.localization.Strings;
-import com.l2jserver.util.StringUtil;
 import handlers.communityboard.custom.ActionArgs;
 import handlers.communityboard.custom.BoardAction;
 import handlers.communityboard.custom.ProcessResult;
 import handlers.communityboard.custom.bufflists.sets.AllBuffs;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.*;
 import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class AddCurrentBuffsToPresetAction implements BoardAction {
 

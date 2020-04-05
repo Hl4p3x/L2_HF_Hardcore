@@ -1,6 +1,7 @@
 package custom.clan.territory;
 
 import ai.npc.AbstractNpcAI;
+import com.l2jserver.common.localization.Language;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
@@ -11,18 +12,16 @@ import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.model.entity.Message;
 import com.l2jserver.gameserver.model.entity.interfaces.Residence;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.localization.Language;
 import com.l2jserver.localization.Strings;
 import com.l2jserver.localization.StringsTable;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.time.*;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class TerritoryOwningRewardsManager extends AbstractNpcAI {
 

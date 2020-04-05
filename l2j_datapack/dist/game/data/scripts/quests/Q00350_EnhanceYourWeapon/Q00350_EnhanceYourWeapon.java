@@ -18,7 +18,7 @@
  */
 package quests.Q00350_EnhanceYourWeapon;
 
-import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.model.AbsorberInfo;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -32,14 +32,13 @@ import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.*;
 import java.util.logging.Level;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * Enhance Your Weapon (350)
@@ -499,23 +498,20 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	 */
 	private static void load()
 	{
-		try
-		{
+		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
-			
-			File file = new File(Config.DATAPACK_ROOT, "data/levelUpCrystalData.xml");
-			if (!file.exists())
-			{
+
+			File file = new File(CommonConfig.DATAPACK_ROOT, "data/levelUpCrystalData.xml");
+			if (!file.exists()) {
 				_log.severe("[EnhanceYourWeapon] Missing levelUpCrystalData.xml. The quest wont work without it!");
 				return;
 			}
-			
+
 			Document doc = factory.newDocumentBuilder().parse(file);
 			Node first = doc.getFirstChild();
-			if ((first != null) && "list".equalsIgnoreCase(first.getNodeName()))
-			{
+			if ((first != null) && "list".equalsIgnoreCase(first.getNodeName())) {
 				for (Node n = first.getFirstChild(); n != null; n = n.getNextSibling())
 				{
 					if ("crystal".equalsIgnoreCase(n.getNodeName()))

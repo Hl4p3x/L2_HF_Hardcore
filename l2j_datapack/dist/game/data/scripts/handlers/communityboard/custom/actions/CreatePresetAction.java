@@ -1,19 +1,18 @@
 package handlers.communityboard.custom.actions;
 
+import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
 import com.l2jserver.gameserver.data.sql.impl.CommunityBuffList;
 import com.l2jserver.gameserver.handler.CommunityBoardHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.localization.Strings;
-import com.l2jserver.util.StringUtil;
 import handlers.communityboard.custom.ActionArgs;
 import handlers.communityboard.custom.BoardAction;
 import handlers.communityboard.custom.ProcessResult;
+import java.sql.SQLIntegrityConstraintViolationException;
 import org.jdbi.v3.core.statement.UnableToExecuteStatementException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.sql.SQLIntegrityConstraintViolationException;
 
 public class CreatePresetAction implements BoardAction {
 

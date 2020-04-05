@@ -23,8 +23,9 @@ java {
 }
 
 dependencies {
-	implementation(files("../l2j_server/dist/libs/mmocore.jar"))
-	implementation(project(":l2j_server"))
+	implementation(project(":mmocore"))
+	implementation(project(":l2j_gameserver"))
+	implementation(project(":common"))
 
 	implementation("org.slf4j:slf4j-api:1.7.+")
 	implementation("org.jdbi:jdbi3-core:3.+")

@@ -18,9 +18,8 @@
  */
 package ai.npc.NevitsHerald;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import ai.npc.AbstractNpcAI;
+import com.l2jserver.common.util.Rnd;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -30,9 +29,8 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.util.Rnd;
-
-import ai.npc.AbstractNpcAI;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Nevit's Herald AI.

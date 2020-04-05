@@ -19,7 +19,9 @@
 package handlers.admincommandhandlers;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.pool.impl.ConnectionFactory;
+import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.data.xml.impl.TransformData;
@@ -38,7 +40,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.HtmlUtil;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.StringUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.*;
@@ -1035,30 +1036,27 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		if (newKarma >= 0)
 		{
-			// for display
-			int oldKarma = player.getKarma();
-			// update karma
-			player.setKarma(newKarma);
-			// Common character information
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_KARMA_HAS_BEEN_CHANGED_TO_S1);
-			sm.addInt(newKarma);
-			player.sendPacket(sm);
-			// Admin information
-			activeChar.sendMessage("Successfully Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
-			if (Config.DEBUG)
-			{
-				_log.fine("[SET KARMA] [GM]" + activeChar.getName() + " Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
-			}
-		}
-		else
-		{
-			// tell admin of mistake
-			activeChar.sendMessage("You must enter a value for karma greater than or equal to 0.");
-			if (Config.DEBUG)
-			{
-				_log.fine("[SET KARMA] ERROR: [GM]" + activeChar.getName() + " entered an incorrect value for new karma: " + newKarma + " for " + player.getName() + ".");
-			}
-		}
+            // for display
+            int oldKarma = player.getKarma();
+            // update karma
+            player.setKarma(newKarma);
+            // Common character information
+            SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_KARMA_HAS_BEEN_CHANGED_TO_S1);
+            sm.addInt(newKarma);
+            player.sendPacket(sm);
+            // Admin information
+            activeChar.sendMessage("Successfully Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
+            if (CommonConfig.DEBUG) {
+                _log.fine("[SET KARMA] [GM]" + activeChar.getName() + " Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
+            }
+        }
+		else {
+            // tell admin of mistake
+            activeChar.sendMessage("You must enter a value for karma greater than or equal to 0.");
+            if (CommonConfig.DEBUG) {
+                _log.fine("[SET KARMA] ERROR: [GM]" + activeChar.getName() + " entered an incorrect value for new karma: " + newKarma + " for " + player.getName() + ".");
+            }
+        }
 	}
 	
 	private void editCharacter(L2PcInstance activeChar, String targetName)

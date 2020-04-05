@@ -1,6 +1,7 @@
 package custom.clan;
 
 import ai.npc.AbstractNpcAI;
+import com.l2jserver.common.util.Rnd;
 import com.l2jserver.gameserver.clanbonus.ClanBonus;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
 import com.l2jserver.gameserver.instancemanager.MailManager;
@@ -11,15 +12,13 @@ import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.impl.character.player.clan.OnPlayerClanJoin;
 import com.l2jserver.gameserver.model.events.impl.character.player.clan.OnPlayerClanLvlUp;
 import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
-import com.l2jserver.util.Rnd;
 import custom.Reward;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FirstClanBonus extends AbstractNpcAI {
 

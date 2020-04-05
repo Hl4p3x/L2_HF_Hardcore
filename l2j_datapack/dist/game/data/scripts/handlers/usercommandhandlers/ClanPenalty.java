@@ -18,12 +18,11 @@
  */
 package handlers.usercommandhandlers;
 
-import java.text.SimpleDateFormat;
-
+import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.util.StringUtil;
+import java.text.SimpleDateFormat;
 
 /**
  * Clan Penalty user command.

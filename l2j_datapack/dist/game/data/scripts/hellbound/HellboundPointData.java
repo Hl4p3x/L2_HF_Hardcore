@@ -18,14 +18,12 @@
  */
 package hellbound;
 
+import com.l2jserver.common.util.IXmlReader;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
-import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Point data parser.

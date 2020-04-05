@@ -18,8 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.StringTokenizer;
-
+import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
@@ -33,7 +32,7 @@ import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.model.zone.type.NpcSpawnTerritory;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.util.StringUtil;
+import java.util.StringTokenizer;
 
 /**
  * Small typo fix by Zoey76 24/02/2011

@@ -19,7 +19,9 @@
 package handlers.admincommandhandlers;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.pool.impl.ConnectionFactory;
+import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -35,7 +37,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.util.StringUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -128,10 +129,8 @@ public class AdminTeleport implements IAdminCommandHandler
 				int z = Integer.parseInt(st.nextToken());
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(x, y, z, 0));
 			}
-			catch (Exception e)
-			{
-				if (Config.DEBUG)
-				{
+			catch (Exception e) {
+				if (CommonConfig.DEBUG) {
 					_log.info("admin_walk: " + e);
 				}
 			}
@@ -552,18 +551,15 @@ public class AdminTeleport implements IAdminCommandHandler
 				if (activeChar.getInstanceId() >= 0)
 				{
 					spawn.setInstanceId(activeChar.getInstanceId());
-				}
-				else
-				{
+				} else {
 					spawn.setInstanceId(0);
 				}
 				SpawnTable.getInstance().addNewSpawn(spawn, true);
 				spawn.init();
-				
+
 				activeChar.sendMessage("Created " + target.getTemplate().getName() + " on " + target.getObjectId() + ".");
-				
-				if (Config.DEBUG)
-				{
+
+				if (CommonConfig.DEBUG) {
 					_log.fine("Spawn at X=" + spawn.getX() + " Y=" + spawn.getY() + " Z=" + spawn.getZ());
 					_log.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") moved NPC " + target.getObjectId());
 				}

@@ -1,6 +1,6 @@
 package handlers.communityboard.custom;
 
-import com.l2jserver.util.StringUtil;
+import com.l2jserver.common.util.StringUtil;
 
 public class ProcessResult {
 

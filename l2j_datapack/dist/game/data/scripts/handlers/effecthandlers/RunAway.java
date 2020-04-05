@@ -18,13 +18,13 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.common.util.Rnd;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.L2AttackableAI;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.util.Rnd;
 
 /**
  * Run Away effect implementation.

@@ -18,14 +18,13 @@
  */
 package handlers.admincommandhandlers;
 
-import java.io.File;
-import java.util.StringTokenizer;
-
-import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import java.io.File;
+import java.util.StringTokenizer;
 
 /**
  * @author NosBit
@@ -82,12 +81,13 @@ public class AdminHtml implements IAdminCommandHandler
 	{
 		showHtml(activeChar, "data/html/admin/" + path, false);
 	}
-	
+
 	/**
 	 * Shows a html message to activeChar.
+	 *
 	 * @param activeChar activeChar where html message is shown.
-	 * @param path relative path from Config.DATAPACK_ROOT to html.
-	 * @param reload {@code true} will reload html and show it {@code false} will show it from cache.
+	 * @param path       relative path from CommonConfig.DATAPACK_ROOT to html.
+	 * @param reload     {@code true} will reload html and show it {@code false} will show it from cache.
 	 */
 	public static void showHtml(L2PcInstance activeChar, String path, boolean reload)
 	{
@@ -95,10 +95,8 @@ public class AdminHtml implements IAdminCommandHandler
 		if (!reload)
 		{
 			content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), path);
-		}
-		else
-		{
-			File file = new File(Config.DATAPACK_ROOT, path);
+		} else {
+			File file = new File(CommonConfig.DATAPACK_ROOT, path);
 			content = HtmCache.getInstance().loadFile(file);
 		}
 		final NpcHtmlMessage html = new NpcHtmlMessage();

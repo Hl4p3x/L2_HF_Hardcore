@@ -18,8 +18,8 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jserver.Config;
-import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2AccessLevel;
@@ -90,14 +90,12 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 						activeChar.sendMessage("Character's access level is now set to " + lvl);
 					}
 				}
-				catch (SQLException se)
-				{
-					activeChar.sendMessage("SQLException while changing character's access level");
-					if (Config.DEBUG)
-					{
-						se.printStackTrace();
-					}
-				}
+				catch (SQLException se) {
+                    activeChar.sendMessage("SQLException while changing character's access level");
+                    if (CommonConfig.DEBUG) {
+                        se.printStackTrace();
+                    }
+                }
 			}
 		}
 		return true;

@@ -18,9 +18,7 @@
  */
 package handlers.effecthandlers;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.l2jserver.common.util.Rnd;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2Object;
@@ -31,7 +29,8 @@ import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
-import com.l2jserver.util.Rnd;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Confuse effect implementation.

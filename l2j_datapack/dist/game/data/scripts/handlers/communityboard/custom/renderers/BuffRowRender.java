@@ -1,10 +1,9 @@
 package handlers.communityboard.custom.renderers;
 
 import com.l2jserver.Config;
+import com.l2jserver.common.util.Util;
 import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.util.Util;
 import handlers.communityboard.custom.bufflists.SkillDisplayNameHelper;
-
 import java.util.List;
 
 public class BuffRowRender {

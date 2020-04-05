@@ -1,14 +1,13 @@
 package handlers.communityboard.custom.teleport;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.l2jserver.util.YamlMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import com.l2jserver.common.util.YamlMapper;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CustomTeleportTable {
 

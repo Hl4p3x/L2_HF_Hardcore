@@ -1,4 +1,4 @@
--- These queries are meant to delete any loginserver table you may have from
+-- These queries are meant to delete any com.l2jserver.loginserver table you may have from
 -- previous L2J installations.
 --
 -- Queries that create these tables and/or populate them apropiately are

@@ -18,34 +18,14 @@
  */
 package gracia.instances.SeedOfDestruction;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.logging.Level;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
-import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.TrapAction;
 import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2CommandChannel;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Territory;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.*;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -62,6 +42,15 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
+import java.io.File;
+import java.util.*;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * Seed of Destruction instance zone.<br>
@@ -248,23 +237,20 @@ public final class Stage1 extends Quest
 	private void load()
 	{
 		int spawnCount = 0;
-		try
-		{
+		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
-			
-			File file = new File(Config.DATAPACK_ROOT + "/data/spawnZones/seed_of_destruction.xml");
-			if (!file.exists())
-			{
+
+			File file = new File(CommonConfig.DATAPACK_ROOT + "/data/spawnZones/seed_of_destruction.xml");
+			if (!file.exists()) {
 				_log.severe("[Seed of Destruction] Missing seed_of_destruction.xml. The quest wont work without it!");
 				return;
 			}
-			
+
 			Document doc = factory.newDocumentBuilder().parse(file);
 			Node first = doc.getFirstChild();
-			if ((first != null) && "list".equalsIgnoreCase(first.getNodeName()))
-			{
+			if ((first != null) && "list".equalsIgnoreCase(first.getNodeName())) {
 				for (Node n = first.getFirstChild(); n != null; n = n.getNextSibling())
 				{
 					if ("npc".equalsIgnoreCase(n.getNodeName()))
@@ -456,13 +442,10 @@ public final class Stage1 extends Quest
 					}
 				}
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "[Seed of Destruction] Could not parse data.xml file: " + e.getMessage(), e);
 		}
-		if (Config.DEBUG)
-		{
+		if (CommonConfig.DEBUG) {
 			_log.info("[Seed of Destruction] Loaded " + spawnCount + " spawns data.");
 			_log.info("[Seed of Destruction] Loaded " + _spawnZoneList.size() + " spawn zones data.");
 		}

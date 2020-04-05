@@ -19,6 +19,7 @@
 package handlers.bypasshandlers;
 
 import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -30,7 +31,6 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.network.serverpackets.SortedWareHouseWithdrawalList.WarehouseListType;
-
 import java.util.logging.Level;
 
 public class ClanWarehouse implements IBypassHandler
@@ -115,12 +115,11 @@ public class ClanWarehouse implements IBypassHandler
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.setActiveWarehouse(activeChar.getClan().getWarehouse());
 				activeChar.setInventoryBlockingStatus(true);
-				
-				if (Config.DEBUG)
-				{
+
+				if (CommonConfig.DEBUG) {
 					_log.fine("Source: L2WarehouseInstance.java; Player: " + activeChar.getName() + "; Command: showDepositWindowClan; Message: Showing items to deposit.");
 				}
-				
+
 				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.CLAN));
 				return true;
 			}
@@ -159,17 +158,13 @@ public class ClanWarehouse implements IBypassHandler
 				player.getActiveWarehouse().destroyItem("L2ItemInstance", i, player, null);
 			}
 		}
-		if (itemtype != null)
-		{
+		if (itemtype != null) {
 			player.sendPacket(new SortedWareHouseWithdrawalList(player, WareHouseWithdrawalList.CLAN, itemtype, sortorder));
-		}
-		else
-		{
+		} else {
 			player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.CLAN));
 		}
-		
-		if (Config.DEBUG)
-		{
+
+		if (CommonConfig.DEBUG) {
 			_log.fine("Source: L2WarehouseInstance.java; Player: " + player.getName() + "; Command: showRetrieveWindowClan; Message: Showing stored items.");
 		}
 	}

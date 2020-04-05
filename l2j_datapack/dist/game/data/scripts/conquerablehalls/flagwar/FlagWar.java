@@ -18,7 +18,7 @@
  */
 package conquerablehalls.flagwar;
 
-import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2SpecialSiegeGuardAI;

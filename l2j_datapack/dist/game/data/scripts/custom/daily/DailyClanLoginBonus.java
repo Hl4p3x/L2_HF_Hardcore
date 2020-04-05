@@ -2,6 +2,8 @@ package custom.daily;
 
 import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
+import com.l2jserver.common.util.Rnd;
+import com.l2jserver.common.util.RndCollection;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.loginbonus.LoginBonusDao;
@@ -10,15 +12,12 @@ import com.l2jserver.gameserver.loginbonus.LoginBonusType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Message;
 import com.l2jserver.gameserver.model.itemcontainer.Mail;
-import com.l2jserver.util.Rnd;
-import com.l2jserver.util.RndCollection;
 import custom.ChancedReward;
 import custom.Reward;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.*;
 import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class DailyClanLoginBonus extends AbstractNpcAI {
 

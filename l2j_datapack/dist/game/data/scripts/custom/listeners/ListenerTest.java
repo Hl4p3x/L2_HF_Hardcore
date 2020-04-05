@@ -18,20 +18,13 @@
  */
 package custom.listeners;
 
-import java.util.logging.Level;
-
 import ai.npc.AbstractNpcAI;
-
+import com.l2jserver.common.util.Rnd;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.events.Containers;
 import com.l2jserver.gameserver.model.events.EventType;
 import com.l2jserver.gameserver.model.events.ListenerRegisterType;
-import com.l2jserver.gameserver.model.events.annotations.Id;
-import com.l2jserver.gameserver.model.events.annotations.NpcLevelRange;
-import com.l2jserver.gameserver.model.events.annotations.Priority;
-import com.l2jserver.gameserver.model.events.annotations.Range;
-import com.l2jserver.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jserver.gameserver.model.events.annotations.RegisterType;
+import com.l2jserver.gameserver.model.events.annotations.*;
 import com.l2jserver.gameserver.model.events.impl.character.OnCreatureKill;
 import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableAttack;
 import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
@@ -41,7 +34,7 @@ import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeSta
 import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.util.Rnd;
+import java.util.logging.Level;
 
 /**
  * An example usage of Listeners.

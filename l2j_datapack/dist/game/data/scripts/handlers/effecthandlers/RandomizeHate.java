@@ -18,9 +18,7 @@
  */
 package handlers.effecthandlers;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
+import com.l2jserver.common.util.Rnd;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -28,7 +26,8 @@ import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
-import com.l2jserver.util.Rnd;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Randomize Hate effect implementation.

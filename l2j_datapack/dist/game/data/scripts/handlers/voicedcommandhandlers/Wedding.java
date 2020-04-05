@@ -19,7 +19,7 @@
 package handlers.voicedcommandhandlers;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.ThreadPoolManager;

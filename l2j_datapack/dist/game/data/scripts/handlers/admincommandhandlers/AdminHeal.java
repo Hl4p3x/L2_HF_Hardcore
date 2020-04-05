@@ -18,16 +18,16 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Collection;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import java.util.Collection;
+import java.util.logging.Logger;
 
 /**
  * This class handles following admin commands: - heal = restores HP/MP/CP on target, name or radius
@@ -121,19 +121,16 @@ public class AdminHeal implements IAdminCommandHandler
 		{
 			obj = activeChar;
 		}
-		if (obj instanceof L2Character)
-		{
-			L2Character target = (L2Character) obj;
-			target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp());
-			if (target instanceof L2PcInstance)
-			{
-				target.setCurrentCp(target.getMaxCp());
-			}
-			if (Config.DEBUG)
-			{
-				_log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") healed character " + target.getName());
-			}
-		}
+		if (obj instanceof L2Character) {
+            L2Character target = (L2Character) obj;
+            target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp());
+            if (target instanceof L2PcInstance) {
+                target.setCurrentCp(target.getMaxCp());
+            }
+            if (CommonConfig.DEBUG) {
+                _log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") healed character " + target.getName());
+            }
+        }
 		else
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);

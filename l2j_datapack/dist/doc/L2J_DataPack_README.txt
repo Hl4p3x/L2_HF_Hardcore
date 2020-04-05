@@ -51,8 +51,8 @@ the data folder and/or its content, since L2J core includes a basic skeleton of
 it. It's safe to answer 'yes' at this point.
 
 For new L2J databases or existing databases where you want to delete character 
-and account information: Create your loginserver and gameserver databases so they 
-match the loginserver.properties and server.properties settings respectively (the 
+and account information: Create your com.l2jserver.loginserver and gameserver databases so they
+match the com.l2jserver.loginserver.properties and server.properties settings respectively (the
 default for both is 'l2jdb'.)
 
 Method 1: run database_installer.bat for windows users, or database_installer.sh for

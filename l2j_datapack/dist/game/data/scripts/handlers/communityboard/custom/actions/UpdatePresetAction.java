@@ -1,5 +1,6 @@
 package handlers.communityboard.custom.actions;
 
+import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
 import com.l2jserver.gameserver.data.sql.impl.CommunityBuffList;
@@ -8,18 +9,16 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.localization.Strings;
-import com.l2jserver.util.StringUtil;
 import handlers.communityboard.custom.ActionArgs;
 import handlers.communityboard.custom.BoardAction;
 import handlers.communityboard.custom.ProcessResult;
 import handlers.communityboard.custom.renderers.BuffCategoriesRender;
 import handlers.communityboard.custom.renderers.BuffRowRender;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class UpdatePresetAction implements BoardAction {
 

@@ -18,12 +18,7 @@
  */
 package instances;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.List;
-
 import ai.npc.AbstractNpcAI;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.InstanceReenterType;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
@@ -37,6 +32,9 @@ import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.List;
 
 /**
  * Abstract class for Instances.

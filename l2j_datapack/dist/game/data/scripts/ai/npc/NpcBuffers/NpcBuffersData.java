@@ -18,17 +18,15 @@
  */
 package ai.npc.NpcBuffers;
 
+import com.l2jserver.common.util.IXmlReader;
+import com.l2jserver.gameserver.model.StatsSet;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
-import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * NPC Buffers data.

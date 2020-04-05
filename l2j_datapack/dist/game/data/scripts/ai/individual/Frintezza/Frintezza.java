@@ -23,6 +23,7 @@ import ai.IdleBossManager;
 import ai.SpawnManager;
 import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -49,11 +50,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo.NpcInfo;
 import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Util;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -65,6 +61,10 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 public final class Frintezza extends AbstractNpcAI {
 
@@ -350,7 +350,7 @@ public final class Frintezza extends AbstractNpcAI {
             factory.setValidating(false);
             factory.setIgnoringComments(true);
 
-            File file = new File(Config.DATAPACK_ROOT + "/data/spawnZones/final_imperial_tomb.xml");
+            File file = new File(CommonConfig.DATAPACK_ROOT + "/data/spawnZones/final_imperial_tomb.xml");
             if (!file.exists()) {
                 _log.severe("[Final Imperial Tomb] Missing final_imperial_tomb.xml. The quest wont work without it!");
                 return;

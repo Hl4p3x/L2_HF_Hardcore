@@ -2,6 +2,7 @@ package custom.transmogrification;
 
 import ai.npc.AbstractNpcAI;
 import com.l2jserver.common.Log;
+import com.l2jserver.common.util.YamlMapper;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
@@ -10,9 +11,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.multisell.ListContainer;
-import com.l2jserver.util.YamlMapper;
 import custom.common.ShortNpc;
-
 import java.io.IOException;
 
 public class TransmogrificationManager extends AbstractNpcAI {

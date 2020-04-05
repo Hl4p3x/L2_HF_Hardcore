@@ -1,7 +1,7 @@
 package custom.votes;
 
 import com.google.common.base.Functions;
-import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.pool.impl.ConnectionFactory;
 import java.util.Map;
 import java.util.stream.Collectors;
 import org.jdbi.v3.core.Jdbi;

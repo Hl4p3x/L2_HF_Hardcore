@@ -18,10 +18,8 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.StringTokenizer;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
+import com.l2jserver.common.CommonConfig;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -29,6 +27,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2ControllableMobInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import java.util.StringTokenizer;
+import java.util.logging.Logger;
 
 /**
  * This class handles following admin commands: - kill = kills target L2Character - kill_monster = kills target non-player - kill <radius> = If radius is specified, then ALL players only in that radius will be killed. - kill_monster <radius> = If radius is specified, then ALL non-players only in
@@ -145,21 +145,19 @@ public class AdminKill implements IAdminCommandHandler
 			if (target.isInvul())
 			{
 				targetIsInvul = true;
-				target.setIsInvul(false);
-			}
-			
-			target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, null);
-			
-			if (targetIsInvul)
-			{
-				target.setIsInvul(true);
-			}
-		}
-		if (Config.DEBUG)
-		{
-			_log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ")" + " killed character " + target.getObjectId());
-		}
-	}
+                target.setIsInvul(false);
+            }
+
+            target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, null);
+
+            if (targetIsInvul) {
+                target.setIsInvul(true);
+            }
+        }
+        if (CommonConfig.DEBUG) {
+            _log.fine("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ")" + " killed character " + target.getObjectId());
+        }
+    }
 	
 	@Override
 	public String[] getAdminCommandList()
