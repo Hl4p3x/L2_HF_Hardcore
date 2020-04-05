@@ -1,11 +1,11 @@
 package com.l2jserver.script.java;
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineFactory;
 import java.util.Collections;
 import java.util.List;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineFactory;
 
-public class JavaScriptingEngineFactory implements ScriptEngineFactory {
+public class JavaEngineFactory implements ScriptEngineFactory {
 
     private static long nextClassNum = 0L;
 
@@ -13,7 +13,7 @@ public class JavaScriptingEngineFactory implements ScriptEngineFactory {
     private static List<String> extensions = names;
     private static List<String> mimeTypes = Collections.emptyList();
 
-    public JavaScriptingEngineFactory() {
+    public JavaEngineFactory() {
     }
 
     public String getEngineName() {
@@ -123,7 +123,7 @@ public class JavaScriptingEngineFactory implements ScriptEngineFactory {
     }
 
     public ScriptEngine getScriptEngine() {
-        JavaScriptingEngine engine = new JavaScriptingEngine();
+        JavaEngine engine = new JavaEngine();
         engine.setFactory(this);
         return engine;
     }

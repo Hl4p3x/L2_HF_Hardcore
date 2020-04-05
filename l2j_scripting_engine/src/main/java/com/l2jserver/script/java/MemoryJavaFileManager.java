@@ -2,17 +2,16 @@ package com.l2jserver.script.java;
 
 import com.sun.tools.javac.file.JavacFileManager;
 import com.sun.tools.javac.util.Context;
-
-import javax.tools.FileObject;
-import javax.tools.JavaFileManager;
-import javax.tools.JavaFileObject;
-import javax.tools.JavaFileObject.Kind;
-import javax.tools.SimpleJavaFileObject;
 import java.io.*;
 import java.net.URI;
 import java.nio.CharBuffer;
 import java.util.HashMap;
 import java.util.Map;
+import javax.tools.FileObject;
+import javax.tools.JavaFileManager;
+import javax.tools.JavaFileObject;
+import javax.tools.JavaFileObject.Kind;
+import javax.tools.SimpleJavaFileObject;
 
 public final class MemoryJavaFileManager extends JavacFileManager {
 

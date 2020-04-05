@@ -1,13 +1,12 @@
 package com.l2jserver.script.java;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
-import javax.script.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
+import javax.script.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 class JavaCompilerTest {
 
@@ -39,9 +38,8 @@ class JavaCompilerTest {
         Assertions.assertTrue(((Class<?>) object).isAssignableFrom(SimpleTest.class));
     }
 
-
     @Test
-    void classpathDepedencyTestCompile() throws ScriptException, FileNotFoundException {
+    void classpathDependencyTestCompile() throws ScriptException, FileNotFoundException {
         ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
         ScriptEngine scriptEngine = scriptEngineManager.getEngineByExtension("java");
 

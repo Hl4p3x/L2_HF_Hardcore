@@ -1,14 +1,14 @@
 package com.l2jserver.script.java;
 
-import javax.script.*;
 import java.io.*;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import javax.script.*;
 
-public class JavaScriptingEngine extends AbstractScriptEngine implements Compilable {
+public class JavaEngine extends AbstractScriptEngine implements Compilable {
 
     private final JavaCompiler compiler = new JavaCompiler();
     private ScriptEngineFactory factory;
@@ -20,7 +20,7 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
     private static final String MAINCLASS = "mainClass";
     private static final String PARENTLOADER = "parentLoader";
 
-    public JavaScriptingEngine() {
+    public JavaEngine() {
     }
 
     public CompiledScript compile(String script) throws ScriptException {
@@ -43,7 +43,7 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
     public ScriptEngineFactory getFactory() {
         synchronized (this) {
             if (this.factory == null) {
-                this.factory = new JavaScriptingEngineFactory();
+                this.factory = new JavaEngineFactory();
             }
         }
 
@@ -114,7 +114,7 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
         }
     }
 
-    private JavaScriptingEngine.JavaCompiledScript compile(String str, ScriptContext ctx) throws ScriptException {
+    private JavaEngine.JavaCompiledScript compile(String str, ScriptContext ctx) throws ScriptException {
         String fileName = getFileName(ctx);
         String sourcePath = getSourcePath(ctx);
         String classPath = getClassPath(ctx);
@@ -132,7 +132,7 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
                 throw new ScriptException("compilation failed");
             }
         } else {
-            return new JavaScriptingEngine.JavaCompiledScript(this, classBytes, classPath);
+            return new JavaEngine.JavaCompiledScript(this, classBytes, classPath);
         }
     }
 
@@ -211,11 +211,11 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
 
     private static String getSourcePath(ScriptContext ctx) {
         int scope = ctx.getAttributesScope(SOURCEPATH);
-        return scope != -1 ? ctx.getAttribute(SOURCEPATH).toString() : System.getProperty("com.sun.script.java.sourcepath");
+        return scope != -1 ? ctx.getAttribute(SOURCEPATH).toString() : System.getProperty("com.resun.script.java.sourcepath");
     }
 
     private static String getSystemClassPath() {
-        String res = System.getProperty("com.sun.script.java.classpath");
+        String res = System.getProperty("com.resun.script.java.classpath");
         if (res == null) {
             return System.getProperty("java.class.path");
         }
@@ -234,7 +234,7 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
 
     private static String getMainClassName(ScriptContext ctx) {
         int scope = ctx.getAttributesScope(MAINCLASS);
-        return scope != -1 ? ctx.getAttribute(MAINCLASS).toString() : System.getProperty("com.sun.script.java.mainClass");
+        return scope != -1 ? ctx.getAttribute(MAINCLASS).toString() : System.getProperty("com.resun.script.java.mainClass");
     }
 
     private static ClassLoader getParentLoader(ScriptContext ctx) {
@@ -303,12 +303,12 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
 
         private static final long serialVersionUID = -1187041062323875051L;
 
-        private final transient JavaScriptingEngine _engine;
+        private final transient JavaEngine _engine;
         private transient Class<?> _class;
         private final Map<String, byte[]> _classBytes;
         private final String _classPath;
 
-        JavaCompiledScript(JavaScriptingEngine engine, Map<String, byte[]> classBytes, String classPath) {
+        JavaCompiledScript(JavaEngine engine, Map<String, byte[]> classBytes, String classPath) {
             this._engine = engine;
             this._classBytes = classBytes;
             this._classPath = classPath;
@@ -321,11 +321,11 @@ public class JavaScriptingEngine extends AbstractScriptEngine implements Compila
         public Object eval(ScriptContext ctx) throws ScriptException {
             if (this._class == null) {
                 Map<String, byte[]> classBytesCopy = new HashMap<>(this._classBytes);
-                MemoryClassLoader loader = new MemoryClassLoader(classBytesCopy, this._classPath, JavaScriptingEngine.getParentLoader(ctx));
-                this._class = JavaScriptingEngine.parseMain(loader, ctx);
+                MemoryClassLoader loader = new MemoryClassLoader(classBytesCopy, this._classPath, JavaEngine.getParentLoader(ctx));
+                this._class = JavaEngine.parseMain(loader, ctx);
             }
 
-            return JavaScriptingEngine.evalClass(this._class, ctx);
+            return JavaEngine.evalClass(this._class, ctx);
         }
 
     }
