@@ -21,7 +21,6 @@ package com.l2jserver.gameserver;
 import com.google.common.base.Stopwatch;
 import com.l2jserver.Config;
 import com.l2jserver.Server;
-import com.l2jserver.UPnPService;
 import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
@@ -361,9 +360,6 @@ public final class GameServer
 
 		LOG.info("{}: Maximum numbers of connected players: {}", getClass().getSimpleName(), Config.MAXIMUM_ONLINE_USERS);
 		LOG.info("{}: Server loaded in {} seconds and loading memory footprint is {}.", getClass().getSimpleName(), TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis() - serverLoadStart), loadedMemory - usedMemoryStart);
-		
-		printSection("UPnP");
-		UPnPService.getInstance();
 	}
 	
 	public static void main(String[] args) throws Exception

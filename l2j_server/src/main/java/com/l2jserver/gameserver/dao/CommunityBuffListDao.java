@@ -40,14 +40,19 @@ public class CommunityBuffListDao {
                     .bind("list_name", communityBuffList.getName())
                     .execute();
 
-            int listId = h.createQuery("SELECT LAST_INSERT_ID() id")
+            Optional<Integer> listId = h.createQuery("SELECT LAST_INSERT_ID() id")
                     .map((rs, context) -> rs.getInt("id"))
-                    .findOnly();
+                    .findOne();
+
+            if (listId.isEmpty()) {
+                // TODO multilang
+                throw new IllegalStateException("Could not create buff list");
+            }
 
             if (!communityBuffList.getSkills().isEmpty()) {
                 PreparedBatch batch = h.prepareBatch(ADD_BUFF_TO_LIST);
                 communityBuffList.getSkills().forEach(skillHolder -> batch
-                        .bind("list_id", listId)
+                        .bind("list_id", listId.get())
                         .bind("skill_id", skillHolder.getSkillId())
                         .bind("skill_level", skillHolder.getSkillLvl())
                         .add());

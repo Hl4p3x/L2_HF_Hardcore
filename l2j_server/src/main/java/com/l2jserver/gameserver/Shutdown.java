@@ -19,7 +19,6 @@
 package com.l2jserver.gameserver;
 
 import com.l2jserver.Config;
-import com.l2jserver.UPnPService;
 import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.sql.impl.OfflineTradersTable;
@@ -177,30 +176,16 @@ public class Shutdown extends Thread
 	{
 		if (this == getInstance())
 		{
-			TimeCounter tc = new TimeCounter();
-			TimeCounter tc1 = new TimeCounter();
-			
-			try
-			{
-				UPnPService.getInstance().removeAllPorts();
-				LOG.info("UPnP Service: All ports mappings deleted ({}ms).", tc.getEstimatedTimeAndRestartCounter());
-			}
-			catch (Exception e)
-			{
-				LOG.warn("Error while removing UPnP port mappings!", e);
-			}
-			
-			try
-			{
-				if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
-				{
-					OfflineTradersTable.getInstance().storeOffliners();
-					LOG.info("Offline Traders Table: Offline shops stored({}ms).", tc.getEstimatedTimeAndRestartCounter());
-				}
-			}
-			catch (Exception e)
-			{
-				LOG.warn("Error saving offline shops!", e);
+            TimeCounter tc = new TimeCounter();
+            TimeCounter tc1 = new TimeCounter();
+
+            try {
+                if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS) {
+                    OfflineTradersTable.getInstance().storeOffliners();
+                    LOG.info("Offline Traders Table: Offline shops stored({}ms).", tc.getEstimatedTimeAndRestartCounter());
+                }
+            } catch (Exception e) {
+                LOG.warn("Error saving offline shops!", e);
 			}
 			
 			try

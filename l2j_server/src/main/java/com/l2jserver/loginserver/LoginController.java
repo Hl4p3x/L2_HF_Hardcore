@@ -19,6 +19,7 @@
 package com.l2jserver.loginserver;
 
 import com.l2jserver.Config;
+import com.l2jserver.common.Bcrypt;
 import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.localization.Language;
 import com.l2jserver.loginserver.GameServerTable.GameServerInfo;
@@ -42,7 +43,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.crypto.Cipher;
-import org.mindrot.jbcrypt.BCrypt;
 
 public class LoginController
 {
@@ -63,7 +63,7 @@ public class LoginController
 	
 	protected byte[][] _blowfishKeys;
 	private static final int BLOWFISH_KEYS = 20;
-	
+
 	// SQL Queries
 	private static final String USER_INFO_SELECT = "SELECT login, password, language, IF(? > value OR value IS NULL, accessLevel, -1) AS accessLevel, lastServer FROM accounts LEFT JOIN (account_data) ON (account_data.account_name=accounts.login AND account_data.var=\"ban_temp\") WHERE login=?";
 	private static final String AUTOCREATE_ACCOUNTS_INSERT = "INSERT INTO accounts (login, password, lastactive, accessLevel, lastIP) values (?, ?, ?, ?, ?)";
@@ -72,19 +72,18 @@ public class LoginController
 	private static final String ACCOUNT_ACCESS_LEVEL_UPDATE = "UPDATE accounts SET accessLevel = ? WHERE login = ?";
 	private static final String ACCOUNT_IPS_UPDATE = "UPDATE accounts SET pcIp = ?, hop1 = ?, hop2 = ?, hop3 = ?, hop4 = ? WHERE login = ?";
 	private static final String ACCOUNT_IPAUTH_SELECT = "SELECT * FROM accounts_ipauth WHERE login = ?";
-	
-	private LoginController() throws GeneralSecurityException
-	{
+
+	private LoginController() throws GeneralSecurityException {
 		_log.info("Loading LoginController...");
-		
+
 		_keyPairs = new ScrambledKeyPair[10];
-		
+
 		KeyPairGenerator keygen;
-		
+
 		keygen = KeyPairGenerator.getInstance("RSA");
 		RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
 		keygen.initialize(spec);
-		
+
 		// generate the initial set of keys
 		for (int i = 0; i < 10; i++)
 		{
@@ -257,18 +256,15 @@ public class LoginController
 
 	private boolean autoCreateAccount(String login, String password, InetAddress addr) {
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement(AUTOCREATE_ACCOUNTS_INSERT))
-		{
+			 PreparedStatement ps = con.prepareStatement(AUTOCREATE_ACCOUNTS_INSERT)) {
 			ps.setString(1, login);
-			ps.setString(2, BCrypt.hashpw(password, BCrypt.gensalt()));
+			ps.setString(2, Bcrypt.hash(password));
 			ps.setLong(3, System.currentTimeMillis());
 			ps.setInt(4, 0);
 			ps.setString(5, addr.getHostAddress());
 			ps.execute();
 			return true;
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			_log.log(Level.WARNING, "Exception while auto creating account for '" + login + "'!", e);
 			return false;
 		}

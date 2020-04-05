@@ -1,2 +1,0 @@
-include ':l2j_server'
-project(':l2j_server').projectDir = new File(settingsDir, '../l2j_server')

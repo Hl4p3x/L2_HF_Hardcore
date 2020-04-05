@@ -3,7 +3,6 @@ package com.l2jserver.util;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -13,7 +12,7 @@ public class YamlMapper {
 
     public static Map<String, String> readAsStringMap(File file) {
         try {
-            return getInstance().readValue(file, new TypeReference<HashMap<String, Object>>() {
+            return getInstance().readValue(file, new TypeReference<HashMap<String, String>>() {
             });
         } catch (IOException e) {
             throw new IllegalStateException("Could not read " + file, e);

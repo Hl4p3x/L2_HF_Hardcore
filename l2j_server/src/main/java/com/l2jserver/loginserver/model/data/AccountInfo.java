@@ -18,9 +18,8 @@
  */
 package com.l2jserver.loginserver.model.data;
 
+import com.l2jserver.common.Bcrypt;
 import com.l2jserver.localization.Language;
-import org.mindrot.jbcrypt.BCrypt;
-
 import java.util.Objects;
 
 /**
@@ -56,7 +55,7 @@ public final class AccountInfo
 	}
 
 	public boolean checkPassword(String password) {
-		return BCrypt.checkpw(password, _passHash);
+		return Bcrypt.valid(password, _passHash);
 	}
 
 	public String getLogin()
