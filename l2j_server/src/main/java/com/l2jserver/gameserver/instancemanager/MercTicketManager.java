@@ -18,15 +18,7 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.idfactory.IdFactory;
@@ -36,6 +28,13 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * This class is similar to the SiegeGuardManager, except it handles the loading of the mercenary tickets that are dropped on castle floors by the castle lords.<br>

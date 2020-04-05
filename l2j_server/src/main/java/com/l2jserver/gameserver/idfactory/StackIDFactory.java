@@ -18,14 +18,13 @@
  */
 package com.l2jserver.gameserver.idfactory;
 
+import com.l2jserver.Config;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Stack;
-
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 
 /**
  * This class ...

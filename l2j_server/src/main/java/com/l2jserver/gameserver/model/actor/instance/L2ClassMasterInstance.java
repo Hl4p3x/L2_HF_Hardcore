@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.model.actor.instance;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.DecimalFormatStandart;
+import com.l2jserver.common.DecimalFormatStandard;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.datatables.ItemTable;
@@ -34,7 +34,6 @@ import com.l2jserver.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import com.l2jserver.localization.Strings;
 import com.l2jserver.util.StringUtil;
-
 import java.text.DecimalFormat;
 
 /**
@@ -366,29 +365,25 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		if (oldCID.equals(newCID.getParent()))
 		{
 			return true;
-		}
-		
-		if (Config.ALLOW_ENTIRE_TREE && newCID.childOf(oldCID))
-		{
-			return true;
-		}
-		
-		return false;
-	}
-	
-	private static String getRequiredItems(int level)
-	{
-		if ((Config.CLASS_MASTER_SETTINGS.getRequireItems(level) == null) || Config.CLASS_MASTER_SETTINGS.getRequireItems(level).isEmpty())
-		{
-			return "<tr><td>none</td></tr>";
-		}
+        }
 
-		DecimalFormat formatter = DecimalFormatStandart.moneyFormat();
-		final StringBuilder sb = new StringBuilder();
-		for (ItemHolder holder : Config.CLASS_MASTER_SETTINGS.getRequireItems(level))
-		{
-			sb.append("<tr><td><font color=\"LEVEL\">" + formatter.format(holder.getCount()) + "</font></td><td>" + ItemTable.getInstance().getTemplate(holder.getId()).getName() + "</td></tr>");
-		}
-		return sb.toString();
-	}
+        if (Config.ALLOW_ENTIRE_TREE && newCID.childOf(oldCID)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private static String getRequiredItems(int level) {
+        if ((Config.CLASS_MASTER_SETTINGS.getRequireItems(level) == null) || Config.CLASS_MASTER_SETTINGS.getRequireItems(level).isEmpty()) {
+            return "<tr><td>none</td></tr>";
+        }
+
+        DecimalFormat formatter = DecimalFormatStandard.moneyFormat();
+        final StringBuilder sb = new StringBuilder();
+        for (ItemHolder holder : Config.CLASS_MASTER_SETTINGS.getRequireItems(level)) {
+            sb.append("<tr><td><font color=\"LEVEL\">" + formatter.format(holder.getCount()) + "</font></td><td>" + ItemTable.getInstance().getTemplate(holder.getId()).getName() + "</td></tr>");
+        }
+        return sb.toString();
+    }
 }

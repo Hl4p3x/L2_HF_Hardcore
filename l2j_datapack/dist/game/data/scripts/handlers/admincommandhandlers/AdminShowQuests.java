@@ -18,12 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.L2Object;
@@ -35,6 +30,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowQuestMark;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.QuestList;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.logging.Logger;
 
 /**
  * TODO: Rework and cleanup.

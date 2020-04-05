@@ -4,8 +4,6 @@ plugins {
 
 apply plugin: 'java'
 apply plugin: 'distribution'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
 
 defaultTasks('clean', 'build')
 
@@ -18,8 +16,6 @@ repositories {
 dependencies {
     compile project(':l2j_scripting_engine')
 
-    compile 'com.mchange:c3p0:0.9.5.2'
-    compile 'com.jolbox:bonecp:0.8.0.RELEASE'
     compile 'com.sun.mail:javax.mail:1.5.6'
     compile 'com.zaxxer:HikariCP:3.3.1'
     compile 'mysql:mysql-connector-java:8.0.11'
@@ -67,8 +63,6 @@ def generalManifest = manifest {
 }
 
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-import org.gradle.plugins.ide.internal.generator.PropertiesPersistableConfigurationObject
-
 
 jar {
     archiveFileName = 'l2jserver.jar'
@@ -185,21 +179,3 @@ task zip(type: Zip, dependsOn: build) {
 }
 
 build.finalizedBy(zip)
-
-eclipse {
-    project {
-        name = 'L2J_Server'
-        comment 'L2J Server Project'
-        natures 'org.eclipse.buildship.core.gradleprojectbuilde'
-    }
-    jdt {
-        file {
-            whenMerged { jdt ->
-                def propertiesField = PropertiesPersistableConfigurationObject.getDeclaredField('properties')
-                propertiesField.accessible = true
-                Properties properties = (Properties) propertiesField.get(jdt)
-                properties.setProperty 'org.eclipse.jdt.core.compiler.problem.incompleteEnumSwitch', 'ignore'
-            }
-        }
-    }
-}

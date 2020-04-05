@@ -1,19 +1,18 @@
 package com.l2jserver.gameserver.dao;
 
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.sql.impl.CommunityBuffList;
 import com.l2jserver.gameserver.data.sql.impl.CommunityBuffListMapper;
 import com.l2jserver.gameserver.data.sql.impl.SkillHolderMapper;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import org.jdbi.v3.core.Jdbi;
-import org.jdbi.v3.core.statement.PreparedBatch;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.jdbi.v3.core.Jdbi;
+import org.jdbi.v3.core.statement.PreparedBatch;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CommunityBuffListDao {
 

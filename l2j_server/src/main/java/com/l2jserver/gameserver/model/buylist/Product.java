@@ -18,10 +18,9 @@
  */
 package com.l2jserver.gameserver.model.buylist;
 
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.model.items.L2Item;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Collection;

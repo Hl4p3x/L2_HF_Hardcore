@@ -18,19 +18,8 @@
  */
 package handlers.admincommandhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.data.xml.impl.TransformData;
@@ -46,17 +35,14 @@ import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExVoteSystemInfo;
-import com.l2jserver.gameserver.network.serverpackets.GMViewItemList;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowAll;
-import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
+import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.HtmlUtil;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.StringUtil;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.*;
+import java.util.logging.Logger;
 
 /**
  * EditChar admin command implementation.

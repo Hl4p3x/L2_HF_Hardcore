@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.datatables;
 
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import com.l2jserver.gameserver.engines.DocumentEngine;
@@ -38,7 +38,6 @@ import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.util.GMAudit;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.HashMap;

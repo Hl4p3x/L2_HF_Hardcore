@@ -18,20 +18,15 @@
  */
 package com.l2jserver.gameserver.data.sql.impl;
 
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 
 public class SummonSkillsTable
 {

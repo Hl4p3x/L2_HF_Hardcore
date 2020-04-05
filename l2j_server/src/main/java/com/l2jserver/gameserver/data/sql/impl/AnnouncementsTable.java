@@ -18,17 +18,7 @@
  */
 package com.l2jserver.gameserver.data.sql.impl;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.Collection;
-import java.util.Map;
-import java.util.concurrent.ConcurrentSkipListMap;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.announce.Announcement;
 import com.l2jserver.gameserver.model.announce.AnnouncementType;
@@ -36,6 +26,14 @@ import com.l2jserver.gameserver.model.announce.AutoAnnouncement;
 import com.l2jserver.gameserver.model.announce.IAnnouncement;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Collection;
+import java.util.Map;
+import java.util.concurrent.ConcurrentSkipListMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Loads announcements from database.

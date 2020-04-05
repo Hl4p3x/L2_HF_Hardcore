@@ -18,15 +18,14 @@
  */
 package handlers.admincommandhandlers;
 
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
+import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * This class handles following admin commands: - delete = deletes target

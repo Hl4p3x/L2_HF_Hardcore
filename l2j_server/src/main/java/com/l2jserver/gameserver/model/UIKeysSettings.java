@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.model;
 
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.data.xml.impl.UIData;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -26,9 +28,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.data.xml.impl.UIData;
 
 /**
  * UI Keys Settings class.

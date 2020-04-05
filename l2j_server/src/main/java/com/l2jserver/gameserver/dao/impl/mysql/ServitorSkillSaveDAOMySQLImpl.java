@@ -18,17 +18,8 @@
  */
 package com.l2jserver.gameserver.dao.impl.mysql;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.LinkedList;
-import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.dao.ServitorSkillSaveDAO;
 import com.l2jserver.gameserver.data.sql.impl.SummonEffectsTable;
 import com.l2jserver.gameserver.datatables.SkillData;
@@ -37,6 +28,13 @@ import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.EffectScope;
 import com.l2jserver.gameserver.model.skills.Skill;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.LinkedList;
+import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Servitor Skill Save DAO MySQL implementation.

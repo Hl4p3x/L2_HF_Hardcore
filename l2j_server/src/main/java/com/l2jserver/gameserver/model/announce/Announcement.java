@@ -18,15 +18,10 @@
  */
 package com.l2jserver.gameserver.model.announce;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 
 /**
  * @author UnAfraid

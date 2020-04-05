@@ -18,17 +18,7 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.AirShipTeleportList;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.VehiclePathPoint;
@@ -37,6 +27,11 @@ import com.l2jserver.gameserver.model.actor.instance.L2ControllableAirShipInstan
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2CharTemplate;
 import com.l2jserver.gameserver.network.serverpackets.ExAirShipTeleportList;
+import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class AirShipManager
 {

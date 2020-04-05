@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.network;
 
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.LoginServerThread.SessionKey;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -45,7 +45,6 @@ import com.l2jserver.localization.Language;
 import com.l2jserver.mmocore.MMOClient;
 import com.l2jserver.mmocore.MMOConnection;
 import com.l2jserver.mmocore.ReceivablePacket;
-
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;

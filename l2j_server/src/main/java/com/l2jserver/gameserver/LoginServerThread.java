@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver;
 
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.L2GameClient;
@@ -35,9 +35,6 @@ import com.l2jserver.util.Rnd;
 import com.l2jserver.util.Util;
 import com.l2jserver.util.crypt.NewCrypt;
 import com.l2jserver.util.network.BaseSendablePacket;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -60,6 +57,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LoginServerThread extends Thread
 {

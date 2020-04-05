@@ -18,15 +18,8 @@
  */
 package handlers.admincommandhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.NoSuchElementException;
-import java.util.StringTokenizer;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -43,6 +36,12 @@ import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.NoSuchElementException;
+import java.util.StringTokenizer;
+import java.util.logging.Logger;
 
 /**
  * This class handles following admin commands: - show_moves - show_teleport - teleport_to_character - move_to - teleport_character

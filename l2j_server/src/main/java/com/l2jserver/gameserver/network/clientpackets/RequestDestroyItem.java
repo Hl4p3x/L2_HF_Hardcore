@@ -18,12 +18,8 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.logging.Level;
-
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jserver.gameserver.model.PcCondOverride;
@@ -35,6 +31,9 @@ import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.logging.Level;
 
 /**
  * This class ...

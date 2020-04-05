@@ -1,6 +1,6 @@
 package handlers.bypasshandlers.bulk;
 
-import com.l2jserver.common.DecimalFormatStandart;
+import com.l2jserver.common.DecimalFormatStandard;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -11,10 +11,9 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.transfer.bulk.BulkItemType;
 import com.l2jserver.gameserver.transfer.bulk.shop.BulkSellService;
 import com.l2jserver.localization.Strings;
+import java.util.StringTokenizer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.StringTokenizer;
 
 public class BulkSell implements IBypassHandler {
 
@@ -53,7 +52,7 @@ public class BulkSell implements IBypassHandler {
             htmlText = htmlText.replaceAll("%npc_name%", target.getName());
             htmlText = htmlText.replaceAll("%item_group_name%", type);
             htmlText = htmlText.replaceAll("%item_total_count%", String.valueOf(BulkSellService.getInstance().sellAllByTypeCount(itemType, player)));
-            htmlText = htmlText.replaceAll("%item_total_sum%", DecimalFormatStandart.moneyFormat().format(BulkSellService.getInstance().sellAllByTypePrice(itemType, player)));
+            htmlText = htmlText.replaceAll("%item_total_sum%", DecimalFormatStandard.moneyFormat().format(BulkSellService.getInstance().sellAllByTypePrice(itemType, player)));
             htmlText = htmlText.replaceAll("%item_group_type%", type);
             player.sendPacket(new NpcHtmlMessage(htmlText));
             return true;

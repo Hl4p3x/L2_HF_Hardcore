@@ -19,15 +19,14 @@
 package com.l2jserver.gameserver.scripting;
 
 import com.l2jserver.Config;
-import com.l2jserver.script.java.JavaScriptingEngineFactory;
+import com.l2jserver.script.java.JavaEngineFactory;
 import com.l2jserver.script.jython.JythonScriptEngine;
 import com.l2jserver.script.jython.JythonScriptEngineFactory;
-
-import javax.script.*;
 import java.io.*;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.script.*;
 
 /**
  * Caches script engines and provides functionality for executing and managing scripts.
@@ -70,10 +69,10 @@ public final class L2ScriptEngineManager
 	private static final boolean PURGE_ERROR_LOG = true;
 
 	protected L2ScriptEngineManager() {
-        List<ScriptEngineFactory> factories = Arrays.asList(
-                new JythonScriptEngineFactory(),
-                new JavaScriptingEngineFactory()
-        );
+		List<ScriptEngineFactory> factories = Arrays.asList(
+				new JythonScriptEngineFactory(),
+				new JavaEngineFactory()
+		);
 
 		for (ScriptEngineFactory factory : factories)
 		{

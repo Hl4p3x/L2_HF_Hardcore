@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.model.entity;
 
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.xml.impl.SiegeScheduleData;
@@ -41,7 +41,6 @@ import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeSta
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Broadcast;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

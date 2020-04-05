@@ -1,11 +1,10 @@
 package custom.votes;
 
 import com.google.common.base.Functions;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import org.jdbi.v3.core.Jdbi;
-
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import java.util.Map;
 import java.util.stream.Collectors;
+import org.jdbi.v3.core.Jdbi;
 
 public class VoteRepository {
 

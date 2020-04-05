@@ -18,26 +18,19 @@
  */
 package com.l2jserver.gameserver.model;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.enums.MacroType;
 import com.l2jserver.gameserver.enums.ShortcutType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.interfaces.IRestorable;
 import com.l2jserver.gameserver.network.serverpackets.SendMacroList;
 import com.l2jserver.util.StringUtil;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MacroList implements IRestorable
 {

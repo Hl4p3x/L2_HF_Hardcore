@@ -18,20 +18,15 @@
  */
 package com.l2jserver.gameserver.model.punishment;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.handler.IPunishmentHandler;
 import com.l2jserver.gameserver.handler.PunishmentHandler;
 import com.l2jserver.gameserver.instancemanager.PunishmentManager;
+import java.sql.*;
+import java.util.concurrent.ScheduledFuture;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author UnAfraid

@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.InstanceListManager;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.model.L2Clan;
@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.model.entity;
 
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.FortUpdater;
 import com.l2jserver.gameserver.FortUpdater.UpdaterType;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -45,7 +45,6 @@ import com.l2jserver.gameserver.model.zone.type.L2SiegeZone;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

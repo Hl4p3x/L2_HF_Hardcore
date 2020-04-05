@@ -18,17 +18,14 @@
  */
 package com.l2jserver.tools.accountmanager;
 
-import java.security.MessageDigest;
+import com.l2jserver.Config;
+import com.l2jserver.Server;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Base64;
 import java.util.Scanner;
-
-import com.l2jserver.Config;
-import com.l2jserver.Server;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import org.mindrot.jbcrypt.BCrypt;
 
 /**

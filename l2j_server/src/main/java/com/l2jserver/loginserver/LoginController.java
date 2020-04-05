@@ -19,7 +19,7 @@
 package com.l2jserver.loginserver;
 
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.localization.Language;
 import com.l2jserver.loginserver.GameServerTable.GameServerInfo;
 import com.l2jserver.loginserver.model.data.AccountInfo;
@@ -28,9 +28,6 @@ import com.l2jserver.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jserver.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import com.l2jserver.util.Rnd;
 import com.l2jserver.util.crypt.ScrambledKeyPair;
-import org.mindrot.jbcrypt.BCrypt;
-
-import javax.crypto.Cipher;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.security.GeneralSecurityException;
@@ -44,6 +41,8 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.crypto.Cipher;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class LoginController
 {

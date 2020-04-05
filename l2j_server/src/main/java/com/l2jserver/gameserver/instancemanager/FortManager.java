@@ -18,6 +18,11 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.InstanceListManager;
+import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.entity.Fort;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -25,12 +30,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.InstanceListManager;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.entity.Fort;
 
 public final class FortManager implements InstanceListManager
 {

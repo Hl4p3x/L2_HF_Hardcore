@@ -18,12 +18,7 @@
  */
 package com.l2jserver.gameserver.model.entity.clanhall;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.Calendar;
-import java.util.logging.Level;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2SiegeClan;
 import com.l2jserver.gameserver.model.L2SiegeClan.SiegeClanType;
@@ -34,6 +29,10 @@ import com.l2jserver.gameserver.model.entity.ClanHall;
 import com.l2jserver.gameserver.model.zone.type.L2SiegableHallZone;
 import com.l2jserver.gameserver.model.zone.type.L2SiegeZone;
 import com.l2jserver.gameserver.network.serverpackets.SiegeInfo;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.Calendar;
+import java.util.logging.Level;
 
 /**
  * @author BiggBoss

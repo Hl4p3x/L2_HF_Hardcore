@@ -18,6 +18,15 @@
  */
 package com.l2jserver.gameserver.datatables;
 
+import com.l2jserver.Config;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.data.xml.impl.NpcData;
+import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
+import com.l2jserver.gameserver.instancemanager.ZoneManager;
+import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jserver.util.data.xml.IXmlReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,21 +37,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
-import java.lang.Math;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
-import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2Spawn;
-import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * Spawn data retriever.

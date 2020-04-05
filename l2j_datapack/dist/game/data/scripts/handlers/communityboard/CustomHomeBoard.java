@@ -1,7 +1,7 @@
 package handlers.communityboard;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.DecimalFormatStandart;
+import com.l2jserver.common.DecimalFormatStandard;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.dao.factory.impl.DAOFactory;
 import com.l2jserver.gameserver.data.sql.impl.CommunityBuffList;
@@ -18,14 +18,13 @@ import handlers.communityboard.custom.bufflists.sets.presets.*;
 import handlers.communityboard.custom.renderers.BuffCategoriesRender;
 import handlers.communityboard.custom.teleport.CustomTeleportTable;
 import handlers.communityboard.custom.teleport.TeleportDestination;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CustomHomeBoard implements IParseBoardHandler {
 
@@ -112,9 +111,9 @@ public class CustomHomeBoard implements IParseBoardHandler {
                 html = html.replace("%single_buff_price%", free);
                 html = html.replace("%preset_buff_price%", free);
             } else {
-                html = html.replace("%teleport_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_TELEPORT_PRICE));
-                html = html.replace("%single_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_SINGLE_BUFF_PRICE));
-                html = html.replace("%preset_buff_price%", DecimalFormatStandart.moneyFormat().format(Config.COMMUNITY_DEFAULT_PRESET_PRICE));
+                html = html.replace("%teleport_price%", DecimalFormatStandard.moneyFormat().format(Config.COMMUNITY_TELEPORT_PRICE));
+                html = html.replace("%single_buff_price%", DecimalFormatStandard.moneyFormat().format(Config.COMMUNITY_SINGLE_BUFF_PRICE));
+                html = html.replace("%preset_buff_price%", DecimalFormatStandard.moneyFormat().format(Config.COMMUNITY_DEFAULT_PRESET_PRICE));
             }
 
             List<CommunityBuffList> presets = DAOFactory.getInstance().getCommunityBuffListDao().findAllCommunityBuffSets(player.getObjectId());

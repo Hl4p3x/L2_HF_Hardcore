@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model.variables;
 
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,8 +26,6 @@ import java.sql.SQLException;
 import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 
 /**
  * @author UnAfraid

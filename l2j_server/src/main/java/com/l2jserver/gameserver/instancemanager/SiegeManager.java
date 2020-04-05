@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.instancemanager;
 
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.entity.Siege;
 import com.l2jserver.gameserver.model.interfaces.ILocational;
 import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.util.PropertiesParser;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -18,6 +18,8 @@
  */
 package com.l2jserver.gameserver.instancemanager;
 
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.model.entity.Auction;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -25,9 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.model.entity.Auction;
 
 /**
  * Zoey76: TODO: Rewrite it and unharcode it.

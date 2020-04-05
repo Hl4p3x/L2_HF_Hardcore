@@ -18,20 +18,19 @@
  */
 package com.l2jserver.gameserver.taskmanager.tasks;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.concurrent.TimeUnit;
-
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.instancemanager.MailManager;
 import com.l2jserver.gameserver.model.entity.Message;
 import com.l2jserver.gameserver.taskmanager.Task;
 import com.l2jserver.gameserver.taskmanager.TaskManager;
 import com.l2jserver.gameserver.taskmanager.TaskManager.ExecutedTask;
 import com.l2jserver.gameserver.taskmanager.TaskTypes;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Birthday Gift task.

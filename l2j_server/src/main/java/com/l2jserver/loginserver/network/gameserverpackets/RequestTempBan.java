@@ -18,15 +18,14 @@
  */
 package com.l2jserver.loginserver.network.gameserverpackets;
 
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.loginserver.LoginController;
+import com.l2jserver.util.network.BaseRecievePacket;
 import java.net.UnknownHostException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.loginserver.LoginController;
-import com.l2jserver.util.network.BaseRecievePacket;
 
 /**
  * @author mrTJO

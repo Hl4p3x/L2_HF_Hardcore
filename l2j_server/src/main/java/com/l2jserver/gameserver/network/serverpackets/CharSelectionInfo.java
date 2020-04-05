@@ -18,6 +18,14 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.Config;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.data.sql.impl.ClanTable;
+import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
+import com.l2jserver.gameserver.model.CharSelectInfoPackage;
+import com.l2jserver.gameserver.model.L2Clan;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
+import com.l2jserver.gameserver.network.L2GameClient;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,15 +33,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.data.sql.impl.ClanTable;
-import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
-import com.l2jserver.gameserver.model.CharSelectInfoPackage;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.network.L2GameClient;
 
 public class CharSelectionInfo extends L2GameServerPacket
 {

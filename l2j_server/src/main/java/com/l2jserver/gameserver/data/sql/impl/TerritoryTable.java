@@ -18,6 +18,9 @@
  */
 package com.l2jserver.gameserver.data.sql.impl;
 
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.model.L2Territory;
+import com.l2jserver.gameserver.model.Location;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,10 +29,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.model.L2Territory;
-import com.l2jserver.gameserver.model.Location;
 
 /**
  * @author Balancer, Mr

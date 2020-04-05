@@ -18,14 +18,12 @@
  */
 package com.l2jserver.gameserver.communitybbs.BB;
 
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.communitybbs.Manager.TopicBBSManager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.communitybbs.Manager.TopicBBSManager;
 
 public class Topic
 {

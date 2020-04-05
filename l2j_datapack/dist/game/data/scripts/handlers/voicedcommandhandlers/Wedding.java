@@ -18,14 +18,8 @@
  */
 package handlers.voicedcommandhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -49,6 +43,11 @@ import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
 import com.l2jserver.gameserver.util.Broadcast;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Wedding voiced commands handler.

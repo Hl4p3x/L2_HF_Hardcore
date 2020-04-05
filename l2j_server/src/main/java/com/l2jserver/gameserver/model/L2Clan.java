@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.model;
 
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.communitybbs.BB.Forum;
 import com.l2jserver.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
@@ -48,7 +48,6 @@ import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.EnumIntBitmask;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

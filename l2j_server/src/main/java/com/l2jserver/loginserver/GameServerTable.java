@@ -18,6 +18,11 @@
  */
 package com.l2jserver.loginserver;
 
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.loginserver.network.gameserverpackets.ServerStatus;
+import com.l2jserver.util.IPSubnet;
+import com.l2jserver.util.Rnd;
+import com.l2jserver.util.data.xml.IXmlReader;
 import java.math.BigInteger;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -31,15 +36,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.loginserver.network.gameserverpackets.ServerStatus;
-import com.l2jserver.util.IPSubnet;
-import com.l2jserver.util.Rnd;
-import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
  * The Class GameServerTable loads the game server names and initialize the game server tables.

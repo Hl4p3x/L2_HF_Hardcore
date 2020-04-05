@@ -18,14 +18,13 @@
  */
 package com.l2jserver.gameserver.taskmanager.tasks;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.taskmanager.Task;
 import com.l2jserver.gameserver.taskmanager.TaskManager;
 import com.l2jserver.gameserver.taskmanager.TaskManager.ExecutedTask;
 import com.l2jserver.gameserver.taskmanager.TaskTypes;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 /**
  * @author Layane

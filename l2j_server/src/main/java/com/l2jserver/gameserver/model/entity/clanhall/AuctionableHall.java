@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.model.entity.clanhall;
 
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.logging.Level;

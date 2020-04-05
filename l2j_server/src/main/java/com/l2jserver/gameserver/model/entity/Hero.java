@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.model.entity;
 
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
@@ -37,7 +37,6 @@ import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.util.StringUtil;
-
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;

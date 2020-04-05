@@ -16,40 +16,34 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.commons.database.pool.impl;
+package com.l2jserver.common.database.pool.impl;
 
-import java.util.concurrent.TimeUnit;
-
+import com.l2jserver.Config;
+import com.l2jserver.common.database.pool.IConnectionFactory;
+import com.zaxxer.hikari.HikariDataSource;
 import javax.sql.DataSource;
 
-import com.jolbox.bonecp.BoneCPDataSource;
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.IConnectionFactory;
-
 /**
- * BoneCP Connection Factory implementation.<br>
+ * HikariCP Connection Factory implementation.<br>
  * <b>Note that this class is not public to prevent external initialization.</b><br>
- * <b>Access it through {@link ConnectionFactory} and proper configuration.</b><br>
- * <b><font color="RED" size="3">Totally BETA and untested feature!</font></b>
+ * <b>Access it through {@link ConnectionFactory} and proper configuration.</b>
  * @author Zoey76
  */
-enum BoneCPConnectionFactory implements IConnectionFactory
+enum HikariCPConnectionFactory implements IConnectionFactory
 {
 	INSTANCE;
 	
-	private static final int PARTITION_COUNT = 5;
+	private final HikariDataSource _dataSource;
 	
-	private final BoneCPDataSource _dataSource;
-	
-	BoneCPConnectionFactory()
+	HikariCPConnectionFactory()
 	{
-		_dataSource = new BoneCPDataSource();
+		_dataSource = new HikariDataSource();
 		_dataSource.setJdbcUrl(Config.DATABASE_URL);
 		_dataSource.setUsername(Config.DATABASE_LOGIN);
 		_dataSource.setPassword(Config.DATABASE_PASSWORD);
-		_dataSource.setPartitionCount(PARTITION_COUNT);
-		_dataSource.setMaxConnectionsPerPartition(Config.DATABASE_MAX_CONNECTIONS);
-		_dataSource.setIdleConnectionTestPeriod(Config.DATABASE_MAX_IDLE_TIME, TimeUnit.SECONDS);
+		_dataSource.setMaximumPoolSize(Config.DATABASE_MAX_CONNECTIONS);
+		_dataSource.setIdleTimeout(Config.DATABASE_MAX_IDLE_TIME);
+		_dataSource.setDriverClassName(Config.DATABASE_DRIVER);
 	}
 	
 	@Override

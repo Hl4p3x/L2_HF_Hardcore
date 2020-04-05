@@ -5,7 +5,7 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class DecimalFormatStandart {
+public class DecimalFormatStandard {
 
     public static DecimalFormat moneyFormat() {
         DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance(Locale.US);

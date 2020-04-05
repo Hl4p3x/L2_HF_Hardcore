@@ -18,6 +18,12 @@
  */
 package com.l2jserver.tools.gsregistering;
 
+import com.l2jserver.Config;
+import com.l2jserver.Server;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.loginserver.GameServerTable;
+import com.l2jserver.tools.i18n.LanguageControl;
+import com.l2jserver.util.Util;
 import java.awt.HeadlessException;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -32,16 +38,8 @@ import java.util.Locale;
 import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.ResourceBundle;
-
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
-
-import com.l2jserver.Config;
-import com.l2jserver.Server;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.loginserver.GameServerTable;
-import com.l2jserver.tools.i18n.LanguageControl;
-import com.l2jserver.util.Util;
 
 /**
  * The Class BaseGameServerRegister.

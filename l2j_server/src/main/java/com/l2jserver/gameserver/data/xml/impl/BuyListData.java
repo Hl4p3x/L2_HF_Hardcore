@@ -19,17 +19,13 @@
 package com.l2jserver.gameserver.data.xml.impl;
 
 import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.model.buylist.L2BuyList;
 import com.l2jserver.gameserver.model.buylist.Product;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.util.data.xml.IXmlReader;
 import com.l2jserver.util.file.filter.NumericNameFilter;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 import java.io.File;
 import java.io.FileFilter;
 import java.sql.Connection;
@@ -37,6 +33,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
 
 /**
  * Loads buy lists for NPCs.

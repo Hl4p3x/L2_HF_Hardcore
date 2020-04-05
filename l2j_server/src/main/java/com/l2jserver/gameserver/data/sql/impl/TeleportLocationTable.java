@@ -18,6 +18,9 @@
  */
 package com.l2jserver.gameserver.data.sql.impl;
 
+import com.l2jserver.Config;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
+import com.l2jserver.gameserver.model.L2TeleportLocation;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -25,10 +28,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.model.L2TeleportLocation;
 
 public class TeleportLocationTable
 {

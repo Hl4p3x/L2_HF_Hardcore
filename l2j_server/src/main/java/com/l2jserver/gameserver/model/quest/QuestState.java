@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.model.quest;
 
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
+import com.l2jserver.common.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.enums.audio.IAudio;
@@ -32,7 +32,6 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.serverpackets.*;
 import com.l2jserver.gameserver.util.Util;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
