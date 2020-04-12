@@ -20,7 +20,7 @@ package com.l2jserver.gameserver;
 
 import com.google.common.base.Stopwatch;
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.pool.impl.ConnectionFactory;
 import com.l2jserver.common.util.IPv4Filter;
 import com.l2jserver.gameserver.cache.HtmCache;

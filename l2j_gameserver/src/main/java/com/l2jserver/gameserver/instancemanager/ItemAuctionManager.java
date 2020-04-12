@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.instancemanager;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.model.itemauction.ItemAuctionInstance;
 import java.io.File;

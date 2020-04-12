@@ -18,7 +18,8 @@
  */
 package com.l2jserver.loginserver;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
+import com.l2jserver.common.liquibase.LiquibaseManager;
 import com.l2jserver.common.pool.impl.ConnectionFactory;
 import com.l2jserver.loginserver.config.Config;
 import com.l2jserver.loginserver.mail.MailSystem;
@@ -57,36 +58,37 @@ public final class L2LoginServer
 	}
 	
 	private L2LoginServer() {
-        _instance = this;
-        // Local Constants
-        final String LOG_FOLDER = "log"; // Name of folder for log file
-        final String LOG_NAME = "./log.cfg"; // Name of log file
+		_instance = this;
+		// Local Constants
+		final String LOG_FOLDER = "log"; // Name of folder for log file
+		final String LOG_NAME = "./log.cfg"; // Name of log file
 
-        /*** Main ***/
-        // Create log folder
-        File logFolder = new File(CommonConfig.DATAPACK_ROOT, LOG_FOLDER);
-        logFolder.mkdir();
+		CommonConfig.load();
 
-        // Create input stream for log file -- or store file data into memory
+		/*** Main ***/
+		// Create log folder
+		File logFolder = new File(CommonConfig.DATAPACK_ROOT, LOG_FOLDER);
+		logFolder.mkdir();
 
-        try (InputStream is = new FileInputStream(new File(LOG_NAME))) {
-            LogManager.getLogManager().readConfiguration(is);
-        } catch (IOException e) {
+		// Create input stream for log file -- or store file data into memory
+
+		try (InputStream is = new FileInputStream(new File(LOG_NAME))) {
+			LogManager.getLogManager().readConfiguration(is);
+		} catch (IOException e) {
 			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
-		
+
 		// Load Config
 		Config.load();
-		
+
 		// Prepare Database
 		ConnectionFactory.getInstance();
-		
-		try
-		{
+
+		LiquibaseManager.executeDatabaseUpdates();
+
+		try {
 			LoginController.load();
-		}
-		catch (GeneralSecurityException e)
-		{
+		} catch (GeneralSecurityException e) {
 			_log.log(Level.SEVERE, "FATAL: Failed initializing LoginController. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}

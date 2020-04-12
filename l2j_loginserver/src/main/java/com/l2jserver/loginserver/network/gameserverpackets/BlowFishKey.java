@@ -18,6 +18,7 @@
  */
 package com.l2jserver.loginserver.network.gameserverpackets;
 
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.crypt.NewCrypt;
 import com.l2jserver.common.util.network.BaseRecievePacket;
 import com.l2jserver.loginserver.GameServerThread;

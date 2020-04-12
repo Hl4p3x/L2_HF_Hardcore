@@ -18,9 +18,9 @@
  */
 package com.l2jserver;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
+import com.l2jserver.common.config.PropertiesParser;
 import com.l2jserver.common.util.IXmlReader;
-import com.l2jserver.common.util.PropertiesParser;
 import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.GameServer;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;

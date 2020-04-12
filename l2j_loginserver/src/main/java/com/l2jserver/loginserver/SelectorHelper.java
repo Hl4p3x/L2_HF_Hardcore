@@ -18,10 +18,10 @@
  */
 package com.l2jserver.loginserver;
 
+import com.l2jserver.common.util.IPv4Filter;
 import com.l2jserver.loginserver.network.L2LoginClient;
 import com.l2jserver.loginserver.network.serverpackets.Init;
 import com.l2jserver.mmocore.*;
-import com.l2jserver.util.IPv4Filter;
 import java.net.UnknownHostException;
 import java.nio.channels.SocketChannel;
 import java.util.concurrent.LinkedBlockingQueue;

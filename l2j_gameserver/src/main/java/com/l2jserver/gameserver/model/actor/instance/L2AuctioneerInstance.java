@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.model.actor.instance;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.instancemanager.AuctionManager;
 import com.l2jserver.gameserver.instancemanager.ClanHallManager;

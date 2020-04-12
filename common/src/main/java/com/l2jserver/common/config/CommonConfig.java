@@ -1,6 +1,7 @@
-package com.l2jserver.common;
+package com.l2jserver.common.config;
 
-import com.l2jserver.common.util.PropertiesParser;
+import com.l2jserver.common.Log;
+import com.l2jserver.common.config.database.DatabaseProperties;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,13 +16,7 @@ public class CommonConfig {
 
     public static boolean DEBUG;
 
-    public static String DATABASE_DRIVER;
-    public static String DATABASE_URL;
-    public static String DATABASE_LOGIN;
-    public static String DATABASE_PASSWORD;
-    public static int DATABASE_MAX_CONNECTIONS;
-    public static int DATABASE_MAX_IDLE_TIME;
-    public static int DATABASE_CONNECTION_TIMEOUT;
+    public static DatabaseProperties DATABASE_PROPERTIES;
 
     public static int MMO_SELECTOR_SLEEP_TIME;
     public static int MMO_MAX_SEND_PER_PASS;
@@ -47,15 +42,7 @@ public class CommonConfig {
         MMO_HELPER_BUFFER_COUNT = mmoSettings.getInt("HelperBufferCount", 20);
         MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
 
-        final PropertiesParser databaseSettings = new PropertiesParser("./config/database.properties");
-
-        DATABASE_DRIVER = databaseSettings.getString("Driver", "com.mysql.cj.jdbc.Driver");
-        DATABASE_URL = databaseSettings.getString("URL", "jdbc:mysql://localhost/l2jls");
-        DATABASE_LOGIN = databaseSettings.getString("Login", "root");
-        DATABASE_PASSWORD = databaseSettings.getString("Password", "");
-        DATABASE_MAX_CONNECTIONS = databaseSettings.getInt("MaximumDbConnections", 10);
-        DATABASE_MAX_IDLE_TIME = databaseSettings.getInt("MaximumDbIdleTime", 0);
-        DATABASE_CONNECTION_TIMEOUT = databaseSettings.getInt("DbConnectionTimeout", 60000);
+        DATABASE_PROPERTIES = YamlParser.parseDatabaseProperties();
 
         final PropertiesParser languageSettings = new PropertiesParser("./config/multilang.properties");
 

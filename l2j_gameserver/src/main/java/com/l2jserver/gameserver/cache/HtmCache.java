@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.cache;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.filter.HTMLFilter;
 import com.l2jserver.gameserver.util.Util;
 import java.io.BufferedInputStream;

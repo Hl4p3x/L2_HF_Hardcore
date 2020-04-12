@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.pathfinding.geonodes;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;

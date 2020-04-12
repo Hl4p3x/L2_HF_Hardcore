@@ -19,7 +19,7 @@
 package com.l2jserver.loginserver;
 
 import com.l2jserver.common.Bcrypt;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.crypt.ScrambledKeyPair;
 import com.l2jserver.common.localization.Language;
 import com.l2jserver.common.pool.impl.ConnectionFactory;

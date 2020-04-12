@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.datatables;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.engines.DocumentEngine;
 import com.l2jserver.gameserver.model.L2SkillLearn;

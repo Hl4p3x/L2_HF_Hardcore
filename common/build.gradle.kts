@@ -19,6 +19,8 @@ dependencies {
 
     implementation("org.slf4j:slf4j-api:1.7.+")
 
+    implementation("org.liquibase:liquibase-core:3.8.9")
+
     implementation("com.fasterxml.jackson.core:jackson-core:2.10.+")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.10.+")
     implementation("com.fasterxml.jackson.core:jackson-annotations:2.10.+")

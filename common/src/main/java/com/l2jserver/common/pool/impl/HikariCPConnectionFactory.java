@@ -18,7 +18,7 @@
  */
 package com.l2jserver.common.pool.impl;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.pool.IConnectionFactory;
 import com.zaxxer.hikari.HikariDataSource;
 import javax.sql.DataSource;
@@ -27,24 +27,24 @@ import javax.sql.DataSource;
  * HikariCP Connection Factory implementation.<br>
  * <b>Note that this class is not public to prevent external initialization.</b><br>
  * <b>Access it through {@link ConnectionFactory} and proper configuration.</b>
+ *
  * @author Zoey76
  */
-enum HikariCPConnectionFactory implements IConnectionFactory
-{
+enum HikariCPConnectionFactory implements IConnectionFactory {
 	INSTANCE;
-	
+
 	private final HikariDataSource _dataSource;
-	
+
 	HikariCPConnectionFactory() {
-        _dataSource = new HikariDataSource();
-        _dataSource.setJdbcUrl(CommonConfig.DATABASE_URL);
-        _dataSource.setUsername(CommonConfig.DATABASE_LOGIN);
-        _dataSource.setPassword(CommonConfig.DATABASE_PASSWORD);
-        _dataSource.setMaximumPoolSize(CommonConfig.DATABASE_MAX_CONNECTIONS);
-        _dataSource.setIdleTimeout(CommonConfig.DATABASE_MAX_IDLE_TIME);
-        _dataSource.setDriverClassName(CommonConfig.DATABASE_DRIVER);
-        _dataSource.setConnectionTimeout(CommonConfig.DATABASE_CONNECTION_TIMEOUT);
-    }
+		_dataSource = new HikariDataSource();
+		_dataSource.setJdbcUrl(CommonConfig.DATABASE_PROPERTIES.url);
+		_dataSource.setUsername(CommonConfig.DATABASE_PROPERTIES.login);
+		_dataSource.setPassword(CommonConfig.DATABASE_PROPERTIES.password);
+		_dataSource.setMaximumPoolSize(CommonConfig.DATABASE_PROPERTIES.maximumConnections);
+		_dataSource.setIdleTimeout(CommonConfig.DATABASE_PROPERTIES.maximumIdleTime);
+		_dataSource.setDriverClassName(CommonConfig.DATABASE_PROPERTIES.driver);
+		_dataSource.setConnectionTimeout(CommonConfig.DATABASE_PROPERTIES.connectionTimeout);
+	}
 	
 	@Override
 	public void close()
@@ -64,4 +64,5 @@ enum HikariCPConnectionFactory implements IConnectionFactory
 	{
 		return _dataSource;
 	}
+
 }

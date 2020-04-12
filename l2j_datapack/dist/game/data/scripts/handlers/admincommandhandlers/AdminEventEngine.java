@@ -18,7 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.Rnd;
 import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.data.xml.impl.AdminData;

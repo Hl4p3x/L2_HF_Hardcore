@@ -5,7 +5,7 @@ import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.CollectionUtil;
 import com.l2jserver.common.util.Pair;
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;

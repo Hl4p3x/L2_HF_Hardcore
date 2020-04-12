@@ -18,7 +18,7 @@
  */
 package com.l2jserver.log.formatter;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.StringUtil;
 import java.text.SimpleDateFormat;
 import java.util.Date;

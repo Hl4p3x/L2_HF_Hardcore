@@ -1,0 +1,7 @@
+driver: org.mariadb.jdbc.Driver
+url: jdbc:mysql://localhost/l2jls
+login: "test"
+password: "test"
+maximumConnections: 10
+maximumIdleTime: 0
+connectionTimeout: 60000

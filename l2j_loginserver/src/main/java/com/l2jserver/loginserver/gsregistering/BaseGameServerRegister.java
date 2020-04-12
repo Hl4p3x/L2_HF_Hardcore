@@ -19,8 +19,9 @@
 package com.l2jserver.loginserver.gsregistering;
 
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.pool.impl.ConnectionFactory;
+import com.l2jserver.common.tools.i18n.LanguageControl;
 import com.l2jserver.common.util.Util;
 import com.l2jserver.loginserver.GameServerTable;
 import com.l2jserver.loginserver.config.Config;

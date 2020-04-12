@@ -26,18 +26,18 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Connection Factory interface.
+ *
  * @author Zoey76
  */
-public interface IConnectionFactory
-{
-	static final Logger LOG = LoggerFactory.getLogger(IConnectionFactory.class);
-	
+public interface IConnectionFactory {
+	Logger LOG = LoggerFactory.getLogger(IConnectionFactory.class);
+
 	/**
 	 * Gets the data source.
 	 * @return the data source
 	 */
 	DataSource getDataSource();
-	
+
 	/**
 	 * Closes the data source.<br>
 	 * <i>Same as shutdown.</i>

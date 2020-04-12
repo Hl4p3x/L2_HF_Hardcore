@@ -18,7 +18,7 @@
  */
 package handlers.admincommandhandlers;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.Team;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;

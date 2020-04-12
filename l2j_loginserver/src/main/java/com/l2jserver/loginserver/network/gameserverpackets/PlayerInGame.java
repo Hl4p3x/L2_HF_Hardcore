@@ -18,6 +18,7 @@
  */
 package com.l2jserver.loginserver.network.gameserverpackets;
 
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.network.BaseRecievePacket;
 import com.l2jserver.loginserver.GameServerTable;
 import com.l2jserver.loginserver.GameServerThread;
@@ -26,25 +27,22 @@ import java.util.logging.Logger;
 /**
  * @author -Wooden-
  */
-public class PlayerInGame extends BaseRecievePacket
-{
-	private static Logger _log = Logger.getLogger(PlayerInGame.class.getName());
-	
-	/**
-	 * @param decrypt
-	 * @param server
-	 */
-	public PlayerInGame(byte[] decrypt, GameServerThread server)
-	{
-		super(decrypt);
-		int size = readH();
-		for (int i = 0; i < size; i++) {
+public class PlayerInGame extends BaseRecievePacket {
+    private static final Logger _log = Logger.getLogger(PlayerInGame.class.getName());
+
+    /**
+     * @param decrypt
+     * @param server
+     */
+    public PlayerInGame(byte[] decrypt, GameServerThread server) {
+        super(decrypt);
+        int size = readH();
+        for (int i = 0; i < size; i++) {
             String account = readS();
             server.addAccountOnGameServer(account);
             if (CommonConfig.DEBUG) {
                 _log.info("Account " + account + " logged in GameServer: [" + server.getServerId() + "] " + GameServerTable.getInstance().getServerNameById(server.getServerId()));
             }
-            server.broadcastToTelnet("Account " + account + " logged in GameServer " + server.getServerId());
         }
 	}
 }

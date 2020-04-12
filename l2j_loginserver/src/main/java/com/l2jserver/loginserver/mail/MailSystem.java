@@ -18,7 +18,7 @@
  */
 package com.l2jserver.loginserver.mail;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.loginserver.config.Config;
 import java.io.BufferedInputStream;
 import java.io.File;

@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.scripting;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.script.java.JavaEngineFactory;
 import com.l2jserver.script.jython.JythonScriptEngine;
 import com.l2jserver.script.jython.JythonScriptEngineFactory;

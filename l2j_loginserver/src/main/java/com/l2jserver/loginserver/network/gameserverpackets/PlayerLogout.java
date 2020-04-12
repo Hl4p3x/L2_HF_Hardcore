@@ -18,6 +18,7 @@
  */
 package com.l2jserver.loginserver.network.gameserverpackets;
 
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.network.BaseRecievePacket;
 import com.l2jserver.loginserver.GameServerTable;
 import com.l2jserver.loginserver.GameServerThread;
@@ -42,7 +43,5 @@ public class PlayerLogout extends BaseRecievePacket
         if (CommonConfig.DEBUG) {
             _log.info("Player " + account + " logged out from gameserver [" + server.getServerId() + "] " + GameServerTable.getInstance().getServerNameById(server.getServerId()));
         }
-
-        server.broadcastToTelnet("Player " + account + " disconnected from GameServer " + server.getServerId());
     }
 }

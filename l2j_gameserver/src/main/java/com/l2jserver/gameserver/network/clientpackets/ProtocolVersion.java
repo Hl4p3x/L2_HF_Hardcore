@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.network.serverpackets.KeyPacket;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 import java.util.logging.Level;

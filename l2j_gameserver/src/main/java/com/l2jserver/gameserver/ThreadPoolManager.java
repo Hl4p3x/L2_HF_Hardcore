@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.StringUtil;
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.concurrent.*;

@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.model.stats;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import java.io.File;
 import java.util.NoSuchElementException;

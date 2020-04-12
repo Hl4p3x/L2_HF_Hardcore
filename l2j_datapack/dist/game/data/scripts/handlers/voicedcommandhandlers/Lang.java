@@ -19,7 +19,7 @@
 package handlers.voicedcommandhandlers;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

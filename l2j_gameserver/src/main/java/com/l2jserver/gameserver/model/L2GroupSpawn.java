@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.model;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.Rnd;
 import com.l2jserver.gameserver.data.sql.impl.TerritoryTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;

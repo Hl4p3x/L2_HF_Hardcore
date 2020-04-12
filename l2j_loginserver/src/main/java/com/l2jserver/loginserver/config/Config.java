@@ -1,6 +1,6 @@
 package com.l2jserver.loginserver.config;
 
-import com.l2jserver.common.util.PropertiesParser;
+import com.l2jserver.common.config.PropertiesParser;
 
 public class Config {
 

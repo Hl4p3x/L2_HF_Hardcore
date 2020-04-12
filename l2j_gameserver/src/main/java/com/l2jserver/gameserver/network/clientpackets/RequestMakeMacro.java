@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.enums.MacroType;
 import com.l2jserver.gameserver.model.Macro;
 import com.l2jserver.gameserver.model.MacroCmd;

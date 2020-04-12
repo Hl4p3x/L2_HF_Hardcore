@@ -23,7 +23,7 @@ import ai.IdleBossManager;
 import ai.SpawnManager;
 import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;

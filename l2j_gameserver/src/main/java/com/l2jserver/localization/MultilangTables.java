@@ -1,7 +1,7 @@
 package com.l2jserver.localization;
 
-import com.l2jserver.common.CommonConfig;
 import com.l2jserver.common.Loadable;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.localization.Language;
 import com.l2jserver.common.util.StringUtil;
 import com.l2jserver.common.util.YamlMapper;

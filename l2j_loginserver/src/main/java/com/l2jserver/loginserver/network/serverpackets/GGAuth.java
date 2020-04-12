@@ -18,6 +18,7 @@
  */
 package com.l2jserver.loginserver.network.serverpackets;
 
+import com.l2jserver.common.config.CommonConfig;
 import java.util.logging.Logger;
 
 

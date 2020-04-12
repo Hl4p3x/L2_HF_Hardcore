@@ -18,7 +18,7 @@
  */
 package com.l2jserver.loginserver;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.crypt.NewCrypt;
 import com.l2jserver.common.util.Util;
 import com.l2jserver.common.util.network.BaseSendablePacket;
@@ -133,7 +133,6 @@ public class GameServerThread extends Thread
 			String serverName = (getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")");
 			String msg = "GameServer " + serverName + ": Connection lost: " + e.getMessage();
 			_log.info(msg);
-			broadcastToTelnet(msg);
 		}
 		finally
 		{
@@ -248,16 +247,8 @@ public class GameServerThread extends Thread
 			_log.severe("IOException while sending packet " + sl.getClass().getSimpleName());
 		}
 	}
-	
-	public void broadcastToTelnet(String msg)
-	{
-		if (L2LoginServer.getInstance().getStatusServer() != null)
-		{
-			L2LoginServer.getInstance().getStatusServer().sendMessageToTelnets(msg);
-		}
-	}
-	
-	public void kickPlayer(String account)
+
+    public void kickPlayer(String account)
 	{
 		sendPacket(new KickPlayer(account));
 	}

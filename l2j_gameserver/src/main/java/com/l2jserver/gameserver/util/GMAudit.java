@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.util;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.Util;
 import java.io.File;
 import java.io.FileWriter;

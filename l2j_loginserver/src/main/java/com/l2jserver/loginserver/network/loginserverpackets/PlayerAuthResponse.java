@@ -19,6 +19,7 @@
 package com.l2jserver.loginserver.network.loginserverpackets;
 
 
+import com.l2jserver.common.localization.Language;
 import com.l2jserver.common.util.network.BaseSendablePacket;
 
 /**

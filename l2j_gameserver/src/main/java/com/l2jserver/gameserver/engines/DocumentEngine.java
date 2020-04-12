@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.engines;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.filter.XMLFilter;
 import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.engines.items.DocumentItem;

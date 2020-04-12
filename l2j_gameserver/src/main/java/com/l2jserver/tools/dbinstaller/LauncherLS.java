@@ -19,9 +19,6 @@
 package com.l2jserver.tools.dbinstaller;
 
 import com.l2jserver.tools.dbinstaller.console.DBInstallerConsole;
-import com.l2jserver.tools.dbinstaller.gui.DBConfigGUI;
-import java.awt.HeadlessException;
-import javax.swing.UIManager;
 
 /**
  * Contains main class for Database Installer If system doesn't support the graphical UI, start the installer in console mode.
@@ -31,32 +28,16 @@ public class LauncherLS extends AbstractDBLauncher
 {
 	public static void main(String[] args)
 	{
-		String defDatabase = "l2jls";
-		String dir = "../sql/login/";
-		String cleanUpScript = "ls_cleanup.sql";
-		
-		if ((args != null) && (args.length > 0))
-		{
-			new DBInstallerConsole(defDatabase, dir, cleanUpScript, getArg("-h", args), getArg("-p", args), getArg("-u", args), getArg("-pw", args), getArg("-d", args), getArg("-m", args));
-			return;
-		}
-		
-		try
-		{
-			// Set OS Look And Feel
-			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		}
-		catch (Exception e)
-		{
-		}
-		
-		try
-		{
-			new DBConfigGUI(defDatabase, dir, cleanUpScript);
-		}
-		catch (HeadlessException e)
-		{
-			new DBInstallerConsole(defDatabase, dir, cleanUpScript);
-		}
-	}
+        String defDatabase = "l2jls";
+        String dir = "../sql/login/";
+        String cleanUpScript = "ls_cleanup.sql";
+
+        if ((args != null) && (args.length > 0)) {
+            new DBInstallerConsole(defDatabase, dir, cleanUpScript, getArg("-h", args), getArg("-p", args), getArg("-u", args), getArg("-pw", args), getArg("-d", args), getArg("-m", args));
+            return;
+        }
+
+
+        new DBInstallerConsole(defDatabase, dir, cleanUpScript);
+    }
 }

@@ -18,7 +18,7 @@
  */
 package com.l2jserver.gameserver.network.clientpackets;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.LoginServerThread.SessionKey;
 import com.l2jserver.gameserver.network.L2GameClient;

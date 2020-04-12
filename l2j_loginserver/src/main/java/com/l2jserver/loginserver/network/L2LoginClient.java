@@ -18,6 +18,7 @@
  */
 package com.l2jserver.loginserver.network;
 
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.crypt.ScrambledKeyPair;
 import com.l2jserver.common.localization.Language;
 import com.l2jserver.common.util.Rnd;
@@ -264,7 +265,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	
 	@Override
 	public void onDisconnection() {
-        if (CommonCommonConfig.DEBUG) {
+        if (CommonConfig.DEBUG) {
             _log.info("DISCONNECTED: " + toString());
         }
 

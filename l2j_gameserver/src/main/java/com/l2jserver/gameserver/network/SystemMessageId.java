@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.network;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.model.clientstrings.Builder;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import java.io.File;

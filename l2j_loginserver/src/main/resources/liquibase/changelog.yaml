@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/scripts/account_data.sql
+  - include:
+      file: liquibase/scripts/accounts.sql
+  - include:
+      file: liquibase/scripts/account_wide_language.sql
+  - include:
+      file: liquibase/scripts/accounts_ipauth.sql
+  - include:
+      file: liquibase/scripts/gameservers.sql

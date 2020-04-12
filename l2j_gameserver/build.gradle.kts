@@ -29,7 +29,6 @@ dependencies {
     implementation("com.google.guava:guava:28.+")
     implementation("org.python:jython:2.2.1")
     implementation("org.slf4j:slf4j-api:1.7.+")
-    implementation("org.slf4j:slf4j-jdk14:1.7.+")
 
     implementation("org.apache.httpcomponents:httpclient:4.+")
 

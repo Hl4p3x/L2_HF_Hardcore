@@ -19,7 +19,7 @@
 package handlers.admincommandhandlers;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.sql.impl.CrestTable;
 import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;

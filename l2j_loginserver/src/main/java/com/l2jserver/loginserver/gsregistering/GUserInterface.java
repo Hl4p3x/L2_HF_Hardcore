@@ -18,9 +18,9 @@
  */
 package com.l2jserver.loginserver.gsregistering;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
+import com.l2jserver.common.tools.images.ImagesTable;
 import com.l2jserver.loginserver.GameServerTable;
-import com.l2jserver.tools.images.ImagesTable;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.GridBagConstraints;

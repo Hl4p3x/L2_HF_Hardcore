@@ -18,10 +18,10 @@
  */
 package com.l2jserver.tools.configurator;
 
+import com.l2jserver.common.tools.i18n.LanguageControl;
+import com.l2jserver.common.tools.images.ImagesTable;
 import com.l2jserver.tools.configurator.ConfigUserInterface.ConfigFile.ConfigComment;
 import com.l2jserver.tools.configurator.ConfigUserInterface.ConfigFile.ConfigProperty;
-import com.l2jserver.tools.i18n.LanguageControl;
-import com.l2jserver.tools.images.ImagesTable;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;

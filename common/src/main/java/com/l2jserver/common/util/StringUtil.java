@@ -18,7 +18,7 @@
  */
 package com.l2jserver.common.util;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 
 /**
  * String utilities optimized for the best performance.<br>

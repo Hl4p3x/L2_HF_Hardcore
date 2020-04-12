@@ -18,7 +18,7 @@
  */
 package com.l2jserver.loginserver.gsregistering;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.loginserver.GameServerTable;
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -19,7 +19,7 @@
 package com.l2jserver.gameserver.data.sql.impl;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.pool.impl.ConnectionFactory;
 import com.l2jserver.common.util.EnumIntBitmask;
 import com.l2jserver.gameserver.ThreadPoolManager;

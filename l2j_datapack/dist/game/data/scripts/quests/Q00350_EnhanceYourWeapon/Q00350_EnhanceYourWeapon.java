@@ -18,7 +18,7 @@
  */
 package quests.Q00350_EnhanceYourWeapon;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.model.AbsorberInfo;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;

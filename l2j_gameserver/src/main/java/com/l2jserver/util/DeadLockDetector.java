@@ -19,7 +19,7 @@
 package com.l2jserver.util;
 
 import com.l2jserver.Config;
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.gameserver.Shutdown;
 import com.l2jserver.gameserver.util.Broadcast;
 import java.lang.management.*;

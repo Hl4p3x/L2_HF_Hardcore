@@ -19,9 +19,9 @@
 package com.l2jserver.gameserver.instancemanager;
 
 import com.l2jserver.Config;
+import com.l2jserver.common.config.PropertiesParser;
 import com.l2jserver.common.interfaces.IIdentifiable;
 import com.l2jserver.common.pool.impl.ConnectionFactory;
-import com.l2jserver.common.util.PropertiesParser;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.data.sql.impl.ClanTable;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;

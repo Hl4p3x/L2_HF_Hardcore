@@ -18,7 +18,7 @@
  */
 package com.l2jserver.loginserver.network.gameserverpackets;
 
-import com.l2jserver.common.CommonConfig;
+import com.l2jserver.common.config.CommonConfig;
 import com.l2jserver.common.util.network.BaseRecievePacket;
 import com.l2jserver.loginserver.GameServerTable;
 import com.l2jserver.loginserver.GameServerTable.GameServerInfo;
@@ -88,7 +88,6 @@ public class GameServerAuth extends BaseRecievePacket
             if (CommonConfig.DEBUG) {
                 _log.info("Authed: id: " + server.getGameServerInfo().getId());
             }
-            server.broadcastToTelnet("GameServer [" + server.getServerId() + "] " + GameServerTable.getInstance().getServerNameById(server.getServerId()) + " is connected");
             server.setLoginConnectionState(GameServerState.AUTHED);
         }
 	}

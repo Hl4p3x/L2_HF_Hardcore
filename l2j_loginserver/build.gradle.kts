@@ -25,7 +25,6 @@ dependencies {
     implementation("org.mariadb.jdbc:mariadb-java-client:2.+")
     implementation("com.google.guava:guava:28.+")
     implementation("org.slf4j:slf4j-api:1.7.+")
-    implementation("org.slf4j:slf4j-jdk14:1.7.+")
     implementation("org.apache.httpcomponents:httpclient:4.+")
 
     implementation(
